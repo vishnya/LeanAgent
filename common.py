@@ -460,10 +460,10 @@ def _is_deepspeed_checkpoint(path: str):
     return os.path.isdir(path) and os.path.exists(os.path.join(path, "zero_to_fp32.py"))
 
 
-def load_checkpoint(model_cls, ckpt_path: str, device, freeze: bool):
+def load_checkpoint(model_cls, ckpt_path: str, device, freeze: bool, config: dict):
     """Handle DeepSpeed checkpoints in model loading."""
     if not _is_deepspeed_checkpoint(ckpt_path):
-        model = model_cls.load_from_checkpoint(ckpt_path, strict=False).to(device)
+        model = model_cls.load_from_checkpoint(ckpt_path, strict=False, **config).to(device)
     else:
         with tempfile.TemporaryDirectory() as dirname:
             path = os.path.join(dirname, "lightning.cpkt")

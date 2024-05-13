@@ -349,8 +349,22 @@ class GpuProver(BestFirstSearchProver):
         if ckpt_path is None:
             tac_gen = FixedTacticGenerator(tactic, module)
         else:
+            # TODO: update this
+            config = {
+                "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",
+                "lr": 1e-3,
+                "warmup_steps": 1000,
+                "num_beams": 5,
+                "eval_num_retrieved": 10,
+                "eval_num_workers": 5,
+                "eval_num_gpus": 1,
+                "eval_num_theorems": 100,
+                "max_inp_seq_len": 512,
+                "max_oup_seq_len": 128
+            }
+
             tac_gen = RetrievalAugmentedGenerator.load(
-                ckpt_path, device=torch.device("cuda"), freeze=True
+                ckpt_path, device=torch.device("cuda"), freeze=True, config=config
             )
             if tac_gen.retriever is not None:
                 if indexed_corpus_path is not None:

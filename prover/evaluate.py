@@ -124,7 +124,10 @@ def evaluate(
         num_sampled_tactics=num_sampled_tactics,
         debug=verbose,
     )
+    # TODO: remove comment
+    print("before search")
     results = prover.search_unordered(repo, theorems, positions)
+    print("after search")
 
     # Calculate the result statistics.
     num_proved = num_failed = num_discarded = 0
