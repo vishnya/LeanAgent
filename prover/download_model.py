@@ -24,6 +24,7 @@ def download_model(model_name: str):
         # print(model.state_dict().keys())
 
         state_dict = model.state_dict()
+        state_dict = {"generator." + key: value for key, value in state_dict.items()}
         state_dict['pytorch-lightning_version'] = "0.0.0"
         state_dict['global_step'] = None
         state_dict['epoch'] = None
