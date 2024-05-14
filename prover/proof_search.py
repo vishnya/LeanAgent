@@ -377,7 +377,6 @@ class GpuProver(BestFirstSearchProver):
             debug,
         )
 
-
 class DistributedProver:
     """A distributed prover that uses Ray to parallelize the proof search.
 
@@ -456,18 +455,23 @@ class DistributedProver:
     ) -> List[Optional[SearchResult]]:
         """Parallel proof search for `theorems`. The order of the results is not guaranteed to match the order of the input."""
         if not self.distributed:
+            # TODO: remove logs
+            logger.info(f"before theorem search not distributed: ")
             return [
                 self.prover.search(repo, thm, pos)
                 for thm, pos in zip_strict(theorems, positions)
             ]
+            logger.info(f"after theorem search not distributed: ")
 
         try:
+            logger.info(f"before theorem search: ")
             results = list(
                 self.prover_pool.map_unordered(
                     lambda p, x: p.search.remote(repo, x[0], x[1]),
                     zip_strict(theorems, positions),
                 )
             )
+            logger.info(f"after theorem search: ")
         except ray.exceptions.RayActorError as ex:
             logger.error(ex)
             sys.exit(1)
