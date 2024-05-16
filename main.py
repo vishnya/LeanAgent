@@ -187,33 +187,45 @@ def retrieve_proof():
 #                             # f.truncate()
 
 def replace_sorry_with_proof(proofs):
-    # TODO: is this the right way to make a PR eventually?
+    # Group proofs by file paths
+    import ipdb; ipdb.set_trace()
+    proofs_by_file = {}
     for proof in proofs:
         file_path, start, end, proof_text = proof
+        if file_path not in proofs_by_file:
+            proofs_by_file[file_path] = []
+        proofs_by_file[file_path].append((start, end, proof_text))
+    
+    # TODO: is this the right way to make a PR eventually?
+    for file_path, proofs in proofs_by_file.items():
         with open(file_path, 'r') as file:
             lines = file.readlines()
-        
-        start_line, start_col = start.line_nb - 1, start.column_nb - 1
-        end_line, end_col = end.line_nb - 1, end.column_nb - 1
 
-        # Join the lines from start to end to form the text to be replaced
-        original_text = ''.join(lines[start_line:end_line + 1])
+        # sort proof by starting line and column number
+        proofs.sort(key=lambda x: (x[0].line_nb, x[0].column_nb), reverse=True)  # working bottom up retains positions
         
-        # Replace the `sorry` with the proof text
-        new_text = original_text.replace('sorry', proof_text, 1)
-        
-        # Update the lines in the file
-        lines[start_line:end_line + 1] = new_text.split('\n')
-        
-        with open(file_path, 'w') as file:
-            file.writelines(lines)
+        for start, end, proof_text in proofs:
+            start_line, start_col = start.line_nb - 1, start.column_nb - 1
+            end_line, end_col = end.line_nb - 1, end.column_nb - 1
+
+            # Join the lines from start to end to form the text to be replaced
+            original_text = ''.join(lines[start_line:end_line + 1])
+            
+            # Replace the `sorry` with the proof text
+            new_text = original_text.replace('sorry', proof_text, 1)
+            
+            # Update the lines in the file
+            lines[start_line:end_line + 1] = new_text
+            
+            with open(file_path, 'w') as file:
+                file.writelines(lines)
 
 
 def main():
     proofs = retrieve_proof() # TODO: uncomment
     # TODO: remove
     # proofs = [('lean4-example-adarsh/Lean4Example.lean', (3, 1), (4, 8), 'omega'), ('lean4-example-adarsh/Lean4Example.lean', (6, 1), (7, 8), 'simp')]
-    import ipdb; ipdb.set_trace()
+    # import ipdb; ipdb.set_trace()
     replace_sorry_with_proof(proofs)
     # TODO: update hte control flow since we don't use find_and_replace_sorry anymore
     # TODO: uncomment
