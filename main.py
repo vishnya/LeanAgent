@@ -79,7 +79,40 @@ def search_github_repositories(language="Lean", num_repos=5):
     else:
         print("Failed to search GitHub", response.status_code)
 
+# TODO: remove
+import re
+_LEAN4_VERSION_REGEX = re.compile(r"leanprover/lean4:(?P<version>.+?)")
+def get_lean4_version_from_config(toolchain: str) -> str:
+    """Return the required Lean version given a ``lean-toolchain`` config."""
+    m = _LEAN4_VERSION_REGEX.fullmatch(toolchain.strip())
+    assert m is not None, "Invalid config."
+    return m["version"]
+
+def is_supported_version(v) -> bool:
+    """Check if ``v`` is at least `v4.3.0-rc2`."""
+    if not v.startswith("v"):
+        return False
+    v = v[1:]
+    major, minor, patch = [int(_) for _ in v.split("-")[0].split(".")]
+    if major < 4 or (major == 4 and minor < 3):
+        return False
+    if (
+        major > 4
+        or (major == 4 and minor > 3)
+        or (major == 4 and minor == 3 and patch > 0)
+    ):
+        return True
+    assert major == 4 and minor == 3 and patch == 0
+    if "4.3.0-rc" in v:
+        rc = int(v.split("-")[1][2:])
+        return rc >= 2
+    else:
+        return True
+
 def retrieve_proof():
+    # TODO: lean dojo I htink does not suppor t4.8.0-rc1
+    # TODO: what happens if a repo exists before 4.8.0-rc1?
+    # TODO: cachign might be broken, seems that changing to new commit uses old cache
     # data_path = "data/leandojo_benchmark_4/random/"
     ckpt_path = "kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     indexed_corpus_path = None
@@ -95,16 +128,28 @@ def retrieve_proof():
     #     "https://github.com/teorth/pfr",
     #     "70d5c9f3f4602e6b3a1eaf263c55599213a73559",
     # )
-    repo = LeanGitRepo(
-        "https://github.com/Adarsh321123/lean4-example-adarsh",
-        "f0cec352c953349d4b3885a05697f1c5a724892a",
-    )
+    # repo = LeanGitRepo(
+    #     "https://github.com/teorth/pfr",
+    #     "88682ac4055fc875c62834890a17d0c6bafa8973",
+    # )
+    # repo = LeanGitRepo(
+    #     "https://github.com/Adarsh321123/lean4-trace-test",
+    #     "64f2d8b0ced112f97b5eafe4a79999c74bad46bb",
+    # )
     logger.info(f"repo: {repo}")
-    traced_repo = trace(repo, build_deps=False)
+    config = repo.get_config("lean-toolchain")
+    logger.info(f"lean toolchain version: {config}")
+    v = get_lean4_version_from_config(config["content"])
+    logger.info(f"lean version v: {v}")
+    logger.info(f"is supported: {is_supported_version(v)}")
+    # traced_repo = trace(repo, build_deps=False)
+    traced_repo = trace(repo)
     data = []
 
-    # TODO: do not trace the repos that are dependencies
-    for thm in traced_repo.get_traced_theorems():
+    # TODO: do not trace the repos that are dependencies???
+    thms = traced_repo.get_traced_theorems()
+    import ipdb; ipdb.set_trace()
+    for thm in thms:
         if not thm.has_tactic_proof():
             continue
         proof = thm.get_tactic_proof()

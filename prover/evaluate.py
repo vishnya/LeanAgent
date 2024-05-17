@@ -85,6 +85,9 @@ def _get_theorems_from_files(
     metadata = json.load(open(os.path.join(data_path, "../metadata.json")))
     repo = LeanGitRepo(metadata["from_repo"]["url"], metadata["from_repo"]["commit"])
 
+
+    # import ipdb; ipdb.set_trace()
+
     return repo, theorems, positions
 
 
@@ -133,7 +136,7 @@ def evaluate(
     results = prover.search_unordered(repo, theorems, positions)
     logger.info(f"after search: ")
     
-    proof = results[0].proof
+    # proof = results[0].proof
 
     # Calculate the result statistics.
     num_proved = num_failed = num_discarded = 0
