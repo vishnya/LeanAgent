@@ -109,6 +109,34 @@ def is_supported_version(v) -> bool:
     else:
         return True
 
+def change_toolchain_version(repo):
+    # we need to change the toolchain version that the bot uses
+    # to match the repo we are currently tracing
+    # this will avoid lake build problems
+    # Find the path to the desired Lean version using elan
+    # TODO: install toolchain if nonexistent
+    import ipdb; ipdb.set_trace()
+    config = repo.get_config("lean-toolchain")
+    logger.info(f"lean toolchain version: {config}")
+    v = get_lean4_version_from_config(config["content"])
+    logger.info(f"lean version v: {v}")
+    logger.info(f"is supported: {is_supported_version(v)}")
+    v = v[1:] # ignore v at beginning
+    lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---" + v
+    logger.info(f"lean path {lean_dir}")
+
+    # # Extract the toolchain path from the full path to the Lean binary
+    # lean_dir = os.path.dirname(os.path.dirname(lean_path))
+
+    # Update LEAN4_PATH environment variable
+    os.environ['LEAN4_PATH'] = lean_dir
+
+    # Update PATH environment variable to include the Lean bin directory
+    os.environ['PATH'] = f"{lean_dir}/bin:{os.environ.get('PATH', '')}"
+
+    logger.info(f"Switched to Lean toolchain at: {lean_dir}")
+    logger.info(f"lean --version: {subprocess.run(['lean', '--version'], capture_output=True).stdout.decode('utf-8')}")
+
 def retrieve_proof():
     # TODO: lean dojo I htink does not suppor t4.8.0-rc1
     # TODO: what happens if a repo exists before 4.8.0-rc1?
@@ -124,14 +152,26 @@ def retrieve_proof():
     num_sampled_tactics = 64
     verbose = False
     # TODO: change later
+    # TODO: will this work with lakefile.toml
+    # THIS WORKS on Lean (version 4.7.0-rc2, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
     # repo = LeanGitRepo(
-    #     "https://github.com/teorth/pfr",
-    #     "70d5c9f3f4602e6b3a1eaf263c55599213a73559",
+    #     "https://github.com/Adarsh321123/lean4-example-adarsh",
+    #     "f0cec352c953349d4b3885a05697f1c5a724892a",
     # )
+    # this requires leanprover/lean4:v4.8.0-rc1
     # repo = LeanGitRepo(
-    #     "https://github.com/teorth/pfr",
-    #     "88682ac4055fc875c62834890a17d0c6bafa8973",
+    #     "https://github.com/Adarsh321123/v4.8.0-test",
+    #     "05f0527c352cbfea670faf0b62429acda87d939c",
     # )
+    repo = LeanGitRepo(
+        "https://github.com/teorth/pfr",
+        "785a3d3cacc18889fdb9689cfc84edc97233886f",
+    )
+    # lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0"
+    # os.environ['LEAN4_PATH'] = lean_dir
+    # os.environ['PATH'] = f"{lean_dir}/bin:{os.environ.get('PATH', '')}"
+    # logger.info(f"lean --version: {subprocess.run(['lean', '--version'], capture_output=True).stdout.decode('utf-8')}")
+    change_toolchain_version(repo)
     # repo = LeanGitRepo(
     #     "https://github.com/Adarsh321123/lean4-trace-test",
     #     "64f2d8b0ced112f97b5eafe4a79999c74bad46bb",
@@ -142,8 +182,8 @@ def retrieve_proof():
     v = get_lean4_version_from_config(config["content"])
     logger.info(f"lean version v: {v}")
     logger.info(f"is supported: {is_supported_version(v)}")
-    # traced_repo = trace(repo, build_deps=False)
-    traced_repo = trace(repo)
+    traced_repo = trace(repo, build_deps=False)
+    # traced_repo = trace(repo)
     data = []
 
     # TODO: do not trace the repos that are dependencies???
