@@ -115,7 +115,7 @@ def change_toolchain_version(repo):
     # this will avoid lake build problems
     # Find the path to the desired Lean version using elan
     # TODO: install toolchain if nonexistent
-    import ipdb; ipdb.set_trace()
+    # import ipdb; ipdb.set_trace()
     config = repo.get_config("lean-toolchain")
     logger.info(f"lean toolchain version: {config}")
     v = get_lean4_version_from_config(config["content"])
@@ -160,8 +160,8 @@ def retrieve_proof():
     # )
     # this requires leanprover/lean4:v4.8.0-rc1
     # repo = LeanGitRepo(
-    #     "https://github.com/Adarsh321123/v4.8.0-test",
-    #     "05f0527c352cbfea670faf0b62429acda87d939c",
+    #     "https://github.com/Adarsh321123/new-version-test",
+    #     "279c3bc5c6d1e1b8810c99129d7d2c43c5469b54",
     # )
     repo = LeanGitRepo(
         "https://github.com/teorth/pfr",
@@ -172,23 +172,19 @@ def retrieve_proof():
     # os.environ['PATH'] = f"{lean_dir}/bin:{os.environ.get('PATH', '')}"
     # logger.info(f"lean --version: {subprocess.run(['lean', '--version'], capture_output=True).stdout.decode('utf-8')}")
     change_toolchain_version(repo)
-    # repo = LeanGitRepo(
-    #     "https://github.com/Adarsh321123/lean4-trace-test",
-    #     "64f2d8b0ced112f97b5eafe4a79999c74bad46bb",
-    # )
     logger.info(f"repo: {repo}")
     config = repo.get_config("lean-toolchain")
     logger.info(f"lean toolchain version: {config}")
     v = get_lean4_version_from_config(config["content"])
     logger.info(f"lean version v: {v}")
     logger.info(f"is supported: {is_supported_version(v)}")
-    traced_repo = trace(repo, build_deps=False)
-    # traced_repo = trace(repo)
+    # traced_repo = trace(repo, build_deps=False)
+    traced_repo = trace(repo)
     data = []
 
     # TODO: do not trace the repos that are dependencies???
+    # TODO: but can I use prev versions of lean now?
     thms = traced_repo.get_traced_theorems()
-    import ipdb; ipdb.set_trace()
     for thm in thms:
         if not thm.has_tactic_proof():
             continue
@@ -202,7 +198,6 @@ def retrieve_proof():
 
     # TODO: optimize
     logger.info(len(data))
-    # import ipdb; ipdb.set_trace()
     theorems = []
     positions = []
     ends = []
@@ -214,7 +209,6 @@ def retrieve_proof():
             theorems.append(cur_theorem)
             positions.append(elem[2])
             ends.append(elem[3])
-    # import ipdb; ipdb.set_trace()
 
     prover = DistributedProver(
         ckpt_path,
@@ -229,7 +223,7 @@ def retrieve_proof():
     )
     results = prover.search_unordered(repo, theorems, positions)
     proofs = []
-    # import ipdb; ipdb.set_trace()
+    import ipdb; ipdb.set_trace()
     for result in results:
         if result.status == Status.PROVED:
             # logger.info(str(result))
