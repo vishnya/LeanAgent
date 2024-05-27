@@ -1,5 +1,5 @@
 """
-This is the driver for LeanDojoBot. It will do the following things:
+This is the driver for LeanCopilotBot. It will do the following things:
 1. Search for repositories with Lean files in them.
 2. Clone these repositories.
 3. Finds theorems with `sorry` in them and replaces them with a proof.
@@ -36,24 +36,85 @@ from prover.proof_search import Status, DistributedProver
 
 load_dotenv()
 
-# TODO: here are some important features to implement (besides what's in the module docstring)
-# 1. run this code every so often to check for updates to repos (host on a server)
-# 2. if private, give user option to install
-
 # TODO: add more as needed
 known_repositories = [
     "leanprover/lean4",
     "leanprover-community/mathlib",
     "leanprover-community/mathlib4",
+    "teorth/pfr",
 ]
 
 repos = []
 
 personal_access_token = os.environ.get("PERSONAL_ACCESS_TOKEN")
 
+PR_TITLE = "[LeanCopilotBot] `sorry` Removed by Lean Copilot"
+
+# TODO: make sure these links work when we release
+PR_BODY = """We identify the files containing theorems that have `sorry`, and replace them with a proof discovered by [Lean Copilot](https://github.com/lean-dojo/LeanCopilot).
+
+---
+
+<i>~LeanCopilotBot - From the [LeanDojo](https://leandojo.org/) family</i>
+
+[:octocat: repo](https://github.com/lean-dojo/LeanCopilotBot) | [🙋🏾 issues](https://github.com/lean-dojo/LeanCopilotBot/issues) | [🏪 marketplace](https://github.com/marketplace/LeanCopilotBot)
+"""
+
+# TODO: master?
+TARGET_BRANCH = "main"
+
+TMP_BRANCH = "_LeanCopilotBot"
+
+COMMIT_MESSAGE = "[LeanCopilotBot] `sorry` Removed by Lean Copilot"
+
 def clone_repo(repo_url):
+    repo_name = "/".join(repo_url.split('/')[-2:]).replace('.git', '')
     print(f"Cloning {repo_url}")
-    subprocess.run(["git", "clone", repo_url])
+    print(f"Repo name: {repo_name}")
+    subprocess.run(["git", "clone", repo_url, repo_name])
+
+def branch_exists(repo_name, branch_name):
+    proc = subprocess.run(["git", "-C", repo_name, "branch", "-a"], capture_output=True, text=True)
+    branches = proc.stdout.split('\n')
+    local_branch = branch_name
+    remote_branch = f'remote/{branch_name}'
+    return any(branch.strip().endswith(local_branch) or branch.strip().endswith(remote_branch) for branch in branches)
+
+def create_or_switch_branch(repo_name, branch_name):
+    if not branch_exists(repo_name, branch_name):
+        subprocess.run(["git", "-C", repo_name, "checkout", "-b", branch_name], check=True)
+    else:
+        subprocess.run(["git", "-C", repo_name, "checkout", branch_name], check=True)
+
+def commit_changes(repo_name, commit_message):
+    status = subprocess.run(["git", "-C", repo_name, "status", "--porcelain"], capture_output=True, text=True).stdout.strip()
+    if status == "":
+        print("No changes to commit.")
+        return False
+    subprocess.run(["git", "-C", repo_name, "add", "."], check=True)
+    subprocess.run(["git", "-C", repo_name, "commit", "-m", commit_message], check=True)
+    return True
+
+def push_changes(repo_name, branch_name):
+    subprocess.run(["git", "-C", repo_name, "push", "-u", "origin", branch_name], check=True)
+
+def create_pull_request(repo_full_name, title, body, head_branch, base_branch="main"):
+    url = f"https://api.github.com/repos/{repo_full_name}/pulls"
+    headers = {
+        "Authorization": f"token {personal_access_token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    data = {
+        "title": title,
+        "body": body,
+        "head": head_branch,
+        "base": base_branch
+    }
+    response = requests.post(url, headers=headers, json=data)
+    if response.status_code == 201:
+        print("Pull request created successfully: " + response.json()['html_url'])
+    else:
+        print("Failed to create pull request", response.text)
 
 def search_github_repositories(language="Lean", num_repos=5):
     headers = {'Authorization': personal_access_token}
@@ -72,7 +133,7 @@ def search_github_repositories(language="Lean", num_repos=5):
                 break
             repo_full_name = repo['full_name']
             if repo_full_name not in known_repositories:
-                repos.append(repo_full_name[repo_full_name.index("/") + 1:])  # remove owner from repo name
+                repos.append(repo_full_name)
                 clone_url = repo['clone_url']
                 cloned_count += 1
                 clone_repo(clone_url)
@@ -114,8 +175,6 @@ def change_toolchain_version(repo):
     # to match the repo we are currently tracing
     # this will avoid lake build problems
     # Find the path to the desired Lean version using elan
-    # TODO: install toolchain if nonexistent
-    # import ipdb; ipdb.set_trace()
     config = repo.get_config("lean-toolchain")
     logger.info(f"lean toolchain version: {config}")
     v = get_lean4_version_from_config(config["content"])
@@ -138,9 +197,6 @@ def change_toolchain_version(repo):
     logger.info(f"lean --version: {subprocess.run(['lean', '--version'], capture_output=True).stdout.decode('utf-8')}")
 
 def retrieve_proof():
-    # TODO: lean dojo I htink does not suppor t4.8.0-rc1
-    # TODO: what happens if a repo exists before 4.8.0-rc1?
-    # TODO: cachign might be broken, seems that changing to new commit uses old cache
     # data_path = "data/leandojo_benchmark_4/random/"
     ckpt_path = "kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     indexed_corpus_path = None
@@ -163,10 +219,15 @@ def retrieve_proof():
     #     "https://github.com/Adarsh321123/new-version-test",
     #     "279c3bc5c6d1e1b8810c99129d7d2c43c5469b54",
     # )
+    # this requires leanprover/lean4:v4.8.0-rc2
     repo = LeanGitRepo(
-        "https://github.com/teorth/pfr",
-        "785a3d3cacc18889fdb9689cfc84edc97233886f",
+        "https://github.com/Adarsh321123/new-new-version-test",
+        "779fc7d7cc36755b76bda552118e910289ed3aa3",
     )
+    # repo = LeanGitRepo(
+    #     "https://github.com/teorth/pfr",
+    #     "785a3d3cacc18889fdb9689cfc84edc97233886f",
+    # )
     # lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0"
     # os.environ['LEAN4_PATH'] = lean_dir
     # os.environ['PATH'] = f"{lean_dir}/bin:{os.environ.get('PATH', '')}"
@@ -183,7 +244,6 @@ def retrieve_proof():
     data = []
 
     # TODO: do not trace the repos that are dependencies???
-    # TODO: but can I use prev versions of lean now?
     thms = traced_repo.get_traced_theorems()
     for thm in thms:
         if not thm.has_tactic_proof():
@@ -223,13 +283,12 @@ def retrieve_proof():
     )
     results = prover.search_unordered(repo, theorems, positions)
     proofs = []
-    import ipdb; ipdb.set_trace()
     for result in results:
         if result.status == Status.PROVED:
             # logger.info(str(result))
             proof_text = "\n".join(result.proof)
             # TODO: find more efficient way to get url and repo name
-            repo_name = result.theorem.repo.url.split("/")[-1]
+            repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
             file_path = repo_name + "/" + str(result.theorem.file_path)
             start = None
             end = None
@@ -241,33 +300,10 @@ def retrieve_proof():
             proofs.append((file_path, start, end, proof_text))
 
     return proofs
-    # TODO: remove the theorems that are not from the files in the repo itself
-
-    # TODO: does this work with lemmas too?
-    # evaluate.evaluate(data_path=data_path, ckpt_path=ckpt_path, split=split, num_workers=num_workers, num_gpus=num_gpus)
-
-# def find_and_replace_sorry(directory):
-#     # TODO: there are some edge cases where the sorry was used in a functional programming sense
-#     # This can be seen sometimes in `LeanSMTParser/SMTParser/ParseSMTLemma.lean`
-#     for root, dirs, files in os.walk(directory):
-#         for file in files:
-#             if file.endswith(".lean"):
-#                 file_path = os.path.join(root, file)
-#                 if ".lake" not in file_path:
-#                     with open(file_path, 'r+') as f:
-#                         content = f.read()
-#                         if 'sorry' in content:
-#                             print(f"found sorry in file {file_path}")
-#                             retrieve_proof()
-#                             # TODO: use this?
-#                             # new_content = re.sub(r'\bsorry\b', 'proof_using_lean_copilot', content)
-#                             # f.seek(0)
-#                             # f.write(new_content)
-#                             # f.truncate()
 
 def replace_sorry_with_proof(proofs):
+    logger.info(f"Replacing sorries with {len(proofs)} proofs!")
     # Group proofs by file paths
-    import ipdb; ipdb.set_trace()
     proofs_by_file = {}
     for proof in proofs:
         file_path, start, end, proof_text = proof
@@ -301,22 +337,29 @@ def replace_sorry_with_proof(proofs):
 
 
 def main():
-    proofs = retrieve_proof() # TODO: uncomment
-    # TODO: remove
-    # proofs = [('lean4-example-adarsh/Lean4Example.lean', (3, 1), (4, 8), 'omega'), ('lean4-example-adarsh/Lean4Example.lean', (6, 1), (7, 8), 'simp')]
-    # import ipdb; ipdb.set_trace()
-    replace_sorry_with_proof(proofs)
-    # TODO: update hte control flow since we don't use find_and_replace_sorry anymore
-    # TODO: uncomment
-    # search_github_repositories(language="Lean", num_repos=5)
-    # print(f"Found {len(repos)} repositories")
-    # for repo in repos:
-    #     # if repo != "BET": # TODO: remove
-    #     #     continue
-    #     print(f"Processing {repo}")
-    #     find_and_replace_sorry(repo)
-    #     # shutil.rmtree(repo)  # TODO: uncomment later for removing dir
-    #     # TODO: make a branch too
+    search_github_repositories(language="Lean", num_repos=5)
+    print(f"Found {len(repos)} repositories")
+    # repos.append("Adarsh321123/new-version-test") # TODO: remove
+    repos.append("Adarsh321123/new-new-version-test") # TODO: remove
+    # repos.append("teorth/pfr") # TODO: remove
+    for repo in repos:
+        # if repo != "Adarsh321123/new-version-test": # TODO: remove
+        #     continue
+        if repo != "Adarsh321123/new-new-version-test": # TODO: remove
+            continue
+        # if repo != "teorth/pfr": # TODO: remove
+        #     continue
+        print(f"Processing {repo}")
+        create_or_switch_branch(repo, TMP_BRANCH)
+        proofs = retrieve_proof()
+        replace_sorry_with_proof(proofs)
+        import ipdb; ipdb.set_trace()
+        committed = commit_changes(repo, COMMIT_MESSAGE)
+        if committed:
+            push_changes(repo, TMP_BRANCH)
+            create_pull_request(repo, PR_TITLE, PR_BODY, TMP_BRANCH, TARGET_BRANCH)
+
+        # shutil.rmtree(repo)  # TODO: uncomment later for removing dir, or actually we may need to keep?
 
 if __name__ == "__main__":
     main()
