@@ -500,10 +500,9 @@ def replace_sorry_with_proof(proofs):
 
 
 def main():
-    # TODO: undo
-    # search_github_repositories(language="Lean", num_repos=5)
-    repos.append("Adarsh321123/new-version-test")
-    lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-version-test", "3508f1f7d21f7c31ec7f472d0f5af026971661b8"))  # might return 404
+    search_github_repositories(language="Lean", num_repos=5)
+    # repos.append("Adarsh321123/new-version-test")
+    # lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-version-test", "3508f1f7d21f7c31ec7f472d0f5af026971661b8"))  # might return 404
     # repos.append("Adarsh321123/new-new-version-test")
     # lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-new-version-test", "779fc7d7cc36755b76bda552118e910289ed3aa3"))  # might return 404
     # repos.append("JOSHCLUNE/DuperDemo")
@@ -522,11 +521,11 @@ def main():
         if proofs is None:
             continue
         replace_sorry_with_proof(proofs)
-        committed = commit_changes(repo, COMMIT_MESSAGE)
-        if committed:
-            push_changes(repo, TMP_BRANCH)
-            create_pull_request(repo, PR_TITLE, PR_BODY, TMP_BRANCH)
-        shutil.rmtree(repo)
+        # committed = commit_changes(repo, COMMIT_MESSAGE)
+        # if committed:
+        #     push_changes(repo, TMP_BRANCH)
+        #     create_pull_request(repo, PR_TITLE, PR_BODY, TMP_BRANCH)
+        # shutil.rmtree(repo)
 
 if __name__ == "__main__":
     main()
