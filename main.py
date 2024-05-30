@@ -188,6 +188,7 @@ known_repositories = [
 ]
 
 repos = []
+lean_git_repos = []
 
 personal_access_token = os.environ.get("PERSONAL_ACCESS_TOKEN")
 
@@ -203,9 +204,6 @@ PR_BODY = """We identify the files containing theorems that have `sorry`, and re
 [:octocat: repo](https://github.com/lean-dojo/LeanCopilotBot) | [🙋🏾 issues](https://github.com/lean-dojo/LeanCopilotBot/issues) | [🏪 marketplace](https://github.com/marketplace/LeanCopilotBot)
 """
 
-# TODO: master?
-TARGET_BRANCH = "main"
-
 TMP_BRANCH = "_LeanCopilotBot"
 
 COMMIT_MESSAGE = "[LeanCopilotBot] `sorry` Removed by Lean Copilot"
@@ -214,7 +212,14 @@ def clone_repo(repo_url):
     repo_name = "/".join(repo_url.split('/')[-2:]).replace('.git', '')
     print(f"Cloning {repo_url}")
     print(f"Repo name: {repo_name}")
+    if os.path.exists(repo_name):
+        print(f"Deleting existing repository directory: {repo_name}")
+        shutil.rmtree(repo_name)
     subprocess.run(["git", "clone", repo_url, repo_name])
+    process = subprocess.Popen(["git", "ls-remote", repo_url], stdout=subprocess.PIPE)
+    stdout, stderr = process.communicate()
+    sha = re.split(r'\t+', stdout.decode('ascii'))[0]
+    return repo_name, sha
 
 def branch_exists(repo_name, branch_name):
     proc = subprocess.run(["git", "-C", repo_name, "branch", "-a"], capture_output=True, text=True)
@@ -223,11 +228,12 @@ def branch_exists(repo_name, branch_name):
     remote_branch = f'remote/{branch_name}'
     return any(branch.strip().endswith(local_branch) or branch.strip().endswith(remote_branch) for branch in branches)
 
-def create_or_switch_branch(repo_name, branch_name):
+def create_or_switch_branch(repo_name, branch_name, base_branch):
     if not branch_exists(repo_name, branch_name):
         subprocess.run(["git", "-C", repo_name, "checkout", "-b", branch_name], check=True)
     else:
         subprocess.run(["git", "-C", repo_name, "checkout", branch_name], check=True)
+        subprocess.run(["git", "-C", repo_name, "merge", base_branch, "-m", f"Merging {branch_name} into {base_branch}"], check=True)
 
 def commit_changes(repo_name, commit_message):
     status = subprocess.run(["git", "-C", repo_name, "status", "--porcelain"], capture_output=True, text=True).stdout.strip()
@@ -241,7 +247,21 @@ def commit_changes(repo_name, commit_message):
 def push_changes(repo_name, branch_name):
     subprocess.run(["git", "-C", repo_name, "push", "-u", "origin", branch_name], check=True)
 
-def create_pull_request(repo_full_name, title, body, head_branch, base_branch="main"):
+def get_default_branch(repo_full_name):
+    url = f"https://api.github.com/repos/{repo_full_name}"
+    headers = {
+        "Authorization": f"token {personal_access_token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        return response.json()['default_branch']
+    else:
+        logger.info(f"Failed to get default branch for {repo_full_name}")
+        return "main"
+
+def create_pull_request(repo_full_name, title, body, head_branch):
+    base_branch = get_default_branch(repo_full_name)
     url = f"https://api.github.com/repos/{repo_full_name}/pulls"
     headers = {
         "Authorization": f"token {personal_access_token}",
@@ -276,16 +296,20 @@ def search_github_repositories(language="Lean", num_repos=5):
                 break
             repo_full_name = repo['full_name']
             if repo_full_name not in known_repositories:
-                repos.append(repo_full_name)
-                clone_url = repo['clone_url']
-                cloned_count += 1
-                clone_repo(clone_url)
+                name = None
+                try:
+                    clone_url = repo['clone_url']
+                    repo_name, sha = clone_repo(clone_url)
+                    name = repo_name
+                    lean_git_repos.append(LeanGitRepo(clone_url.replace('.git', ''), sha))  # might return 404
+                    repos.append(repo_full_name)
+                    cloned_count += 1
+                except Exception as e:
+                    shutil.rmtree(name)
+                    print(f"Failed to clone {repo_full_name} because of {e}")
     else:
         print("Failed to search GitHub", response.status_code)
 
-# TODO: remove
-import re
-_LEAN4_VERSION_REGEX = re.compile(r"leanprover/lean4:(?P<version>.+?)")
 def get_lean4_version_from_config(toolchain: str) -> str:
     """Return the required Lean version given a ``lean-toolchain`` config."""
     m = _LEAN4_VERSION_REGEX.fullmatch(toolchain.strip())
@@ -293,12 +317,12 @@ def get_lean4_version_from_config(toolchain: str) -> str:
     return m["version"]
 
 def is_supported_version(v) -> bool:
-    """Check if ``v`` is at least `v4.3.0-rc2`."""
+    """Check if ``v`` is at least `v4.3.0-rc2` and at most `v4.8.0-rc2`."""
     if not v.startswith("v"):
         return False
     v = v[1:]
     major, minor, patch = [int(_) for _ in v.split("-")[0].split(".")]
-    if major < 4 or (major == 4 and minor < 3):
+    if major < 4 or (major == 4 and minor < 3) or (major == 4 and minor > 8) or (major == 4 and minor == 8 and patch > 0):
         return False
     if (
         major > 4
@@ -310,37 +334,14 @@ def is_supported_version(v) -> bool:
     if "4.3.0-rc" in v:
         rc = int(v.split("-")[1][2:])
         return rc >= 2
+    elif "4.8.0-rc" in v:
+        rc = int(v.split("-")[1][2:])
+        return rc <= 2
     else:
         return True
+    
 
-def change_toolchain_version(repo):
-    # we need to change the toolchain version that the bot uses
-    # to match the repo we are currently tracing
-    # this will avoid lake build problems
-    # Find the path to the desired Lean version using elan
-    config = repo.get_config("lean-toolchain")
-    logger.info(f"lean toolchain version: {config}")
-    v = get_lean4_version_from_config(config["content"])
-    logger.info(f"lean version v: {v}")
-    logger.info(f"is supported: {is_supported_version(v)}")
-    v = v[1:] # ignore v at beginning
-    lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---" + v
-    logger.info(f"lean path {lean_dir}")
-
-    # # Extract the toolchain path from the full path to the Lean binary
-    # lean_dir = os.path.dirname(os.path.dirname(lean_path))
-
-    # Update LEAN4_PATH environment variable
-    os.environ['LEAN4_PATH'] = lean_dir
-
-    # Update PATH environment variable to include the Lean bin directory
-    os.environ['PATH'] = f"{lean_dir}/bin:{os.environ.get('PATH', '')}"
-
-    logger.info(f"Switched to Lean toolchain at: {lean_dir}")
-    logger.info(f"lean --version: {subprocess.run(['lean', '--version'], capture_output=True).stdout.decode('utf-8')}")
-
-def retrieve_proof():
-    # data_path = "data/leandojo_benchmark_4/random/"
+def retrieve_proof(repo):
     ckpt_path = "kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     indexed_corpus_path = "data/corpus.jsonl"
     tactic = None
@@ -350,8 +351,6 @@ def retrieve_proof():
     timeout = 600
     num_sampled_tactics = 64
     verbose = False
-    # TODO: change later
-    # TODO: will this work with lakefile.toml
     # THIS WORKS on Lean (version 4.7.0-rc2, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
     # repo = LeanGitRepo(
     #     "https://github.com/Adarsh321123/lean4-example-adarsh",
@@ -363,20 +362,17 @@ def retrieve_proof():
     #     "279c3bc5c6d1e1b8810c99129d7d2c43c5469b54",
     # )
     # this requires leanprover/lean4:v4.8.0-rc2
-    repo = LeanGitRepo(
-        "https://github.com/Adarsh321123/new-new-version-test",
-        "779fc7d7cc36755b76bda552118e910289ed3aa3",
-    )
+    # repo = LeanGitRepo(
+    #     "https://github.com/Adarsh321123/new-new-version-test",
+    #     "779fc7d7cc36755b76bda552118e910289ed3aa3",
+    # )
     # repo = LeanGitRepo(
     #     "https://github.com/teorth/pfr",
     #     "785a3d3cacc18889fdb9689cfc84edc97233886f",
     # )
-    # lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0"
-    # os.environ['LEAN4_PATH'] = lean_dir
-    # os.environ['PATH'] = f"{lean_dir}/bin:{os.environ.get('PATH', '')}"
-    # logger.info(f"lean --version: {subprocess.run(['lean', '--version'], capture_output=True).stdout.decode('utf-8')}")
-    change_toolchain_version(repo)
-    logger.info(f"repo: {repo}")
+
+    # we need to change the toolchain version that the bot uses
+    # to match the repo we are currently tracing
     config = repo.get_config("lean-toolchain")
     logger.info(f"lean toolchain version: {config}")
     v = get_lean4_version_from_config(config["content"])
@@ -412,7 +408,6 @@ def retrieve_proof():
 
     data = []
 
-    # TODO: do not trace the repos that are dependencies???
     thms = traced_repo.get_traced_theorems()
     for thm in thms:
         if not thm.has_tactic_proof():
@@ -480,7 +475,6 @@ def replace_sorry_with_proof(proofs):
             proofs_by_file[file_path] = []
         proofs_by_file[file_path].append((start, end, proof_text))
     
-    # TODO: is this the right way to make a PR eventually?
     for file_path, proofs in proofs_by_file.items():
         with open(file_path, 'r') as file:
             lines = file.readlines()
@@ -515,27 +509,24 @@ def main():
     # repos.append("JOSHCLUNE/DuperDemo")
     # lean_git_repos.append(LeanGitRepo("https://github.com/JOSHCLUNE/DuperDemo", "226ba13f7fb11f93f7a77e1fc76b2210ce1177c6"))  # might return 404
     print(f"Found {len(repos)} repositories")
-    # repos.append("Adarsh321123/new-version-test") # TODO: remove
-    repos.append("Adarsh321123/new-new-version-test") # TODO: remove
-    # repos.append("teorth/pfr") # TODO: remove
-    for repo in repos:
-        # if repo != "Adarsh321123/new-version-test": # TODO: remove
-        #     continue
-        if repo != "Adarsh321123/new-new-version-test": # TODO: remove
-            continue
-        # if repo != "teorth/pfr": # TODO: remove
-        #     continue
+    for i in range(len(repos)):
+        repo = repos[i]
+        lean_git_repo = lean_git_repos[i]
         print(f"Processing {repo}")
-        create_or_switch_branch(repo, TMP_BRANCH)
-        proofs = retrieve_proof()
+        base_branch = get_default_branch(repo)
+        subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
+        subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
+        subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
+        create_or_switch_branch(repo, TMP_BRANCH, base_branch)
+        proofs = retrieve_proof(lean_git_repo)
+        if proofs is None:
+            continue
         replace_sorry_with_proof(proofs)
-        import ipdb; ipdb.set_trace()
         committed = commit_changes(repo, COMMIT_MESSAGE)
         if committed:
             push_changes(repo, TMP_BRANCH)
-            create_pull_request(repo, PR_TITLE, PR_BODY, TMP_BRANCH, TARGET_BRANCH)
-
-        # shutil.rmtree(repo)  # TODO: uncomment later for removing dir, or actually we may need to keep?
+            create_pull_request(repo, PR_TITLE, PR_BODY, TMP_BRANCH)
+        shutil.rmtree(repo)
 
 if __name__ == "__main__":
     main()
