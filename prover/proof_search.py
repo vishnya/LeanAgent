@@ -351,7 +351,7 @@ class GpuProver(BestFirstSearchProver):
         else:
             # TODO: update this
             config = {
-                "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",
+                "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
                 "lr": 1e-3,
                 "warmup_steps": 1000,
                 "num_beams": 5,

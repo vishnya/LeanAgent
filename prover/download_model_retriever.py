@@ -25,7 +25,7 @@ def download_model(model_name: str):
 
         state_dict = model.state_dict()
         print(f"before size: {len(state_dict)}")
-        state_dict = {"encoder." + key: value for key, value in state_dict.items()}
+        # state_dict = {"encoder." + key: value for key, value in state_dict.items()}
         new_dict = {}
         for key, value in state_dict.items():
             parts = key.split('.')
