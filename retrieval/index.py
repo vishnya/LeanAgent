@@ -30,7 +30,16 @@ def main() -> None:
         device = torch.device("cpu")
     else:
         device = torch.device("cuda")
-    model = PremiseRetriever.load(args.ckpt_path, device, freeze=True)
+
+    # TODO: update maybe
+    config = {
+        "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
+        "lr": 1e-3,
+        "warmup_steps": 1000,
+        "max_seq_len": 512,
+        "num_retrieved": 100,
+    }
+    model = PremiseRetriever.load(args.ckpt_path, device, freeze=True, config=config)
     model.load_corpus(args.corpus_path)
     model.reindex_corpus(batch_size=args.batch_size)
 

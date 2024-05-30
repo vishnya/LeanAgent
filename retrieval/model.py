@@ -47,8 +47,8 @@ class PremiseRetriever(pl.LightningModule):
         self.embeddings_staled = True
 
     @classmethod
-    def load(cls, ckpt_path: str, device, freeze: bool) -> "PremiseRetriever":
-        return load_checkpoint(cls, ckpt_path, device, freeze)
+    def load(cls, ckpt_path: str, device, freeze: bool, config: dict) -> "PremiseRetriever":
+        return load_checkpoint(cls, ckpt_path, device, freeze, config)
 
     def load_corpus(self, path_or_corpus: Union[str, Corpus]) -> None:
         """Associate the retriever with a corpus."""

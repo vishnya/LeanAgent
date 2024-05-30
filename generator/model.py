@@ -106,13 +106,24 @@ class RetrievalAugmentedGenerator(TacticGenerator, pl.LightningModule):
         self.max_inp_seq_len = max_inp_seq_len
         self.max_oup_seq_len = max_oup_seq_len
 
+        logger.info(f"Retriever checkpoint path: {ret_ckpt_path}")
+
+        # TODO: update maybe
+        config = {
+            "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
+            "lr": 1e-3,
+            "warmup_steps": 1000,
+            "max_seq_len": 512,
+            "num_retrieved": 100,
+        }
+
         if ret_ckpt_path is None:
             logger.info("Without retrieval")
             self.retriever = None
         else:
             logger.info(f"Loading the retriever from {ret_ckpt_path}")
             self.retriever = PremiseRetriever.load(
-                ret_ckpt_path, self.device, freeze=True
+                ret_ckpt_path, self.device, freeze=True, config=config
             )
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -123,6 +134,7 @@ class RetrievalAugmentedGenerator(TacticGenerator, pl.LightningModule):
             acc = TopkAccuracy(k)
             self.topk_accuracies[k] = acc
             self.add_module(f"top{k}_acc_val", acc)
+        logger.info("RetrievalAugmentedGenerator initialized")
 
     @classmethod
     def load(

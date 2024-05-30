@@ -360,16 +360,22 @@ class GpuProver(BestFirstSearchProver):
                 "eval_num_gpus": 1,
                 "eval_num_theorems": 100,
                 "max_inp_seq_len": 512,
-                "max_oup_seq_len": 128
+                "max_oup_seq_len": 128,
+                "ret_ckpt_path": "kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt",
             }
 
             tac_gen = RetrievalAugmentedGenerator.load(
                 ckpt_path, device=torch.device("cuda"), freeze=True, config=config
             )
+            logger.info(f"Loaded model from {ckpt_path}")
+            logger.info(f"Using retriever: {tac_gen.retriever}")
             if tac_gen.retriever is not None:
                 if indexed_corpus_path is not None:
+                    logger.info(f"Loading indexed corpus from {indexed_corpus_path}")
                     tac_gen.retriever.load_corpus(indexed_corpus_path)
+                    logger.info(f"Loaded indexed corpus from {indexed_corpus_path}")
                 tac_gen.retriever.reindex_corpus(batch_size=32)
+                logger.info("Finished reindexing!")
         super().__init__(
             tac_gen,
             timeout,
