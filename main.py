@@ -13,6 +13,7 @@ Let's make some magic!
 """
 
 import os
+import urllib
 import requests
 import subprocess
 import re
@@ -179,12 +180,27 @@ def export_data(
 
 load_dotenv()
 
-# TODO: add more as needed
 known_repositories = [
+    # "leanprover-community/mathlib4",
     "leanprover/lean4",
     "leanprover-community/mathlib",
-    "leanprover-community/mathlib4",
-    "teorth/pfr",
+    "leanprover/std4",  # moved to batteries
+    "leanprover-community/duper",  # functional programming instead of math
+    "leanprover/lake",
+    "uwdb/Cosette",
+    "AndrasKovacs/smalltt",
+    "dselsam/certigrad",
+    "Kha/electrolysis",
+    "ImperialCollegeLondon/formalising-mathematics",
+    "ImperialCollegeLondon/natural_number_game",
+    "kbuzzard/xena",
+    "leanprover-community/lean4-metaprogramming-book",
+    "leanprover-community/tutorials",
+    "leanprover-community/lean-liquid",
+    "formalabstracts/formalabstracts",
+    "ImperialCollegeLondon/M40001_lean",
+    "ImperialCollegeLondon/formalising-mathematics-2022",
+    "openai/lean-gym",
 ]
 
 repos = []
@@ -218,7 +234,7 @@ def clone_repo(repo_url):
     subprocess.run(["git", "clone", repo_url, repo_name])
     process = subprocess.Popen(["git", "ls-remote", repo_url], stdout=subprocess.PIPE)
     stdout, stderr = process.communicate()
-    sha = re.split(r'\t+', stdout.decode('ascii'))[0]
+    sha = re.split(r'\t+', stdout.decode('utf-8'))[0]
     return repo_name, sha
 
 def branch_exists(repo_name, branch_name):
@@ -279,11 +295,11 @@ def create_pull_request(repo_full_name, title, body, head_branch):
     else:
         print("Failed to create pull request", response.text)
 
-def search_github_repositories(language="Lean", num_repos=5):
+def search_github_repositories(language="Lean", num_repos=10):
     headers = {'Authorization': personal_access_token}
     query_params = {
         'q': f'language:{language}',
-        'sort': 'updated',  # 'stars' may result in old repos
+        'sort': 'stars',
         'order': 'desc'
     }
     response = requests.get('https://api.github.com/search/repositories', headers=headers, params=query_params)
@@ -301,11 +317,15 @@ def search_github_repositories(language="Lean", num_repos=5):
                     clone_url = repo['clone_url']
                     repo_name, sha = clone_repo(clone_url)
                     name = repo_name
-                    lean_git_repos.append(LeanGitRepo(clone_url.replace('.git', ''), sha))  # might return 404
+                    url = clone_url.replace('.git', '')
+                    lean_git_repo = LeanGitRepo(url, sha)
+                    lean_git_repos.append(lean_git_repo)
                     repos.append(repo_full_name)
                     cloned_count += 1
                 except Exception as e:
                     shutil.rmtree(name)
+                    # Note: some 404s happen since some repos don't have a lean-toolchain
+                    # but still use Lean
                     print(f"Failed to clone {repo_full_name} because of {e}")
     else:
         print("Failed to search GitHub", response.status_code)
@@ -403,8 +423,12 @@ def retrieve_proof(repo):
         logger.info(f"Failed to trace repo {repo} because of {e}")
         return None
 
+    logger.info("MAIN: about to split data")
     splits = split_data(traced_repo)
+    logger.info("MAIN: done splitting data")
+    logger.info("MAIN: about to export corpus.jsonl")
     export_data(traced_repo, splits, DST_DIR, dataset_name="LeanCopilotBot Corpus")
+    logger.info("MAIN: exported corpus.jsonl")
 
     data = []
 
@@ -434,6 +458,7 @@ def retrieve_proof(repo):
             positions.append(elem[2])
             ends.append(elem[3])
 
+    logger.info("MAIN: about to search for proofs")
     prover = DistributedProver(
         ckpt_path,
         indexed_corpus_path,
@@ -446,6 +471,7 @@ def retrieve_proof(repo):
         debug=verbose,
     )
     results = prover.search_unordered(repo, theorems, positions)
+    logger.info("MAIN: done searching for proofs")
     proofs = []
     for result in results:
         if result.status == Status.PROVED:
@@ -500,7 +526,7 @@ def replace_sorry_with_proof(proofs):
 
 
 def main():
-    search_github_repositories(language="Lean", num_repos=5)
+    search_github_repositories()
     # repos.append("Adarsh321123/new-version-test")
     # lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-version-test", "3508f1f7d21f7c31ec7f472d0f5af026971661b8"))  # might return 404
     # repos.append("Adarsh321123/new-new-version-test")
