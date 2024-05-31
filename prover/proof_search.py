@@ -372,6 +372,7 @@ class GpuProver(BestFirstSearchProver):
             if tac_gen.retriever is not None:
                 if indexed_corpus_path is not None:
                     logger.info(f"Loading indexed corpus from {indexed_corpus_path}")
+                    # TODO: use print statements to chekc pickle
                     tac_gen.retriever.load_corpus(indexed_corpus_path)
                     logger.info(f"Loaded indexed corpus from {indexed_corpus_path}")
                 tac_gen.retriever.reindex_corpus(batch_size=32)
