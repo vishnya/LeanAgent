@@ -52,6 +52,7 @@ from lean_dojo.constants import LEAN4_PACKAGES_DIR
 
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 _LEAN4_VERSION_REGEX = re.compile(r"leanprover/lean4:(?P<version>.+?)")
+repo_dir = "/raid/adarsh/repos"
 DST_DIR = Path("/raid/adarsh/data")
 NUM_VAL = NUM_TEST = 2000
 FILE_NAME = "corpus.jsonl"
@@ -170,11 +171,6 @@ def export_data(
     """Export a traced repo whose theorems have been splitted to ``dst_path``."""
     if isinstance(dst_path, str):
         dst_path = Path(dst_path)
-    # if dst_path.exists():
-    #     logger.warning(f"{dst_path} already exists. Removing it now.")
-    #     shutil.rmtree(dst_path)
-
-    # Export the premises (theorems, definitions, etc.).
     logger.info(f"dst path is {dst_path}")
     export_premises(traced_repo, dst_path)
 
@@ -228,6 +224,7 @@ def clone_repo(repo_url):
     repo_name = "/".join(repo_url.split('/')[-2:]).replace('.git', '')
     print(f"Cloning {repo_url}")
     print(f"Repo name: {repo_name}")
+    repo_name = repo_dir + "/" + repo_name
     if os.path.exists(repo_name):
         print(f"Deleting existing repository directory: {repo_name}")
         shutil.rmtree(repo_name)
@@ -371,25 +368,6 @@ def retrieve_proof(repo):
     timeout = 600
     num_sampled_tactics = 64
     verbose = False
-    # THIS WORKS on Lean (version 4.7.0-rc2, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
-    # repo = LeanGitRepo(
-    #     "https://github.com/Adarsh321123/lean4-example-adarsh",
-    #     "f0cec352c953349d4b3885a05697f1c5a724892a",
-    # )
-    # this requires leanprover/lean4:v4.8.0-rc1
-    # repo = LeanGitRepo(
-    #     "https://github.com/Adarsh321123/new-version-test",
-    #     "279c3bc5c6d1e1b8810c99129d7d2c43c5469b54",
-    # )
-    # this requires leanprover/lean4:v4.8.0-rc2
-    # repo = LeanGitRepo(
-    #     "https://github.com/Adarsh321123/new-new-version-test",
-    #     "779fc7d7cc36755b76bda552118e910289ed3aa3",
-    # )
-    # repo = LeanGitRepo(
-    #     "https://github.com/teorth/pfr",
-    #     "785a3d3cacc18889fdb9689cfc84edc97233886f",
-    # )
 
     # we need to change the toolchain version that the bot uses
     # to match the repo we are currently tracing
@@ -479,6 +457,7 @@ def retrieve_proof(repo):
             proof_text = "\n".join(result.proof)
             # TODO: find more efficient way to get url and repo name
             repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
+            repo_name = repo_dir + "/" + repo_name
             file_path = repo_name + "/" + str(result.theorem.file_path)
             start = None
             end = None
@@ -535,7 +514,7 @@ def main():
     # lean_git_repos.append(LeanGitRepo("https://github.com/JOSHCLUNE/DuperDemo", "226ba13f7fb11f93f7a77e1fc76b2210ce1177c6"))  # might return 404
     print(f"Found {len(repos)} repositories")
     for i in range(len(repos)):
-        repo = repos[i]
+        repo = repo_dir + "/" + repos[i]
         lean_git_repo = lean_git_repos[i]
         print(f"Processing {repo}")
         base_branch = get_default_branch(repo)
