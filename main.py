@@ -52,7 +52,7 @@ from lean_dojo.constants import LEAN4_PACKAGES_DIR
 
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 _LEAN4_VERSION_REGEX = re.compile(r"leanprover/lean4:(?P<version>.+?)")
-DST_DIR = Path("data")
+DST_DIR = Path("/raid/adarsh/data")
 NUM_VAL = NUM_TEST = 2000
 FILE_NAME = "corpus.jsonl"
 
@@ -363,7 +363,7 @@ def is_supported_version(v) -> bool:
 
 def retrieve_proof(repo):
     ckpt_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
-    indexed_corpus_path = "data/corpus.jsonl"
+    indexed_corpus_path = "/raid/adarsh/data/corpus.jsonl"
     tactic = None
     module = None
     num_workers = 5
@@ -526,9 +526,9 @@ def replace_sorry_with_proof(proofs):
 
 
 def main():
-    search_github_repositories()
-    # repos.append("Adarsh321123/new-version-test")
-    # lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-version-test", "3508f1f7d21f7c31ec7f472d0f5af026971661b8"))  # might return 404
+    # search_github_repositories()
+    repos.append("Adarsh321123/new-version-test")
+    lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-version-test", "3508f1f7d21f7c31ec7f472d0f5af026971661b8"))  # might return 404
     # repos.append("Adarsh321123/new-new-version-test")
     # lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-new-version-test", "779fc7d7cc36755b76bda552118e910289ed3aa3"))  # might return 404
     # repos.append("JOSHCLUNE/DuperDemo")
