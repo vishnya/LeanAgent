@@ -362,7 +362,7 @@ def is_supported_version(v) -> bool:
     
 
 def retrieve_proof(repo):
-    ckpt_path = "kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+    ckpt_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     indexed_corpus_path = "data/corpus.jsonl"
     tactic = None
     module = None
