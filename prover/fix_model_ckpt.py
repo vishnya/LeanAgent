@@ -2,7 +2,7 @@ from collections import OrderedDict
 import torch
 
 # Load the checkpoint
-checkpoint_path = "kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model.ckpt"
+checkpoint_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model.ckpt"
 checkpoint = torch.load(checkpoint_path, map_location=torch.device('cpu'))
 
 # create new checkpoint
@@ -22,5 +22,5 @@ modified_checkpoint['pytorch-lightning_version'] = '0.0.0'
 # modified_checkpoint['state_dict']['predict_loop'] = None
 
 # save
-modified_checkpoint_path = "kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_edited.ckpt"
+modified_checkpoint_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_edited.ckpt"
 torch.save(modified_checkpoint, modified_checkpoint_path)

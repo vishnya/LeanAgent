@@ -361,7 +361,7 @@ class GpuProver(BestFirstSearchProver):
                 "eval_num_theorems": 100,
                 "max_inp_seq_len": 512,
                 "max_oup_seq_len": 128,
-                "ret_ckpt_path": "kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt",
+                "ret_ckpt_path": "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt",
             }
 
             tac_gen = RetrievalAugmentedGenerator.load(

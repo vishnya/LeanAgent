@@ -49,7 +49,7 @@ def download_model(model_name: str):
         # print(model.state_dict().items())
 
         # Save the model in .ckpt format
-        ckpt_model_path = 'kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt'
+        ckpt_model_path = '/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt'
         print(f"Saving model to {ckpt_model_path}")
         torch.save(state_dict, ckpt_model_path)
         print(f"Model saved in .ckpt format at {ckpt_model_path}")
