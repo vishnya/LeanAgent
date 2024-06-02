@@ -161,6 +161,7 @@ def export_premises(traced_repo: TracedRepo, dst_path: Path) -> None:
     logger.info(
         f"{num_premises} theorems/definitions from {len(traced_repo.traced_files)} files saved to {oup_path}"
     )
+    return num_premises, len(traced_repo.traced_files)
 
 def export_data(
     traced_repo: TracedRepo,
@@ -172,12 +173,13 @@ def export_data(
     if isinstance(dst_path, str):
         dst_path = Path(dst_path)
     logger.info(f"dst path is {dst_path}")
-    export_premises(traced_repo, dst_path)
+    return export_premises(traced_repo, dst_path)
 
 load_dotenv()
 
 known_repositories = [
-    # "leanprover-community/mathlib4",
+    "leanprover-community/mathlib4",  # ReProver is trained on this + LeanDojo already tests on it
+    "leanprover-community/batteries", # ReProver is trained on this + LeanDojo already tests on it
     "leanprover/lean4",
     "leanprover-community/mathlib",
     "leanprover/std4",  # moved to batteries
@@ -289,8 +291,10 @@ def create_pull_request(repo_full_name, title, body, head_branch):
     response = requests.post(url, headers=headers, json=data)
     if response.status_code == 201:
         print("Pull request created successfully: " + response.json()['html_url'])
+        return response.json()['html_url']
     else:
         print("Failed to create pull request", response.text)
+        return ""
 
 def search_github_repositories(language="Lean", num_repos=10):
     headers = {'Authorization': personal_access_token}
@@ -405,7 +409,7 @@ def retrieve_proof(repo):
     splits = split_data(traced_repo)
     logger.info("MAIN: done splitting data")
     logger.info("MAIN: about to export corpus.jsonl")
-    export_data(traced_repo, splits, DST_DIR, dataset_name="LeanCopilotBot Corpus")
+    num_premises, num_files_traced = export_data(traced_repo, splits, DST_DIR, dataset_name="LeanCopilotBot Corpus")
     logger.info("MAIN: exported corpus.jsonl")
 
     data = []
@@ -436,6 +440,8 @@ def retrieve_proof(repo):
             positions.append(elem[2])
             ends.append(elem[3])
 
+    num_sorries = len(theorems)
+    logger.info(f"Found {num_sorries} sorries!")
     logger.info("MAIN: about to search for proofs")
     prover = DistributedProver(
         ckpt_path,
@@ -451,6 +457,7 @@ def retrieve_proof(repo):
     results = prover.search_unordered(repo, theorems, positions)
     logger.info("MAIN: done searching for proofs")
     proofs = []
+    unproved_sorries = []
     for result in results:
         if result.status == Status.PROVED:
             # logger.info(str(result))
@@ -459,6 +466,7 @@ def retrieve_proof(repo):
             repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
             repo_name = repo_dir + "/" + repo_name
             file_path = repo_name + "/" + str(result.theorem.file_path)
+            theorem_name = str(result.theorem.full_name)
             start = None
             end = None
             # TODO: optimize
@@ -466,16 +474,22 @@ def retrieve_proof(repo):
                 if theorems[i] == result.theorem:
                     start = positions[i]
                     end = ends[i]
-            proofs.append((file_path, start, end, proof_text))
+            proofs.append((file_path, start, end, proof_text, theorem_name))
+        else:
+            repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
+            repo_name = repo_dir + "/" + repo_name
+            file_path = repo_name + "/" + str(result.theorem.file_path)
+            theorem_name = str(result.theorem.full_name)
+            unproved_sorries.append((file_path, theorem_name))
 
-    return proofs
+    return num_sorries, proofs, num_premises, num_files_traced, unproved_sorries
 
 def replace_sorry_with_proof(proofs):
     logger.info(f"Replacing sorries with {len(proofs)} proofs!")
     # Group proofs by file paths
     proofs_by_file = {}
     for proof in proofs:
-        file_path, start, end, proof_text = proof
+        file_path, start, end, proof_text, theorem_name = proof
         if file_path not in proofs_by_file:
             proofs_by_file[file_path] = []
         proofs_by_file[file_path].append((start, end, proof_text))
@@ -505,31 +519,69 @@ def replace_sorry_with_proof(proofs):
 
 
 def main():
-    # search_github_repositories()
-    repos.append("Adarsh321123/new-version-test")
-    lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-version-test", "3508f1f7d21f7c31ec7f472d0f5af026971661b8"))  # might return 404
+    results = {
+        "total_repositories": 0,
+        "repositories": {}
+    }
+    search_github_repositories()
+    # repos.append("leanprover-community/mathlib4")
+    # lean_git_repos.append(LeanGitRepo("https://github.com/leanprover-community/mathlib4", "0fd3d39a108a86dd1acc993c04b16c2d281fba26"))  # might return 404
+    # repos.append("Adarsh321123/new-version-test")
+    # lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-version-test", "6eb56a01c8febf938bcc166cd64339e223a99086"))  # might return 404
     # repos.append("Adarsh321123/new-new-version-test")
     # lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-new-version-test", "779fc7d7cc36755b76bda552118e910289ed3aa3"))  # might return 404
     # repos.append("JOSHCLUNE/DuperDemo")
     # lean_git_repos.append(LeanGitRepo("https://github.com/JOSHCLUNE/DuperDemo", "226ba13f7fb11f93f7a77e1fc76b2210ce1177c6"))  # might return 404
-    print(f"Found {len(repos)} repositories")
-    for i in range(len(repos)):
-        repo = repo_dir + "/" + repos[i]
+    # TODO: clone big repos like scilean and mathlib4 at a specific commit
+    num_repos = len(repos)
+    results["total_repositories"] = num_repos
+    print(f"Found {num_repos} repositories")
+    for i in range(num_repos):
+        repo = repos[i]
+        repo_no_dir = repo
+        repo = repo_dir + "/" + repo
         lean_git_repo = lean_git_repos[i]
         print(f"Processing {repo}")
-        base_branch = get_default_branch(repo)
+        results["repositories"][repo] = {
+            "number_of_sorries": 0,
+            "number_of_proofs_found": 0,
+            "proofs_details": [],
+            "unproved_sorries": [],
+            "number_of_premises_theorems_retrieved": 0,
+            "num_files_traced": 0,
+            "PR": "",
+        }
+        base_branch = get_default_branch(repo_no_dir)
         subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
         subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
         subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
         create_or_switch_branch(repo, TMP_BRANCH, base_branch)
-        proofs = retrieve_proof(lean_git_repo)
+        num_sorries, proofs, num_premises, num_files_traced, unproved_sorries = retrieve_proof(lean_git_repo)
         if proofs is None:
             continue
-        replace_sorry_with_proof(proofs)
+        results["repositories"][repo]["number_of_sorries"] = num_sorries
+        results["repositories"][repo]["number_of_proofs_found"] = len(proofs)
+        results["repositories"][repo]["number_of_premises_theorems_retrieved"] = num_premises
+        results["repositories"][repo]["num_files_traced"] = num_files_traced
+        for proof in proofs:
+            results["repositories"][repo]["proofs_details"].append({
+                "file_path": proof[0],
+                "theorem_name": proof[4],
+                "proof_text": proof[3]
+            })
+        for unproved_sorry in unproved_sorries:
+            results["repositories"][repo]["unproved_sorries"].append({
+                "file_path": unproved_sorry[0],
+                "theorem_name": unproved_sorry[1]
+            })
+        with open('results.json', 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=4, ensure_ascii=False)
+        # replace_sorry_with_proof(proofs)
         # committed = commit_changes(repo, COMMIT_MESSAGE)
         # if committed:
         #     push_changes(repo, TMP_BRANCH)
-        #     create_pull_request(repo, PR_TITLE, PR_BODY, TMP_BRANCH)
+        #     url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
+        #     results["repositories"][repo]["PR"] = url
         # shutil.rmtree(repo)
 
 if __name__ == "__main__":
