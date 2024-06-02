@@ -136,15 +136,18 @@ def split_data(traced_repo: TracedRepo) -> Dict[SPLIT_STRATEGY, SPLIT]:
         "novel_premises": split_by_premise(traced_theorems),
     }
 
-def export_premises(traced_repo: TracedRepo, dst_path: Path) -> None:
+def export_premises(traced_repo: TracedRepo, dst_path: Path, repo_no_dir, sha) -> None:
     """Export all premise definitions in a traced repo to ``dst_path``."""
-    oup_path = dst_path / FILE_NAME
-    if oup_path.exists():
-        logger.info(f"{oup_path} already exists. Removing it now.")
-        oup_path.unlink()  # Removes the file
+    oup_path = dst_path / repo_no_dir / sha
+    corpus_file = oup_path / FILE_NAME
+    if corpus_file.exists():
+        logger.info(f"{corpus_file} already exists. Using existing file")
+        # TODO: find a better workaround later
+        return 0, 0
+    oup_path.mkdir(parents=True, exist_ok=True)
     num_premises = 0
 
-    with oup_path.open("wt") as oup:
+    with corpus_file.open("wt") as oup:
         G = traced_repo.traced_files_graph
 
         for tf_node in reversed(list(nx.topological_sort(G))):
@@ -167,13 +170,13 @@ def export_data(
     traced_repo: TracedRepo,
     splits: Dict[SPLIT_STRATEGY, SPLIT],
     dst_path: Union[str, Path],
+    repo_no_dir,
+    sha,
     **kwargs,
 ) -> None:
     """Export a traced repo whose theorems have been splitted to ``dst_path``."""
-    if isinstance(dst_path, str):
-        dst_path = Path(dst_path)
-    logger.info(f"dst path is {dst_path}")
-    return export_premises(traced_repo, dst_path)
+    logger.info(f"Exporting data to path: {dst_path}/{repo_no_dir}/{sha}")
+    return export_premises(traced_repo, dst_path, repo_no_dir, sha)
 
 load_dotenv()
 
@@ -362,9 +365,9 @@ def is_supported_version(v) -> bool:
         return True
     
 
-def retrieve_proof(repo):
+def retrieve_proof(repo, repo_no_dir, sha):
     ckpt_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
-    indexed_corpus_path = "/raid/adarsh/data/corpus.jsonl"
+    indexed_corpus_path = str(DST_DIR / repo_no_dir / sha) + "/corpus.jsonl"
     tactic = None
     module = None
     num_workers = 5
@@ -409,7 +412,7 @@ def retrieve_proof(repo):
     splits = split_data(traced_repo)
     logger.info("MAIN: done splitting data")
     logger.info("MAIN: about to export corpus.jsonl")
-    num_premises, num_files_traced = export_data(traced_repo, splits, DST_DIR, dataset_name="LeanCopilotBot Corpus")
+    num_premises, num_files_traced = export_data(traced_repo, splits, DST_DIR, repo_no_dir, sha, dataset_name="LeanCopilotBot Corpus")
     logger.info("MAIN: exported corpus.jsonl")
 
     data = []
@@ -556,7 +559,7 @@ def main():
         subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
         subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
         create_or_switch_branch(repo, TMP_BRANCH, base_branch)
-        num_sorries, proofs, num_premises, num_files_traced, unproved_sorries = retrieve_proof(lean_git_repo)
+        num_sorries, proofs, num_premises, num_files_traced, unproved_sorries = retrieve_proof(lean_git_repo, repo_no_dir, lean_git_repo.commit)
         if proofs is None:
             continue
         results["repositories"][repo]["number_of_sorries"] = num_sorries
