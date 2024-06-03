@@ -1,0 +1,368 @@
+ATTEMPT 1 new-version `bash run_lean_copilot_bot.sh >> logfile7.log 2>&1 &`
+
+Script executed from: /home/adarsh/ReProver
+[2024-06-01 10:14:55,028] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+Found 1 repositories
+Processing /raid/adarsh/repos/Adarsh321123/new-version-test
+From https://github.com/Adarsh321123/new-version-test
+ * branch            main       -> FETCH_HEAD
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+From https://github.com/Adarsh321123/new-version-test
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Switched to branch '_LeanCopilotBot'
+Your branch is up to date with 'origin/_LeanCopilotBot'.
+Already up to date.
+2024-06-01 10:15:06.720 | INFO     | __main__:retrieve_proof:375 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0-rc1\n'}
+2024-06-01 10:15:06.720 | INFO     | __main__:retrieve_proof:377 - lean version v: v4.8.0-rc1
+2024-06-01 10:15:06.720 | INFO     | __main__:retrieve_proof:378 - is supported: True
+2024-06-01 10:15:06.720 | INFO     | __main__:retrieve_proof:384 - lean path /home/adarsh/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-06-01 10:15:06.720 | INFO     | __main__:retrieve_proof:390 - Switched to Lean toolchain at: /home/adarsh/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-06-01 10:15:06.754 | INFO     | __main__:retrieve_proof:391 - lean --version: Lean (version 4.8.0-rc1, x86_64-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-06-01 10:15:06.754 | INFO     | __main__:retrieve_proof:392 - repo: LeanGitRepo(url='https://github.com/Adarsh321123/new-version-test', commit='3508f1f7d21f7c31ec7f472d0f5af026971661b8')
+2024-06-01 10:15:06.755 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /raid/adarsh/.cache/lean_dojo/Adarsh321123-new-version-test-3508f1f7d21f7c31ec7f472d0f5af026971661b8/new-version-test
+2024-06-01 10:15:09,037	INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at [1m[32m127.0.0.1:8267 [39m[22m
+
+  0%|          | 0/916 [00:00<?, ?it/s]
+  0%|          | 1/916 [00:01<26:07,  1.71s/it]
+  2%|▏         | 20/916 [00:01<00:59, 15.15it/s]
+  3%|▎         | 32/916 [00:02<00:42, 20.80it/s]
+  6%|▌         | 53/916 [00:02<00:27, 31.43it/s]
+  8%|▊         | 70/916 [00:02<00:18, 45.54it/s]
+  9%|▉         | 81/916 [00:03<00:22, 36.61it/s]
+ 11%|█         | 99/916 [00:03<00:15, 52.40it/s]
+ 12%|█▏        | 110/916 [00:03<00:20, 40.12it/s]
+ 14%|█▍        | 128/916 [00:03<00:14, 56.12it/s]
+ 15%|█▌        | 140/916 [00:04<00:23, 32.75it/s]
+ 16%|█▋        | 149/916 [00:04<00:21, 35.64it/s]
+ 17%|█▋        | 157/916 [00:05<00:35, 21.32it/s]
+ 18%|█▊        | 169/916 [00:05<00:25, 28.79it/s]
+ 19%|█▉        | 177/916 [00:06<00:39, 18.75it/s]
+ 20%|██        | 187/916 [00:06<00:29, 24.40it/s]
+ 22%|██▏       | 197/916 [00:06<00:23, 31.15it/s]
+ 22%|██▏       | 205/916 [00:08<00:43, 16.49it/s]
+ 24%|██▍       | 224/916 [00:08<00:24, 28.35it/s]
+ 26%|██▋       | 241/916 [00:08<00:16, 40.50it/s]
+ 28%|██▊       | 253/916 [00:08<00:13, 48.81it/s]
+ 29%|██▉       | 264/916 [00:08<00:11, 54.39it/s]
+ 30%|██▉       | 274/916 [00:09<00:32, 19.85it/s]
+ 31%|███       | 282/916 [00:10<00:27, 23.40it/s]
+ 32%|███▏      | 294/916 [00:10<00:19, 31.32it/s]
+ 33%|███▎      | 302/916 [00:10<00:17, 35.27it/s]
+ 34%|███▍      | 310/916 [00:12<00:46, 13.02it/s]
+ 35%|███▍      | 320/916 [00:12<00:33, 17.69it/s]
+ 36%|███▌      | 330/916 [00:12<00:24, 23.58it/s]
+ 38%|███▊      | 348/916 [00:12<00:14, 37.89it/s]
+ 39%|███▉      | 358/916 [00:12<00:12, 43.89it/s]
+ 40%|████      | 368/916 [00:12<00:10, 51.69it/s]
+ 41%|████▏     | 378/916 [00:14<00:40, 13.23it/s]
+ 42%|████▏     | 385/916 [00:15<00:34, 15.56it/s]
+ 44%|████▎     | 399/916 [00:15<00:22, 22.95it/s]
+ 45%|████▍     | 410/916 [00:15<00:17, 29.03it/s]
+ 46%|████▌     | 418/916 [00:15<00:14, 33.57it/s]
+ 47%|████▋     | 426/916 [00:18<00:53,  9.19it/s]
+ 47%|████▋     | 433/916 [00:18<00:41, 11.58it/s]
+ 49%|████▉     | 447/916 [00:18<00:25, 18.47it/s]
+ 50%|████▉     | 457/916 [00:18<00:19, 24.15it/s]
+ 51%|█████▏    | 471/916 [00:18<00:12, 34.41it/s]
+ 53%|█████▎    | 481/916 [00:18<00:10, 40.53it/s]
+ 55%|█████▌    | 505/916 [00:18<00:06, 66.58it/s]
+ 57%|█████▋    | 520/916 [00:18<00:05, 76.99it/s]
+ 58%|█████▊    | 533/916 [00:22<00:30, 12.70it/s]
+ 60%|█████▉    | 549/916 [00:22<00:20, 18.07it/s]
+ 61%|██████    | 560/916 [00:22<00:15, 22.53it/s]
+ 63%|██████▎   | 573/916 [00:22<00:11, 29.30it/s]
+ 64%|██████▍   | 584/916 [00:22<00:09, 35.05it/s]
+ 65%|██████▍   | 594/916 [00:22<00:07, 41.81it/s]
+ 66%|██████▌   | 605/916 [00:22<00:06, 50.53it/s]
+ 67%|██████▋   | 616/916 [00:23<00:05, 57.73it/s]
+ 68%|██████▊   | 627/916 [00:23<00:04, 65.78it/s]
+ 70%|██████▉   | 637/916 [00:23<00:04, 62.12it/s]
+ 71%|███████   | 646/916 [00:27<00:36,  7.39it/s]
+ 71%|███████▏  | 654/916 [00:27<00:27,  9.49it/s]
+ 73%|███████▎  | 666/916 [00:27<00:17, 13.95it/s]
+ 74%|███████▍  | 679/916 [00:27<00:11, 20.29it/s]
+ 76%|███████▌  | 693/916 [00:28<00:07, 28.81it/s]
+ 78%|███████▊  | 714/916 [00:28<00:04, 45.58it/s]
+ 80%|███████▉  | 730/916 [00:28<00:03, 58.27it/s]
+ 81%|████████  | 744/916 [00:28<00:02, 62.77it/s]
+ 83%|████████▎ | 756/916 [00:28<00:02, 63.30it/s]
+ 84%|████████▎ | 767/916 [00:28<00:02, 58.11it/s]
+ 85%|████████▍ | 777/916 [00:28<00:02, 64.51it/s]
+ 86%|████████▌ | 786/916 [00:35<00:22,  5.78it/s]
+ 88%|████████▊ | 802/916 [00:35<00:12,  9.12it/s]
+ 89%|████████▊ | 812/916 [00:35<00:09, 10.95it/s]
+ 90%|████████▉ | 820/916 [00:35<00:07, 13.37it/s]
+ 90%|█████████ | 827/916 [00:35<00:05, 15.60it/s]
+ 91%|█████████ | 833/916 [00:35<00:04, 18.05it/s]
+ 92%|█████████▏| 840/916 [00:36<00:03, 22.32it/s]
+ 93%|█████████▎| 849/916 [00:36<00:02, 28.75it/s]
+ 94%|█████████▎| 857/916 [00:36<00:01, 32.06it/s]
+ 94%|█████████▍| 863/916 [00:36<00:01, 33.55it/s]
+ 95%|█████████▍| 869/916 [00:36<00:01, 36.47it/s]
+ 96%|█████████▌| 878/916 [00:36<00:00, 44.47it/s]
+ 97%|█████████▋| 884/916 [00:43<00:10,  3.18it/s]
+ 97%|█████████▋| 889/916 [00:43<00:06,  4.05it/s]
+ 98%|█████████▊| 897/916 [00:44<00:03,  6.00it/s]
+100%|█████████▉| 914/916 [00:44<00:00, 11.83it/s]
+100%|██████████| 916/916 [00:44<00:00, 20.73it/s]
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-06-01 10:16:46.278 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='10d88b52fa8d717fa8e29af3abf0c3a2bf175497') relies on an unsupported Lean version: 41697dcf6cab7ec82723ba404f2bda7a4526bb2b
+2024-06-01 10:16:50.446 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/xubaiw/CMark.lean', commit='0077cbbaa92abf855fc1c0413e158ffd8195ec77') relies on an unsupported Lean version: 8fc1af650ad6d31cf766d9bc84119149330e7d4e
+2024-06-01 10:16:59.752 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='280d75fdfe7be8eb337be7f1bf8479b4aac09f71') relies on an unsupported Lean version: 0d7051497ea09b2b4a4ef608e371b8f317487c3c
+2024-06-01 10:17:03.151 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='39229f3630d734af7d9cfb5937ddc6b41d3aa6aa') relies on an unsupported Lean version: 216d2460e0adec8317fdeeb6f2543cb7442564fd
+2024-06-01 10:17:08.090 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/hargonix/LeanInk', commit='2447df5cc6e48eb965c3c3fba87e46d353b5e9f1') relies on an unsupported Lean version: f6cd6c069587cfe62dd68cb6330f9ad794a56724
+2024-06-01 10:17:22.731 | INFO     | __main__:retrieve_proof:404 - MAIN: about to split data
+2024-06-01 10:17:24.556 | INFO     | __main__:split_data:132 - 4 theorems in total
+2024-06-01 10:17:24.556 | INFO     | __main__:split_randomly:81 - Splitting the theorems randomly
+2024-06-01 10:17:24.556 | INFO     | __main__:split_by_premise:94 - Splitting the theorems by premises
+2024-06-01 10:17:24.557 | INFO     | __main__:retrieve_proof:406 - MAIN: done splitting data
+2024-06-01 10:17:24.557 | INFO     | __main__:retrieve_proof:407 - MAIN: about to export corpus.jsonl
+2024-06-01 10:17:24.557 | INFO     | __main__:export_data:174 - dst path is /raid/adarsh/data
+2024-06-01 10:17:24.557 | INFO     | __main__:export_premises:143 - /raid/adarsh/data/corpus.jsonl already exists. Removing it now.
+2024-06-01 10:17:27.777 | INFO     | __main__:export_premises:161 - 18622 theorems/definitions from 916 files saved to /raid/adarsh/data/corpus.jsonl
+2024-06-01 10:17:27.777 | INFO     | __main__:retrieve_proof:409 - MAIN: exported corpus.jsonl
+2024-06-01 10:17:29.548 | INFO     | __main__:retrieve_proof:426 - 1556
+2024-06-01 10:17:29.549 | INFO     | __main__:retrieve_proof:439 - MAIN: about to search for proofs
+2024-06-01 10:17:29.549 | INFO     | prover.proof_search:__init__:429 - Launching 5 workers with 1 GPUs.
+2024-06-01 10:17:31,722	INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at [1m[32m127.0.0.1:8267 [39m[22m
+
+-------------------------------------------------------------------------------
+main.py 540 <module>
+main()
+
+main.py 529 main
+proofs = retrieve_proof(lean_git_repo)
+
+main.py 440 retrieve_proof
+prover = DistributedProver(
+
+proof_search.py 431 __init__
+provers = [
+
+proof_search.py 432 <listcomp>
+GpuProver.options(num_gpus=num_gpus_per_worker).remote(
+
+actor.py 830 remote
+return actor_cls._remote(args=args, kwargs=kwargs, **updated_options)
+
+auto_init_hook.py 21 auto_init_wrapper
+return fn(*args, **kwargs)
+
+tracing_helper.py 388 _invocation_actor_class_remote_span
+return method(self, args, kwargs, *_args, **_kwargs)
+
+actor.py 1038 _remote
+worker.function_actor_manager.export_actor_class(
+
+function_manager.py 482 export_actor_class
+serialized_actor_class = pickle_dumps(
+
+serialization.py 66 pickle_dumps
+return pickle.dumps(obj)
+
+cloudpickle.py 1479 dumps
+cp.dump(obj)
+
+cloudpickle.py 1245 dump
+return super().dump(obj)
+
+cloudpickle.py 931 _file_reduce
+raise pickle.PicklingError(
+
+_pickle.PicklingError:
+Cannot pickle files that are not opened for reading: w
+
+
+
+ATTEMPT 2 new-version `bash run_lean_copilot_bot.sh >> logfile7.log 2>&1`
+
+
+Script executed from: /home/adarsh/ReProver
+[2024-06-01 10:39:07,939] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+Found 1 repositories
+Processing /raid/adarsh/repos/Adarsh321123/new-version-test
+From https://github.com/Adarsh321123/new-version-test
+ * branch            main       -> FETCH_HEAD
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+From https://github.com/Adarsh321123/new-version-test
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Switched to branch '_LeanCopilotBot'
+Your branch is up to date with 'origin/_LeanCopilotBot'.
+Already up to date.
+2024-06-01 10:39:19.239 | INFO     | __main__:retrieve_proof:375 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0-rc1\n'}
+2024-06-01 10:39:19.239 | INFO     | __main__:retrieve_proof:377 - lean version v: v4.8.0-rc1
+2024-06-01 10:39:19.239 | INFO     | __main__:retrieve_proof:378 - is supported: True
+2024-06-01 10:39:19.239 | INFO     | __main__:retrieve_proof:384 - lean path /home/adarsh/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-06-01 10:39:19.239 | INFO     | __main__:retrieve_proof:390 - Switched to Lean toolchain at: /home/adarsh/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-06-01 10:39:19.272 | INFO     | __main__:retrieve_proof:391 - lean --version: Lean (version 4.8.0-rc1, x86_64-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-06-01 10:39:19.272 | INFO     | __main__:retrieve_proof:392 - repo: LeanGitRepo(url='https://github.com/Adarsh321123/new-version-test', commit='3508f1f7d21f7c31ec7f472d0f5af026971661b8')
+2024-06-01 10:39:19.273 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /raid/adarsh/.cache/lean_dojo/Adarsh321123-new-version-test-3508f1f7d21f7c31ec7f472d0f5af026971661b8/new-version-test
+2024-06-01 10:39:21,534	INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at [1m[32m127.0.0.1:8267 [39m[22m
+
+  0%|          | 0/916 [00:00<?, ?it/s]
+  0%|          | 1/916 [00:01<25:53,  1.70s/it]
+  2%|▏         | 15/916 [00:01<01:19, 11.38it/s]
+  3%|▎         | 29/916 [00:02<00:44, 19.81it/s]
+  5%|▌         | 47/916 [00:02<00:23, 36.51it/s]
+  6%|▋         | 58/916 [00:02<00:26, 32.82it/s]
+  8%|▊         | 69/916 [00:03<00:27, 30.86it/s]
+ 10%|▉         | 91/916 [00:03<00:16, 51.55it/s]
+ 12%|█▏        | 110/916 [00:03<00:17, 44.90it/s]
+ 13%|█▎        | 123/916 [00:03<00:14, 54.12it/s]
+ 15%|█▍        | 134/916 [00:04<00:22, 35.35it/s]
+ 16%|█▌        | 142/916 [00:04<00:20, 38.27it/s]
+ 16%|█▋        | 149/916 [00:05<00:31, 24.35it/s]
+ 18%|█▊        | 161/916 [00:05<00:23, 32.40it/s]
+ 19%|█▉        | 173/916 [00:05<00:17, 42.13it/s]
+ 20%|█▉        | 182/916 [00:06<00:33, 22.18it/s]
+ 21%|██        | 194/916 [00:06<00:24, 30.04it/s]
+ 22%|██▏       | 203/916 [00:06<00:20, 34.37it/s]
+ 23%|██▎       | 210/916 [00:07<00:40, 17.56it/s]
+ 25%|██▍       | 225/916 [00:07<00:25, 27.26it/s]
+ 26%|██▋       | 241/916 [00:07<00:16, 39.87it/s]
+ 28%|██▊       | 252/916 [00:08<00:13, 48.17it/s]
+ 29%|██▉       | 266/916 [00:08<00:10, 61.49it/s]
+ 30%|███       | 278/916 [00:09<00:29, 21.47it/s]
+ 31%|███▏      | 287/916 [00:09<00:24, 25.51it/s]
+ 33%|███▎      | 298/916 [00:09<00:19, 32.24it/s]
+ 34%|███▍      | 310/916 [00:11<00:37, 16.02it/s]
+ 35%|███▌      | 324/916 [00:11<00:25, 22.82it/s]
+ 36%|███▌      | 332/916 [00:11<00:21, 26.63it/s]
+ 37%|███▋      | 340/916 [00:11<00:18, 31.57it/s]
+ 38%|███▊      | 351/916 [00:11<00:14, 40.17it/s]
+ 39%|███▉      | 360/916 [00:12<00:12, 46.25it/s]
+ 41%|████      | 376/916 [00:12<00:08, 63.72it/s]
+ 42%|████▏     | 386/916 [00:14<00:37, 14.05it/s]
+ 43%|████▎     | 394/916 [00:14<00:31, 16.38it/s]
+ 44%|████▍     | 401/916 [00:14<00:27, 19.05it/s]
+ 45%|████▍     | 412/916 [00:14<00:19, 26.14it/s]
+ 46%|████▌     | 419/916 [00:15<00:16, 30.10it/s]
+ 47%|████▋     | 426/916 [00:17<00:58,  8.35it/s]
+ 47%|████▋     | 435/916 [00:17<00:41, 11.65it/s]
+ 49%|████▉     | 450/916 [00:17<00:24, 19.11it/s]
+ 50%|█████     | 458/916 [00:18<00:19, 23.26it/s]
+ 51%|█████     | 466/916 [00:18<00:15, 28.27it/s]
+ 53%|█████▎    | 484/916 [00:18<00:09, 45.48it/s]
+ 54%|█████▍    | 495/916 [00:18<00:08, 52.57it/s]
+ 55%|█████▌    | 505/916 [00:18<00:07, 57.53it/s]
+ 56%|█████▌    | 515/916 [00:18<00:06, 63.99it/s]
+ 57%|█████▋    | 525/916 [00:21<00:37, 10.34it/s]
+ 58%|█████▊    | 533/916 [00:21<00:29, 12.95it/s]
+ 59%|█████▉    | 544/916 [00:21<00:20, 17.95it/s]
+ 61%|██████    | 557/916 [00:21<00:13, 25.82it/s]
+ 63%|██████▎   | 573/916 [00:22<00:09, 37.63it/s]
+ 64%|██████▍   | 584/916 [00:22<00:07, 43.61it/s]
+ 65%|██████▍   | 594/916 [00:22<00:06, 47.00it/s]
+ 66%|██████▌   | 605/916 [00:22<00:05, 55.45it/s]
+ 68%|██████▊   | 621/916 [00:22<00:04, 71.77it/s]
+ 70%|██████▉   | 637/916 [00:22<00:03, 88.20it/s]
+ 71%|███████   | 649/916 [00:26<00:27,  9.61it/s]
+ 72%|███████▏  | 658/916 [00:27<00:21, 11.96it/s]
+ 73%|███████▎  | 667/916 [00:27<00:16, 14.92it/s]
+ 74%|███████▍  | 679/916 [00:27<00:11, 20.61it/s]
+ 76%|███████▌  | 694/916 [00:27<00:07, 29.37it/s]
+ 77%|███████▋  | 709/916 [00:27<00:05, 40.32it/s]
+ 79%|███████▉  | 724/916 [00:27<00:03, 52.84it/s]
+ 81%|████████  | 743/916 [00:27<00:02, 71.84it/s]
+ 83%|████████▎ | 757/916 [00:27<00:02, 71.86it/s]
+ 84%|████████▍ | 769/916 [00:28<00:02, 69.85it/s]
+ 85%|████████▌ | 783/916 [00:28<00:01, 80.73it/s]
+ 87%|████████▋ | 795/916 [00:33<00:14,  8.09it/s]
+ 88%|████████▊ | 803/916 [00:33<00:11,  9.82it/s]
+ 89%|████████▉ | 815/916 [00:33<00:07, 13.61it/s]
+ 90%|█████████ | 827/916 [00:33<00:04, 18.59it/s]
+ 91%|█████████▏| 837/916 [00:34<00:03, 20.07it/s]
+ 92%|█████████▏| 845/916 [00:34<00:03, 22.11it/s]
+ 93%|█████████▎| 852/916 [00:34<00:02, 24.30it/s]
+ 94%|█████████▍| 859/916 [00:34<00:01, 28.74it/s]
+ 95%|█████████▍| 870/916 [00:41<00:10,  4.37it/s]
+ 96%|█████████▌| 875/916 [00:41<00:07,  5.25it/s]
+ 97%|█████████▋| 885/916 [00:41<00:03,  7.82it/s]
+ 97%|█████████▋| 892/916 [00:41<00:02, 10.09it/s]
+100%|██████████| 916/916 [00:41<00:00, 22.09it/s]
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-06-01 10:40:55.917 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='10d88b52fa8d717fa8e29af3abf0c3a2bf175497') relies on an unsupported Lean version: 41697dcf6cab7ec82723ba404f2bda7a4526bb2b
+2024-06-01 10:41:00.535 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/xubaiw/CMark.lean', commit='0077cbbaa92abf855fc1c0413e158ffd8195ec77') relies on an unsupported Lean version: 8fc1af650ad6d31cf766d9bc84119149330e7d4e
+2024-06-01 10:41:10.044 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='280d75fdfe7be8eb337be7f1bf8479b4aac09f71') relies on an unsupported Lean version: 0d7051497ea09b2b4a4ef608e371b8f317487c3c
+2024-06-01 10:41:13.581 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='39229f3630d734af7d9cfb5937ddc6b41d3aa6aa') relies on an unsupported Lean version: 216d2460e0adec8317fdeeb6f2543cb7442564fd
+2024-06-01 10:41:18.681 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/hargonix/LeanInk', commit='2447df5cc6e48eb965c3c3fba87e46d353b5e9f1') relies on an unsupported Lean version: f6cd6c069587cfe62dd68cb6330f9ad794a56724
+2024-06-01 10:41:34.030 | INFO     | __main__:retrieve_proof:404 - MAIN: about to split data
+2024-06-01 10:41:35.792 | INFO     | __main__:split_data:132 - 4 theorems in total
+2024-06-01 10:41:35.792 | INFO     | __main__:split_randomly:81 - Splitting the theorems randomly
+2024-06-01 10:41:35.792 | INFO     | __main__:split_by_premise:94 - Splitting the theorems by premises
+2024-06-01 10:41:35.792 | INFO     | __main__:retrieve_proof:406 - MAIN: done splitting data
+2024-06-01 10:41:35.792 | INFO     | __main__:retrieve_proof:407 - MAIN: about to export corpus.jsonl
+2024-06-01 10:41:35.793 | INFO     | __main__:export_data:174 - dst path is /raid/adarsh/data
+2024-06-01 10:41:35.793 | INFO     | __main__:export_premises:143 - /raid/adarsh/data/corpus.jsonl already exists. Removing it now.
+2024-06-01 10:41:38.988 | INFO     | __main__:export_premises:161 - 18622 theorems/definitions from 916 files saved to /raid/adarsh/data/corpus.jsonl
+2024-06-01 10:41:38.989 | INFO     | __main__:retrieve_proof:409 - MAIN: exported corpus.jsonl
+2024-06-01 10:41:40.742 | INFO     | __main__:retrieve_proof:426 - 1556
+2024-06-01 10:41:40.743 | INFO     | __main__:retrieve_proof:439 - MAIN: about to search for proofs
+2024-06-01 10:41:40.743 | INFO     | prover.proof_search:__init__:429 - Launching 5 workers with 1 GPUs.
+2024-06-01 10:41:43,917	INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at [1m[32m127.0.0.1:8267 [39m[22m
+
+-------------------------------------------------------------------------------
+main.py 540 <module>
+main()
+
+main.py 529 main
+proofs = retrieve_proof(lean_git_repo)
+
+main.py 440 retrieve_proof
+prover = DistributedProver(
+
+proof_search.py 431 __init__
+provers = [
+
+proof_search.py 432 <listcomp>
+GpuProver.options(num_gpus=num_gpus_per_worker).remote(
+
+actor.py 830 remote
+return actor_cls._remote(args=args, kwargs=kwargs, **updated_options)
+
+auto_init_hook.py 21 auto_init_wrapper
+return fn(*args, **kwargs)
+
+tracing_helper.py 388 _invocation_actor_class_remote_span
+return method(self, args, kwargs, *_args, **_kwargs)
+
+actor.py 1038 _remote
+worker.function_actor_manager.export_actor_class(
+
+function_manager.py 482 export_actor_class
+serialized_actor_class = pickle_dumps(
+
+serialization.py 66 pickle_dumps
+return pickle.dumps(obj)
+
+cloudpickle.py 1479 dumps
+cp.dump(obj)
+
+cloudpickle.py 1245 dump
+return super().dump(obj)
+
+cloudpickle.py 931 _file_reduce
+raise pickle.PicklingError(
+
+_pickle.PicklingError:
+Cannot pickle files that are not opened for reading: w
+
+

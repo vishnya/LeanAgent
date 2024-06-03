@@ -183,6 +183,25 @@ load_dotenv()
 known_repositories = [
     "leanprover-community/mathlib4",  # ReProver is trained on this + LeanDojo already tests on it
     "leanprover-community/batteries", # ReProver is trained on this + LeanDojo already tests on it
+    "lecopivo/SciLean", # TODO: remove after testing
+    "leanprover-community/aesop", # TODO: remove after testing
+    "kmill/lean4-raytracer", # TODO: remove after testing
+    "AlexKontorovich/PrimeNumberTheoremAnd", # TODO: remove after testing
+    "teorth/pfr", # TODO: remove after testing
+    "lurk-lab/yatima", # TODO: remove after testing
+    "leanprover-community/ProofWidgets4", # TODO: remove after testing
+    "google-deepmind/debate", # TODO: remove after testing
+    "leanprover-community/NNG4", # TODO: remove after testing
+    "teorth/symmetric_project", # TODO: remove after testing
+    "ufmg-smite/lean-smt", # TODO: remove after testing
+    "PatrickMassot/GlimpseOfLean", # TODO: remove after testing
+    "ImperialCollegeLondon/formalising-mathematics-2024", # TODO: remove after testing
+    "avigad/lamr", # TODO: remove after testing
+    "leanprover-community/quote4", # TODO: remove after testing
+    "digama0/lean4lean", # TODO: remove after testing
+    "leanprover/verso", # TODO: remove after testing
+    "leanprover-community/iris-lean", # TODO: remove after testing
+    "avigad/mathematics_in_lean_source", # TODO: remove after testing
     "leanprover/lean4",
     "leanprover-community/mathlib",
     "leanprover/std4",  # moved to batteries
@@ -299,12 +318,13 @@ def create_pull_request(repo_full_name, title, body, head_branch):
         print("Failed to create pull request", response.text)
         return ""
 
-def search_github_repositories(language="Lean", num_repos=10):
+def search_github_repositories(language="Lean", num_repos=20):
     headers = {'Authorization': personal_access_token}
     query_params = {
         'q': f'language:{language}',
         'sort': 'stars',
-        'order': 'desc'
+        'order': 'desc',
+        'per_page': 100,
     }
     response = requests.get('https://api.github.com/search/repositories', headers=headers, params=query_params)
     
@@ -462,28 +482,29 @@ def retrieve_proof(repo, repo_no_dir, sha):
     proofs = []
     unproved_sorries = []
     for result in results:
-        if result.status == Status.PROVED:
-            # logger.info(str(result))
-            proof_text = "\n".join(result.proof)
-            # TODO: find more efficient way to get url and repo name
-            repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
-            repo_name = repo_dir + "/" + repo_name
-            file_path = repo_name + "/" + str(result.theorem.file_path)
-            theorem_name = str(result.theorem.full_name)
-            start = None
-            end = None
-            # TODO: optimize
-            for i in range(len(theorems)):
-                if theorems[i] == result.theorem:
-                    start = positions[i]
-                    end = ends[i]
-            proofs.append((file_path, start, end, proof_text, theorem_name))
-        else:
-            repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
-            repo_name = repo_dir + "/" + repo_name
-            file_path = repo_name + "/" + str(result.theorem.file_path)
-            theorem_name = str(result.theorem.full_name)
-            unproved_sorries.append((file_path, theorem_name))
+        if result is not None:
+            if result.status == Status.PROVED:
+                # logger.info(str(result))
+                proof_text = "\n".join(result.proof)
+                # TODO: find more efficient way to get url and repo name
+                repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
+                repo_name = repo_dir + "/" + repo_name
+                file_path = repo_name + "/" + str(result.theorem.file_path)
+                theorem_name = str(result.theorem.full_name)
+                start = None
+                end = None
+                # TODO: optimize
+                for i in range(len(theorems)):
+                    if theorems[i] == result.theorem:
+                        start = positions[i]
+                        end = ends[i]
+                proofs.append((file_path, start, end, proof_text, theorem_name))
+            else:
+                repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
+                repo_name = repo_dir + "/" + repo_name
+                file_path = repo_name + "/" + str(result.theorem.file_path)
+                theorem_name = str(result.theorem.full_name)
+                unproved_sorries.append((file_path, theorem_name))
 
     return num_sorries, proofs, num_premises, num_files_traced, unproved_sorries
 
@@ -559,7 +580,11 @@ def main():
         subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
         subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
         create_or_switch_branch(repo, TMP_BRANCH, base_branch)
-        num_sorries, proofs, num_premises, num_files_traced, unproved_sorries = retrieve_proof(lean_git_repo, repo_no_dir, lean_git_repo.commit)
+        result = retrieve_proof(lean_git_repo, repo_no_dir, lean_git_repo.commit)
+        if result is None:
+            logger.info("Skipping repository due to configuration or error.")
+            continue
+        num_sorries, proofs, num_premises, num_files_traced, unproved_sorries = result
         if proofs is None:
             continue
         results["repositories"][repo]["number_of_sorries"] = num_sorries

@@ -1,0 +1,528 @@
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ export CUDA_VISIBLE_DEVICES=2
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ bash run_lean_copilot_bot.sh
+Script executed from: /home/adarsh/ReProver
+[2024-06-02 12:05:55,792] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+Cloning https://github.com/lecopivo/SciLean.git
+Repo name: lecopivo/SciLean
+Deleting existing repository directory: /raid/adarsh/repos/lecopivo/SciLean
+Cloning into '/raid/adarsh/repos/lecopivo/SciLean'...
+remote: Enumerating objects: 14952, done.
+remote: Counting objects: 100% (1010/1010), done.
+remote: Compressing objects: 100% (296/296), done.
+remote: Total 14952 (delta 824), reused 830 (delta 710), pack-reused 13942
+Receiving objects: 100% (14952/14952), 9.48 MiB | 10.98 MiB/s, done.
+Resolving deltas: 100% (10922/10922), done.
+Cloning https://github.com/leanprover-community/aesop.git
+Repo name: leanprover-community/aesop
+Deleting existing repository directory: /raid/adarsh/repos/leanprover-community/aesop
+Cloning into '/raid/adarsh/repos/leanprover-community/aesop'...
+remote: Enumerating objects: 6936, done.
+remote: Counting objects: 100% (1276/1276), done.
+remote: Compressing objects: 100% (266/266), done.
+remote: Total 6936 (delta 1076), reused 1129 (delta 989), pack-reused 5660
+Receiving objects: 100% (6936/6936), 3.35 MiB | 2.99 MiB/s, done.
+Resolving deltas: 100% (5031/5031), done.
+Cloning https://github.com/kmill/lean4-raytracer.git
+Repo name: kmill/lean4-raytracer
+Deleting existing repository directory: /raid/adarsh/repos/kmill/lean4-raytracer
+Cloning into '/raid/adarsh/repos/kmill/lean4-raytracer'...
+remote: Enumerating objects: 156, done.
+remote: Counting objects: 100% (156/156), done.
+remote: Compressing objects: 100% (93/93), done.
+remote: Total 156 (delta 75), reused 128 (delta 52), pack-reused 0
+Receiving objects: 100% (156/156), 10.06 MiB | 9.54 MiB/s, done.
+Resolving deltas: 100% (75/75), done.
+Cloning https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+Repo name: AlexKontorovich/PrimeNumberTheoremAnd
+Deleting existing repository directory: /raid/adarsh/repos/AlexKontorovich/PrimeNumberTheoremAnd
+Cloning into '/raid/adarsh/repos/AlexKontorovich/PrimeNumberTheoremAnd'...
+remote: Enumerating objects: 5560, done.
+remote: Counting objects: 100% (2340/2340), done.
+remote: Compressing objects: 100% (591/591), done.
+remote: Total 5560 (delta 1830), reused 1915 (delta 1729), pack-reused 3220
+Receiving objects: 100% (5560/5560), 1.55 MiB | 4.37 MiB/s, done.
+Resolving deltas: 100% (3893/3893), done.
+Cloning https://github.com/leanprover-community/lean-perfectoid-spaces.git
+Repo name: leanprover-community/lean-perfectoid-spaces
+Cloning into '/raid/adarsh/repos/leanprover-community/lean-perfectoid-spaces'...
+remote: Enumerating objects: 6779, done.
+remote: Counting objects: 100% (317/317), done.
+remote: Compressing objects: 100% (107/107), done.
+remote: Total 6779 (delta 197), reused 315 (delta 196), pack-reused 6462
+Receiving objects: 100% (6779/6779), 12.00 MiB | 7.78 MiB/s, done.
+Resolving deltas: 100% (4919/4919), done.
+Failed to clone leanprover-community/lean-perfectoid-spaces because of HTTP Error 404: Not Found
+Cloning https://github.com/flypitch/flypitch.git
+Repo name: flypitch/flypitch
+Cloning into '/raid/adarsh/repos/flypitch/flypitch'...
+remote: Enumerating objects: 3574, done.
+remote: Counting objects: 100% (121/121), done.
+remote: Compressing objects: 100% (69/69), done.
+remote: Total 3574 (delta 68), reused 84 (delta 52), pack-reused 3453
+Receiving objects: 100% (3574/3574), 1.79 MiB | 4.39 MiB/s, done.
+Resolving deltas: 100% (2689/2689), done.
+Failed to clone flypitch/flypitch because of HTTP Error 404: Not Found
+Cloning https://github.com/jesse-michael-han/lean-gptf.git
+Repo name: jesse-michael-han/lean-gptf
+Cloning into '/raid/adarsh/repos/jesse-michael-han/lean-gptf'...
+remote: Enumerating objects: 266, done.
+remote: Counting objects: 100% (22/22), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 266 (delta 14), reused 12 (delta 12), pack-reused 244
+Receiving objects: 100% (266/266), 51.42 KiB | 438.00 KiB/s, done.
+Resolving deltas: 100% (124/124), done.
+Failed to clone jesse-michael-han/lean-gptf because of HTTP Error 404: Not Found
+Cloning https://github.com/teorth/pfr.git
+Repo name: teorth/pfr
+Deleting existing repository directory: /raid/adarsh/repos/teorth/pfr
+Cloning into '/raid/adarsh/repos/teorth/pfr'...
+remote: Enumerating objects: 8182, done.
+remote: Counting objects: 100% (285/285), done.
+remote: Compressing objects: 100% (90/90), done.
+remote: Total 8182 (delta 213), reused 255 (delta 194), pack-reused 7897
+Receiving objects: 100% (8182/8182), 4.47 MiB | 6.85 MiB/s, done.
+Resolving deltas: 100% (5910/5910), done.
+Cloning https://github.com/TwoFX/sudoku.git
+Repo name: TwoFX/sudoku
+Cloning into '/raid/adarsh/repos/TwoFX/sudoku'...
+remote: Enumerating objects: 1316, done.
+remote: Counting objects: 100% (385/385), done.
+remote: Compressing objects: 100% (151/151), done.
+remote: Total 1316 (delta 254), reused 364 (delta 234), pack-reused 931
+Receiving objects: 100% (1316/1316), 1.14 MiB | 3.08 MiB/s, done.
+Resolving deltas: 100% (851/851), done.
+Failed to clone TwoFX/sudoku because of HTTP Error 404: Not Found
+Cloning https://github.com/blanchette/logical_verification_2020.git
+Repo name: blanchette/logical_verification_2020
+Cloning into '/raid/adarsh/repos/blanchette/logical_verification_2020'...
+remote: Enumerating objects: 281, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 281 (delta 10), reused 18 (delta 4), pack-reused 257
+Receiving objects: 100% (281/281), 5.57 MiB | 7.82 MiB/s, done.
+Resolving deltas: 100% (165/165), done.
+Failed to clone blanchette/logical_verification_2020 because of HTTP Error 404: Not Found
+Cloning https://github.com/lurk-lab/yatima.git
+Repo name: lurk-lab/yatima
+Deleting existing repository directory: /raid/adarsh/repos/lurk-lab/yatima
+Cloning into '/raid/adarsh/repos/lurk-lab/yatima'...
+remote: Enumerating objects: 3500, done.
+remote: Counting objects: 100% (273/273), done.
+remote: Compressing objects: 100% (162/162), done.
+remote: Total 3500 (delta 150), reused 196 (delta 109), pack-reused 3227
+Receiving objects: 100% (3500/3500), 1.19 MiB | 4.38 MiB/s, done.
+Resolving deltas: 100% (2209/2209), done.
+2024-06-02 12:07:05.184 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/lurk-lab/yatima', commit='d9f20f51bca748878b8561661fe8bc19a7dba609') relies on an unsupported Lean version: c21d2f29a21a
+d17351ebb7353fce9d7c7f6bdca7
+Found 6 repositories
+Processing /raid/adarsh/repos/lecopivo/SciLean
+From https://github.com/lecopivo/SciLean
+ * branch            master     -> FETCH_HEAD
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+From https://github.com/lecopivo/SciLean
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Switched to a new branch '_LeanCopilotBot'
+2024-06-02 12:07:06.018 | INFO     | __main__:retrieve_proof:382 - lean toolchain version: {'content': 'leanprover/lean4:v4.7.0\n'}
+2024-06-02 12:07:06.018 | INFO     | __main__:retrieve_proof:384 - lean version v: v4.7.0
+2024-06-02 12:07:06.018 | INFO     | __main__:retrieve_proof:385 - is supported: True
+2024-06-02 12:07:06.018 | INFO     | __main__:retrieve_proof:391 - lean path /home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-06-02 12:07:06.018 | INFO     | __main__:retrieve_proof:397 - Switched to Lean toolchain at: /home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-06-02 12:07:06.051 | INFO     | __main__:retrieve_proof:398 - lean --version: Lean (version 4.7.0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-06-02 12:07:06.051 | INFO     | __main__:retrieve_proof:399 - repo: LeanGitRepo(url='https://github.com/lecopivo/SciLean', commit='e21a3ecdc0442bf795ea665d3a4bdbc5be22602d')
+2024-06-02 12:07:06.051 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /raid/adarsh/.cache/lean_dojo/lecopivo-SciLean-e21a3ecdc0442bf795ea665d3a4bdbc5be22602d/SciLean
+2024-06-02 12:07:08,343 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8268
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2851/2851 [04:45<00:00,  9.99it/s]
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-06-02 12:12:27.316 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4a0f6ef5') relies on an unsupported Lean version: ec94173
+5c80dc54c53948e30c428905b6600f95a
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-06-02 12:13:01.460 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='10d88b52fa8d717fa8e29af3abf0c3a2bf175497') relies on an unsupported Lean version: 41697dcf6ca
+b7ec82723ba404f2bda7a4526bb2b
+2024-06-02 12:13:17.599 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/xubaiw/CMark.lean', commit='0077cbbaa92abf855fc1c0413e158ffd8195ec77') relies on an unsupported Lean version: 8fc1af650a
+d6d31cf766d9bc84119149330e7d4e
+2024-06-02 12:13:27.119 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='280d75fdfe7be8eb337be7f1bf8479b4aac09f71') relies on an unsupported Lean version:
+ 0d7051497ea09b2b4a4ef608e371b8f317487c3c
+2024-06-02 12:13:30.567 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='39229f3630d734af7d9cfb5937ddc6b41d3aa6aa') relies on an unsupported Lean version: 216d2460e0a
+dec8317fdeeb6f2543cb7442564fd
+2024-06-02 12:13:35.514 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/hargonix/LeanInk', commit='2447df5cc6e48eb965c3c3fba87e46d353b5e9f1') relies on an unsupported Lean version: f6cd6c06958
+7cfe62dd68cb6330f9ad794a56724
+2024-06-02 12:14:45.210 | INFO     | __main__:retrieve_proof:411 - MAIN: about to split data
+2024-06-02 12:14:52.061 | INFO     | __main__:split_data:132 - 72244 theorems in total
+2024-06-02 12:14:52.061 | INFO     | __main__:split_randomly:81 - Splitting the theorems randomly
+2024-06-02 12:14:52.090 | INFO     | __main__:split_by_premise:94 - Splitting the theorems by premises
+2024-06-02 12:14:57.737 | INFO     | __main__:retrieve_proof:413 - MAIN: done splitting data
+2024-06-02 12:14:57.737 | INFO     | __main__:retrieve_proof:414 - MAIN: about to export corpus.jsonl
+2024-06-02 12:14:57.738 | INFO     | __main__:export_data:178 - Exporting data to path: /raid/adarsh/data/lecopivo/SciLean/e21a3ecdc0442bf795ea665d3a4bdbc5be22602d
+2024-06-02 12:14:57.738 | INFO     | __main__:export_premises:144 - /raid/adarsh/data/lecopivo/SciLean/e21a3ecdc0442bf795ea665d3a4bdbc5be22602d/corpus.jsonl already exists. Using existing file
+2024-06-02 12:14:57.738 | INFO     | __main__:retrieve_proof:416 - MAIN: exported corpus.jsonl
+2024-06-02 12:15:05.125 | INFO     | __main__:retrieve_proof:433 - 28999
+2024-06-02 12:15:05.140 | INFO     | __main__:retrieve_proof:447 - Found 293 sorries!
+2024-06-02 12:15:05.140 | INFO     | __main__:retrieve_proof:448 - MAIN: about to search for proofs
+2024-06-02 12:15:05.140 | INFO     | prover.proof_search:__init__:429 - Launching 5 workers with 1 GPUs.
+2024-06-02 12:15:08,517 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+2024-06-02 12:15:09.468 | INFO     | prover.proof_search:search_unordered:474 - before theorem search:
+(pid=877588) [2024-06-02 12:15:14,495] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(pid=877585)  [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+(pid=877588)  [WARNING]  async_io: please install the libaio-dev package with apt
+(pid=877588)  [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+(pid=877588)  [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+(pid=877585)  [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+(pid=877585)  [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+(GpuProver pid=877585) Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../../raid/adarsh/kaiyuy_lean
+dojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt`
+(GpuProver pid=877585) 2024-06-02 12:15:16.160 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: /raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt
+(GpuProver pid=877585) 2024-06-02 12:15:16.160 | INFO     | generator.model:__init__:124 - Loading the retriever from /raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt
+(GpuProver pid=877585) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when p
+ossible. If you want to force a new download, use `force_download=True`.
+(GpuProver pid=877585)   warnings.warn(
+(GpuProver pid=877585) Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+(GpuProver pid=877585) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['encoder.shared.weight', 'encoder.encoder.em
+bed_tokens.weight', 'encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.0.layer.0.SelfAttention.o.w
+eight', 'encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'encoder.encoder.block.0.layer.0.layer_norm.weight', 'encoder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.0.layer.1.DenseRel
+uDense.wi_1.weight', 'encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.0.layer.1.layer_norm.weight', 'encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.1.layer.0.SelfAttention.k.wei
+ght', 'encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.1.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.1.layer.0.layer_norm.weight', 'encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'encode
+r.encoder.block.1.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.1.layer.1.layer_norm.weight', 'encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'encoder.encoder.b
+lock.2.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.2.layer.0.layer_norm.weight', 'encoder.encoder.block.2.layer.1.De
+nseReluDense.wi_0.weight', 'encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.2.layer.1.layer_norm.weight', 'encoder.encoder.block.3.layer.0.SelfAtten
+tion.q.weight', 'encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.3.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.3.layer.0.layer_norm.weight', '
+encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.3.layer.1.layer_norm.weight', 'encoder
+.encoder.block.4.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'encoder.encoder.blo
+ck.4.layer.0.layer_norm.weight', 'encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.4.la
+yer.1.layer_norm.weight', 'encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.5.layer.0.SelfAttenti
+on.o.weight', 'encoder.encoder.block.5.layer.0.layer_norm.weight', 'encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.5.layer.1.DenseReluDense.wo.we
+ight', 'encoder.encoder.block.5.layer.1.layer_norm.weight', 'encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'encoder.e
+ncoder.block.6.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.6.layer.0.layer_norm.weight', 'encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.bl
+ock.6.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.6.layer.1.layer_norm.weight', 'encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.7.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.7.layer.0.S
+elfAttention.v.weight', 'encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.7.layer.0.layer_norm.weight', 'encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.7.layer.1.DenseReluDense
+.wi_1.weight', 'encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.7.layer.1.layer_norm.weight', 'encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.8.layer.0.SelfAttention.k.weight',
+'encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.8.layer.0.layer_norm.weight', 'encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'encoder.enco
+der.block.8.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.8.layer.1.layer_norm.weight', 'encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.9
+.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.9.layer.0.layer_norm.weight', 'encoder.encoder.block.9.layer.1.DenseRel
+uDense.wi_0.weight', 'encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.9.layer.1.layer_norm.weight', 'encoder.encoder.block.10.layer.0.SelfAttention.
+q.weight', 'encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.10.layer.0.layer_norm.weight', 'e
+ncoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.10.layer.1.layer_norm.weight', 'enco
+der.encoder.block.11.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'encoder.enco
+der.block.11.layer.0.layer_norm.weight', 'encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'encoder.encoder
+.block.11.layer.1.layer_norm.weight', 'encoder.encoder.final_layer_norm.weight']
+(GpuProver pid=877585) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['shared.weight', 'decoder.embed_tokens.weigh
+t', 'decoder.block.0.layer.0.SelfAttention.q.weight', 'decoder.block.0.layer.0.SelfAttention.k.weight', 'decoder.block.0.layer.0.SelfAttention.v.weight', 'decoder.block.0.layer.0.SelfAttention.o.weight', 'decoder.block.0.layer.0.SelfAttention.r
+elative_attention_bias.weight', 'decoder.block.0.layer.0.layer_norm.weight', 'decoder.block.0.layer.1.EncDecAttention.q.weight', 'decoder.block.0.layer.1.EncDecAttention.k.weight', 'decoder.block.0.layer.1.EncDecAttention.v.weight', 'decoder.bl
+ock.0.layer.1.EncDecAttention.o.weight', 'decoder.block.0.layer.1.layer_norm.weight', 'decoder.block.0.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.0.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.0.layer.2.DenseReluDense.wo.weight'
+, 'decoder.block.0.layer.2.layer_norm.weight', 'decoder.block.1.layer.0.SelfAttention.q.weight', 'decoder.block.1.layer.0.SelfAttention.k.weight', 'decoder.block.1.layer.0.SelfAttention.v.weight', 'decoder.block.1.layer.0.SelfAttention.o.weight
+', 'decoder.block.1.layer.0.layer_norm.weight', 'decoder.block.1.layer.1.EncDecAttention.q.weight', 'decoder.block.1.layer.1.EncDecAttention.k.weight', 'decoder.block.1.layer.1.EncDecAttention.v.weight', 'decoder.block.1.layer.1.EncDecAttention
+.o.weight', 'decoder.block.1.layer.1.layer_norm.weight', 'decoder.block.1.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.1.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.1.layer.2.DenseReluDense.wo.weight', 'decoder.block.1.layer.2.la
+yer_norm.weight', 'decoder.block.2.layer.0.SelfAttention.q.weight', 'decoder.block.2.layer.0.SelfAttention.k.weight', 'decoder.block.2.layer.0.SelfAttention.v.weight', 'decoder.block.2.layer.0.SelfAttention.o.weight', 'decoder.block.2.layer.0.l
+ayer_norm.weight', 'decoder.block.2.layer.1.EncDecAttention.q.weight', 'decoder.block.2.layer.1.EncDecAttention.k.weight', 'decoder.block.2.layer.1.EncDecAttention.v.weight', 'decoder.block.2.layer.1.EncDecAttention.o.weight', 'decoder.block.2.
+layer.1.layer_norm.weight', 'decoder.block.2.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.2.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.2.layer.2.DenseReluDense.wo.weight', 'decoder.block.2.layer.2.layer_norm.weight', 'decoder.bl
+ock.3.layer.0.SelfAttention.q.weight', 'decoder.block.3.layer.0.SelfAttention.k.weight', 'decoder.block.3.layer.0.SelfAttention.v.weight', 'decoder.block.3.layer.0.SelfAttention.o.weight', 'decoder.block.3.layer.0.layer_norm.weight', 'decoder.b
+lock.3.layer.1.EncDecAttention.q.weight', 'decoder.block.3.layer.1.EncDecAttention.k.weight', 'decoder.block.3.layer.1.EncDecAttention.v.weight', 'decoder.block.3.layer.1.EncDecAttention.o.weight', 'decoder.block.3.layer.1.layer_norm.weight', '
+decoder.block.3.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.3.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.3.layer.2.DenseReluDense.wo.weight', 'decoder.block.3.layer.2.layer_norm.weight', 'decoder.final_layer_norm.weight', 'lm_h
+ead.weight', 'pytorch-lightning_version', 'global_step', 'epoch', 'state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters', 'encoder.embed_tokens.weight', 'encoder.block.0.layer.0.SelfAttention.q.weight', 'enco
+der.block.0.layer.0.SelfAttention.k.weight', 'encoder.block.0.layer.0.SelfAttention.v.weight', 'encoder.block.0.layer.0.SelfAttention.o.weight', 'encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'encoder.block.0.layer.0.la
+yer_norm.weight', 'encoder.block.0.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.0.layer.1.DenseReluDense.wo.weight', 'encoder.block.0.layer.1.layer_norm.weight', 'encoder.block.1.laye
+r.0.SelfAttention.q.weight', 'encoder.block.1.layer.0.SelfAttention.k.weight', 'encoder.block.1.layer.0.SelfAttention.v.weight', 'encoder.block.1.layer.0.SelfAttention.o.weight', 'encoder.block.1.layer.0.layer_norm.weight', 'encoder.block.1.lay
+er.1.DenseReluDense.wi_0.weight', 'encoder.block.1.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.1.layer.1.DenseReluDense.wo.weight', 'encoder.block.1.layer.1.layer_norm.weight', 'encoder.block.2.layer.0.SelfAttention.q.weight', 'encoder.
+block.2.layer.0.SelfAttention.k.weight', 'encoder.block.2.layer.0.SelfAttention.v.weight', 'encoder.block.2.layer.0.SelfAttention.o.weight', 'encoder.block.2.layer.0.layer_norm.weight', 'encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'enc
+oder.block.2.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.2.layer.1.DenseReluDense.wo.weight', 'encoder.block.2.layer.1.layer_norm.weight', 'encoder.block.3.layer.0.SelfAttention.q.weight', 'encoder.block.3.layer.0.SelfAttention.k.weight
+', 'encoder.block.3.layer.0.SelfAttention.v.weight', 'encoder.block.3.layer.0.SelfAttention.o.weight', 'encoder.block.3.layer.0.layer_norm.weight', 'encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.3.layer.1.DenseReluDense.wi
+_1.weight', 'encoder.block.3.layer.1.DenseReluDense.wo.weight', 'encoder.block.3.layer.1.layer_norm.weight', 'encoder.block.4.layer.0.SelfAttention.q.weight', 'encoder.block.4.layer.0.SelfAttention.k.weight', 'encoder.block.4.layer.0.SelfAttent
+ion.v.weight', 'encoder.block.4.layer.0.SelfAttention.o.weight', 'encoder.block.4.layer.0.layer_norm.weight', 'encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.4.layer.1.D
+enseReluDense.wo.weight', 'encoder.block.4.layer.1.layer_norm.weight', 'encoder.block.5.layer.0.SelfAttention.q.weight', 'encoder.block.5.layer.0.SelfAttention.k.weight', 'encoder.block.5.layer.0.SelfAttention.v.weight', 'encoder.block.5.layer.
+0.SelfAttention.o.weight', 'encoder.block.5.layer.0.layer_norm.weight', 'encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.5.layer.1.DenseReluDense.wo.weight', 'encoder.blo
+ck.5.layer.1.layer_norm.weight', 'encoder.block.6.layer.0.SelfAttention.q.weight', 'encoder.block.6.layer.0.SelfAttention.k.weight', 'encoder.block.6.layer.0.SelfAttention.v.weight', 'encoder.block.6.layer.0.SelfAttention.o.weight', 'encoder.bl
+ock.6.layer.0.layer_norm.weight', 'encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.6.layer.1.DenseReluDense.wo.weight', 'encoder.block.6.layer.1.layer_norm.weight', 'enco
+der.block.7.layer.0.SelfAttention.q.weight', 'encoder.block.7.layer.0.SelfAttention.k.weight', 'encoder.block.7.layer.0.SelfAttention.v.weight', 'encoder.block.7.layer.0.SelfAttention.o.weight', 'encoder.block.7.layer.0.layer_norm.weight', 'enc
+oder.block.7.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.7.layer.1.DenseReluDense.wo.weight', 'encoder.block.7.layer.1.layer_norm.weight', 'encoder.block.8.layer.0.SelfAttention.q.we
+ight', 'encoder.block.8.layer.0.SelfAttention.k.weight', 'encoder.block.8.layer.0.SelfAttention.v.weight', 'encoder.block.8.layer.0.SelfAttention.o.weight', 'encoder.block.8.layer.0.layer_norm.weight', 'encoder.block.8.layer.1.DenseReluDense.wi
+_0.weight', 'encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.8.layer.1.DenseReluDense.wo.weight', 'encoder.block.8.layer.1.layer_norm.weight', 'encoder.block.9.layer.0.SelfAttention.q.weight', 'encoder.block.9.layer.0.SelfAt
+tention.k.weight', 'encoder.block.9.layer.0.SelfAttention.v.weight', 'encoder.block.9.layer.0.SelfAttention.o.weight', 'encoder.block.9.layer.0.layer_norm.weight', 'encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.9.layer.1.D
+enseReluDense.wi_1.weight', 'encoder.block.9.layer.1.DenseReluDense.wo.weight', 'encoder.block.9.layer.1.layer_norm.weight', 'encoder.block.10.layer.0.SelfAttention.q.weight', 'encoder.block.10.layer.0.SelfAttention.k.weight', 'encoder.block.10
+.layer.0.SelfAttention.v.weight', 'encoder.block.10.layer.0.SelfAttention.o.weight', 'encoder.block.10.layer.0.layer_norm.weight', 'encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'en
+coder.block.10.layer.1.DenseReluDense.wo.weight', 'encoder.block.10.layer.1.layer_norm.weight', 'encoder.block.11.layer.0.SelfAttention.q.weight', 'encoder.block.11.layer.0.SelfAttention.k.weight', 'encoder.block.11.layer.0.SelfAttention.v.weig
+ht', 'encoder.block.11.layer.0.SelfAttention.o.weight', 'encoder.block.11.layer.0.layer_norm.weight', 'encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.11.layer.1.DenseR
+eluDense.wo.weight', 'encoder.block.11.layer.1.layer_norm.weight', 'encoder.final_layer_norm.weight']
+(GpuProver pid=877585) Some weights of T5ForConditionalGeneration were not initialized from the model checkpoint at kaiyuy/leandojo-lean4-retriever-byt5-small and are newly initialized: ['decoder.block.0.layer.0.SelfAttention.k.weight', 'decode
+r.block.0.layer.0.SelfAttention.o.weight', 'decoder.block.0.layer.0.SelfAttention.q.weight', 'decoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'decoder.block.0.layer.0.SelfAttention.v.weight', 'decoder.block.0.layer.0.laye
+r_norm.weight', 'decoder.block.0.layer.1.EncDecAttention.k.weight', 'decoder.block.0.layer.1.EncDecAttention.o.weight', 'decoder.block.0.layer.1.EncDecAttention.q.weight', 'decoder.block.0.layer.1.EncDecAttention.v.weight', 'decoder.block.0.lay
+er.1.layer_norm.weight', 'decoder.block.0.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.0.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.0.layer.2.DenseReluDense.wo.weight', 'decoder.block.0.layer.2.layer_norm.weight', 'decoder.block
+.1.layer.0.SelfAttention.k.weight', 'decoder.block.1.layer.0.SelfAttention.o.weight', 'decoder.block.1.layer.0.SelfAttention.q.weight', 'decoder.block.1.layer.0.SelfAttention.v.weight', 'decoder.block.1.layer.0.layer_norm.weight', 'decoder.bloc
+k.1.layer.1.EncDecAttention.k.weight', 'decoder.block.1.layer.1.EncDecAttention.o.weight', 'decoder.block.1.layer.1.EncDecAttention.q.weight', 'decoder.block.1.layer.1.EncDecAttention.v.weight', 'decoder.block.1.layer.1.layer_norm.weight', 'dec
+oder.block.1.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.1.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.1.layer.2.DenseReluDense.wo.weight', 'decoder.block.1.layer.2.layer_norm.weight', 'decoder.block.2.layer.0.SelfAttention.k.we
+ight', 'decoder.block.2.layer.0.SelfAttention.o.weight', 'decoder.block.2.layer.0.SelfAttention.q.weight', 'decoder.block.2.layer.0.SelfAttention.v.weight', 'decoder.block.2.layer.0.layer_norm.weight', 'decoder.block.2.layer.1.EncDecAttention.k
+.weight', 'decoder.block.2.layer.1.EncDecAttention.o.weight', 'decoder.block.2.layer.1.EncDecAttention.q.weight', 'decoder.block.2.layer.1.EncDecAttention.v.weight', 'decoder.block.2.layer.1.layer_norm.weight', 'decoder.block.2.layer.2.DenseRel
+uDense.wi_0.weight', 'decoder.block.2.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.2.layer.2.DenseReluDense.wo.weight', 'decoder.block.2.layer.2.layer_norm.weight', 'decoder.block.3.layer.0.SelfAttention.k.weight', 'decoder.block.3.layer
+.0.SelfAttention.o.weight', 'decoder.block.3.layer.0.SelfAttention.q.weight', 'decoder.block.3.layer.0.SelfAttention.v.weight', 'decoder.block.3.layer.0.layer_norm.weight', 'decoder.block.3.layer.1.EncDecAttention.k.weight', 'decoder.block.3.la
+yer.1.EncDecAttention.o.weight', 'decoder.block.3.layer.1.EncDecAttention.q.weight', 'decoder.block.3.layer.1.EncDecAttention.v.weight', 'decoder.block.3.layer.1.layer_norm.weight', 'decoder.block.3.layer.2.DenseReluDense.wi_0.weight', 'decoder
+.block.3.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.3.layer.2.DenseReluDense.wo.weight', 'decoder.block.3.layer.2.layer_norm.weight', 'decoder.final_layer_norm.weight', 'lm_head.weight']
+(GpuProver pid=877585) You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+(GpuProver pid=877585) 2024-06-02 12:15:18.542 | INFO     | generator.model:__init__:137 - RetrievalAugmentedGenerator initialized
+(GpuProver pid=877585) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retrieve
+r.encoder.encoder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight',
+'retriever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.enco
+der.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.layer_norm
+.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.blo
+ck.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight',
+ 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.2.layer.0
+.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.layer_norm.weight', 'retriever.encoder.
+encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.2.layer.1.layer_
+norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder
+.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weig
+ht', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.lay
+er.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.enco
+der.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.la
+yer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.enc
+oder.block.5.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.
+weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6
+.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.
+encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.
+1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder
+.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.w
+i_1.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.blo
+ck.8.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retrie
+ver.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.la
+yer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.enc
+oder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDen
+se.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'retriever.encoder.encode
+r.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight'
+, 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encode
+r.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight'
+, 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.
+layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+(GpuProver pid=877585) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step',
+'epoch', 'state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+(GpuProver pid=877585) 2024-06-02 12:15:19.792 | INFO     | prover.proof_search:__init__:370 - Loaded model from /raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt
+(GpuProver pid=877585) 2024-06-02 12:15:19.793 | INFO     | prover.proof_search:__init__:371 - Using retriever: PremiseRetriever(
+(GpuProver pid=877585)   (encoder): T5EncoderModel(
+(GpuProver pid=877585)     (shared): Embedding(384, 1472)
+(GpuProver pid=877585)     (encoder): T5Stack(
+(GpuProver pid=877585)       (embed_tokens): Embedding(384, 1472)
+(GpuProver pid=877585)       (block): ModuleList(
+(GpuProver pid=877585)         (0): T5Block(
+(GpuProver pid=877585)           (layer): ModuleList(
+(GpuProver pid=877585)             (0): T5LayerSelfAttention(
+(GpuProver pid=877585)               (SelfAttention): T5Attention(
+(GpuProver pid=877585)                 (q): Linear(in_features=1472, out_features=384, bias=False)
+(GpuProver pid=877585)                 (k): Linear(in_features=1472, out_features=384, bias=False)
+(GpuProver pid=877585)                 (v): Linear(in_features=1472, out_features=384, bias=False)
+(GpuProver pid=877585)                 (o): Linear(in_features=384, out_features=1472, bias=False)
+(GpuProver pid=877585)                 (relative_attention_bias): Embedding(32, 6)
+(GpuProver pid=877585)               )
+(GpuProver pid=877585)               (layer_norm): T5LayerNorm()
+(GpuProver pid=877585)               (dropout): Dropout(p=0.1, inplace=False)
+(GpuProver pid=877585)             )
+(GpuProver pid=877585)             (1): T5LayerFF(
+(GpuProver pid=877585)               (DenseReluDense): T5DenseGatedActDense(
+(GpuProver pid=877585)                 (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+(GpuProver pid=877585)                 (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+(GpuProver pid=877585)                 (wo): Linear(in_features=3584, out_features=1472, bias=False)
+(GpuProver pid=877585)                 (dropout): Dropout(p=0.1, inplace=False)
+(GpuProver pid=877585)                 (act): NewGELUActivation()
+(GpuProver pid=877585)               )
+(GpuProver pid=877585)               (layer_norm): T5LayerNorm()
+(GpuProver pid=877585)               (dropout): Dropout(p=0.1, inplace=False)
+(GpuProver pid=877585)             )
+(GpuProver pid=877585)           )
+(GpuProver pid=877585)         )
+(GpuProver pid=877585)         (1-11): 11 x T5Block(
+(GpuProver pid=877585)           (layer): ModuleList(
+(GpuProver pid=877585)             (0): T5LayerSelfAttention(
+(GpuProver pid=877585)               (SelfAttention): T5Attention(
+(GpuProver pid=877585)                 (q): Linear(in_features=1472, out_features=384, bias=False)
+(GpuProver pid=877585)                 (k): Linear(in_features=1472, out_features=384, bias=False)
+(GpuProver pid=877585)                 (v): Linear(in_features=1472, out_features=384, bias=False)
+(GpuProver pid=877585)                 (o): Linear(in_features=384, out_features=1472, bias=False)
+(GpuProver pid=877585)               )
+(GpuProver pid=877585)               (layer_norm): T5LayerNorm()
+(GpuProver pid=877585)               (dropout): Dropout(p=0.1, inplace=False)
+(GpuProver pid=877585)             )
+(GpuProver pid=877585)             (1): T5LayerFF(
+(GpuProver pid=877585)               (DenseReluDense): T5DenseGatedActDense(
+(GpuProver pid=877585)                 (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+(GpuProver pid=877585)                 (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+(GpuProver pid=877585)                 (wo): Linear(in_features=3584, out_features=1472, bias=False)
+(GpuProver pid=877585)                 (dropout): Dropout(p=0.1, inplace=False)
+(GpuProver pid=877585)                 (act): NewGELUActivation()
+(GpuProver pid=877585)               )
+(GpuProver pid=877585)               (layer_norm): T5LayerNorm()
+(GpuProver pid=877585)               (dropout): Dropout(p=0.1, inplace=False)
+(GpuProver pid=877585)             )
+(GpuProver pid=877585)           )
+(GpuProver pid=877585)         )
+(GpuProver pid=877585)       )
+(GpuProver pid=877585)       (final_layer_norm): T5LayerNorm()
+(GpuProver pid=877585)       (dropout): Dropout(p=0.1, inplace=False)
+(GpuProver pid=877585)     )
+(GpuProver pid=877585)   )
+(GpuProver pid=877585) )
+(GpuProver pid=877585) 2024-06-02 12:15:19.794 | INFO     | prover.proof_search:__init__:374 - Loading indexed corpus from /raid/adarsh/data/lecopivo/SciLean/e21a3ecdc0442bf795ea665d3a4bdbc5be22602d/corpus.jsonl
+(GpuProver pid=877585) 2024-06-02 12:15:19.794 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/data/lecopivo/SciLean/e21a3ecdc0442bf795ea665d3a4bdbc5be22602d/corpus.jsonl
+(GpuProver pid=877585) 2024-06-02 12:15:26.825 | INFO     | prover.proof_search:__init__:377 - Loaded indexed corpus from /raid/adarsh/data/lecopivo/SciLean/e21a3ecdc0442bf795ea665d3a4bdbc5be22602d/corpus.jsonl
+(GpuProver pid=877585) 2024-06-02 12:15:26.826 | INFO     | retrieval.model:reindex_corpus:173 - Re-indexing the retrieval corpus
+  0%|          | 0/3381 [00:00<?, ?it/s]
+(GpuProver pid=877589) Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../../raid/adarsh/kaiyuy_lean
+dojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt` [repeated 9x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/use
+r-guides/configure-logging.html#log-deduplication for more options.)
+(GpuProver pid=877589) 2024-06-02 12:15:16.586 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: /raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt [repeated 4x across cluster]
+(GpuProver pid=877589) 2024-06-02 12:15:16.586 | INFO     | generator.model:__init__:124 - Loading the retriever from /raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt [repeated 4x across cluster]
+(GpuProver pid=877589) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when p
+ossible. If you want to force a new download, use `force_download=True`. [repeated 4x across cluster]
+(GpuProver pid=877589)   warnings.warn( [repeated 4x across cluster]
+(GpuProver pid=877589) Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained. [repeated 9x across cluster]
+(GpuProver pid=877589) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['encoder.shared.weight', 'encoder.encoder.em
+bed_tokens.weight', 'encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.0.layer.0.SelfAttention.o.w
+eight', 'encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'encoder.encoder.block.0.layer.0.layer_norm.weight', 'encoder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.0.layer.1.DenseRel
+uDense.wi_1.weight', 'encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.0.layer.1.layer_norm.weight', 'encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.1.layer.0.SelfAttention.k.wei
+ght', 'encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.1.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.1.layer.0.layer_norm.weight', 'encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'encode
+r.encoder.block.1.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.1.layer.1.layer_norm.weight', 'encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'encoder.encoder.b
+lock.2.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.2.layer.0.layer_norm.weight', 'encoder.encoder.block.2.layer.1.De
+nseReluDense.wi_0.weight', 'encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.2.layer.1.layer_norm.weight', 'encoder.encoder.block.3.layer.0.SelfAtten
+tion.q.weight', 'encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.3.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.3.layer.0.layer_norm.weight', '
+encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.3.layer.1.layer_norm.weight', 'encoder
+.encoder.block.4.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'encoder.encoder.blo
+ck.4.layer.0.layer_norm.weight', 'encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.4.la
+yer.1.layer_norm.weight', 'encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.5.layer.0.SelfAttenti
+on.o.weight', 'encoder.encoder.block.5.layer.0.layer_norm.weight', 'encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.5.layer.1.DenseReluDense.wo.we
+ight', 'encoder.encoder.block.5.layer.1.layer_norm.weight', 'encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'encoder.e
+ncoder.block.6.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.6.layer.0.layer_norm.weight', 'encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.bl
+ock.6.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.6.layer.1.layer_norm.weight', 'encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.7.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.7.layer.0.S
+elfAttention.v.weight', 'encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.7.layer.0.layer_norm.weight', 'encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.7.layer.1.DenseReluDense
+.wi_1.weight', 'encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.7.layer.1.layer_norm.weight', 'encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.8.layer.0.SelfAttention.k.weight',
+'encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.8.layer.0.layer_norm.weight', 'encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'encoder.enco
+der.block.8.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.8.layer.1.layer_norm.weight', 'encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.9
+.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.9.layer.0.layer_norm.weight', 'encoder.encoder.block.9.layer.1.DenseRel
+uDense.wi_0.weight', 'encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.9.layer.1.layer_norm.weight', 'encoder.encoder.block.10.layer.0.SelfAttention.
+q.weight', 'encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'encoder.encoder.block.10.layer.0.layer_norm.weight', 'e
+ncoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'encoder.encoder.block.10.layer.1.layer_norm.weight', 'enco
+der.encoder.block.11.layer.0.SelfAttention.q.weight', 'encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'encoder.enco
+der.block.11.layer.0.layer_norm.weight', 'encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'encoder.encoder
+.block.11.layer.1.layer_norm.weight', 'encoder.encoder.final_layer_norm.weight'] [repeated 4x across cluster]
+(GpuProver pid=877589) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['shared.weight', 'decoder.embed_tokens.weigh
+t', 'decoder.block.0.layer.0.SelfAttention.q.weight', 'decoder.block.0.layer.0.SelfAttention.k.weight', 'decoder.block.0.layer.0.SelfAttention.v.weight', 'decoder.block.0.layer.0.SelfAttention.o.weight', 'decoder.block.0.layer.0.SelfAttention.r
+elative_attention_bias.weight', 'decoder.block.0.layer.0.layer_norm.weight', 'decoder.block.0.layer.1.EncDecAttention.q.weight', 'decoder.block.0.layer.1.EncDecAttention.k.weight', 'decoder.block.0.layer.1.EncDecAttention.v.weight', 'decoder.bl
+ock.0.layer.1.EncDecAttention.o.weight', 'decoder.block.0.layer.1.layer_norm.weight', 'decoder.block.0.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.0.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.0.layer.2.DenseReluDense.wo.weight'
+, 'decoder.block.0.layer.2.layer_norm.weight', 'decoder.block.1.layer.0.SelfAttention.q.weight', 'decoder.block.1.layer.0.SelfAttention.k.weight', 'decoder.block.1.layer.0.SelfAttention.v.weight', 'decoder.block.1.layer.0.SelfAttention.o.weight
+', 'decoder.block.1.layer.0.layer_norm.weight', 'decoder.block.1.layer.1.EncDecAttention.q.weight', 'decoder.block.1.layer.1.EncDecAttention.k.weight', 'decoder.block.1.layer.1.EncDecAttention.v.weight', 'decoder.block.1.layer.1.EncDecAttention
+.o.weight', 'decoder.block.1.layer.1.layer_norm.weight', 'decoder.block.1.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.1.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.1.layer.2.DenseReluDense.wo.weight', 'decoder.block.1.layer.2.la
+yer_norm.weight', 'decoder.block.2.layer.0.SelfAttention.q.weight', 'decoder.block.2.layer.0.SelfAttention.k.weight', 'decoder.block.2.layer.0.SelfAttention.v.weight', 'decoder.block.2.layer.0.SelfAttention.o.weight', 'decoder.block.2.layer.0.l
+ayer_norm.weight', 'decoder.block.2.layer.1.EncDecAttention.q.weight', 'decoder.block.2.layer.1.EncDecAttention.k.weight', 'decoder.block.2.layer.1.EncDecAttention.v.weight', 'decoder.block.2.layer.1.EncDecAttention.o.weight', 'decoder.block.2.
+layer.1.layer_norm.weight', 'decoder.block.2.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.2.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.2.layer.2.DenseReluDense.wo.weight', 'decoder.block.2.layer.2.layer_norm.weight', 'decoder.bl
+ock.3.layer.0.SelfAttention.q.weight', 'decoder.block.3.layer.0.SelfAttention.k.weight', 'decoder.block.3.layer.0.SelfAttention.v.weight', 'decoder.block.3.layer.0.SelfAttention.o.weight', 'decoder.block.3.layer.0.layer_norm.weight', 'decoder.b
+lock.3.layer.1.EncDecAttention.q.weight', 'decoder.block.3.layer.1.EncDecAttention.k.weight', 'decoder.block.3.layer.1.EncDecAttention.v.weight', 'decoder.block.3.layer.1.EncDecAttention.o.weight', 'decoder.block.3.layer.1.layer_norm.weight', '
+decoder.block.3.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.3.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.3.layer.2.DenseReluDense.wo.weight', 'decoder.block.3.layer.2.layer_norm.weight', 'decoder.final_layer_norm.weight', 'lm_h
+ead.weight', 'pytorch-lightning_version', 'global_step', 'epoch', 'state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters', 'encoder.embed_tokens.weight', 'encoder.block.0.layer.0.SelfAttention.q.weight', 'enco
+der.block.0.layer.0.SelfAttention.k.weight', 'encoder.block.0.layer.0.SelfAttention.v.weight', 'encoder.block.0.layer.0.SelfAttention.o.weight', 'encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'encoder.block.0.layer.0.la
+yer_norm.weight', 'encoder.block.0.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.0.layer.1.DenseReluDense.wo.weight', 'encoder.block.0.layer.1.layer_norm.weight', 'encoder.block.1.laye
+r.0.SelfAttention.q.weight', 'encoder.block.1.layer.0.SelfAttention.k.weight', 'encoder.block.1.layer.0.SelfAttention.v.weight', 'encoder.block.1.layer.0.SelfAttention.o.weight', 'encoder.block.1.layer.0.layer_norm.weight', 'encoder.block.1.lay
+er.1.DenseReluDense.wi_0.weight', 'encoder.block.1.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.1.layer.1.DenseReluDense.wo.weight', 'encoder.block.1.layer.1.layer_norm.weight', 'encoder.block.2.layer.0.SelfAttention.q.weight', 'encoder.
+block.2.layer.0.SelfAttention.k.weight', 'encoder.block.2.layer.0.SelfAttention.v.weight', 'encoder.block.2.layer.0.SelfAttention.o.weight', 'encoder.block.2.layer.0.layer_norm.weight', 'encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'enc
+oder.block.2.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.2.layer.1.DenseReluDense.wo.weight', 'encoder.block.2.layer.1.layer_norm.weight', 'encoder.block.3.layer.0.SelfAttention.q.weight', 'encoder.block.3.layer.0.SelfAttention.k.weight
+', 'encoder.block.3.layer.0.SelfAttention.v.weight', 'encoder.block.3.layer.0.SelfAttention.o.weight', 'encoder.block.3.layer.0.layer_norm.weight', 'encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.3.layer.1.DenseReluDense.wi
+_1.weight', 'encoder.block.3.layer.1.DenseReluDense.wo.weight', 'encoder.block.3.layer.1.layer_norm.weight', 'encoder.block.4.layer.0.SelfAttention.q.weight', 'encoder.block.4.layer.0.SelfAttention.k.weight', 'encoder.block.4.layer.0.SelfAttent
+ion.v.weight', 'encoder.block.4.layer.0.SelfAttention.o.weight', 'encoder.block.4.layer.0.layer_norm.weight', 'encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.4.layer.1.D
+enseReluDense.wo.weight', 'encoder.block.4.layer.1.layer_norm.weight', 'encoder.block.5.layer.0.SelfAttention.q.weight', 'encoder.block.5.layer.0.SelfAttention.k.weight', 'encoder.block.5.layer.0.SelfAttention.v.weight', 'encoder.block.5.layer.
+0.SelfAttention.o.weight', 'encoder.block.5.layer.0.layer_norm.weight', 'encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.5.layer.1.DenseReluDense.wo.weight', 'encoder.blo
+ck.5.layer.1.layer_norm.weight', 'encoder.block.6.layer.0.SelfAttention.q.weight', 'encoder.block.6.layer.0.SelfAttention.k.weight', 'encoder.block.6.layer.0.SelfAttention.v.weight', 'encoder.block.6.layer.0.SelfAttention.o.weight', 'encoder.bl
+ock.6.layer.0.layer_norm.weight', 'encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.6.layer.1.DenseReluDense.wo.weight', 'encoder.block.6.layer.1.layer_norm.weight', 'enco
+der.block.7.layer.0.SelfAttention.q.weight', 'encoder.block.7.layer.0.SelfAttention.k.weight', 'encoder.block.7.layer.0.SelfAttention.v.weight', 'encoder.block.7.layer.0.SelfAttention.o.weight', 'encoder.block.7.layer.0.layer_norm.weight', 'enc
+oder.block.7.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.7.layer.1.DenseReluDense.wo.weight', 'encoder.block.7.layer.1.layer_norm.weight', 'encoder.block.8.layer.0.SelfAttention.q.we
+ight', 'encoder.block.8.layer.0.SelfAttention.k.weight', 'encoder.block.8.layer.0.SelfAttention.v.weight', 'encoder.block.8.layer.0.SelfAttention.o.weight', 'encoder.block.8.layer.0.layer_norm.weight', 'encoder.block.8.layer.1.DenseReluDense.wi
+_0.weight', 'encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.8.layer.1.DenseReluDense.wo.weight', 'encoder.block.8.layer.1.layer_norm.weight', 'encoder.block.9.layer.0.SelfAttention.q.weight', 'encoder.block.9.layer.0.SelfAt
+tention.k.weight', 'encoder.block.9.layer.0.SelfAttention.v.weight', 'encoder.block.9.layer.0.SelfAttention.o.weight', 'encoder.block.9.layer.0.layer_norm.weight', 'encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.9.layer.1.D
+enseReluDense.wi_1.weight', 'encoder.block.9.layer.1.DenseReluDense.wo.weight', 'encoder.block.9.layer.1.layer_norm.weight', 'encoder.block.10.layer.0.SelfAttention.q.weight', 'encoder.block.10.layer.0.SelfAttention.k.weight', 'encoder.block.10
+.layer.0.SelfAttention.v.weight', 'encoder.block.10.layer.0.SelfAttention.o.weight', 'encoder.block.10.layer.0.layer_norm.weight', 'encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'en
+coder.block.10.layer.1.DenseReluDense.wo.weight', 'encoder.block.10.layer.1.layer_norm.weight', 'encoder.block.11.layer.0.SelfAttention.q.weight', 'encoder.block.11.layer.0.SelfAttention.k.weight', 'encoder.block.11.layer.0.SelfAttention.v.weig
+ht', 'encoder.block.11.layer.0.SelfAttention.o.weight', 'encoder.block.11.layer.0.layer_norm.weight', 'encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'encoder.block.11.layer.1.DenseR
+eluDense.wo.weight', 'encoder.block.11.layer.1.layer_norm.weight', 'encoder.final_layer_norm.weight'] [repeated 4x across cluster]
+(GpuProver pid=877589) Some weights of T5ForConditionalGeneration were not initialized from the model checkpoint at kaiyuy/leandojo-lean4-retriever-byt5-small and are newly initialized: ['decoder.block.0.layer.0.SelfAttention.k.weight', 'decode
+r.block.0.layer.0.SelfAttention.o.weight', 'decoder.block.0.layer.0.SelfAttention.q.weight', 'decoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'decoder.block.0.layer.0.SelfAttention.v.weight', 'decoder.block.0.layer.0.laye
+r_norm.weight', 'decoder.block.0.layer.1.EncDecAttention.k.weight', 'decoder.block.0.layer.1.EncDecAttention.o.weight', 'decoder.block.0.layer.1.EncDecAttention.q.weight', 'decoder.block.0.layer.1.EncDecAttention.v.weight', 'decoder.block.0.lay
+er.1.layer_norm.weight', 'decoder.block.0.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.0.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.0.layer.2.DenseReluDense.wo.weight', 'decoder.block.0.layer.2.layer_norm.weight', 'decoder.block
+.1.layer.0.SelfAttention.k.weight', 'decoder.block.1.layer.0.SelfAttention.o.weight', 'decoder.block.1.layer.0.SelfAttention.q.weight', 'decoder.block.1.layer.0.SelfAttention.v.weight', 'decoder.block.1.layer.0.layer_norm.weight', 'decoder.bloc
+k.1.layer.1.EncDecAttention.k.weight', 'decoder.block.1.layer.1.EncDecAttention.o.weight', 'decoder.block.1.layer.1.EncDecAttention.q.weight', 'decoder.block.1.layer.1.EncDecAttention.v.weight', 'decoder.block.1.layer.1.layer_norm.weight', 'dec
+oder.block.1.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.1.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.1.layer.2.DenseReluDense.wo.weight', 'decoder.block.1.layer.2.layer_norm.weight', 'decoder.block.2.layer.0.SelfAttention.k.we
+ight', 'decoder.block.2.layer.0.SelfAttention.o.weight', 'decoder.block.2.layer.0.SelfAttention.q.weight', 'decoder.block.2.layer.0.SelfAttention.v.weight', 'decoder.block.2.layer.0.layer_norm.weight', 'decoder.block.2.layer.1.EncDecAttention.k
+.weight', 'decoder.block.2.layer.1.EncDecAttention.o.weight', 'decoder.block.2.layer.1.EncDecAttention.q.weight', 'decoder.block.2.layer.1.EncDecAttention.v.weight', 'decoder.block.2.layer.1.layer_norm.weight', 'decoder.block.2.layer.2.DenseRel
+uDense.wi_0.weight', 'decoder.block.2.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.2.layer.2.DenseReluDense.wo.weight', 'decoder.block.2.layer.2.layer_norm.weight', 'decoder.block.3.layer.0.SelfAttention.k.weight', 'decoder.block.3.layer
+.0.SelfAttention.o.weight', 'decoder.block.3.layer.0.SelfAttention.q.weight', 'decoder.block.3.layer.0.SelfAttention.v.weight', 'decoder.block.3.layer.0.layer_norm.weight', 'decoder.block.3.layer.1.EncDecAttention.k.weight', 'decoder.block.3.la
+yer.1.EncDecAttention.o.weight', 'decoder.block.3.layer.1.EncDecAttention.q.weight', 'decoder.block.3.layer.1.EncDecAttention.v.weight', 'decoder.block.3.layer.1.layer_norm.weight', 'decoder.block.3.layer.2.DenseReluDense.wi_0.weight', 'decoder
+.block.3.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.3.layer.2.DenseReluDense.wo.weight', 'decoder.block.3.layer.2.layer_norm.weight', 'decoder.final_layer_norm.weight', 'lm_head.weight'] [repeated 4x across cluster]
+(GpuProver pid=877589) You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference. [repeated 4x across cluster]
+(GpuProver pid=877589) 2024-06-02 12:15:19.104 | INFO     | generator.model:__init__:137 - RetrievalAugmentedGenerator initialized [repeated 4x across cluster]
+(GpuProver pid=877589) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retrieve
+r.encoder.encoder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight',
+'retriever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.enco
+der.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.layer_norm
+.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.blo
+ck.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight',
+ 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.2.layer.0
+.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.layer_norm.weight', 'retriever.encoder.
+encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.2.layer.1.layer_
+norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder
+.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weig
+ht', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.lay
+er.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.enco
+der.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.la
+yer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.enc
+oder.block.5.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.
+weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6
+.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.
+encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.
+1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder
+.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.w
+i_1.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.blo
+ck.8.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retrie
+ver.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.la
+yer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.enc
+oder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDen
+se.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'retriever.encoder.encode
+r.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight'
+, 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encode
+r.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight'
+, 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.
+layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight'] [repeated 4x across
+ cluster]
+(GpuProver pid=877589) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step',
+'epoch', 'state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters'] [repeated 4x across cluster]
+(GpuProver pid=877589) 2024-06-02 12:15:20.345 | INFO     | prover.proof_search:__init__:370 - Loaded model from /raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt [repeated 4x across cluster]
+(GpuProver pid=877589) 2024-06-02 12:15:20.346 | INFO     | prover.proof_search:__init__:371 - Using retriever: PremiseRetriever( [repeated 4x across cluster]
+(GpuProver pid=877589)     (encoder): T5Stack( [repeated 8x across cluster]
+(GpuProver pid=877589)     (shared): Embedding(384, 1472) [repeated 4x across cluster]
+(GpuProver pid=877589)       (embed_tokens): Embedding(384, 1472) [repeated 4x across cluster]
+(GpuProver pid=877589)       (block): ModuleList( [repeated 4x across cluster]
+(GpuProver pid=877589)             (1): T5LayerFF( [repeated 20x across cluster]
+(GpuProver pid=877589)           (layer): ModuleList( [repeated 8x across cluster]
+(GpuProver pid=877589)               (SelfAttention): T5Attention( [repeated 8x across cluster]
+(GpuProver pid=877589)                 (q): Linear(in_features=1472, out_features=384, bias=False) [repeated 8x across cluster]
+(GpuProver pid=877589)                 (k): Linear(in_features=1472, out_features=384, bias=False) [repeated 8x across cluster]
+(GpuProver pid=877589)                 (v): Linear(in_features=1472, out_features=384, bias=False) [repeated 8x across cluster]
+(GpuProver pid=877589)                 (o): Linear(in_features=384, out_features=1472, bias=False) [repeated 8x across cluster]
+(GpuProver pid=877589)                 (relative_attention_bias): Embedding(32, 6) [repeated 4x across cluster]
+(GpuProver pid=877589) ) [repeated 64x across cluster]
+(GpuProver pid=877589)               (layer_norm): T5LayerNorm() [repeated 16x across cluster]
+(GpuProver pid=877589)       (dropout): Dropout(p=0.1, inplace=False) [repeated 28x across cluster]
+(GpuProver pid=877589)               (DenseReluDense): T5DenseGatedActDense( [repeated 8x across cluster]
+(GpuProver pid=877589)                 (wi_1): Linear(in_features=1472, out_features=3584, bias=False) [repeated 16x across cluster]
+(GpuProver pid=877589)                 (wo): Linear(in_features=3584, out_features=1472, bias=False) [repeated 8x across cluster]
+(GpuProver pid=877589)                 (act): NewGELUActivation() [repeated 8x across cluster]
+(GpuProver pid=877589)         (1-11): 11 x T5Block( [repeated 4x across cluster]
+(GpuProver pid=877589)       (final_layer_norm): T5LayerNorm() [repeated 4x across cluster]
+(GpuProver pid=877589) 2024-06-02 12:15:20.346 | INFO     | prover.proof_search:__init__:374 - Loading indexed corpus from /raid/adarsh/data/lecopivo/SciLean/e21a3ecdc0442bf795ea665d3a4bdbc5be22602d/corpus.jsonl [repeated 4x across cluster]
+(GpuProver pid=877589) 2024-06-02 12:15:20.346 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/data/lecopivo/SciLean/e21a3ecdc0442bf795ea665d3a4bdbc5be22602d/corpus.jsonl [repeated 4x across cluster]
+  0%|          | 1/3381 [00:00<50:33,  1.11it/s]
+  0%|          | 4/3381 [00:01<11:44,  4.80it/s]
+  0%|          | 6/3381 [00:01<08:07,  6.93it/s]
+(GpuProver pid=877588) 2024-06-02 12:15:27.635 | INFO     | prover.proof_search:__init__:377 - Loaded indexed corpus from /raid/adarsh/data/lecopivo/SciLean/e21a3ecdc0442bf795ea665d3a4bdbc5be22602d/corpus.jsonl [repeated 4x across cluster]
+(GpuProver pid=877588) 2024-06-02 12:15:27.636 | INFO     | retrieval.model:reindex_corpus:173 - Re-indexing the retrieval corpus [repeated 4x across cluster]
+  0%|          | 0/3381 [00:00<?, ?it/s] [repeated 4x across cluster]
+  0%|          | 10/3381 [00:05<34:52,  1.61it/s] [repeated 46x across cluster]
+  1%|          | 27/3381 [00:11<25:40,  2.18it/s] [repeated 48x across cluster]
+

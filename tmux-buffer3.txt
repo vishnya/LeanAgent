@@ -1,0 +1,627 @@
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ export CUDA_VISIBLE_DEVICES=2
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ bash run_lean_copilot_bot.sh
+Script executed from: /home/adarsh/ReProver
+[2024-06-01 14:11:30,054] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+Cloning https://github.com/leanprover-community/mathlib4.git
+Repo name: leanprover-community/mathlib4
+Deleting existing repository directory: /raid/adarsh/repos/leanprover-community/mathlib4
+Cloning into '/raid/adarsh/repos/leanprover-community/mathlib4'...
+remote: Enumerating objects: 432409, done.
+remote: Counting objects: 100% (7480/7480), done.
+remote: Compressing objects: 100% (4196/4196), done.
+remote: Total 432409 (delta 4843), reused 5186 (delta 3257), pack-reused 424929
+Receiving objects: 100% (432409/432409), 200.37 MiB | 16.72 MiB/s, done.
+Resolving deltas: 100% (347972/347972), done.
+Cloning https://github.com/lecopivo/SciLean.git
+Repo name: lecopivo/SciLean
+Deleting existing repository directory: /raid/adarsh/repos/lecopivo/SciLean
+Cloning into '/raid/adarsh/repos/lecopivo/SciLean'...
+remote: Enumerating objects: 14952, done.
+remote: Counting objects: 100% (1010/1010), done.
+remote: Compressing objects: 100% (296/296), done.
+remote: Total 14952 (delta 824), reused 830 (delta 710), pack-reused 13942
+Receiving objects: 100% (14952/14952), 9.48 MiB | 9.42 MiB/s, done.
+Resolving deltas: 100% (10922/10922), done.
+Cloning https://github.com/leanprover-community/batteries.git
+Repo name: leanprover-community/batteries
+Deleting existing repository directory: /raid/adarsh/repos/leanprover-community/batteries
+Cloning into '/raid/adarsh/repos/leanprover-community/batteries'...
+remote: Enumerating objects: 15073, done.
+remote: Counting objects: 100% (3617/3617), done.
+remote: Compressing objects: 100% (716/716), done.
+remote: Total 15073 (delta 3113), reused 3161 (delta 2782), pack-reused 11456
+Receiving objects: 100% (15073/15073), 3.40 MiB | 10.35 MiB/s, done.
+Resolving deltas: 100% (10785/10785), done.
+Cloning https://github.com/leanprover-community/aesop.git
+Repo name: leanprover-community/aesop
+Deleting existing repository directory: /raid/adarsh/repos/leanprover-community/aesop
+Cloning into '/raid/adarsh/repos/leanprover-community/aesop'...
+remote: Enumerating objects: 6936, done.
+remote: Counting objects: 100% (1225/1225), done.
+remote: Compressing objects: 100% (265/265), done.
+remote: Total 6936 (delta 1025), reused 1079 (delta 939), pack-reused 5711
+Receiving objects: 100% (6936/6936), 3.35 MiB | 7.76 MiB/s, done.
+Resolving deltas: 100% (5031/5031), done.
+Cloning https://github.com/kmill/lean4-raytracer.git
+Repo name: kmill/lean4-raytracer
+Deleting existing repository directory: /raid/adarsh/repos/kmill/lean4-raytracer
+Cloning into '/raid/adarsh/repos/kmill/lean4-raytracer'...
+remote: Enumerating objects: 156, done.
+remote: Counting objects: 100% (156/156), done.
+remote: Compressing objects: 100% (93/93), done.
+remote: Total 156 (delta 75), reused 128 (delta 52), pack-reused 0
+Receiving objects: 100% (156/156), 10.06 MiB | 11.33 MiB/s, done.
+Resolving deltas: 100% (75/75), done.
+Cloning https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+Repo name: AlexKontorovich/PrimeNumberTheoremAnd
+Deleting existing repository directory: /raid/adarsh/repos/AlexKontorovich/PrimeNumberTheoremAnd
+Cloning into '/raid/adarsh/repos/AlexKontorovich/PrimeNumberTheoremAnd'...
+remote: Enumerating objects: 5560, done.
+remote: Counting objects: 100% (2349/2349), done.
+remote: Compressing objects: 100% (592/592), done.
+remote: Total 5560 (delta 1838), reused 1923 (delta 1737), pack-reused 3211
+Receiving objects: 100% (5560/5560), 1.56 MiB | 5.42 MiB/s, done.
+Resolving deltas: 100% (3891/3891), done.
+Cloning https://github.com/leanprover-community/lean-perfectoid-spaces.git
+Repo name: leanprover-community/lean-perfectoid-spaces
+Cloning into '/raid/adarsh/repos/leanprover-community/lean-perfectoid-spaces'...
+remote: Enumerating objects: 6779, done.
+remote: Counting objects: 100% (317/317), done.
+remote: Compressing objects: 100% (107/107), done.
+remote: Total 6779 (delta 197), reused 315 (delta 196), pack-reused 6462
+Receiving objects: 100% (6779/6779), 12.00 MiB | 12.24 MiB/s, done.
+Resolving deltas: 100% (4919/4919), done.
+Failed to clone leanprover-community/lean-perfectoid-spaces because of HTTP Error 404: Not Found
+Cloning https://github.com/flypitch/flypitch.git
+Repo name: flypitch/flypitch
+Cloning into '/raid/adarsh/repos/flypitch/flypitch'...
+remote: Enumerating objects: 3574, done.
+remote: Counting objects: 100% (121/121), done.
+remote: Compressing objects: 100% (68/68), done.
+remote: Total 3574 (delta 68), reused 85 (delta 53), pack-reused 3453
+Receiving objects: 100% (3574/3574), 1.80 MiB | 4.81 MiB/s, done.
+Resolving deltas: 100% (2689/2689), done.
+Failed to clone flypitch/flypitch because of HTTP Error 404: Not Found
+Cloning https://github.com/jesse-michael-han/lean-gptf.git
+Repo name: jesse-michael-han/lean-gptf
+Cloning into '/raid/adarsh/repos/jesse-michael-han/lean-gptf'...
+remote: Enumerating objects: 266, done.
+remote: Counting objects: 100% (22/22), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 266 (delta 14), reused 12 (delta 12), pack-reused 244
+Receiving objects: 100% (266/266), 51.42 KiB | 923.00 KiB/s, done.
+Resolving deltas: 100% (124/124), done.
+Failed to clone jesse-michael-han/lean-gptf because of HTTP Error 404: Not Found
+Cloning https://github.com/teorth/pfr.git
+Repo name: teorth/pfr
+Deleting existing repository directory: /raid/adarsh/repos/teorth/pfr
+Cloning into '/raid/adarsh/repos/teorth/pfr'...
+remote: Enumerating objects: 8182, done.
+remote: Counting objects: 100% (285/285), done.
+remote: Compressing objects: 100% (90/90), done.
+remote: Total 8182 (delta 213), reused 255 (delta 194), pack-reused 7897
+Receiving objects: 100% (8182/8182), 4.47 MiB | 9.62 MiB/s, done.
+Resolving deltas: 100% (5908/5908), done.
+Cloning https://github.com/TwoFX/sudoku.git
+Repo name: TwoFX/sudoku
+Cloning into '/raid/adarsh/repos/TwoFX/sudoku'...
+remote: Enumerating objects: 1316, done.
+remote: Counting objects: 100% (385/385), done.
+remote: Compressing objects: 100% (151/151), done.
+remote: Total 1316 (delta 254), reused 364 (delta 234), pack-reused 931
+Receiving objects: 100% (1316/1316), 1.14 MiB | 3.43 MiB/s, done.
+Resolving deltas: 100% (851/851), done.
+Failed to clone TwoFX/sudoku because of HTTP Error 404: Not Found
+Cloning https://github.com/blanchette/logical_verification_2020.git
+Repo name: blanchette/logical_verification_2020
+Cloning into '/raid/adarsh/repos/blanchette/logical_verification_2020'...
+remote: Enumerating objects: 281, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 281 (delta 10), reused 18 (delta 4), pack-reused 257
+Receiving objects: 100% (281/281), 5.57 MiB | 9.64 MiB/s, done.
+Resolving deltas: 100% (165/165), done.
+Failed to clone blanchette/logical_verification_2020 because of HTTP Error 404: Not Found
+Cloning https://github.com/lurk-lab/yatima.git
+Repo name: lurk-lab/yatima
+Deleting existing repository directory: /raid/adarsh/repos/lurk-lab/yatima
+Cloning into '/raid/adarsh/repos/lurk-lab/yatima'...
+remote: Enumerating objects: 3500, done.
+remote: Counting objects: 100% (273/273), done.
+remote: Compressing objects: 100% (162/162), done.
+remote: Total 3500 (delta 150), reused 196 (delta 109), pack-reused 3227
+Receiving objects: 100% (3500/3500), 1.19 MiB | 4.63 MiB/s, done.
+Resolving deltas: 100% (2209/2209), done.
+2024-06-01 14:13:02.565 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/lurk-lab/yatima', commit='d9f20f51bca748878b8561661fe8bc19a7dba6
+09') relies on an unsupported Lean version: c21d2f29a21ad17351ebb7353fce9d7c7f6bdca7
+Found 8 repositories
+Processing /raid/adarsh/repos/leanprover-community/mathlib4
+From https://github.com/leanprover-community/mathlib4
+ * branch                  master     -> FETCH_HEAD
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+From https://github.com/leanprover-community/mathlib4
+ * branch                  master     -> FETCH_HEAD
+Already up to date.
+Switched to a new branch '_LeanCopilotBot'
+2024-06-01 14:13:04.443 | INFO     | __main__:retrieve_proof:378 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0-rc2\n'}
+2024-06-01 14:13:04.444 | INFO     | __main__:retrieve_proof:380 - lean version v: v4.8.0-rc2
+2024-06-01 14:13:04.444 | INFO     | __main__:retrieve_proof:381 - is supported: True
+2024-06-01 14:13:04.444 | INFO     | __main__:retrieve_proof:387 - lean path /home/adarsh/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-06-01 14:13:04.444 | INFO     | __main__:retrieve_proof:393 - Switched to Lean toolchain at: /home/adarsh/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-06-01 14:13:04.477 | INFO     | __main__:retrieve_proof:394 - lean --version: Lean (version 4.8.0-rc2, x86_64-unknown-linux-gnu, commit 873ef2d894af, Release)
+
+2024-06-01 14:13:04.477 | INFO     | __main__:retrieve_proof:395 - repo: LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='f5b37525599ff0abbdb719d81956585dc05449d
+5')
+2024-06-01 14:13:04.596 | INFO     | lean_dojo.data_extraction.trace:get_traced_repo_path:79 - Tracing LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='f5b375255
+99ff0abbdb719d81956585dc05449d5')
+2024-06-01 14:13:28.845 | INFO     | __main__:main:165 - Building mathlib4
+info: batteries: cloning https://github.com/leanprover-community/batteries to '././.lake/packages/batteries'
+info: Qq: cloning https://github.com/leanprover-community/quote4 to '././.lake/packages/Qq'
+info: aesop: cloning https://github.com/leanprover-community/aesop to '././.lake/packages/aesop'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4 to '././.lake/packages/proofwidgets'
+info: Cli: cloning https://github.com/leanprover/lean4-cli to '././.lake/packages/Cli'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph.git to '././.lake/packages/importGraph'
+⣾ [1176/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 32 mo⣷ [1176/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 34 mo⣯ [1177/4589] Running Mathlib.
+Order.ConditionallyCompleteLattice.Basic (+ 33 mo⣟ [1178/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 37 mo⡿ [1178/4589] Running Mathlib.Order.ConditionallyCompleteLat
+tice.Basic (+ 37 mo⢿ [1179/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 38 mo⣻ [1180/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 38 mo⣽ [1180/458
+9] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 38 mo⣾ [1181/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 37 mo⣷ [1182/4589] Running Mathlib.Order.Condi
+tionallyCompleteLattice.Basic (+ 36 mo⣯ [1183/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 35 mo⣟ [1184/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic
+(+ 35 mo⡿ [1186/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 33 mo⢿ [1186/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 33 mo⣻ [1190/4589] Running
+Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 29 mo⣽ [1191/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 29 mo⣾ [1191/4589] Running Mathlib.Order.ConditionallyCom
+pleteLattice.Basic (+ 29 mo⣷ [1194/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 29 mo⣯ [1194/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 29 mo⣟ [
+1195/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 28 mo⡿ [1196/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 29 mo⢿ [1198/4589] Running Mathlib.Ord
+er.ConditionallyCompleteLattice.Basic (+ 29 mo⣻ [1201/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 30 mo⣽ [1203/4589] Running Mathlib.Order.ConditionallyCompleteLattic
+e.Basic (+ 32 mo⣾ [1205/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 34 mo⣷ [1207/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 34 mo⣯ [1208/4589]
+Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 33 mo⣟ [1208/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 33 mo⡿ [1209/4589] Running Mathlib.Order.Conditio
+nallyCompleteLattice.Basic (+ 32 mo⢿ [1209/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 32 mo⣻ [1212/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+
+33 mo⣽ [1212/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 33 mo⣾ [1212/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 33 mo⣷ [1212/4589] Running Mat
+hlib.Order.ConditionallyCompleteLattice.Basic (+ 33 mo⣯ [1214/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 31 mo⣟ [1214/4589] Running Mathlib.Order.ConditionallyComple
+teLattice.Basic (+ 31 mo⡿ [1214/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 31 mo⢿ [1216/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 32 mo⣻ [121
+8/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 32 mo⣽ [1222/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 31 mo⣾ [1223/4589] Running Mathlib.Order.
+ConditionallyCompleteLattice.Basic (+ 30 mo⣷ [1225/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 28 mo⣯ [1227/4589] Running Mathlib.Order.ConditionallyCompleteLattice.B
+asic (+ 26 mo⣟ [1228/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 26 mo⡿ [1228/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 26 mo⢿ [1229/4589] Run
+ning Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 29 mo⣻ [1231/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 29 mo⣽ [1233/4589] Running Mathlib.Order.Conditional
+lyCompleteLattice.Basic (+ 29 mo⣾ [1233/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 29 mo⣷ [1233/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 29
+mo⣯ [1233/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 29 mo⣟ [1234/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 28 mo⡿ [1235/4589] Running Mathli
+b.Order.ConditionallyCompleteLattice.Basic (+ 27 mo⢿ [1237/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 25 mo⣻ [1237/4589] Running Mathlib.Order.ConditionallyCompleteL
+attice.Basic (+ 25 mo⣽ [1238/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 24 mo⣾ [1240/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 22 mo⣷ [1241/4
+589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 22 mo⣯ [1241/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 22 mo⣟ [1243/4589] Running Mathlib.Order.Con
+ditionallyCompleteLattice.Basic (+ 22 mo⡿ [1245/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 23 mo⢿ [1246/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basi
+c (+ 22 mo⣻ [1246/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 22 mo⣽ [1248/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 22 mo⣾ [1250/4589] Runnin
+g Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 20 mo⣷ [1251/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 23 mo⣯ [1254/4589] Running Mathlib.Order.ConditionallyC
+ompleteLattice.Basic (+ 22 mo⣟ [1254/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 22 mo⡿ [1254/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 22 mo⢿
+ [1254/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 22 mo⣻ [1254/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 22 mo⣽ [1255/4589] Running Mathlib.O
+rder.ConditionallyCompleteLattice.Basic (+ 21 mo⣾ [1256/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 20 mo⣷ [1258/4589] Running Mathlib.Order.ConditionallyCompleteLatt
+ice.Basic (+ 22 mo⣯ [1261/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 21 mo⣟ [1261/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 21 mo⡿ [1262/4589
+] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 20 mo⢿ [1262/4589] Running Mathlib.Order.ConditionallyCompleteLattice.Basic (+ 20 mo⣻ [1264/4589] Running Mathlib.Order.Condit
+ionallyCompleteLattice.Basic (+ 19 mo⡿ [3513/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⢿ [3513/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankC
+onditio⣻ [3513/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣽ [3513/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣾ [3513/4589] Running M
+athlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣷ [3514/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣯ [3515/4589] Running Mathlib.LinearAlgebra.Dimension
+.FreeAndStrongRankConditio⣟ [3515/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⡿ [3515/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⢿ [3
+515/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣻ [3515/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣽ [3515/4589] Running Mathlib.Line
+arAlgebra.Dimension.FreeAndStrongRankConditio⣾ [3515/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣷ [3515/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStr
+ongRankConditio⣯ [3515/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣟ [3515/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⡿ [3515/4589] R
+unning Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⢿ [3515/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣻ [3515/4589] Running Mathlib.LinearAlgebra.D
+imension.FreeAndStrongRankConditio⣽ [3516/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣾ [3517/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankCond
+itio⣷ [3517/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣯ [3517/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣟ [3517/4589] Running Math
+lib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⡿ [3517/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⢿ [3517/4589] Running Mathlib.LinearAlgebra.Dimension.Fr
+eeAndStrongRankConditio⣻ [3518/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣽ [3520/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣾ [3521
+/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣷ [3521/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣯ [3521/4589] Running Mathlib.LinearA
+lgebra.Dimension.FreeAndStrongRankConditio⣟ [3521/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⡿ [3521/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrong
+RankConditio⢿ [3521/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣻ [3521/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣽ [3521/4589] Runn
+ing Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣾ [3521/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣷ [3521/4589] Running Mathlib.LinearAlgebra.Dime
+nsion.FreeAndStrongRankConditio⣯ [3521/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣟ [3523/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditi
+o⡿ [3524/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⢿ [3524/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣻ [3524/4589] Running Mathlib
+.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣽ [3525/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣾ [3525/4589] Running Mathlib.LinearAlgebra.Dimension.FreeA
+ndStrongRankConditio⣷ [3525/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣯ [3525/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣟ [3525/45
+89] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⡿ [3525/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⢿ [3525/4589] Running Mathlib.LinearAlge
+bra.Dimension.FreeAndStrongRankConditio⣻ [3525/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣽ [3525/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRan
+kConditio⣾ [3525/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣷ [3525/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣯ [3526/4589] Running
+ Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⣟ [3526/4589] Running Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankConditio⢿ [3734/4589] Running Mathlib.LinearAlgebra.Matrix.
+Charpoly.LinearMap (+ 14 mor⣻ [3734/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣽ [3734/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣾
+[3734/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣷ [3734/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣯ [3734/4589] Running Mathlib.Li
+nearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣟ [3735/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 16 mor⡿ [3735/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.Li
+nearMap (+ 16 mor⢿ [3735/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 16 mor⣻ [3735/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 16 mor⣽ [3735/4589]
+ Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 16 mor⣾ [3735/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 16 mor⣷ [3735/4589] Running Mathlib.LinearAlgebra
+.Matrix.Charpoly.LinearMap (+ 16 mor⣯ [3735/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 16 mor⣟ [3735/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+
+16 mor⡿ [3735/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 16 mor⢿ [3735/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 16 mor⣻ [3735/4589] Running Ma
+thlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 16 mor⣽ [3735/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 16 mor⣾ [3735/4589] Running Mathlib.LinearAlgebra.Matrix.Cha
+rpoly.LinearMap (+ 16 mor⣷ [3736/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣯ [3736/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣟ [37
+36/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⡿ [3736/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⢿ [3736/4589] Running Mathlib.Linea
+rAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣻ [3736/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣽ [3736/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.Linea
+rMap (+ 15 mor⣾ [3736/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣷ [3736/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣯ [3736/4589] Ru
+nning Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣟ [3737/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 17 mor⡿ [3738/4589] Running Mathlib.LinearAlgebra.Ma
+trix.Charpoly.LinearMap (+ 16 mor⢿ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣻ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15
+mor⣽ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣾ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣷ [3739/4589] Running Mathl
+ib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣯ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣟ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpo
+ly.LinearMap (+ 15 mor⡿ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⢿ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣻ [3739/
+4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣽ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣾ [3739/4589] Running Mathlib.LinearAl
+gebra.Matrix.Charpoly.LinearMap (+ 15 mor⣷ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣯ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMa
+p (+ 15 mor⣟ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⡿ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⢿ [3739/4589] Runni
+ng Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣻ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣽ [3739/4589] Running Mathlib.LinearAlgebra.Matri
+x.Charpoly.LinearMap (+ 15 mor⣾ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣷ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor
+⣯ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣟ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⡿ [3739/4589] Running Mathlib.
+LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⢿ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣻ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.
+LinearMap (+ 15 mor⣽ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣾ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣷ [3739/458
+9] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣯ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣟ [3739/4589] Running Mathlib.LinearAlgeb
+ra.Matrix.Charpoly.LinearMap (+ 15 mor⡿ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⢿ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (
++ 15 mor⣻ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣽ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣾ [3739/4589] Running
+Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣷ [3739/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⣯ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.C
+harpoly.LinearMap (+ 14 mor⣟ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⡿ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⢿ [
+3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣻ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣽ [3740/4589] Running Mathlib.Lin
+earAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣾ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣷ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.Lin
+earMap (+ 14 mor⣯ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣟ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⡿ [3740/4589]
+Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⢿ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣻ [3740/4589] Running Mathlib.LinearAlgebra.
+Matrix.Charpoly.LinearMap (+ 14 mor⣽ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣾ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 1
+4 mor⣷ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣯ [3740/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⣟ [3741/4589] Running Mat
+hlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 14 mor⡿ [3742/4589] Running Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap (+ 15 mor⢿ [3742/4589] Running Mathlib.LinearAlgebra.Matrix.Char
+poly.LinearMap (+ 15 mor⣻ [3825/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣽ [3826/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣾ [382
+6/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣷ [3826/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣯ [3826/4589] Running Mathlib.Linear
+Algebra.FreeModule.StrongRankCondition (+ 2⣟ [3826/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⡿ [3826/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankC
+ondition (+ 2⢿ [3826/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣻ [3826/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣽ [3826/4589] Run
+ning Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣾ [3826/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣷ [3827/4589] Running Mathlib.LinearAlgebra.Fre
+eModule.StrongRankCondition (+ 2⣯ [3827/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣟ [3827/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+
+ 2⡿ [3827/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⢿ [3828/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣻ [3828/4589] Running Mathli
+b.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣽ [3828/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣾ [3828/4589] Running Mathlib.LinearAlgebra.FreeModule.Str
+ongRankCondition (+ 2⣷ [3829/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣯ [3829/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣟ [3829/4
+589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⡿ [3829/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⢿ [3830/4589] Running Mathlib.LinearAlg
+ebra.FreeModule.StrongRankCondition (+ 2⣻ [3830/4589] Running Mathlib.LinearAlgebra.FreeModule.StrongRankCondition (+ 2⣽ [4133/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizab
+le (+ 29 m⣾ [4133/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 29 m⣷ [4133/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 29 m⣯ [4133/4589] Runnin
+g Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 29 m⣟ [4134/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 29 m⡿ [4134/4589] Running Mathlib.LinearAlgebra.Eigens
+pace.Triangularizable (+ 29 m⢿ [4134/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 29 m⣻ [4134/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 29 m⣽
+ [4135/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 28 m⣾ [4135/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 28 m⣷ [4136/4589] Running Mathlib.L
+inearAlgebra.Eigenspace.Triangularizable (+ 27 m⣯ [4136/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 27 m⣟ [4136/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triang
+ularizable (+ 27 m⡿ [4136/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 27 m⢿ [4136/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 27 m⣻ [4136/4589
+] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 27 m⣽ [4137/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣾ [4138/4589] Running Mathlib.LinearAlgebr
+a.Eigenspace.Triangularizable (+ 26 m⣷ [4138/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣯ [4138/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable
+(+ 26 m⣟ [4138/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⡿ [4138/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⢿ [4138/4589] Running M
+athlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣻ [4138/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣽ [4138/4589] Running Mathlib.LinearAlgebra.Eigenspac
+e.Triangularizable (+ 26 m⣾ [4138/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣷ [4139/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣯ [4
+140/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣟ [4140/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⡿ [4141/4589] Running Mathlib.Line
+arAlgebra.Eigenspace.Triangularizable (+ 26 m⢿ [4141/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣻ [4141/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangula
+rizable (+ 26 m⣽ [4142/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣾ [4142/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣷ [4142/4589] R
+unning Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣯ [4142/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣟ [4143/4589] Running Mathlib.LinearAlgebra.E
+igenspace.Triangularizable (+ 26 m⡿ [4143/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⢿ [4143/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+
+26 m⣻ [4143/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣽ [4143/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣾ [4143/4589] Running Math
+lib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣷ [4143/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣯ [4143/4589] Running Mathlib.LinearAlgebra.Eigenspace.T
+riangularizable (+ 26 m⣟ [4143/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⡿ [4143/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⢿ [4143
+/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣻ [4143/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣽ [4143/4589] Running Mathlib.LinearA
+lgebra.Eigenspace.Triangularizable (+ 26 m⣾ [4143/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 26 m⣷ [4144/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangulariz
+able (+ 25 m⣯ [4144/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 25 m⣟ [4144/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 25 m⡿ [4144/4589] Runn
+ing Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 25 m⢿ [4144/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 25 m⣻ [4144/4589] Running Mathlib.LinearAlgebra.Eige
+nspace.Triangularizable (+ 25 m⣽ [4144/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 25 m⣾ [4144/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 25
+m⣷ [4144/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 25 m⣯ [4144/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 25 m⣟ [4144/4589] Running Mathlib
+.LinearAlgebra.Eigenspace.Triangularizable (+ 25 m⡿ [4145/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 24 m⢿ [4145/4589] Running Mathlib.LinearAlgebra.Eigenspace.Tria
+ngularizable (+ 24 m⣻ [4145/4589] Running Mathlib.LinearAlgebra.Eigenspace.Triangularizable (+ 24 m⣷ [4516/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 11 ⣯ [4516/45
+89] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 11 ⣟ [4516/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 11 ⡿ [4516/4589] Running Mathlib.Analysis.C
+alculus.BumpFunction.Convolution (+ 11 ⢿ [4516/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 11 ⣻ [4516/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convoluti
+on (+ 11 ⣽ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣾ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣷ [4517/4589] Running
+ Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣯ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣟ [4517/4589] Running Mathlib.Analysis.Calculus.Bum
+pFunction.Convolution (+ 13 ⡿ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⢿ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣻
+[4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣽ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣾ [4517/4589] Running Mathlib.An
+alysis.Calculus.BumpFunction.Convolution (+ 13 ⣷ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣯ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.C
+onvolution (+ 13 ⣟ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⡿ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⢿ [4517/4589]
+ Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣻ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣽ [4517/4589] Running Mathlib.Analysis.Calc
+ulus.BumpFunction.Convolution (+ 13 ⣾ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣷ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution
+(+ 13 ⣯ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣟ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⡿ [4517/4589] Running Ma
+thlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⢿ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣻ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFu
+nction.Convolution (+ 13 ⣽ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣾ [4517/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣷ [45
+18/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣯ [4518/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣟ [4518/4589] Running Mathlib.Analy
+sis.Calculus.BumpFunction.Convolution (+ 13 ⡿ [4518/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⢿ [4518/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Conv
+olution (+ 13 ⣻ [4518/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣽ [4518/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣾ [4518/4589] Ru
+nning Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣷ [4518/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣯ [4518/4589] Running Mathlib.Analysis.Calculu
+s.BumpFunction.Convolution (+ 13 ⣟ [4519/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 14 ⡿ [4519/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+
+14 ⢿ [4520/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣻ [4520/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 13 ⣽ [4521/4589] Running Mathl
+ib.Analysis.Calculus.BumpFunction.Convolution (+ 12 ⣾ [4521/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 12 ⣷ [4522/4589] Running Mathlib.Analysis.Calculus.BumpFunct
+ion.Convolution (+ 11 ⣯ [4522/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 11 ⣟ [4522/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 11 ⡿ [4522/
+4589] Running Mathlib.Analysis.Calculus.BumpFunction.Convolution (+ 11 ⢿ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣻ [4523/4589] Running Mathlib.Analysis
+.Calculus.BumpFunction.FiniteDimension (+⣽ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣾ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteD
+imension (+⣷ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣯ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣟ [4523/4589] Runni
+ng Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⡿ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⢿ [4523/4589] Running Mathlib.Analysis.Calculus.B
+umpFunction.FiniteDimension (+⣻ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣽ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+
+⣾ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣷ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣯ [4523/4589] Running Mathlib.
+Analysis.Calculus.BumpFunction.FiniteDimension (+⣟ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⡿ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction
+.FiniteDimension (+⢿ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣻ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣽ [4523/458
+9] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣾ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣷ [4523/4589] Running Mathlib.Analysis.Ca
+lculus.BumpFunction.FiniteDimension (+⣯ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣟ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDime
+nsion (+⡿ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⢿ [4523/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣻ [4523/4589] Running
+Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣽ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣾ [4524/4589] Running Mathlib.Analysis.Calculus.Bump
+Function.FiniteDimension (+⣷ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣯ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣟ [
+4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⡿ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⢿ [4524/4589] Running Mathlib.Ana
+lysis.Calculus.BumpFunction.FiniteDimension (+⣻ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣽ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Fi
+niteDimension (+⣾ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣷ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣯ [4524/4589]
+Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣟ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⡿ [4524/4589] Running Mathlib.Analysis.Calcu
+lus.BumpFunction.FiniteDimension (+⢿ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣻ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimensi
+on (+⣽ [4524/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣾ [4525/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣷ [4525/4589] Running Mat
+hlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣯ [4525/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣟ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFun
+ction.FiniteDimension (+⡿ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⢿ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣻ [452
+6/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣽ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣾ [4526/4589] Running Mathlib.Analys
+is.Calculus.BumpFunction.FiniteDimension (+⣷ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣯ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.Finit
+eDimension (+⣟ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⡿ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⢿ [4526/4589] Run
+ning Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣻ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣽ [4526/4589] Running Mathlib.Analysis.Calculus
+.BumpFunction.FiniteDimension (+⣾ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣷ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+(+⣯ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣟ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⡿ [4526/4589] Running Mathli
+b.Analysis.Calculus.BumpFunction.FiniteDimension (+⢿ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣻ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFuncti
+on.FiniteDimension (+⣽ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣾ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣷ [4526/4
+589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣯ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣟ [4526/4589] Running Mathlib.Analysis.
+Calculus.BumpFunction.FiniteDimension (+⡿ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⢿ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDi
+mension (+⣻ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣽ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣾ [4526/4589] Runnin
+g Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣷ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣯ [4526/4589] Running Mathlib.Analysis.Calculus.Bu
+mpFunction.FiniteDimension (+⣟ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⡿ [4526/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⢿
+ [4527/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣻ [4527/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣽ [4528/4589] Running Mathlib.A
+nalysis.Calculus.BumpFunction.FiniteDimension (+⣾ [4528/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣷ [4528/4589] Running Mathlib.Analysis.Calculus.BumpFunction.
+FiniteDimension (+⣯ [4528/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣟ [4528/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⡿ [4528/4589
+] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⢿ [4528/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣻ [4528/4589] Running Mathlib.Analysis.Cal
+culus.BumpFunction.FiniteDimension (+⣽ [4528/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣾ [4528/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimen
+sion (+⣷ [4528/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⣯ [4528/4589] Running Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension (+⢿ [4545/4589] Running M
+athlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 7⣻ [4545/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 7⣽ [4545/4589] Running Mathlib.Analysis.Distribution.A
+EEqOfIntegralContDiff (+ 7⣾ [4545/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 7⣷ [4545/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 7⣯ [4
+545/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 7⣟ [4546/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⡿ [4546/4589] Running Mathlib.Anal
+ysis.Distribution.AEEqOfIntegralContDiff (+ 8⢿ [4546/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣻ [4546/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegr
+alContDiff (+ 8⣽ [4546/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣾ [4547/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣷ [4547/4589] R
+unning Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣯ [4547/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣟ [4547/4589] Running Mathlib.Analysis.Distri
+bution.AEEqOfIntegralContDiff (+ 8⡿ [4547/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⢿ [4547/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff
+(+ 8⣻ [4547/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣽ [4547/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣾ [4547/4589] Running Math
+lib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣷ [4547/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣯ [4548/4589] Running Mathlib.Analysis.Distribution.AEEq
+OfIntegralContDiff (+ 8⣟ [4548/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⡿ [4548/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⢿ [4548
+/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣻ [4548/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣽ [4548/4589] Running Mathlib.Analysi
+s.Distribution.AEEqOfIntegralContDiff (+ 8⣾ [4548/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣷ [4548/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralC
+ontDiff (+ 8⣯ [4549/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣟ [4549/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⡿ [4549/4589] Runn
+ing Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⢿ [4549/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣻ [4549/4589] Running Mathlib.Analysis.Distribut
+ion.AEEqOfIntegralContDiff (+ 8⣽ [4549/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣾ [4549/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+
+8⣷ [4549/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣯ [4549/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣟ [4549/4589] Running Mathlib
+.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⡿ [4549/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⢿ [4549/4589] Running Mathlib.Analysis.Distribution.AEEqOfI
+ntegralContDiff (+ 8⣻ [4549/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣽ [4549/4589] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣾ [4549/45
+89] Running Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff (+ 8⣯ [4572/4589] Running Mathlib.NumberTheory.NumberField.CanonicalEmbedding.Conve⣟ [4572/4589] Running Mathlib.NumberTheo
+ry.NumberField.CanonicalEmbedding.Conve⡿ [4572/4589] Running Mathlib.NumberTheory.NumberField.CanonicalEmbedding.Conve⢿ [4572/4589] Running Mathlib.NumberTheory.NumberField.CanonicalEmbedd
+ing.Conve⣻ [4572/4589] Running Mathlib.NumberTheory.NumberField.CanonicalEmbedding.Conve⣽ [4573/4589] Running Mathlib.NumberTheory.NumberField.CanonicalEmbedding.ConveBuild completed succe
+ssfully.
+2024-06-01 14:36:52.457 | INFO     | __main__:main:188 - Tracing mathlib4
+2024-06-01 14:36:52.559 | DEBUG    | __main__:main:193 - lake env lean --threads 32 --run ExtractData.lean
+ 99%|█████████████████████████████████████▌| 5428/5488 [35:46<00:09,  6.25it/s]2024-06-01 15:12:47,576  INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1
+:8267
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5484/5
+484 [08:33<00:00, 10.69it/s]
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-06-01 15:21:49.287 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='10d88b52fa8d717fa8e29af3abf0c3a2bf175
+497') relies on an unsupported Lean version: 41697dcf6cab7ec82723ba404f2bda7a4526bb2b
+2024-06-01 15:21:53.742 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/xubaiw/CMark.lean', commit='0077cbbaa92abf855fc1c0413e158ffd8195
+ec77') relies on an unsupported Lean version: 8fc1af650ad6d31cf766d9bc84119149330e7d4e
+2024-06-01 15:22:03.079 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='280d75fdfe7be8eb337be7f1b
+f8479b4aac09f71') relies on an unsupported Lean version: 0d7051497ea09b2b4a4ef608e371b8f317487c3c
+2024-06-01 15:22:06.437 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='39229f3630d734af7d9cfb5937ddc6b41d3aa
+6aa') relies on an unsupported Lean version: 216d2460e0adec8317fdeeb6f2543cb7442564fd
+2024-06-01 15:22:11.390 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/hargonix/LeanInk', commit='2447df5cc6e48eb965c3c3fba87e46d353b5e
+9f1') relies on an unsupported Lean version: f6cd6c069587cfe62dd68cb6330f9ad794a56724
+2024-06-01 15:22:54,697 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5484/5
+484 [02:24<00:00, 37.96it/s]
+2024-06-01 15:25:41.581 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /raid/adarsh/.cache/lean_dojo/leanprover-community-mathlib4-f5b37525599ff0abbd
+b719d81956585dc05449d5/mathlib4
+2024-06-01 15:25:46,777 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+ 70%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                     | 3819/5
+ 70%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                     | 3819/5
+ 70%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                    | 3824/548
+ 70%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                    | 3827/548
+ 70%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                    | 3832/5
+ 70%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                    | 3836/5
+ 70%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                    | 3841/5
+ 70%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                    | 3845/5
+ 70%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                    | 3852/5
+ 70%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                    | 3858/5
+ 70%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                   | 3862/5
+ 71%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                   | 3869/5
+ 71%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                   | 3876/5
+ 71%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                   | 3882/5
+ 71%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                   | 3888/5
+ 71%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                  | 3895/5
+ 71%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                  | 3900/5
+ 71%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                  | 3908/5
+ 71%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                  | 3915/5
+ 72%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                 | 3930/5
+ 72%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                 | 3938/5
+ 72%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                 | 3946/5
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                | 3954/5
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                | 3961/5
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                | 3968/5
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                | 3975/5
+ 73%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                | 3982/5
+ 73%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                               | 3988/5
+ 73%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                               | 3994/5
+ 73%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                               | 4000/5
+ 73%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                               | 4006/5
+ 73%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                               | 4012/5
+ 73%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                              | 4021/5
+ 73%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                              | 4027/5
+ 74%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                              | 4033/5
+ 74%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                              | 4038/5
+ 74%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                              | 4044/5
+ 74%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                             | 4049/5
+ 74%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                             | 4056/5
+ 74%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                             | 4061/5
+ 74%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                             | 4066/5
+ 74%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                             | 4071/5
+ 74%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                             | 4077/5
+ 74%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                            | 4082/5
+ 75%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                            | 4087/5
+ 75%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                            | 4092/5
+ 75%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                            | 4096/5
+ 75%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                            | 4101/5
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                            | 4107/5
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                           | 4112/5
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                           | 4118/5
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                           | 4123/5
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                           | 4128/5
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                           | 4133/5
+ 75%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                           | 4137/5
+ 76%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                          | 4142/5
+ 76%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                          | 4148/5
+ 76%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                          | 4154/5
+ 76%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                          | 4162/5
+ 76%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                          | 4168/5
+ 76%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                         | 4175/5
+ 76%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                         | 4181/5
+ 76%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 4187/5
+ 76%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                         | 4194/5
+ 77%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                         | 4199/5
+ 77%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                        | 4204/5
+ 77%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                        | 4210/5
+ 77%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                        | 4215/5
+ 77%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                        | 4220/5
+ 77%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                        | 4227/5
+ 77%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                        | 4233/5
+ 77%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                       | 4238/5
+ 78%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                       | 4252/5
+ 78%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                       | 4260/5
+ 78%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                      | 4270/5
+ 78%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                      | 4278/5
+ 78%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                      | 4292/5
+ 78%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                     | 4302/5
+ 79%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                     | 4316/54
+ 79%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                    | 4337/54
+ 79%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                    | 4351/54
+ 80%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                   | 4369/54
+ 80%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                   | 4384/54
+ 80%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                  | 4399/54
+ 80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                  | 4413/54
+ 81%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                 | 4428/54
+ 81%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                 | 4442/54
+ 81%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                | 4455/54
+ 81%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                | 4468/54
+ 82%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                | 4481/5
+ 82%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                               | 4492/5
+ 82%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                               | 4503/5
+ 82%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                               | 4513/5
+ 83%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                              | 4531/5
+ 83%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                              | 4542/5
+ 83%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                             | 4554/5
+ 83%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                             | 4564/5
+ 83%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                             | 4574/5
+ 84%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                            | 4584/5
+ 84%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                            | 4594/5
+ 84%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                            | 4603/5
+ 84%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                           | 4618/5
+ 84%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                           | 4628/5
+ 85%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                           | 4640/5
+ 85%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                          | 4652/5
+ 85%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                          | 4663/5
+ 85%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                          | 4673/5
+ 85%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                         | 4682/5
+ 86%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                         | 4691/5
+ 86%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                        | 4705/5
+ 86%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                        | 4715/5
+ 86%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                        | 4724/5
+ 86%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                        | 4732/5
+ 86%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                       | 4743/5
+ 87%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                       | 4754/5
+ 87%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                       | 4763/5
+ 87%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                      | 4774/5
+ 87%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                      | 4789/5
+ 88%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                     | 4800/5
+ 88%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                     | 4812/5
+ 88%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                    | 4829/54
+ 88%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                    | 4841/54
+ 88%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                    | 4853/54
+ 89%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                   | 4865/54
+ 89%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                   | 4877/5
+ 89%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                   | 4887/5
+ 89%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                  | 4897/5
+ 89%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                  | 4908/5
+ 90%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                  | 4918/5
+ 90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                 | 4931/5
+ 90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                 | 4941/5
+ 90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                 | 4951/5
+ 90%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                | 4962/5
+ 91%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                | 4974/5
+ 91%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎               | 4988/54
+ 91%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋               | 5002/54
+ 91%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████               | 5014/54
+ 92%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋              | 5032/54
+ 92%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████              | 5046/54
+ 92%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████              | 5046/54
+ 92%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍             | 5058/5
+ 92%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌             | 5063/5
+ 93%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉             | 5073/5
+ 93%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏            | 5082/5
+ 93%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋            | 5099/5
+ 93%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████            | 5109/5
+ 93%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍           | 5122/5
+ 94%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊           | 5133/5
+ 94%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏          | 5145/5
+ 94%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌          | 5155/5
+ 94%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊          | 5163/5
+ 94%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████          | 5171/5
+ 94%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎         | 5180/5
+ 95%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋         | 5191/5
+ 95%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉         | 5200/5
+ 95%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌        | 5218/5
+ 96%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏       | 5238/5
+ 96%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌       | 5252/5
+ 96%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎      | 5273/5
+ 96%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋      | 5288/5
+ 97%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍     | 5308/54
+ 97%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉     | 5324/54
+ 97%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍    | 5340/54
+ 98%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉    | 5355/54
+ 98%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎   | 5369/54
+ 98%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊   | 5382/54
+ 98%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏  | 5394/54
+ 99%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍  | 5405/5
+ 99%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊  | 5416/5
+ 99%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏ | 5426/5
+ 99%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍ | 5436/5
+ 99%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉ | 5450/5
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍| 5465/5
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5484/5
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5484/5
+484 [12:11<00:00,  7.50it/s]
+2024-06-01 15:38:49.183 | INFO     | __main__:retrieve_proof:407 - MAIN: about to split data
+2024-06-01 15:39:00.068 | INFO     | __main__:split_data:132 - 120507 theorems in total
+2024-06-01 15:39:00.068 | INFO     | __main__:split_randomly:81 - Splitting the theorems randomly
+2024-06-01 15:39:00.118 | INFO     | __main__:split_by_premise:94 - Splitting the theorems by premises
+2024-06-01 15:39:11.014 | INFO     | __main__:retrieve_proof:409 - MAIN: done splitting data
+2024-06-01 15:39:11.014 | INFO     | __main__:retrieve_proof:410 - MAIN: about to export corpus.jsonl
+2024-06-01 15:39:11.014 | INFO     | __main__:export_data:175 - dst path is /raid/adarsh/data
+2024-06-01 15:39:11.014 | INFO     | __main__:export_premises:143 - /raid/adarsh/data/corpus.jsonl already exists. Removing it now.
+2024-06-01 15:39:42.591 | INFO     | __main__:export_premises:161 - 176815 theorems/definitions from 5484 files saved to /raid/adarsh/data/corpus.jsonl
+2024-06-01 15:39:42.591 | INFO     | __main__:retrieve_proof:412 - MAIN: exported corpus.jsonl
+2024-06-01 15:39:54.438 | INFO     | __main__:retrieve_proof:429 - 52913
+2024-06-01 15:39:54.474 | INFO     | __main__:retrieve_proof:443 - MAIN: about to search for proofs
+2024-06-01 15:39:54.474 | INFO     | prover.proof_search:__init__:429 - Launching 5 workers with 1 GPUs.
+2024-06-01 15:39:59,717 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+2024-06-01 15:40:00.725 | INFO     | prover.proof_search:search_unordered:474 - before theorem search:
+2024-06-01 15:40:00.725 | INFO     | prover.proof_search:search_unordered:481 - after theorem search:
+2024-06-01 15:40:00.725 | INFO     | __main__:retrieve_proof:456 - MAIN: done searching for proofs
+2024-06-01 15:40:01.002 | INFO     | __main__:replace_sorry_with_proof:486 - Replacing sorries with 0 proofs!
+Processing /raid/adarsh/repos/lecopivo/SciLean
+From https://github.com/lecopivo/SciLean
+ * branch            master     -> FETCH_HEAD
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+From https://github.com/lecopivo/SciLean
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Switched to a new branch '_LeanCopilotBot'
+2024-06-01 15:40:01.825 | INFO     | __main__:retrieve_proof:378 - lean toolchain version: {'content': 'leanprover/lean4:v4.7.0\n'}
+2024-06-01 15:40:01.825 | INFO     | __main__:retrieve_proof:380 - lean version v: v4.7.0
+2024-06-01 15:40:01.825 | INFO     | __main__:retrieve_proof:381 - is supported: True
+2024-06-01 15:40:01.825 | INFO     | __main__:retrieve_proof:387 - lean path /home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-06-01 15:40:01.825 | INFO     | __main__:retrieve_proof:393 - Switched to Lean toolchain at: /home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-06-01 15:40:01.857 | INFO     | __main__:retrieve_proof:394 - lean --version: Lean (version 4.7.0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-06-01 15:40:01.857 | INFO     | __main__:retrieve_proof:395 - repo: LeanGitRepo(url='https://github.com/lecopivo/SciLean', commit='e21a3ecdc0442bf795ea665d3a4bdbc5be22602d')
+2024-06-01 15:40:03.527 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /raid/adarsh/.cache/lean_dojo/lecopivo-SciLean-e21a3ecdc0442bf795ea665d3a4bdbc
+5be22602d/SciLean
+2024-06-01 15:40:08,931 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2851/2851 [06:59<00:00,  6.80it/s]
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-06-01 15:47:32.442 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4
+a0f6ef5') relies on an unsupported Lean version: ec941735c80dc54c53948e30c428905b6600f95a
+
