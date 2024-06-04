@@ -31,7 +31,6 @@ def main() -> None:
     else:
         device = torch.device("cuda")
 
-    # TODO: update maybe
     config = {
         "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
         "lr": 1e-3,

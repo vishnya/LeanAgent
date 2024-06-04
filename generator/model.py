@@ -108,7 +108,6 @@ class RetrievalAugmentedGenerator(TacticGenerator, pl.LightningModule):
 
         logger.info(f"Retriever checkpoint path: {ret_ckpt_path}")
 
-        # TODO: update maybe
         config = {
             "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
             "lr": 1e-3,

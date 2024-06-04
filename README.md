@@ -43,3 +43,7 @@ The models we use are available on the HuggingFace Hub:
 - `main.py`: This is the driver code. Please see the commments to better understand what it does. To use it, change any parameters you would like, such as numbers of cloned repos, directory to clone the repos to, directory to generate corpuses in, where to save the results, where the Lean toolchains and models are, etc. Then, run `python main.py`.
 - `prover/download_model_generator.py`: This downloads the `retriever-tacgen` model from HuggingFace. Make sure to change the download directory before running it.
 - `prover/download_model_retriever.py`: This downloads the `retriever` model from HuggingFace. Make sure to change the download directory before running it.
+
+## Known Issues
+
+- Sending the output of the bash script to a file or automating the process with a program like CRON leads to a `PicklingError`. This error is currently being investigated.

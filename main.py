@@ -181,30 +181,31 @@ def export_data(
 
 load_dotenv()
 
+# Feel free to remove any repos from this list if you would like to test on them
 known_repositories = [
     "leanprover-community/mathlib4",  # ReProver is trained on this + LeanDojo already tests on it
     "leanprover-community/batteries", # ReProver is trained on this + LeanDojo already tests on it
-    "lecopivo/SciLean", # TODO: remove after testing
-    "leanprover-community/aesop", # TODO: remove after testing
-    "kmill/lean4-raytracer", # TODO: remove after testing
-    "AlexKontorovich/PrimeNumberTheoremAnd", # TODO: remove after testing
-    "teorth/pfr", # TODO: remove after testing
-    "lurk-lab/yatima", # TODO: remove after testing
-    "leanprover-community/ProofWidgets4", # TODO: remove after testing
-    "google-deepmind/debate", # TODO: remove after testing
-    "leanprover-community/NNG4", # TODO: remove after testing
-    "teorth/symmetric_project", # TODO: remove after testing
-    "ufmg-smite/lean-smt", # TODO: remove after testing
-    "PatrickMassot/GlimpseOfLean", # TODO: remove after testing
-    "ImperialCollegeLondon/formalising-mathematics-2024", # TODO: remove after testing
-    "avigad/lamr", # TODO: remove after testing
-    "leanprover-community/quote4", # TODO: remove after testing
-    "digama0/lean4lean", # TODO: remove after testing
-    "leanprover/verso", # TODO: remove after testing
-    "leanprover-community/iris-lean", # TODO: remove after testing
-    "avigad/mathematics_in_lean_source", # TODO: remove after testing
-    "sinhp/Poly", # TODO: remove after testing
-    "m4lvin/lean4-pdl", # TODO: remove after testing
+    "lecopivo/SciLean",
+    "leanprover-community/aesop",
+    "kmill/lean4-raytracer",
+    "AlexKontorovich/PrimeNumberTheoremAnd",
+    "teorth/pfr",
+    "lurk-lab/yatima",
+    "leanprover-community/ProofWidgets4",
+    "google-deepmind/debate",
+    "leanprover-community/NNG4",
+    "teorth/symmetric_project",
+    "ufmg-smite/lean-smt",
+    "PatrickMassot/GlimpseOfLean",
+    "ImperialCollegeLondon/formalising-mathematics-2024",
+    "avigad/lamr",
+    "leanprover-community/quote4",
+    "digama0/lean4lean",
+    "leanprover/verso",
+    "leanprover-community/iris-lean",
+    "avigad/mathematics_in_lean_source",
+    "sinhp/Poly",
+    "m4lvin/lean4-pdl",
     "leanprover/lean4",
     "leanprover-community/mathlib",
     "leanprover/std4",  # moved to batteries
@@ -231,21 +232,20 @@ lean_git_repos = []
 
 personal_access_token = os.environ.get("PERSONAL_ACCESS_TOKEN")
 
-PR_TITLE = "[LeanCopilotBot] `sorry` Removed by Lean Copilot"
+PR_TITLE = "[LeanDojoBot] `sorry` Removed"
 
-# TODO: make sure these links work when we release
-PR_BODY = """We identify the files containing theorems that have `sorry`, and replace them with a proof discovered by [Lean Copilot](https://github.com/lean-dojo/LeanCopilot).
+PR_BODY = """We identify the files containing theorems that have `sorry`, and replace them with a proof discovered using [LeanDojo](https://github.com/lean-dojo/LeanDojo) and [ReProver](https://github.com/lean-dojo/ReProver).
 
 ---
 
-<i>~LeanCopilotBot - From the [LeanDojo](https://leandojo.org/) family</i>
+<i>~LeanDojoBot - From the [LeanDojo](https://leandojo.org/) family</i>
 
-[:octocat: repo](https://github.com/lean-dojo/LeanCopilotBot) | [🙋🏾 issues](https://github.com/lean-dojo/LeanCopilotBot/issues) | [🏪 marketplace](https://github.com/marketplace/LeanCopilotBot)
+[:octocat: repo](https://github.com/Adarsh321123/CS159FinalProject) | [🙋🏾 issues](https://github.com/Adarsh321123/CS159FinalProject/issues)
 """
 
 TMP_BRANCH = "_LeanCopilotBot"
 
-COMMIT_MESSAGE = "[LeanCopilotBot] `sorry` Removed by Lean Copilot"
+COMMIT_MESSAGE = "[LeanDojoBot] `sorry` Removed"
 
 def clone_repo(repo_url):
     repo_name = "/".join(repo_url.split('/')[-2:]).replace('.git', '')
@@ -343,19 +343,6 @@ def search_github_repositories(language="Lean", num_repos=10):
                 try:
                     clone_url = repo['clone_url']
                     repo_name, sha = clone_repo(clone_url)
-                    # TODO: remove later
-                    if "lecopivo/SciLean" in repo_name:
-                        sha = "e21a3ecdc0442bf795ea665d3a4bdbc5be22602d"
-                    elif "leanprover-community/aesop" in repo_name:
-                        sha = "d68b34fabd37681e6732be752b7e90aaac7aa0e0"
-                    elif "kmill/lean4-raytracer" in repo_name:
-                        sha = "205143b32c006199c914cf6f340004137aaaa72a"
-                    elif "AlexKontorovich/PrimeNumberTheoremAnd" in repo_name:
-                        sha = "44ddc830bac2f494c1cc85ae10e65a353119a2f9"
-                    elif "digama0/lean4lean" in repo_name:
-                        sha = "c534f13d8d25f5e1891b6d18cc76b601ee87aa66"
-                    elif "avigad/mathematics_in_lean_source" in repo_name:
-                        sha = "3fa84e6b3135a3ae41edc6ca195abf0fb1ae3ac3"
                     name = repo_name
                     url = clone_url.replace('.git', '')
                     lean_git_repo = LeanGitRepo(url, sha)
@@ -565,15 +552,6 @@ def main():
         "repositories": {}
     }
     search_github_repositories("Lean", 10)
-    # repos.append("leanprover-community/mathlib4")
-    # lean_git_repos.append(LeanGitRepo("https://github.com/leanprover-community/mathlib4", "0fd3d39a108a86dd1acc993c04b16c2d281fba26"))  # might return 404
-    # repos.append("Adarsh321123/new-version-test")
-    # lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-version-test", "6eb56a01c8febf938bcc166cd64339e223a99086"))  # might return 404
-    # repos.append("Adarsh321123/new-new-version-test")
-    # lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/new-new-version-test", "779fc7d7cc36755b76bda552118e910289ed3aa3"))  # might return 404
-    # repos.append("JOSHCLUNE/DuperDemo")
-    # lean_git_repos.append(LeanGitRepo("https://github.com/JOSHCLUNE/DuperDemo", "226ba13f7fb11f93f7a77e1fc76b2210ce1177c6"))  # might return 404
-    # TODO: clone big repos like scilean and mathlib4 at a specific commit
     num_repos = len(repos)
     results["total_repositories"] = num_repos
     print(f"Found {num_repos} repositories")

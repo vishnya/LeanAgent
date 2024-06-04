@@ -349,7 +349,6 @@ class GpuProver(BestFirstSearchProver):
         if ckpt_path is None:
             tac_gen = FixedTacticGenerator(tactic, module)
         else:
-            # TODO: update this
             config = {
                 "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
                 "lr": 1e-3,
@@ -372,7 +371,6 @@ class GpuProver(BestFirstSearchProver):
             if tac_gen.retriever is not None:
                 if indexed_corpus_path is not None:
                     logger.info(f"Loading indexed corpus from {indexed_corpus_path}")
-                    # TODO: use print statements to chekc pickle
                     tac_gen.retriever.load_corpus(indexed_corpus_path)
                     logger.info(f"Loaded indexed corpus from {indexed_corpus_path}")
                 tac_gen.retriever.reindex_corpus(batch_size=32)
@@ -462,13 +460,10 @@ class DistributedProver:
     ) -> List[Optional[SearchResult]]:
         """Parallel proof search for `theorems`. The order of the results is not guaranteed to match the order of the input."""
         if not self.distributed:
-            # TODO: remove logs
-            logger.info(f"before theorem search not distributed: ")
             return [
                 self.prover.search(repo, thm, pos)
                 for thm, pos in zip_strict(theorems, positions)
             ]
-            logger.info(f"after theorem search not distributed: ")
 
         try:
             logger.info(f"before theorem search: ")

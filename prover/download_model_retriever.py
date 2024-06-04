@@ -44,7 +44,6 @@ def download_model(model_name: str, ckpt_model_path: str):
         state_dict['callbacks'] = None
         state_dict['loops'] = {}
         state_dict['legacy_pytorch-lightning_version'] = None
-        # state_dict['hyper_parameters'] = None  # TODO: ok?
         print(state_dict.keys())
         # print(model.state_dict().items())
 
