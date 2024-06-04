@@ -227,8 +227,8 @@ known_repositories = [
     "openai/lean-gym",
 ]
 
-repos = []
-lean_git_repos = []
+repos = []  # stores the names of all the repos
+lean_git_repos = []  # stores the LeanGitRepo objects
 
 personal_access_token = os.environ.get("PERSONAL_ACCESS_TOKEN")
 
@@ -248,6 +248,7 @@ TMP_BRANCH = "_LeanCopilotBot"
 COMMIT_MESSAGE = "[LeanDojoBot] `sorry` Removed"
 
 def clone_repo(repo_url):
+    """Clone a git repository and return the path to the repository and its sha."""
     repo_name = "/".join(repo_url.split('/')[-2:]).replace('.git', '')
     print(f"Cloning {repo_url}")
     print(f"Repo name: {repo_name}")
@@ -262,6 +263,7 @@ def clone_repo(repo_url):
     return repo_name, sha
 
 def branch_exists(repo_name, branch_name):
+    """Check if a branch exists in a git repository."""
     proc = subprocess.run(["git", "-C", repo_name, "branch", "-a"], capture_output=True, text=True)
     branches = proc.stdout.split('\n')
     local_branch = branch_name
@@ -269,6 +271,7 @@ def branch_exists(repo_name, branch_name):
     return any(branch.strip().endswith(local_branch) or branch.strip().endswith(remote_branch) for branch in branches)
 
 def create_or_switch_branch(repo_name, branch_name, base_branch):
+    """Create a branch in a git repository if it doesn't exist, or switch to it if it does."""
     if not branch_exists(repo_name, branch_name):
         subprocess.run(["git", "-C", repo_name, "checkout", "-b", branch_name], check=True)
     else:
@@ -276,6 +279,7 @@ def create_or_switch_branch(repo_name, branch_name, base_branch):
         subprocess.run(["git", "-C", repo_name, "merge", base_branch, "-m", f"Merging {branch_name} into {base_branch}"], check=True)
 
 def commit_changes(repo_name, commit_message):
+    """Commit changes to a git repository."""
     status = subprocess.run(["git", "-C", repo_name, "status", "--porcelain"], capture_output=True, text=True).stdout.strip()
     if status == "":
         print("No changes to commit.")
@@ -285,9 +289,11 @@ def commit_changes(repo_name, commit_message):
     return True
 
 def push_changes(repo_name, branch_name):
+    """Push changes to a git repository."""
     subprocess.run(["git", "-C", repo_name, "push", "-u", "origin", branch_name], check=True)
 
 def get_default_branch(repo_full_name):
+    """Get the default branch of a repository (default `main`)."""
     url = f"https://api.github.com/repos/{repo_full_name}"
     headers = {
         "Authorization": f"token {personal_access_token}",
@@ -301,6 +307,7 @@ def get_default_branch(repo_full_name):
         return "main"
 
 def create_pull_request(repo_full_name, title, body, head_branch):
+    """Create a pull request in a repository."""
     base_branch = get_default_branch(repo_full_name)
     url = f"https://api.github.com/repos/{repo_full_name}/pulls"
     headers = {
@@ -322,6 +329,7 @@ def create_pull_request(repo_full_name, title, body, head_branch):
         return ""
 
 def search_github_repositories(language="Lean", num_repos=10):
+    """Search for the given number of repositories on GitHub that have the given language."""
     headers = {'Authorization': personal_access_token}
     query_params = {
         'q': f'language:{language}',
@@ -364,7 +372,13 @@ def get_lean4_version_from_config(toolchain: str) -> str:
     return m["version"]
 
 def is_supported_version(v) -> bool:
-    """Check if ``v`` is at least `v4.3.0-rc2` and at most `v4.8.0-rc2`."""
+    """
+    Check if ``v`` is at least `v4.3.0-rc2` and at most `v4.8.0-rc2`.
+    Note: Lean versions are generally not backwards-compatible. Also, the Lean FRO
+    keeps bumping the default versions of repos to the latest version, which is
+    not necessarily the latest stable version. So, we need to be careful about
+    what we choose to support.
+    """
     if not v.startswith("v"):
         return False
     v = v[1:]
@@ -389,6 +403,13 @@ def is_supported_version(v) -> bool:
     
 
 def retrieve_proof(repo, repo_no_dir, sha):
+    """
+    This method does the following:
+    1. Check if the given repo is supported.
+    2. Trace the repo.
+    3. Generate a corpus of the repo's premises.
+    4. Search for proofs for theorems with `sorry` in them.
+    """
     ckpt_path = "<DIR>/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     indexed_corpus_path = str(DST_DIR / repo_no_dir / sha) + "/corpus.jsonl"
     tactic = None
@@ -462,7 +483,7 @@ def retrieve_proof(repo, repo_no_dir, sha):
         cur_repo = elem[0].repo
         cur_theorem = elem[0]
         cur_proof = elem[1]
-        if (cur_repo == repo) and ("sorry" in cur_proof):  # avoid tracing Lean4 and other dependencies
+        if (cur_repo == repo) and ("sorry" in cur_proof):  # avoid proving theorems in Lean4 and other dependencies
             theorems.append(cur_theorem)
             positions.append(elem[2])
             ends.append(elem[3])
@@ -488,7 +509,6 @@ def retrieve_proof(repo, repo_no_dir, sha):
     for result in results:
         if result is not None:
             if result.status == Status.PROVED:
-                # logger.info(str(result))
                 proof_text = "\n".join(result.proof)
                 # TODO: find more efficient way to get url and repo name
                 repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
@@ -513,6 +533,7 @@ def retrieve_proof(repo, repo_no_dir, sha):
     return num_sorries, proofs, num_premises, num_files_traced, unproved_sorries
 
 def replace_sorry_with_proof(proofs):
+    """Replace the `sorry` with the proof text in the Lean files."""
     logger.info(f"Replacing sorries with {len(proofs)} proofs!")
     # Group proofs by file paths
     proofs_by_file = {}
@@ -526,20 +547,14 @@ def replace_sorry_with_proof(proofs):
         with open(file_path, 'r') as file:
             lines = file.readlines()
 
-        # sort proof by starting line and column number
-        proofs.sort(key=lambda x: (x[0].line_nb, x[0].column_nb), reverse=True)  # working bottom up retains positions
+        # sort proof by starting line and column number (working bottom up retains positions)
+        proofs.sort(key=lambda x: (x[0].line_nb, x[0].column_nb), reverse=True)
         
         for start, end, proof_text in proofs:
             start_line, start_col = start.line_nb - 1, start.column_nb - 1
             end_line, end_col = end.line_nb - 1, end.column_nb - 1
-
-            # Join the lines from start to end to form the text to be replaced
             original_text = ''.join(lines[start_line:end_line + 1])
-            
-            # Replace the `sorry` with the proof text
             new_text = original_text.replace('sorry', proof_text, 1)
-            
-            # Update the lines in the file
             lines[start_line:end_line + 1] = new_text
             
             with open(file_path, 'w') as file:
@@ -547,6 +562,7 @@ def replace_sorry_with_proof(proofs):
 
 
 def main():
+    """The main function that drives the bot."""
     results = {
         "total_repositories": 0,
         "repositories": {}
@@ -599,6 +615,7 @@ def main():
             })
         with open(RESULTS_FILE, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=4, ensure_ascii=False)
+        # Uncomment if you would like to contribute back to the repos!
         # replace_sorry_with_proof(proofs)
         # committed = commit_changes(repo, COMMIT_MESSAGE)
         # if committed:
