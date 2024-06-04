@@ -52,10 +52,11 @@ from lean_dojo.constants import LEAN4_PACKAGES_DIR
 
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 _LEAN4_VERSION_REGEX = re.compile(r"leanprover/lean4:(?P<version>.+?)")
-repo_dir = "/raid/adarsh/repos"
-DST_DIR = Path("/raid/adarsh/data")
+repo_dir = "<DIR>/repos"
+DST_DIR = Path("<DIR>/data")
 NUM_VAL = NUM_TEST = 2000
 FILE_NAME = "corpus.jsonl"
+RESULTS_FILE = "results.json"
 
 SPLIT_NAME = str  # train/val/test
 SPLIT = Dict[SPLIT_NAME, List[TracedTheorem]]
@@ -401,7 +402,7 @@ def is_supported_version(v) -> bool:
     
 
 def retrieve_proof(repo, repo_no_dir, sha):
-    ckpt_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+    ckpt_path = "<DIR>/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     indexed_corpus_path = str(DST_DIR / repo_no_dir / sha) + "/corpus.jsonl"
     tactic = None
     module = None
@@ -422,7 +423,7 @@ def retrieve_proof(repo, repo_no_dir, sha):
         logger.info("Unsupported version")
         return None
     v = v[1:] # ignore "v" at beginning
-    lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---" + v
+    lean_dir = "<DIR>/.elan/toolchains/leanprover--lean4---" + v
     logger.info(f"lean path {lean_dir}")
     if not os.path.exists(lean_dir):
         logger.info(f"Lean toolchain path does not exist: {lean_dir}")
@@ -563,7 +564,7 @@ def main():
         "total_repositories": 0,
         "repositories": {}
     }
-    search_github_repositories()
+    search_github_repositories("Lean", 10)
     # repos.append("leanprover-community/mathlib4")
     # lean_git_repos.append(LeanGitRepo("https://github.com/leanprover-community/mathlib4", "0fd3d39a108a86dd1acc993c04b16c2d281fba26"))  # might return 404
     # repos.append("Adarsh321123/new-version-test")
@@ -618,7 +619,7 @@ def main():
                 "file_path": unproved_sorry[0],
                 "theorem_name": unproved_sorry[1]
             })
-        with open('results.json', 'w', encoding='utf-8') as f:
+        with open(RESULTS_FILE, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=4, ensure_ascii=False)
         # replace_sorry_with_proof(proofs)
         # committed = commit_changes(repo, COMMIT_MESSAGE)

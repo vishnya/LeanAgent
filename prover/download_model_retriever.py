@@ -2,7 +2,7 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import os
 import torch
 
-def download_model(model_name: str):
+def download_model(model_name: str, ckpt_model_path: str):
     try:
         print(f"Downloading tokenizer for {model_name}")
         tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -49,7 +49,6 @@ def download_model(model_name: str):
         # print(model.state_dict().items())
 
         # Save the model in .ckpt format
-        ckpt_model_path = '/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt'
         print(f"Saving model to {ckpt_model_path}")
         torch.save(state_dict, ckpt_model_path)
         print(f"Model saved in .ckpt format at {ckpt_model_path}")
@@ -64,5 +63,6 @@ def download_model(model_name: str):
 
 if __name__ == "__main__":
     model_name = "kaiyuy/leandojo-lean4-retriever-byt5-small"
+    ckpt_model_path = '<DIR>/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt' # Add your path here
     print(os.getcwd())
-    download_model(model_name)
+    download_model(model_name, ckpt_model_path)
