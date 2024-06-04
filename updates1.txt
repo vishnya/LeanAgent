@@ -1,0 +1,1285 @@
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ export CUDA_VISIBLE_DEVICES=2
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ bash ry
+bash: ry: No such file or directory
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ bash run_lean_copilot_bot.sh
+Script executed from: /home/adarsh/ReProver
+[2024-06-04 12:12:11,117] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+Cloning https://github.com/sinhp/Poly.git
+Repo name: sinhp/Poly
+Cloning into '/raid/adarsh/repos/sinhp/Poly'...
+remote: Enumerating objects: 383, done.
+remote: Counting objects: 100% (83/83), done.
+remote: Compressing objects: 100% (55/55), done.
+remote: Total 383 (delta 30), reused 64 (delta 18), pack-reused 300
+Receiving objects: 100% (383/383), 71.16 KiB | 2.85 MiB/s, done.
+Resolving deltas: 100% (153/153), done.
+Cloning https://github.com/m4lvin/lean4-pdl.git
+Repo name: m4lvin/lean4-pdl
+Cloning into '/raid/adarsh/repos/m4lvin/lean4-pdl'...
+remote: Enumerating objects: 2271, done.
+remote: Counting objects: 100% (843/843), done.
+remote: Compressing objects: 100% (148/148), done.
+remote: Total 2271 (delta 744), reused 781 (delta 694), pack-reused 1428
+Receiving objects: 100% (2271/2271), 692.61 KiB | 5.54 MiB/s, done.
+Resolving deltas: 100% (1664/1664), done.
+Cloning https://github.com/apnelson1/Matroid.git
+Repo name: apnelson1/Matroid
+Cloning into '/raid/adarsh/repos/apnelson1/Matroid'...
+remote: Enumerating objects: 3100, done.
+remote: Counting objects: 100% (91/91), done.
+remote: Compressing objects: 100% (64/64), done.
+remote: Total 3100 (delta 49), reused 53 (delta 23), pack-reused 3009
+Receiving objects: 100% (3100/3100), 1.56 MiB | 10.00 MiB/s, done.
+Resolving deltas: 100% (2280/2280), done.
+Cloning https://github.com/fgdorais/lean4-parser.git
+Repo name: fgdorais/lean4-parser
+Cloning into '/raid/adarsh/repos/fgdorais/lean4-parser'...
+remote: Enumerating objects: 630, done.
+remote: Counting objects: 100% (228/228), done.
+remote: Compressing objects: 100% (107/107), done.
+remote: Total 630 (delta 130), reused 187 (delta 111), pack-reused 402
+Receiving objects: 100% (630/630), 121.83 KiB | 2.21 MiB/s, done.
+Resolving deltas: 100% (346/346), done.
+Cloning https://github.com/amuricys/lean-cst.git
+Repo name: amuricys/lean-cst
+Cloning into '/raid/adarsh/repos/amuricys/lean-cst'...
+remote: Enumerating objects: 17, done.
+remote: Counting objects: 100% (17/17), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 17 (delta 1), reused 17 (delta 1), pack-reused 0
+Unpacking objects: 100% (17/17), 23.66 KiB | 931.00 KiB/s, done.
+Failed to clone amuricys/lean-cst because of Invalid Lean 4 version: stable
+Cloning https://github.com/JesseCSlater/calcite_merge_rules.git
+Repo name: JesseCSlater/calcite_merge_rules
+Cloning into '/raid/adarsh/repos/JesseCSlater/calcite_merge_rules'...
+remote: Enumerating objects: 127, done.
+remote: Counting objects: 100% (127/127), done.
+remote: Compressing objects: 100% (79/79), done.
+remote: Total 127 (delta 54), reused 108 (delta 35), pack-reused 0
+Receiving objects: 100% (127/127), 162.67 KiB | 2.62 MiB/s, done.
+Resolving deltas: 100% (54/54), done.
+Cloning https://github.com/TwoFX/HashMap.git
+Repo name: TwoFX/HashMap
+Cloning into '/raid/adarsh/repos/TwoFX/HashMap'...
+remote: Enumerating objects: 586, done.
+remote: Counting objects: 100% (586/586), done.
+remote: Compressing objects: 100% (325/325), done.
+remote: Total 586 (delta 367), reused 454 (delta 235), pack-reused 0
+Receiving objects: 100% (586/586), 175.81 KiB | 2.28 MiB/s, done.
+Resolving deltas: 100% (367/367), done.
+Cloning https://github.com/pimotte/TutteLean.git
+Repo name: pimotte/TutteLean
+Cloning into '/raid/adarsh/repos/pimotte/TutteLean'...
+remote: Enumerating objects: 28, done.
+remote: Counting objects: 100% (28/28), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 28 (delta 14), reused 22 (delta 8), pack-reused 0
+Unpacking objects: 100% (28/28), 31.76 KiB | 855.00 KiB/s, done.
+Cloning https://github.com/linesthatinterlace/controlbits.git
+Repo name: linesthatinterlace/controlbits
+Cloning into '/raid/adarsh/repos/linesthatinterlace/controlbits'...
+remote: Enumerating objects: 253, done.
+remote: Counting objects: 100% (253/253), done.
+remote: Compressing objects: 100% (165/165), done.
+remote: Total 253 (delta 168), reused 161 (delta 76), pack-reused 0
+Receiving objects: 100% (253/253), 205.29 KiB | 2.36 MiB/s, done.
+Resolving deltas: 100% (168/168), done.
+Cloning https://github.com/lacker/kata.git
+Repo name: lacker/kata
+Cloning into '/raid/adarsh/repos/lacker/kata'...
+remote: Enumerating objects: 4182, done.
+remote: Counting objects: 100% (919/919), done.
+remote: Compressing objects: 100% (311/311), done.
+remote: Total 4182 (delta 657), reused 832 (delta 593), pack-reused 3263
+Receiving objects: 100% (4182/4182), 473.45 KiB | 4.38 MiB/s, done.
+Resolving deltas: 100% (2793/2793), done.
+Failed to clone lacker/kata because of HTTP Error 404: Not Found
+Cloning https://github.com/leanprover/leansat.git
+Repo name: leanprover/leansat
+Cloning into '/raid/adarsh/repos/leanprover/leansat'...
+remote: Enumerating objects: 2897, done.
+remote: Counting objects: 100% (1433/1433), done.
+remote: Compressing objects: 100% (595/595), done.
+remote: Total 2897 (delta 926), reused 1073 (delta 830), pack-reused 1464
+Receiving objects: 100% (2897/2897), 2.97 MiB | 13.93 MiB/s, done.
+Resolving deltas: 100% (1935/1935), done.
+2024-06-04 12:12:59.989 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/leanprover/leansat', commit='d53821bb94d45bdd4c5f4b469668a0af7c8a8b1c') relies on an unsupported Lean version: 81f5b07215b077f9b5be677f86
+89617512d3322c
+Cloning https://github.com/imbrem/debruijn-ssa.git
+Repo name: imbrem/debruijn-ssa
+Cloning into '/raid/adarsh/repos/imbrem/debruijn-ssa'...
+remote: Enumerating objects: 805, done.
+remote: Counting objects: 100% (158/158), done.
+remote: Compressing objects: 100% (107/107), done.
+remote: Total 805 (delta 95), reused 112 (delta 51), pack-reused 647
+Receiving objects: 100% (805/805), 186.14 KiB | 2.48 MiB/s, done.
+Resolving deltas: 100% (458/458), done.
+Found 10 repositories
+Processing /raid/adarsh/repos/sinhp/Poly
+From https://github.com/sinhp/Poly
+ * branch            master     -> FETCH_HEAD
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+From https://github.com/sinhp/Poly
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Switched to a new branch '_LeanCopilotBot'
+2024-06-04 12:13:01.655 | INFO     | __main__:retrieve_proof:415 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0-rc2\n'}
+2024-06-04 12:13:01.656 | INFO     | __main__:retrieve_proof:417 - lean version v: v4.8.0-rc2
+2024-06-04 12:13:01.656 | INFO     | __main__:retrieve_proof:418 - is supported: True
+2024-06-04 12:13:01.656 | INFO     | __main__:retrieve_proof:424 - lean path /home/adarsh/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-06-04 12:13:01.656 | INFO     | __main__:retrieve_proof:430 - Switched to Lean toolchain at: /home/adarsh/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-06-04 12:13:01.690 | INFO     | __main__:retrieve_proof:431 - lean --version: Lean (version 4.8.0-rc2, x86_64-unknown-linux-gnu, commit 873ef2d894af, Release)
+
+2024-06-04 12:13:01.690 | INFO     | __main__:retrieve_proof:432 - repo: LeanGitRepo(url='https://github.com/sinhp/Poly', commit='423c78c5543ab8e7970176661f7bb86f7adf6652')
+2024-06-04 12:13:01.874 | INFO     | lean_dojo.data_extraction.trace:get_traced_repo_path:79 - Tracing LeanGitRepo(url='https://github.com/sinhp/Poly', commit='423c78c5543ab8e7970176661f7bb86f7adf6652')
+2024-06-04 12:13:02.810 | INFO     | __main__:main:165 - Building Poly
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git to '././.lake/packages/mathlib'
+info: batteries: cloning https://github.com/leanprover-community/batteries to '././.lake/packages/batteries'
+info: Qq: cloning https://github.com/leanprover-community/quote4 to '././.lake/packages/Qq'
+info: aesop: cloning https://github.com/leanprover-community/aesop to '././.lake/packages/aesop'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4 to '././.lake/packages/proofwidgets'
+info: Cli: cloning https://github.com/leanprover/lean4-cli to '././.lake/packages/Cli'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph.git to '././.lake/packages/importGraph'
+⚠ [654/758] Built Poly.Type.Univariate
+warning: ././././Poly/Type/Univariate.lean:142:4: declaration uses 'sorry'
+warning: ././././Poly/Type/Univariate.lean:224:4: declaration uses 'sorry'
+warning: ././././Poly/Type/Univariate.lean:224:4: declaration uses 'sorry'
+warning: ././././Poly/Type/Univariate.lean:224:4: declaration uses 'sorry'
+warning: ././././Poly/Type/Univariate.lean:242:0: declaration uses 'sorry'
+⚠ [751/758] Built Poly.LCCC.LCCC
+warning: ././././Poly/LCCC/LCCC.lean:214:4: declaration uses 'sorry'
+warning: ././././Poly/LCCC/LCCC.lean:214:4: declaration uses 'sorry'
+warning: ././././Poly/LCCC/LCCC.lean:214:4: declaration uses 'sorry'
+warning: ././././Poly/LCCC/LCCC.lean:214:4: declaration uses 'sorry'
+warning: ././././Poly/LCCC/LCCC.lean:214:4: declaration uses 'sorry'
+info: ././././Poly/LCCC/LCCC.lean:256:0: hasBinaryProducts_of_hasTerminal_and_pullbacks.{v, u} (C : Type u) [Category.{v, u} C] [HasTerminal C]
+  [HasPullbacks C] : HasBinaryProducts C
+warning: ././././Poly/LCCC/LCCC.lean:273:9: declaration uses 'sorry'
+warning: ././././Poly/LCCC/LCCC.lean:273:9: declaration uses 'sorry'
+warning: ././././Poly/LCCC/LCCC.lean:280:9: declaration uses 'sorry'
+⚠ [756/758] Built Poly.Presheaves.presheaves
+warning: ././././Poly/Presheaves/presheaves.lean:120:4: declaration uses 'sorry'
+warning: ././././Poly/Presheaves/presheaves.lean:191:4: declaration uses 'sorry'
+Build completed successfully.
+2024-06-04 12:20:36.086 | INFO     | __main__:main:188 - Tracing Poly
+2024-06-04 12:20:36.134 | DEBUG    | __main__:main:193 - lake env lean --threads 32 --run ExtractData.lean
+ 25%|████████████████████████████████████████████████████████                                                                                                                                                            27%|████████████████████████████████████████
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████ | 1651/1658 [05:05<00:01,  6.32it/s]
+2024-06-04 12:25:53,918 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1653/1653 [01:25<00:00, 19.39it/s]
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-06-04 12:27:56.056 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='10d88b52fa8d717fa8e29af3abf0c3a2bf175497') relies on an unsupported Lean version: 41697dcf6cab7ec82723ba404f2b
+da7a4526bb2b
+2024-06-04 12:28:01.094 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/xubaiw/CMark.lean', commit='0077cbbaa92abf855fc1c0413e158ffd8195ec77') relies on an unsupported Lean version: 8fc1af650ad6d31cf766d9bc841
+19149330e7d4e
+2024-06-04 12:28:11.379 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='280d75fdfe7be8eb337be7f1bf8479b4aac09f71') relies on an unsupported Lean version: 0d7051497ea09b2b
+4a4ef608e371b8f317487c3c
+2024-06-04 12:28:15.088 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='39229f3630d734af7d9cfb5937ddc6b41d3aa6aa') relies on an unsupported Lean version: 216d2460e0adec8317fdeeb6f254
+3cb7442564fd
+2024-06-04 12:28:20.528 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/hargonix/LeanInk', commit='2447df5cc6e48eb965c3c3fba87e46d353b5e9f1') relies on an unsupported Lean version: f6cd6c069587cfe62dd68cb6330f
+9ad794a56724
+2024-06-04 12:28:40,635 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1653/1653 [00:33<00:00, 49.03it/s]
+2024-06-04 12:29:22.737 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /raid/adarsh/.cache/lean_dojo/sinhp-Poly-423c78c5543ab8e7970176661f7bb86f7adf6652/Poly
+2024-06-04 12:29:25,326 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1653/1653 [02:14<00:00, 12.30it/s]
+2024-06-04 12:31:59.978 | INFO     | __main__:retrieve_proof:445 - MAIN: about to split data
+2024-06-04 12:32:03.577 | INFO     | __main__:split_data:132 - 18158 theorems in total
+2024-06-04 12:32:03.577 | INFO     | __main__:split_randomly:81 - Splitting the theorems randomly
+2024-06-04 12:32:03.584 | INFO     | __main__:split_by_premise:94 - Splitting the theorems by premises
+2024-06-04 12:32:04.799 | INFO     | __main__:retrieve_proof:447 - MAIN: done splitting data
+2024-06-04 12:32:04.800 | INFO     | __main__:retrieve_proof:448 - MAIN: about to export corpus.jsonl
+2024-06-04 12:32:04.800 | INFO     | __main__:export_data:178 - Exporting data to path: /raid/adarsh/data/sinhp/Poly/423c78c5543ab8e7970176661f7bb86f7adf6652
+2024-06-04 12:32:12.263 | INFO     | __main__:export_premises:164 - 45157 theorems/definitions from 1653 files saved to /raid/adarsh/data/sinhp/Poly/423c78c5543ab8e7970176661f7bb86f7adf6652
+2024-06-04 12:32:12.264 | INFO     | __main__:retrieve_proof:450 - MAIN: exported corpus.jsonl
+2024-06-04 12:32:15.923 | INFO     | __main__:retrieve_proof:467 - 7541
+2024-06-04 12:32:15.927 | INFO     | __main__:retrieve_proof:481 - Found 0 sorries!
+2024-06-04 12:32:15.927 | INFO     | __main__:retrieve_proof:482 - MAIN: about to search for proofs
+2024-06-04 12:32:15.927 | INFO     | prover.proof_search:__init__:430 - Launching 5 workers with 1 GPUs.
+2024-06-04 12:32:18,585 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+2024-06-04 12:32:19.551 | INFO     | prover.proof_search:search_unordered:475 - before theorem search:
+2024-06-04 12:32:19.552 | INFO     | prover.proof_search:search_unordered:482 - after theorem search:
+2024-06-04 12:32:19.552 | INFO     | __main__:retrieve_proof:495 - MAIN: done searching for proofs
+Processing /raid/adarsh/repos/m4lvin/lean4-pdl
+From https://github.com/m4lvin/lean4-pdl
+ * branch            main       -> FETCH_HEAD
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+From https://github.com/m4lvin/lean4-pdl
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Switched to a new branch '_LeanCopilotBot'
+2024-06-04 12:32:20.317 | INFO     | __main__:retrieve_proof:415 - lean toolchain version: {'content': 'leanprover/lean4:v4.7.0\n'}
+2024-06-04 12:32:20.317 | INFO     | __main__:retrieve_proof:417 - lean version v: v4.7.0
+2024-06-04 12:32:20.317 | INFO     | __main__:retrieve_proof:418 - is supported: True
+2024-06-04 12:32:20.317 | INFO     | __main__:retrieve_proof:424 - lean path /home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-06-04 12:32:20.317 | INFO     | __main__:retrieve_proof:430 - Switched to Lean toolchain at: /home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-06-04 12:32:20.351 | INFO     | __main__:retrieve_proof:431 - lean --version: Lean (version 4.7.0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-06-04 12:32:20.351 | INFO     | __main__:retrieve_proof:432 - repo: LeanGitRepo(url='https://github.com/m4lvin/lean4-pdl', commit='d008f89d2ccf59dfdc8c429a826af2ce0339f921')
+2024-06-04 12:32:21.920 | INFO     | lean_dojo.data_extraction.trace:get_traced_repo_path:79 - Tracing LeanGitRepo(url='https://github.com/m4lvin/lean4-pdl', commit='d008f89d2ccf59dfdc8c429a826af2ce0339f921')
+2024-06-04 12:32:23.000 | INFO     | __main__:main:165 - Building lean4-pdl
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git to './.lake/packages/mathlib'
+info: std: cloning https://github.com/leanprover/std4 to './.lake/packages/std'
+info: Qq: cloning https://github.com/leanprover-community/quote4 to './.lake/packages/Qq'
+info: aesop: cloning https://github.com/leanprover-community/aesop to './.lake/packages/aesop'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4 to './.lake/packages/proofwidgets'
+info: Cli: cloning https://github.com/leanprover/lean4-cli to './.lake/packages/Cli'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph.git to './.lake/packages/importGraph'
+[0/2] Downloading proofwidgets cloud release
+[0/16] Building Std.Lean.Position
+[0/18] Building Std.CodeAction.Attr
+[0/24] Building Std.Lean.Meta.Basic
+[0/27] Building Std.WF
+[0/34] Building Std.Data.Nat.Basic
+[0/34] Building Std.Lean.NameMapAttribute
+[0/35] Building Std.Tactic.OpenPrivate
+[0/36] Building Std.Data.List.Basic
+[0/35] Building Std.Tactic.Lint.Basic
+[0/38] Building Std.Util.LibraryNote
+[0/46] Building Std.Tactic.Relation.Rfl
+[0/55] Building Std.Lean.Name
+[0/56] Building Std.Lean.Expr
+[0/74] Building Std.Classes.Order
+[0/76] Building Std.Classes.BEq
+[0/80] Building Std.Classes.SatisfiesM
+[0/82] Building Std.Control.ForInStep.Basic
+[0/85] Building Std.Control.Lemmas
+[0/89] Building Std.Data.List.Init.Attach
+[0/89] Building Std.Data.MLList.Basic
+[0/97] Building Std.Data.Fin.Basic
+[0/117] Building Std.Tactic.SeqFocus
+[0/124] Building Std.Data.Char
+[0/137] Building Std.Data.DList
+[0/137] Building Std.Data.LazyList
+[0/141] Building Std.Util.ProofWanted
+[0/145] Building Std.Data.UInt
+[0/145] Building Std.Data.Sum.Basic
+[1/150] Building Std.Lean.Delaborator
+[1/153] Building Std.Lean.Except
+[1/161] Building Std.Lean.TagAttribute
+[1/167] Building Std.Lean.PersistentHashSet
+[1/167] Building Std.Lean.NameMap
+[1/167] Building Std.Lean.MonadBacktrack
+[2/172] Building Std.Lean.SMap
+[2/180] Building Std.Tactic.Unreachable
+[2/180] Building Std.Lean.Syntax
+[2/183] Building Std.Tactic.Exact
+[2/185] Building Std.Tactic.Instances
+[2/248] Building Std.Util.ExtendedBinder
+[2/250] Building Std.Util.CheckTactic
+[2/250] Building Std.Test.Internal.DummyLabelAttr
+[3/250] Building Std.Control.ForInStep.Lemmas
+[3/250] Building Std.Lean.Float
+[3/250] Building Std.Util.Pickle
+[3/250] Building Std.Tactic.SqueezeScope
+[3/250] Building Std.Tactic.Where
+[3/250] Building Std.Tactic.Congr
+[3/250] Building Std.Lean.PersistentHashMap
+[3/250] Building Std.Lean.Meta.Expr
+[3/250] Building Std.Lean.Meta.Inaccessible
+[3/250] Building Std.Tactic.NoMatch
+[3/250] Building Std.Tactic.Classical
+[3/250] Building Std.Lean.HashSet
+[3/250] Building Std.Lean.IO.Process
+[3/250] Building Std.Lean.HashMap
+[3/250] Building Std.Lean.Util.Path
+[3/250] Building Std.Tactic.Case
+[4/250] Unpacking proofwidgets cloud release
+[16/250] Building Std.Classes.Cast
+[16/250] Building Std.Data.Array.Basic
+[18/250] Building Std.Data.PairingHeap
+[29/250] Building Std.Tactic.PrintDependents
+[32/250] Building Std.Tactic.FalseOrByContra
+[32/250] Building Std.Lean.Meta.Clear
+[32/250] Building Std.Lean.Meta.InstantiateMVars
+[32/250] Building Std.Data.Sum.Lemmas
+[32/250] Building Std.Tactic.Init
+[32/250] Building Std.Lean.Meta.SavedState
+[32/250] Building Std.Linter.UnreachableTactic
+[32/250] Building Std.Lean.Meta.AssertHypotheses
+[36/250] Building Std.Control.ForInStep
+[41/250] Building Std.Lean.AttributeExtra
+[41/250] Building Std.Tactic.Lint.TypeClass
+[43/250] Building Std.CodeAction.Misc
+[43/250] Building Std.Lean.Json
+[43/250] Building Std.CodeAction.Basic
+[44/250] Building Std.Tactic.Lint.Misc
+[48/250] Building Mathlib.Tactic.SimpRw
+[48/250] Building Mathlib.Tactic.Lemma
+[48/250] Building Mathlib.Util.WithWeakNamespace
+[48/250] Building Mathlib.Tactic.Substs
+[48/250] Building Mathlib.Data.Array.Defs
+[49/250] Building Mathlib.Lean.EnvExtension
+[49/250] Building Mathlib.Util.MemoFix
+[49/250] Building Mathlib.Tactic.PPWithUniv
+[49/250] Building Mathlib.Tactic.Coe
+[49/250] Building Mathlib.Tactic.ExtendDoc
+[49/250] Building Mathlib.Mathport.Attributes
+[49/250] Building Mathlib.Tactic.Attr.Register
+[49/250] Building Mathlib.Lean.Expr.Traverse
+[49/250] Building Mathlib.Lean.Elab.Term
+[49/250] Building Mathlib.Init.Data.Nat.Notation
+[49/250] Building Mathlib.Tactic.Eqns
+[49/250] Building Mathlib.Tactic.Conv
+[49/250] Building Mathlib.Tactic.ProjectionNotation
+[49/250] Building Std.Lean.Meta.Simp
+[49/250] Building Mathlib.Tactic.Relation.Rfl
+[49/250] Building Mathlib.Util.Tactic
+[49/250] Building Mathlib.Mathport.Rename
+[49/250] Building Mathlib.Tactic.Spread
+[49/250] Building Mathlib.Tactic.TypeStar
+[49/250] Building Mathlib.Util.CompileInductive
+[49/250] Building Mathlib.Lean.PrettyPrinter.Delaborator
+[49/250] Building Std.Tactic.Lint.Simp
+[49/250] Building Std.Tactic.Lint.Frontend
+[49/250] Building Mathlib.Lean.Meta.Simp
+[73/250] Building Std.Data.Array.Monadic
+[73/250] Building Std.Data.Sum
+[75/250] Building Mathlib.Lean.Expr.ReplaceRec
+[80/250] Building Std.Linter.UnnecessarySeqFocus
+[80/250] Building Mathlib.Tactic.ScopedNS
+[82/250] Building Std.Data.MLList.Heartbeats
+[87/280] Building Mathlib.Util.AssertExists
+[87/292] Building Aesop.Nanos
+[87/292] Building Aesop.Util.UnionFind
+[87/292] Building Aesop.Check
+[87/292] Building Aesop.Percent
+[87/293] Building Aesop.Options.Public
+[87/316] Building Aesop.ElabM
+[87/317] Building Aesop.Util.EqualUpToIds
+[87/325] Building Aesop.RuleSet.Name
+[87/325] Building Aesop.Frontend.Basic
+[91/350] Building Aesop.Exception
+[91/354] Building Mathlib.Tactic.Inhabit
+[91/361] Building Mathlib.Init.Data.Sigma.Basic
+[93/381] Building Qq.ForLean.ReduceEval
+[93/386] Building Qq.ForLean.ToExpr
+[93/398] Building Qq.Typ
+[93/399] Building Mathlib.Tactic.ApplyWith
+[93/399] Building Mathlib.Tactic.Clear!
+[93/399] Building Qq.ForLean.Do
+[93/399] Building Mathlib.Tactic.CasesM
+[93/399] Building Mathlib.Tactic.Check
+[93/399] Building Mathlib.Tactic.ClearExcept
+[93/399] Building ImportGraph.RequiredModules
+[93/400] Building Qq.SortLocalDecls
+[93/399] Building Mathlib.Lean.Meta.Basic
+[93/402] Building Mathlib.Tactic.Clear_
+[93/437] Building Mathlib.Tactic.Constructor
+[93/450] Building Mathlib.Tactic.NthRewrite
+[93/452] Building Mathlib.Tactic.Trace
+[93/452] Building Mathlib.Tactic.GuardGoalNums
+[93/452] Building Mathlib.Tactic.Existsi
+[93/452] Building Mathlib.Tactic.Rename
+[93/452] Building Mathlib.Tactic.FailIfNoProgress
+[93/452] Building Mathlib.Tactic.HelpCmd
+[93/452] Building Mathlib.Tactic.InferParam
+[93/452] Building Mathlib.Tactic.Recover
+[93/452] Building Mathlib.Tactic.GuardHypNums
+[93/452] Building Mathlib.Tactic.Observe
+[93/453] Building Mathlib.Tactic.ExtractGoal
+[93/453] Building Mathlib.Tactic.HigherOrder
+[93/453] Building Mathlib.Util.WhatsNew
+[93/453] Building Mathlib.Tactic.Set
+[93/453] Building Mathlib.Tactic.TypeCheck
+[93/453] Building Mathlib.Tactic.UnsetOption
+[93/453] Building Mathlib.Tactic.SwapVar
+[93/453] Building Mathlib.Tactic.SuccessIfFailWithMsg
+[93/453] Building Mathlib.Lean.Meta.DiscrTree
+[93/453] Building Mathlib.Tactic.Widget.SelectInsertParamsClass
+[93/454] Building Mathlib.Tactic.SudoSetOption
+[93/454] Building Mathlib.Tactic.Variable
+[93/454] Building Mathlib.Tactic.SimpIntro
+[93/454] Building ProofWidgets.Compat
+[93/465] Building Mathlib.Util.CountHeartbeats
+[95/498] Building Mathlib.Util.Delaborators
+[97/514] Building Mathlib.Tactic.Monotonicity.Attr
+[99/541] Building Aesop.Constants
+[109/557] Building Std.CodeAction.Deprecated
+[120/562] Building Aesop.RuleTac.ElabRuleTerm
+[126/576] Building Mathlib.Tactic.ApplyAt
+[126/576] Building Aesop.Options.Internal
+[126/576] Building Mathlib.Init.Data.Fin.Basic
+[135/590] Building Mathlib.Tactic.ApplyCongr
+[137/595] Building Mathlib.Init.Quot
+[138/595] Building ImportGraph.Imports
+[138/595] Building Std.Linter
+[138/595] Building Std.Lean.Util.EnvSearch
+[139/595] Building Mathlib.Init.Data.Ordering.Basic
+[139/595] Building Mathlib.Init.Control.Combinators
+[139/610] Building Qq.Macro
+[139/610] Building Mathlib.Tactic.ToLevel
+[139/610] Building Mathlib.Data.Option.Defs
+[140/610] Building Std.Data.RBMap.Basic
+[141/610] Building Mathlib.Init.Set
+[141/610] Building Std.Control.Nondet.Basic
+[141/610] Building Mathlib.Data.Bracket
+[144/631] Building Mathlib.Control.ULift
+[148/638] Building ProofWidgets.Component.Basic
+[148/638] Building Aesop.Options
+[148/640] Building ProofWidgets.Cancellable
+[155/656] Building Std.Tactic.PrintPrefix
+[156/656] Building Std.Tactic.Basic
+[159/668] Building Std.CodeAction
+[163/703] Building Mathlib.Tactic.HaveI
+[163/736] Building Mathlib.Util.AtomM
+[167/758] Building Std.Tactic.Lint
+[170/758] Building Mathlib.Tactic.DeriveToExpr
+[172/758] Building Mathlib.Mathport.Notation
+[173/758] Building Mathlib.Tactic.GCongr.ForwardAttr
+[178/758] Building Std.Tactic.Alias
+[180/758] Building ProofWidgets.Data.Html
+[180/758] Building ProofWidgets.Component.MakeEditLink
+[182/758] Building Mathlib.Tactic.Simps.NotationClass
+[183/758] Building Mathlib.Tactic.Lint
+[188/758] Building Mathlib.Tactic.Hint
+[199/758] Building Std.Data.Option.Lemmas
+[199/758] Building Std.Logic
+[199/758] Building Std.Data.Bool
+[199/758] Building Std.Data.Nat.Lemmas
+[201/758] Building Std.Data.Option
+[202/758] Building Mathlib.Tactic.Attr.Core
+[202/758] Building Mathlib.Init.Data.Quot
+[202/758] Building Mathlib.Tactic.Use
+[205/758] Building ProofWidgets.Component.OfRpcMethod
+[208/758] Building Std.Data.Array.Match
+[208/758] Building Std.Data.Array.Merge
+[208/758] Building Std.Data.Nat.Gcd
+[208/758] Building Std.Data.Int.Order
+[208/758] Building Std.Data.BinomialHeap.Basic
+[209/758] Building Mathlib.Tactic.ToExpr
+[210/758] Building Std.Data.RBMap.WF
+[212/758] Building Mathlib.Tactic.Widget.SelectPanelUtils
+[213/758] Building Std.Data.String.Basic
+[214/758] Building Mathlib.Tactic.FBinop
+[215/758] Building Std.Data.Nat
+[219/758] Building Mathlib.Init.Data.Int.Basic
+[219/758] Building Std.Data.Int.DivMod
+[220/758] Building Std.Lean.Meta.UnusedNames
+[222/758] Building Std.Tactic.PermuteGoals
+[222/758] Building Mathlib.Init.Data.List.Basic
+[222/758] Building Mathlib.Data.String.Defs
+[222/758] Building Std.Data.AssocList
+[222/758] Building Mathlib.Lean.Meta
+[222/758] Building Std.Data.List.Lemmas
+[224/758] Building Aesop.Util.UnorderedArraySet
+[224/758] Building Std.Lean.Meta.DiscrTree
+[226/758] Building Mathlib.Tactic.Widget.Conv
+[226/758] Building Mathlib.Tactic.Widget.Calc
+[229/758] Building Std.Util.Cache
+[230/758] Building Mathlib.Data.SProd
+[231/758] Building Mathlib.Lean.Elab.Tactic.Basic
+[231/758] Building Mathlib.Lean.Meta.CongrTheorems
+[234/758] Building Mathlib.Tactic.Find
+[235/758] Building Std.Data.HashMap.Basic
+[237/758] Building Mathlib.Tactic.Relation.Trans
+[238/758] Building Std.Data.Int.Gcd
+[238/758] Building Std.Data.Rat.Basic
+[240/758] Building Std.Data.Int.Lemmas
+[242/758] Building Std.Data.Int
+[243/758] Building Qq.Delab
+[244/758] Building Mathlib.Data.MLList.Dedup
+[244/758] Building Mathlib.Data.HashMap
+[244/758] Building Mathlib.Lean.Name
+[247/758] Building Mathlib.Tactic.MkIffOfInductiveProp
+[248/758] Building Std.Classes.RatCast
+[248/758] Building Mathlib.Data.Rat.Init
+[248/758] Building Std.Data.Rat.Lemmas
+[248/758] Building Mathlib.Lean.Expr.Basic
+[253/758] Building Qq.MetaM
+[254/758] Building Std.Data.BinomialHeap.Lemmas
+[255/758] Building Mathlib.Init.Core
+[255/758] Building Mathlib.Init.Logic
+[256/758] Building Qq.AssertInstancesCommute
+[256/758] Building Qq.Match
+[257/758] Building Mathlib.Tactic.RenameBVar
+[257/758] Building Mathlib.Tactic.Cases
+[257/758] Building Mathlib.Tactic.Core
+[257/758] Building Mathlib.Tactic.GeneralizeProofs
+[257/758] Building Mathlib.Tactic.Simps.Basic
+[259/758] Building Std.Data.BinomialHeap
+[263/758] Building Std.Data.Rat
+[267/758] Building Mathlib.Init.Algebra.Classes
+[267/758] Building Mathlib.Init.Data.Bool.Lemmas
+[268/758] Building Mathlib.Tactic.Propose
+[268/758] Building Mathlib.Tactic.SplitIfs
+[268/758] Building Mathlib.Tactic.WLOG
+[274/758] Building Std.Data.RBMap.Alter
+[275/758] Building Mathlib.Init.Order.Defs
+[276/758] Building Qq
+[276/758] Building Mathlib.Tactic.Says
+[277/758] Building Mathlib.Tactic.ToAdditive
+[278/758] Building Mathlib.Util.Qq
+[278/758] Building Mathlib.Util.SynthesizeUsing
+[279/758] Building Mathlib.Init.Data.Int.Order
+[279/758] Building Mathlib.Init.Order.LinearOrder
+[279/758] Building Mathlib.Tactic.GCongr.Core
+[285/758] Building Mathlib.Init.Data.List.Instances
+[285/758] Building Mathlib.Init.Data.List.Lemmas
+[285/758] Building Std.Lean.System.IO
+[285/758] Building Std.Data.Range.Lemmas
+[285/758] Building Std.Data.List.Count
+[285/758] Building Std.Data.String.Lemmas
+[285/758] Building Std.Data.Array.Lemmas
+[287/758] Building Std.Data.MLList.IO
+[290/758] Building Std.Data.MLList
+[293/758] Building Std.Data.Range
+[295/758] Building Std.Data.RBMap.Lemmas
+[296/758] Building Mathlib.Init.ZeroOne
+[297/758] Building Mathlib.Init.Data.Nat.Basic
+[297/758] Building Mathlib.Algebra.Group.Defs
+[298/758] Building Mathlib.Init.Data.Nat.Lemmas
+[300/758] Building Mathlib.Data.Nat.Cast.Defs
+[300/758] Building Mathlib.Algebra.Invertible.Defs
+[300/758] Building Mathlib.Algebra.Group.Semiconj.Defs
+[303/758] Building Mathlib.Data.Int.Cast.Defs
+[304/758] Building Std.Data.RBMap
+[307/758] Building Std.Data.String
+[308/758] Building Aesop.Util.Basic
+[309/758] Building Std.Data.Fin.Lemmas
+[309/758] Building Std.Data.ByteArray
+[309/758] Building Std.Data.HashMap.Lemmas
+[309/758] Building Std.Data.HashMap.WF
+[309/758] Building Std.Data.Array
+[309/758] Building Std.Data.UnionFind.Basic
+[312/758] Building Aesop.Rule.Name
+[312/758] Building Aesop.Tracing
+[312/758] Building Aesop.Util.Tactic
+[313/758] Building Std.Data.List.Pairwise
+[313/758] Building Std.Data.Fin
+[313/758] Building Std.Data.BitVec.Lemmas
+[315/758] Building Std.Data.BitVec
+[319/758] Building Aesop.Stats.Basic
+[319/758] Building Aesop.RulePattern
+[320/758] Building Aesop.Script
+[321/758] Building Std.Data.List.Perm
+[322/758] Building Aesop.Stats.Extension
+[323/758] Building Aesop.Stats.Report
+[324/758] Building Aesop.Index.Basic
+[327/758] Building Aesop.RuleTac.Basic
+[328/758] Building Aesop.Rule.Basic
+[328/758] Building Aesop.RuleTac.Apply
+[328/758] Building Aesop.RuleTac.Forward
+[328/758] Building Aesop.RuleTac.Tactic
+[328/758] Building Aesop.RuleTac.Preprocess
+[328/758] Building Aesop.RuleTac.Cases
+[329/758] Building Std.Data.HashMap
+[331/758] Building Aesop.Search.Expansion.Basic
+[331/758] Building Aesop.Index
+[336/758] Building Std.Data.UnionFind.Lemmas
+[338/758] Building Std.Data.List
+[339/758] Building Aesop.RuleTac
+[342/758] Building Aesop.Rule
+[343/758] Building Aesop.RuleSet.Member
+[343/758] Building Aesop.Tree.UnsafeQueue
+[344/758] Building Aesop.RuleSet.Filter
+[344/758] Building Aesop.Builder.Basic
+[345/758] Building Aesop.Tree.Data
+[346/758] Building Std.Data.UnionFind
+[347/758] Building Aesop.RuleSet
+[348/758] Building Aesop.Builder.Unfold
+[348/758] Building Aesop.Builder.Cases
+[348/758] Building Aesop.Builder.Tactic
+[348/758] Building Aesop.Builder.Forward
+[348/758] Building Aesop.Builder.Apply
+[348/758] Building Aesop.Builder.NormSimp
+[349/758] Building Std
+[350/758] Building Mathlib.Tactic.Basic
+[352/758] Building Aesop.Builder.Constructors
+[356/758] Building Aesop.Tree.RunMetaM
+[356/758] Building Aesop.Tree.Traversal
+[357/758] Building Aesop.Builder.Default
+[359/758] Building Aesop.Tree.TreeM
+[359/758] Building Aesop.Tree.Tracing
+[360/758] Building Mathlib.Tactic.DefEqTransformations
+[360/758] Building Mathlib.Tactic.RSuffices
+[360/758] Building Mathlib.Tactic.ExtractLets
+[360/758] Building Mathlib.Init.Function
+[360/758] Building Mathlib.Tactic.Lift
+[360/758] Building Mathlib.Order.Notation
+[361/758] Building Aesop.Tree.State
+[362/758] Building Aesop.Builder
+[365/758] Building Aesop.Tree.Free
+[365/758] Building Aesop.Tree.ExtractScript
+[365/758] Building Aesop.Tree.AddRapp
+[366/758] Building Aesop.Search.Expansion.Simp
+[366/758] Building Aesop.Frontend.Extension.Init
+[366/758] Building Aesop.Frontend.RuleExpr
+[368/758] Building Mathlib.Logic.Relator
+[368/758] Building Mathlib.Control.Basic
+[368/758] Building Mathlib.Logic.Nontrivial.Defs
+[368/758] Building Mathlib.Data.Prod.PProd
+[368/758] Building Mathlib.Data.Option.NAry
+[368/758] Building Mathlib.Data.Bool.Basic
+[368/758] Building Mathlib.Logic.Nonempty
+[368/758] Building Mathlib.Logic.Basic
+[369/758] Building Aesop.Tree.Check
+[372/758] Building Aesop.Tree.ExtractProof
+[373/758] Building Aesop.Frontend.Extension
+[382/758] Building Mathlib.Tactic.Rewrites
+[382/758] Building Mathlib.Control.Functor
+[388/758] Building Mathlib.Control.Traversable.Basic
+[388/758] Building Mathlib.Control.Applicative
+[388/758] Building Mathlib.Data.List.Defs
+[389/758] Building Aesop.Tree
+[390/758] Building Mathlib.Tactic.Tauto
+[390/758] Building Mathlib.Algebra.NeZero
+[390/758] Building Mathlib.Tactic.PushNeg
+[390/758] Building Mathlib.Logic.Function.Basic
+[390/758] Building Mathlib.Tactic.Congr!
+[391/758] Building Aesop.Search.Queue.Class
+[393/758] Building Aesop.Search.Queue
+[393/758] Building Aesop.Search.SearchM
+[394/758] Building Mathlib.Data.Nat.Cast.NeZero
+[395/758] Building Aesop.Frontend.Attribute
+[400/758] Building Aesop.BuiltinRules.Subst
+[400/758] Building Aesop.BuiltinRules.DestructProducts
+[400/758] Building Aesop.Frontend.Tactic
+[400/758] Building Aesop.BuiltinRules.Split
+[400/758] Building Aesop.Frontend.Command
+[400/758] Building Aesop.BuiltinRules.Ext
+[400/758] Building Aesop.BuiltinRules.ApplyHyps
+[400/758] Building Aesop.BuiltinRules.Assumption
+[400/758] Building Aesop.BuiltinRules.Intros
+[401/758] Building Aesop.Search.RuleSelection
+[407/758] Building Aesop.Search.Expansion.Norm
+[412/758] Building Mathlib.Data.Subtype
+[412/758] Building Mathlib.Logic.IsEmpty
+[412/758] Building Mathlib.Tactic.Choose
+[412/758] Building Mathlib.Data.Sum.Basic
+[412/758] Building Mathlib.Logic.Function.Conjugate
+[412/758] Building Mathlib.Algebra.GroupWithZero.Defs
+[412/758] Building Mathlib.Data.Sigma.Basic
+[412/758] Building Mathlib.Data.FunLike.Basic
+[412/758] Building Mathlib.Algebra.CharZero.Defs
+[412/758] Building Mathlib.Data.Prod.Basic
+[412/758] Building Mathlib.Logic.Relation
+[414/758] Building Aesop.Frontend
+[415/758] Building Mathlib.Logic.Unique
+[416/758] Building Mathlib.Data.FunLike.Embedding
+[417/758] Building Mathlib.Logic.Function.Iterate
+[418/758] Building Mathlib.Tactic.ByContra
+[418/758] Building Mathlib.Tactic.Contrapose
+[418/758] Building Mathlib.Data.Nat.Defs
+[419/758] Building Aesop.BuiltinRules
+[421/758] Building Mathlib.Tactic.IrreducibleDef
+[421/758] Building Mathlib.Data.Set.Defs
+[422/758] Building Mathlib.Algebra.GroupWithZero.NeZero
+[422/758] Building Mathlib.Algebra.Ring.Defs
+[424/758] Building Mathlib.Data.FunLike.Equiv
+[425/758] Building Mathlib.Tactic.Convert
+[425/758] Building Mathlib.Tactic.TermCongr
+[428/758] Building Mathlib.Data.Quot
+[431/758] Building Mathlib.Logic.Nontrivial.Basic
+[431/758] Building Mathlib.Algebra.Group.Pi.Basic
+[434/758] Building Mathlib.Algebra.Invertible.GroupWithZero
+[437/758] Building Mathlib.Lean.Expr.ExtraRecognizers
+[437/758] Building Mathlib.Order.SetNotation
+[438/758] Building Mathlib.Tactic.Nontriviality.Core
+[440/758] Building Aesop.Search.Expansion
+[440/758] Building Mathlib.Data.Int.Defs
+[440/758] Building Mathlib.Order.Basic
+[442/758] Building Mathlib.Init.Classical
+[445/758] Building Mathlib.Algebra.Ring.Semiconj
+[445/758] Building Mathlib.Algebra.Field.Defs
+[446/758] Building Mathlib.Tactic.Nontriviality
+[448/758] Building Mathlib.Logic.Equiv.Defs
+[452/758] Building Mathlib.Algebra.Group.Hom.Defs
+[453/758] Building Aesop.Search.ExpandSafePrefix
+[454/758] Building Mathlib.Tactic.Congrm
+[455/758] Building Mathlib.Tactic.Widget.Congrm
+[456/758] Building Mathlib.Data.Finite.Defs
+[456/758] Building Mathlib.Control.EquivFunctor
+[456/758] Building Mathlib.Algebra.Opposites
+[456/758] Building Mathlib.Logic.Equiv.Basic
+[457/758] Building Aesop.Search.Main
+[459/758] Building Mathlib.Order.Synonym
+[459/758] Building Mathlib.Order.ULift
+[459/758] Building Mathlib.Data.List.ReduceOption
+[459/758] Building Mathlib.Order.RelClasses
+[459/758] Building Mathlib.Data.PNat.Defs
+[459/758] Building Mathlib.Algebra.Order.ZeroLEOne
+[463/758] Building Mathlib.Algebra.Group.Commute.Defs
+[466/758] Building Mathlib.Algebra.Group.OrderSynonym
+[466/758] Building Mathlib.Order.Compare
+[466/758] Building Mathlib.Order.Max
+[474/758] Building Mathlib.Order.Monotone.Basic
+[475/758] Building Mathlib.Algebra.Group.TypeTags
+[476/758] Building Mathlib.Data.Nat.Basic
+[477/758] Building Mathlib.Order.Lattice
+[479/758] Building Mathlib.Data.ULift
+[481/758] Building Aesop.Main
+[482/758] Building Mathlib.Order.MinMax
+[482/758] Building Mathlib.Order.BoundedOrder
+[483/758] Building Aesop
+[484/758] Building Mathlib.Data.Finset.Attr
+[484/758] Building Mathlib.Data.Option.Basic
+[484/758] Building Mathlib.Algebra.Group.Basic
+[484/758] Building Mathlib.Tactic.Common
+[486/758] Building Mathlib.Data.Nat.Factorial.Basic
+[486/758] Building Mathlib.Logic.Pairwise
+[486/758] Building Mathlib.Algebra.Group.WithOne.Defs
+[489/758] Building Mathlib.Logic.Equiv.Option
+[489/758] Building Mathlib.Logic.Embedding.Basic
+[489/758] Building Mathlib.Data.List.GetD
+[489/758] Building Mathlib.Data.List.Basic
+[490/758] Building Pdl.Syntax
+[490/758] Building Mathlib.Order.Disjoint
+[490/758] Building Mathlib.Order.WithBot
+[493/758] Building Mathlib.Data.Nat.Choose.Basic
+[494/758] Building Mathlib.GroupTheory.GroupAction.Defs
+[494/758] Building Mathlib.Order.RelIso.Basic
+[496/758] Building Mathlib.Order.PropInstances
+[498/758] Building Mathlib.Order.Heyting.Basic
+[499/758] Building Mathlib.Algebra.Group.Semiconj.Basic
+[499/758] Building Mathlib.Algebra.Ring.Basic
+[499/758] Building Mathlib.Algebra.Group.Hom.Basic
+[499/758] Building Mathlib.Algebra.CovariantAndContravariant
+[499/758] Building Mathlib.Algebra.Group.Embedding
+[499/758] Building Mathlib.Data.Nat.Bits
+[499/758] Building Mathlib.Data.Int.Cast.Basic
+[499/758] Building Mathlib.Algebra.GroupWithZero.Basic
+[501/758] Building Mathlib.Algebra.Group.Commute.Basic
+[503/758] Building Mathlib.Order.Hom.Basic
+[504/758] Building Mathlib.Algebra.Order.Ring.Lemmas
+[504/758] Building Mathlib.Algebra.Order.Monoid.Lemmas
+[505/758] Building Mathlib.Data.Int.Basic
+[505/758] Building Mathlib.Algebra.Group.InjSurj
+[505/758] Building Mathlib.Tactic.NormNum.Result
+[505/758] Building Mathlib.Tactic.Zify
+[507/758] Building Mathlib.Algebra.GroupPower.Basic
+[508/758] Building Mathlib.Algebra.Group.Equiv.Basic
+[509/758] Building Mathlib.Data.Num.Basic
+[514/758] Building Mathlib.Data.Tree
+[515/758] Building Mathlib.Tactic.NormNum.Core
+[517/758] Building Mathlib.Algebra.Divisibility.Basic
+[517/758] Building Mathlib.Algebra.GroupPower.Hom
+[517/758] Building Mathlib.Algebra.Group.Hom.Instances
+[517/758] Building Mathlib.Algebra.Group.Units
+[518/758] Building Mathlib.Algebra.GroupWithZero.InjSurj
+[521/758] Building Mathlib.Algebra.GroupWithZero.Hom
+[522/758] Building Mathlib.Algebra.Ring.Divisibility.Basic
+[523/758] Building Mathlib.Algebra.Order.Monoid.NatCast
+[523/758] Building Mathlib.Algebra.Order.Monoid.MinMax
+[523/758] Building Mathlib.Algebra.Order.Monoid.Defs
+[523/758] Building Mathlib.Algebra.Order.Sub.Defs
+[524/758] Building Mathlib.Algebra.Ring.InjSurj
+[525/758] Building Mathlib.Tactic.ApplyFun
+[525/758] Building Mathlib.Order.Antisymmetrization
+[525/758] Building Mathlib.Order.Hom.Bounded
+[527/758] Building Mathlib.Order.BooleanAlgebra
+[528/758] Building Mathlib.Algebra.Ring.Hom.Defs
+[531/758] Building Mathlib.Algebra.Order.Monoid.Basic
+[531/758] Building Mathlib.Algebra.Order.Monoid.OrderDual
+[531/758] Building Mathlib.Algebra.Order.Monoid.Canonical.Defs
+[534/758] Building Mathlib.Algebra.Order.Group.Defs
+[535/758] Building Mathlib.Algebra.GroupPower.CovariantClass
+[537/758] Building Mathlib.Data.List.ProdSigma
+[537/758] Building Mathlib.Data.List.Pairwise
+[537/758] Building Mathlib.Data.List.Infix
+[537/758] Building Mathlib.Data.List.Count
+[537/758] Building Mathlib.Data.List.Lattice
+[537/758] Building Mathlib.Data.List.InsertNth
+[537/758] Building Mathlib.Data.List.Lex
+[544/758] Building Mathlib.Algebra.Order.Monoid.TypeTags
+[544/758] Building Mathlib.Algebra.Order.Sub.Canonical
+[544/758] Building Mathlib.Algebra.Order.Monoid.WithTop
+[550/758] Building Mathlib.Data.List.Forall2
+[551/758] Building Mathlib.Data.Nat.Cast.Basic
+[552/758] Building Mathlib.Algebra.Order.Monoid.Units
+[552/758] Building Mathlib.Data.Nat.Units
+[552/758] Building Mathlib.Algebra.Group.Semiconj.Units
+[552/758] Building Mathlib.Algebra.Group.Units.Hom
+[552/758] Building Mathlib.Algebra.Divisibility.Units
+[552/758] Building Mathlib.Algebra.Regular.Basic
+[552/758] Building Mathlib.GroupTheory.GroupAction.Units
+[552/758] Building Mathlib.Algebra.GroupWithZero.Units.Basic
+[552/758] Building Mathlib.Algebra.Group.Opposite
+[556/758] Building Pdl.DagSyntax
+[557/758] Building Mathlib.Algebra.Group.Commute.Units
+[559/758] Building Mathlib.Order.SymmDiff
+[560/758] Building Mathlib.Algebra.Ring.Regular
+[562/758] Building Mathlib.Algebra.Group.Units.Equiv
+[562/758] Building Mathlib.Algebra.Ring.Units
+[568/758] Building Mathlib.Data.List.Zip
+[568/758] Building Mathlib.Data.List.Chain
+[570/758] Building Mathlib.Data.Int.Cast.Field
+[570/758] Building Mathlib.Algebra.GroupWithZero.Semiconj
+[570/758] Building Mathlib.Algebra.GroupWithZero.Divisibility
+[570/758] Building Mathlib.Algebra.Invertible.Basic
+[571/758] Building Mathlib.Algebra.Ring.Commute
+[572/758] Building Mathlib.Algebra.GroupWithZero.Units.Equiv
+[574/758] Building Mathlib.Algebra.GroupWithZero.Commute
+[576/758] Building Mathlib.Algebra.Order.Group.Units
+[576/758] Building Mathlib.Algebra.Order.Group.OrderIso
+[577/758] Building Mathlib.Algebra.Order.Ring.Defs
+[578/758] Building Mathlib.Algebra.GroupWithZero.Units.Lemmas
+[579/758] Building Mathlib.Data.Nat.Cast.Commute
+[579/758] Building Mathlib.Algebra.GroupPower.Ring
+[580/758] Building Mathlib.GroupTheory.GroupAction.Opposite
+[580/758] Building Mathlib.Algebra.Group.Prod
+[581/758] Building Mathlib.Algebra.Order.Monoid.WithZero
+[584/758] Building Mathlib.Algebra.Field.Basic
+[585/758] Building Mathlib.Algebra.Order.Group.Lattice
+[586/758] Building Mathlib.Tactic.NormNum.Basic
+[587/758] Building Mathlib.Order.Hom.Lattice
+[587/758] Building Mathlib.Data.Set.Basic
+[590/758] Building Mathlib.Algebra.GroupPower.IterateHom
+[591/758] Building Mathlib.Algebra.Order.Group.Abs
+[599/758] Building Mathlib.Algebra.Ring.Hom.Basic
+[599/758] Building Mathlib.Order.WellFounded
+[599/758] Building Mathlib.Data.Set.Image
+[599/758] Building Mathlib.Data.Set.Intervals.Basic
+[600/758] Building Mathlib.Algebra.Order.Field.Defs
+[600/758] Building Mathlib.Algebra.Order.Positive.Ring
+[600/758] Building Mathlib.Algebra.Order.Ring.Canonical
+[600/758] Building Mathlib.Algebra.Order.Ring.CharZero
+[602/758] Building Mathlib.Data.Pi.Lex
+[604/758] Building Mathlib.Data.Nat.Order.Basic
+[605/758] Building Mathlib.Data.Nat.Cast.Order
+[605/758] Building Mathlib.Data.Vector
+[605/758] Building Mathlib.Data.Nat.Order.Lemmas
+[605/758] Building Mathlib.Data.Int.Order.Basic
+[606/758] Building Mathlib.Data.PNat.Basic
+[607/758] Building Mathlib.Tactic.CancelDenoms.Core
+[611/758] Building Mathlib.Logic.Embedding.Set
+[611/758] Building Mathlib.Data.Bool.Set
+[611/758] Building Mathlib.Data.Set.List
+[611/758] Building Mathlib.Data.Nat.Set
+[611/758] Building Mathlib.Order.Directed
+[611/758] Building Mathlib.Data.Set.Prod
+[613/758] Building Mathlib.Data.Rat.Defs
+[618/758] Building Mathlib.Algebra.Order.Invertible
+[618/758] Building Mathlib.Tactic.Linarith.Lemmas
+[618/758] Building Mathlib.Data.Int.Dvd.Basic
+[618/758] Building Mathlib.Data.Int.Cast.Lemmas
+[620/758] Building Mathlib.Data.Int.Div
+[626/758] Building Mathlib.Tactic.NormNum.Pow
+[626/758] Building Mathlib.Data.Rat.Order
+[626/758] Building Mathlib.Tactic.Positivity.Core
+[626/758] Building Mathlib.Data.Rat.Lemmas
+[628/758] Building Mathlib.Data.Set.NAry
+[628/758] Building Mathlib.Data.Set.Function
+[629/758] Building Mathlib.Data.Rat.Field
+[631/758] Building Mathlib.Data.Rat.Cast.Defs
+[633/758] Building Mathlib.Order.Bounds.Basic
+[635/758] Building Mathlib.Tactic.NormNum.OfScientific
+[636/758] Building Mathlib.Data.Set.Intervals.Image
+[636/758] Building Mathlib.Data.Set.Pairwise.Basic
+[636/758] Building Mathlib.Algebra.Group.Pi.Lemmas
+[636/758] Building Mathlib.Logic.Equiv.Set
+[639/758] Building Mathlib.Data.Set.Intervals.UnorderedInterval
+[640/758] Building Mathlib.Data.List.Nodup
+[642/758] Building Mathlib.Order.Hom.Set
+[642/758] Building Mathlib.GroupTheory.Perm.Basic
+[643/758] Building Mathlib.Order.Antichain
+[643/758] Building Mathlib.Data.Fin.Basic
+[643/758] Building Mathlib.Order.CompleteLattice
+[644/758] Building Mathlib.Data.List.Dedup
+[644/758] Building Mathlib.Data.List.Range
+[644/758] Building Mathlib.Data.List.Rotate
+[644/758] Building Mathlib.Data.List.Duplicate
+[646/758] Building Mathlib.Data.Set.Intervals.OrderEmbedding
+[650/758] Building Mathlib.Data.Set.Intervals.OrdConnected
+[651/758] Building Mathlib.Dynamics.FixedPoints.Basic
+[652/758] Building Mathlib.Algebra.BigOperators.List.Basic
+[654/758] Building Mathlib.Order.Cover
+[655/758] Building Mathlib.Algebra.Function.Support
+[656/758] Building Mathlib.Data.Fin.OrderHom
+[657/758] Building Mathlib.Order.CompleteBooleanAlgebra
+[657/758] Building Mathlib.Order.GaloisConnection
+[658/758] Building Mathlib.Data.Int.CharZero
+[658/758] Building Mathlib.Algebra.Function.Indicator
+[659/758] Building Mathlib.Data.List.Join
+[660/758] Building Mathlib.Data.Fin.Tuple.Basic
+[661/758] Building Mathlib.Data.Rat.Cast.CharZero
+[662/758] Building Mathlib.Data.List.Permutation
+[663/758] Building Mathlib.Data.Rat.Cast.Order
+[663/758] Building Mathlib.Tactic.NormNum.Inv
+[664/758] Building Mathlib.Order.Hom.Order
+[664/758] Building Mathlib.Data.Setoid.Basic
+[665/758] Building Mathlib.Data.List.Perm
+[666/758] Building Mathlib.Order.FixedPoints
+[670/758] Building Mathlib.Data.Set.Lattice
+[672/758] Building Mathlib.Tactic.NormNum.Eq
+[672/758] Building Mathlib.Tactic.Ring.Basic
+[673/758] Building Mathlib.Data.List.OfFn
+[674/758] Building Mathlib.Data.List.Sublists
+[674/758] Building Mathlib.Data.Multiset.Basic
+[675/758] Building Mathlib.Tactic.NormNum.Ineq
+[676/758] Building Mathlib.Data.List.Sort
+[676/758] Building Mathlib.Data.Vector.Basic
+[678/758] Building Mathlib.Data.Vector.Snoc
+[678/758] Building Pdl.Star
+[679/758] Building Mathlib.Data.List.NodupEquivFin
+[682/758] Building Mathlib.Tactic.NormNum.DivMod
+[684/758] Building Mathlib.Data.Set.Sigma
+[684/758] Building Mathlib.Data.Set.Functor
+[685/758] Building Mathlib.Tactic.NormNum
+[689/758] Building Mathlib.Data.Multiset.Range
+[689/758] Building Mathlib.Algebra.BigOperators.Multiset.Basic
+[689/758] Building Mathlib.Data.Sym.Basic
+[690/758] Building Mathlib.Data.Multiset.Nodup
+[693/758] Building Mathlib.Tactic.Ring.PNat
+[693/758] Building Mathlib.Tactic.Linarith.Datatypes
+[693/758] Building Mathlib.Tactic.Ring.RingNF
+[694/758] Building Mathlib.Data.Multiset.Dedup
+[694/758] Building Mathlib.Data.Multiset.Sum
+[697/758] Building Mathlib.Data.Multiset.FinsetOps
+[697/758] Building Mathlib.Data.Multiset.Bind
+[698/758] Building Mathlib.Tactic.Linarith.Parsing
+[698/758] Building Mathlib.Tactic.Linarith.Elimination
+[698/758] Building Mathlib.Tactic.Linarith.Preprocessing
+[699/758] Building Mathlib.Tactic.Ring
+[701/758] Building Mathlib.Data.Finset.Basic
+[703/758] Building Mathlib.Tactic.Linarith.Verification
+[705/758] Building Mathlib.Data.Multiset.Fold
+[705/758] Building Mathlib.Data.Multiset.Pi
+[705/758] Building Mathlib.Data.Multiset.Powerset
+[706/758] Building Mathlib.Tactic.Linarith.Frontend
+[708/758] Building Mathlib.Data.Multiset.Lattice
+[710/758] Building Mathlib.Tactic.Linarith
+[712/758] Building Pdl.MultisetOrder
+[713/758] Building Mathlib.Data.Finset.Union
+[714/758] Building Pdl.Vocab
+[714/758] Building Mathlib.Data.Finset.Image
+[715/758] Building Pdl.Fresh
+[716/758] Building Mathlib.Data.Finset.Pi
+[716/758] Building Mathlib.Data.Finset.Fold
+[716/758] Building Mathlib.Data.Finset.Card
+[716/758] Building Mathlib.Data.Fintype.Basic
+[719/758] Building Mathlib.Data.Finset.Sum
+[719/758] Building Mathlib.Data.Finset.Option
+[719/758] Building Mathlib.Data.Finset.Prod
+stdout:
+./././Pdl/MultisetOrder.lean:61:8: warning: declaration uses 'sorry'
+./././Pdl/MultisetOrder.lean:73:8: warning: declaration uses 'sorry'
+Acc.{u} {α : Sort u} (r : α → α → Prop) (a✝ : α) : Prop
+MultisetLT.{u_1} {α : Type u_1} [inst✝ : DecidableEq α] [inst✝¹ : Preorder α] (M N : Multiset α) : Prop
+ACC_M.{u_1} {α : Type u_1} [inst✝ : DecidableEq α] [inst✝¹ : Preorder α] (a✝ : Multiset α) : Prop
+./././Pdl/MultisetOrder.lean:163:8: warning: declaration uses 'sorry'
+true
+false
+true
+true
+TC.wf.{u} {α : Sort u} {r : α → α → Prop} (h : WellFounded r) : WellFounded (TC r)
+./././Pdl/MultisetOrder.lean:201:6: warning: declaration uses 'sorry'
+./././Pdl/MultisetOrder.lean:208:6: warning: declaration uses 'sorry'
+./././Pdl/MultisetOrder.lean:252:0: warning: 'variables' has been replaced by 'variable' in lean 4
+./././Pdl/MultisetOrder.lean:252:24: warning: unused variable `R` [linter.unusedVariables]
+./././Pdl/MultisetOrder.lean:252:43: warning: unused variable `T` [linter.unusedVariables]
+./././Pdl/MultisetOrder.lean:253:0: warning: 'variables' has been replaced by 'variable' in lean 4
+./././Pdl/MultisetOrder.lean:253:11: warning: unused variable `morphism` [linter.unusedVariables]
+./././Pdl/MultisetOrder.lean:255:8: warning: declaration uses 'sorry'
+true
+true
+Try this:
+  intro α inst inst_1 a0 M a
+  simp_all only [mul_erase_trivial, mul_cons_trivial, Multiset.cons_erase]
+./././Pdl/MultisetOrder.lean:333:83: warning: unused variable `h` [linter.unusedVariables]
+Multiset.count_cons_of_ne.{u_1} {α : Type u_1} [inst✝ : DecidableEq α] {a b : α} (h : a ≠ b) (s : Multiset α) :
+  Multiset.count a (b ::ₘ s) = Multiset.count a s
+Multiset.induction_on.{u_1} {α : Type u_1} {p : Multiset α → Prop} (s : Multiset α) (empty : p 0)
+  (cons : ∀ ⦃a : α⦄ {s : Multiset α}, p s → p (a ::ₘ s)) : p s
+def MultisetLt.{u_1} : {α : Type u_1} → [inst : DecidableEq α] → [inst : LT α] → Multiset α → Multiset α → Prop :=
+fun {α} [DecidableEq α] [LT α] => TC MultisetRedLt
+inductive MultisetRedLt.{u_1} : {α : Type u_1} → [inst : DecidableEq α] → [inst : LT α] → Multiset α → Multiset α → Prop
+number of parameters: 5
+constructors:
+MultisetRedLt.RedLt : ∀ {α : Type u_1} [inst : DecidableEq α] [inst_1 : LT α] {M N : Multiset α} (X Y : Multiset α)
+  (a : α), M = X + Y → N = X + {a} → (∀ y ∈ Y, y < a) → MultisetRedLt M N
+inductive MultisetLT.{u_1} : {α : Type u_1} →
+  [inst : DecidableEq α] → [inst : Preorder α] → Multiset α → Multiset α → Prop
+number of parameters: 5
+constructors:
+MultisetLT.MLT : ∀ {α : Type u_1} [inst : DecidableEq α] [inst_1 : Preorder α] {M N : Multiset α} (X Y Z : Multiset α),
+  Y ≠ ∅ → M = Z + X → N = Z + Y → (∀ x ∈ X, ∃ y ∈ Y, x < y) → MultisetLT M N
+true
+true
+Try this:
+  rename_i inst inst_1 a
+  simp_all only [Multiset.quot_mk_to_coe'', ge_iff_le, zero_le]
+./././Pdl/MultisetOrder.lean:651:6: warning: declaration uses 'sorry'
+true
+false
+add_assoc.{u_1} {G : Type u_1} [inst✝ : AddSemigroup G] (a b c : G) : a + b + c = a + (b + c)
+./././Pdl/MultisetOrder.lean:766:24: warning: unused variable `pre` [linter.unusedVariables]
+./././Pdl/MultisetOrder.lean:792:25: warning: unused variable `pre` [linter.unusedVariables]
+./././Pdl/MultisetOrder.lean:805:6: warning: declaration uses 'sorry'
+./././Pdl/MultisetOrder.lean:818:6: warning: declaration uses 'sorry'
+./././Pdl/MultisetOrder.lean:840:36: warning: unused variable `X2_ne` [linter.unusedVariables]
+Multiset.card.{u_1} {α : Type u_1} : Multiset α →+ ℕ
+./././Pdl/MultisetOrder.lean:1288:16: warning: aesop: failed to prove the goal after exhaustive search.
+./././Pdl/MultisetOrder.lean:1253:7: warning: declaration uses 'sorry'
+[723/758] Building Mathlib.Data.Fintype.Pi
+[723/758] Building Mathlib.Tactic.FinCases
+[723/758] Building Mathlib.Data.Finset.Piecewise
+[723/758] Building Mathlib.Data.Fintype.Card
+[727/758] Building Mathlib.Data.Fintype.Vector
+[728/758] Building Mathlib.Data.Finset.Lattice
+[730/758] Building Mathlib.Data.Fintype.Sum
+[730/758] Building Mathlib.Data.Fintype.Prod
+[733/758] Building Mathlib.Data.Finset.Powerset
+[733/758] Building Mathlib.Data.Finset.Sigma
+[734/758] Building Mathlib.Data.Fintype.Sigma
+[735/758] Building Mathlib.Data.Fintype.Powerset
+[737/758] Building Mathlib.Data.Finite.Basic
+[738/758] Building Mathlib.Data.Set.Finite
+[739/758] Building Mathlib.Data.Finset.Preimage
+[740/758] Building Mathlib.Algebra.BigOperators.Basic
+[741/758] Building Pdl.Closure
+[741/758] Building Pdl.Measures
+[742/758] Building Pdl.Semantics
+[742/758] Building Pdl.Setsimp
+[745/758] Building Pdl.Examples
+[745/758] Building Pdl.Discon
+stdout:
+./././Pdl/Examples.lean:116:0: warning: declaration uses 'sorry'
+./././Pdl/Examples.lean:152:8: warning: declaration uses 'sorry'
+[747/758] Building Pdl.Substitution
+[748/758] Building Pdl.Unfold
+stdout:
+./././Pdl/Unfold.lean:656:4: warning: declaration uses 'sorry'
+./././Pdl/Unfold.lean:660:4: warning: declaration uses 'sorry'
+./././Pdl/Unfold.lean:706:8: warning: declaration uses 'sorry'
+./././Pdl/Unfold.lean:723:8: warning: declaration uses 'sorry'
+./././Pdl/Unfold.lean:757:8: warning: declaration uses 'sorry'
+./././Pdl/Unfold.lean:889:4: warning: declaration uses 'sorry'
+./././Pdl/Unfold.lean:893:8: warning: declaration uses 'sorry'
+./././Pdl/Unfold.lean:908:8: warning: declaration uses 'sorry'
+./././Pdl/Unfold.lean:967:8: warning: declaration uses 'sorry'
+./././Pdl/Unfold.lean:982:8: warning: declaration uses 'sorry'
+[749/758] Building Pdl.Paths
+[749/758] Building Pdl.Modelgraphs
+[749/758] Building Pdl.LocalTableau
+stdout:
+./././Pdl/Paths.lean:38:8: warning: declaration uses 'sorry'
+./././Pdl/Paths.lean:88:8: warning: declaration uses 'sorry'
+stdout:
+./././Pdl/LocalTableau.lean:117:8: warning: declaration uses 'sorry'
+./././Pdl/LocalTableau.lean:524:8: warning: declaration uses 'sorry'
+./././Pdl/LocalTableau.lean:543:8: warning: declaration uses 'sorry'
+./././Pdl/LocalTableau.lean:553:8: warning: declaration uses 'sorry'
+./././Pdl/LocalTableau.lean:658:8: warning: declaration uses 'sorry'
+[751/758] Building Pdl.Tableau
+[752/758] Building Pdl.Soundness
+stdout:
+./././Pdl/Soundness.lean:52:8: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:511:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:517:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:529:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:572:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:572:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:572:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:572:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:632:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:632:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:632:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:632:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:632:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:632:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:669:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:669:4: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:715:8: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:747:8: warning: declaration uses 'sorry'
+./././Pdl/Soundness.lean:752:8: warning: declaration uses 'sorry'
+[754/758] Building Pdl.Completeness
+stdout:
+./././Pdl/Completeness.lean:8:8: warning: declaration uses 'sorry'
+./././Pdl/Completeness.lean:10:8: warning: declaration uses 'sorry'
+./././Pdl/Completeness.lean:14:4: warning: declaration uses 'sorry'
+./././Pdl/Completeness.lean:16:8: warning: declaration uses 'sorry'
+[755/758] Building Pdl.PartInterpolation
+stdout:
+./././Pdl/PartInterpolation.lean:7:4: warning: declaration uses 'sorry'
+./././Pdl/PartInterpolation.lean:29:8: warning: declaration uses 'sorry'
+./././Pdl/PartInterpolation.lean:55:8: warning: declaration uses 'sorry'
+./././Pdl/PartInterpolation.lean:59:8: warning: declaration uses 'sorry'
+[756/758] Building Pdl.Interpolation
+[757/758] Building Pdl
+2024-06-04 12:40:12.183 | INFO     | __main__:main:188 - Tracing lean4-pdl
+2024-06-04 12:40:12.229 | DEBUG    | __main__:main:193 - lake env lean --threads 32 --run ExtractData.lean
+ 98%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍   | 1592/1618 [05:20<00:49,  1.92s/it]
+2024-06-04 12:47:49.194 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/InteractiveSvg.ast.json
+2024-06-04 12:47:49.194 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/InteractiveSvg.ast.json
+2024-06-04 12:47:49.194 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Plot.ast.json
+2024-06-04 12:47:49.194 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Venn.ast.json
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Svg.ast.json
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Jsx.dep_paths
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Rubiks.dep_paths
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/RbTree.dep_paths
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Plot.dep_paths
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Venn.dep_paths
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/SelectInsertConv.dep_paths
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Panel/GoalTypePanel.ast.json
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.ast.json
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Conv.dep_paths
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Jsx.ast.json
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Rubiks.ast.json
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/ExprPresentation.dep_paths
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Dynkin.dep_paths
+2024-06-04 12:47:49.195 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Macro.ast.json
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Panel/GoalTypePanel.dep_paths
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Panel/SelectionPanel.dep_paths
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/RbTree.ast.json
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Conv.ast.json
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/ExprPresentation.ast.json
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Euclidean.ast.json
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/InteractiveSvg.dep_paths
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/InteractiveSvg.dep_paths
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Dynkin.ast.json
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Svg.dep_paths
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.dep_paths
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Macro.dep_paths
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Panel/SelectionPanel.ast.json
+2024-06-04 12:47:49.196 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Euclidean.dep_paths
+2024-06-04 12:47:49.197 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpli7q214h/workspace/lean4-pdl/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/SelectInsertConv.ast.json
+2024-06-04 12:47:52,336 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1594/1594 [02:06<00:00, 12.64it/s]
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-06-04 12:50:22.612 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4a0f6ef5') relies on an unsupported Lean version: ec941735c80dc54c53948e30
+c428905b6600f95a
+2024-06-04 12:50:38,093 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1594/1594 [00:33<00:00, 48.03it/s]
+2024-06-04 12:51:19.147 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /raid/adarsh/.cache/lean_dojo/m4lvin-lean4-pdl-d008f89d2ccf59dfdc8c429a826af2ce0339f921/lean4-pdl
+2024-06-04 12:51:21,757 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1594/1594 [02:03<00:00, 12.89it/s]
+2024-06-04 12:53:45.508 | INFO     | __main__:retrieve_proof:445 - MAIN: about to split data
+2024-06-04 12:54:10.026 | INFO     | __main__:split_data:132 - 19828 theorems in total
+2024-06-04 12:54:10.027 | INFO     | __main__:split_randomly:81 - Splitting the theorems randomly
+2024-06-04 12:54:10.034 | INFO     | __main__:split_by_premise:94 - Splitting the theorems by premises
+2024-06-04 12:54:11.300 | INFO     | __main__:retrieve_proof:447 - MAIN: done splitting data
+2024-06-04 12:54:11.300 | INFO     | __main__:retrieve_proof:448 - MAIN: about to export corpus.jsonl
+2024-06-04 12:54:11.300 | INFO     | __main__:export_data:178 - Exporting data to path: /raid/adarsh/data/m4lvin/lean4-pdl/d008f89d2ccf59dfdc8c429a826af2ce0339f921
+2024-06-04 12:54:18.261 | INFO     | __main__:export_premises:164 - 44147 theorems/definitions from 1594 files saved to /raid/adarsh/data/m4lvin/lean4-pdl/d008f89d2ccf59dfdc8c429a826af2ce0339f921
+2024-06-04 12:54:18.262 | INFO     | __main__:retrieve_proof:450 - MAIN: exported corpus.jsonl
+2024-06-04 12:54:21.551 | INFO     | __main__:retrieve_proof:467 - 7766
+2024-06-04 12:54:21.556 | INFO     | __main__:retrieve_proof:481 - Found 32 sorries!
+2024-06-04 12:54:21.556 | INFO     | __main__:retrieve_proof:482 - MAIN: about to search for proofs
+2024-06-04 12:54:21.556 | INFO     | prover.proof_search:__init__:430 - Launching 5 workers with 1 GPUs.
+2024-06-04 12:54:24,212 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+2024-06-04 12:54:25.137 | INFO     | prover.proof_search:search_unordered:475 - before theorem search:
+(pid=2932761) [2024-06-04 12:54:30,077] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(pid=2932761)  [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+(pid=2932761)  [WARNING]  async_io: please install the libaio-dev package with apt
+(pid=2932761)  [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+(pid=2932761)  [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+(pid=2932761)  [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+(pid=2932761)  [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+(GpuProver pid=2932761) Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../../raid/adarsh/kaiyuy_leandojo-lean4-retri
+ever-tacgen-byt5-small/model_lightning.ckpt`
+(GpuProver pid=2932761) 2024-06-04 12:54:31.969 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: None
+(GpuProver pid=2932761) 2024-06-04 12:54:31.969 | INFO     | generator.model:__init__:121 - Without retrieval
+(GpuProver pid=2932761) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you
+want to force a new download, use `force_download=True`.
+(GpuProver pid=2932761)   warnings.warn(
+(GpuProver pid=2932761) Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+(GpuProver pid=2932761) Some weights of T5ForConditionalGeneration were not initialized from the model checkpoint at kaiyuy/leandojo-lean4-retriever-byt5-small and are newly initialized: ['decoder.block.0.layer.0.SelfAttention.k.weight', 'decoder.block.0.layer.
+0.SelfAttention.o.weight', 'decoder.block.0.layer.0.SelfAttention.q.weight', 'decoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'decoder.block.0.layer.0.SelfAttention.v.weight', 'decoder.block.0.layer.0.layer_norm.weight', 'decoder.block.0.
+layer.1.EncDecAttention.k.weight', 'decoder.block.0.layer.1.EncDecAttention.o.weight', 'decoder.block.0.layer.1.EncDecAttention.q.weight', 'decoder.block.0.layer.1.EncDecAttention.v.weight', 'decoder.block.0.layer.1.layer_norm.weight', 'decoder.block.0.layer.2.
+DenseReluDense.wi_0.weight', 'decoder.block.0.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.0.layer.2.DenseReluDense.wo.weight', 'decoder.block.0.layer.2.layer_norm.weight', 'decoder.block.1.layer.0.SelfAttention.k.weight', 'decoder.block.1.layer.0.SelfAt
+tention.o.weight', 'decoder.block.1.layer.0.SelfAttention.q.weight', 'decoder.block.1.layer.0.SelfAttention.v.weight', 'decoder.block.1.layer.0.layer_norm.weight', 'decoder.block.1.layer.1.EncDecAttention.k.weight', 'decoder.block.1.layer.1.EncDecAttention.o.we
+ight', 'decoder.block.1.layer.1.EncDecAttention.q.weight', 'decoder.block.1.layer.1.EncDecAttention.v.weight', 'decoder.block.1.layer.1.layer_norm.weight', 'decoder.block.1.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.1.layer.2.DenseReluDense.wi_1.weight
+', 'decoder.block.1.layer.2.DenseReluDense.wo.weight', 'decoder.block.1.layer.2.layer_norm.weight', 'decoder.block.2.layer.0.SelfAttention.k.weight', 'decoder.block.2.layer.0.SelfAttention.o.weight', 'decoder.block.2.layer.0.SelfAttention.q.weight', 'decoder.bl
+ock.2.layer.0.SelfAttention.v.weight', 'decoder.block.2.layer.0.layer_norm.weight', 'decoder.block.2.layer.1.EncDecAttention.k.weight', 'decoder.block.2.layer.1.EncDecAttention.o.weight', 'decoder.block.2.layer.1.EncDecAttention.q.weight', 'decoder.block.2.laye
+r.1.EncDecAttention.v.weight', 'decoder.block.2.layer.1.layer_norm.weight', 'decoder.block.2.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.2.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.2.layer.2.DenseReluDense.wo.weight', 'decoder.block.2.layer.2.
+layer_norm.weight', 'decoder.block.3.layer.0.SelfAttention.k.weight', 'decoder.block.3.layer.0.SelfAttention.o.weight', 'decoder.block.3.layer.0.SelfAttention.q.weight', 'decoder.block.3.layer.0.SelfAttention.v.weight', 'decoder.block.3.layer.0.layer_norm.weigh
+t', 'decoder.block.3.layer.1.EncDecAttention.k.weight', 'decoder.block.3.layer.1.EncDecAttention.o.weight', 'decoder.block.3.layer.1.EncDecAttention.q.weight', 'decoder.block.3.layer.1.EncDecAttention.v.weight', 'decoder.block.3.layer.1.layer_norm.weight', 'dec
+oder.block.3.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.3.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.3.layer.2.DenseReluDense.wo.weight', 'decoder.block.3.layer.2.layer_norm.weight', 'decoder.final_layer_norm.weight', 'lm_head.weight']
+(GpuProver pid=2932761) You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+(GpuProver pid=2932761) 2024-06-04 12:54:33.321 | INFO     | generator.model:__init__:137 - RetrievalAugmentedGenerator initialized
+(GpuProver pid=2932764) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'state_
+dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+(GpuProver pid=2932764) 2024-06-04 12:54:34.987 | INFO     | prover.proof_search:__init__:371 - Loaded model from /raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt
+(GpuProver pid=2932764) 2024-06-04 12:54:34.987 | INFO     | prover.proof_search:__init__:372 - Using retriever: None
+(GpuProver pid=2932764) 2024-06-04 12:54:34.991 | INFO     | prover.proof_search:search:73 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/m4lvin/lean4-pdl', commit='d008f89d2ccf59dfdc8c429a826af2ce0339f921'), file_path=PosixPath('Pdl/Completeness.le
+an'), full_name='modelExistence')
+(GpuProver pid=2932761) 2024-06-04 12:54:35.041 | INFO     | prover.proof_search:search:73 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/m4lvin/lean4-pdl', commit='d008f89d2ccf59dfdc8c429a826af2ce0339f921'), file_path=PosixPath('Pdl/Paths.lean'), f
+ull_name='existsWitnessPath_ltr')
+(GpuProver pid=2932760) 2024-06-04 12:54:35.051 | INFO     | prover.proof_search:search:73 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/m4lvin/lean4-pdl', commit='d008f89d2ccf59dfdc8c429a826af2ce0339f921'), file_path=PosixPath('Pdl/PartInterpolati
+on.lean'), full_name='localInterpolantStep')
+(GpuProver pid=2932762) 2024-06-04 12:54:35.050 | INFO     | prover.proof_search:search:73 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/m4lvin/lean4-pdl', commit='d008f89d2ccf59dfdc8c429a826af2ce0339f921'), file_path=PosixPath('Pdl/Paths.lean'), f
+ull_name='existsWitnessPath_rtl')
+(GpuProver pid=2932763) 2024-06-04 12:54:35.054 | INFO     | prover.proof_search:search:73 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/m4lvin/lean4-pdl', commit='d008f89d2ccf59dfdc8c429a826af2ce0339f921'), file_path=PosixPath('Pdl/Examples.lean')
+, full_name='inductionAxiom')
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+main.py 630 <module>
+main()
+
+main.py 597 main
+result = retrieve_proof(lean_git_repo, repo_no_dir, lean_git_repo.commit)
+
+main.py 494 retrieve_proof
+results = prover.search_unordered(repo, theorems, positions)
+
+proof_search.py 476 search_unordered
+results = list(
+
+actor_pool.py 170 get_generator
+yield self.get_next_unordered()
+
+actor_pool.py 370 get_next_unordered
+return ray.get(future)
+
+auto_init_hook.py 21 auto_init_wrapper
+return fn(*args, **kwargs)
+
+client_mode_hook.py 103 wrapper
+return func(*args, **kwargs)
+
+worker.py 2623 get
+values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+
+worker.py 861 get_objects
+raise value.as_instanceof_cause()
+
+ray.exceptions.RayTaskError(DojoCrashError):
+Pdl/PartInterpolation.lean:39:2: error: [fatal] not_a_theorem
+(GpuProver pid=2932760) 2024-06-04 12:56:01.658 | INFO     | prover.proof_search:search:73 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/m4lvin/lean4-pdl', commit='d008f89d2ccf59dfdc8c429a826af2ce0339f921'), file_path=PosixPath('Pdl/PartInterpolati
+on.lean'), full_name='partInterpolation')
+(GpuProver pid=2932762) Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../../raid/adarsh/kaiyuy_leandojo-lean4-retri
+ever-tacgen-byt5-small/model_lightning.ckpt` [repeated 4x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-dedupli
+cation for more options.)
+(GpuProver pid=2932762) 2024-06-04 12:54:32.093 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: None [repeated 4x across cluster]
+(GpuProver pid=2932762) 2024-06-04 12:54:32.093 | INFO     | generator.model:__init__:121 - Without retrieval [repeated 4x across cluster]
+(GpuProver pid=2932762) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you
+want to force a new download, use `force_download=True`. [repeated 4x across cluster]
+(GpuProver pid=2932762)   warnings.warn( [repeated 4x across cluster]
+(GpuProver pid=2932760) Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained. [repeated 4x across cluster]
+(GpuProver pid=2932763) Some weights of T5ForConditionalGeneration were not initialized from the model checkpoint at kaiyuy/leandojo-lean4-retriever-byt5-small and are newly initialized: ['decoder.block.0.layer.0.SelfAttention.k.weight', 'decoder.block.0.layer.
+0.SelfAttention.o.weight', 'decoder.block.0.layer.0.SelfAttention.q.weight', 'decoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'decoder.block.0.layer.0.SelfAttention.v.weight', 'decoder.block.0.layer.0.layer_norm.weight', 'decoder.block.0.
+layer.1.EncDecAttention.k.weight', 'decoder.block.0.layer.1.EncDecAttention.o.weight', 'decoder.block.0.layer.1.EncDecAttention.q.weight', 'decoder.block.0.layer.1.EncDecAttention.v.weight', 'decoder.block.0.layer.1.layer_norm.weight', 'decoder.block.0.layer.2.
+DenseReluDense.wi_0.weight', 'decoder.block.0.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.0.layer.2.DenseReluDense.wo.weight', 'decoder.block.0.layer.2.layer_norm.weight', 'decoder.block.1.layer.0.SelfAttention.k.weight', 'decoder.block.1.layer.0.SelfAt
+tention.o.weight', 'decoder.block.1.layer.0.SelfAttention.q.weight', 'decoder.block.1.layer.0.SelfAttention.v.weight', 'decoder.block.1.layer.0.layer_norm.weight', 'decoder.block.1.layer.1.EncDecAttention.k.weight', 'decoder.block.1.layer.1.EncDecAttention.o.we
+ight', 'decoder.block.1.layer.1.EncDecAttention.q.weight', 'decoder.block.1.layer.1.EncDecAttention.v.weight', 'decoder.block.1.layer.1.layer_norm.weight', 'decoder.block.1.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.1.layer.2.DenseReluDense.wi_1.weight
+', 'decoder.block.1.layer.2.DenseReluDense.wo.weight', 'decoder.block.1.layer.2.layer_norm.weight', 'decoder.block.2.layer.0.SelfAttention.k.weight', 'decoder.block.2.layer.0.SelfAttention.o.weight', 'decoder.block.2.layer.0.SelfAttention.q.weight', 'decoder.bl
+ock.2.layer.0.SelfAttention.v.weight', 'decoder.block.2.layer.0.layer_norm.weight', 'decoder.block.2.layer.1.EncDecAttention.k.weight', 'decoder.block.2.layer.1.EncDecAttention.o.weight', 'decoder.block.2.layer.1.EncDecAttention.q.weight', 'decoder.block.2.laye
+r.1.EncDecAttention.v.weight', 'decoder.block.2.layer.1.layer_norm.weight', 'decoder.block.2.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.2.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.2.layer.2.DenseReluDense.wo.weight', 'decoder.block.2.layer.2.
+layer_norm.weight', 'decoder.block.3.layer.0.SelfAttention.k.weight', 'decoder.block.3.layer.0.SelfAttention.o.weight', 'decoder.block.3.layer.0.SelfAttention.q.weight', 'decoder.block.3.layer.0.SelfAttention.v.weight', 'decoder.block.3.layer.0.layer_norm.weigh
+t', 'decoder.block.3.layer.1.EncDecAttention.k.weight', 'decoder.block.3.layer.1.EncDecAttention.o.weight', 'decoder.block.3.layer.1.EncDecAttention.q.weight', 'decoder.block.3.layer.1.EncDecAttention.v.weight', 'decoder.block.3.layer.1.layer_norm.weight', 'dec
+oder.block.3.layer.2.DenseReluDense.wi_0.weight', 'decoder.block.3.layer.2.DenseReluDense.wi_1.weight', 'decoder.block.3.layer.2.DenseReluDense.wo.weight', 'decoder.block.3.layer.2.layer_norm.weight', 'decoder.final_layer_norm.weight', 'lm_head.weight'] [repeat
+ed 4x across cluster]
+(GpuProver pid=2932763) You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference. [repeated 4x across cluster]
+(GpuProver pid=2932763) 2024-06-04 12:54:33.468 | INFO     | generator.model:__init__:137 - RetrievalAugmentedGenerator initialized [repeated 4x across cluster]
+(GpuProver pid=2932763) /home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'state_
+dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters'] [repeated 4x across cluster]
+(GpuProver pid=2932763) 2024-06-04 12:54:35.051 | INFO     | prover.proof_search:__init__:371 - Loaded model from /raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt [repeated 4x across cluster]
+(GpuProver pid=2932763) 2024-06-04 12:54:35.051 | INFO     | prover.proof_search:__init__:372 - Using retriever: None [repeated 4x across cluster]
+(pid=2932764) [2024-06-04 12:54:30,094] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect) [repeated 4x across cluster]
+(pid=2932760)  [WARNING]  async_io requires the dev libaio .so object and headers but these were not found. [repeated 4x across cluster]
+(pid=2932764)  [WARNING]  async_io: please install the libaio-dev package with apt [repeated 4x across cluster]
+(pid=2932764)  [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found. [repeated 4x across cluster]
+(pid=2932764)  [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH [repeated 4x across cluster]
+(pid=2932760)  [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3 [repeated 4x across cluster]
+(pid=2932760)  [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible [repeated 4x across cluster]
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$
+

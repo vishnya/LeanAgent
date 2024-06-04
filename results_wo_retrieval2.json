@@ -1,0 +1,143 @@
+{
+    "total_repositories": 5,
+    "repositories": {
+        "/raid/adarsh/repos/avigad/mathematics_in_lean_source": {
+            "number_of_sorries": 28,
+            "number_of_proofs_found": 15,
+            "proofs_details": [
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyRing.add_right_cancel",
+                    "proof_text": "simpa using h"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyRing.add_neg_cancel_right",
+                    "proof_text": "simp"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyRing.zero_mul",
+                    "proof_text": "simp"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyRing.add_left_cancel",
+                    "proof_text": "simpa using h"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyRing.eq_neg_of_add_eq_zero",
+                    "proof_text": "rwa [eq_neg_iff_add_eq_zero]"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyRing.neg_neg",
+                    "proof_text": "simp"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyRing.self_sub",
+                    "proof_text": "simp"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyRing.two_mul",
+                    "proof_text": "abel\nsimp"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyRing.neg_eq_of_add_eq_zero",
+                    "proof_text": "rw [← sub_eq_zero]\nrw [← neg_zero, ← h]\nabel"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyGroup.mul_right_inv",
+                    "proof_text": "simp"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyGroup.mul_one",
+                    "proof_text": "simp"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean",
+                    "theorem_name": "MyGroup.mul_inv_rev",
+                    "proof_text": "simp"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean",
+                    "theorem_name": "C03S01.Subset.trans",
+                    "proof_text": "apply Set.Subset.trans"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean",
+                    "theorem_name": "absorb1",
+                    "proof_text": "simp"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean",
+                    "theorem_name": "absorb2",
+                    "proof_text": "simp"
+                }
+            ],
+            "unproved_sorries": [
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S06_Sequences_and_Convergence.lean",
+                    "theorem_name": "C03S06.convergesTo_add"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S06_Sequences_and_Convergence.lean",
+                    "theorem_name": "C03S06.convergesTo_mul_const"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S06_Sequences_and_Convergence.lean",
+                    "theorem_name": "C03S06.exists_abs_le_of_convergesTo"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S06_Sequences_and_Convergence.lean",
+                    "theorem_name": "C03S06.aux"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S06_Sequences_and_Convergence.lean",
+                    "theorem_name": "C03S06.convergesTo_unique"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C04_Sets_and_Functions/S02_Functions.lean",
+                    "theorem_name": "Cantor"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C09_Topology/S02_Metric_Spaces.lean",
+                    "theorem_name": "cauchySeq_of_le_geometric_two'"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean",
+                    "theorem_name": "C03S01.my_lemma3"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S05_Disjunction.lean",
+                    "theorem_name": "C03S05.MyAbs.le_abs_self"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S05_Disjunction.lean",
+                    "theorem_name": "C03S05.MyAbs.neg_le_abs_self"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S05_Disjunction.lean",
+                    "theorem_name": "C03S05.MyAbs.abs_add"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S05_Disjunction.lean",
+                    "theorem_name": "C03S05.MyAbs.lt_abs"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/avigad/mathematics_in_lean_source/MIL/C03_Logic/S05_Disjunction.lean",
+                    "theorem_name": "C03S05.MyAbs.abs_lt"
+                }
+            ],
+            "number_of_premises_theorems_retrieved": 0,
+            "num_files_traced": 0,
+            "PR": ""
+        }
+    }
+}
