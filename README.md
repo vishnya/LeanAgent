@@ -2,6 +2,8 @@
 
 ![Model](images/CS159PipelinePicture.png)
 
+## [Example PR](https://github.com/Adarsh321123/pfr/pulls)
+
 Lean 3 is deprecated. The `main` branch only supports Lean 4.
 
 [![GitHub license](https://img.shields.io/github/license/MineDojo/MineDojo)](https://github.com/MineDojo/MineDojo/blob/main/LICENSE) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
