@@ -11,8 +11,9 @@ Lean 3 is deprecated. The `main` branch only supports Lean 4.
 
 ### Requirements
 
-1. Download and install [Miniconda Python 3](https://docs.conda.io/en/latest/miniconda.html) (Anaconda should also work).
-2. Create the conda environment and install Python dependencies:
+1. **Ensure you are on `backup_branch`. We would like to make some more progress before merging into `main`.**
+2. Download and install [Miniconda Python 3](https://docs.conda.io/en/latest/miniconda.html) (Anaconda should also work).
+3. Create the conda environment and install Python dependencies:
 ```bash
 conda create --yes --name ReProver python=3.10 ipython numpy
 conda activate ReProver
