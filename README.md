@@ -2,6 +2,12 @@
 
 ![Model](images/ReProver.jpg)
 
+
+
+https://github.com/Adarsh321123/CS159FinalProject/assets/56987323/b02d7b9f-d024-4a91-a511-2740b0b42094
+
+
+
 Code for the paper:  
 
 [LeanDojo: Theorem Proving with Retrieval-Augmented Language Models](https://leandojo.org/)      
