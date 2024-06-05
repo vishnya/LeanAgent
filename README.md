@@ -2,6 +2,12 @@
 
 ![Model](images/CS159PipelinePicture.png)
 
+
+
+https://github.com/Adarsh321123/CS159FinalProject/assets/56987323/de0cb397-8dc7-40ed-9f16-995c73caacb3
+
+
+
 ## [Example PR](https://github.com/Adarsh321123/pfr/pulls)
 
 Lean 3 is deprecated. The `main` branch only supports Lean 4.
