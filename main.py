@@ -52,8 +52,8 @@ from lean_dojo.constants import LEAN4_PACKAGES_DIR
 
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 _LEAN4_VERSION_REGEX = re.compile(r"leanprover/lean4:(?P<version>.+?)")
-repo_dir = "<DIR>/repos"
-DST_DIR = Path("<DIR>/data")
+repo_dir = "/raid/adarsh/repos" # TODO: for release change these back to <DIR>
+DST_DIR = Path("/raid/adarsh/data")
 NUM_VAL = NUM_TEST = 2000
 FILE_NAME = "corpus.jsonl"
 RESULTS_FILE = "results.json"
@@ -410,7 +410,7 @@ def retrieve_proof(repo, repo_no_dir, sha):
     3. Generate a corpus of the repo's premises.
     4. Search for proofs for theorems with `sorry` in them.
     """
-    ckpt_path = "<DIR>/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+    ckpt_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     indexed_corpus_path = str(DST_DIR / repo_no_dir / sha) + "/corpus.jsonl"
     tactic = None
     module = None
@@ -431,7 +431,7 @@ def retrieve_proof(repo, repo_no_dir, sha):
         logger.info("Unsupported version")
         return None
     v = v[1:] # ignore "v" at beginning
-    lean_dir = "<DIR>/.elan/toolchains/leanprover--lean4---" + v
+    lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---" + v
     logger.info(f"lean path {lean_dir}")
     if not os.path.exists(lean_dir):
         logger.info(f"Lean toolchain path does not exist: {lean_dir}")
@@ -567,7 +567,17 @@ def main():
         "total_repositories": 0,
         "repositories": {}
     }
+    # TODO: remove
+    # clone_url = "https://github.com/Adarsh321123/PUTNAM-Adarsh.git"
+    # repo_name, sha = clone_repo(clone_url)
+    # name = repo_name
+    # url = clone_url.replace('.git', '')
+    # lean_git_repo = LeanGitRepo(url, sha)
+    # lean_git_repos.append(lean_git_repo)
+    # repos.append("Adarsh321123/PUTNAM-Adarsh")
     search_github_repositories("Lean", 10)
+    # repos.append("Adarsh321123/pfr")
+    # lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/pfr", "c297615a183a32f29f1313895c32f72d200f0bb6"))
     num_repos = len(repos)
     results["total_repositories"] = num_repos
     print(f"Found {num_repos} repositories")
