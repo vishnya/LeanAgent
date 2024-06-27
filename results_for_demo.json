@@ -1,0 +1,114 @@
+{
+    "total_repositories": 1,
+    "repositories": {
+        "/raid/adarsh/repos/Adarsh321123/pfr": {
+            "number_of_sorries": 24,
+            "number_of_proofs_found": 2,
+            "proofs_details": [
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "multiDist_copy",
+                    "proof_text": "rfl"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "multiDist_of_perm",
+                    "proof_text": "rfl"
+                }
+            ],
+            "unproved_sorries": [
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MultiTauFunctional.lean",
+                    "theorem_name": "multiTau_min_sum_le"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MultiTauFunctional.lean",
+                    "theorem_name": "sub_condMultiDistance_le"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MultiTauFunctional.lean",
+                    "theorem_name": "sub_multiDistance_le"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MultiTauFunctional.lean",
+                    "theorem_name": "multiTau_min_exists"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MultiTauFunctional.lean",
+                    "theorem_name": "sub_condMultiDistance_le'"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/Mathlib/Probability/Independence/Kernel.lean",
+                    "theorem_name": "ProbabilityTheory.kernel.iIndepFun.finsets"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "kvm_ineq_II"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "kvm_ineq_III"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "ent_of_sum_le_ent_of_sum"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "multiDist_indep"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "multiDist_nonneg"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "multidist_ruzsa_I"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "multidist_ruzsa_II"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "multidist_ruzsa_III"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "multidist_ruzsa_IV"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "multidist_eq_zero"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "condMultiDist_eq"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "multiDist_chainRule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "iter_multiDist_chainRule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "cond_multiDist_chainRule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "iter_multiDist_chainRule'"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/pfr/PFR/MoreRuzsaDist.lean",
+                    "theorem_name": "cor_multiDist_chainRule"
+                }
+            ],
+            "number_of_premises_theorems_retrieved": 109782,
+            "num_files_traced": 2885,
+            "PR": "https://github.com/Adarsh321123/pfr/pull/1"
+        }
+    }
+}
