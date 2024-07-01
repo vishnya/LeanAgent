@@ -50,6 +50,12 @@ import lean_dojo
 from lean_dojo import *
 from lean_dojo.constants import LEAN4_PACKAGES_DIR
 
+import pytorch_lightning as pl
+from retrieval.model import PremiseRetriever
+from retrieval.datamodule import RetrievalDataModule
+import torch
+from pytorch_lightning.callbacks import ModelCheckpoint
+
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 _LEAN4_VERSION_REGEX = re.compile(r"leanprover/lean4:(?P<version>.+?)")
 repo_dir = "/raid/adarsh/repos" # TODO: for release change these back to <DIR>
@@ -400,7 +406,91 @@ def is_supported_version(v) -> bool:
         return rc <= 2
     else:
         return True
+
+def update_and_train(model_checkpoint_path, new_data_path, max_epochs=10):
+    # Load the model from checkpoint
+    if not torch.cuda.is_available():
+        logger.warning("Indexing the corpus using CPU can be very slow.")
+        device = torch.device("cpu")
+    else:
+        device = torch.device("cuda")
+
+    # TODO: reduce repetition in code like this
+    config = {
+        "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
+        "lr": 1e-3,
+        "warmup_steps": 1000,
+        "max_seq_len": 512,
+        "num_retrieved": 100,
+    }
+
+    # state_dict = torch.load(model_checkpoint_path)
+    # state_dict["pytorch-lightning_version"] = "0.0.0"
+    # state_dict['global_step'] = None
+    # state_dict['epoch'] = None
+    # state_dict['state_dict'] = state_dict
+    # state_dict['callbacks'] = None
+    # state_dict['loops'] = {}
+    # state_dict['legacy_pytorch-lightning_version'] = None
+    # torch.save(state_dict, model_checkpoint_path)
     
+    model = PremiseRetriever.load(
+        model_checkpoint_path, device, freeze=False, config=config
+    )
+
+    # Assuming your data module can handle updating, update data source
+    # TODO: try with novel split later instead of random
+    # TODO: use the yaml file instead of repeating here, same throughout
+    corpus_path = new_data_path.split("/")[0] + "/corpus.jsonl"
+    data_module = RetrievalDataModule(
+        data_path=new_data_path,
+        corpus_path=corpus_path,
+        num_negatives=3,
+        num_in_file_negatives=1,
+        model_name="google/byt5-small",
+        batch_size=8,
+        eval_batch_size=64,
+        max_seq_len=1024,
+        num_workers=4
+    )
+    data_module.setup(stage='fit')
+
+    # checkpoint_callback = ModelCheckpoint(
+    #     save_weights_only=False,  # This needs to be False to save full state
+    #     verbose=True,
+    #     save_top_k=1,
+    #     monitor='Recall@10_val',
+    #     mode='max',
+    # )
+
+    # TODO: save checkpoint after every epoch end? or is that already done?
+    # trainer = pl.Trainer(
+    #     max_epochs=max_epochs,
+    #     callbacks=[checkpoint_callback],
+    # )
+    trainer = pl.Trainer(
+        max_epochs=max_epochs,
+    )
+
+    # Continue training
+    logger.info("Continuing training...")
+
+    trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+
+    import ipdb; ipdb.set_trace()
+
+    # TODO: save checkpoint if the loss is good
+    # TODO: for a given repo, run the benchmark code (check for differences with courpus code here) to get the data nad corpus
+    # TODO: we now want to add these new things to the exisitng dataset for ONLY the current repo like PFR, not its dependencies, so delete hte lines for existing train/val/test and corpus with current repo and add the new ones
+    # TODO: then run this online learning code
+    
+    # TODO: should we use retriever trained on novel premises or random?
+
+    # TODO: use kaiyuy/leandojo-pl-ckpts for generator too if it works?
+
+    # TODO: delete new folder after done merging, call folders like existing and new or something and move to raid
+
+    return model
 
 def retrieve_proof(repo, repo_no_dir, sha):
     """
@@ -563,19 +653,28 @@ def replace_sorry_with_proof(proofs):
 
 def main():
     """The main function that drives the bot."""
+    # Update the encoder weights using an updated corpus
+    # TODO: move data to raid
+    # TODO: make sure this checkpoint works without online
+    # TODO: change kaiyuy files to robert checkpoint everywhere
+    # model_checkpoint_path = "checkpoints/new_retriever.ckpt"
+    model_checkpoint_path = "leandojo-pl-ckpts/new_retriever.ckpt"
+    # model_checkpoint_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+    new_checkpoint = update_and_train(model_checkpoint_path, "new_version_test_benchmark/random")
+
     results = {
         "total_repositories": 0,
         "repositories": {}
     }
     # TODO: remove
-    # clone_url = "https://github.com/Adarsh321123/PUTNAM-Adarsh.git"
-    # repo_name, sha = clone_repo(clone_url)
-    # name = repo_name
-    # url = clone_url.replace('.git', '')
-    # lean_git_repo = LeanGitRepo(url, sha)
-    # lean_git_repos.append(lean_git_repo)
-    # repos.append("Adarsh321123/PUTNAM-Adarsh")
-    search_github_repositories("Lean", 10)
+    clone_url = "https://github.com/Adarsh321123/new-version-test.git"
+    repo_name, sha = clone_repo(clone_url)
+    name = repo_name
+    url = clone_url.replace('.git', '')
+    lean_git_repo = LeanGitRepo(url, sha)
+    lean_git_repos.append(lean_git_repo)
+    repos.append("Adarsh321123/new-version-test")
+    # search_github_repositories("Lean", 10)
     # repos.append("Adarsh321123/pfr")
     # lean_git_repos.append(LeanGitRepo("https://github.com/Adarsh321123/pfr", "c297615a183a32f29f1313895c32f72d200f0bb6"))
     num_repos = len(repos)

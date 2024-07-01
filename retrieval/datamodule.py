@@ -241,6 +241,7 @@ class RetrievalDataModule(pl.LightningDataModule):
             self.tokenizer,
             is_train=True,
         )
+        print(f"Training dataset size: {len(self.ds_train)}")
 
         if stage in (None, "fit", "validate"):
             self.ds_val = RetrievalDataset(
@@ -252,6 +253,7 @@ class RetrievalDataModule(pl.LightningDataModule):
                 self.tokenizer,
                 is_train=False,
             )
+            print(f"Validation dataset size: {len(self.ds_val)}")
 
         if stage in (None, "fit", "predict"):
             self.ds_pred = RetrievalDataset(
@@ -266,6 +268,7 @@ class RetrievalDataModule(pl.LightningDataModule):
                 self.tokenizer,
                 is_train=False,
             )
+            print(f"Testing dataset size: {len(self.ds_pred)}")
 
     def train_dataloader(self) -> DataLoader:
         return DataLoader(

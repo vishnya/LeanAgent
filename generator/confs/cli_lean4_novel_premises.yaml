@@ -44,8 +44,8 @@ model:
   eval_num_theorems: 250  # Lower this number will make validation faster (but noiser).
 
 data:
-  data_path: data/leandojo_benchmark_4/novel_premises/
-  corpus_path: data/leandojo_benchmark_4/corpus.jsonl
+  data_path: leandojo_benchmark_4/novel_premises/
+  corpus_path: leandojo_benchmark_4/corpus.jsonl
   keep_marks: true
   preds_path: null
   batch_size: 8  # effective_batch_size == batch_size * accumulate_grad_batches * devices
