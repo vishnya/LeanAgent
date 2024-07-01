@@ -475,6 +475,7 @@ def update_and_train(model_checkpoint_path, new_data_path, max_epochs=10):
     # Continue training
     logger.info("Continuing training...")
 
+    import ipdb; ipdb.set_trace()
     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
 
     import ipdb; ipdb.set_trace()
