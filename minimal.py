@@ -21,6 +21,8 @@ try:
     state_dict['state_dict'] = inner_dict
 
     # print("loading the optimizer states")
+
+    # TODO: udpate any of these settings like scheduler if needed
     
     # optimizer_states = torch.load(optimizer_states_path)
 
@@ -50,6 +52,10 @@ try:
     model.load_state_dict(state_dict['state_dict'])
 
     optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
+
+    # scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.9)
+    lambda1 = lambda epoch: 0.95 ** epoch  # Decays the learning rate each epoch
+    scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda1)
     
     # Serialize the dummy optimizer's state
     optimizer_state_dict = optimizer.state_dict()
@@ -60,6 +66,10 @@ try:
     # Add the dummy optimizer state to the checkpoint
     state_dict['optimizer_states'] = [optimizer_state_dict]  # Adjust key as needed based on your training script
     # inside list: {'state': {}, 'param_groups': [{'lr': 0.0001, 'betas': (0.9, 0.999), 'eps': 1e-08, 'weight_decay': 0, 'amsgrad': False, 'maximize': False, 'foreach': None, 'capturable': False, 'differentiable': False, 'fused': None, 'params': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]}]}
+
+    scheduler_state_dict = scheduler.state_dict()
+    state_dict['lr_schedulers'] = [scheduler_state_dict]
+    # inside list: {'base_lrs': [0.0001], 'last_epoch': 0, 'verbose': False, '_step_count': 1, '_get_lr_called_within_step': False, '_last_lr': [0.0001], 'lr_lambdas': [None]}
 
     # complete_checkpoint = {
     #     'state_dict': state_dict['state_dict'],
