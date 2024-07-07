@@ -14,6 +14,7 @@ from lean_dojo import LeanGitRepo
 from typing import Optional, List
 from transformers import AutoTokenizer
 from torch.utils.data import Dataset, DataLoader
+import pickle
 
 
 from common import Context, Corpus, Batch, Example, format_state, get_all_pos_premises
@@ -29,6 +30,7 @@ class RetrievalDataset(Dataset):
         max_seq_len: int,
         tokenizer,
         is_train: bool,
+        cache_path: str,
     ) -> None:
         super().__init__()
         self.corpus = corpus
@@ -37,9 +39,27 @@ class RetrievalDataset(Dataset):
         self.max_seq_len = max_seq_len
         self.tokenizer = tokenizer
         self.is_train = is_train
-        self.data = list(
-            itertools.chain.from_iterable(self._load_data(path) for path in data_paths)
-        )
+        self.cache_path = cache_path
+        self.data = self.load_or_cache_data(data_paths)
+
+    def load_or_cache_data(self, data_paths: List[str]) -> List[Example]:
+        cache_file = os.path.join(self.cache_path, "cached_data.pkl")
+        
+        # Check if cached data exists
+        if os.path.exists(cache_file):
+            with open(cache_file, 'rb') as file:
+                data = pickle.load(file)
+            logger.info(f"Loaded data from cache {cache_file}")
+        else:
+            data = list(itertools.chain.from_iterable(self._load_data(path) for path in data_paths))
+            # Cache the data
+            # create file if it does not already exist
+            if not os.path.exists(os.path.dirname(cache_file)):
+                os.makedirs(os.path.dirname(cache_file))
+            with open(cache_file, 'wb') as file:
+                pickle.dump(data, file)
+            logger.info(f"Saved loaded data to cache {cache_file}")
+        return data
 
     def _load_data(self, data_path: str) -> List[Example]:
         data = []
@@ -240,6 +260,7 @@ class RetrievalDataModule(pl.LightningDataModule):
             self.max_seq_len,
             self.tokenizer,
             is_train=True,
+            cache_path=os.path.join(self.data_path, "cache_train")
         )
         print(f"Training dataset size: {len(self.ds_train)}")
 
@@ -252,6 +273,7 @@ class RetrievalDataModule(pl.LightningDataModule):
                 self.max_seq_len,
                 self.tokenizer,
                 is_train=False,
+                cache_path=os.path.join(self.data_path, "cache_val")
             )
             print(f"Validation dataset size: {len(self.ds_val)}")
 
@@ -267,9 +289,12 @@ class RetrievalDataModule(pl.LightningDataModule):
                 self.max_seq_len,
                 self.tokenizer,
                 is_train=False,
+                cache_path=os.path.join(self.data_path, "cache_pred")
             )
             print(f"Testing dataset size: {len(self.ds_pred)}")
 
+    # TODO: low pri: handle edge case like in new-version where dataset could be empty
+    # TODO: cases like with new-version where lots of tactics are empty, and those that exist have empty premises so we have all empty batches
     def train_dataloader(self) -> DataLoader:
         return DataLoader(
             self.ds_train,

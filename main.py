@@ -54,7 +54,8 @@ import pytorch_lightning as pl
 from retrieval.model import PremiseRetriever
 from retrieval.datamodule import RetrievalDataModule
 import torch
-from pytorch_lightning.callbacks import ModelCheckpoint
+from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping, LearningRateMonitor
+from pytorch_lightning import seed_everything
 
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 _LEAN4_VERSION_REGEX = re.compile(r"leanprover/lean4:(?P<version>.+?)")
@@ -407,7 +408,9 @@ def is_supported_version(v) -> bool:
     else:
         return True
 
-def update_and_train(model_checkpoint_path, new_data_path, max_epochs=10):
+def update_and_train(model_checkpoint_path, new_data_path, max_epochs=1): # TODO: change back to 2
+    seed_everything(3407)
+    
     # Load the model from checkpoint
     if not torch.cuda.is_available():
         logger.warning("Indexing the corpus using CPU can be very slow.")
@@ -442,18 +445,44 @@ def update_and_train(model_checkpoint_path, new_data_path, max_epochs=10):
     # TODO: try with novel split later instead of random
     # TODO: use the yaml file instead of repeating here, same throughout
     corpus_path = new_data_path.split("/")[0] + "/corpus.jsonl"
+    # TODO: might need to change batch size if size of dataset is less than 8
+    print(f"Data path: {new_data_path}")
     data_module = RetrievalDataModule(
         data_path=new_data_path,
         corpus_path=corpus_path,
         num_negatives=3,
         num_in_file_negatives=1,
         model_name="google/byt5-small",
-        batch_size=8,
+        batch_size=4, # TODO: chagne back to 8 if needed
         eval_batch_size=64,
         max_seq_len=1024,
         num_workers=4
     )
     data_module.setup(stage='fit')
+
+    checkpoint_callback = ModelCheckpoint(
+        dirpath="./lightning_logs",
+        filename="{epoch}-{Recall@10_val:.2f}",
+        verbose=True,
+        save_top_k=1,
+        save_last=True,
+        monitor="Recall@10_val",
+        mode="max"
+    )
+    
+    early_stop_callback = EarlyStopping(
+        monitor="Recall@10_val",
+        patience=5,
+        mode="max",
+        verbose=True
+    )
+
+    lr_monitor = LearningRateMonitor(logging_interval='step')
+
+    # import ipdb; ipdb.set_trace()
+    print(f"Training dataset size after load: {len(data_module.ds_train)}")
+    print(f"Validation dataset size after load: {len(data_module.ds_val)}")
+    print(f"Testing dataset size after load: {len(data_module.ds_pred)}")
 
     # checkpoint_callback = ModelCheckpoint(
     #     save_weights_only=False,  # This needs to be False to save full state
@@ -469,16 +498,19 @@ def update_and_train(model_checkpoint_path, new_data_path, max_epochs=10):
     #     callbacks=[checkpoint_callback],
     # )
     trainer = pl.Trainer(
+        accelerator="gpu",
+        gradient_clip_val=1.0,
+        # devices=4, # TODO: remove if not using all 4
+        callbacks=[lr_monitor, checkpoint_callback, early_stop_callback],
         max_epochs=max_epochs,
+        log_every_n_steps=1, # TODO: change?
+        num_sanity_val_steps=0, # TODO: remove later
     )
 
     # Continue training
-    logger.info("Continuing training...")
+    logger.info("Starting progressive training...")
 
-    import ipdb; ipdb.set_trace()
     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
-
-    import ipdb; ipdb.set_trace()
 
     # TODO: save checkpoint if the loss is good
     # TODO: for a given repo, run the benchmark code (check for differences with courpus code here) to get the data nad corpus
@@ -490,6 +522,8 @@ def update_and_train(model_checkpoint_path, new_data_path, max_epochs=10):
     # TODO: use kaiyuy/leandojo-pl-ckpts for generator too if it works?
 
     # TODO: delete new folder after done merging, call folders like existing and new or something and move to raid
+
+    # TODO: add anything else from yaml conf if needed
 
     return model
 
@@ -661,7 +695,12 @@ def main():
     # model_checkpoint_path = "checkpoints/new_retriever.ckpt"
     model_checkpoint_path = "leandojo-pl-ckpts/new_retriever.ckpt"
     # model_checkpoint_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
-    new_checkpoint = update_and_train(model_checkpoint_path, "new_version_test_benchmark/random")
+    # data_path = "pfr_benchmark/random"
+    # data_path = "pfr_benchmark_2/random"
+    # data_path = "new_version_test_benchmark/random"
+    data_path = "new_version_test2_benchmark/random"
+    new_checkpoint = update_and_train(model_checkpoint_path, data_path)
+    return # TODO: remove
 
     results = {
         "total_repositories": 0,

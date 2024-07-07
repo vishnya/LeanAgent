@@ -16,9 +16,9 @@ from lean_dojo.constants import LEAN4_PACKAGES_DIR
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 
 URL = "https://github.com/Adarsh321123/new-version-test"
-COMMIT = "6eb56a01c8febf938bcc166cd64339e223a99086"
-DST_DIR = Path("new_version_test_benchmark")
-NUM_VAL = NUM_TEST = 1 # TODO: change from static number to percent of dataset size
+COMMIT = "a9ef0dcad9f42d4b35c9de402999430974ddf56d"
+DST_DIR = Path("new_version_test2_benchmark")
+DATASET_NAME = "new_version_test2"
 # TODO: ensure that every split has theorems from THAT REPO (like PFR) in train/val/test instead of just imports
 
 SPLIT_NAME = str  # train/val/test
@@ -67,28 +67,34 @@ def is_supported_version(v) -> bool:
 
 def _split_sequentially(
     traced_theorems: List[TracedTheorem],
+    num_val: int,
+    num_test: int
 ) -> SPLIT:
     """Split ``traced_theorems`` sequentially into train/val/test."""
     num_theorems = len(traced_theorems)
-    num_train = num_theorems - NUM_VAL - NUM_TEST
+    num_train = num_theorems - num_val - num_test
     return {
         "train": traced_theorems[:num_train],
-        "val": traced_theorems[num_train : num_train + NUM_VAL],
-        "test": traced_theorems[num_train + NUM_VAL :],
+        "val": traced_theorems[num_train : num_train + num_val],
+        "test": traced_theorems[num_train + num_val :],
     }
 
 
 def split_randomly(
     traced_theorems: List[TracedTheorem],
+    num_val: int,
+    num_test: int
 ) -> SPLIT:
     """Split ``traced_theorems`` randomly into train/val/test."""
     logger.info("Splitting the theorems randomly")
     traced_theorems = copy(traced_theorems)
     random.shuffle(traced_theorems)
-    return _split_sequentially(traced_theorems)
+    return _split_sequentially(traced_theorems, num_val, num_test)
 
 def split_by_premise(
     traced_theorems: List[TracedTheorem],
+    num_val: int,
+    num_test: int
 ) -> SPLIT:
     """
     Split theorems into train/val/test so that proofs in val/test rely on at
@@ -98,7 +104,7 @@ def split_by_premise(
 
     # Figure out the number of theorems in train/val/test.
     num_theorems = len(traced_theorems)
-    num_val_test = NUM_VAL + NUM_TEST
+    num_val_test = num_val + num_test
     num_train = num_theorems - num_val_test
     theorems_val_test = set()
 
@@ -123,20 +129,25 @@ def split_by_premise(
 
     return {
         "train": theorems_train,
-        "val": theorems_val_test[:NUM_VAL],
-        "test": theorems_val_test[NUM_VAL:],
+        "val": theorems_val_test[:num_val],
+        "test": theorems_val_test[num_val:],
     }
 
-def split_data(traced_repo: TracedRepo) -> Dict[SPLIT_STRATEGY, SPLIT]:
+def split_data(traced_repo: TracedRepo, num_val_pct: float = 0.02, num_test_pct: float = 0.02) -> Dict[SPLIT_STRATEGY, SPLIT]:
     # Skip theorems in the Lean 4 repo itself.
     traced_theorems = [
         thm for thm in traced_repo.get_traced_theorems() if not thm.repo.is_lean4
     ]
     logger.info(f"{len(traced_theorems)} theorems in total")
+    num_theorems = len(traced_theorems)
+    num_val = int(num_theorems * num_val_pct)
+    num_test = int(num_theorems * num_test_pct)
+
+    logger.info(f"{num_theorems} theorems in total, with {num_val} for validation and {num_test} for testing")
 
     return {
-        "random": split_randomly(traced_theorems),
-        "novel_premises": split_by_premise(traced_theorems),
+        "random": split_randomly(traced_theorems, num_val, num_test),
+        "novel_premises": split_by_premise(traced_theorems, num_val, num_test),
     }
 
 def _get_file_path(traced_repo: TracedRepo, thm: TracedTheorem) -> str:
@@ -218,23 +229,23 @@ def export_premises(traced_repo: TracedRepo, dst_path: Path) -> None:
     )
 
 
-# def export_licenses(traced_repo: TracedRepo, dst_path: Path) -> None:
-#     """Export the licenses of a traced repo and all its dependencies to ``dst_path``."""
-#     license_dir = dst_path / "licenses"
-#     license_dir.mkdir()
-#     all_repos = [traced_repo.repo] + list(traced_repo.dependencies.values())
+def export_licenses(traced_repo: TracedRepo, dst_path: Path) -> None:
+    """Export the licenses of a traced repo and all its dependencies to ``dst_path``."""
+    license_dir = dst_path / "licenses"
+    license_dir.mkdir()
+    all_repos = [traced_repo.repo] + list(traced_repo.dependencies.values())
 
-#     for repo in all_repos:
-#         lic = repo.get_license()
-#         if lic is None:
-#             continue
-#         with (license_dir / repo.name).open("wt") as oup:
-#             oup.write(lic)
+    for repo in all_repos:
+        lic = repo.get_license()
+        if lic is None:
+            continue
+        with (license_dir / repo.name).open("wt") as oup:
+            oup.write(lic)
 
-#     with (license_dir / "README.md").open("wt") as oup:
-#         oup.write(
-#             "This directory contains licenses of Lean repos used to generate this dataset. The dataset itself is released under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)."
-#         )
+    with (license_dir / "README.md").open("wt") as oup:
+        oup.write(
+            "This directory contains licenses of Lean repos used to generate this dataset. The dataset itself is released under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)."
+        )
 
 
 def export_metadata(traced_repo: TracedRepo, dst_path: Path, **kwargs) -> None:
@@ -269,7 +280,7 @@ def export_data(
     export_premises(traced_repo, dst_path)
 
     # Export the licenses.
-    # export_licenses(traced_repo, dst_path)
+    export_licenses(traced_repo, dst_path)
 
     # Export metadata.
     export_metadata(traced_repo, dst_path, **kwargs)
@@ -297,4 +308,4 @@ logger.info(f"repo: {repo}")
 
 traced_repo = trace(repo)
 splits = split_data(traced_repo)
-export_data(traced_repo, splits, DST_DIR, dataset_name="LeanDojo Benchmark 4")
+export_data(traced_repo, splits, DST_DIR, dataset_name=DATASET_NAME)

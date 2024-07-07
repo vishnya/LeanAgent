@@ -36,6 +36,7 @@ class PremiseRetriever(pl.LightningModule):
         max_seq_len: int,
         num_retrieved: int = 100,
     ) -> None:
+        # logger.info("Inside __init__")
         super().__init__()
         self.save_hyperparameters()
         self.lr = lr
@@ -45,17 +46,23 @@ class PremiseRetriever(pl.LightningModule):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.encoder = T5EncoderModel.from_pretrained(model_name)
         self.embeddings_staled = True
+        self.train_loss = []
+        # logger.info("End of __init__")
 
     @classmethod
     def load(cls, ckpt_path: str, device, freeze: bool, config: dict) -> "PremiseRetriever":
+        # logger.info("Inside load")
+        # logger.info("End of load")
         return load_checkpoint(cls, ckpt_path, device, freeze, config)
 
     def load_corpus(self, path_or_corpus: Union[str, Corpus]) -> None:
+        # logger.info("Inside load_corpus")
         """Associate the retriever with a corpus."""
         if isinstance(path_or_corpus, Corpus):
             self.corpus = path_or_corpus
             self.corpus_embeddings = None
             self.embeddings_staled = True
+            # logger.info("End of load_corpus inside if")
             return
 
         path = path_or_corpus
@@ -68,10 +75,13 @@ class PremiseRetriever(pl.LightningModule):
             self.corpus = indexed_corpus.corpus
             self.corpus_embeddings = indexed_corpus.embeddings
             self.embeddings_staled = False
+        # logger.info("End of load_corpus outside if")
 
     @property
     def embedding_size(self) -> int:
         """Return the size of the feature vector produced by ``encoder``."""
+        # logger.info("Inside embedding_size")
+        # logger.info("End of embedding_size")
         return self.encoder.config.hidden_size
 
     def _encode(
@@ -109,6 +119,7 @@ class PremiseRetriever(pl.LightningModule):
         label: torch.LongTensor,
     ) -> torch.FloatTensor:
         """Compute the contrastive loss for premise retrieval."""
+        # logger.info("Inside forward")
         # Encode the query and positive/negative documents.
         context_emb = self._encode(context_ids, context_mask)
         pos_premise_emb = self._encode(pos_premise_ids, pos_premise_mask)
@@ -122,6 +133,7 @@ class PremiseRetriever(pl.LightningModule):
         similarity = torch.mm(context_emb, all_premise_embs.t())
         assert -1 <= similarity.min() <= similarity.max() <= 1
         loss = F.mse_loss(similarity, label)
+        # logger.info("End of forward")
         return loss
 
     ############
@@ -129,6 +141,7 @@ class PremiseRetriever(pl.LightningModule):
     ############
 
     def on_fit_start(self) -> None:
+        logger.info("Inside on_fit_start")
         if self.logger is not None:
             self.logger.log_hyperparams(self.hparams)
             logger.info(f"Logging to {self.trainer.log_dir}")
@@ -136,8 +149,10 @@ class PremiseRetriever(pl.LightningModule):
         self.corpus = self.trainer.datamodule.corpus
         self.corpus_embeddings = None
         self.embeddings_staled = True
+        logger.info("End of on_fit_start")
 
     def training_step(self, batch: Dict[str, Any], _) -> torch.Tensor:
+        # logger.info("Inside training_step")
         loss = self(
             batch["context_ids"],
             batch["context_mask"],
@@ -147,16 +162,22 @@ class PremiseRetriever(pl.LightningModule):
             batch["neg_premises_mask"],
             batch["label"],
         )
+        self.train_loss.append(loss.item())
         self.log(
             "loss_train", loss, on_epoch=True, sync_dist=True, batch_size=len(batch)
         )
+        # logger.info("End of training_step")
         return loss
 
     def on_train_batch_end(self, outputs, batch, _) -> None:
         """Mark the embeddings as staled after a training batch."""
+        # logger.info("Inside on_train_batch_end")
         self.embeddings_staled = True
+        # logger.info("End of on_train_batch_end")
 
     def configure_optimizers(self) -> Dict[str, Any]:
+        logger.info("Inside configure_optimizers")
+        logger.info("End of configure_optimizers")
         return get_optimizers(
             self.parameters(), self.trainer, self.lr, self.warmup_steps
         )
@@ -167,6 +188,7 @@ class PremiseRetriever(pl.LightningModule):
 
     @torch.no_grad()
     def reindex_corpus(self, batch_size: int) -> None:
+        logger.info("Inside reindex_corpus")
         """Re-index the retrieval corpus using the up-to-date encoder."""
         if not self.embeddings_staled:
             return
@@ -193,12 +215,17 @@ class PremiseRetriever(pl.LightningModule):
             )
 
         self.embeddings_staled = False
+        logger.info("End of reindex_corpus")
 
     def on_validation_start(self) -> None:
+        logger.info("Inside on_validation_start")
         self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
+        logger.info("End of on_validation_start")
 
     def validation_step(self, batch: Dict[str, Any], batch_idx: int) -> None:
         """Retrieve premises and calculate metrics such as Recall@K and MRR."""
+        logger.info("Inside validation_step")
+        logger.info("All training loss for epoch", self.train_loss)
         # Retrieval.
         context_emb = self._encode(batch["context_ids"], batch["context_mask"])
         assert not self.embeddings_staled
@@ -251,6 +278,7 @@ class PremiseRetriever(pl.LightningModule):
         recall = [100 * np.mean(_) for _ in recall]
 
         for j in range(self.num_retrieved):
+            logger.info(f"Recall@{j+1}_val: {recall[j]}")
             self.log(
                 f"Recall@{j+1}_val",
                 recall[j],
@@ -259,6 +287,7 @@ class PremiseRetriever(pl.LightningModule):
                 batch_size=num_with_premises,
             )
 
+        logger.info(f"MRR: {np.mean(MRR)}")
         self.log(
             "MRR",
             np.mean(MRR),
@@ -266,19 +295,23 @@ class PremiseRetriever(pl.LightningModule):
             sync_dist=True,
             batch_size=num_with_premises,
         )
+        logger.info("End of validation_step")
 
     ##############
     # Prediction #
     ##############
 
     def on_predict_start(self) -> None:
+        logger.info("Inside on_predict_start")
         self.corpus = self.trainer.datamodule.corpus
         self.corpus_embeddings = None
         self.embeddings_staled = True
         self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
         self.predict_step_outputs = []
+        logger.info("End of on_predict_start")
 
     def predict_step(self, batch: Dict[str, Any], _):
+        logger.info("Inside predict_step")
         context_emb = self._encode(batch["context_ids"], batch["context_mask"])
         assert not self.embeddings_staled
         retrieved_premises, scores = self.corpus.get_nearest_premises(
@@ -325,8 +358,10 @@ class PremiseRetriever(pl.LightningModule):
                     "scores": s,
                 }
             )
+        logger.info("End of predict_step")
 
     def on_predict_epoch_end(self) -> None:
+        logger.info("Inside on_predict_epoch_end")
         if self.trainer.log_dir is not None:
             path = os.path.join(self.trainer.log_dir, "predictions.pickle")
             with open(path, "wb") as oup:
@@ -334,6 +369,7 @@ class PremiseRetriever(pl.LightningModule):
             logger.info(f"Retrieval predictions saved to {path}")
 
         self.predict_step_outputs.clear()
+        logger.info("End of on_predict_epoch_end")
 
     def retrieve(
         self,
@@ -344,6 +380,7 @@ class PremiseRetriever(pl.LightningModule):
         k: int,
     ) -> Tuple[List[Premise], List[float]]:
         """Retrieve ``k`` premises from ``corpus`` using ``state`` and ``tactic_prefix`` as context."""
+        logger.info("Inside retrieve")
         self.reindex_corpus(batch_size=32)
 
         ctx = [
@@ -373,4 +410,5 @@ class PremiseRetriever(pl.LightningModule):
             context_emb,
             k,
         )
+        logger.info("End of retrieve")
         return retrieved_premises, scores

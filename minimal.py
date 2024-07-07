@@ -9,7 +9,7 @@ try:
     state_dict = torch.load(model_checkpoint_path)
     state_dict["pytorch-lightning_version"] = "0.0.0"
     state_dict['global_step'] = None
-    state_dict['epoch'] = 5 # TODO: change
+    state_dict['epoch'] = 0 # TODO: change
     state_dict['state_dict'] = state_dict
     # import ipdb; ipdb.set_trace()
     inner_dict = copy.deepcopy(state_dict['state_dict'])

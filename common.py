@@ -25,7 +25,6 @@ Batch = Dict[str, Any]
 MARK_START_SYMBOL = "<a>"
 MARK_END_SYMBOL = "</a>"
 
-
 def remove_marks(s: str) -> str:
     """Remove all :code:`<a>` and :code:`</a>` from ``s``."""
     return s.replace(MARK_START_SYMBOL, "").replace(MARK_END_SYMBOL, "")
@@ -218,7 +217,12 @@ class Corpus:
         self.imported_premises_cache = {}
         self.fill_cache()
 
-    def _get_file(self, path: str) -> File:
+    def _get_file(self, path: str) -> File:        
+        # for some reason, the `path` in the parameter starts with ./
+        # but the paths in the corpus don't
+        # so we need to remove the ./
+        if path.startswith("./"):
+            path = path[2:]
         return self.transitive_dep_graph.nodes[path]["file"]
 
     def __len__(self) -> int:
@@ -256,7 +260,8 @@ class Corpus:
         Return None if no such premise can be found.
         """
         for p in self.get_premises(path):
-            assert p.path == path
+            # accounting for . vs ./ starting in the path
+            assert (p.path == path) or (p.path == path[2:])
             if p.start <= pos <= p.end:
                 return p
         return None
@@ -348,8 +353,6 @@ def get_all_pos_premises(annot_tac, corpus: Corpus) -> List[Premise]:
         p = corpus.locate_premise(def_path, Pos(*prov["def_pos"]))
         if p is not None:
             all_pos_premises.add(p)
-        else:
-            logger.warning(f"Cannot locate premise: {prov}")
 
     return list(all_pos_premises)
 
