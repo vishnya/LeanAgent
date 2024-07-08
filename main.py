@@ -453,7 +453,7 @@ def update_and_train(model_checkpoint_path, new_data_path, max_epochs=1): # TODO
         num_negatives=3,
         num_in_file_negatives=1,
         model_name="google/byt5-small",
-        batch_size=4, # TODO: chagne back to 8 if needed
+        batch_size=4,
         eval_batch_size=64,
         max_seq_len=1024,
         num_workers=4
@@ -500,7 +500,9 @@ def update_and_train(model_checkpoint_path, new_data_path, max_epochs=1): # TODO
     trainer = pl.Trainer(
         accelerator="gpu",
         gradient_clip_val=1.0,
-        # devices=4, # TODO: remove if not using all 4
+        precision="bf16-mixed",
+        strategy="ddp",
+        devices=4, # TODO: remove if not using all 4
         callbacks=[lr_monitor, checkpoint_callback, early_stop_callback],
         max_epochs=max_epochs,
         log_every_n_steps=1, # TODO: change?
@@ -536,6 +538,7 @@ def retrieve_proof(repo, repo_no_dir, sha):
     4. Search for proofs for theorems with `sorry` in them.
     """
     ckpt_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+    # ckpt_path = "lightning_logs_one_epoch_yay/epoch=0-Recall@10_val=64.61.ckpt"
     indexed_corpus_path = str(DST_DIR / repo_no_dir / sha) + "/corpus.jsonl"
     tactic = None
     module = None
@@ -692,8 +695,10 @@ def main():
     # TODO: move data to raid
     # TODO: make sure this checkpoint works without online
     # TODO: change kaiyuy files to robert checkpoint everywhere
-    # model_checkpoint_path = "checkpoints/new_retriever.ckpt"
-    model_checkpoint_path = "leandojo-pl-ckpts/new_retriever.ckpt"
+    model_checkpoint_path = "checkpoints/new_retriever.ckpt"
+    # model_checkpoint_path = "leandojo-pl-ckpts/new_retriever.ckpt"
+    # model_checkpoint_path = "lightning_logs_one_epoch_yay/epoch=0-Recall@10_val=64.61.ckpt"  # for one epoch
+    # model_checkpoint_path = "lightning_logs/epoch=0-Recall@10_val=63.46.ckpt"  # for two epochs
     # model_checkpoint_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     # data_path = "pfr_benchmark/random"
     # data_path = "pfr_benchmark_2/random"
