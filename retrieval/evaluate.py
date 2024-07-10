@@ -48,34 +48,46 @@ def main() -> None:
         description="Script for evaluating the premise retriever."
     )
     parser.add_argument(
-        "--preds-file",
+        "--preds-files",
         type=str,
+        nargs="+",
         required=True,
-        help="Path to the retriever's predictions file.",
+        help="Paths to the retriever's predictions files.",
     )
     parser.add_argument(
-        "--data-path",
+        "--data-paths",
         type=str,
+        nargs="+",
         required=True,
-        help="Path to the directory containing the train/val/test splits.",
+        help="Paths to the directories containing the train/val/test splits.",
     )
     args = parser.parse_args()
     logger.info(args)
 
-    logger.info(f"Loading predictions from {args.preds_file}")
-    preds = pickle.load(open(args.preds_file, "rb"))
-    preds_map = {
-        (p["file_path"], p["full_name"], tuple(p["start"]), p["tactic_idx"]): p
-        for p in preds
-    }
-    assert len(preds) == len(preds_map), "Duplicate predictions found!"
+    total_R1, total_R10, total_MRR = [], [], []
+    for preds_file, data_path in zip(args.preds_files, args.data_paths):
+        # TODO: maybe later just do test?
+        logger.info(f"Loading predictions from {preds_file}")
+        preds = pickle.load(open(preds_file, "rb"))
+        preds_map = {
+            (p["file_path"], p["full_name"], tuple(p["start"]), p["tactic_idx"]): p
+            for p in preds
+        }
+        assert len(preds) == len(preds_map), "Duplicate predictions found!"
+        for split in ("train", "val", "test"): # TODO: why all 3? isn't that a data leakage?
+            data_path = os.path.join(args.data_path, f"{split}.json")
+            data = json.load(open(data_path))
+            logger.info(f"Evaluating on {data_path}")
+            R1, R10, MRR = _eval(data, preds_map)
+            logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+            total_R1.append(R1)
+            total_R10.append(R10)
+            total_MRR.append(MRR)
 
-    for split in ("train", "val", "test"):
-        data_path = os.path.join(args.data_path, f"{split}.json")
-        data = json.load(open(data_path))
-        logger.info(f"Evaluating on {data_path}")
-        R1, R10, MRR = _eval(data, preds_map)
-        logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+    avg_R1 = np.mean(total_R1)
+    avg_R10 = np.mean(total_R10)
+    avg_MRR = np.mean(total_MRR)
+    logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
 
 
 if __name__ == "__main__":

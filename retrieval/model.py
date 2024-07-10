@@ -1,6 +1,7 @@
 """Ligihtning module for the premise retriever."""
 
 import os
+import json
 import math
 import torch
 import pickle
@@ -47,7 +48,56 @@ class PremiseRetriever(pl.LightningModule):
         self.encoder = T5EncoderModel.from_pretrained(model_name)
         self.embeddings_staled = True
         self.train_loss = []
+        self.previous_params = {}
+        self.fisher_info = {}
         # logger.info("End of __init__")
+
+    def compute_fisher_information(self, dataloader):
+        logger.info("Computing Fisher Information")
+        # TODO: compute at end of running
+        # TODO: save the matrix
+        # TODO: do on 4 GPUs
+        # TODO: use old dataloader
+        if not torch.cuda.is_available():
+            logger.warning("Indexing the corpus using CPU can be very slow.")
+            device = torch.device("cpu")
+        else:
+            device = torch.device("cuda")
+        # Code to compute the Fisher Information Matrix after training on the first task
+        self.eval()
+        # Use tqdm to see progress
+        for batch in tqdm(dataloader):
+            self.zero_grad()
+            # output = self.forward(**batch)
+            # loss = self.loss_function(output, batch['labels'])
+            context_ids, context_mask = batch["context_ids"].to(device), batch["context_mask"].to(device)
+            pos_premise_ids, pos_premise_mask = batch["pos_premise_ids"].to(device), batch["pos_premise_mask"].to(device)
+            neg_premises_ids, neg_premises_mask = [x.to(device) for x in  batch["neg_premises_ids"]], [x.to(device) for x in batch["neg_premises_mask"]]
+            label = batch["label"].to(device)
+            loss = self.forward(
+                context_ids,
+                context_mask,
+                pos_premise_ids,
+                pos_premise_mask,
+                neg_premises_ids,
+                neg_premises_mask,
+                label,
+            )
+            loss.backward()
+            for name, param in self.named_parameters():
+                if param.grad is not None:
+                    self.fisher_info[name] = param.grad ** 2 + self.fisher_info.get(name, 0)
+
+        return self.fisher_info
+
+    def ewc_loss(self, lamda=5000):
+        # TODO: choose lambda and ewc_loss better if needed
+        ewc_loss = 0
+        for name, param in self.named_parameters():
+            if name in self.previous_params:
+                # EWC Penalty is the sum of the squares of differences times the Fisher Information
+                ewc_loss += (self.fisher_info[name] * (param - self.previous_params[name]) ** 2).sum()
+        return lamda * ewc_loss
 
     @classmethod
     def load(cls, ckpt_path: str, device, freeze: bool, config: dict) -> "PremiseRetriever":
@@ -162,6 +212,9 @@ class PremiseRetriever(pl.LightningModule):
             batch["neg_premises_mask"],
             batch["label"],
         )
+        # logger.info(f"Training loss before EWC: {loss.item():.4f}")
+        # loss += self.ewc_loss()
+        # logger.info(f"Training loss after EWC: {loss.item():.4f}")
         self.train_loss.append(loss.item())
         self.log(
             "loss_train", loss, on_epoch=True, sync_dist=True, batch_size=len(batch)
@@ -176,8 +229,8 @@ class PremiseRetriever(pl.LightningModule):
         # logger.info("End of on_train_batch_end")
 
     def configure_optimizers(self) -> Dict[str, Any]:
-        logger.info("Inside configure_optimizers")
-        logger.info("End of configure_optimizers")
+        # logger.info("Inside configure_optimizers")
+        # logger.info("End of configure_optimizers")
         return get_optimizers(
             self.parameters(), self.trainer, self.lr, self.warmup_steps
         )
@@ -188,7 +241,7 @@ class PremiseRetriever(pl.LightningModule):
 
     @torch.no_grad()
     def reindex_corpus(self, batch_size: int) -> None:
-        logger.info("Inside reindex_corpus")
+        # logger.info("Inside reindex_corpus")
         """Re-index the retrieval corpus using the up-to-date encoder."""
         if not self.embeddings_staled:
             return
@@ -213,14 +266,13 @@ class PremiseRetriever(pl.LightningModule):
             self.corpus_embeddings[i : i + batch_size] = self._encode(
                 tokenized_premises.input_ids, tokenized_premises.attention_mask
             )
-
         self.embeddings_staled = False
-        logger.info("End of reindex_corpus")
+        # logger.info("End of reindex_corpus")
 
     def on_validation_start(self) -> None:
-        logger.info("Inside on_validation_start")
+        # logger.info("Inside on_validation_start")
         self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
-        logger.info("End of on_validation_start")
+        # logger.info("End of on_validation_start")
 
     def validation_step(self, batch: Dict[str, Any], batch_idx: int) -> None:
         """Retrieve premises and calculate metrics such as Recall@K and MRR."""
@@ -302,16 +354,16 @@ class PremiseRetriever(pl.LightningModule):
     ##############
 
     def on_predict_start(self) -> None:
-        logger.info("Inside on_predict_start")
+        # logger.info("Inside on_predict_start")
         self.corpus = self.trainer.datamodule.corpus
         self.corpus_embeddings = None
         self.embeddings_staled = True
         self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
         self.predict_step_outputs = []
-        logger.info("End of on_predict_start")
+        # logger.info("End of on_predict_start")
 
     def predict_step(self, batch: Dict[str, Any], _):
-        logger.info("Inside predict_step")
+        # logger.info("Inside predict_step")
         context_emb = self._encode(batch["context_ids"], batch["context_mask"])
         assert not self.embeddings_staled
         retrieved_premises, scores = self.corpus.get_nearest_premises(
@@ -358,18 +410,97 @@ class PremiseRetriever(pl.LightningModule):
                     "scores": s,
                 }
             )
-        logger.info("End of predict_step")
+        # logger.info("End of predict_step")
+    
+    def _eval(self, data, preds_map) -> Tuple[float, float, float]:
+        R1 = []
+        R10 = []
+        MRR = []
+
+        for thm in tqdm(data):
+            for i, _ in enumerate(thm["traced_tactics"]):
+                logger.info(f"thm['file_path']: {thm['file_path']}")
+                logger.info(f"thm['full_name']: {thm['full_name']}")
+                logger.info(f"tuple(thm['start']): {tuple(thm['start'])}")
+                logger.info(f"i: {i}")
+                # pred = preds_map[
+                #     (thm["file_path"], thm["full_name"], tuple(thm["start"]), i)
+                # ]
+                pred = None
+                key = (thm["file_path"], thm["full_name"], tuple(thm["start"]), i)
+                logger.info(f"Checking if key {key} is in preds_map")
+                if key in preds_map:
+                    pred = preds_map[key]
+                    logger.info(f"Key {key} found in predictions")
+                else:
+                    logger.info(f"Key {key} not found in predictions.")
+                    continue  # or handle as appropriate
+                all_pos_premises = set(pred["all_pos_premises"])
+                if len(all_pos_premises) == 0:
+                    continue
+
+                retrieved_premises = pred["retrieved_premises"]
+                TP1 = retrieved_premises[0] in all_pos_premises
+                R1.append(float(TP1) / len(all_pos_premises))
+                TP10 = len(all_pos_premises.intersection(retrieved_premises[:10]))
+                R10.append(float(TP10) / len(all_pos_premises))
+
+                for j, p in enumerate(retrieved_premises):
+                    if p in all_pos_premises:
+                        MRR.append(1.0 / (j + 1))
+                        break
+                else:
+                    MRR.append(0.0)
+
+        R1 = 100 * np.mean(R1)
+        R10 = 100 * np.mean(R10)
+        MRR = np.mean(MRR)
+        return R1, R10, MRR
 
     def on_predict_epoch_end(self) -> None:
-        logger.info("Inside on_predict_epoch_end")
+        # logger.info("Inside on_predict_epoch_end")
         if self.trainer.log_dir is not None:
-            path = os.path.join(self.trainer.log_dir, "predictions.pickle")
-            with open(path, "wb") as oup:
-                pickle.dump(self.predict_step_outputs, oup)
-            logger.info(f"Retrieval predictions saved to {path}")
+            logger.info("Using the predictions to find the current test accuracy")
+            for p in self.predict_step_outputs:
+                # if p["file_path"] == ".lake/packages/mathlib/Mathlib/Topology/Category/TopCat/Limits/Products.lean" or p["file_path"] == ".lake/packages/mathlib/Mathlib/Algebra/Order/Field/Basic.lean" or p["file_path"] == ".lake/packages/mathlib/Mathlib/Algebra/EuclideanDomain/Defs.lean":
+                logger.info(f"p['file_path']: {p['file_path']}")
+                logger.info(f"p['full_name']: {p['full_name']}")
+                logger.info(f"tuple(p['start']): {tuple(p['start'])}")
+                logger.info(f"p['tactic_idx']: {p['tactic_idx']}")
+            preds_map = {
+                (p["file_path"], p["full_name"], tuple(p["start"]), p["tactic_idx"]): p
+                for p in self.predict_step_outputs
+            }
+            assert len(self.predict_step_outputs) == len(preds_map), "Duplicate predictions found!"
+            curr_R1 = []
+            curr_R10 = []
+            curr_MRR = []
+            split = "test"
+            data_path = os.path.join(self.trainer.datamodule.data_path, f"{split}.json")
+            data = json.load(open(data_path))
+            logger.info(f"Evaluating on {data_path}")
+            R1, R10, MRR = self._eval(data, preds_map)
+            logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+            curr_R1.append(R1)
+            curr_R10.append(R10)
+            curr_MRR.append(MRR)
+
+            # Save results to a text file
+            results_path = "evaluation_results.txt"
+            if not os.path.exists(results_path):
+                os.makedirs(results_path)
+            with open(results_path, 'w') as f:
+                results = zip(curr_R1, curr_R10, curr_MRR)
+                for r1, r10, mrr in results:
+                    f.write(f"R1: {r1}, R10: {r10}, MRR: {mrr}\n")
+
+            # path = os.path.join(self.trainer.log_dir, "predictions.pickle")
+            # with open(path, "wb") as oup:
+            #     pickle.dump(self.predict_step_outputs, oup)
+            # logger.info(f"Retrieval predictions saved to {path}")
 
         self.predict_step_outputs.clear()
-        logger.info("End of on_predict_epoch_end")
+        # logger.info("End of on_predict_epoch_end")
 
     def retrieve(
         self,
@@ -380,7 +511,7 @@ class PremiseRetriever(pl.LightningModule):
         k: int,
     ) -> Tuple[List[Premise], List[float]]:
         """Retrieve ``k`` premises from ``corpus`` using ``state`` and ``tactic_prefix`` as context."""
-        logger.info("Inside retrieve")
+        # logger.info("Inside retrieve")
         self.reindex_corpus(batch_size=32)
 
         ctx = [
@@ -410,5 +541,5 @@ class PremiseRetriever(pl.LightningModule):
             context_emb,
             k,
         )
-        logger.info("End of retrieve")
+        # logger.info("End of retrieve")
         return retrieved_premises, scores
