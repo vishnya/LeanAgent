@@ -25,8 +25,10 @@ import os
 import uuid
 import json
 import pickle
+import numpy as np
 import hashlib
 import argparse
+from tqdm import tqdm
 from loguru import logger
 from lean_dojo import Theorem
 from typing import List, Tuple, Optional
@@ -408,8 +410,112 @@ def is_supported_version(v) -> bool:
     else:
         return True
 
-def update_and_train(model_checkpoint_path, new_data_path, max_epochs=1): # TODO: change back to 2
+
+def _eval(data, preds_map) -> Tuple[float, float, float]:
+        R1 = []
+        R10 = []
+        MRR = []
+
+        for thm in tqdm(data):
+            for i, _ in enumerate(thm["traced_tactics"]):
+                # logger.info(f"thm['file_path']: {thm['file_path']}")
+                # logger.info(f"thm['full_name']: {thm['full_name']}")
+                # logger.info(f"tuple(thm['start']): {tuple(thm['start'])}")
+                # logger.info(f"i: {i}")
+                # pred = preds_map[
+                #     (thm["file_path"], thm["full_name"], tuple(thm["start"]), i)
+                # ]
+                pred = None
+                key = (thm["file_path"], thm["full_name"], tuple(thm["start"]), i)
+                logger.info(f"Checking if key {key} is in preds_map")
+                if key in preds_map:
+                    pred = preds_map[key]
+                    logger.info(f"Key {key} found in predictions")
+                else:
+                    logger.info(f"Key {key} not found in predictions.")
+                    continue  # or handle as appropriate
+                all_pos_premises = set(pred["all_pos_premises"])
+                if len(all_pos_premises) == 0:
+                    continue
+
+                retrieved_premises = pred["retrieved_premises"]
+                TP1 = retrieved_premises[0] in all_pos_premises
+                R1.append(float(TP1) / len(all_pos_premises))
+                TP10 = len(all_pos_premises.intersection(retrieved_premises[:10]))
+                R10.append(float(TP10) / len(all_pos_premises))
+
+                for j, p in enumerate(retrieved_premises):
+                    if p in all_pos_premises:
+                        MRR.append(1.0 / (j + 1))
+                        break
+                else:
+                    MRR.append(0.0)
+
+        R1 = 100 * np.mean(R1)
+        R10 = 100 * np.mean(R10)
+        MRR = np.mean(MRR)
+        return R1, R10, MRR
+
+
+def update_and_train(model_checkpoint_path, new_data_path, max_epochs=2): # TODO: change back to 2
     seed_everything(3407)
+
+    # TODO: remove
+    # TODO: actually instead of having separate for testing datasets, we can use same folders, and so save time with same cache and such
+    # After training and validating, we need to find the average accuracy over all of the previous test datasets
+    # new_checkpoint = "lightning_logs/epoch=0-Recall@10_val=63.19.ckpt"  # for benchmark 3
+
+    logger.info("Starting tests")
+    total_R1, total_R10, total_MRR = [], [], []
+    testing_paths = [os.path.join('testing_datasets', d) for d in os.listdir('testing_datasets')]
+    for data_path in testing_paths:
+        new_checkpoint = "lightning_logs_failing_benchmark2/epoch=0-Recall@10_val=67.10.ckpt"  # for benchmark 2 5%
+        subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", new_checkpoint, "--data-path", data_path], check=True)
+        # load the text file too
+        # preds = json.load(open("test_predictions.txt"))
+        # logger.info("Loaded the predictions text file")
+        # preds_map = ''
+        # with open('test_predictions.txt','r') as f:
+        #     for i in f.readlines():
+        #         preds_map=i
+        # preds_map = eval(preds_map)
+        # logger.info("Loaded the predictions text file")
+        num_gpus = 4
+        preds_map = {}
+        for gpu_id in range(num_gpus):
+            with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
+                preds = pickle.load(f)
+                preds_map.update(preds)
+
+
+        # preds_map = pickle.load(open("test_pickle.pkl", "rb"))
+        logger.info("Loaded the predictions pickle files")
+        # preds_map = {
+        #     (p["file_path"], p["full_name"], tuple(p["start"]), p["tactic_idx"]): p
+        #     for p in preds
+        # }
+        # assert len(preds) == len(preds_map), "Duplicate predictions found!"
+        data_path = os.path.join(data_path, "random", "test.json")
+        data = json.load(open(data_path))
+        logger.info(f"Evaluating on {data_path}")
+        R1, R10, MRR = _eval(data, preds_map)
+        logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+        # R1, R10, MRR = load_eval_results()
+        total_R1.append(R1)
+        total_R10.append(R10)
+        total_MRR.append(MRR)
+
+    avg_R1 = np.mean(total_R1)
+    avg_R10 = np.mean(total_R10)
+    avg_MRR = np.mean(total_MRR)
+
+    logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+
+    # Save average accuracies to a file
+    file_path = "total_evaluation_results.txt"
+    with open(file_path, "w") as f:
+        f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+    return
     
     # Load the model from checkpoint
     if not torch.cuda.is_available():
@@ -512,9 +618,19 @@ def update_and_train(model_checkpoint_path, new_data_path, max_epochs=1): # TODO
     # Continue training
     logger.info("Starting progressive training...")
 
-    trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+    # train_dataloader = data_module.train_dataloader()
+    # fisher_info = model.compute_fisher_information(train_dataloader)
+    # # Save the fisher_info dict as a pickle file
+    # with open("fisher_info.pkl", "wb") as f:
+    #     pickle.dump(fisher_info, f)
+    # logger.info("Fisher info saved to fisher_info.pkl")
+    # model.previous_params = {name: param.clone().detach() for name, param in model.named_parameters()}
 
-    # TODO: save checkpoint if the loss is good
+    trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+    # After training and validating, we need to find the average accuracy over all of the previous test datasets
+    new_checkpoint = trainer.checkpoint_callback.best_model_path
+    subprocess.run(["python", "retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", new_checkpoint], check=True)
+
     # TODO: for a given repo, run the benchmark code (check for differences with courpus code here) to get the data nad corpus
     # TODO: we now want to add these new things to the exisitng dataset for ONLY the current repo like PFR, not its dependencies, so delete hte lines for existing train/val/test and corpus with current repo and add the new ones
     # TODO: then run this online learning code
@@ -695,15 +811,17 @@ def main():
     # TODO: move data to raid
     # TODO: make sure this checkpoint works without online
     # TODO: change kaiyuy files to robert checkpoint everywhere
-    model_checkpoint_path = "checkpoints/new_retriever.ckpt"
-    # model_checkpoint_path = "leandojo-pl-ckpts/new_retriever.ckpt"
+    # model_checkpoint_path = "checkpoints/new_retriever.ckpt"
+    model_checkpoint_path = "leandojo-pl-ckpts/new_retriever.ckpt"
     # model_checkpoint_path = "lightning_logs_one_epoch_yay/epoch=0-Recall@10_val=64.61.ckpt"  # for one epoch
     # model_checkpoint_path = "lightning_logs/epoch=0-Recall@10_val=63.46.ckpt"  # for two epochs
     # model_checkpoint_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     # data_path = "pfr_benchmark/random"
     # data_path = "pfr_benchmark_2/random"
+    # data_path = "leandojo_benchmark_4/random"
     # data_path = "new_version_test_benchmark/random"
     data_path = "new_version_test2_benchmark/random"
+    # data_path = "new_version_test3_benchmark/random"
     new_checkpoint = update_and_train(model_checkpoint_path, data_path)
     return # TODO: remove
 

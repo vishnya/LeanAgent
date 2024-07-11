@@ -13,6 +13,7 @@ import pytorch_lightning as pl
 import torch.nn.functional as F
 from typing import List, Dict, Any, Tuple, Union
 from transformers import T5EncoderModel, AutoTokenizer
+from torch.distributed import barrier
 
 from common import (
     Premise,
@@ -533,6 +534,10 @@ class PremiseRetriever(pl.LightningModule):
             #         f.write(f"R1: {r1}, R10: {r10}, MRR: {mrr}\n")
 
         self.predict_step_outputs.clear()
+        barrier()
+
+        if self.trainer.is_global_zero:
+            logger.info("All GPUs have completed their predictions and saved the data.")
         # logger.info("End of on_predict_epoch_end")
 
     def retrieve(
