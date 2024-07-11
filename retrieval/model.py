@@ -359,6 +359,13 @@ class PremiseRetriever(pl.LightningModule):
         self.corpus_embeddings = None
         self.embeddings_staled = True
         self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
+        # self.corpus_embeddings = torch.zeros(
+        #     len(self.corpus.all_premises),
+        #     self.embedding_size,
+        #     dtype=self.encoder.dtype,
+        #     device=self.device,
+        # )
+        # self.embeddings_staled = False
         self.predict_step_outputs = []
         # logger.info("End of on_predict_start")
 
@@ -412,92 +419,118 @@ class PremiseRetriever(pl.LightningModule):
             )
         # logger.info("End of predict_step")
     
-    def _eval(self, data, preds_map) -> Tuple[float, float, float]:
-        R1 = []
-        R10 = []
-        MRR = []
+    # def _eval(self, data, preds_map) -> Tuple[float, float, float]:
+    #     R1 = []
+    #     R10 = []
+    #     MRR = []
 
-        for thm in tqdm(data):
-            for i, _ in enumerate(thm["traced_tactics"]):
-                logger.info(f"thm['file_path']: {thm['file_path']}")
-                logger.info(f"thm['full_name']: {thm['full_name']}")
-                logger.info(f"tuple(thm['start']): {tuple(thm['start'])}")
-                logger.info(f"i: {i}")
-                # pred = preds_map[
-                #     (thm["file_path"], thm["full_name"], tuple(thm["start"]), i)
-                # ]
-                pred = None
-                key = (thm["file_path"], thm["full_name"], tuple(thm["start"]), i)
-                logger.info(f"Checking if key {key} is in preds_map")
-                if key in preds_map:
-                    pred = preds_map[key]
-                    logger.info(f"Key {key} found in predictions")
-                else:
-                    logger.info(f"Key {key} not found in predictions.")
-                    continue  # or handle as appropriate
-                all_pos_premises = set(pred["all_pos_premises"])
-                if len(all_pos_premises) == 0:
-                    continue
+    #     for thm in tqdm(data):
+    #         for i, _ in enumerate(thm["traced_tactics"]):
+    #             logger.info(f"thm['file_path']: {thm['file_path']}")
+    #             logger.info(f"thm['full_name']: {thm['full_name']}")
+    #             logger.info(f"tuple(thm['start']): {tuple(thm['start'])}")
+    #             logger.info(f"i: {i}")
+    #             # pred = preds_map[
+    #             #     (thm["file_path"], thm["full_name"], tuple(thm["start"]), i)
+    #             # ]
+    #             pred = None
+    #             key = (thm["file_path"], thm["full_name"], tuple(thm["start"]), i)
+    #             logger.info(f"Checking if key {key} is in preds_map")
+    #             if key in preds_map:
+    #                 pred = preds_map[key]
+    #                 logger.info(f"Key {key} found in predictions")
+    #             else:
+    #                 logger.info(f"Key {key} not found in predictions.")
+    #                 continue  # or handle as appropriate
+    #             all_pos_premises = set(pred["all_pos_premises"])
+    #             if len(all_pos_premises) == 0:
+    #                 continue
 
-                retrieved_premises = pred["retrieved_premises"]
-                TP1 = retrieved_premises[0] in all_pos_premises
-                R1.append(float(TP1) / len(all_pos_premises))
-                TP10 = len(all_pos_premises.intersection(retrieved_premises[:10]))
-                R10.append(float(TP10) / len(all_pos_premises))
+    #             retrieved_premises = pred["retrieved_premises"]
+    #             TP1 = retrieved_premises[0] in all_pos_premises
+    #             R1.append(float(TP1) / len(all_pos_premises))
+    #             TP10 = len(all_pos_premises.intersection(retrieved_premises[:10]))
+    #             R10.append(float(TP10) / len(all_pos_premises))
 
-                for j, p in enumerate(retrieved_premises):
-                    if p in all_pos_premises:
-                        MRR.append(1.0 / (j + 1))
-                        break
-                else:
-                    MRR.append(0.0)
+    #             for j, p in enumerate(retrieved_premises):
+    #                 if p in all_pos_premises:
+    #                     MRR.append(1.0 / (j + 1))
+    #                     break
+    #             else:
+    #                 MRR.append(0.0)
 
-        R1 = 100 * np.mean(R1)
-        R10 = 100 * np.mean(R10)
-        MRR = np.mean(MRR)
-        return R1, R10, MRR
+    #     R1 = 100 * np.mean(R1)
+    #     R10 = 100 * np.mean(R10)
+    #     MRR = np.mean(MRR)
+    #     return R1, R10, MRR
 
     def on_predict_epoch_end(self) -> None:
         # logger.info("Inside on_predict_epoch_end")
         if self.trainer.log_dir is not None:
-            logger.info("Using the predictions to find the current test accuracy")
+            logger.info("About to construct predictions map")
+            # logger.info("FULL DETAILS")
+            # for p in self.predict_step_outputs:
+            #     print(p)
+
             for p in self.predict_step_outputs:
                 # if p["file_path"] == ".lake/packages/mathlib/Mathlib/Topology/Category/TopCat/Limits/Products.lean" or p["file_path"] == ".lake/packages/mathlib/Mathlib/Algebra/Order/Field/Basic.lean" or p["file_path"] == ".lake/packages/mathlib/Mathlib/Algebra/EuclideanDomain/Defs.lean":
                 logger.info(f"p['file_path']: {p['file_path']}")
                 logger.info(f"p['full_name']: {p['full_name']}")
                 logger.info(f"tuple(p['start']): {tuple(p['start'])}")
                 logger.info(f"p['tactic_idx']: {p['tactic_idx']}")
+
+            gpu_id = self.trainer.local_rank
+            
             preds_map = {
                 (p["file_path"], p["full_name"], tuple(p["start"]), p["tactic_idx"]): p
                 for p in self.predict_step_outputs
             }
-            assert len(self.predict_step_outputs) == len(preds_map), "Duplicate predictions found!"
-            curr_R1 = []
-            curr_R10 = []
-            curr_MRR = []
-            split = "test"
-            data_path = os.path.join(self.trainer.datamodule.data_path, f"{split}.json")
-            data = json.load(open(data_path))
-            logger.info(f"Evaluating on {data_path}")
-            R1, R10, MRR = self._eval(data, preds_map)
-            logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-            curr_R1.append(R1)
-            curr_R10.append(R10)
-            curr_MRR.append(MRR)
 
-            # Save results to a text file
-            results_path = "evaluation_results.txt"
-            if not os.path.exists(results_path):
-                os.makedirs(results_path)
-            with open(results_path, 'w') as f:
-                results = zip(curr_R1, curr_R10, curr_MRR)
-                for r1, r10, mrr in results:
-                    f.write(f"R1: {r1}, R10: {r10}, MRR: {mrr}\n")
-
-            # path = os.path.join(self.trainer.log_dir, "predictions.pickle")
+            # path = os.path.join(self.trainer.log_dir, "test_pickle.pkl")
             # with open(path, "wb") as oup:
             #     pickle.dump(self.predict_step_outputs, oup)
             # logger.info(f"Retrieval predictions saved to {path}")
+
+            path = f"test_pickle_{gpu_id}.pkl"
+            with open(path, "wb") as oup:
+                pickle.dump(preds_map, oup)
+            logger.info(f"Retrieval predictions saved to {path}")
+
+            # path = "test_predictions.txt"
+            # with open(path,'w+') as f:
+            #     f.write(str(preds_map))
+            # logger.info(f"Retrieval predictions saved to {path}")
+
+            # Save to text file too
+            # path = os.path.join(self.trainer.log_dir, "test_predictions.txt")
+            # with open(path, "wb") as oup:
+            #     oup.write(json.dumps(self.predict_step_outputs).encode("ascii"))
+            # logger.info(f"Retrieval predictions saved to {path}")
+            
+            # preds_map = {
+            #     (p["file_path"], p["full_name"], tuple(p["start"]), p["tactic_idx"]): p
+            #     for p in self.predict_step_outputs
+            # }
+            # assert len(self.predict_step_outputs) == len(preds_map), "Duplicate predictions found!"
+            # curr_R1 = []
+            # curr_R10 = []
+            # curr_MRR = []
+            # split = "test"
+            # data_path = os.path.join(self.trainer.datamodule.data_path, f"{split}.json")
+            # data = json.load(open(data_path))
+            # logger.info(f"Evaluating on {data_path}")
+            # R1, R10, MRR = self._eval(data, preds_map)
+            # logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+            # curr_R1.append(R1)
+            # curr_R10.append(R10)
+            # curr_MRR.append(MRR)
+
+            # # Save results to a text file
+            # results_path = "evaluation_results.txt"
+            # with open(results_path, 'w') as f:
+            #     results = zip(curr_R1, curr_R10, curr_MRR)
+            #     for r1, r10, mrr in results:
+            #         f.write(f"R1: {r1}, R10: {r10}, MRR: {mrr}\n")
 
         self.predict_step_outputs.clear()
         # logger.info("End of on_predict_epoch_end")
