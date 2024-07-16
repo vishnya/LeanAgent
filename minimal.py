@@ -4,17 +4,23 @@ from retrieval.model import PremiseRetriever
 from loguru import logger
 
 model_checkpoint_path = "leandojo-pl-ckpts/new_retriever.ckpt"
+# model_checkpoint_path = "lightning_logs_failing_benchmark2/epoch=0-Recall@10_val=67.10.ckpt"
 # optimizer_states_path = 'leandojo-pl-ckpts/retriever_random.ckpt/checkpoint/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt'
 try:
     state_dict = torch.load(model_checkpoint_path)
     state_dict["pytorch-lightning_version"] = "0.0.0"
     state_dict['global_step'] = None
     state_dict['epoch'] = 0 # TODO: change
+    #     {'fit_loop': {'state_dict': {}, 'epoch_loop.state_dict': {'_batches_that_stepped': 1106}, 'epoch_loop.batch_progress': {'total': {'ready': 1106, 'completed': 1106, 'started': 1106, 'processed': 1106}, 'current': {'ready': 1106, 'completed': 1106, 'started': 1106, 'processed': 1106}, 'is_last_batch': True}, 'epoch_loop.scheduler_progress': {'total': {'ready': 1106, 'completed': 1106}, 'current': {'ready': 1106, 'completed': 1106}}, 'epoch_loop.automatic_optimization.state_dict': {}, 'epoch_loop.automatic_optimization.optim_progress': {'optimizer': {'step': {'total': {'ready': 1106, 'completed': 1106}, 'current': {'ready': 1106, 'completed': 1106}}, 'zero_grad': {'total': {'ready': 1106, 'completed': 1106, 'started': 1106}, 'current': {'ready': 1106, 'completed': 1106, 'started': 1106}}}}, 'epoch_loop.manual_optimization.state_dict': {}, 'epoch_loop.manual_optimization.optim_step_progress': {'total': {'ready': 0, 'completed': 0}, 'current': {'ready': 0, 'completed': 0}}, 'epoch_loop.val_loop.state_dict': {}, 'epoch_loop.val_loop.batch_progress': {'total': {'ready': 1, 'completed': 1, 'started': 1, 'processed': 1}, 'current': {'ready': 1, 'completed': 1, 'started': 1, 'processed': 1}, 'is_last_batch': True}, 'epoch_progress': {'total': {'ready': 1, 'completed': 0, 'started': 1, 'processed': 1}, 'current': {'ready': 1, 'completed': 0, 'started': 1, 'processed': 1}}}, 'validate_loop': {'state_dict': {}, 'batch_progress': {'total': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'current': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'is_last_batch': False}}, 'test_loop': {'state_dict': {}, 'batch_progress': {'total': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'current': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'is_last_batch': False}}, 'predict_loop': {'state_dict': {}, 'batch_progress': {'total': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'current': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}}}}
+    # ipdb> state_dict["loops"]["predict_loop"]
+    # {'state_dict': {}, 'batch_progress': {'total': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'current': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}}}
+    state_dict["loops"] = {}
+    state_dict["loops"]["predict_loop"] = {'state_dict': {}, 'batch_progress': {'total': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'current': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}}}
     state_dict['state_dict'] = state_dict
     # import ipdb; ipdb.set_trace()
     inner_dict = copy.deepcopy(state_dict['state_dict'])
     # Remove keys from the inner dictionary
-    keys_to_remove = ['pytorch-lightning_version', 'global_step', 'epoch', 'state_dict']
+    keys_to_remove = ['pytorch-lightning_version', 'global_step', 'epoch', 'loops', 'state_dict']
     for key in keys_to_remove:
         if key in inner_dict:
             del inner_dict[key]

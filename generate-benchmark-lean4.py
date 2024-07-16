@@ -15,10 +15,14 @@ from lean_dojo.constants import LEAN4_PACKAGES_DIR
 
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 
-URL = "https://github.com/Adarsh321123/new-version-test"
-COMMIT = "a9ef0dcad9f42d4b35c9de402999430974ddf56d"
-DST_DIR = Path("new_version_test2_benchmark")
-DATASET_NAME = "new_version_test2"
+# URL = "https://github.com/Adarsh321123/new-version-test"
+# COMMIT = "5dfda5b41be5a6a6bd8301a2d73bc55af593bc8e"
+# DST_DIR = Path("new_version_test3_benchmark")
+# DATASET_NAME = "new_version_test3"
+URL = "https://github.com/leanprover-community/mathlib4"
+COMMIT = "fe4454af900584467d21f4fd4fe951d29d9332a7"
+DST_DIR = Path("leandojo_benchmark_4_again")
+DATASET_NAME = "leandojo_benchmark_4_again"
 # TODO: ensure that every split has theorems from THAT REPO (like PFR) in train/val/test instead of just imports
 
 SPLIT_NAME = str  # train/val/test
