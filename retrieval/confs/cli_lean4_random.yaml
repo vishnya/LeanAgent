@@ -1,15 +1,8 @@
 seed_everything: 3407  # https://arxiv.org/abs/2109.08203
 trainer:
   accelerator: gpu
-  devices: 4
+  devices: 1 # TODO: change for GPU
   precision: bf16-mixed
-  # TODO: try leandojo_benchmark_4 without deepspeed
-  # strategy:
-  #   class_path: pytorch_lightning.strategies.DeepSpeedStrategy
-  #   init_args:
-  #     stage: 2
-  #     offload_optimizer: false
-  #     cpu_checkpointing: false
   gradient_clip_val: 1.0
   max_steps: 800000
   callbacks:

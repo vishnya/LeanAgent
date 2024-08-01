@@ -331,6 +331,20 @@ class CpuProver(BestFirstSearchProver):
             debug,
         )
 
+# TODO: reduce repetition with main
+
+RAID_DIR = "/raid/adarsh"
+CHECKPOINT_DIR = "checkpoints"
+
+def find_latest_checkpoint():
+    """Finds the most recent checkpoint."""
+    checkpoint_dir = RAID_DIR + "/" + CHECKPOINT_DIR
+    all_checkpoints = [os.path.join(checkpoint_dir, f) for f in os.listdir(checkpoint_dir) if f.endswith(".ckpt")]
+    if not all_checkpoints:
+        raise FileNotFoundError("No checkpoints found.")
+    latest_checkpoint = max(all_checkpoints, key=os.path.getmtime)
+    logger.info(f"Using the latest checkpoint: {latest_checkpoint}")
+    return latest_checkpoint
 
 @ray.remote(num_gpus=1)
 class GpuProver(BestFirstSearchProver):
@@ -349,6 +363,9 @@ class GpuProver(BestFirstSearchProver):
         if ckpt_path is None:
             tac_gen = FixedTacticGenerator(tactic, module)
         else:
+            # TODO: change
+            # model_checkpoint_path = find_latest_checkpoint()
+            model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
             config = {
                 "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
                 "lr": 1e-3,
@@ -360,7 +377,7 @@ class GpuProver(BestFirstSearchProver):
                 "eval_num_theorems": 100,
                 "max_inp_seq_len": 512,
                 "max_oup_seq_len": 128,
-                "ret_ckpt_path": "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt",
+                "ret_ckpt_path": model_checkpoint_path,
             }
 
             tac_gen = RetrievalAugmentedGenerator.load(
@@ -412,8 +429,24 @@ class DistributedProver:
                 tac_gen = FixedTacticGenerator(tactic, module)
             else:
                 device = torch.device("cuda") if num_gpus > 0 else torch.device("cpu")
+                # TODO: change
+                # model_checkpoint_path = find_latest_checkpoint()
+                model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                config = {
+                    "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
+                    "lr": 1e-3,
+                    "warmup_steps": 1000,
+                    "num_beams": 5,
+                    "eval_num_retrieved": 10,
+                    "eval_num_workers": 5,
+                    "eval_num_gpus": 1,
+                    "eval_num_theorems": 100,
+                    "max_inp_seq_len": 512,
+                    "max_oup_seq_len": 128,
+                    "ret_ckpt_path": model_checkpoint_path,
+                }
                 tac_gen = RetrievalAugmentedGenerator.load(
-                    ckpt_path, device=device, freeze=True
+                    ckpt_path, device=device, freeze=True, config=config
                 )
                 if tac_gen.retriever is not None:
                     assert indexed_corpus_path is not None
@@ -455,27 +488,26 @@ class DistributedProver:
 
         self.prover_pool = ActorPool(provers)
 
-    def search_unordered(
-        self, repo: LeanGitRepo, theorems: List[Theorem], positions: List[Pos]
-    ) -> List[Optional[SearchResult]]:
-        """Parallel proof search for `theorems`. The order of the results is not guaranteed to match the order of the input."""
-        if not self.distributed:
-            return [
-                self.prover.search(repo, thm, pos)
-                for thm, pos in zip_strict(theorems, positions)
-            ]
-
-        try:
-            logger.info(f"before theorem search: ")
-            results = list(
-                self.prover_pool.map_unordered(
-                    lambda p, x: p.search.remote(repo, x[0], x[1]),
-                    zip_strict(theorems, positions),
-                )
-            )
-            logger.info(f"after theorem search: ")
-        except ray.exceptions.RayActorError as ex:
-            logger.error(ex)
-            sys.exit(1)
-
+    def search_unordered(self, repo: LeanGitRepo, theorems: List[Theorem], positions: List[Pos]) -> List[Optional[SearchResult]]:
+        logger.info(f"Starting search_unordered with {len(theorems)} theorems")
+        results = []
+        for i, (thm, pos) in enumerate(zip_strict(theorems, positions)):
+            logger.info(f"Processing theorem {i+1}/{len(theorems)}: {thm.full_name}")
+            try:
+                if not self.distributed:
+                    logger.info(f"Not distributed, searching theorem {i+1}/{len(theorems)}: {thm.full_name}")
+                    result = self.prover.search(repo, thm, pos)
+                    logger.info(f"Not distributed, finished searching theorem {i+1}/{len(theorems)}: {thm.full_name}")
+                else:
+                    # TODO: fix this later
+                    logger.info(f"Distributed, searching theorem {i+1}/{len(theorems)}: {thm.full_name}")
+                    result = ray.get(self.prover_pool.submit(lambda p, args: p.search.remote(*args), (repo, thm, pos)))
+                    logger.info(f"Distributed, finished searching theorem {i+1}/{len(theorems)}: {thm.full_name}")
+                results.append(result)
+                logger.info(f"Completed theorem {i+1}/{len(theorems)}: {thm.full_name}")
+                logger.info(f"Result: {result}")
+            except Exception as e:
+                logger.error(f"Error processing theorem {thm.full_name}: {str(e)}")
+                results.append(None)
+        logger.info(f"Completed search_unordered with {len(results)} results")
         return results

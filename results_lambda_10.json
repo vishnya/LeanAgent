@@ -3,18 +3,16 @@
     "repositories": {
         "/raid/adarsh/repos/Adarsh321123/new-version-test": {
             "number_of_sorries": 2,
-            "number_of_proofs_found": 1,
-            "proofs_details": [
-                {
-                    "file_path": "/raid/adarsh/repos/Adarsh321123/new-version-test/NewVersionTest/ExercisesOne.lean",
-                    "theorem_name": "absorb2",
-                    "proof_text": "simp"
-                }
-            ],
+            "number_of_proofs_found": 0,
+            "proofs_details": [],
             "unproved_sorries": [
                 {
                     "file_path": "/raid/adarsh/repos/Adarsh321123/new-version-test/NewVersionTest/ExercisesOne.lean",
                     "theorem_name": "example_five_rw"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/Adarsh321123/new-version-test/NewVersionTest/ExercisesOne.lean",
+                    "theorem_name": "absorb2"
                 }
             ],
             "number_of_premises_theorems_retrieved": 0,

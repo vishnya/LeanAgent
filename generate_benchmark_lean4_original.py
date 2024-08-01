@@ -12,25 +12,15 @@ from typing import Dict, List, Union
 import lean_dojo
 from lean_dojo import *
 from lean_dojo.constants import LEAN4_PACKAGES_DIR
+import re
+import subprocess
 
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 
-# URL = "https://github.com/teorth/pfr"
-# COMMIT = "457a70749093790a50f9ade611a5f492b7401a86"
-# DST_DIR = Path("pfr_benchmark_2")
-# NUM_VAL = NUM_TEST = 1486
-URL = "https://github.com/leanprover-community/mathlib4"
-# COMMIT = "29dcec074de168ac2bf835a77ef68bbe069194c5"
-COMMIT = "3ce43c18f614b76e161f911b75a3e1ef641620ff"
-# DST_DIR = Path("leandojo_benchmark_4_new_commit")
-DST_DIR = Path("leandojo_benchmark_4_paper_commit")
 NUM_VAL = NUM_TEST = 2000
-
 SPLIT_NAME = str  # train/val/test
 SPLIT = Dict[SPLIT_NAME, List[TracedTheorem]]
 SPLIT_STRATEGY = str
-
-import re
 _LEAN4_VERSION_REGEX = re.compile(r"leanprover/lean4:(?P<version>.+?)")
 
 def get_lean4_version_from_config(toolchain: str) -> str:
@@ -50,8 +40,6 @@ def is_supported_version(v) -> bool:
     if not v.startswith("v"):
         return False
     v = v[1:]
-    if "4.2.0-rc4" in v: # TODO: just for old mathlib4
-        return True
     major, minor, patch = [int(_) for _ in v.split("-")[0].split(".")]
     if major < 4 or (major == 4 and minor < 3) or (major == 4 and minor > 8) or (major == 4 and minor == 8 and patch > 0):
         return False
@@ -280,29 +268,32 @@ def export_data(
     # Export metadata.
     export_metadata(traced_repo, dst_path, **kwargs)
 
-repo = LeanGitRepo(URL, COMMIT)
+def main(url, commit, dst_dir):
+    repo = LeanGitRepo(url, commit)
+    
+    # we need to change the toolchain version that the bot uses
+    # to match the repo we are currently tracing
+    config = repo.get_config("lean-toolchain")
+    logger.info(f"lean toolchain version: {config}")
+    v = get_lean4_version_from_config(config["content"])
+    logger.info(f"lean version v: {v}")
+    logger.info(f"is supported: {is_supported_version(v)}")
+    if not is_supported_version(v):
+        logger.info("Unsupported version")
+    v = v[1:] # ignore "v" at beginning
+    lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---" + v
+    logger.info(f"lean path {lean_dir}")
+    if not os.path.exists(lean_dir):
+        logger.info(f"Lean toolchain path does not exist: {lean_dir}")
+    os.environ['LEAN4_PATH'] = lean_dir
+    os.environ['PATH'] = f"{lean_dir}/bin:{os.environ.get('PATH', '')}"
+    logger.info(f"Switched to Lean toolchain at: {lean_dir}")
+    logger.info(f"lean --version: {subprocess.run(['lean', '--version'], capture_output=True).stdout.decode('utf-8')}")
+    logger.info(f"repo: {repo}")
 
-import subprocess
-config = repo.get_config("lean-toolchain")
-logger.info(f"lean toolchain version: {config}")
-v = get_lean4_version_from_config(config["content"])
-logger.info(f"lean version v: {v}")
-logger.info(f"is supported: {is_supported_version(v)}")
-if not is_supported_version(v):
-    logger.info("Unsupported version")
-v = v[1:] # ignore "v" at beginning
-lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---" + v
-logger.info(f"lean path {lean_dir}")
-if not os.path.exists(lean_dir):
-    logger.info(f"Lean toolchain path does not exist: {lean_dir}")
-os.environ['LEAN4_PATH'] = lean_dir
-os.environ['PATH'] = f"{lean_dir}/bin:{os.environ.get('PATH', '')}"
-logger.info(f"Switched to Lean toolchain at: {lean_dir}")
-logger.info(f"lean --version: {subprocess.run(['lean', '--version'], capture_output=True).stdout.decode('utf-8')}")
-logger.info(f"repo: {repo}")
-
-traced_repo = trace(repo)
-splits = split_data(traced_repo)
-# export_data(traced_repo, splits, DST_DIR, dataset_name="leandojo_benchmark_4_new_commit")
-export_data(traced_repo, splits, DST_DIR, dataset_name="leandojo_benchmark_4_paper_commit")
-
+    try:
+        traced_repo = trace(repo)
+    except Exception as e:
+        logger.info(f"Failed to trace repo {repo} because of {e}")
+    splits = split_data(traced_repo)
+    export_data(traced_repo, splits, dst_dir, )

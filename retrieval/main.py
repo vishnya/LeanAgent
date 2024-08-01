@@ -9,6 +9,7 @@ import json
 from tqdm import tqdm
 from loguru import logger
 from pytorch_lightning.cli import LightningCLI
+import sys
 
 from retrieval.model import PremiseRetriever
 from retrieval.datamodule import RetrievalDataModule
@@ -50,6 +51,12 @@ class CLI(LightningCLI):
 #         logger.info("No evaluation results found.")
 #     return R1, R10, MRR
 
+def run_cli(model_path, data_path):
+    logger.info(f"PID: {os.getpid()}")
+    # Mimic command line argument passing
+    sys.argv = ['main.py', 'predict', '--config', 'retrieval/confs/cli_lean4_random.yaml', '--ckpt_path', model_path, '--data-path', data_path]
+    cli = CLI(PremiseRetriever, RetrievalDataModule)
+    logger.info("Configuration: \n", cli.config)
 
 def main() -> None:
     # parser = argparse.ArgumentParser(

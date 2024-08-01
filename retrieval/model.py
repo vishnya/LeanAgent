@@ -51,14 +51,21 @@ class PremiseRetriever(pl.LightningModule):
         self.train_loss = []
         self.previous_params = {}
         self.fisher_info = {}
+        self.lamda = 1000
         # logger.info("End of __init__")
+
+    def set_fisher_info(self, fisher_info):
+        if fisher_info is not None:
+            self.fisher_info = fisher_info
+            logger.info("Fisher Information has been updated in the model.")
+        else:
+            logger.warning("No Fisher Information provided to update.")
+
+    def set_lambda(self, lambda_value):
+        self.lamda = lambda_value
 
     def compute_fisher_information(self, dataloader):
         logger.info("Computing Fisher Information")
-        # TODO: compute at end of running
-        # TODO: save the matrix
-        # TODO: do on 4 GPUs
-        # TODO: use old dataloader
         if not torch.cuda.is_available():
             logger.warning("Indexing the corpus using CPU can be very slow.")
             device = torch.device("cpu")
@@ -91,14 +98,14 @@ class PremiseRetriever(pl.LightningModule):
 
         return self.fisher_info
 
-    def ewc_loss(self, lamda=5000):
+    def ewc_loss(self):
         # TODO: choose lambda and ewc_loss better if needed
         ewc_loss = 0
         for name, param in self.named_parameters():
             if name in self.previous_params:
                 # EWC Penalty is the sum of the squares of differences times the Fisher Information
                 ewc_loss += (self.fisher_info[name] * (param - self.previous_params[name]) ** 2).sum()
-        return lamda * ewc_loss
+        return self.lamda * ewc_loss
 
     @classmethod
     def load(cls, ckpt_path: str, device, freeze: bool, config: dict) -> "PremiseRetriever":
@@ -214,7 +221,7 @@ class PremiseRetriever(pl.LightningModule):
             batch["label"],
         )
         # logger.info(f"Training loss before EWC: {loss.item():.4f}")
-        # loss += self.ewc_loss()
+        loss += self.ewc_loss()
         # logger.info(f"Training loss after EWC: {loss.item():.4f}")
         self.train_loss.append(loss.item())
         self.log(
