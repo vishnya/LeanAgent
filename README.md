@@ -1,6 +1,4 @@
-# Retrieval-Augmented Prover (ReProver)
-
-![Model](images/ReProver.jpg)
+# LeanBot
 
 
 
