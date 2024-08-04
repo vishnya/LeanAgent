@@ -19,12 +19,13 @@ import pickle
 from common import IndexedCorpus
 import numpy as np
 
-ROOT_DIR = "/root"
-DATA_DIR = "datasets"
-CHECKPOINT_DIR = "checkpoints"
+# TODO: put these in dockerfile
+ROOT_DIR = "/raid/adarsh"
+DATA_DIR = "datasets_test"
+CHECKPOINT_DIR = "checkpoints_test"
 HUGGINGFACE_API_URL = "https://huggingface.co/api/models"
 USER = "AK123321"
-HUGGINGFACE_TOKEN = "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" # TODO: put this into dockerfile instead
+HUGGINGFACE_TOKEN = "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"
 
 def merge_datasets():
     data_dir = ROOT_DIR + "/" + DATA_DIR
@@ -81,6 +82,55 @@ def merge_datasets():
             print(f"Deleting dataset: {dataset}")
             shutil.rmtree(dataset_path)
 
+def get_compatible_commit(url):
+    # TODO: optimize with binary search
+    # TODO: maybe faster to get toolchiain version wihtout making git repo eeach time
+    try:
+        process = subprocess.Popen(["git", "ls-remote", url], stdout=subprocess.PIPE)
+        stdout, stderr = process.communicate()
+        latest_commit = re.split(r'\t+', stdout.decode('utf-8'))[0]
+
+        new_url = url.replace('.git', '')
+        repo = LeanGitRepo(new_url, latest_commit)
+        config = repo.get_config("lean-toolchain")
+        v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
+        if generate_benchmark_lean4.is_supported_version(v):
+            print(f"Latest commit compatible for url {url}")
+            return latest_commit, v
+
+        # Search for latest commit on v4.9.1
+        print(f"Searching for compatible commit for {url}")
+        process = subprocess.Popen(
+            ["git", "fetch", "--depth=1000000", url],  # Fetch commits
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        _, stderr = process.communicate()
+        if process.returncode != 0:
+            raise Exception(f"Git fetch command failed: {stderr.decode('utf-8')}")
+        process = subprocess.Popen(
+            ["git", "log", "--format=%H", "FETCH_HEAD"],  # Get list of commits
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        stdout, stderr = process.communicate()
+        if process.returncode != 0:
+            raise Exception(f"Git log command failed: {stderr.decode('utf-8')}")
+        commits = stdout.decode('utf-8').strip().split('\n')
+        for commit in commits:
+            new_url = url.replace('.git', '')
+            repo = LeanGitRepo(new_url, commit)
+            config = repo.get_config("lean-toolchain")
+            v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
+            if generate_benchmark_lean4.is_supported_version(v):
+                return commit, v
+
+        raise Exception("No compatible commit found")
+
+    except Exception as e:
+        print(f"Error in get_compatible_commit: {str(e)}")
+        return None, None
+
 def generate_dataset(unique_urls):
     # TODO: optimize to not make novel_premises split
     # TODO: no need for licenses or metadata
@@ -89,13 +139,14 @@ def generate_dataset(unique_urls):
     for url in unique_urls:
         if not url.endswith('.git'):
             url = url + '.git'
-        try:
-            process = subprocess.Popen(["git", "ls-remote", url], stdout=subprocess.PIPE)
-            stdout, stderr = process.communicate()
-            sha = re.split(r'\t+', stdout.decode('utf-8'))[0]
-        except Exception as e:
-            print(f"Could not process url because of error: {e}")
+
+        sha, v = get_compatible_commit(url)
+        if not sha:
+            print(f"Failed to find a compatible commit for {url}")
             continue
+        print(f"Found compatible commit {sha} for {url}")
+        print(f"Lean version: {v}")
+
         url = url.replace('.git', '')
         repo = LeanGitRepo(url, sha)
         dir_name = repo.url.split("/")[-1] + "_" + sha
@@ -356,8 +407,18 @@ def train(model_checkpoint_path, new_data_path, next_suffix, max_epochs=1): # TO
     print("Converting and uploading models")
     convert_and_upload_models(best_model_path, new_data_path, next_suffix)
 
+def fetch_urls_from_api(api_url):
+    try:
+        response = requests.get(f"{api_url}/get_urls/")
+        response.raise_for_status()
+        return response.json()["urls"]
+    except requests.RequestException as e:
+        print(f"Error fetching URLs from API: {e}")
+        return []
+
 def main():
     # TODO: should we close instance on failure?
+    # TODO: put a try-catch around generate benchmark, and anything else that could fail, same with main.py
     # TODO: should we just not cache the datasets so we can save space?
     if ray.is_initialized():
         ray.shutdown()
@@ -365,12 +426,8 @@ def main():
     if not os.path.exists(ROOT_DIR + "/" + DATA_DIR):
         os.makedirs(ROOT_DIR + "/" + DATA_DIR)
 
-    # TODO: get urls from API endpoint
-    unique_urls = set()
-    url1 = "https://github.com/leanprover-community/mathlib4.git"
-    url2 = "https://github.com/teorth/pfr.git"
-    unique_urls.add(url1)
-    unique_urls.add(url2)
+    api_url = "http://127.0.0.1:8000" # TODO: update later
+    unique_urls = set(fetch_urls_from_api(api_url))
 
     generate_dataset(unique_urls)
 
