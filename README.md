@@ -1,4 +1,4 @@
-# CS 159 Final Project
+# LeanBot
 
 ![Model](images/CS159PipelinePicture.png)
 
