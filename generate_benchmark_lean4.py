@@ -301,6 +301,7 @@ def main(url, commit, dst_dir):
     if not is_supported_version(v):
         logger.info("Unsupported version")
     v = v[1:] # ignore "v" at beginning
+    # TODO: don't hardcode root or adarsh
     lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---" + v
     logger.info(f"lean path {lean_dir}")
     if not os.path.exists(lean_dir):
