@@ -20,6 +20,7 @@ from common import IndexedCorpus
 import numpy as np
 import sys
 import traceback
+import time
 
 ROOT_DIR = os.environ.get('ROOT_DIR', '/workspace')
 DATA_DIR = os.environ.get('DATA_DIR', 'datasets')
@@ -433,6 +434,10 @@ def main():
         api_url = "https://leancopilotapi.onrender.com" # TODO: update later
         unique_urls = set(fetch_urls_from_api(api_url))
         print(f"Unique URLs: {unique_urls}")
+
+        while True:
+            print("Running main process...")
+            time.sleep(10)
 
         return # TODO: remove
 
