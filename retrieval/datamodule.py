@@ -32,7 +32,6 @@ class RetrievalDataset(Dataset):
         is_train: bool,
         cache_path: str,
     ) -> None:
-        logger.info("Initializing RetrievalDataset")
         super().__init__()
         self.corpus = corpus
         self.num_negatives = num_negatives
@@ -44,7 +43,6 @@ class RetrievalDataset(Dataset):
         self.data = self.load_or_cache_data(data_paths)
 
     def load_or_cache_data(self, data_paths: List[str]) -> List[Example]:
-        logger.info("Loading or caching data")
         cache_file = os.path.join(self.cache_path, "cached_data.pkl")
         
         # Check if cached data exists
@@ -64,9 +62,7 @@ class RetrievalDataset(Dataset):
         return data
 
     def _load_data(self, data_path: str) -> List[Example]:
-        logger.info(f"Loading data from {data_path}")
         data = []
-        logger.info(f"Loading data from {data_path}")
 
         for thm in tqdm(json.load(open(data_path))):
             file_path = thm["file_path"]
@@ -110,15 +106,12 @@ class RetrievalDataset(Dataset):
                         }
                     )
 
-        logger.info(f"Loaded {len(data)} examples.")
         return data
 
     def __len__(self) -> int:
-        logger.info(f"Length of dataset: {len(self.data)}")
         return len(self.data)
 
     def __getitem__(self, idx: int) -> Example:
-        # logger.info(f"Getting item {idx}")
         if not self.is_train:
             return self.data[idx]
 
@@ -154,7 +147,6 @@ class RetrievalDataset(Dataset):
         return ex
 
     def collate(self, examples: List[Example]) -> Batch:
-        # logger.info("Collating examples")
         batch = {}
 
         # Tokenize the context.
@@ -238,7 +230,6 @@ class RetrievalDataModule(pl.LightningDataModule):
         max_seq_len: int,
         num_workers: int,
     ) -> None:
-        logger.info("Initializing RetrievalDataModule")
         super().__init__()
         self.data_path = data_path
         self.num_negatives = num_negatives
@@ -259,7 +250,6 @@ class RetrievalDataModule(pl.LightningDataModule):
         pass
 
     def setup(self, stage: Optional[str] = None) -> None:
-        logger.info("Setting up data")
         self.ds_train = RetrievalDataset(
             [os.path.join(self.data_path, "train.json")],
             self.corpus,
@@ -301,7 +291,6 @@ class RetrievalDataModule(pl.LightningDataModule):
     # TODO: low pri: handle edge case like in new-version where dataset could be empty
     # TODO: cases like with new-version where lots of tactics are empty, and those that exist have empty premises so we have all empty batches
     def train_dataloader(self) -> DataLoader:
-        logger.info("Creating training dataloader")
         return DataLoader(
             self.ds_train,
             batch_size=self.batch_size,
@@ -313,7 +302,6 @@ class RetrievalDataModule(pl.LightningDataModule):
         )
 
     def val_dataloader(self) -> DataLoader:
-        logger.info("Creating validation dataloader")
         return DataLoader(
             self.ds_val,
             batch_size=self.eval_batch_size,
@@ -325,7 +313,6 @@ class RetrievalDataModule(pl.LightningDataModule):
         )
 
     def predict_dataloader(self) -> DataLoader:
-        logger.info("Creating prediction dataloader")
         return DataLoader(
             self.ds_pred,
             batch_size=self.eval_batch_size,

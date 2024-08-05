@@ -297,3 +297,5 @@ def main(url, commit, dst_dir):
         logger.info(f"Failed to trace repo {repo} because of {e}")
     splits = split_data(traced_repo)
     export_data(traced_repo, splits, dst_dir, )
+
+# TODO: ensure similar to generate_benchmark_lean4.py

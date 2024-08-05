@@ -270,12 +270,9 @@ def _eval(data, preds_map) -> Tuple[float, float, float]:
             # ]
             pred = None
             key = (thm["file_path"], thm["full_name"], tuple(thm["start"]), i)
-            logger.info(f"Checking if key {key} is in preds_map")
             if key in preds_map:
                 pred = preds_map[key]
-                logger.info(f"Key {key} found in predictions")
             else:
-                logger.info(f"Key {key} not found in predictions.")
                 continue  # or handle as appropriate
             all_pos_premises = set(pred["all_pos_premises"])
             if len(all_pos_premises) == 0:
@@ -330,7 +327,7 @@ def find_latest_fisher():
     logger.info(f"Using the latest Fisher Information Matrix: {latest_fisher}")
     return latest_fisher
 
-def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, max_epochs=3):
+def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, max_epochs=1): # TODO: chagne back to 2
     logger.info("Inside train_test_fisher")
     seed_everything(3407)
 
@@ -418,51 +415,52 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, max_ep
         num_sanity_val_steps=0, # TODO: remove later
     )
 
-    # Continue training
     logger.info("Starting progressive training...")
 
     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
 
     ### TESTING FOR AVERAGE RECALL
 
-    logger.info("Testing...")
-    total_R1, total_R10, total_MRR = [], [], []
-    dataset_path = RAID_DIR + "/" + DATA_DIR
-    testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
-    for data_path in testing_paths:
-        # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
-        run_cli(model_checkpoint_path, data_path)
-        num_gpus = 1 # TODO: change for GPU
-        preds_map = {}
-        for gpu_id in range(num_gpus):
-            with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
-                preds = pickle.load(f)
-                preds_map.update(preds)
+    # TODO: uncomment later
+    # TODO: don't load corpus and reindex for every repo we use for average recall
+    # logger.info("Testing...")
+    # total_R1, total_R10, total_MRR = [], [], []
+    # dataset_path = RAID_DIR + "/" + DATA_DIR
+    # testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
+    # for data_path in testing_paths:
+    #     # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
+    #     run_cli(model_checkpoint_path, data_path)
+    #     num_gpus = 1 # TODO: change for GPU
+    #     preds_map = {}
+    #     for gpu_id in range(num_gpus):
+    #         with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
+    #             preds = pickle.load(f)
+    #             preds_map.update(preds)
 
-        logger.info("Loaded the predictions pickle files")
-        data_path = os.path.join(data_path, "random", "test.json")
-        data = json.load(open(data_path))
-        logger.info(f"Evaluating on {data_path}")
-        R1, R10, MRR = _eval(data, preds_map)
-        logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-        total_R1.append(R1)
-        total_R10.append(R10)
-        total_MRR.append(MRR)
+    #     logger.info("Loaded the predictions pickle files")
+    #     data_path = os.path.join(data_path, "random", "test.json")
+    #     data = json.load(open(data_path))
+    #     logger.info(f"Evaluating on {data_path}")
+    #     R1, R10, MRR = _eval(data, preds_map)
+    #     logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+    #     total_R1.append(R1)
+    #     total_R10.append(R10)
+    #     total_MRR.append(MRR)
 
-    avg_R1 = np.mean(total_R1)
-    avg_R10 = np.mean(total_R10)
-    avg_MRR = np.mean(total_MRR)
+    # avg_R1 = np.mean(total_R1)
+    # avg_R10 = np.mean(total_R10)
+    # avg_MRR = np.mean(total_MRR)
 
-    logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+    # logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
 
-    # Save average accuracies to a file
-    file_path = "/home/adarsh/ReProver/total_evaluation_results.txt"
-    with open(file_path, "a") as f:
-        f.write("\n")
-        f.write("\n")
-        f.write("\n")
-        f.write(f"EWC {lambda_value}:")
-        f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+    # # Save average accuracies to a file
+    # file_path = "/home/adarsh/ReProver/total_evaluation_results.txt"
+    # with open(file_path, "a") as f:
+    #     f.write("\n")
+    #     f.write("\n")
+    #     f.write("\n")
+    #     f.write(f"EWC {lambda_value}:")
+    #     f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
 
     
     ### FISHER INFORMATION MATRIX FOR NEXT EWC
@@ -494,7 +492,6 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
     3. Generate a corpus of the repo's premises.
     4. Search for proofs for theorems with `sorry` in them.
     """
-    # TODO: git pull leandojo to correclty do newer repos
     if ray.is_initialized():
         ray.shutdown()
 
@@ -516,7 +513,7 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
     #     logger.error(str(e))
     #     return
     
-    # train_test_fisher(model_checkpoint_path, dst_dir, lambda_value)
+    train_test_fisher(model_checkpoint_path, dst_dir, lambda_value)
 
     data = []
 
@@ -552,15 +549,25 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
     logger.info(f"Found {num_sorries} sorries!")
 
     # TODO: remove:
-    theorems = theorems[:30]
-    positions = positions[:30]
-    ends = ends[:30]
-    with open("sorries.pkl", "wb") as f:
-        pickle.dump(theorems, f)
-    with open("positions.pkl", "wb") as f:
-        pickle.dump(positions, f)
-    with open("ends.pkl", "wb") as f:
-        pickle.dump(ends, f)
+    # theorems = theorems[:30]
+    # positions = positions[:30]
+    # ends = ends[:30]
+    # with open("sorries.pkl", "wb") as f:
+    #     pickle.dump(theorems, f)
+    # with open("positions.pkl", "wb") as f:
+    #     pickle.dump(positions, f)
+    # with open("ends.pkl", "wb") as f:
+    #     pickle.dump(ends, f)
+
+    # theorems = []
+    # positions = []
+    # ends = []
+    # with open("sorries.pkl", "rb") as f:
+    #     theorems = pickle.load(f)
+    # with open("positions.pkl", "rb") as f:
+    #     positions = pickle.load(f)
+    # with open("ends.pkl", "rb") as f:
+    #     ends = pickle.load(f)
 
     corpus_path = dst_dir + "/corpus.jsonl"
     tactic = None
@@ -647,6 +654,7 @@ def replace_sorry_with_proof(proofs):
 
 def main():
     """The main function that drives the bot."""
+    # TODO: incorporate latest changes from ReProver repo
     # model_checkpoint_path = find_latest_checkpoint()
     # logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
     # TODO: remove after testing
@@ -686,13 +694,34 @@ def main():
     # lean_git_repos.append(lean_git_repo)
     # repos.append("Adarsh321123/new-version-test")
 
-    clone_url = "https://github.com/lecopivo/SciLean.git"
+    # clone_url = "https://github.com/lecopivo/SciLean.git"
+    # repo_name, sha = clone_repo(clone_url)
+    # sha = "2d1a4e79acf3a256ba2ec8ac2848d13f219b9684" # TODO: remove
+    # url = clone_url.replace('.git', '')
+    # lean_git_repo = LeanGitRepo(url, sha)
+    # lean_git_repos.append(lean_git_repo)
+    # repos.append("lecopivo/SciLean")
+
+    # clone_url = "https://github.com/Adarsh321123/SciLean.git"
+    # repo_name, sha = clone_repo(clone_url)
+    # url = clone_url.replace('.git', '')
+    # lean_git_repo = LeanGitRepo(url, sha)
+    # lean_git_repos.append(lean_git_repo)
+    # repos.append("Adarsh321123/SciLean")
+
+    clone_url = "https://github.com/leanprover-community/mathlib4.git"
     repo_name, sha = clone_repo(clone_url)
-    sha = "2d1a4e79acf3a256ba2ec8ac2848d13f219b9684" # TODO: remove
     url = clone_url.replace('.git', '')
     lean_git_repo = LeanGitRepo(url, sha)
     lean_git_repos.append(lean_git_repo)
-    repos.append("lecopivo/SciLean")
+    repos.append("leanprover-community/mathlib4")
+
+    # clone_url = "https://github.com/teorth/pfr.git"
+    # repo_name, sha = clone_repo(clone_url)
+    # url = clone_url.replace('.git', '')
+    # lean_git_repo = LeanGitRepo(url, sha)
+    # lean_git_repos.append(lean_git_repo)
+    # repos.append("teorth/pfr")
 
     # clone_url = "https://github.com/Adarsh321123/mathematics_in_lean_source.git"
     # repo_name, sha = clone_repo(clone_url)
@@ -704,9 +733,9 @@ def main():
     # lambdas = [0.01, 0.1, 1, 10, 100, 1000, 5000, 10000]
     # lambdas = [0.01, 0.1, 1, 10, 100, 10000]
     # lambdas = [1, 10, 100, 10000]
-    # lambdas = [0.1]
+    lambdas = [0.1]
     # lambdas = [0.01]
-    lambdas = [0.0]
+    # lambdas = [0.0]
 
     # search_github_repositories("Lean", 10)
     num_repos = len(repos)
@@ -756,7 +785,7 @@ def main():
                     "file_path": unproved_sorry[0],
                     "theorem_name": unproved_sorry[1]
                 })
-            results_file = f"results_new_lambda_{lambda_value}.json"
+            results_file = f"results_new_lambda_{lambda_value}_scilean_augmented.json"
             with open(results_file, 'w', encoding='utf-8') as f:
                 json.dump(results, f, indent=4, ensure_ascii=False)
             # Uncomment if you would like to contribute back to the repos!

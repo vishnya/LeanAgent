@@ -119,7 +119,6 @@ class BestFirstSearchProver:
                 num_total_nodes=len(self.nodes),
                 num_searched_nodes=self.num_expansions,
             )
-            logger.info(result)
             return result
 
         except DojoInitError as ex:
@@ -364,10 +363,10 @@ class GpuProver(BestFirstSearchProver):
             tac_gen = FixedTacticGenerator(tactic, module)
         else:
             # TODO: change
-            # model_checkpoint_path = find_latest_checkpoint()
-            model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+            model_checkpoint_path = find_latest_checkpoint() # TODO: but should not use latest premise retriever for tacitc generator 
+            # model_checkpoint_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt"
             config = {
-                "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
+                "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small", # TODO: change the names to correct retriever and generator throughout
                 "lr": 1e-3,
                 "warmup_steps": 1000,
                 "num_beams": 5,
@@ -430,8 +429,8 @@ class DistributedProver:
             else:
                 device = torch.device("cuda") if num_gpus > 0 else torch.device("cpu")
                 # TODO: change
-                # model_checkpoint_path = find_latest_checkpoint()
-                model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                model_checkpoint_path = find_latest_checkpoint()
+                # model_checkpoint_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt"
                 config = {
                     "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
                     "lr": 1e-3,

@@ -51,7 +51,7 @@ class PremiseRetriever(pl.LightningModule):
         self.train_loss = []
         self.previous_params = {}
         self.fisher_info = {}
-        self.lamda = 1000
+        self.lamda = 0  # No EWC by default
         # logger.info("End of __init__")
 
     def set_fisher_info(self, fisher_info):
@@ -112,6 +112,22 @@ class PremiseRetriever(pl.LightningModule):
         # logger.info("Inside load")
         # logger.info("End of load")
         return load_checkpoint(cls, ckpt_path, device, freeze, config)
+
+    @classmethod
+    def load_hf(
+        cls, ckpt_path: str, max_seq_len: int, device: int, dtype=None
+    ) -> "PremiseRetriever":
+        model = PremiseRetriever(ckpt_path, 0.0, 0, max_seq_len, 100).to(device).eval()
+        if dtype is not None:
+            return model.to(dtype)
+        elif (
+            model.dtype == torch.float32
+            and torch.cuda.is_available()
+            and torch.cuda.get_device_capability()[0] >= 8
+        ):
+            return model.to(torch.bfloat16)
+        else:
+            return model
 
     def load_corpus(self, path_or_corpus: Union[str, Corpus]) -> None:
         # logger.info("Inside load_corpus")
@@ -199,15 +215,12 @@ class PremiseRetriever(pl.LightningModule):
     ############
 
     def on_fit_start(self) -> None:
-        logger.info("Inside on_fit_start")
         if self.logger is not None:
             self.logger.log_hyperparams(self.hparams)
-            logger.info(f"Logging to {self.trainer.log_dir}")
 
         self.corpus = self.trainer.datamodule.corpus
         self.corpus_embeddings = None
         self.embeddings_staled = True
-        logger.info("End of on_fit_start")
 
     def training_step(self, batch: Dict[str, Any], _) -> torch.Tensor:
         # logger.info("Inside training_step")
@@ -479,13 +492,6 @@ class PremiseRetriever(pl.LightningModule):
             # logger.info("FULL DETAILS")
             # for p in self.predict_step_outputs:
             #     print(p)
-
-            for p in self.predict_step_outputs:
-                # if p["file_path"] == ".lake/packages/mathlib/Mathlib/Topology/Category/TopCat/Limits/Products.lean" or p["file_path"] == ".lake/packages/mathlib/Mathlib/Algebra/Order/Field/Basic.lean" or p["file_path"] == ".lake/packages/mathlib/Mathlib/Algebra/EuclideanDomain/Defs.lean":
-                logger.info(f"p['file_path']: {p['file_path']}")
-                logger.info(f"p['full_name']: {p['full_name']}")
-                logger.info(f"tuple(p['start']): {tuple(p['start'])}")
-                logger.info(f"p['tactic_idx']: {p['tactic_idx']}")
 
             gpu_id = self.trainer.local_rank
             

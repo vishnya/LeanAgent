@@ -1,0 +1,142 @@
+{
+    "total_repositories": 1,
+    "repositories": {
+        "/raid/adarsh/repos/lecopivo/SciLean": {
+            "number_of_sorries": 293,
+            "number_of_proofs_found": 6,
+            "proofs_details": [
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple",
+                    "proof_text": "constructor <;> intro h\nall_goals aesop"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple'",
+                    "proof_text": "constructor <;> intro h\nall_goals aesop"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.Equiv.toFun.arg_a0.Bijective_rule",
+                    "proof_text": "inhabit Z\nexact f.bijective.comp hf"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.Equiv.invFun.arg_a0.Bijective_rule",
+                    "proof_text": "convert hf\nsimp [hf]\nexact f.symm.bijective.comp hf"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/IsLinearMap.lean",
+                    "theorem_name": "IsLinearMap.isLinearMap_const_zero",
+                    "proof_text": "constructor\nall_goals aesop"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/IsLinearMap.lean",
+                    "theorem_name": "IsLinearMap.isLinearMap_apply",
+                    "proof_text": "constructor\nall_goals aesop"
+                }
+            ],
+            "unproved_sorries": [
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/Approx/ApproxSolution.lean",
+                    "theorem_name": "SciLean.approx_consistency"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/Meta/GenerateLinearMapSimp.lean",
+                    "theorem_name": "IsLinearMap.sum_push"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/Meta/GenerateLinearMapSimp.lean",
+                    "theorem_name": "IsLinearMap.sum_pull"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.Neg.neg.arg_a0.Bijective_rule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.Inv.inv.arg_a0.Bijective_rule_group"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.Inv.inv.arg_a0.Bijective_rule_field"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HAdd.hAdd.arg_a0.Bijective_rule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HAdd.hAdd.arg_a1.Bijective_rule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HSub.hSub.arg_a0.Bijective_rule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HSub.hSub.arg_a1.Bijective_rule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HMul.hMul.arg_a0.Bijective_rule_group"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HMul.hMul.arg_a1.Bijective_rule_group"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HMul.hMul.arg_a0.Bijective_rule_field"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HMul.hMul.arg_a1.Bijective_rule_field"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HSMul.hSMul.arg_a1.Bijective_rule_group"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HSMul.hSMul.arg_a1.Bijective_rule_field"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HVAdd.hVAdd.arg_a1.Bijective_rule_group"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HDiv.hDiv.arg_a0.Bijective_rule_group"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/Bijective.lean",
+                    "theorem_name": "Function.Bijective.HDiv.hDiv.arg_a0.Bijective_rule_field"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/IsLinearMap.lean",
+                    "theorem_name": "IsLinearMap.isLinearMap_pi"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/IsLinearMap.lean",
+                    "theorem_name": "IndexType.sum.arg_f.IsLinearMap_rule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/IsLinearMap.lean",
+                    "theorem_name": "SciLean.Basis.proj.arg_x.IsLinearMap_rule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos/lecopivo/SciLean/SciLean/Core/FunctionPropositions/IsLinearMap.lean",
+                    "theorem_name": "SciLean.DualBasis.dualProj.arg_x.IsLinearMap_rule"
+                }
+            ],
+            "number_of_premises_theorems_retrieved": 0,
+            "num_files_traced": 0,
+            "PR": ""
+        }
+    }
+}

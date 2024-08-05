@@ -32,7 +32,7 @@ def get_lean4_version_from_config(toolchain: str) -> str:
 
 def is_supported_version(v) -> bool:
     """
-    Check if ``v`` is at least `v4.3.0-rc2` and at most `v4.8.0-rc2`.
+    Check if ``v`` is at least `v4.3.0-rc2` and at most `v4.9.1`.
     Note: Lean versions are generally not backwards-compatible. Also, the Lean FRO
     keeps bumping the default versions of repos to the latest version, which is
     not necessarily the latest stable version. So, we need to be careful about
@@ -42,7 +42,7 @@ def is_supported_version(v) -> bool:
         return False
     v = v[1:]
     major, minor, patch = [int(_) for _ in v.split("-")[0].split(".")]
-    if major < 4 or (major == 4 and minor < 3) or (major == 4 and minor > 8) or (major == 4 and minor == 8 and patch > 0):
+    if major < 4 or (major == 4 and minor < 3) or (major == 4 and minor > 9) or (major == 4 and minor == 9 and patch > 1):
         return False
     if (
         major > 4
@@ -54,9 +54,6 @@ def is_supported_version(v) -> bool:
     if "4.3.0-rc" in v:
         rc = int(v.split("-")[1][2:])
         return rc >= 2
-    elif "4.8.0-rc" in v:
-        rc = int(v.split("-")[1][2:])
-        return rc <= 2
     else:
         return True
 
@@ -301,8 +298,9 @@ def main(url, commit, dst_dir):
     if not is_supported_version(v):
         logger.info("Unsupported version")
     v = v[1:] # ignore "v" at beginning
-    # TODO: don't hardcode root or adarsh
-    lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---" + v
+    # TODO: ensure we always set this env var
+    ROOT_DIR = os.environ.get('ROOT_DIR', '/home/adarsh')
+    lean_dir = f"{ROOT_DIR}/.elan/toolchains/leanprover--lean4---{v}"
     logger.info(f"lean path {lean_dir}")
     if not os.path.exists(lean_dir):
         logger.info(f"Lean toolchain path does not exist: {lean_dir}")

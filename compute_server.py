@@ -19,13 +19,12 @@ import pickle
 from common import IndexedCorpus
 import numpy as np
 
-# TODO: put these in dockerfile
-ROOT_DIR = "/raid/adarsh"
-DATA_DIR = "datasets_test"
-CHECKPOINT_DIR = "checkpoints_test"
-HUGGINGFACE_API_URL = "https://huggingface.co/api/models"
-USER = "AK123321"
-HUGGINGFACE_TOKEN = "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"
+ROOT_DIR = os.environ.get('ROOT_DIR', '/workspace')
+DATA_DIR = os.environ.get('DATA_DIR', 'datasets')
+CHECKPOINT_DIR = os.environ.get('CHECKPOINT_DIR', 'checkpoints')
+HUGGINGFACE_API_URL = os.environ.get('HUGGINGFACE_API_URL', 'https://huggingface.co/api/models')
+USER = os.environ.get('USER', 'AK123321')
+HUGGINGFACE_TOKEN = os.environ.get('HUGGINGFACE_TOKEN')
 
 def merge_datasets():
     data_dir = ROOT_DIR + "/" + DATA_DIR
@@ -426,8 +425,11 @@ def main():
     if not os.path.exists(ROOT_DIR + "/" + DATA_DIR):
         os.makedirs(ROOT_DIR + "/" + DATA_DIR)
 
-    api_url = "http://127.0.0.1:8000" # TODO: update later
+    api_url = "https://leancopilotapi.onrender.com" # TODO: update later
     unique_urls = set(fetch_urls_from_api(api_url))
+    print(f"Unique URLs: {unique_urls}")
+
+    return # TODO: remove
 
     generate_dataset(unique_urls)
 
