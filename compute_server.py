@@ -416,6 +416,7 @@ def fetch_urls_from_api(api_url):
         return []
 
 def main():
+    # TODO: close instance on done
     # TODO: should we close instance on failure?
     # TODO: put a try-catch around generate benchmark, and anything else that could fail, same with main.py
     # TODO: should we just not cache the datasets so we can save space?
@@ -425,6 +426,7 @@ def main():
     if not os.path.exists(ROOT_DIR + "/" + DATA_DIR):
         os.makedirs(ROOT_DIR + "/" + DATA_DIR)
 
+    print("GitHub Token:", os.environ.get('GITHUB_ACCESS_TOKEN')) # TODO: remove
     api_url = "https://leancopilotapi.onrender.com" # TODO: update later
     unique_urls = set(fetch_urls_from_api(api_url))
     print(f"Unique URLs: {unique_urls}")
