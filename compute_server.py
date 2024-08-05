@@ -424,6 +424,7 @@ def main():
     # TODO: put a try-catch around generate benchmark, and anything else that could fail, same with main.py
     # TODO: should we just not cache the datasets so we can save space?
     try:
+        print("Starting compute server...")
         if ray.is_initialized():
             ray.shutdown()
         
