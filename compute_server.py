@@ -18,6 +18,8 @@ import pytorch_lightning as pl
 import pickle
 from common import IndexedCorpus
 import numpy as np
+import sys
+import traceback
 
 ROOT_DIR = os.environ.get('ROOT_DIR', '/workspace')
 DATA_DIR = os.environ.get('DATA_DIR', 'datasets')
@@ -420,34 +422,38 @@ def main():
     # TODO: should we close instance on failure?
     # TODO: put a try-catch around generate benchmark, and anything else that could fail, same with main.py
     # TODO: should we just not cache the datasets so we can save space?
-    if ray.is_initialized():
-        ray.shutdown()
-    
-    if not os.path.exists(ROOT_DIR + "/" + DATA_DIR):
-        os.makedirs(ROOT_DIR + "/" + DATA_DIR)
+    try:
+        if ray.is_initialized():
+            ray.shutdown()
+        
+        if not os.path.exists(ROOT_DIR + "/" + DATA_DIR):
+            os.makedirs(ROOT_DIR + "/" + DATA_DIR)
 
-    print("GitHub Token:", os.environ.get('GITHUB_ACCESS_TOKEN')) # TODO: remove
-    api_url = "https://leancopilotapi.onrender.com" # TODO: update later
-    unique_urls = set(fetch_urls_from_api(api_url))
-    print(f"Unique URLs: {unique_urls}")
+        print("GitHub Token:", os.environ.get('GITHUB_ACCESS_TOKEN')) # TODO: remove
+        api_url = "https://leancopilotapi.onrender.com" # TODO: update later
+        unique_urls = set(fetch_urls_from_api(api_url))
+        print(f"Unique URLs: {unique_urls}")
 
-    return # TODO: remove
+        return # TODO: remove
 
-    generate_dataset(unique_urls)
+        generate_dataset(unique_urls)
 
-    model_id = get_recent_pl_checkpoint()
-    if model_id:
-        print(f"Latest PL checkpoint found: {model_id}")
-        model_checkpoint_path = download_pl_checkpoint(model_id)
-        if model_checkpoint_path:
-            print(f"Checkpoint path: {model_checkpoint_path}")
-            merged_data_path = ROOT_DIR + "/" + DATA_DIR + "/" + "merged"
-            next_suffix = int(model_id.split("-")[-1]) + 1
-            train(model_checkpoint_path, merged_data_path, next_suffix)
+        model_id = get_recent_pl_checkpoint()
+        if model_id:
+            print(f"Latest PL checkpoint found: {model_id}")
+            model_checkpoint_path = download_pl_checkpoint(model_id)
+            if model_checkpoint_path:
+                print(f"Checkpoint path: {model_checkpoint_path}")
+                merged_data_path = ROOT_DIR + "/" + DATA_DIR + "/" + "merged"
+                next_suffix = int(model_id.split("-")[-1]) + 1
+                train(model_checkpoint_path, merged_data_path, next_suffix)
+            else:
+                print("Error downloading or saving checkpoint")
         else:
-            print("Error downloading or saving checkpoint")
-    else:
-        print("No checkpoints found")
+            print("No checkpoints found")
+    except Exception as e:
+        print(f"An error occurred: {e}", file=sys.stderr)
+        traceback.print_exc()
 
 if __name__ == "__main__":
     main()
