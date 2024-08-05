@@ -85,3 +85,4 @@ if __name__ == "__main__":
 # TODO: run at 11:55 PM daily
 # crontab -e
 # 55 23 * * * python /home/adarsh/ReProver/runpod_manager.py
+# 5 23 * * * /path/to/your/run_leancopilot.sh >> /path/to/logfile.log 2>&1

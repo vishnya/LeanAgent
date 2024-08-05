@@ -32,7 +32,7 @@ def get_lean4_version_from_config(toolchain: str) -> str:
 
 def is_supported_version(v) -> bool:
     """
-    Check if ``v`` is at least `v4.3.0-rc2` and at most `v4.9.1`.
+    Check if ``v`` is at least `v4.3.0-rc2` and at most `v4.8.0`.
     Note: Lean versions are generally not backwards-compatible. Also, the Lean FRO
     keeps bumping the default versions of repos to the latest version, which is
     not necessarily the latest stable version. So, we need to be careful about
@@ -42,7 +42,7 @@ def is_supported_version(v) -> bool:
         return False
     v = v[1:]
     major, minor, patch = [int(_) for _ in v.split("-")[0].split(".")]
-    if major < 4 or (major == 4 and minor < 3) or (major == 4 and minor > 9) or (major == 4 and minor == 9 and patch > 1):
+    if major < 4 or (major == 4 and minor < 3) or (major == 4 and minor > 8) or (major == 4 and minor == 8 and patch > 1):
         return False
     if (
         major > 4
