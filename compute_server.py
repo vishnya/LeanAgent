@@ -435,7 +435,7 @@ def main():
         unique_urls = set(fetch_urls_from_api(api_url))
         print(f"Unique URLs: {unique_urls}")
 
-        while True:
+        while True: # TODO: remove
             print("Running main process...")
             time.sleep(10)
 
