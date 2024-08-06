@@ -123,40 +123,46 @@ def get_compatible_commit(url):
         process = subprocess.Popen(["git", "ls-remote", url], stdout=subprocess.PIPE)
         stdout, stderr = process.communicate()
         latest_commit = re.split(r'\t+', stdout.decode('utf-8'))[0]
+        logger.info(f"Latest commit: {latest_commit}")
 
         new_url = url.replace('.git', '')
         repo = LeanGitRepo(new_url, latest_commit)
+        logger.info(f"Getting config for {url}")
         config = repo.get_config("lean-toolchain")
         v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
         if generate_benchmark_lean4.is_supported_version(v):
             logger.info(f"Latest commit compatible for url {url}")
             return latest_commit, v
 
-        # Search for latest commit on v4.9.1
         logger.info(f"Searching for compatible commit for {url}")
         process = subprocess.Popen(
             ["git", "fetch", "--depth=1000000", url],  # Fetch commits
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
         )
+        logger.info(f"Fetching commits for {url}")
         _, stderr = process.communicate()
         if process.returncode != 0:
             raise Exception(f"Git fetch command failed: {stderr.decode('utf-8')}")
+        logger.info(f"Fetched commits for {url}")
         process = subprocess.Popen(
             ["git", "log", "--format=%H", "FETCH_HEAD"],  # Get list of commits
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
         )
+        logger.info(f"Getting list of commits for {url}")
         stdout, stderr = process.communicate()
         if process.returncode != 0:
             raise Exception(f"Git log command failed: {stderr.decode('utf-8')}")
         commits = stdout.decode('utf-8').strip().split('\n')
+        logger.info(f"Found {len(commits)} commits for {url}")
         for commit in commits:
             new_url = url.replace('.git', '')
             repo = LeanGitRepo(new_url, commit)
             config = repo.get_config("lean-toolchain")
             v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
             if generate_benchmark_lean4.is_supported_version(v):
+                logger.info(f"Found compatible commit {commit} for {url}")
                 return commit, v
 
         raise Exception("No compatible commit found")
@@ -465,7 +471,9 @@ def main():
 
         logger.info("GitHub Token:", os.environ.get('GITHUB_ACCESS_TOKEN')) # TODO: remove
         api_url = "https://leancopilotapi.onrender.com"
-        unique_urls = set(fetch_urls_from_api(api_url))
+        # TODO: undo
+        # unique_urls = set(fetch_urls_from_api(api_url))
+        unique_urls = set(["https://github.com/leanprover-community/mathlib4.git"])
         logger.info(f"Unique URLs: {unique_urls}")
         logger.info("About to generate datasets...")
 
