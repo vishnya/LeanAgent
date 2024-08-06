@@ -2,10 +2,9 @@
 
 export RUNPOD_API_KEY="YVDWAN4T13S1IXQNDG89BAGRD34WNP24HGZWBS0Y"
 export HUGGINGFACE_TOKEN="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"
-export GITHUB_ACCESS_TOKEN="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"
+export GITHUB_ACCESS_TOKEN="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"
 
-# TODO: do we need env if we already export?
-POD_ID=$(runpodctl create pod \
+POD_INFO=$(runpodctl create pod \
   --imageName "ak123321/leancopilot-compute:latest" \
   --name "LeanCopilot-Compute" \
   --gpuCount 1 \
@@ -13,29 +12,24 @@ POD_ID=$(runpodctl create pod \
   --volumeSize 20 \
   --containerDiskSize 20 \
   --ports "8888/http,22/tcp" \
-  --env "HUGGINGFACE_TOKEN=$HUGGINGFACE_TOKEN" \
+  --env "RUNPOD_API_KEY=$RUNPOD_API_KEY","HUGGINGFACE_TOKEN=$HUGGINGFACE_TOKEN","GITHUB_ACCESS_TOKEN=$GITHUB_ACCESS_TOKEN" \
   --vcpu 9 \
   --mem 48 \
   --secureCloud)
 
-POD_ID=$(echo "$POD_ID" | awk '{print $2}' | tr -d '"')
+POD_ID=$(echo "$POD_INFO" | awk '{print $2}')
 
 echo "Created pod with ID: $POD_ID"
+echo "Waiting for pod to start..."
 
-while true; do
-    STATUS=$(runpodctl get pod "$POD_ID" | awk 'NR==2 {print $NF}')
-    if [ "$STATUS" == "RUNNING" ]; then
-        break
-    fi
-    echo "Current status: $STATUS. Waiting..."
-    sleep 10
-done
+sleep 120
 
-echo "Pod is now running and compute_server.py should be executing"
-
+# TODO: save logs and terminate
 read -p "Press enter to stop the pod"
+echo "Stopping pod..."
 runpodctl stop pod $POD_ID
-# TODO: terminate pod and save logs
+
+# docker build -t ak123321/leancopilot-compute:latest . && docker push ak123321/leancopilot-compute:latest
 
 # TODO: do this from DGX
 # crontab -e
