@@ -492,10 +492,9 @@ def main():
 
         logger.info("GitHub Token:", os.environ.get('GITHUB_ACCESS_TOKEN')) # TODO: remove
         api_url = "https://leancopilotapi.onrender.com"
-        # TODO: undo
-        # unique_urls = set(fetch_urls_from_api(api_url))
+        unique_urls = set(fetch_urls_from_api(api_url))
         # unique_urls = set(["https://github.com/teorth/pfr.git"])
-        unique_urls = set(["https://github.com/Adarsh321123/SimpleLean.git"])
+        # unique_urls = set(["https://github.com/Adarsh321123/SimpleLean.git"])
         logger.info(f"Unique URLs: {unique_urls}")
         logger.info("About to generate datasets...")
 
