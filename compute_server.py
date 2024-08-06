@@ -45,9 +45,11 @@ def merge_datasets():
 
         for split in split_types:
             print(f"Processing {split} split")
-            merged_data = []
+            merged_data = {}
             
             for dataset in os.listdir(data_dir):
+                if dataset == "merged":
+                    continue
                 print(f"Processing {dataset}")
                 dataset_path = os.path.join(data_dir, dataset)
                 if os.path.isdir(dataset_path):
@@ -55,27 +57,56 @@ def merge_datasets():
                     if os.path.exists(json_file):
                         with open(json_file, 'r') as f:
                             data = json.load(f)
-                            merged_data.extend(data)
+                            for item in data:
+                                key = (item['file_path'], item['full_name'], list(item['start'])[0], list(item['start'])[1], list(item['end'])[0], list(item['end'])[1])
+                                if key not in merged_data:
+                                    merged_data[key] = item
             
             output_file = os.path.join(strategy_dir, f"{split}.json")
             with open(output_file, 'w') as f:
-                json.dump(merged_data, f)
+                json.dump(list(merged_data.values()), f)
+            
             print(f"Finished processing {split} split")
         print(f"Finished merging datasets for {strategy}")
     
-    merged_corpus = []
+    print("Merging corpus")
+    merged_corpus = {}
     for dataset in os.listdir(data_dir):
+        if dataset == "merged":
+            continue
+        print(f"Processing {dataset}")
         dataset_path = os.path.join(data_dir, dataset)
         if os.path.isdir(dataset_path):
             corpus_file = os.path.join(dataset_path, "corpus.jsonl")
             if os.path.exists(corpus_file):
                 with open(corpus_file, 'r') as f:
                     for line in f:
-                        merged_corpus.append(json.loads(line))
-    
+                        file_data = json.loads(line.strip())
+                        path = file_data['path']
+                        if path not in merged_corpus:
+                            merged_corpus[path] = line.strip()
+
     with open(os.path.join(merged_dir, "corpus.jsonl"), 'w') as f:
-        for item in merged_corpus:
-            f.write(json.dumps(item) + '\n')
+        for line in merged_corpus.values():
+            f.write(line + "\n")
+
+    print("Finished merging corpus")
+
+    print("Adding metadata")
+
+    for dataset in os.listdir(data_dir):
+        if dataset == "merged":
+            continue
+        print(f"Getting metadata from {dataset}")
+        dataset_path = os.path.join(data_dir, dataset)
+        if os.path.isdir(dataset_path):
+            metadata_file = os.path.join(dataset_path, "metadata.json")
+            if os.path.exists(metadata_file):
+                with open(os.path.join(merged_dir, "metadata.json"), 'w') as f:
+                    json.dump(json.load(open(metadata_file)), f)
+                    break
+    
+    print("Finished adding metadata")
 
     print("Deleting individual datasets")
     for dataset in os.listdir(data_dir):
@@ -438,11 +469,11 @@ def main():
 
         # TODO: container keeps restarting, need to fix
         # TODO: why volume called /runpod not /workspace
-        while True: # TODO: remove
-            print("Running main process...")
-            time.sleep(10)
+        # while True: # TODO: remove
+        #     print("Running main process...")
+        #     time.sleep(10)
 
-        return # TODO: remove
+        # return # TODO: remove
 
         generate_dataset(unique_urls)
 
