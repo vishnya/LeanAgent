@@ -33,18 +33,20 @@ def verify_no_duplicates(merged_dir, old_merged_dir=None):
     files_to_check = ['corpus.jsonl', 'random/train.json', 'random/val.json', 'random/test.json',
                       'novel_premises/train.json', 'novel_premises/val.json', 'novel_premises/test.json']
 
+    has_duplicates = False
+
     for file_name in files_to_check:
         file_path = os.path.join(merged_dir, file_name)
         if not os.path.exists(file_path):
             print(f"File not found: {file_path}")
             continue
 
-        unique_count, duplicate_count, duplicate_indices = check_duplicates(file_path)
+        unique_count, duplicate_count, _ = check_duplicates(file_path)
         print(f"File: {file_name}")
         print(f"  Unique items: {unique_count}")
         print(f"  Duplicates: {duplicate_count}")
-        # if duplicate_count > 0:
-        #     print(f"  Duplicate indices: {duplicate_indices}")
+        if duplicate_count > 0:
+            has_duplicates = True
 
         if old_merged_dir:
             old_file_path = os.path.join(old_merged_dir, file_name)
@@ -58,10 +60,13 @@ def verify_no_duplicates(merged_dir, old_merged_dir=None):
         
         print()
 
-# Usage
-ROOT_DIR = "/raid/adarsh"
-DATA_DIR = "datasets_test"
-merged_dir = os.path.join(ROOT_DIR, DATA_DIR, "merged")
-old_merged_dir = os.path.join(ROOT_DIR, DATA_DIR, "../merged_dup")
+    return has_duplicates
 
-verify_no_duplicates(merged_dir, old_merged_dir)
+if __name__ == "__main__":
+    # Usage
+    ROOT_DIR = "/raid/adarsh"
+    DATA_DIR = "datasets_test"
+    merged_dir = os.path.join(ROOT_DIR, DATA_DIR, "merged")
+    old_merged_dir = os.path.join(ROOT_DIR, DATA_DIR, "../merged_dup")
+
+    verify_no_duplicates(merged_dir, old_merged_dir)
