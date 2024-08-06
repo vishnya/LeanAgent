@@ -169,7 +169,6 @@ def get_compatible_commit(url):
         logger.info(f"Found {len(commits)} commits for {url}")
         for commit in commits:
             new_url = url.replace('.git', '')
-            logger.info(f"Creating LeanGitRepo for {new_url}")
             repo = LeanGitRepo(new_url, commit)
             config = repo.get_config("lean-toolchain")
             v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
@@ -205,6 +204,7 @@ def generate_dataset(unique_urls):
         repo = LeanGitRepo(url, sha)
         dir_name = repo.url.split("/")[-1] + "_" + sha
         dst_dir = ROOT_DIR + "/" + DATA_DIR + "/" + dir_name
+        logger.info(f"Generating benchmark at {dst_dir}")
         generate_benchmark_lean4.main(repo.url, sha, dst_dir)
         logger.info(f"Finished generating benchmark at {dst_dir}")
     logger.info("Merging datasets")
@@ -477,9 +477,12 @@ def main():
     # TODO: should we just not cache the datasets so we can save space?
     try:
         logger.info("Starting compute server...")
+        logger.info(f"Current working directory: {os.getcwd()}")
         if ray.is_initialized():
             ray.shutdown()
         
+        logger.info(f"ROOT_DIR: {ROOT_DIR}")
+        logger.info(f"DATA_DIR: {DATA_DIR}")
         if not os.path.exists(ROOT_DIR + "/" + DATA_DIR):
             os.makedirs(ROOT_DIR + "/" + DATA_DIR)
 
