@@ -23,12 +23,12 @@ import traceback
 import time
 from loguru import logger
 
-ROOT_DIR = "/raid/adarsh"
-DATA_DIR = "datasets_test"
-CHECKPOINT_DIR = "checkpoints_test"
-HUGGINGFACE_API_URL = 'https://huggingface.co/api/models'
-USER = 'AK123321'
-HUGGINGFACE_TOKEN = "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"
+ROOT_DIR = os.environ.get('ROOT_DIR', '/workspace')
+DATA_DIR = os.environ.get('DATA_DIR', 'datasets')
+CHECKPOINT_DIR = os.environ.get('CHECKPOINT_DIR', 'checkpoints')
+HUGGINGFACE_API_URL = os.environ.get('HUGGINGFACE_API_URL', 'https://huggingface.co/api/models')
+USER = os.environ.get('USER', 'AK123321')
+HUGGINGFACE_TOKEN = os.environ.get('HUGGINGFACE_TOKEN')
 
 def merge_datasets():
     data_dir = ROOT_DIR + "/" + DATA_DIR
