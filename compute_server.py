@@ -466,6 +466,7 @@ def main():
         api_url = "https://leancopilotapi.onrender.com"
         unique_urls = set(fetch_urls_from_api(api_url))
         print(f"Unique URLs: {unique_urls}")
+        print("About to generate datasets...")
 
         # TODO: container keeps restarting, need to fix
         # TODO: why volume called /runpod not /workspace
