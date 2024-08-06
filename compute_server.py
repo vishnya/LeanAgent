@@ -23,12 +23,12 @@ import traceback
 import time
 from loguru import logger
 
-ROOT_DIR = os.environ.get('ROOT_DIR', '/workspace')
-DATA_DIR = os.environ.get('DATA_DIR', 'datasets')
-CHECKPOINT_DIR = os.environ.get('CHECKPOINT_DIR', 'checkpoints')
-HUGGINGFACE_API_URL = os.environ.get('HUGGINGFACE_API_URL', 'https://huggingface.co/api/models')
-USER = os.environ.get('USER', 'AK123321')
-HUGGINGFACE_TOKEN = os.environ.get('HUGGINGFACE_TOKEN')
+ROOT_DIR = "/raid/adarsh"
+DATA_DIR = "datasets_test"
+CHECKPOINT_DIR = "checkpoints_test"
+HUGGINGFACE_API_URL = 'https://huggingface.co/api/models'
+USER = 'AK123321'
+HUGGINGFACE_TOKEN = "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"
 
 def merge_datasets():
     data_dir = ROOT_DIR + "/" + DATA_DIR
@@ -490,7 +490,8 @@ def main():
         api_url = "https://leancopilotapi.onrender.com"
         # TODO: undo
         # unique_urls = set(fetch_urls_from_api(api_url))
-        unique_urls = set(["https://github.com/teorth/pfr.git"])
+        # unique_urls = set(["https://github.com/teorth/pfr.git"])
+        unique_urls = set(["https://github.com/Adarsh321123/SimpleLean.git"])
         logger.info(f"Unique URLs: {unique_urls}")
         logger.info("About to generate datasets...")
 
