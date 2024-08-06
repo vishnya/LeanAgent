@@ -136,6 +136,16 @@ def get_compatible_commit(url):
             return latest_commit, v
 
         logger.info(f"Searching for compatible commit for {url}")
+        try:
+            subprocess.run(["git", "rev-parse", "--is-inside-work-tree"], 
+                        check=True, 
+                        stdout=subprocess.DEVNULL, 
+                        stderr=subprocess.DEVNULL)
+            logger.info("Already in a Git repository")
+        except subprocess.CalledProcessError:
+            logger.info("Not in a Git repository. Initializing one.")
+            subprocess.run(["git", "init"], check=True)
+        
         process = subprocess.Popen(
             ["git", "fetch", "--depth=1000000", url],  # Fetch commits
             stdout=subprocess.PIPE,
