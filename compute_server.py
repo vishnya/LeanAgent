@@ -469,7 +469,6 @@ def main():
         print("About to generate datasets...")
 
         # TODO: container keeps restarting, need to fix
-        # TODO: why volume called /runpod not /workspace
         # while True: # TODO: remove
         #     print("Running main process...")
         #     time.sleep(10)
