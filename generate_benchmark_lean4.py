@@ -14,6 +14,7 @@ from lean_dojo import *
 from lean_dojo.constants import LEAN4_PACKAGES_DIR
 import re
 import subprocess
+import sys
 
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 
@@ -222,23 +223,23 @@ def export_premises(traced_repo: TracedRepo, dst_path: Path) -> None:
     return num_premises, len(traced_repo.traced_files)
 
 
-def export_licenses(traced_repo: TracedRepo, dst_path: Path) -> None:
-    """Export the licenses of a traced repo and all its dependencies to ``dst_path``."""
-    license_dir = dst_path / "licenses"
-    license_dir.mkdir()
-    all_repos = [traced_repo.repo] + list(traced_repo.dependencies.values())
+# def export_licenses(traced_repo: TracedRepo, dst_path: Path) -> None:
+#     """Export the licenses of a traced repo and all its dependencies to ``dst_path``."""
+#     license_dir = dst_path / "licenses"
+#     license_dir.mkdir()
+#     all_repos = [traced_repo.repo] + list(traced_repo.dependencies.values())
 
-    for repo in all_repos:
-        lic = repo.get_license()
-        if lic is None:
-            continue
-        with (license_dir / repo.name).open("wt") as oup:
-            oup.write(lic)
+#     for repo in all_repos:
+#         lic = repo.get_license()
+#         if lic is None:
+#             continue
+#         with (license_dir / repo.name).open("wt") as oup:
+#             oup.write(lic)
 
-    with (license_dir / "README.md").open("wt") as oup:
-        oup.write(
-            "This directory contains licenses of Lean repos used to generate this dataset. The dataset itself is released under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)."
-        )
+#     with (license_dir / "README.md").open("wt") as oup:
+#         oup.write(
+#             "This directory contains licenses of Lean repos used to generate this dataset. The dataset itself is released under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)."
+#         )
 
 
 def export_metadata(traced_repo: TracedRepo, dst_path: Path, **kwargs) -> None:
@@ -275,14 +276,28 @@ def export_data(
     logger.info("Successfully exported the premises")
 
     # Export the licenses.
-    export_licenses(traced_repo, dst_path)
-    logger.info("Successfully exported the licenses")
+    # export_licenses(traced_repo, dst_path)
+    # logger.info("Successfully exported the licenses")
 
     # Export metadata.
     export_metadata(traced_repo, dst_path, **kwargs)
     logger.info("Successfully exported the metadata")
 
     return num_premises, num_files_traced
+
+def configure_leandojo():
+    constants.logger.remove()
+    constants.logger.add(sys.stderr, level="DEBUG")
+
+    # constants.NUM_WORKERS = 1
+    # constants.MAX_NUM_PROCS = 2 # 1 worker + 1 main process
+    # constants.NUM_PROCS = 2
+
+    logger.info(f"Current working directory: {os.getcwd()}")
+    # logger.info(f"CACHE_DIR: {constants.CACHE_DIR}")
+    # logger.info(f"NUM_WORKERS: {constants.NUM_WORKERS}")
+    # logger.info(f"MAX_NUM_PROCS: {constants.MAX_NUM_PROCS}")
+    # logger.info(f"NUM_PROCS: {constants.NUM_PROCS}")
 
 def main(url, commit, dst_dir):
     logger.info(f"Generating dataset to go into {dst_dir}")
@@ -309,6 +324,10 @@ def main(url, commit, dst_dir):
     logger.info(f"Switched to Lean toolchain at: {lean_dir}")
     logger.info(f"lean --version: {subprocess.run(['lean', '--version'], capture_output=True).stdout.decode('utf-8')}")
     logger.info(f"repo: {repo}")
+
+    logger.info("Configuring LeanDojo again...")
+    configure_leandojo()
+    logger.info("LeanDojo configured")
 
     try:
         traced_repo = trace(repo)

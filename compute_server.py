@@ -486,6 +486,10 @@ def main():
         if not os.path.exists(ROOT_DIR + "/" + DATA_DIR):
             os.makedirs(ROOT_DIR + "/" + DATA_DIR)
 
+        logger.info("Configuring LeanDojo...")
+        generate_benchmark_lean4.configure_leandojo()
+        logger.info("LeanDojo configured")
+
         logger.info("GitHub Token:", os.environ.get('GITHUB_ACCESS_TOKEN')) # TODO: remove
         api_url = "https://leancopilotapi.onrender.com"
         # TODO: undo
