@@ -490,7 +490,7 @@ def main():
         api_url = "https://leancopilotapi.onrender.com"
         # TODO: undo
         # unique_urls = set(fetch_urls_from_api(api_url))
-        unique_urls = set(["https://github.com/leanprover-community/mathlib4.git"])
+        unique_urls = set(["https://github.com/teorth/pfr.git"])
         logger.info(f"Unique URLs: {unique_urls}")
         logger.info("About to generate datasets...")
 
