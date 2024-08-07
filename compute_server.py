@@ -487,7 +487,8 @@ def main():
 
         if os.path.exists(EXIT_FLAG_FILE):
             logger.info("Previous run completed. Exiting.")
-            sys.exit(0)
+            while True:
+                time.sleep(10)
 
         logger.info("Starting compute server...")
         logger.info(f"Current working directory: {os.getcwd()}")
