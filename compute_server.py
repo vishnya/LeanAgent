@@ -22,6 +22,7 @@ import sys
 import traceback
 import time
 from loguru import logger
+import atexit
 
 ROOT_DIR = os.environ.get('ROOT_DIR', '/workspace')
 DATA_DIR = os.environ.get('DATA_DIR', 'datasets')
@@ -29,6 +30,7 @@ CHECKPOINT_DIR = os.environ.get('CHECKPOINT_DIR', 'checkpoints')
 HUGGINGFACE_API_URL = os.environ.get('HUGGINGFACE_API_URL', 'https://huggingface.co/api/models')
 USER = os.environ.get('USER', 'AK123321')
 HUGGINGFACE_TOKEN = os.environ.get('HUGGINGFACE_TOKEN')
+EXIT_FLAG_FILE = ROOT_DIR + "/exit_flag"
 
 def merge_datasets():
     data_dir = ROOT_DIR + "/" + DATA_DIR
@@ -470,12 +472,23 @@ def fetch_urls_from_api(api_url):
         logger.info(f"Error fetching URLs from API: {e}")
         return []
 
+def exit_handler():
+    with open(EXIT_FLAG_FILE, 'w') as f:
+        logger.info("Writing exiting to file...")
+        f.write('exited')
+
 def main():
     # TODO: close instance on done
     # TODO: should we close instance on failure?
     # TODO: put a try-catch around generate benchmark, and anything else that could fail, same with main.py
     # TODO: should we just not cache the datasets so we can save space?
     try:
+        atexit.register(exit_handler)
+
+        if os.path.exists(EXIT_FLAG_FILE):
+            logger.info("Previous run completed. Exiting.")
+            sys.exit(0)
+
         logger.info("Starting compute server...")
         logger.info(f"Current working directory: {os.getcwd()}")
         if ray.is_initialized():
