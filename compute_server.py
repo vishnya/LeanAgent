@@ -203,7 +203,7 @@ def generate_dataset(unique_urls):
 
         url = url.replace('.git', '')
         logger.info(f"Creating LeanGitRepo for {url}")
-        repo = LeanGitRepo(url, sha)
+        repo = LeanGitRepo(url, sha)  # TODO: necessary?
         dir_name = repo.url.split("/")[-1] + "_" + sha
         dst_dir = ROOT_DIR + "/" + DATA_DIR + "/" + dir_name
         logger.info(f"Generating benchmark at {dst_dir}")
@@ -508,8 +508,9 @@ def main():
         api_url = "https://leancopilotapi.onrender.com"
         # unique_urls = set(fetch_urls_from_api(api_url))
         # unique_urls = set(["https://github.com/teorth/pfr.git"])
-        unique_urls = set(["https://github.com/Adarsh321123/new-version-test.git"])
+        # unique_urls = set(["https://github.com/Adarsh321123/new-version-test.git"])
         # unique_urls = set(["https://github.com/Adarsh321123/SimpleLean.git"])
+        unique_urls = set(["https://github.com/Adarsh321123/MediumLean.git"])
         logger.info(f"Unique URLs: {unique_urls}")
         logger.info("About to generate datasets...")
 
