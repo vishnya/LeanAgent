@@ -485,10 +485,10 @@ def main():
     try:
         atexit.register(exit_handler)
 
-        if os.path.exists(EXIT_FLAG_FILE):
-            logger.info("Previous run completed. Exiting.")
-            while True:
-                time.sleep(10)
+        # if os.path.exists(EXIT_FLAG_FILE):
+        #     logger.info("Previous run completed. Exiting.")
+        #     while True:
+        #         time.sleep(10)
 
         logger.info("Starting compute server...")
         logger.info(f"Current working directory: {os.getcwd()}")
@@ -508,9 +508,9 @@ def main():
         api_url = "https://leancopilotapi.onrender.com"
         # unique_urls = set(fetch_urls_from_api(api_url))
         # unique_urls = set(["https://github.com/teorth/pfr.git"])
-        unique_urls = set(["https://github.com/Adarsh321123/new-version-test.git"])
+        # unique_urls = set(["https://github.com/Adarsh321123/new-version-test.git"])
         # unique_urls = set(["https://github.com/Adarsh321123/SimpleLean.git"])
-        # unique_urls = set(["https://github.com/Adarsh321123/MediumLean.git"])
+        unique_urls = set(["https://github.com/Adarsh321123/MediumLean.git"])
         logger.info(f"Unique URLs: {unique_urls}")
         logger.info("About to generate datasets...")
 
