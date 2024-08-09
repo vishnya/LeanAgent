@@ -288,8 +288,6 @@ class RetrievalDataModule(pl.LightningDataModule):
             )
             print(f"Testing dataset size: {len(self.ds_pred)}")
 
-    # TODO: low pri: handle edge case like in new-version where dataset could be empty
-    # TODO: cases like with new-version where lots of tactics are empty, and those that exist have empty premises so we have all empty batches
     def train_dataloader(self) -> DataLoader:
         return DataLoader(
             self.ds_train,

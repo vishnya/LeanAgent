@@ -32,6 +32,35 @@ HUGGINGFACE_API_URL = os.environ.get('HUGGINGFACE_API_URL', 'https://huggingface
 USER = os.environ.get('USER', 'AK123321')
 HUGGINGFACE_TOKEN = os.environ.get('HUGGINGFACE_TOKEN')
 EXIT_FLAG_FILE = ROOT_DIR + "/exit_flag"
+MEGA_EMAIL = os.environ.get('MEGA_EMAIL')
+MEGA_PASSWORD = os.environ.get('MEGA_PASSWORD')
+disk_monitor_process = None
+
+def start_disk_monitor():
+    global disk_monitor_process
+    script_path =  "/workspace/ReProver/monitor_disk_usage.sh" # TODO: update based on actual path
+    
+    # Make sure the script is executable
+    os.chmod(script_path, 0o755)
+    
+    disk_monitor_process = subprocess.Popen([script_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    logger.info(f"Disk monitoring started with PID {disk_monitor_process.pid}")
+
+def stop_disk_monitor():
+    global disk_monitor_process
+    if disk_monitor_process:
+        logger.info(f"Stopping disk monitoring process (PID {disk_monitor_process.pid})")
+        disk_monitor_process.terminate()
+        disk_monitor_process.wait()
+        logger.info("Disk monitoring process stopped")
+
+    # Also run pkill to ensure the process is stopped
+    try:
+        subprocess.run(['pkill', '-f', 'monitor_disk_usage.sh'], check=True)
+        logger.info("Ran pkill command to stop disk monitoring")
+    except subprocess.CalledProcessError:
+        logger.info("No disk monitoring process found to kill")
+
 
 def merge_datasets():
     data_dir = ROOT_DIR + "/" + DATA_DIR
@@ -65,6 +94,8 @@ def merge_datasets():
                                 key = (item['file_path'], item['full_name'], list(item['start'])[0], list(item['start'])[1], list(item['end'])[0], list(item['end'])[1])
                                 if key not in merged_data:
                                     merged_data[key] = item
+                        os.remove(json_file)
+                        logger.info(f"Deleted processed file: {json_file}")
             
             output_file = os.path.join(strategy_dir, f"{split}.json")
             with open(output_file, 'w') as f:
@@ -89,6 +120,8 @@ def merge_datasets():
                         path = file_data['path']
                         if path not in merged_corpus:
                             merged_corpus[path] = line.strip()
+                os.remove(corpus_file)
+                logger.info(f"Deleted processed corpus file: {corpus_file}")
 
     with open(os.path.join(merged_dir, "corpus.jsonl"), 'w') as f:
         for line in merged_corpus.values():
@@ -97,20 +130,26 @@ def merge_datasets():
     logger.info("Finished merging corpus")
 
     logger.info("Adding metadata")
-
+    metadata_added = False
     for dataset in os.listdir(data_dir):
         if dataset == "merged":
             continue
-        logger.info(f"Getting metadata from {dataset}")
+        logger.info(f"Checking for metadata in {dataset}")
         dataset_path = os.path.join(data_dir, dataset)
         if os.path.isdir(dataset_path):
             metadata_file = os.path.join(dataset_path, "metadata.json")
             if os.path.exists(metadata_file):
                 with open(os.path.join(merged_dir, "metadata.json"), 'w') as f:
                     json.dump(json.load(open(metadata_file)), f)
-                    break
+                os.remove(metadata_file)
+                logger.info(f"Deleted processed metadata file: {metadata_file}")
+                metadata_added = True
+                break
     
-    logger.info("Finished adding metadata")
+    if metadata_added:
+        logger.info("Finished adding metadata")
+    else:
+        logger.warning("No metadata file found")
 
     logger.info("Deleting individual datasets")
     for dataset in os.listdir(data_dir):
@@ -120,8 +159,6 @@ def merge_datasets():
             shutil.rmtree(dataset_path)
 
 def get_compatible_commit(url):
-    # TODO: optimize with binary search
-    # TODO: maybe faster to get toolchiain version wihtout making git repo eeach time
     try:
         process = subprocess.Popen(["git", "ls-remote", url], stdout=subprocess.PIPE)
         stdout, stderr = process.communicate()
@@ -186,8 +223,6 @@ def get_compatible_commit(url):
         return None, None
 
 def generate_dataset(unique_urls):
-    # TODO: optimize to not make novel_premises split
-    # TODO: do we need this leangitrepo stuff?
     logger.info(f"Generating {len(unique_urls)} datasets")
     for url in unique_urls:
         if not url.endswith('.git'):
@@ -203,7 +238,7 @@ def generate_dataset(unique_urls):
 
         url = url.replace('.git', '')
         logger.info(f"Creating LeanGitRepo for {url}")
-        repo = LeanGitRepo(url, sha)  # TODO: necessary?
+        repo = LeanGitRepo(url, sha)
         dir_name = repo.url.split("/")[-1] + "_" + sha
         dst_dir = ROOT_DIR + "/" + DATA_DIR + "/" + dir_name
         logger.info(f"Generating benchmark at {dst_dir}")
@@ -336,21 +371,28 @@ def index_corpus(model_checkpoint_path, corpus_path, batch_size, embeddings_path
     )
     logger.info(f"Indexed corpus saved to {embeddings_path}")
 
-def upload_lightning_logs():
-    logs_path = "lightning_logs"
-    zip_name = "lightning_logs.zip"
-    logger.info("Compressing lightning_logs folder...")
-    shutil.make_archive("lightning_logs", 'zip', logs_path)
+def upload_logs():
+    logs_to_upload = [
+        ("lightning_logs", "lightning_logs.zip"),
+        ("disk_usage_log.txt", "disk_usage_log.txt")
+    ]
+
     mega = Mega()
     try:
         logger.info("Logging in to Mega...")
         if not MEGA_EMAIL or not MEGA_PASSWORD:
             raise Exception("MEGA_EMAIL or MEGA_PASSWORD not set")
         m = mega.login(MEGA_EMAIL, MEGA_PASSWORD)
-        logger.info("Uploading zip file...")
-        file = m.upload(zip_name)
-        link = m.get_upload_link(file)
-        logger.info(f"File uploaded successfully. Download link: {link}")
+
+        for log_file, zip_name in logs_to_upload:
+            if log_file == "lightning_logs":
+                logger.info("Compressing lightning_logs folder...")
+                shutil.make_archive(log_file, 'zip', log_file)
+
+            logger.info(f"Uploading {zip_name}...")
+            file = m.upload(zip_name)
+            link = m.get_upload_link(file)
+            logger.info(f"{zip_name} uploaded successfully. Download link: {link}")
     except Exception as e:
         logger.info(f"An error occurred while uploading logs: {str(e)}")
 
@@ -368,7 +410,6 @@ def convert_and_upload_models(best_model_path, new_data_path, next_suffix):
         convert_t5encoder_to_ct2.main(hf_path, ct2_path)
         logger.info(f"Converted HuggingFace model to CTranslate2 format at: {ct2_path}")
 
-        # TODO: no need to pickle and then unpickle right after
         logger.info("Indexing the corpus to get premise embeddings")
         corpus_path = new_data_path + "/corpus.jsonl"
         batch_size = 64
@@ -393,9 +434,29 @@ def convert_and_upload_models(best_model_path, new_data_path, next_suffix):
             logger.info("Failed to upload one or more models to Hugging Face")
     else:
         logger.info("No best model found")
-    
+
+def cleanup_old_checkpoint(old_checkpoint_path):
+    """Remove the old checkpoint file if it exists."""
+    if os.path.exists(old_checkpoint_path):
+        try:
+            os.remove(old_checkpoint_path)
+            logger.info(f"Removed old checkpoint: {old_checkpoint_path}")
+        except Exception as e:
+            logger.error(f"Failed to remove old checkpoint: {e}")
+    else:
+        logger.info(f"Old checkpoint not found: {old_checkpoint_path}")
+
+def cleanup_merged_dataset():
+    merged_dir = ROOT_DIR + "/" + DATA_DIR + "/" + "merged"
+    if os.path.exists(merged_dir):
+        logger.info(f"Cleaning up merged dataset at {merged_dir}")
+        shutil.rmtree(merged_dir)
+        logger.info("Merged dataset deleted successfully")
+    else:
+        logger.info("Merged dataset directory not found, skipping cleanup")
+
 # TODO: reduce duplication with main.py
-def train(model_checkpoint_path, new_data_path, next_suffix, max_epochs=1): # TODO: chagne back to 2
+def train(model_checkpoint_path, new_data_path, next_suffix, max_epochs=1):
     logger.info(f"Training model with checkpoint: {model_checkpoint_path}")
     seed_everything(3407)
 
@@ -436,7 +497,6 @@ def train(model_checkpoint_path, new_data_path, next_suffix, max_epochs=1): # TO
     )
     data_module.setup(stage='fit')
 
-    # TODO: find a way to save lightning logs so we can view change over runs
     checkpoint_callback = ModelCheckpoint(
         dirpath=ROOT_DIR + "/" + CHECKPOINT_DIR,
         filename="_{epoch}-{Recall@10_val:.2f}",
@@ -468,8 +528,9 @@ def train(model_checkpoint_path, new_data_path, next_suffix, max_epochs=1): # TO
         devices=1, # TODO: change for GPU
         callbacks=[lr_monitor, checkpoint_callback, early_stop_callback],
         max_epochs=max_epochs,
-        log_every_n_steps=1, # TODO: change?
-        num_sanity_val_steps=0, # TODO: remove later
+        log_every_n_steps=1,
+        num_sanity_val_steps=0,
+        accumulate_grad_batches=2,
         # limit_train_batches=0.0001,
         # limit_val_batches=0.02,
         # limit_test_batches=0.02,
@@ -482,11 +543,22 @@ def train(model_checkpoint_path, new_data_path, next_suffix, max_epochs=1): # TO
     logger.info("Finished progressive training")
 
     best_model_path = checkpoint_callback.best_model_path
+    if best_model_path:
+        logger.info(f"New best model saved at: {best_model_path}")
+        cleanup_old_checkpoint(model_checkpoint_path)
+    else:
+        logger.warning("No new best model was saved.")
+
+    logger.info("Removing merged dataset")
+    cleanup_merged_dataset()
+    logger.info("Finished removing merged dataset")
+
     logger.info("Converting and uploading models")
     convert_and_upload_models(best_model_path, new_data_path, next_suffix)
     logger.info("Finished converting and uploading models")
     logger.info("Uploading lightning logs")
-    upload_lightning_logs()
+    stop_disk_monitor()
+    upload_logs()
     logger.info("Finished uploading lightning logs")
     
 
@@ -517,13 +589,11 @@ def check_progress_file():
         logger.info(f"Error reading progress.py: {e}")
 
 def main():
-    # TODO: close instance on done
-    # TODO: should we close instance on failure?
-    # TODO: put a try-catch around generate benchmark, and anything else that could fail, same with main.py
     try:
         atexit.register(exit_handler)
-
+        atexit.register(stop_disk_monitor)
         check_progress_file()
+        start_disk_monitor()
 
         # TODO: put this back for runpod
         # if os.path.exists(EXIT_FLAG_FILE):
@@ -545,7 +615,6 @@ def main():
         generate_benchmark_lean4.configure_leandojo()
         logger.info("LeanDojo configured")
 
-        logger.info("GitHub Token:", os.environ.get('GITHUB_ACCESS_TOKEN')) # TODO: remove
         api_url = "https://leancopilotapi.onrender.com"
         # unique_urls = set(fetch_urls_from_api(api_url))
         # unique_urls = set(["https://github.com/teorth/pfr.git"])
@@ -554,13 +623,6 @@ def main():
         # unique_urls = set(["https://github.com/Adarsh321123/MediumLean.git"])
         logger.info(f"Unique URLs: {unique_urls}")
         logger.info("About to generate datasets...")
-
-        # TODO: container keeps restarting, need to fix
-        # while True: # TODO: remove
-        #     logger.info("Running main process...")
-        #     time.sleep(10)
-
-        # return # TODO: remove
 
         generate_dataset(unique_urls)
 

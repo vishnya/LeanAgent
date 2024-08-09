@@ -18,8 +18,6 @@ import sys
 
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 
-# TODO: ensure that every split has theorems from THAT REPO (like PFR) in train/val/test instead of just imports
-
 SPLIT_NAME = str  # train/val/test
 SPLIT = Dict[SPLIT_NAME, List[TracedTheorem]]
 SPLIT_STRATEGY = str
