@@ -23,6 +23,7 @@ import traceback
 import time
 from loguru import logger
 import atexit
+from mega import Mega
 
 ROOT_DIR = os.environ.get('ROOT_DIR', '/workspace')
 DATA_DIR = os.environ.get('DATA_DIR', 'datasets')
@@ -186,7 +187,6 @@ def get_compatible_commit(url):
 
 def generate_dataset(unique_urls):
     # TODO: optimize to not make novel_premises split
-    # TODO: no need for licenses or metadata
     # TODO: do we need this leangitrepo stuff?
     logger.info(f"Generating {len(unique_urls)} datasets")
     for url in unique_urls:
@@ -336,6 +336,24 @@ def index_corpus(model_checkpoint_path, corpus_path, batch_size, embeddings_path
     )
     logger.info(f"Indexed corpus saved to {embeddings_path}")
 
+def upload_lightning_logs():
+    logs_path = "lightning_logs"
+    zip_name = "lightning_logs.zip"
+    logger.info("Compressing lightning_logs folder...")
+    shutil.make_archive("lightning_logs", 'zip', logs_path)
+    mega = Mega()
+    try:
+        logger.info("Logging in to Mega...")
+        if not MEGA_EMAIL or not MEGA_PASSWORD:
+            raise Exception("MEGA_EMAIL or MEGA_PASSWORD not set")
+        m = mega.login(MEGA_EMAIL, MEGA_PASSWORD)
+        logger.info("Uploading zip file...")
+        file = m.upload(zip_name)
+        link = m.get_upload_link(file)
+        logger.info(f"File uploaded successfully. Download link: {link}")
+    except Exception as e:
+        logger.info(f"An error occurred while uploading logs: {str(e)}")
+
 def convert_and_upload_models(best_model_path, new_data_path, next_suffix):
     if best_model_path:
         logger.info(f"Best model path: {best_model_path}")
@@ -355,7 +373,7 @@ def convert_and_upload_models(best_model_path, new_data_path, next_suffix):
         corpus_path = new_data_path + "/corpus.jsonl"
         batch_size = 64
         indexed_corpus_path = ROOT_DIR + "/" + CHECKPOINT_DIR + "/" + "indexed_corpus.pkl"
-        index_corpus(best_model_path, corpus_path, batch_size, indexed_corpus_path)
+        index_corpus(hf_path, corpus_path, batch_size, indexed_corpus_path)
         logger.info("Finished indexing the corpus")
 
         logger.info("Getting premise embeddings")
@@ -452,17 +470,25 @@ def train(model_checkpoint_path, new_data_path, next_suffix, max_epochs=1): # TO
         max_epochs=max_epochs,
         log_every_n_steps=1, # TODO: change?
         num_sanity_val_steps=0, # TODO: remove later
+        # limit_train_batches=0.0001,
+        # limit_val_batches=0.02,
+        # limit_test_batches=0.02,
     )
 
     logger.info("Starting progressive training...")
 
     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
 
-    logger.info("Finished training")
+    logger.info("Finished progressive training")
 
     best_model_path = checkpoint_callback.best_model_path
     logger.info("Converting and uploading models")
     convert_and_upload_models(best_model_path, new_data_path, next_suffix)
+    logger.info("Finished converting and uploading models")
+    logger.info("Uploading lightning logs")
+    upload_lightning_logs()
+    logger.info("Finished uploading lightning logs")
+    
 
 def fetch_urls_from_api(api_url):
     try:
@@ -494,12 +520,12 @@ def main():
     # TODO: close instance on done
     # TODO: should we close instance on failure?
     # TODO: put a try-catch around generate benchmark, and anything else that could fail, same with main.py
-    # TODO: should we just not cache the datasets so we can save space?
     try:
         atexit.register(exit_handler)
 
         check_progress_file()
 
+        # TODO: put this back for runpod
         # if os.path.exists(EXIT_FLAG_FILE):
         #     logger.info("Previous run completed. Exiting.")
         #     while True:

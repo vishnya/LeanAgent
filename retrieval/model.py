@@ -99,7 +99,6 @@ class PremiseRetriever(pl.LightningModule):
         return self.fisher_info
 
     def ewc_loss(self):
-        # TODO: choose lambda and ewc_loss better if needed
         ewc_loss = 0
         for name, param in self.named_parameters():
             if name in self.previous_params:

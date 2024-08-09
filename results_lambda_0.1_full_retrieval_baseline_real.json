@@ -1,0 +1,194 @@
+{
+    "total_repositories": 3,
+    "repositories": {
+        "/raid/adarsh/repos_new/ImperialCollegeLondon/FLT": {
+            "commit": "b208a302cdcbfadce33d8165f0b054bfa17e2147",
+            "number_of_sorries": 2,
+            "number_of_proofs_found": 0,
+            "proofs_details": [],
+            "unproved_sorries": [
+                {
+                    "file_path": "/raid/adarsh/repos_new/ImperialCollegeLondon/FLT/FLT/AutomorphicRepresentation/Example.lean",
+                    "theorem_name": "Hurwitz.exists_near"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/ImperialCollegeLondon/FLT/FLT/AutomorphicRepresentation/Example.lean",
+                    "theorem_name": "Hurwitz.canonicalForm"
+                }
+            ],
+            "number_of_premises_theorems_retrieved": 0,
+            "num_files_traced": 0,
+            "PR": ""
+        },
+        "/raid/adarsh/repos_new/eric-wieser/lean-matrix-cookbook": {
+            "commit": "f15a149d321ac99ff9b9c024b58e7882f564669f",
+            "number_of_sorries": 7,
+            "number_of_proofs_found": 0,
+            "proofs_details": [],
+            "unproved_sorries": [
+                {
+                    "file_path": "/raid/adarsh/repos_new/eric-wieser/lean-matrix-cookbook/MatrixCookbook/3Inverses.lean",
+                    "theorem_name": "MatrixCookbook.eq_160"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/eric-wieser/lean-matrix-cookbook/MatrixCookbook/9SpecialMatrices.lean",
+                    "theorem_name": "MatrixCookbook.eq_446"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/eric-wieser/lean-matrix-cookbook/MatrixCookbook/4ComplexMatrices.lean",
+                    "theorem_name": "MatrixCookbook.eq_256"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/eric-wieser/lean-matrix-cookbook/MatrixCookbook/4ComplexMatrices.lean",
+                    "theorem_name": "MatrixCookbook.eq_257"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/eric-wieser/lean-matrix-cookbook/MatrixCookbook/4ComplexMatrices.lean",
+                    "theorem_name": "MatrixCookbook.eq_258"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/eric-wieser/lean-matrix-cookbook/MatrixCookbook/4ComplexMatrices.lean",
+                    "theorem_name": "MatrixCookbook.eq_259"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/eric-wieser/lean-matrix-cookbook/MatrixCookbook/10FunctionsAndOperators.lean",
+                    "theorem_name": "MatrixCookbook.eq_533"
+                }
+            ],
+            "number_of_premises_theorems_retrieved": 0,
+            "num_files_traced": 0,
+            "PR": ""
+        },
+        "/raid/adarsh/repos_new/mo271/formal_book": {
+            "commit": "6fbe8c2985008c0bfb30050750a71b90388ad3a3",
+            "number_of_sorries": 29,
+            "number_of_proofs_found": 3,
+            "proofs_details": [
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_08.lean",
+                    "theorem_name": "book.irrational.lem_aux_ii",
+                    "proof_text": "constructor <;> linarith"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_05.lean",
+                    "theorem_name": "book.quadratic_reciprocity.quadratic_reciprocity_2",
+                    "proof_text": "exact book.quadratic_reciprocity.quadratic_reciprocity_1 p q hp hq"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_06.lean",
+                    "theorem_name": "wedderburn",
+                    "proof_text": "exact Field.toIsField R"
+                }
+            ],
+            "unproved_sorries": [
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_08.lean",
+                    "theorem_name": "book.irrational.irrational_iff_not_fraction"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_08.lean",
+                    "theorem_name": "book.irrational.exponential_series"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_08.lean",
+                    "theorem_name": "book.irrational.e_irrational"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_08.lean",
+                    "theorem_name": "book.irrational.e_pow_2_irrational"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_08.lean",
+                    "theorem_name": "book.irrational.little_lemma"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_08.lean",
+                    "theorem_name": "book.irrational.e_pow_4_irrational"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_08.lean",
+                    "theorem_name": "book.irrational.lem_aux_i"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_08.lean",
+                    "theorem_name": "book.irrational.Theorem_1"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_08.lean",
+                    "theorem_name": "book.irrational.Theorem_2"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_45.lean",
+                    "theorem_name": "ramsey_exists"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_44.lean",
+                    "theorem_name": "chapter44.friendship_theorem"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_01.lean",
+                    "theorem_name": "infinity_of_primes₄"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_01.lean",
+                    "theorem_name": "infinity_of_primes₅"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_01.lean",
+                    "theorem_name": "infinity_of_primes₆"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_01.lean",
+                    "theorem_name": "Asymptotics.infinitely_many_more_proofs"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_05.lean",
+                    "theorem_name": "book.quadratic_reciprocity.fermat_little"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_05.lean",
+                    "theorem_name": "book.quadratic_reciprocity.euler_criterion"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_05.lean",
+                    "theorem_name": "book.quadratic_reciprocity.product_rule"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_05.lean",
+                    "theorem_name": "book.quadratic_reciprocity.lemma_of_Gauss"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_05.lean",
+                    "theorem_name": "book.quadratic_reciprocity.mult_cyclic"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_05.lean",
+                    "theorem_name": "book.quadratic_reciprocity.fact_B"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_03.lean",
+                    "theorem_name": "chapter03.factor_in_descFactorial"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_03.lean",
+                    "theorem_name": "chapter03.binomials_coefficients_never_powers"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_06.lean",
+                    "theorem_name": "h_lamb_gt_q_sub_one"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_07.lean",
+                    "theorem_name": "chapter07.Theorem₁"
+                },
+                {
+                    "file_path": "/raid/adarsh/repos_new/mo271/formal_book/FormalBook/Chapter_07.lean",
+                    "theorem_name": "chapter07.Theorem₂"
+                }
+            ],
+            "number_of_premises_theorems_retrieved": 0,
+            "num_files_traced": 0,
+            "PR": ""
+        }
+    }
+}

@@ -301,6 +301,7 @@ def configure_leandojo():
 
 def main(url, commit, dst_dir):
     logger.info(f"Generating dataset to go into {dst_dir}")
+    # TODO: just pass existing one instead of making again
     repo = LeanGitRepo(url, commit)
 
     # we need to change the toolchain version that the bot uses
@@ -310,11 +311,11 @@ def main(url, commit, dst_dir):
     v = get_lean4_version_from_config(config["content"])
     logger.info(f"lean version v: {v}")
     logger.info(f"is supported: {is_supported_version(v)}")
-    if not is_supported_version(v):
+    if not is_supported_version(v):  # Won't get here since we checked for a compatible commit, but sanity check in case
         logger.info("Unsupported version")
     v = v[1:] # ignore "v" at beginning
     
-    # TODO: ensure we always set this env var
+    # TODO: set this in main.py so we don't need to do so here
     ROOT_DIR = os.environ.get('ROOT_DIR', '/home/adarsh')
     lean_dir1 = f"{ROOT_DIR}/.elan/toolchains/leanprover--lean4---{v}"
     lean_dir2 = f"/.elan/toolchains/leanprover--lean4---{v}"
@@ -340,13 +341,15 @@ def main(url, commit, dst_dir):
     logger.info("LeanDojo configured")
 
     try:
+        logger.info("Tracing the repo...")
         traced_repo = trace(repo)
         logger.info("Successfully traced the repo")
     except Exception as e:
         logger.info(f"Failed to trace repo {repo} because of {e}")
+        return None, 0, 0
     if os.path.exists(dst_dir):
         logger.warning(f"{dst_dir} already exists. Using it instead.")
-        return traced_repo, 0, 0 # TODO: deal with 0,0 later
+        return traced_repo, 0, 0
     splits = split_data(traced_repo)
     logger.info("Successfully split the data")
     num_premises, num_files_traced = export_data(traced_repo, splits, dst_dir)

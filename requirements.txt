@@ -1,5 +1,5 @@
 huggingface_hub
-pytorch_lightning
+"pytorch-lightning[extra]"
 numpy
 ctranslate2
 deepspeed
@@ -11,3 +11,4 @@ requests
 torch
 tqdm
 transformers
+mega.py
