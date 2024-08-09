@@ -478,6 +478,18 @@ def exit_handler():
         logger.info("Writing exiting to file...")
         f.write('exited')
 
+def check_progress_file():
+    pl_path = pl.__file__
+    progress_py_path = os.path.join(os.path.dirname(pl_path), 'loops', 'progress.py')
+    logger.info(f"Checking contents of {progress_py_path}")
+    try:
+        with open(progress_py_path, 'r') as f:
+            content = f.read()
+        logger.info("Contents of progress.py:")
+        logger.info(content)
+    except Exception as e:
+        logger.info(f"Error reading progress.py: {e}")
+
 def main():
     # TODO: close instance on done
     # TODO: should we close instance on failure?
@@ -485,6 +497,8 @@ def main():
     # TODO: should we just not cache the datasets so we can save space?
     try:
         atexit.register(exit_handler)
+
+        check_progress_file()
 
         # if os.path.exists(EXIT_FLAG_FILE):
         #     logger.info("Previous run completed. Exiting.")
