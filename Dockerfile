@@ -18,47 +18,17 @@ ENV MEGA_PASSWORD="<ADD YOURS>"
 
 WORKDIR /workspace
 
-# Install Elan and Lean
-# TODO: use this instead
-# RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | bash -s -- -y && \
-#     elan toolchain install leanprover/lean4:4.8.0 && \
-#     elan toolchain install leanprover/lean4:v4.8.0 && \
-#     elan toolchain install leanprover/lean4:4.8.0-rc2 && \
-#     elan toolchain install leanprover/lean4:v4.8.0-rc2 && \
-#     elan toolchain install leanprover/lean4:4.8.0-rc1 && \
-#     elan toolchain install leanprover/lean4:v4.8.0-rc1 && \
-#     elan toolchain install leanprover/lean4:4.7.0 && \
-#     elan toolchain install leanprover/lean4:v4.7.0 && \
-#     elan toolchain install leanprover/lean4:4.7.0-rc2 && \
-#     elan toolchain install leanprover/lean4:v4.7.0-rc2 && \
-#     elan toolchain install leanprover/lean4:4.7.0-rc1 && \
-#     elan toolchain install leanprover/lean4:v4.7.0-rc1
-
-# TODO: uncomment
-# RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | bash -s -- -y && \
-#     elan toolchain install leanprover/lean4:4.8.0 && \
-#     elan toolchain install leanprover/lean4:v4.8.0 && \
-#     elan toolchain install leanprover/lean4:4.8.0-rc1 && \
-#     elan toolchain install leanprover/lean4:v4.8.0-rc1 && \
-#     git clone https://github.com/Adarsh321123/LeanBot.git ReProver && \
-#     cd ReProver && \
-#     git checkout backup_branch && \
-#     rm -rf .git
-
 RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | bash -s -- -y && \
     elan toolchain install leanprover/lean4:4.8.0 && \
+    elan toolchain install leanprover/lean4:4.8.0-rc2 && \
     elan toolchain install leanprover/lean4:4.8.0-rc1 && \
+    elan toolchain install leanprover/lean4:4.7.0 && \
+    elan toolchain install leanprover/lean4:4.7.0-rc2 && \
+    elan toolchain install leanprover/lean4:4.7.0-rc1 && \
     git clone https://github.com/Adarsh321123/LeanBot.git ReProver && \
     cd ReProver && \
     git checkout backup_branch && \
     rm -rf .git
-
-# RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | bash -s -- -y && \
-#     elan toolchain install leanprover/lean4:4.8.0 && \
-#     git clone https://github.com/Adarsh321123/LeanBot.git ReProver && \
-#     cd ReProver && \
-#     git checkout backup_branch && \
-#     rm -rf .git
 
 WORKDIR /workspace/ReProver
 
