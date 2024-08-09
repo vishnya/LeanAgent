@@ -399,6 +399,7 @@ def train(model_checkpoint_path, new_data_path, next_suffix, max_epochs=1): # TO
     model = PremiseRetriever.load(
         model_checkpoint_path, device, freeze=False, config=config
     )
+    model.train()
     logger.info(f"Loaded premise retriever at {model_checkpoint_path}")
 
     corpus_path = new_data_path + "/corpus.jsonl"
