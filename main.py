@@ -39,6 +39,8 @@ from datetime import datetime
 from collections import defaultdict
 from typing import Dict, List, Union
 import generate_benchmark_lean4
+import traceback
+import sys
 
 from common import set_logger
 from prover.proof_search import Status, DistributedProver
@@ -59,67 +61,85 @@ from pytorch_lightning import seed_everything
 # TODO: standardize with all Path or just string
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: constant?
-repo_dir = "/raid/adarsh/repos" # TODO: for release change these back to <DIR>
-DST_DIR = Path("/raid/adarsh/data")
+# TODO: do we still need repo_dir
+repo_dir = "/raid/adarsh/repos_new" # TODO: for release change these back to <DIR>
 RAID_DIR = "/raid/adarsh"
-DATA_DIR = "datasets"
-CHECKPOINT_DIR = "checkpoints"
-FISHER_DIR = "fisher"
-RESULTS_FILE = "results.json"
-
+DATA_DIR = "datasets_new"
+CHECKPOINT_DIR = "checkpoints_new"
+FISHER_DIR = "fisher_new"
+# TODO: do we still need this?
 load_dotenv()
 
 # Feel free to remove any repos from this list if you would like to test on them
 known_repositories = [
     "leanprover-community/mathlib4",  # ReProver is trained on this + LeanDojo already tests on it
     "leanprover-community/batteries", # ReProver is trained on this + LeanDojo already tests on it
-    "lecopivo/SciLean",
     "leanprover-community/aesop",
-    "kmill/lean4-raytracer",
-    "AlexKontorovich/PrimeNumberTheoremAnd",
-    "teorth/pfr",
-    "lurk-lab/yatima",
-    "leanprover-community/ProofWidgets4",
-    "google-deepmind/debate",
-    "leanprover-community/NNG4",
-    "teorth/symmetric_project",
-    "ufmg-smite/lean-smt",
-    "PatrickMassot/GlimpseOfLean",
-    "ImperialCollegeLondon/formalising-mathematics-2024",
-    "avigad/lamr",
-    "leanprover-community/quote4",
-    "digama0/lean4lean",
-    "leanprover/verso",
-    "leanprover-community/iris-lean",
-    "avigad/mathematics_in_lean_source",
-    "sinhp/Poly",
-    "m4lvin/lean4-pdl",
     "leanprover/lean4",
     "leanprover-community/mathlib",
     "leanprover/std4",  # moved to batteries
     "leanprover-community/duper",  # functional programming instead of math
     "leanprover/lake",
-    "uwdb/Cosette",
-    "AndrasKovacs/smalltt",
-    "dselsam/certigrad",
-    "Kha/electrolysis",
-    "ImperialCollegeLondon/formalising-mathematics",
-    "ImperialCollegeLondon/natural_number_game",
-    "kbuzzard/xena",
-    "leanprover-community/lean4-metaprogramming-book",
-    "leanprover-community/tutorials",
-    "leanprover-community/lean-liquid",
-    "formalabstracts/formalabstracts",
-    "ImperialCollegeLondon/M40001_lean",
-    "ImperialCollegeLondon/formalising-mathematics-2022",
     "openai/lean-gym",
+    # already tested:
+    "lecopivo/SciLean",
+    "avigad/mathematics_in_lean_source",
+    "teorth/pfr",
+    "dwrensha/compfiles",
+    "digama0/lean4lean",
+    "AlexKontorovich/PrimeNumberTheoremAnd",
+    # newly tested:
+    "leanprover-community/lean4-metaprogramming-book",
+    "ImperialCollegeLondon/FLT",
+    "kmill/lean4-raytracer",
+    "argumentcomputer/yatima",
+    "ImperialCollegeLondon/formalising-mathematics-2024",
+    "leanprover-community/ProofWidgets4",
+    "leanprover/verso",
+    "leanprover-community/NNG4",
+    "ufmg-smite/lean-smt",
+    "google-deepmind/debate",
+    "teorth/symmetric_project",
+    "cmu-l3/llmlean",
+    "PatrickMassot/GlimpseOfLean",
+    "avigad/lamr",
+    "leanprover-community/quote4",
+    "yuma-mizuno/lean-math-workshop",
+    "leanprover-community/iris-lean",
+    "aripiprazole/rinha",
+    "loganrjmurphy/LeanEuclid",
+    "leanprover/lean4-cli",
+    "leanprover/LeanInk",
+    "leanprover-community/lean-auto",
+    "leanprover-community/repl",
+    "leanprover/doc-gen4",
+    "leanprover-community/con-nf",
+    "FormalizedFormalLogic/Foundation",
+    "leanprover/SampCert",
+    "nomeata/loogle",
+    "risc0/risc0-lean4",
+    "siddhartha-gadgil/Saturn",
+    "leanprover-community/flt-regular",
+    "eric-wieser/lean-matrix-cookbook",
+    "PatrickMassot/verbose-lean4",
+    "tydeu/lean4-alloy",
+    "opencompl/lean-mlir-old",
+    "leanprover/leansat",
+    "BoltonBailey/formal-snarks-project",
+    "dwrensha/lean4-maze",
+    "leanprover/LNSym",
+    "leanprover-community/mathport",
+    "forked-from-1kasper/ground_zero",
+    "mo271/formal_book",
+    "rami3l/plfl",
 ]
 
 repos = []  # stores the names of all the repos
 lean_git_repos = []  # stores the LeanGitRepo objects
 
-personal_access_token = os.environ.get("PERSONAL_ACCESS_TOKEN")
+personal_access_token = os.environ.get("GITHUB_ACCESS_TOKEN")
 
+# TODO: change these
 PR_TITLE = "[LeanDojoBot] `sorry` Removed"
 
 PR_BODY = """We identify the files containing theorems that have `sorry`, and replace them with a proof discovered using [LeanDojo](https://github.com/lean-dojo/LeanDojo) and [ReProver](https://github.com/lean-dojo/ReProver).
@@ -141,10 +161,11 @@ def clone_repo(repo_url):
     print(f"Cloning {repo_url}")
     print(f"Repo name: {repo_name}")
     repo_name = repo_dir + "/" + repo_name
-    if os.path.exists(repo_name):
-        print(f"Deleting existing repository directory: {repo_name}")
-        shutil.rmtree(repo_name)
-    subprocess.run(["git", "clone", repo_url, repo_name])
+    # if os.path.exists(repo_name):
+    #     print(f"Deleting existing repository directory: {repo_name}")
+    #     shutil.rmtree(repo_name)
+    # subprocess.run(["git", "clone", repo_url, repo_name])
+    # TODO: no need for this if we check for latest compatible commit later
     process = subprocess.Popen(["git", "ls-remote", repo_url], stdout=subprocess.PIPE)
     stdout, stderr = process.communicate()
     sha = re.split(r'\t+', stdout.decode('utf-8'))[0]
@@ -216,6 +237,70 @@ def create_pull_request(repo_full_name, title, body, head_branch):
         print("Failed to create pull request", response.text)
         return ""
 
+def get_compatible_commit(url):
+    try:
+        process = subprocess.Popen(["git", "ls-remote", url], stdout=subprocess.PIPE)
+        stdout, stderr = process.communicate()
+        latest_commit = re.split(r'\t+', stdout.decode('utf-8'))[0]
+        logger.info(f"Latest commit: {latest_commit}")
+
+        new_url = url.replace('.git', '')
+        logger.info(f"Creating LeanGitRepo for {new_url}")
+        repo = LeanGitRepo(new_url, latest_commit)
+        logger.info(f"Getting config for {url}")
+        config = repo.get_config("lean-toolchain")
+        v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
+        if generate_benchmark_lean4.is_supported_version(v):
+            logger.info(f"Latest commit compatible for url {url}")
+            return latest_commit, v
+
+        logger.info(f"Searching for compatible commit for {url}")
+        try:
+            subprocess.run(["git", "rev-parse", "--is-inside-work-tree"], 
+                        check=True, 
+                        stdout=subprocess.DEVNULL, 
+                        stderr=subprocess.DEVNULL)
+            logger.info("Already in a Git repository")
+        except subprocess.CalledProcessError:
+            logger.info("Not in a Git repository. Initializing one.")
+            subprocess.run(["git", "init"], check=True)
+        
+        process = subprocess.Popen(
+            ["git", "fetch", "--depth=1000000", url],  # Fetch commits
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        logger.info(f"Fetching commits for {url}")
+        _, stderr = process.communicate()
+        if process.returncode != 0:
+            raise Exception(f"Git fetch command failed: {stderr.decode('utf-8')}")
+        logger.info(f"Fetched commits for {url}")
+        process = subprocess.Popen(
+            ["git", "log", "--format=%H", "FETCH_HEAD"],  # Get list of commits
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        logger.info(f"Getting list of commits for {url}")
+        stdout, stderr = process.communicate()
+        if process.returncode != 0:
+            raise Exception(f"Git log command failed: {stderr.decode('utf-8')}")
+        commits = stdout.decode('utf-8').strip().split('\n')
+        logger.info(f"Found {len(commits)} commits for {url}")
+        for commit in commits:
+            new_url = url.replace('.git', '')
+            repo = LeanGitRepo(new_url, commit)
+            config = repo.get_config("lean-toolchain")
+            v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
+            if generate_benchmark_lean4.is_supported_version(v):
+                logger.info(f"Found compatible commit {commit} for {url}")
+                return commit, v
+
+        raise Exception("No compatible commit found")
+
+    except Exception as e:
+        logger.info(f"Error in get_compatible_commit: {str(e)}")
+        return None, None
+
 def search_github_repositories(language="Lean", num_repos=10):
     """Search for the given number of repositories on GitHub that have the given language."""
     headers = {'Authorization': personal_access_token}
@@ -234,6 +319,7 @@ def search_github_repositories(language="Lean", num_repos=10):
             if cloned_count >= num_repos:
                 break
             repo_full_name = repo['full_name']
+            logger.info(f"Processing {repo_full_name}")
             if repo_full_name not in known_repositories:
                 name = None
                 try:
@@ -244,14 +330,16 @@ def search_github_repositories(language="Lean", num_repos=10):
                     lean_git_repo = LeanGitRepo(url, sha)
                     lean_git_repos.append(lean_git_repo)
                     repos.append(repo_full_name)
-                    cloned_count += 1
+                    cloned_count += 1 # TODO: only increase if compatible commit found
                 except Exception as e:
-                    shutil.rmtree(name)
+                    # shutil.rmtree(name)
                     # Note: some 404s happen since some repos don't have a lean-toolchain
                     # but still use Lean
-                    print(f"Failed to clone {repo_full_name} because of {e}")
+                    logger.info(f"Failed to clone {repo_full_name} because of {e}")
+            else:
+                logger.info(f"Skipping {repo_full_name} since it is a known repository")
     else:
-        print("Failed to search GitHub", response.status_code)
+        logger.info("Failed to search GitHub", response.status_code)
 
 
 def _eval(data, preds_map) -> Tuple[float, float, float]:
@@ -347,11 +435,20 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, max_ep
         "max_seq_len": 512,
         "num_retrieved": 100,
     }
+
+    # TODO: apply to compute server if works
+    logger.info("Resetting the epoch count of the model")
+    state_dict = torch.load(model_checkpoint_path)
+    state_dict['global_step'] = None
+    state_dict['epoch'] = 0
+    torch.save(state_dict, model_checkpoint_path)
+    logger.info("Epoch count reset")
     
     model = PremiseRetriever.load(
         model_checkpoint_path, device, freeze=False, config=config
     )
-    logger.info(f"Loaded premise retriever at {model_checkpoint_path}")
+    model.train()
+    logger.info(f"Loaded premise retriever at {model_checkpoint_path} and reset epoch count")
 
     # load previous Fisher Information Matrix for current EWC
     latest_fisher = find_latest_fisher()
@@ -411,73 +508,86 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, max_ep
         devices=1, # TODO: change for GPU
         callbacks=[lr_monitor, checkpoint_callback, early_stop_callback],
         max_epochs=max_epochs,
-        log_every_n_steps=1, # TODO: change?
-        num_sanity_val_steps=0, # TODO: remove later
+        log_every_n_steps=1,
+        num_sanity_val_steps=0,
+        default_root_dir=os.path.join("lightning_logs_main")  # TODO: can remove later
     )
 
     logger.info("Starting progressive training...")
 
     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
 
+    logger.info("Finished progressive training")
+
     ### TESTING FOR AVERAGE RECALL
 
     # TODO: uncomment later
     # TODO: don't load corpus and reindex for every repo we use for average recall
-    # logger.info("Testing...")
-    # total_R1, total_R10, total_MRR = [], [], []
-    # dataset_path = RAID_DIR + "/" + DATA_DIR
-    # testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
-    # for data_path in testing_paths:
-    #     # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
-    #     run_cli(model_checkpoint_path, data_path)
-    #     num_gpus = 1 # TODO: change for GPU
-    #     preds_map = {}
-    #     for gpu_id in range(num_gpus):
-    #         with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
-    #             preds = pickle.load(f)
-    #             preds_map.update(preds)
+    # 
+    # # Load the best model checkpoint
+    best_model_path = checkpoint_callback.best_model_path
+    if best_model_path:
+        best_model = PremiseRetriever.load(best_model_path, device, freeze=False, config=config)
+    else:
+        logger.warning("No best model found. Using the last trained model.")
+        best_model = model
+    best_model.eval()
 
-    #     logger.info("Loaded the predictions pickle files")
-    #     data_path = os.path.join(data_path, "random", "test.json")
-    #     data = json.load(open(data_path))
-    #     logger.info(f"Evaluating on {data_path}")
-    #     R1, R10, MRR = _eval(data, preds_map)
-    #     logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-    #     total_R1.append(R1)
-    #     total_R10.append(R10)
-    #     total_MRR.append(MRR)
+    logger.info("Testing...")
+    total_R1, total_R10, total_MRR = [], [], []
+    dataset_path = RAID_DIR + "/" + DATA_DIR
+    testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
+    for data_path in testing_paths:
+        # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
+        run_cli(best_model_path, data_path)
+        num_gpus = 1 # TODO: change for GPU
+        preds_map = {}
+        for gpu_id in range(num_gpus):
+            with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
+                preds = pickle.load(f)
+                preds_map.update(preds)
 
-    # avg_R1 = np.mean(total_R1)
-    # avg_R10 = np.mean(total_R10)
-    # avg_MRR = np.mean(total_MRR)
+        logger.info("Loaded the predictions pickle files")
+        data_path = os.path.join(data_path, "random", "test.json")
+        data = json.load(open(data_path))
+        logger.info(f"Evaluating on {data_path}")
+        R1, R10, MRR = _eval(data, preds_map)
+        logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+        total_R1.append(R1)
+        total_R10.append(R10)
+        total_MRR.append(MRR)
 
-    # logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+    avg_R1 = np.mean(total_R1)
+    avg_R10 = np.mean(total_R10)
+    avg_MRR = np.mean(total_MRR)
 
-    # # Save average accuracies to a file
-    # file_path = "/home/adarsh/ReProver/total_evaluation_results.txt"
-    # with open(file_path, "a") as f:
-    #     f.write("\n")
-    #     f.write("\n")
-    #     f.write("\n")
-    #     f.write(f"EWC {lambda_value}:")
-    #     f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+    logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+
+    # Save average accuracies to a file
+    file_path = "/home/adarsh/ReProver/total_evaluation_results_full_PT.txt"
+    with open(file_path, "a") as f:
+        f.write("\n")
+        f.write("\n")
+        f.write("\n")
+        f.write(f"Results for {dir_name} with lambda = {lambda_value}")
+        f.write("\n")
+        f.write("\n")
+        f.write("\n")
+        f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
 
     
     ### FISHER INFORMATION MATRIX FOR NEXT EWC
 
     # Switch to one GPU for calculating the Fisher Information Matrix
-    # TOOD: change to available GPU instead of first one
-    # device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    # model.to(device)
-    # train_dataloader = data_module.train_dataloader()
-    # fisher_info = model.compute_fisher_information(train_dataloader)
-    # dir_path = RAID_DIR + "/" + FISHER_DIR
-    # fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
-    # with open(fisher_name, "wb") as f:
-    #     pickle.dump(fisher_info, f)
-    # logger.info(f"Fisher info saved to {fisher_name}")
-
-    # TODO: use kaiyuy/leandojo-pl-ckpts for generator too if it works?
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    best_model.to(device)
+    train_dataloader = data_module.train_dataloader()
+    fisher_info = best_model.compute_fisher_information(train_dataloader)
+    dir_path = RAID_DIR + "/" + FISHER_DIR
+    fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
+    with open(fisher_name, "wb") as f:
+        pickle.dump(fisher_info, f)
+    logger.info(f"Fisher info saved to {fisher_name}")
 
     # TODO: add anything else from yaml conf if needed
 
@@ -495,25 +605,38 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
     if ray.is_initialized():
         ray.shutdown()
 
+    url = repo.url
+    if not url.endswith('.git'):
+        url = url + '.git'
+
+    logger.info(f"Processing {url}")
+    sha, v = get_compatible_commit(url)
+    if not sha:
+        logger.info(f"Failed to find a compatible commit for {url}")
+        return None
+    logger.info(f"Found compatible commit {sha} for {url}")
+    logger.info(f"Lean version: {v}")
+    url = url.replace('.git', '')
+    repo = LeanGitRepo(url, sha)
+
     dir_name = repo.url.split("/")[-1] + "_" + sha
     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name
-    # TOOD: remove these 2
-    # model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
-    # logger.info("Starting subprocess run")
-    # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", dst_dir], check=True)
+    logger.info(f"Generating benchmark at {dst_dir}")
     traced_repo, num_premises, num_files_traced = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
+    if not traced_repo:
+        logger.info(f"Failed to trace {url}")
+        return None
     logger.info(f"Finished generating benchmark at {dst_dir}")
 
-    # TODO: undo
-    model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
-    # try:
-        # model_checkpoint_path = find_latest_checkpoint()
-        # logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
-    # except FileNotFoundError as e:
-    #     logger.error(str(e))
-    #     return
+    # model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+    try:
+        model_checkpoint_path = find_latest_checkpoint()
+        logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
+    except FileNotFoundError as e:
+        logger.error(str(e))
+        return None
     
-    train_test_fisher(model_checkpoint_path, dst_dir, lambda_value)
+    # train_test_fisher(model_checkpoint_path, dst_dir, lambda_value)
 
     data = []
 
@@ -548,35 +671,14 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
     num_sorries = len(theorems)
     logger.info(f"Found {num_sorries} sorries!")
 
-    # TODO: remove:
-    # theorems = theorems[:30]
-    # positions = positions[:30]
-    # ends = ends[:30]
-    # with open("sorries.pkl", "wb") as f:
-    #     pickle.dump(theorems, f)
-    # with open("positions.pkl", "wb") as f:
-    #     pickle.dump(positions, f)
-    # with open("ends.pkl", "wb") as f:
-    #     pickle.dump(ends, f)
-
-    # theorems = []
-    # positions = []
-    # ends = []
-    # with open("sorries.pkl", "rb") as f:
-    #     theorems = pickle.load(f)
-    # with open("positions.pkl", "rb") as f:
-    #     positions = pickle.load(f)
-    # with open("ends.pkl", "rb") as f:
-    #     ends = pickle.load(f)
-
     corpus_path = dst_dir + "/corpus.jsonl"
-    tactic = None
-    module = None
-    num_workers = 1 # TODO: change back to 5
+    tactic = None  # `None` since we are not using a fixed tactic generator
+    module = None  # `None` since we are not using a fixed tactic generator
+    num_workers = 1 # TODO: do everywhere if good
     num_gpus = 1 # TODO: change for GPU
     timeout = 600
     num_sampled_tactics = 64
-    verbose = False
+    debug = False
     ckpt_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     logger.info("MAIN: about to search for proofs")
     prover = DistributedProver(
@@ -588,7 +690,7 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
         num_gpus=num_gpus,
         timeout=timeout,
         num_sampled_tactics=num_sampled_tactics,
-        debug=verbose,
+        debug=debug,
     )
     results = prover.search_unordered(repo, theorems, positions)
     logger.info("MAIN: done searching for proofs")
@@ -620,7 +722,7 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
         
     logger.info("Finished searching for proofs")
 
-    return num_sorries, proofs, num_premises, num_files_traced, unproved_sorries
+    return num_sorries, proofs, num_premises, num_files_traced, unproved_sorries, repo
 
 def replace_sorry_with_proof(proofs):
     """Replace the `sorry` with the proof text in the Lean files."""
@@ -654,148 +756,97 @@ def replace_sorry_with_proof(proofs):
 
 def main():
     """The main function that drives the bot."""
-    # TODO: incorporate latest changes from ReProver repo
-    # model_checkpoint_path = find_latest_checkpoint()
-    # logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
-    # TODO: remove after testing
-    # model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
-    # data_path = "/raid/adarsh/datasets/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5"
-    # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
-    # run_cli(model_checkpoint_path, data_path)
+    try:
+        # TODO: incorporate latest changes from ReProver repo
+        # TODO: for PR, we need to make fork and then push to there
+        results = {
+            "total_repositories": 0,
+            "repositories": {}
+        }
 
-    # model_checkpoint_path = find_latest_checkpoint()
-    # logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
-    
-    # TODO: make sure this checkpoint works without online
-    # model_checkpoint_path = "leandojo-pl-ckpts/new_retriever_with_loop.ckpt"
-    # model_checkpoint_path = "lightning_logs_one_epoch_yay/epoch=0-Recall@10_val=64.61.ckpt"  # for one epoch
-    # model_checkpoint_path = "lightning_logs/epoch=0-Recall@10_val=63.46.ckpt"  # for two epochs
-    # model_checkpoint_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
-    # new_checkpoint = "lightning_logs/epoch=0-Recall@10_val=63.19.ckpt"  # for benchmark 3
-    # data_path = "pfr_benchmark/random"
-    # data_path = "pfr_benchmark_2/random"
-    # data_path = "leandojo_benchmark_4/random"
-    # data_path = "new_version_test_benchmark/random"
-    # data_path = "leandojo_benchmark_4_downloaded/random"
-    # data_path = "new_version_test3_benchmark/random"
-    # new_checkpoint = train_test_fisher(model_checkpoint_path, data_path)
+        # lambdas = [0.01, 0.1, 1, 10, 100, 1000, 5000, 10000]
+        # lambdas = [0.01, 0.1, 1, 10, 100, 10000]
+        # lambdas = [1, 10, 100, 10000]
+        lambdas = [0.1]
+        # lambdas = [0.01]
+        # lambdas = [0.0]
 
-    results = {
-        "total_repositories": 0,
-        "repositories": {}
-    }
-    # TODO: remove
-    # TODO: might need to use latest checkpoint for tactic gneration and prmeise retrieval
-    # TODO: incorporate latest changes from ReProver like wandb runs
-    # clone_url = "https://github.com/Adarsh321123/new-version-test.git"
-    # repo_name, sha = clone_repo(clone_url)
-    # url = clone_url.replace('.git', '')
-    # lean_git_repo = LeanGitRepo(url, sha)
-    # lean_git_repos.append(lean_git_repo)
-    # repos.append("Adarsh321123/new-version-test")
+        logger.info("Configuring LeanDojo...")
+        generate_benchmark_lean4.configure_leandojo()
+        logger.info("LeanDojo configured")
 
-    # clone_url = "https://github.com/lecopivo/SciLean.git"
-    # repo_name, sha = clone_repo(clone_url)
-    # sha = "2d1a4e79acf3a256ba2ec8ac2848d13f219b9684" # TODO: remove
-    # url = clone_url.replace('.git', '')
-    # lean_git_repo = LeanGitRepo(url, sha)
-    # lean_git_repos.append(lean_git_repo)
-    # repos.append("lecopivo/SciLean")
+        clone_url = "https://github.com/Adarsh321123/PutnamBench.git"
+        repo_name, sha = clone_repo(clone_url)
+        url = clone_url.replace('.git', '')
+        lean_git_repo = LeanGitRepo(url, sha)
+        lean_git_repos.append(lean_git_repo)
+        repos.append("Adarsh321123/PutnamBench")
 
-    # clone_url = "https://github.com/Adarsh321123/SciLean.git"
-    # repo_name, sha = clone_repo(clone_url)
-    # url = clone_url.replace('.git', '')
-    # lean_git_repo = LeanGitRepo(url, sha)
-    # lean_git_repos.append(lean_git_repo)
-    # repos.append("Adarsh321123/SciLean")
-
-    clone_url = "https://github.com/leanprover-community/mathlib4.git"
-    repo_name, sha = clone_repo(clone_url)
-    url = clone_url.replace('.git', '')
-    lean_git_repo = LeanGitRepo(url, sha)
-    lean_git_repos.append(lean_git_repo)
-    repos.append("leanprover-community/mathlib4")
-
-    # clone_url = "https://github.com/teorth/pfr.git"
-    # repo_name, sha = clone_repo(clone_url)
-    # url = clone_url.replace('.git', '')
-    # lean_git_repo = LeanGitRepo(url, sha)
-    # lean_git_repos.append(lean_git_repo)
-    # repos.append("teorth/pfr")
-
-    # clone_url = "https://github.com/Adarsh321123/mathematics_in_lean_source.git"
-    # repo_name, sha = clone_repo(clone_url)
-    # url = clone_url.replace('.git', '')
-    # lean_git_repo = LeanGitRepo(url, sha)
-    # lean_git_repos.append(lean_git_repo)
-    # repos.append("Adarsh321123/mathematics_in_lean_source")
-
-    # lambdas = [0.01, 0.1, 1, 10, 100, 1000, 5000, 10000]
-    # lambdas = [0.01, 0.1, 1, 10, 100, 10000]
-    # lambdas = [1, 10, 100, 10000]
-    lambdas = [0.1]
-    # lambdas = [0.01]
-    # lambdas = [0.0]
-
-    # search_github_repositories("Lean", 10)
-    num_repos = len(repos)
-    results["total_repositories"] = num_repos
-    print(f"Found {num_repos} repositories")
-    for i in range(num_repos):
-        for lambda_value in lambdas:
-            print(f"Training and testing with lambda = {lambda_value}")
-            repo = repos[i]
-            repo_no_dir = repo
-            repo = repo_dir + "/" + repo
-            lean_git_repo = lean_git_repos[i]
-            print(f"Processing {repo}")
-            results["repositories"][repo] = {
-                "number_of_sorries": 0,
-                "number_of_proofs_found": 0,
-                "proofs_details": [],
-                "unproved_sorries": [],
-                "number_of_premises_theorems_retrieved": 0,
-                "num_files_traced": 0,
-                "PR": "",
-            }
-            base_branch = get_default_branch(repo_no_dir)
-            subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
-            subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
-            subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
-            create_or_switch_branch(repo, TMP_BRANCH, base_branch)
-            result = retrieve_proof(lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value)
-            if result is None:
-                logger.info("Skipping repository due to configuration or error.")
-                continue
-            num_sorries, proofs, num_premises, num_files_traced, unproved_sorries = result
-            if proofs is None:
-                continue
-            results["repositories"][repo]["number_of_sorries"] = num_sorries
-            results["repositories"][repo]["number_of_proofs_found"] = len(proofs)
-            results["repositories"][repo]["number_of_premises_theorems_retrieved"] = num_premises
-            results["repositories"][repo]["num_files_traced"] = num_files_traced
-            for proof in proofs:
-                results["repositories"][repo]["proofs_details"].append({
-                    "file_path": proof[0],
-                    "theorem_name": proof[4],
-                    "proof_text": proof[3]
-                })
-            for unproved_sorry in unproved_sorries:
-                results["repositories"][repo]["unproved_sorries"].append({
-                    "file_path": unproved_sorry[0],
-                    "theorem_name": unproved_sorry[1]
-                })
-            results_file = f"results_new_lambda_{lambda_value}_scilean_augmented.json"
-            with open(results_file, 'w', encoding='utf-8') as f:
-                json.dump(results, f, indent=4, ensure_ascii=False)
-            # Uncomment if you would like to contribute back to the repos!
-            # replace_sorry_with_proof(proofs)
-            # committed = commit_changes(repo, COMMIT_MESSAGE)
-            # if committed:
-            #     push_changes(repo, TMP_BRANCH)
-            #     url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
-            #     results["repositories"][repo]["PR"] = url
-            # shutil.rmtree(repo)
+        # search_github_repositories("Lean", 15)
+        num_repos = len(repos)
+        results["total_repositories"] = num_repos
+        print(f"Found {num_repos} repositories")
+        for i in range(num_repos):
+            for lambda_value in lambdas:
+                print(f"Training and testing with lambda = {lambda_value}")
+                repo = repos[i]
+                repo_no_dir = repo
+                repo = repo_dir + "/" + repo
+                lean_git_repo = lean_git_repos[i]
+                print(f"Processing {repo}")
+                results["repositories"][repo] = {
+                    "commit": None,
+                    "number_of_sorries": 0,
+                    "number_of_proofs_found": 0,
+                    "proofs_details": [],
+                    "unproved_sorries": [],
+                    "number_of_premises_theorems_retrieved": 0,
+                    "num_files_traced": 0,
+                    "PR": "",
+                }
+                # base_branch = get_default_branch(repo_no_dir)
+                # subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
+                # subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
+                # subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
+                # create_or_switch_branch(repo, TMP_BRANCH, base_branch)
+                result = retrieve_proof(lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value)
+                if result is None:
+                    logger.info("Skipping repository due to configuration or error.")
+                    continue
+                num_sorries, proofs, num_premises, num_files_traced, unproved_sorries, returned_repo = result
+                if proofs is None:
+                    continue
+                results["repositories"][repo]["commit"] = returned_repo.commit
+                results["repositories"][repo]["number_of_sorries"] = num_sorries
+                results["repositories"][repo]["number_of_proofs_found"] = len(proofs)
+                results["repositories"][repo]["number_of_premises_theorems_retrieved"] = num_premises
+                results["repositories"][repo]["num_files_traced"] = num_files_traced
+                for proof in proofs:
+                    results["repositories"][repo]["proofs_details"].append({
+                        "file_path": proof[0],
+                        "theorem_name": proof[4],
+                        "proof_text": proof[3]
+                    })
+                for unproved_sorry in unproved_sorries:
+                    results["repositories"][repo]["unproved_sorries"].append({
+                        "file_path": unproved_sorry[0],
+                        "theorem_name": unproved_sorry[1]
+                    })
+                results_file = f"results_lambda_{lambda_value}_full_retrieval_putnambench_real_continuous.json"
+                with open(results_file, 'w', encoding='utf-8') as f:
+                    json.dump(results, f, indent=4, ensure_ascii=False)
+                    logger.info(f"Results saved to {results_file}")
+                # Uncomment if you would like to contribute back to the repos!
+                # replace_sorry_with_proof(proofs)
+                # committed = commit_changes(repo, COMMIT_MESSAGE)
+                # if committed:
+                #     push_changes(repo, TMP_BRANCH)
+                #     url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
+                #     results["repositories"][repo]["PR"] = url
+                # shutil.rmtree(repo)
+    except Exception as e:
+        logger.info(f"An error occurred: {e}", file=sys.stderr)
+        traceback.print_exc()
 
 if __name__ == "__main__":
     main()

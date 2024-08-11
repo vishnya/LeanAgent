@@ -10,7 +10,7 @@ def main(model_checkpoint_path):
         state_dict = torch.load(model_checkpoint_path)
         state_dict["pytorch-lightning_version"] = "0.0.0"
         state_dict['global_step'] = None
-        state_dict['epoch'] = 0 # TODO: change
+        state_dict['epoch'] = 0
         #     {'fit_loop': {'state_dict': {}, 'epoch_loop.state_dict': {'_batches_that_stepped': 1106}, 'epoch_loop.batch_progress': {'total': {'ready': 1106, 'completed': 1106, 'started': 1106, 'processed': 1106}, 'current': {'ready': 1106, 'completed': 1106, 'started': 1106, 'processed': 1106}, 'is_last_batch': True}, 'epoch_loop.scheduler_progress': {'total': {'ready': 1106, 'completed': 1106}, 'current': {'ready': 1106, 'completed': 1106}}, 'epoch_loop.automatic_optimization.state_dict': {}, 'epoch_loop.automatic_optimization.optim_progress': {'optimizer': {'step': {'total': {'ready': 1106, 'completed': 1106}, 'current': {'ready': 1106, 'completed': 1106}}, 'zero_grad': {'total': {'ready': 1106, 'completed': 1106, 'started': 1106}, 'current': {'ready': 1106, 'completed': 1106, 'started': 1106}}}}, 'epoch_loop.manual_optimization.state_dict': {}, 'epoch_loop.manual_optimization.optim_step_progress': {'total': {'ready': 0, 'completed': 0}, 'current': {'ready': 0, 'completed': 0}}, 'epoch_loop.val_loop.state_dict': {}, 'epoch_loop.val_loop.batch_progress': {'total': {'ready': 1, 'completed': 1, 'started': 1, 'processed': 1}, 'current': {'ready': 1, 'completed': 1, 'started': 1, 'processed': 1}, 'is_last_batch': True}, 'epoch_progress': {'total': {'ready': 1, 'completed': 0, 'started': 1, 'processed': 1}, 'current': {'ready': 1, 'completed': 0, 'started': 1, 'processed': 1}}}, 'validate_loop': {'state_dict': {}, 'batch_progress': {'total': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'current': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'is_last_batch': False}}, 'test_loop': {'state_dict': {}, 'batch_progress': {'total': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'current': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'is_last_batch': False}}, 'predict_loop': {'state_dict': {}, 'batch_progress': {'total': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'current': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}}}}
         # ipdb> state_dict["loops"]["predict_loop"]
         # {'state_dict': {}, 'batch_progress': {'total': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}, 'current': {'ready': 0, 'completed': 0, 'started': 0, 'processed': 0}}}
@@ -36,9 +36,16 @@ def main(model_checkpoint_path):
             logger.warning("Indexing the corpus using CPU can be very slow.")
             device = torch.device("cpu")
         else:
-            device = torch.device("cuda")
+            device = torch.device("cuda")   
 
         # TODO: reduce repetition in code like this
+        # TODO: why do we use these numbers? shouldn't we align with the yaml file for original training?
+        # Since we convert a deepspeed checkpoint to a PL checkpoint, the correct
+        # config parameters are not in the checkpoint. We need to specify them here.
+        # Note that the `model_name` is only used to initialize the encoder and tokenizer.
+        # Soon after, PL will override these weights with the weights from the checkpoint.
+        # The result is a model with the same weights from the checkpoint
+        # with some extra config parameters.
         config = {
             "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
             "lr": 1e-3,
@@ -55,6 +62,7 @@ def main(model_checkpoint_path):
             model_checkpoint_path, device, freeze=False, config=config
         )
 
+        # PL does this by default, but we do this as a sanity check
         model.load_state_dict(state_dict['state_dict'])
 
         optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
