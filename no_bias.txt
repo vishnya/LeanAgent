@@ -1,0 +1,2031 @@
+home/adarsh/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-08-10 15:29:40.984 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.
+8.0-rc1, x86_64-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-08-10 15:29:40.985 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://g
+ithub.com/Adarsh321123/new-version-test', commit='f465306be03ced999caa157a85558a6c41b3e3f5')
+2024-08-10 15:29:40.985 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-10 15:29:40.988 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-10 15:29:40.988 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-10 15:29:40.988 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-10 15:29:40.988 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:217 - The trace
+d repo is available in the cache.
+2024-08-10 15:29:40.988 | INFO     | lean_dojo.data_extraction.trace:trace:246 - Loading the traced repo
+from /raid/adarsh/.cache/lean_dojo/Adarsh321123-new-version-test-f465306be03ced999caa157a85558a6c41b3e3f5
+/new-version-test
+2024-08-10 15:29:40.991 | DEBUG    | lean_dojo.utils:execute:110 - git remote get-url origin
+2024-08-10 15:29:40.994 | DEBUG    | lean_dojo.utils:execute:110 - git log -n 1
+2024-08-10 15:29:41.133 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading
+5432 traced XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-new-version-test-f465306be03ced999c
+aa157a85558a6c41b3e3f5/new-version-test with 31 workers
+2024-08-10 15:29:42,477 INFO worker.py:1772 -- Started a local Ray instance. View the dashboard at 127.0.
+0.1:8267
+  4%|██▋                                                              | 229/5432 [00:06<01:39, 52.40it/s]
+(raylet) [2024-08-10 15:29:52,346 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85735563264; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+  8%|█████▎                                                           | 440/5432 [00:15<02:50, 29.35it/s]
+(raylet) [2024-08-10 15:30:02,352 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 86258606080; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 12%|████████                                                         | 677/5432 [00:24<01:31, 51.70it/s]
+(raylet) [2024-08-10 15:30:12,358 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 87680667648; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 16%|██████████▍                                                      | 870/5432 [00:37<02:34, 29.52it/s]
+(raylet) [2024-08-10 15:30:22,363 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 89236983808; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 18%|███████████▊                                                    | 1000/5432 [00:47<03:23, 21.75it/s]
+(raylet) [2024-08-10 15:30:32,369 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85742280704; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 19%|████████████▍                                                   | 1055/5432 [00:57<07:46,  9.38it/s]
+(raylet) [2024-08-10 15:30:42,641 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 87033561088; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 21%|█████████████▍                                                  | 1142/5432 [01:11<02:54, 24.65it/s]
+(raylet) [2024-08-10 15:30:52,736 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 87260688384; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 24%|███████████████                                                 | 1282/5432 [01:14<01:34, 43.82it/s]
+(raylet) [2024-08-10 15:31:02,742 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85734559744; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 24%|███████████████▏                                                | 1284/5432 [01:28<51:52,  1.33it/s]
+(raylet) [2024-08-10 15:31:12,746 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85734535168; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 27%|█████████████████▍                                              | 1485/5432 [01:48<00:43, 91.61it/s]
+(raylet) [2024-08-10 15:31:22,753 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85734518784; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 27%|█████████████████▌                                              | 1489/5432 [01:48<39:42,  1.65it/s]
+(raylet) [2024-08-10 15:31:32,761 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85734506496; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 31%|███████████████████▉                                            | 1687/5432 [02:12<53:02,  1.18it/s]
+(raylet) [2024-08-10 15:31:42,767 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85734445056; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+(raylet) [2024-08-10 15:31:52,771 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85733482496; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 36%|███████████████████████▎                                        | 1980/5432 [02:17<01:00, 56.94it/s]
+(raylet) [2024-08-10 15:32:02,777 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85733462016; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 37%|██████████████████████▊                                       | 2000/5432 [02:44<1:03:18,  1.11s/it]
+(raylet) [2024-08-10 15:32:12,783 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85733445632; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 42%|██████████████████████████▏                                   | 2297/5432 [03:22<1:53:57,  2.18s/it]
+(raylet) [2024-08-10 15:32:42,799 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85733359616; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 3x across cluster] (Ray deduplicates logs
+by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-o
+bservability/user-guides/configure-logging.html#log-deduplication for more options.)
+ 47%|█████████████████████████████▉                                  | 2538/5432 [03:27<00:56, 51.57it/s]
+(raylet) [2024-08-10 15:33:12,814 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85731672064; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 3x across cluster]
+ 49%|██████████████████████████████▍                               | 2666/5432 [04:11<1:40:02,  2.17s/it]
+(raylet) [2024-08-10 15:33:22,819 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85731647488; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+(raylet) [2024-08-10 15:33:32,824 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85731635200; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 56%|███████████████████████████████████▋                            | 3029/5432 [04:17<00:35, 67.08it/s]
+(raylet) [2024-08-10 15:34:02,849 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85730787328; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 3x across cluster]
+ 59%|█████████████████████████████████████▉                          | 3215/5432 [05:11<00:51, 42.89it/s]
+(raylet) [2024-08-10 15:34:12,856 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85730754560; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+(raylet) [2024-08-10 15:34:22,863 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85730758656; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 67%|██████████████████████████████████████████▊                     | 3635/5432 [05:18<00:45, 39.17it/s]
+(raylet) [2024-08-10 15:35:02,887 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85729370112; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 4x across cluster]
+ 71%|█████████████████████████████████████████████▋                  | 3877/5432 [05:23<00:46, 33.56it/s]
+(raylet) [2024-08-10 15:35:12,893 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85729353728; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 71%|████████████████████████████████████████████▎                 | 3880/5432 [06:22<1:39:55,  3.86s/it]
+(raylet) [2024-08-10 15:35:22,900 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85729341440; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 77%|████████████████████████████████████████████████▉               | 4158/5432 [06:28<00:31, 40.49it/s]
+(raylet) [2024-08-10 15:36:12,936 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85728440320; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 5x across cluster]
+ 83%|████████████████████████████████████████████████████▉           | 4496/5432 [06:36<00:24, 38.12it/s]
+(raylet) [2024-08-10 15:36:22,944 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85728428032; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 83%|███████████████████████████████████████████████████▎          | 4498/5432 [07:48<1:19:26,  5.10s/it]
+(raylet) [2024-08-10 15:36:32,947 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85728419840; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 90%|█████████████████████████████████████████████████████████▎      | 4868/5432 [07:58<00:11, 48.87it/s]
+(raylet) [2024-08-10 15:37:42,983 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85726982144; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 7x across cluster]
+100%|███████████████████████████████████████████████████████████████▊| 5415/5432 [09:35<00:00, 96.36it/s]
+(raylet) [2024-08-10 15:37:52,990 E 194859 194888] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-29-41_255172_193856 is over 95% full, available space: 85726126080; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+100%|████████████████████████████████████████████████████████████████| 5432/5432 [09:35<00:00,  9.44it/s]
+2024-08-10 15:39:21.680 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:489 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/Adarsh321123/new-version-test', commit='f465306be03ced
+999caa157a85558a6c41b3e3f5')
+2024-08-10 15:39:22.648 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.8.0-rc2
+2024-08-10 15:39:23.954 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.6.0-rc1
+2024-08-10 15:39:26.171 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.7.0
+2024-08-10 15:39:27.150 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:68 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-10 15:39:28.272 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:68 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-10 15:39:32.123 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.11.0-rc1
+2024-08-10 15:39:32.681 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:489 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='19796eea79b36c
+81ba5b1de34f5500e0348c84a2')
+2024-08-10 15:39:33.349 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.10.0
+2024-08-10 15:39:34.446 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.9.0
+2024-08-10 15:40:02.680 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking t
+he sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/Adarsh321123/new-version-test', commit='
+f465306be03ced999caa157a85558a6c41b3e3f5'), dependencies={'lean4': LeanGitRepo(url='https://github.com/le
+anprover/lean4', commit='daa22187642d4cf6954c39a23eab20d8a8675416'), 'batteries': LeanGitRepo(url='https:
+//github.com/leanprover-community/batteries', commit='dc167d260ff7ee9849b436037add06bed15104be'), 'Qq': L
+eanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa75f3aef33a2813a78
+98392222'), 'aesop': LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b421
+6e944d5be2ce42a25d7410c67876f'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community
+/ProofWidgets4', commit='a96aee5245720f588876021b6a0aa73efee49c76'), 'Cli': LeanGitRepo(url='https://gith
+ub.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(
+url='https://github.com/leanprover-community/mathlib4', commit='19796eea79b36c81ba5b1de34f5500e0348c84a2'
+), 'importGraph': LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd206
+5f1dbea5e9235646fb836c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cache/lean_dojo/Adarsh321123-new-
+version-test-f465306be03ced999caa157a85558a6c41b3e3f5/new-version-test'))
+2024-08-10 15:40:17.003 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-10 15:40:28.614 | INFO     | generate_benchmark_lean4:split_data:132 - 119751 theorems in total
+2024-08-10 15:40:28.614 | INFO     | generate_benchmark_lean4:split_data:137 - 119751 theorems in total,
+with 2395 for validation and 2395 for testing
+2024-08-10 15:40:28.615 | INFO     | generate_benchmark_lean4:split_randomly:80 - Splitting the theorems
+randomly
+2024-08-10 15:40:28.663 | INFO     | generate_benchmark_lean4:split_by_premise:94 - Splitting the theorem
+s by premises
+2024-08-10 15:40:38.962 | INFO     | generate_benchmark_lean4:main:352 - Successfully split the data
+2024-08-10 15:41:07.028 | INFO     | generate_benchmark_lean4:export_proofs:194 - 114961 theorems and 242
+909 tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+/random/train.json
+2024-08-10 15:41:07.948 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 5246
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/ran
+dom/val.json
+2024-08-10 15:41:08.539 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 4928
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/ran
+dom/test.json
+2024-08-10 15:41:34.382 | INFO     | generate_benchmark_lean4:export_proofs:194 - 114961 theorems and 238
+146 tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+/novel_premises/train.json
+2024-08-10 15:41:35.372 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 7493
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/nov
+el_premises/val.json
+2024-08-10 15:41:36.094 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 7444
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/nov
+el_premises/test.json
+2024-08-10 15:41:36.101 | INFO     | generate_benchmark_lean4:export_data:270 - Successfully exported the
+ proofs
+2024-08-10 15:42:06.849 | INFO     | generate_benchmark_lean4:export_premises:218 - 175685 theorems/defin
+itions from 5432 files saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558
+a6c41b3e3f5/corpus.jsonl
+2024-08-10 15:42:06.850 | INFO     | generate_benchmark_lean4:export_data:274 - Successfully exported the
+ premises
+2024-08-10 15:42:06.850 | INFO     | generate_benchmark_lean4:export_data:282 - Successfully exported the
+ metadata
+2024-08-10 15:42:06.850 | INFO     | generate_benchmark_lean4:main:354 - Successfully exported the data
+2024-08-10 15:42:06.976 | INFO     | __main__:generate_dataset:246 - Finished generating benchmark at /ra
+id/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:42:06.976 | INFO     | __main__:generate_dataset:247 - Merging datasets
+2024-08-10 15:42:06.976 | INFO     | __main__:merge_datasets:74 - Merging datasets for random
+2024-08-10 15:42:06.976 | INFO     | __main__:merge_datasets:80 - Processing train split
+2024-08-10 15:42:06.976 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:42:09.928 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/random/train.json
+2024-08-10 15:42:18.679 | INFO     | __main__:merge_datasets:104 - Finished processing train split
+2024-08-10 15:42:18.679 | INFO     | __main__:merge_datasets:80 - Processing val split
+2024-08-10 15:42:18.691 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:42:19.038 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/random/val.json
+2024-08-10 15:42:19.232 | INFO     | __main__:merge_datasets:104 - Finished processing val split
+2024-08-10 15:42:19.232 | INFO     | __main__:merge_datasets:80 - Processing test split
+2024-08-10 15:42:19.232 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:42:19.290 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/random/test.json
+2024-08-10 15:42:19.476 | INFO     | __main__:merge_datasets:104 - Finished processing test split
+2024-08-10 15:42:19.476 | INFO     | __main__:merge_datasets:105 - Finished merging datasets for random
+2024-08-10 15:42:19.476 | INFO     | __main__:merge_datasets:74 - Merging datasets for novel_premises
+2024-08-10 15:42:19.477 | INFO     | __main__:merge_datasets:80 - Processing train split
+2024-08-10 15:42:19.477 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:42:22.264 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/novel_premises/train.json
+2024-08-10 15:42:31.030 | INFO     | __main__:merge_datasets:104 - Finished processing train split
+2024-08-10 15:42:31.031 | INFO     | __main__:merge_datasets:80 - Processing val split
+2024-08-10 15:42:31.041 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:42:31.389 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/novel_premises/val.json
+2024-08-10 15:42:31.664 | INFO     | __main__:merge_datasets:104 - Finished processing val split
+2024-08-10 15:42:31.664 | INFO     | __main__:merge_datasets:80 - Processing test split
+2024-08-10 15:42:31.665 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:42:31.740 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/novel_premises/test.json
+2024-08-10 15:42:32.000 | INFO     | __main__:merge_datasets:104 - Finished processing test split
+2024-08-10 15:42:32.000 | INFO     | __main__:merge_datasets:105 - Finished merging datasets for novel_pr
+emises
+2024-08-10 15:42:32.000 | INFO     | __main__:merge_datasets:107 - Merging corpus
+2024-08-10 15:42:32.000 | INFO     | __main__:merge_datasets:112 - Processing new-version-test_f465306be0
+3ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:42:32.449 | INFO     | __main__:merge_datasets:124 - Deleted processed corpus file: /raid/a
+darsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/corpus.jsonl
+2024-08-10 15:42:32.513 | INFO     | __main__:merge_datasets:130 - Finished merging corpus
+2024-08-10 15:42:32.513 | INFO     | __main__:merge_datasets:132 - Adding metadata
+2024-08-10 15:42:32.513 | INFO     | __main__:merge_datasets:137 - Checking for metadata in new-version-t
+est_f465306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:42:32.514 | INFO     | __main__:merge_datasets:145 - Deleted processed metadata file: /raid
+/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/metadata.json
+2024-08-10 15:42:32.514 | INFO     | __main__:merge_datasets:150 - Finished adding metadata
+2024-08-10 15:42:32.514 | INFO     | __main__:merge_datasets:154 - Deleting individual datasets
+2024-08-10 15:42:32.514 | INFO     | __main__:merge_datasets:158 - Deleting dataset: new-version-test_f46
+5306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:42:32.525 | INFO     | __main__:generate_dataset:249 - Finished merging datasets
+2024-08-10 15:42:32.634 | INFO     | __main__:main:639 - Latest PL checkpoint found: AK123321/pl-leancopi
+lot-2
+2024-08-10 15:42:32.733 | INFO     | __main__:download_pl_checkpoint:274 - Checkpoint downloaded to: /hom
+e/adarsh/.cache/huggingface/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162
+d03912f2d86f/model.ckpt
+2024-08-10 15:42:32.734 | INFO     | __main__:main:642 - Checkpoint path: /home/adarsh/.cache/huggingface
+/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt
+2024-08-10 15:42:32.734 | INFO     | __main__:train:464 - Training model with checkpoint: /home/adarsh/.c
+ache/huggingface/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86
+f/model.ckpt
+Seed set to 3407
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to yo
+ur files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../.cache/huggingface
+/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt`
+2024-08-10 15:42:58.250 | INFO     | __main__:train:486 - Loaded premise retriever at /home/adarsh/.cache
+/huggingface/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/mo
+del.ckpt
+2024-08-10 15:42:58.251 | INFO     | __main__:train:490 - Data path: /raid/adarsh/datasets_test/merged/ra
+ndom
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/transformers/tokenization
+_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True`
+by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by def
+ault. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+2024-08-10 15:42:58.347 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/datasets
+_test/merged/corpus.jsonl
+2024-08-10 15:43:19.523 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_train/cached_data.pkl
+Training dataset size: 353052
+2024-08-10 15:43:19.555 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_val/cached_data.pkl
+Validation dataset size: 5403
+2024-08-10 15:43:19.586 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_pred/cached_data.pkl
+Testing dataset size: 5321
+2024-08-10 15:43:19.588 | INFO     | __main__:train:523 - Training dataset size after load: 353052
+2024-08-10 15:43:19.588 | INFO     | __main__:train:524 - Validation dataset size after load: 5403
+2024-08-10 15:43:19.588 | INFO     | __main__:train:525 - Testing dataset size after load: 5321
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-08-10 15:43:19.598 | INFO     | __main__:train:543 - Starting progressive training...
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+
+2024-08-10 15:43:31.912 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_train/cached_data.pkl
+Training dataset size: 353052
+2024-08-10 15:43:32.111 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_val/cached_data.pkl
+Validation dataset size: 5403
+2024-08-10 15:43:32.150 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_pred/cached_data.pkl
+Testing dataset size: 5321
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning/callbac
+ks/model_checkpoint.py:654: Checkpoint directory /raid/adarsh/checkpoints_test exists and is not empty.
+Restoring states from the checkpoint path at /home/adarsh/.cache/huggingface/hub/models--AK123321--pl-lea
+ncopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to yo
+ur files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../.cache/huggingface
+/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt`
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [3]
+2024-08-10 15:43:33.433 | INFO     | common:get_optimizers:434 - Optimizing with GaLoreAdamW
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/galore_torch/adamw.py:48:
+ FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use t
+he PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this
+ warning
+  warnings.warn(
+
+  | Name    | Type           | Params | Mode
+---------------------------------------------------
+0 | encoder | T5EncoderModel | 217 M  | train
+---------------------------------------------------
+217 M     Trainable params
+0         Non-trainable params
+217 M     Total params
+870.630   Total estimated model params size (MB)
+235       Modules in train mode
+0         Modules in eval mode
+2024-08-10 15:43:37.776 | INFO     | __main__:main:651 - An error occurred: loaded state dict has a diffe
+rent number of parameter groups
+Traceback (most recent call last):
+  File "/home/adarsh/ReProver/compute_server.py", line 645, in main
+    train(model_checkpoint_path, merged_data_path, next_suffix)
+  File "/home/adarsh/ReProver/compute_server.py", line 545, in train
+    trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/trainer.py", line 538, in fit
+    call._call_and_handle_interrupt(
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/call.py", line 46, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/trainer.py", line 574, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/trainer.py", line 972, in _run
+    self._checkpoint_connector.restore_training_state()
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/connectors/checkpoint_connector.py", line 298, in restore_training_state
+    self.restore_optimizers_and_schedulers()
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/connectors/checkpoint_connector.py", line 368, in restore_optimizers_and_schedulers
+    self.restore_optimizers()
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/connectors/checkpoint_connector.py", line 383, in restore_optimizers
+    self.trainer.strategy.load_optimizer_state_dict(self._loaded_checkpoint)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/strategies/strategy.py", line 376, in load_optimizer_state_dict
+    optimizer.load_state_dict(opt_state)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/torch/_compile.py
+", line 31, in inner
+    return disable_fn(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/torch/_dynamo/eva
+l_frame.py", line 600, in _fn
+    return fn(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/torch/optim/optim
+izer.py", line 848, in load_state_dict
+    raise ValueError(
+ValueError: loaded state dict has a different number of parameter groups
+(ReProverComputeServer) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$(ReProverComputeS
+(ReProverComputeServer) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ bash run_compute
+_server.sh
+Script executed from: /home/adarsh/ReProver
+[2024-08-10 15:51:41,518] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS envi
+ronment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.4
+ [WARNING]  using untested triton version (3.0.0), only 1.0.0 is known to be compatible
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/deepspeed/runtime/zero/li
+near.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.cust
+om_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/deepspeed/runtime/zero/li
+near.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.cust
+om_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+2024-08-10 15:51:50.114 | INFO     | __main__:check_progress_file:586 - Checking contents of /home/adarsh
+/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning/loops/progress.py
+2024-08-10 15:51:50.115 | INFO     | __main__:check_progress_file:590 - Contents of progress.py:
+2024-08-10 15:51:50.115 | INFO     | __main__:check_progress_file:591 - # Copyright The Lightning AI team
+.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+from dataclasses import asdict, dataclass, field
+from typing import Type
+
+from typing_extensions import override
+
+
+@dataclass
+class _BaseProgress:
+    """Mixin that implements state-loading utilities for dataclasses."""
+
+    def state_dict(self) -> dict:
+        return asdict(self)
+
+    def load_state_dict(self, state_dict: dict) -> None:
+        if state_dict["completed"] == None:
+            state_dict["completed"] = 0
+        self.__dict__.update(state_dict)
+
+    @classmethod
+    def from_state_dict(cls, state_dict: dict) -> "_BaseProgress":
+        obj = cls()
+        obj.load_state_dict(state_dict)
+        return obj
+
+    def reset(self) -> None:
+        """Reset the object's state."""
+        raise NotImplementedError
+
+
+@dataclass
+class _ReadyCompletedTracker(_BaseProgress):
+    """Track an event's progress.
+
+    Args:
+        ready: Intended to track the number of events ready to start.
+        completed: Intended to be incremented after the event completes (e.g. after ``on_*_end`` runs).
+
+    These attributes should be increased in order, that is, :attr:`ready` first and :attr:`completed` las
+t.
+
+    """
+
+    ready: int = 0
+    completed: int = 0
+
+    @override
+    def reset(self) -> None:
+        """Reset the state."""
+        self.ready = 0
+        self.completed = 0
+
+    def reset_on_restart(self) -> None:
+        """Reset the progress on restart.
+
+        If there is a failure before all attributes are increased, restore the attributes to the last ful
+ly completed
+        value.
+
+        """
+        self.ready = self.completed
+
+
+@dataclass
+class _StartedTracker(_ReadyCompletedTracker):
+    """Track an event's progress.
+
+    Args:
+        ready: Intended to track the number of events ready to start.
+        started: Intended to be incremented after the event is started (e.g. after ``on_*_start`` runs).
+        completed: Intended to be incremented after the event completes (e.g. after ``on_*_end`` runs).
+
+    These attributes should be increased in order, that is, :attr:`ready` first and :attr:`completed` las
+t.
+
+    """
+
+    started: int = 0
+
+    @override
+    def reset(self) -> None:
+        super().reset()
+        self.started = 0
+
+    @override
+    def reset_on_restart(self) -> None:
+        super().reset_on_restart()
+        self.started = self.completed
+
+
+@dataclass
+class _ProcessedTracker(_StartedTracker):
+    """Track an event's progress.
+
+    Args:
+        ready: Intended to track the number of events ready to start.
+        started: Intended to be incremented after the event is started (e.g. after ``on_*_start`` runs).
+        processed: Intended to be incremented after the event is processed.
+        completed: Intended to be incremented after the event completes (e.g. after ``on_*_end`` runs).
+
+    These attributes should be increased in order, that is, :attr:`ready` first and :attr:`completed` las
+t.
+
+    """
+
+    processed: int = 0
+
+    @override
+    def reset(self) -> None:
+        super().reset()
+        self.processed = 0
+
+    @override
+    def reset_on_restart(self) -> None:
+        super().reset_on_restart()
+        self.processed = self.completed
+
+
+@dataclass
+class _Progress(_BaseProgress):
+    """Track aggregated and current progress.
+
+    Args:
+        total: Intended to track the total progress of an event.
+        current: Intended to track the current progress of an event.
+
+    """
+
+    total: _ReadyCompletedTracker = field(default_factory=_ProcessedTracker)
+    current: _ReadyCompletedTracker = field(default_factory=_ProcessedTracker)
+
+    def __post_init__(self) -> None:
+        if self.total.__class__ is not self.current.__class__:
+            raise ValueError("The `total` and `current` instances should be of the same class")
+
+    def increment_ready(self) -> None:
+        self.total.ready += 1
+        self.current.ready += 1
+
+    def increment_started(self) -> None:
+        if not isinstance(self.total, _StartedTracker):
+            raise TypeError(f"`{self.total.__class__.__name__}` doesn't have a `started` attribute")
+        self.total.started += 1
+        self.current.started += 1
+
+    def increment_processed(self) -> None:
+        if not isinstance(self.total, _ProcessedTracker):
+            raise TypeError(f"`{self.total.__class__.__name__}` doesn't have a `processed` attribute")
+        self.total.processed += 1
+        self.current.processed += 1
+
+    def increment_completed(self) -> None:
+        self.total.completed += 1
+        self.current.completed += 1
+
+    @classmethod
+    def from_defaults(cls, tracker_cls: Type[_ReadyCompletedTracker], **kwargs: int) -> "_Progress":
+        """Utility function to easily create an instance from keyword arguments to both ``Tracker``s."""
+        return cls(total=tracker_cls(**kwargs), current=tracker_cls(**kwargs))
+
+    @override
+    def reset(self) -> None:
+        self.total.reset()
+        self.current.reset()
+
+    def reset_on_run(self) -> None:
+        self.current.reset()
+
+    def reset_on_restart(self) -> None:
+        self.current.reset_on_restart()
+
+    @override
+    def load_state_dict(self, state_dict: dict) -> None:
+        if state_dict["total"]["completed"] == None:
+            state_dict["total"]["completed"] = 0
+        self.total.load_state_dict(state_dict["total"])
+        self.current.load_state_dict(state_dict["current"])
+
+
+@dataclass
+class _BatchProgress(_Progress):
+    """Tracks batch progress.
+
+    These counters are local to a trainer rank. By default, they are not globally synced across all ranks
+.
+
+    Args:
+        total: Tracks the total batch progress.
+        current: Tracks the current batch progress.
+        is_last_batch: Whether the batch is the last one. This is useful for iterable datasets.
+
+    """
+
+    is_last_batch: bool = False
+
+    @override
+    def reset(self) -> None:
+        super().reset()
+        self.is_last_batch = False
+
+    @override
+    def reset_on_run(self) -> None:
+        super().reset_on_run()
+        self.is_last_batch = False
+
+    @override
+    def load_state_dict(self, state_dict: dict) -> None:
+        if state_dict["total"]["completed"] == None:
+            state_dict["total"]["completed"] = 0
+        super().load_state_dict(state_dict)
+        self.is_last_batch = state_dict["is_last_batch"]
+
+
+@dataclass
+class _SchedulerProgress(_Progress):
+    """Tracks scheduler progress.
+
+    These counters are local to a trainer rank. By default, they are not globally synced across all ranks
+.
+
+    Args:
+        total: Tracks the total scheduler progress.
+        current: Tracks the current scheduler progress.
+
+    """
+
+    total: _ReadyCompletedTracker = field(default_factory=_ReadyCompletedTracker)
+    current: _ReadyCompletedTracker = field(default_factory=_ReadyCompletedTracker)
+
+
+@dataclass
+class _OptimizerProgress(_BaseProgress):
+    """Track optimizer progress.
+
+    Args:
+        step: Tracks ``optimizer.step`` calls.
+        zero_grad: Tracks ``optimizer.zero_grad`` calls.
+
+    """
+
+    step: _Progress = field(default_factory=lambda: _Progress.from_defaults(_ReadyCompletedTracker))
+    zero_grad: _Progress = field(default_factory=lambda: _Progress.from_defaults(_StartedTracker))
+
+    @override
+    def reset(self) -> None:
+        self.step.reset()
+        self.zero_grad.reset()
+
+    def reset_on_run(self) -> None:
+        self.step.reset_on_run()
+        self.zero_grad.reset_on_run()
+
+    def reset_on_restart(self) -> None:
+        self.step.reset_on_restart()
+        self.zero_grad.reset_on_restart()
+
+    @override
+    def load_state_dict(self, state_dict: dict) -> None:
+        if state_dict["step"]["total"]["completed"] == None:
+            state_dict["step"]["total"]["completed"] = 0
+        self.step.load_state_dict(state_dict["step"])
+        self.zero_grad.load_state_dict(state_dict["zero_grad"])
+
+
+@dataclass
+class _OptimizationProgress(_BaseProgress):
+    """Track optimization progress.
+
+    Args:
+        optimizer: Tracks optimizer progress.
+
+    """
+
+    optimizer: _OptimizerProgress = field(default_factory=_OptimizerProgress)
+
+    @property
+    def optimizer_steps(self) -> int:
+        return self.optimizer.step.total.completed
+
+    @override
+    def reset(self) -> None:
+        self.optimizer.reset()
+
+    def reset_on_run(self) -> None:
+        self.optimizer.reset_on_run()
+
+    def reset_on_restart(self) -> None:
+        self.optimizer.reset_on_restart()
+
+    @override
+    def load_state_dict(self, state_dict: dict) -> None:
+        if state_dict["optimizer"]["step"]["total"]["completed"] == None:
+            state_dict["optimizer"]["step"]["total"]["completed"] = 0
+        self.optimizer.load_state_dict(state_dict["optimizer"])
+
+2024-08-10 15:51:50.115 | INFO     | __main__:main:608 - Starting compute server...
+2024-08-10 15:51:50.115 | INFO     | __main__:main:609 - Current working directory: /home/adarsh/ReProver
+2024-08-10 15:51:50.115 | INFO     | __main__:main:617 - ROOT_DIR: /raid/adarsh
+2024-08-10 15:51:50.115 | INFO     | __main__:main:618 - DATA_DIR: datasets_test
+2024-08-10 15:51:50.115 | INFO     | __main__:main:622 - Configuring LeanDojo...
+2024-08-10 15:51:50.119 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-10 15:51:50.119 | INFO     | __main__:main:624 - LeanDojo configured
+2024-08-10 15:51:50.119 | INFO     | __main__:main:632 - Unique URLs: {'https://github.com/Adarsh321123/n
+ew-version-test.git'}
+2024-08-10 15:51:50.119 | INFO     | __main__:main:633 - About to generate datasets...
+2024-08-10 15:51:50.119 | INFO     | __main__:generate_dataset:226 - Generating 1 datasets
+2024-08-10 15:51:50.119 | INFO     | __main__:generate_dataset:231 - Processing https://github.com/Adarsh
+321123/new-version-test.git
+2024-08-10 15:51:50.306 | INFO     | __main__:get_compatible_commit:166 - Latest commit: f465306be03ced99
+9caa157a85558a6c41b3e3f5
+2024-08-10 15:51:50.306 | INFO     | __main__:get_compatible_commit:169 - Creating LeanGitRepo for https:
+//github.com/Adarsh321123/new-version-test
+2024-08-10 15:51:50.676 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.8.0-rc1
+2024-08-10 15:51:51.272 | INFO     | __main__:get_compatible_commit:171 - Getting config for https://gith
+ub.com/Adarsh321123/new-version-test.git
+2024-08-10 15:51:51.272 | INFO     | __main__:get_compatible_commit:175 - Latest commit compatible for ur
+l https://github.com/Adarsh321123/new-version-test.git
+2024-08-10 15:51:51.272 | INFO     | __main__:generate_dataset:236 - Found compatible commit f465306be03c
+ed999caa157a85558a6c41b3e3f5 for https://github.com/Adarsh321123/new-version-test.git
+2024-08-10 15:51:51.272 | INFO     | __main__:generate_dataset:237 - Lean version: v4.8.0-rc1
+2024-08-10 15:51:51.272 | INFO     | __main__:generate_dataset:240 - Creating LeanGitRepo for https://git
+hub.com/Adarsh321123/new-version-test
+2024-08-10 15:51:51.272 | INFO     | __main__:generate_dataset:244 - Generating benchmark at /raid/adarsh
+/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:51:51.273 | INFO     | generate_benchmark_lean4:main:301 - Generating dataset to go into /r
+aid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 15:51:51.273 | INFO     | generate_benchmark_lean4:main:308 - lean toolchain version: {'conten
+t': 'leanprover/lean4:v4.8.0-rc1\n'}
+2024-08-10 15:51:51.273 | INFO     | generate_benchmark_lean4:main:310 - lean version v: v4.8.0-rc1
+2024-08-10 15:51:51.273 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-10 15:51:51.273 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/to
+olchains/leanprover--lean4---4.8.0-rc1
+2024-08-10 15:51:51.273 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/lea
+nprover--lean4---4.8.0-rc1
+2024-08-10 15:51:51.273 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/le
+anprover--lean4---4.8.0-rc1
+2024-08-10 15:51:51.273 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not e
+xist: /.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-08-10 15:51:51.273 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not e
+xist: ~/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-08-10 15:51:51.273 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /
+home/adarsh/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-08-10 15:51:51.306 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.
+8.0-rc1, x86_64-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-08-10 15:51:51.306 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://g
+ithub.com/Adarsh321123/new-version-test', commit='f465306be03ced999caa157a85558a6c41b3e3f5')
+2024-08-10 15:51:51.306 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-10 15:51:51.309 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-10 15:51:51.309 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-10 15:51:51.309 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-10 15:51:51.310 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:217 - The trace
+d repo is available in the cache.
+2024-08-10 15:51:51.310 | INFO     | lean_dojo.data_extraction.trace:trace:246 - Loading the traced repo
+from /raid/adarsh/.cache/lean_dojo/Adarsh321123-new-version-test-f465306be03ced999caa157a85558a6c41b3e3f5
+/new-version-test
+2024-08-10 15:51:51.312 | DEBUG    | lean_dojo.utils:execute:110 - git remote get-url origin
+2024-08-10 15:51:51.315 | DEBUG    | lean_dojo.utils:execute:110 - git log -n 1
+2024-08-10 15:51:51.453 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading
+5432 traced XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-new-version-test-f465306be03ced999c
+aa157a85558a6c41b3e3f5/new-version-test with 31 workers
+2024-08-10 15:51:52,753 INFO worker.py:1772 -- Started a local Ray instance. View the dashboard at 127.0.
+0.1:8267
+  3%|██▏                                                              | 188/5432 [00:06<03:53, 22.46it/s]
+(raylet) [2024-08-10 15:52:02,729 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 88087744512; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+  8%|████▉                                                            | 410/5432 [00:16<04:57, 16.90it/s]
+(raylet) [2024-08-10 15:52:12,737 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 91312033792; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 12%|███████▉                                                         | 660/5432 [00:26<01:55, 41.28it/s]
+(raylet) [2024-08-10 15:52:22,745 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 87885856768; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 15%|█████████▋                                                       | 814/5432 [00:33<01:15, 61.45it/s]
+(raylet) [2024-08-10 15:52:32,752 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 88604549120; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 16%|██████████▋                                                      | 895/5432 [00:41<02:07, 35.46it/s]
+(raylet) [2024-08-10 15:52:42,759 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85732720640; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 19%|███████████▉                                                    | 1012/5432 [00:51<02:25, 30.30it/s]
+(raylet) [2024-08-10 15:52:52,931 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 86138023936; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 21%|█████████████▌                                                  | 1153/5432 [01:02<01:19, 54.16it/s]
+(raylet) [2024-08-10 15:53:02,939 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85725331456; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 24%|███████████████                                                 | 1278/5432 [01:31<00:59, 70.08it/s]
+(raylet) [2024-08-10 15:53:12,946 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85725257728; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 24%|███████████████                                                 | 1281/5432 [01:31<40:41,  1.70it/s]
+(raylet) [2024-08-10 15:53:22,958 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85725245440; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 27%|█████████████████                                               | 1446/5432 [01:51<01:37, 40.91it/s]
+(raylet) [2024-08-10 15:53:32,966 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85725224960; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 27%|████████████████▌                                             | 1449/5432 [01:51<1:02:53,  1.06it/s]
+(raylet) [2024-08-10 15:53:42,974 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85725220864; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 31%|███████████████████▋                                            | 1675/5432 [02:16<00:48, 76.79it/s]
+(raylet) [2024-08-10 15:53:52,981 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85725159424; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 31%|███████████████████▊                                            | 1681/5432 [02:16<48:40,  1.28it/s]
+(raylet) [2024-08-10 15:54:02,988 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85724057600; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 36%|███████████████████████▏                                        | 1968/5432 [02:49<01:02, 55.14it/s]
+(raylet) [2024-08-10 15:54:23,001 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85724024832; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 2x across cluster] (Ray deduplicates logs
+by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-o
+bservability/user-guides/configure-logging.html#log-deduplication for more options.)
+ 42%|██████████████████████████▊                                     | 2278/5432 [02:55<01:43, 30.51it/s]
+(raylet) [2024-08-10 15:54:53,024 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85723914240; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 3x across cluster]
+ 48%|██████████████████████████████▉                                 | 2631/5432 [04:16<00:58, 48.22it/s]
+(raylet) [2024-08-10 15:55:33,057 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85722353664; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 4x across cluster]
+ 59%|█████████████████████████████████████▋                          | 3195/5432 [05:15<00:42, 52.13it/s]
+(raylet) [2024-08-10 15:56:23,095 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85721481216; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 5x across cluster]
+ 70%|████████████████████████████████████████████▋                   | 3789/5432 [05:27<00:24, 68.33it/s]
+(raylet) [2024-08-10 15:57:23,135 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85720027136; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 6x across cluster]
+ 71%|████████████████████████████████████████████▏                 | 3866/5432 [06:28<1:16:27,  2.93s/it]
+(raylet) [2024-08-10 15:57:33,140 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85719998464; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+(raylet) [2024-08-10 15:57:43,146 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85719973888; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 78%|█████████████████████████████████████████████████▋              | 4219/5432 [06:37<00:37, 32.78it/s]
+(raylet) [2024-08-10 15:58:33,207 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85718994944; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 5x across cluster]
+ 82%|████████████████████████████████████████████████████▋           | 4468/5432 [06:43<00:20, 46.23it/s]
+(raylet) [2024-08-10 15:58:43,213 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85718962176; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 82%|███████████████████████████████████████████████████           | 4470/5432 [07:58<1:12:45,  4.54s/it]
+(raylet) [2024-08-10 15:58:53,220 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85718937600; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 88%|████████████████████████████████████████████████████████▎       | 4781/5432 [08:07<00:11, 55.08it/s]
+(raylet) [2024-08-10 16:00:03,278 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85716840448; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 7x across cluster]
+ 99%|███████████████████████████████████████████████████████████████ | 5354/5432 [08:15<00:01, 74.49it/s]
+(raylet) [2024-08-10 16:00:13,284 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85716815872; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 99%|███████████████████████████████████████████████████████████████▏| 5358/5432 [09:46<02:27,  2.00s/it]
+(raylet) [2024-08-10 16:00:23,291 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85716803584; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+100%|████████████████████████████████████████████████████████████████| 5432/5432 [09:46<00:00,  9.26it/s]
+(raylet) [2024-08-10 16:01:33,341 E 250501 250531] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_15-51-51_574039_249508 is over 95% full, available space: 85715513344; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 7x across cluster]
+2024-08-10 16:01:44.609 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:489 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/Adarsh321123/new-version-test', commit='f465306be03ced
+999caa157a85558a6c41b3e3f5')
+2024-08-10 16:01:45.622 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.8.0-rc2
+2024-08-10 16:01:46.908 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.6.0-rc1
+2024-08-10 16:01:49.114 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.7.0
+2024-08-10 16:01:50.057 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:68 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-10 16:01:51.182 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:68 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-10 16:01:54.485 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.11.0-rc1
+2024-08-10 16:01:55.059 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:489 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='19796eea79b36c
+81ba5b1de34f5500e0348c84a2')
+2024-08-10 16:01:55.645 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.10.0
+2024-08-10 16:01:56.748 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.9.0
+2024-08-10 16:02:25.412 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking t
+he sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/Adarsh321123/new-version-test', commit='
+f465306be03ced999caa157a85558a6c41b3e3f5'), dependencies={'lean4': LeanGitRepo(url='https://github.com/le
+anprover/lean4', commit='daa22187642d4cf6954c39a23eab20d8a8675416'), 'batteries': LeanGitRepo(url='https:
+//github.com/leanprover-community/batteries', commit='dc167d260ff7ee9849b436037add06bed15104be'), 'Qq': L
+eanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa75f3aef33a2813a78
+98392222'), 'aesop': LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b421
+6e944d5be2ce42a25d7410c67876f'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community
+/ProofWidgets4', commit='a96aee5245720f588876021b6a0aa73efee49c76'), 'Cli': LeanGitRepo(url='https://gith
+ub.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(
+url='https://github.com/leanprover-community/mathlib4', commit='19796eea79b36c81ba5b1de34f5500e0348c84a2'
+), 'importGraph': LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd206
+5f1dbea5e9235646fb836c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cache/lean_dojo/Adarsh321123-new-
+version-test-f465306be03ced999caa157a85558a6c41b3e3f5/new-version-test'))
+2024-08-10 16:02:39.858 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-10 16:02:51.060 | INFO     | generate_benchmark_lean4:split_data:132 - 119751 theorems in total
+2024-08-10 16:02:51.061 | INFO     | generate_benchmark_lean4:split_data:137 - 119751 theorems in total,
+with 2395 for validation and 2395 for testing
+2024-08-10 16:02:51.061 | INFO     | generate_benchmark_lean4:split_randomly:80 - Splitting the theorems
+randomly
+2024-08-10 16:02:51.108 | INFO     | generate_benchmark_lean4:split_by_premise:94 - Splitting the theorem
+s by premises
+2024-08-10 16:03:01.573 | INFO     | generate_benchmark_lean4:main:352 - Successfully split the data
+2024-08-10 16:03:29.561 | INFO     | generate_benchmark_lean4:export_proofs:194 - 114961 theorems and 243
+249 tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+/random/train.json
+2024-08-10 16:03:30.462 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 5027
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/ran
+dom/val.json
+2024-08-10 16:03:31.043 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 4807
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/ran
+dom/test.json
+2024-08-10 16:03:56.554 | INFO     | generate_benchmark_lean4:export_proofs:194 - 114961 theorems and 238
+014 tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+/novel_premises/train.json
+2024-08-10 16:03:57.633 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 7418
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/nov
+el_premises/val.json
+2024-08-10 16:03:58.435 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 7651
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/nov
+el_premises/test.json
+2024-08-10 16:03:58.442 | INFO     | generate_benchmark_lean4:export_data:270 - Successfully exported the
+ proofs
+2024-08-10 16:04:29.612 | INFO     | generate_benchmark_lean4:export_premises:218 - 175685 theorems/defin
+itions from 5432 files saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558
+a6c41b3e3f5/corpus.jsonl
+2024-08-10 16:04:29.612 | INFO     | generate_benchmark_lean4:export_data:274 - Successfully exported the
+ premises
+2024-08-10 16:04:29.613 | INFO     | generate_benchmark_lean4:export_data:282 - Successfully exported the
+ metadata
+2024-08-10 16:04:29.613 | INFO     | generate_benchmark_lean4:main:354 - Successfully exported the data
+2024-08-10 16:04:29.754 | INFO     | __main__:generate_dataset:246 - Finished generating benchmark at /ra
+id/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:04:29.754 | INFO     | __main__:generate_dataset:247 - Merging datasets
+2024-08-10 16:04:29.754 | INFO     | __main__:merge_datasets:74 - Merging datasets for random
+2024-08-10 16:04:29.755 | INFO     | __main__:merge_datasets:80 - Processing train split
+2024-08-10 16:04:29.755 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:04:32.596 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/random/train.json
+2024-08-10 16:04:41.346 | INFO     | __main__:merge_datasets:104 - Finished processing train split
+2024-08-10 16:04:41.346 | INFO     | __main__:merge_datasets:80 - Processing val split
+2024-08-10 16:04:41.359 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:04:41.698 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/random/val.json
+2024-08-10 16:04:41.876 | INFO     | __main__:merge_datasets:104 - Finished processing val split
+2024-08-10 16:04:41.876 | INFO     | __main__:merge_datasets:80 - Processing test split
+2024-08-10 16:04:41.876 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:04:41.931 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/random/test.json
+2024-08-10 16:04:42.102 | INFO     | __main__:merge_datasets:104 - Finished processing test split
+2024-08-10 16:04:42.102 | INFO     | __main__:merge_datasets:105 - Finished merging datasets for random
+2024-08-10 16:04:42.102 | INFO     | __main__:merge_datasets:74 - Merging datasets for novel_premises
+2024-08-10 16:04:42.102 | INFO     | __main__:merge_datasets:80 - Processing train split
+2024-08-10 16:04:42.103 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:04:44.797 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/novel_premises/train.json
+2024-08-10 16:04:53.369 | INFO     | __main__:merge_datasets:104 - Finished processing train split
+2024-08-10 16:04:53.369 | INFO     | __main__:merge_datasets:80 - Processing val split
+2024-08-10 16:04:53.381 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:04:53.726 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/novel_premises/val.json
+2024-08-10 16:04:53.981 | INFO     | __main__:merge_datasets:104 - Finished processing val split
+2024-08-10 16:04:53.981 | INFO     | __main__:merge_datasets:80 - Processing test split
+2024-08-10 16:04:53.982 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:04:54.057 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/novel_premises/test.json
+2024-08-10 16:04:54.317 | INFO     | __main__:merge_datasets:104 - Finished processing test split
+2024-08-10 16:04:54.318 | INFO     | __main__:merge_datasets:105 - Finished merging datasets for novel_pr
+emises
+2024-08-10 16:04:54.318 | INFO     | __main__:merge_datasets:107 - Merging corpus
+2024-08-10 16:04:54.318 | INFO     | __main__:merge_datasets:112 - Processing new-version-test_f465306be0
+3ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:04:54.767 | INFO     | __main__:merge_datasets:124 - Deleted processed corpus file: /raid/a
+darsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/corpus.jsonl
+2024-08-10 16:04:54.823 | INFO     | __main__:merge_datasets:130 - Finished merging corpus
+2024-08-10 16:04:54.824 | INFO     | __main__:merge_datasets:132 - Adding metadata
+2024-08-10 16:04:54.824 | INFO     | __main__:merge_datasets:137 - Checking for metadata in new-version-t
+est_f465306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:04:54.825 | INFO     | __main__:merge_datasets:145 - Deleted processed metadata file: /raid
+/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/metadata.json
+2024-08-10 16:04:54.825 | INFO     | __main__:merge_datasets:150 - Finished adding metadata
+2024-08-10 16:04:54.825 | INFO     | __main__:merge_datasets:154 - Deleting individual datasets
+2024-08-10 16:04:54.825 | INFO     | __main__:merge_datasets:158 - Deleting dataset: new-version-test_f46
+5306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:04:54.836 | INFO     | __main__:generate_dataset:249 - Finished merging datasets
+2024-08-10 16:04:54.963 | INFO     | __main__:main:639 - Latest PL checkpoint found: AK123321/pl-leancopi
+lot-2
+2024-08-10 16:04:55.061 | INFO     | __main__:download_pl_checkpoint:274 - Checkpoint downloaded to: /hom
+e/adarsh/.cache/huggingface/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162
+d03912f2d86f/model.ckpt
+2024-08-10 16:04:55.061 | INFO     | __main__:main:642 - Checkpoint path: /home/adarsh/.cache/huggingface
+/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt
+2024-08-10 16:04:55.061 | INFO     | __main__:train:464 - Training model with checkpoint: /home/adarsh/.c
+ache/huggingface/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86
+f/model.ckpt
+Seed set to 3407
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to yo
+ur files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../.cache/huggingface
+/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt`
+2024-08-10 16:05:19.736 | INFO     | __main__:train:486 - Loaded premise retriever at /home/adarsh/.cache
+/huggingface/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/mo
+del.ckpt
+2024-08-10 16:05:19.736 | INFO     | __main__:train:490 - Data path: /raid/adarsh/datasets_test/merged/ra
+ndom
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/transformers/tokenization
+_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True`
+by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by def
+ault. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+2024-08-10 16:05:19.834 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/datasets
+_test/merged/corpus.jsonl
+2024-08-10 16:05:40.525 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_train/cached_data.pkl
+Training dataset size: 353052
+2024-08-10 16:05:40.556 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_val/cached_data.pkl
+Validation dataset size: 5403
+2024-08-10 16:05:40.588 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_pred/cached_data.pkl
+Testing dataset size: 5321
+2024-08-10 16:05:40.590 | INFO     | __main__:train:523 - Training dataset size after load: 353052
+2024-08-10 16:05:40.590 | INFO     | __main__:train:524 - Validation dataset size after load: 5403
+2024-08-10 16:05:40.590 | INFO     | __main__:train:525 - Testing dataset size after load: 5321
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-08-10 16:05:40.604 | INFO     | __main__:train:543 - Starting progressive training...
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+
+2024-08-10 16:05:52.135 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_train/cached_data.pkl
+Training dataset size: 353052
+2024-08-10 16:05:52.328 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_val/cached_data.pkl
+Validation dataset size: 5403
+2024-08-10 16:05:52.365 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_pred/cached_data.pkl
+Testing dataset size: 5321
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning/callbac
+ks/model_checkpoint.py:654: Checkpoint directory /raid/adarsh/checkpoints_test exists and is not empty.
+Restoring states from the checkpoint path at /home/adarsh/.cache/huggingface/hub/models--AK123321--pl-lea
+ncopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to yo
+ur files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../.cache/huggingface
+/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt`
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [3]
+2024-08-10 16:05:55.871 | INFO     | common:get_optimizers:433 - Optimizing with GaLoreAdamW
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/galore_torch/adamw.py:48:
+ FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use t
+he PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this
+ warning
+  warnings.warn(
+
+  | Name    | Type           | Params | Mode
+---------------------------------------------------
+0 | encoder | T5EncoderModel | 217 M  | train
+---------------------------------------------------
+217 M     Trainable params
+0         Non-trainable params
+217 M     Total params
+870.630   Total estimated model params size (MB)
+235       Modules in train mode
+0         Modules in eval mode
+Restored all states from the checkpoint at /home/adarsh/.cache/huggingface/hub/models--AK123321--pl-leanc
+opilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt
+Epoch 0:   0%|                                                                | 0/176526 [00:00<?, ?it/s]
+2024-08-10 16:06:50.939 | INFO     | __main__:main:651 - An error occurred: 'correct_bias'
+Traceback (most recent call last):
+  File "/home/adarsh/ReProver/compute_server.py", line 645, in main
+    train(model_checkpoint_path, merged_data_path, next_suffix)
+  File "/home/adarsh/ReProver/compute_server.py", line 545, in train
+    trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/trainer.py", line 538, in fit
+    call._call_and_handle_interrupt(
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/call.py", line 46, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/trainer.py", line 574, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/trainer.py", line 981, in _run
+    results = self._run_stage()
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/trainer.py", line 1025, in _run_stage
+    self.fit_loop.run()
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/fit_loop.py", line 205, in run
+    self.advance()
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/fit_loop.py", line 363, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/training_epoch_loop.py", line 140, in run
+    self.advance(data_fetcher)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/training_epoch_loop.py", line 250, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/optimization/automatic.py", line 190, in run
+    self._optimizer_step(batch_idx, closure)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/optimization/automatic.py", line 268, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/call.py", line 167, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/core/module.py", line 1306, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/core/optimizer.py", line 153, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/strategies/ddp.py", line 270, in optimizer_step
+    optimizer_output = super().optimizer_step(optimizer, closure, model, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/strategies/strategy.py", line 238, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/plugins/precision/amp.py", line 75, in optimizer_step
+    return super().optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/plugins/precision/precision.py", line 122, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/torch/optim/lr_sc
+heduler.py", line 130, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/torch/optim/optim
+izer.py", line 484, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/torch/utils/_cont
+extlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/galore_torch/adam
+w.py", line 117, in step
+    if group["correct_bias"]:  # No bias correction for Bert
+KeyError: 'correct_bias'
+Epoch 0:   0%|                                                                | 0/176526 [02:25<?, ?it/s]
+(ReProverComputeServer) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ bash run_compute
+_server.sh
+Script executed from: /home/adarsh/ReProver
+[2024-08-10 16:32:58,160] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS envi
+ronment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.4
+ [WARNING]  using untested triton version (3.0.0), only 1.0.0 is known to be compatible
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/deepspeed/runtime/zero/li
+near.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.cust
+om_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/deepspeed/runtime/zero/li
+near.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.cust
+om_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+2024-08-10 16:33:07.888 | INFO     | __main__:check_progress_file:586 - Checking contents of /home/adarsh
+/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning/loops/progress.py
+2024-08-10 16:33:07.888 | INFO     | __main__:check_progress_file:590 - Contents of progress.py:
+2024-08-10 16:33:07.888 | INFO     | __main__:check_progress_file:591 - # Copyright The Lightning AI team
+.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+from dataclasses import asdict, dataclass, field
+from typing import Type
+
+from typing_extensions import override
+
+
+@dataclass
+class _BaseProgress:
+    """Mixin that implements state-loading utilities for dataclasses."""
+
+    def state_dict(self) -> dict:
+        return asdict(self)
+
+    def load_state_dict(self, state_dict: dict) -> None:
+        if state_dict["completed"] == None:
+            state_dict["completed"] = 0
+        self.__dict__.update(state_dict)
+
+    @classmethod
+    def from_state_dict(cls, state_dict: dict) -> "_BaseProgress":
+        obj = cls()
+        obj.load_state_dict(state_dict)
+        return obj
+
+    def reset(self) -> None:
+        """Reset the object's state."""
+        raise NotImplementedError
+
+
+@dataclass
+class _ReadyCompletedTracker(_BaseProgress):
+    """Track an event's progress.
+
+    Args:
+        ready: Intended to track the number of events ready to start.
+        completed: Intended to be incremented after the event completes (e.g. after ``on_*_end`` runs).
+
+    These attributes should be increased in order, that is, :attr:`ready` first and :attr:`completed` las
+t.
+
+    """
+
+    ready: int = 0
+    completed: int = 0
+
+    @override
+    def reset(self) -> None:
+        """Reset the state."""
+        self.ready = 0
+        self.completed = 0
+
+    def reset_on_restart(self) -> None:
+        """Reset the progress on restart.
+
+        If there is a failure before all attributes are increased, restore the attributes to the last ful
+ly completed
+        value.
+
+        """
+        self.ready = self.completed
+
+
+@dataclass
+class _StartedTracker(_ReadyCompletedTracker):
+    """Track an event's progress.
+
+    Args:
+        ready: Intended to track the number of events ready to start.
+        started: Intended to be incremented after the event is started (e.g. after ``on_*_start`` runs).
+        completed: Intended to be incremented after the event completes (e.g. after ``on_*_end`` runs).
+
+    These attributes should be increased in order, that is, :attr:`ready` first and :attr:`completed` las
+t.
+
+    """
+
+    started: int = 0
+
+    @override
+    def reset(self) -> None:
+        super().reset()
+        self.started = 0
+
+    @override
+    def reset_on_restart(self) -> None:
+        super().reset_on_restart()
+        self.started = self.completed
+
+
+@dataclass
+class _ProcessedTracker(_StartedTracker):
+    """Track an event's progress.
+
+    Args:
+        ready: Intended to track the number of events ready to start.
+        started: Intended to be incremented after the event is started (e.g. after ``on_*_start`` runs).
+        processed: Intended to be incremented after the event is processed.
+        completed: Intended to be incremented after the event completes (e.g. after ``on_*_end`` runs).
+
+    These attributes should be increased in order, that is, :attr:`ready` first and :attr:`completed` las
+t.
+
+    """
+
+    processed: int = 0
+
+    @override
+    def reset(self) -> None:
+        super().reset()
+        self.processed = 0
+
+    @override
+    def reset_on_restart(self) -> None:
+        super().reset_on_restart()
+        self.processed = self.completed
+
+
+@dataclass
+class _Progress(_BaseProgress):
+    """Track aggregated and current progress.
+
+    Args:
+        total: Intended to track the total progress of an event.
+        current: Intended to track the current progress of an event.
+
+    """
+
+    total: _ReadyCompletedTracker = field(default_factory=_ProcessedTracker)
+    current: _ReadyCompletedTracker = field(default_factory=_ProcessedTracker)
+
+    def __post_init__(self) -> None:
+        if self.total.__class__ is not self.current.__class__:
+            raise ValueError("The `total` and `current` instances should be of the same class")
+
+    def increment_ready(self) -> None:
+        self.total.ready += 1
+        self.current.ready += 1
+
+    def increment_started(self) -> None:
+        if not isinstance(self.total, _StartedTracker):
+            raise TypeError(f"`{self.total.__class__.__name__}` doesn't have a `started` attribute")
+        self.total.started += 1
+        self.current.started += 1
+
+    def increment_processed(self) -> None:
+        if not isinstance(self.total, _ProcessedTracker):
+            raise TypeError(f"`{self.total.__class__.__name__}` doesn't have a `processed` attribute")
+        self.total.processed += 1
+        self.current.processed += 1
+
+    def increment_completed(self) -> None:
+        self.total.completed += 1
+        self.current.completed += 1
+
+    @classmethod
+    def from_defaults(cls, tracker_cls: Type[_ReadyCompletedTracker], **kwargs: int) -> "_Progress":
+        """Utility function to easily create an instance from keyword arguments to both ``Tracker``s."""
+        return cls(total=tracker_cls(**kwargs), current=tracker_cls(**kwargs))
+
+    @override
+    def reset(self) -> None:
+        self.total.reset()
+        self.current.reset()
+
+    def reset_on_run(self) -> None:
+        self.current.reset()
+
+    def reset_on_restart(self) -> None:
+        self.current.reset_on_restart()
+
+    @override
+    def load_state_dict(self, state_dict: dict) -> None:
+        if state_dict["total"]["completed"] == None:
+            state_dict["total"]["completed"] = 0
+        self.total.load_state_dict(state_dict["total"])
+        self.current.load_state_dict(state_dict["current"])
+
+
+@dataclass
+class _BatchProgress(_Progress):
+    """Tracks batch progress.
+
+    These counters are local to a trainer rank. By default, they are not globally synced across all ranks
+.
+
+    Args:
+        total: Tracks the total batch progress.
+        current: Tracks the current batch progress.
+        is_last_batch: Whether the batch is the last one. This is useful for iterable datasets.
+
+    """
+
+    is_last_batch: bool = False
+
+    @override
+    def reset(self) -> None:
+        super().reset()
+        self.is_last_batch = False
+
+    @override
+    def reset_on_run(self) -> None:
+        super().reset_on_run()
+        self.is_last_batch = False
+
+    @override
+    def load_state_dict(self, state_dict: dict) -> None:
+        if state_dict["total"]["completed"] == None:
+            state_dict["total"]["completed"] = 0
+        super().load_state_dict(state_dict)
+        self.is_last_batch = state_dict["is_last_batch"]
+
+
+@dataclass
+class _SchedulerProgress(_Progress):
+    """Tracks scheduler progress.
+
+    These counters are local to a trainer rank. By default, they are not globally synced across all ranks
+.
+
+    Args:
+        total: Tracks the total scheduler progress.
+        current: Tracks the current scheduler progress.
+
+    """
+
+    total: _ReadyCompletedTracker = field(default_factory=_ReadyCompletedTracker)
+    current: _ReadyCompletedTracker = field(default_factory=_ReadyCompletedTracker)
+
+
+@dataclass
+class _OptimizerProgress(_BaseProgress):
+    """Track optimizer progress.
+
+    Args:
+        step: Tracks ``optimizer.step`` calls.
+        zero_grad: Tracks ``optimizer.zero_grad`` calls.
+
+    """
+
+    step: _Progress = field(default_factory=lambda: _Progress.from_defaults(_ReadyCompletedTracker))
+    zero_grad: _Progress = field(default_factory=lambda: _Progress.from_defaults(_StartedTracker))
+
+    @override
+    def reset(self) -> None:
+        self.step.reset()
+        self.zero_grad.reset()
+
+    def reset_on_run(self) -> None:
+        self.step.reset_on_run()
+        self.zero_grad.reset_on_run()
+
+    def reset_on_restart(self) -> None:
+        self.step.reset_on_restart()
+        self.zero_grad.reset_on_restart()
+
+    @override
+    def load_state_dict(self, state_dict: dict) -> None:
+        if state_dict["step"]["total"]["completed"] == None:
+            state_dict["step"]["total"]["completed"] = 0
+        self.step.load_state_dict(state_dict["step"])
+        self.zero_grad.load_state_dict(state_dict["zero_grad"])
+
+
+@dataclass
+class _OptimizationProgress(_BaseProgress):
+    """Track optimization progress.
+
+    Args:
+        optimizer: Tracks optimizer progress.
+
+    """
+
+    optimizer: _OptimizerProgress = field(default_factory=_OptimizerProgress)
+
+    @property
+    def optimizer_steps(self) -> int:
+        return self.optimizer.step.total.completed
+
+    @override
+    def reset(self) -> None:
+        self.optimizer.reset()
+
+    def reset_on_run(self) -> None:
+        self.optimizer.reset_on_run()
+
+    def reset_on_restart(self) -> None:
+        self.optimizer.reset_on_restart()
+
+    @override
+    def load_state_dict(self, state_dict: dict) -> None:
+        if state_dict["optimizer"]["step"]["total"]["completed"] == None:
+            state_dict["optimizer"]["step"]["total"]["completed"] = 0
+        self.optimizer.load_state_dict(state_dict["optimizer"])
+
+2024-08-10 16:33:07.889 | INFO     | __main__:main:608 - Starting compute server...
+2024-08-10 16:33:07.889 | INFO     | __main__:main:609 - Current working directory: /home/adarsh/ReProver
+2024-08-10 16:33:07.889 | INFO     | __main__:main:617 - ROOT_DIR: /raid/adarsh
+2024-08-10 16:33:07.889 | INFO     | __main__:main:618 - DATA_DIR: datasets_test
+2024-08-10 16:33:07.889 | INFO     | __main__:main:622 - Configuring LeanDojo...
+2024-08-10 16:33:07.892 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-10 16:33:07.892 | INFO     | __main__:main:624 - LeanDojo configured
+2024-08-10 16:33:07.892 | INFO     | __main__:main:632 - Unique URLs: {'https://github.com/Adarsh321123/n
+ew-version-test.git'}
+2024-08-10 16:33:07.892 | INFO     | __main__:main:633 - About to generate datasets...
+2024-08-10 16:33:07.892 | INFO     | __main__:generate_dataset:226 - Generating 1 datasets
+2024-08-10 16:33:07.892 | INFO     | __main__:generate_dataset:231 - Processing https://github.com/Adarsh
+321123/new-version-test.git
+2024-08-10 16:33:08.087 | INFO     | __main__:get_compatible_commit:166 - Latest commit: f465306be03ced99
+9caa157a85558a6c41b3e3f5
+2024-08-10 16:33:08.087 | INFO     | __main__:get_compatible_commit:169 - Creating LeanGitRepo for https:
+//github.com/Adarsh321123/new-version-test
+2024-08-10 16:33:08.434 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.8.0-rc1
+2024-08-10 16:33:09.068 | INFO     | __main__:get_compatible_commit:171 - Getting config for https://gith
+ub.com/Adarsh321123/new-version-test.git
+2024-08-10 16:33:09.068 | INFO     | __main__:get_compatible_commit:175 - Latest commit compatible for ur
+l https://github.com/Adarsh321123/new-version-test.git
+2024-08-10 16:33:09.068 | INFO     | __main__:generate_dataset:236 - Found compatible commit f465306be03c
+ed999caa157a85558a6c41b3e3f5 for https://github.com/Adarsh321123/new-version-test.git
+2024-08-10 16:33:09.068 | INFO     | __main__:generate_dataset:237 - Lean version: v4.8.0-rc1
+2024-08-10 16:33:09.068 | INFO     | __main__:generate_dataset:240 - Creating LeanGitRepo for https://git
+hub.com/Adarsh321123/new-version-test
+2024-08-10 16:33:09.069 | INFO     | __main__:generate_dataset:244 - Generating benchmark at /raid/adarsh
+/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:33:09.069 | INFO     | generate_benchmark_lean4:main:301 - Generating dataset to go into /r
+aid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:33:09.069 | INFO     | generate_benchmark_lean4:main:308 - lean toolchain version: {'conten
+t': 'leanprover/lean4:v4.8.0-rc1\n'}
+2024-08-10 16:33:09.069 | INFO     | generate_benchmark_lean4:main:310 - lean version v: v4.8.0-rc1
+2024-08-10 16:33:09.069 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-10 16:33:09.069 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/to
+olchains/leanprover--lean4---4.8.0-rc1
+2024-08-10 16:33:09.069 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/lea
+nprover--lean4---4.8.0-rc1
+2024-08-10 16:33:09.069 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/le
+anprover--lean4---4.8.0-rc1
+2024-08-10 16:33:09.069 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not e
+xist: /.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-08-10 16:33:09.069 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not e
+xist: ~/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-08-10 16:33:09.069 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /
+home/adarsh/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-08-10 16:33:09.102 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.
+8.0-rc1, x86_64-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-08-10 16:33:09.102 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://g
+ithub.com/Adarsh321123/new-version-test', commit='f465306be03ced999caa157a85558a6c41b3e3f5')
+2024-08-10 16:33:09.102 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-10 16:33:09.105 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-10 16:33:09.105 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-10 16:33:09.105 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-10 16:33:09.105 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:217 - The trace
+d repo is available in the cache.
+2024-08-10 16:33:09.106 | INFO     | lean_dojo.data_extraction.trace:trace:246 - Loading the traced repo
+from /raid/adarsh/.cache/lean_dojo/Adarsh321123-new-version-test-f465306be03ced999caa157a85558a6c41b3e3f5
+/new-version-test
+2024-08-10 16:33:09.108 | DEBUG    | lean_dojo.utils:execute:110 - git remote get-url origin
+2024-08-10 16:33:09.110 | DEBUG    | lean_dojo.utils:execute:110 - git log -n 1
+2024-08-10 16:33:09.250 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading
+5432 traced XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-new-version-test-f465306be03ced999c
+aa157a85558a6c41b3e3f5/new-version-test with 31 workers
+2024-08-10 16:33:10,580 INFO worker.py:1772 -- Started a local Ray instance. View the dashboard at 127.0.
+0.1:8267
+  4%|██▋                                                              | 224/5432 [00:06<02:03, 42.23it/s]
+(raylet) [2024-08-10 16:33:20,469 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75305594880; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+  8%|█████▏                                                           | 437/5432 [00:15<02:32, 32.67it/s]
+(raylet) [2024-08-10 16:33:30,474 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75305558016; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 12%|████████▏                                                        | 679/5432 [00:30<08:46,  9.02it/s]
+(raylet) [2024-08-10 16:33:40,478 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75305525248; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 16%|██████████▏                                                      | 853/5432 [00:37<05:57, 12.82it/s]
+(raylet) [2024-08-10 16:33:50,482 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75305517056; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 19%|████████████                                                    | 1019/5432 [00:46<01:06, 66.19it/s]
+(raylet) [2024-08-10 16:34:00,486 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75305500672; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 21%|█████████████▌                                                  | 1155/5432 [01:08<36:58,  1.93it/s]
+(raylet) [2024-08-10 16:34:20,495 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75304484864; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 2x across cluster] (Ray deduplicates logs
+by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-o
+bservability/user-guides/configure-logging.html#log-deduplication for more options.)
+ 23%|██████████████▊                                                 | 1262/5432 [01:24<01:49, 38.15it/s]
+(raylet) [2024-08-10 16:34:30,500 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75304468480; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 26%|████████████████▉                                               | 1438/5432 [01:27<01:08, 58.12it/s]
+(raylet) [2024-08-10 16:34:40,505 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75304448000; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 27%|█████████████████▏                                              | 1456/5432 [01:44<41:55,  1.58it/s]
+(raylet) [2024-08-10 16:34:50,508 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75304439808; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 29%|██████████████████▌                                             | 1574/5432 [01:47<01:34, 40.71it/s]
+(raylet) [2024-08-10 16:35:00,513 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75304419328; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 31%|███████████████████▊                                            | 1682/5432 [02:09<58:34,  1.07it/s]
+(raylet) [2024-08-10 16:35:10,518 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75304361984; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+(raylet) [2024-08-10 16:35:20,522 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75303436288; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 37%|██████████████████████▋                                       | 1992/5432 [02:40<1:08:35,  1.20s/it]
+(raylet) [2024-08-10 16:35:30,526 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75303407616; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+(raylet) [2024-08-10 16:35:40,530 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75303391232; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 42%|██████████████████████████                                    | 2282/5432 [03:18<1:44:57,  2.00s/it]
+(raylet) [2024-08-10 16:36:00,539 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75303354368; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 2x across cluster]
+ 46%|█████████████████████████████▋                                  | 2520/5432 [03:27<01:09, 41.71it/s]
+(raylet) [2024-08-10 16:36:40,569 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75304796160; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 4x across cluster]
+ 48%|██████████████████████████████                                | 2630/5432 [04:09<1:25:33,  1.83s/it]
+(raylet) [2024-08-10 16:36:50,847 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 76778422272; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+(raylet) [2024-08-10 16:37:00,943 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 77004787712; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 57%|████████████████████████████████████▋                           | 3112/5432 [04:17<00:39, 58.84it/s]
+(raylet) [2024-08-10 16:37:30,963 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75299815424; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 3x across cluster]
+ 59%|████████████████████████████████████▌                         | 3206/5432 [05:08<1:10:50,  1.91s/it]
+(raylet) [2024-08-10 16:37:40,968 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75299799040; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+(raylet) [2024-08-10 16:37:50,973 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75299778560; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 69%|████████████████████████████████████████████                    | 3743/5432 [05:17<00:54, 31.22it/s]
+(raylet) [2024-08-10 16:38:30,993 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75298476032; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 4x across cluster]
+ 71%|████████████████████████████████████████████                  | 3862/5432 [06:19<1:23:20,  3.18s/it]
+(raylet) [2024-08-10 16:38:40,999 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75298459648; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+(raylet) [2024-08-10 16:38:51,003 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75298422784; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 78%|██████████████████████████████████████████████████              | 4249/5432 [06:27<00:21, 53.90it/s]
+(raylet) [2024-08-10 16:39:41,031 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75297427456; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 5x across cluster]
+ 82%|████████████████████████████████████████████████████▌           | 4466/5432 [07:44<00:23, 40.60it/s]
+(raylet) [2024-08-10 16:39:51,037 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75297406976; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 82%|███████████████████████████████████████████████████           | 4473/5432 [07:44<1:01:57,  3.88s/it]
+(raylet) [2024-08-10 16:40:01,041 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75297402880; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+ 91%|██████████████████████████████████████████████████████████▌     | 4968/5432 [07:58<00:10, 44.65it/s]
+(raylet) [2024-08-10 16:41:11,078 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75296296960; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 7x across cluster]
+ 99%|███████████████████████████████████████████████████████████████▎| 5372/5432 [09:30<01:54,  1.90s/it]
+(raylet) [2024-08-10 16:41:21,085 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75295215616; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+(raylet) [2024-08-10 16:41:31,089 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75295207424; capacity: 1887507697664
+. Object creation will fail if spilling is required.
+100%|████████████████████████████████████████████████████████████████| 5432/5432 [09:31<00:00,  9.51it/s]
+(raylet) [2024-08-10 16:42:41,129 E 340649 340688] (raylet) file_system_monitor.cc:111: /tmp/ray/session_
+2024-08-10_16-33-09_370704_339674 is over 95% full, available space: 75294167040; capacity: 1887507697664
+. Object creation will fail if spilling is required. [repeated 7x across cluster]
+2024-08-10 16:42:46.454 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:489 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/Adarsh321123/new-version-test', commit='f465306be03ced
+999caa157a85558a6c41b3e3f5')
+2024-08-10 16:42:47.375 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.8.0-rc2
+2024-08-10 16:42:48.642 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.6.0-rc1
+2024-08-10 16:42:50.949 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.7.0
+2024-08-10 16:42:51.935 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:68 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-10 16:42:53.059 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:68 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-10 16:42:56.296 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.11.0-rc1
+2024-08-10 16:42:56.889 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:489 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='19796eea79b36c
+81ba5b1de34f5500e0348c84a2')
+2024-08-10 16:42:57.482 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.10.0
+2024-08-10 16:42:59.022 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:88 - Querying the com
+mit hash for lean4 v4.9.0
+2024-08-10 16:43:28.905 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking t
+he sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/Adarsh321123/new-version-test', commit='
+f465306be03ced999caa157a85558a6c41b3e3f5'), dependencies={'lean4': LeanGitRepo(url='https://github.com/le
+anprover/lean4', commit='daa22187642d4cf6954c39a23eab20d8a8675416'), 'batteries': LeanGitRepo(url='https:
+//github.com/leanprover-community/batteries', commit='dc167d260ff7ee9849b436037add06bed15104be'), 'Qq': L
+eanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa75f3aef33a2813a78
+98392222'), 'aesop': LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b421
+6e944d5be2ce42a25d7410c67876f'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community
+/ProofWidgets4', commit='a96aee5245720f588876021b6a0aa73efee49c76'), 'Cli': LeanGitRepo(url='https://gith
+ub.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(
+url='https://github.com/leanprover-community/mathlib4', commit='19796eea79b36c81ba5b1de34f5500e0348c84a2'
+), 'importGraph': LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd206
+5f1dbea5e9235646fb836c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cache/lean_dojo/Adarsh321123-new-
+version-test-f465306be03ced999caa157a85558a6c41b3e3f5/new-version-test'))
+2024-08-10 16:43:43.403 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-10 16:43:55.809 | INFO     | generate_benchmark_lean4:split_data:132 - 119751 theorems in total
+2024-08-10 16:43:55.810 | INFO     | generate_benchmark_lean4:split_data:137 - 119751 theorems in total,
+with 2395 for validation and 2395 for testing
+2024-08-10 16:43:55.810 | INFO     | generate_benchmark_lean4:split_randomly:80 - Splitting the theorems
+randomly
+2024-08-10 16:43:55.857 | INFO     | generate_benchmark_lean4:split_by_premise:94 - Splitting the theorem
+s by premises
+2024-08-10 16:44:06.916 | INFO     | generate_benchmark_lean4:main:352 - Successfully split the data
+2024-08-10 16:44:35.975 | INFO     | generate_benchmark_lean4:export_proofs:194 - 114961 theorems and 242
+378 tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+/random/train.json
+2024-08-10 16:44:36.914 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 5024
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/ran
+dom/val.json
+2024-08-10 16:44:37.613 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 5681
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/ran
+dom/test.json
+2024-08-10 16:45:03.941 | INFO     | generate_benchmark_lean4:export_proofs:194 - 114961 theorems and 238
+141 tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+/novel_premises/train.json
+2024-08-10 16:45:05.010 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 7519
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/nov
+el_premises/val.json
+2024-08-10 16:45:05.807 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2395 theorems and 7423
+tactics saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/nov
+el_premises/test.json
+2024-08-10 16:45:05.814 | INFO     | generate_benchmark_lean4:export_data:270 - Successfully exported the
+ proofs
+2024-08-10 16:45:37.524 | INFO     | generate_benchmark_lean4:export_premises:218 - 175685 theorems/defin
+itions from 5432 files saved to /raid/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558
+a6c41b3e3f5/corpus.jsonl
+2024-08-10 16:45:37.524 | INFO     | generate_benchmark_lean4:export_data:274 - Successfully exported the
+ premises
+2024-08-10 16:45:37.524 | INFO     | generate_benchmark_lean4:export_data:282 - Successfully exported the
+ metadata
+2024-08-10 16:45:37.524 | INFO     | generate_benchmark_lean4:main:354 - Successfully exported the data
+2024-08-10 16:45:37.675 | INFO     | __main__:generate_dataset:246 - Finished generating benchmark at /ra
+id/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:45:37.675 | INFO     | __main__:generate_dataset:247 - Merging datasets
+2024-08-10 16:45:37.676 | INFO     | __main__:merge_datasets:74 - Merging datasets for random
+2024-08-10 16:45:37.676 | INFO     | __main__:merge_datasets:80 - Processing train split
+2024-08-10 16:45:37.676 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:45:40.543 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/random/train.json
+2024-08-10 16:45:49.354 | INFO     | __main__:merge_datasets:104 - Finished processing train split
+2024-08-10 16:45:49.354 | INFO     | __main__:merge_datasets:80 - Processing val split
+2024-08-10 16:45:49.394 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:45:49.752 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/random/val.json
+2024-08-10 16:45:49.935 | INFO     | __main__:merge_datasets:104 - Finished processing val split
+2024-08-10 16:45:49.935 | INFO     | __main__:merge_datasets:80 - Processing test split
+2024-08-10 16:45:49.935 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:45:50.004 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/random/test.json
+2024-08-10 16:45:50.213 | INFO     | __main__:merge_datasets:104 - Finished processing test split
+2024-08-10 16:45:50.214 | INFO     | __main__:merge_datasets:105 - Finished merging datasets for random
+2024-08-10 16:45:50.214 | INFO     | __main__:merge_datasets:74 - Merging datasets for novel_premises
+2024-08-10 16:45:50.214 | INFO     | __main__:merge_datasets:80 - Processing train split
+2024-08-10 16:45:50.214 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:45:52.905 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/novel_premises/train.json
+2024-08-10 16:46:01.716 | INFO     | __main__:merge_datasets:104 - Finished processing train split
+2024-08-10 16:46:01.716 | INFO     | __main__:merge_datasets:80 - Processing val split
+2024-08-10 16:46:01.729 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:46:02.122 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/novel_premises/val.json
+2024-08-10 16:46:02.378 | INFO     | __main__:merge_datasets:104 - Finished processing val split
+2024-08-10 16:46:02.378 | INFO     | __main__:merge_datasets:80 - Processing test split
+2024-08-10 16:46:02.378 | INFO     | __main__:merge_datasets:86 - Processing new-version-test_f465306be03
+ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:46:02.457 | INFO     | __main__:merge_datasets:98 - Deleted processed file: /raid/adarsh/da
+tasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/novel_premises/test.json
+2024-08-10 16:46:02.725 | INFO     | __main__:merge_datasets:104 - Finished processing test split
+2024-08-10 16:46:02.726 | INFO     | __main__:merge_datasets:105 - Finished merging datasets for novel_pr
+emises
+2024-08-10 16:46:02.726 | INFO     | __main__:merge_datasets:107 - Merging corpus
+2024-08-10 16:46:02.726 | INFO     | __main__:merge_datasets:112 - Processing new-version-test_f465306be0
+3ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:46:03.173 | INFO     | __main__:merge_datasets:124 - Deleted processed corpus file: /raid/a
+darsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/corpus.jsonl
+2024-08-10 16:46:03.229 | INFO     | __main__:merge_datasets:130 - Finished merging corpus
+2024-08-10 16:46:03.229 | INFO     | __main__:merge_datasets:132 - Adding metadata
+2024-08-10 16:46:03.229 | INFO     | __main__:merge_datasets:137 - Checking for metadata in new-version-t
+est_f465306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:46:03.230 | INFO     | __main__:merge_datasets:145 - Deleted processed metadata file: /raid
+/adarsh/datasets_test/new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5/metadata.json
+2024-08-10 16:46:03.230 | INFO     | __main__:merge_datasets:150 - Finished adding metadata
+2024-08-10 16:46:03.230 | INFO     | __main__:merge_datasets:154 - Deleting individual datasets
+2024-08-10 16:46:03.230 | INFO     | __main__:merge_datasets:158 - Deleting dataset: new-version-test_f46
+5306be03ced999caa157a85558a6c41b3e3f5
+2024-08-10 16:46:03.244 | INFO     | __main__:generate_dataset:249 - Finished merging datasets
+2024-08-10 16:46:03.331 | INFO     | __main__:main:639 - Latest PL checkpoint found: AK123321/pl-leancopi
+lot-2
+2024-08-10 16:46:03.451 | INFO     | __main__:download_pl_checkpoint:274 - Checkpoint downloaded to: /hom
+e/adarsh/.cache/huggingface/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162
+d03912f2d86f/model.ckpt
+2024-08-10 16:46:03.451 | INFO     | __main__:main:642 - Checkpoint path: /home/adarsh/.cache/huggingface
+/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt
+2024-08-10 16:46:03.451 | INFO     | __main__:train:464 - Training model with checkpoint: /home/adarsh/.c
+ache/huggingface/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86
+f/model.ckpt
+Seed set to 3407
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to yo
+ur files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../.cache/huggingface
+/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt`
+2024-08-10 16:46:23.751 | INFO     | __main__:train:486 - Loaded premise retriever at /home/adarsh/.cache
+/huggingface/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/mo
+del.ckpt
+2024-08-10 16:46:23.751 | INFO     | __main__:train:490 - Data path: /raid/adarsh/datasets_test/merged/ra
+ndom
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/transformers/tokenization
+_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True`
+by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by def
+ault. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+2024-08-10 16:46:23.844 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/datasets
+_test/merged/corpus.jsonl
+2024-08-10 16:46:45.620 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_train/cached_data.pkl
+Training dataset size: 353052
+2024-08-10 16:46:45.653 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_val/cached_data.pkl
+Validation dataset size: 5403
+2024-08-10 16:46:45.686 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_pred/cached_data.pkl
+Testing dataset size: 5321
+2024-08-10 16:46:45.687 | INFO     | __main__:train:523 - Training dataset size after load: 353052
+2024-08-10 16:46:45.687 | INFO     | __main__:train:524 - Validation dataset size after load: 5403
+2024-08-10 16:46:45.687 | INFO     | __main__:train:525 - Testing dataset size after load: 5321
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-08-10 16:46:45.698 | INFO     | __main__:train:543 - Starting progressive training...
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+
+2024-08-10 16:46:49.051 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_train/cached_data.pkl
+Training dataset size: 353052
+2024-08-10 16:46:49.431 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_val/cached_data.pkl
+Validation dataset size: 5403
+2024-08-10 16:46:49.470 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_test/merged/random/cache_pred/cached_data.pkl
+Testing dataset size: 5321
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning/callbac
+ks/model_checkpoint.py:654: Checkpoint directory /raid/adarsh/checkpoints_test exists and is not empty.
+Restoring states from the checkpoint path at /home/adarsh/.cache/huggingface/hub/models--AK123321--pl-lea
+ncopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to yo
+ur files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../.cache/huggingface
+/hub/models--AK123321--pl-leancopilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt`
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [3]
+2024-08-10 16:46:50.647 | INFO     | common:get_optimizers:433 - Optimizing with GaLoreAdamW
+/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/galore_torch/adamw.py:48:
+ FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use t
+he PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this
+ warning
+  warnings.warn(
+
+  | Name    | Type           | Params | Mode
+---------------------------------------------------
+0 | encoder | T5EncoderModel | 217 M  | train
+---------------------------------------------------
+217 M     Trainable params
+0         Non-trainable params
+217 M     Total params
+870.630   Total estimated model params size (MB)
+235       Modules in train mode
+0         Modules in eval mode
+Restored all states from the checkpoint at /home/adarsh/.cache/huggingface/hub/models--AK123321--pl-leanc
+opilot-2/snapshots/d4955ed1972ad84c03dce9189162d03912f2d86f/model.ckpt
+Epoch 0:   0%|                                                                | 0/176526 [00:00<?, ?it/s]
+2024-08-10 16:47:07.932 | INFO     | __main__:main:651 - An error occurred: 'correct_bias'
+Traceback (most recent call last):
+  File "/home/adarsh/ReProver/compute_server.py", line 645, in main
+    train(model_checkpoint_path, merged_data_path, next_suffix)
+  File "/home/adarsh/ReProver/compute_server.py", line 545, in train
+    trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/trainer.py", line 538, in fit
+    call._call_and_handle_interrupt(
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/call.py", line 46, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/trainer.py", line 574, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/trainer.py", line 981, in _run
+    results = self._run_stage()
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/trainer.py", line 1025, in _run_stage
+    self.fit_loop.run()
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/fit_loop.py", line 205, in run
+    self.advance()
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/fit_loop.py", line 363, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/training_epoch_loop.py", line 140, in run
+    self.advance(data_fetcher)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/training_epoch_loop.py", line 250, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/optimization/automatic.py", line 190, in run
+    self._optimizer_step(batch_idx, closure)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/loops/optimization/automatic.py", line 268, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/trainer/call.py", line 167, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/core/module.py", line 1306, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/core/optimizer.py", line 153, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/strategies/ddp.py", line 270, in optimizer_step
+    optimizer_output = super().optimizer_step(optimizer, closure, model, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/strategies/strategy.py", line 238, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/plugins/precision/amp.py", line 75, in optimizer_step
+    return super().optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/pytorch_lightning
+/plugins/precision/precision.py", line 122, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/torch/optim/lr_sc
+heduler.py", line 130, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/torch/optim/optim
+izer.py", line 484, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/torch/utils/_cont
+extlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProverComputeServer/lib/python3.10/site-packages/galore_torch/adam
+w.py", line 117, in step
+    if group["correct_bias"]:  # No bias correction for Bert
+KeyError: 'correct_bias'
+Epoch 0:   0%|                                                                | 0/176526 [02:10<?, ?it/s]
+(ReProverComputeServer) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$
+

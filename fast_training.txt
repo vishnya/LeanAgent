@@ -1,0 +1,1679 @@
+./././PutnamBench/putnam_1975_b1.lean:6:7: warning: declaration uses 'sorry'
+./././PutnamBench/putnam_1975_b1.lean:8:8: warning: declaration uses 'sorry'
+stdout:
+./././PutnamBench/putnam_1966_b1.lean:6:8: warning: declaration uses 'sorry'
+stdout:
+./././PutnamBench/putnam_1986_a4.lean:6:7: warning: declaration uses 'sorry'
+./././PutnamBench/putnam_1986_a4.lean:8:8: warning: declaration uses 'sorry'
+stdout:
+./././PutnamBench/putnam_1963_a4.lean:6:8: warning: declaration uses 'sorry'
+stdout:
+./././PutnamBench/putnam_1981_a5.lean:6:7: warning: declaration uses 'sorry'
+./././PutnamBench/putnam_1981_a5.lean:8:8: warning: declaration uses 'sorry'
+stdout:
+./././PutnamBench/putnam_1977_a5.lean:6:8: warning: declaration uses 'sorry'
+stdout:
+./././PutnamBench/putnam_2023_a1.lean:6:7: warning: declaration uses 'sorry'
+./././PutnamBench/putnam_2023_a1.lean:8:8: warning: declaration uses 'sorry'
+stdout:
+./././PutnamBench/putnam_1975_b6.lean:6:8: warning: declaration uses 'sorry'
+stdout:
+./././PutnamBench/putnam_2001_b4.lean:6:7: warning: declaration uses 'sorry'
+./././PutnamBench/putnam_2001_b4.lean:8:8: warning: declaration uses 'sorry'
+stdout:
+./././PutnamBench/putnam_1969_b2.lean:6:7: warning: declaration uses 'sorry'
+./././PutnamBench/putnam_1969_b2.lean:8:8: warning: declaration uses 'sorry'
+stdout:
+./././PutnamBench/putnam_1980_b6.lean:6:8: warning: declaration uses 'sorry'
+stdout:
+./././PutnamBench/putnam_1970_b1.lean:6:21: warning: declaration uses 'sorry'
+./././PutnamBench/putnam_1970_b1.lean:8:8: warning: declaration uses 'sorry'
+[4998/4999] Building PutnamBench
+2024-08-09 22:03:35.423 | INFO     | __main__:main:188 - Tracing PutnamBench
+2024-08-09 22:03:35.535 | DEBUG    | __main__:main:193 - lake env lean --threads 32 --run ExtractData.lean
+ 25%|████████████████▏                                               | 1487/58 26%|████████████████▍
+                                | 1500/58 26%|████████████████▍                                               | 150
+6/58 26%|████████████████▌                                               | 1517/5857  99%|█████████████████████████
+██████████████████████████████████████▍| 5809/5857 [33:51<00:10,  4.50it/s]2024-08-09 22:37:28.098 | WARNING  | __m
+ain__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lake/packages/proofwidgets/.lake/build/ir/P
+roofWidgets/Demos/RbTree.dep_paths
+2024-08-09 22:37:28.099 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Svg.dep_paths
+2024-08-09 22:37:28.099 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Dynkin.dep_paths
+2024-08-09 22:37:28.099 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Panel/GoalTypePanel.dep_paths
+2024-08-09 22:37:28.099 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Rubiks.dep_paths
+2024-08-09 22:37:28.099 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Euclidean.ast.json
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/RbTree.ast.json
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Panel/GoalTypePanel.ast.json
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/InteractiveSvg.ast.json
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Plot.dep_paths
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Panel/SelectionPanel.dep_paths
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Macro.dep_paths
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Euclidean.dep_paths
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets.dep_paths
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Rubiks.ast.json
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Macro.ast.json
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Venn.dep_paths
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/ExprPresentation.dep_paths
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets.ast.json
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Dynkin.ast.json
+2024-08-09 22:37:28.100 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Jsx.ast.json
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/ExprPresentation.ast.json
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/InteractiveSvg.dep_paths
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/SelectInsertConv.ast.json
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Conv.dep_paths
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Conv.ast.json
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Jsx.dep_paths
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/SelectInsertConv.dep_paths
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/InteractiveSvg.dep_paths
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/InteractiveSvg.ast.json
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Venn.ast.json
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Svg.ast.json
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Panel/SelectionPanel.ast.json
+2024-08-09 22:37:28.101 | WARNING  | __main__:check_files:132 - Missing /tmp/tmpxlvoth5y/workspace/PutnamBench/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Demos/Plot.ast.json
+2024-08-09 22:37:29.669 | DEBUG    | lean_dojo.data_extraction.traced_data:from_traced_files:1097 - Parsing 5833 *.
+ast.json files in /tmp/tmpxlvoth5y/PutnamBench with 31 workers
+2024-08-09 22:37:31,599 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+  2%|█▍                                                               | 127/5833 [00:08<07:06, 13.37it/s](raylet) [
+2024-08-09 22:37:41,593 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79461957632; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+  6%|███▌                                                             | 321/5833 [00:17<05:00, 18.32it/s](raylet) [
+2024-08-09 22:37:51,598 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79461928960; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+  8%|█████▎                                                           | 476/5833 [00:27<03:08, 28.41it/s](raylet) [
+2024-08-09 22:38:01,607 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79461908480; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 11%|███████▏                                                         | 642/5833 [00:36<02:39, 32.55it/s](raylet) [
+2024-08-09 22:38:11,613 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79461883904; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 14%|█████████▍                                                       | 844/5833 [00:57<01:18, 63.21it/s](raylet) [
+2024-08-09 22:38:21,634 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79461892096; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 16%|██████████▌                                                      | 950/5833 [01:10<27:17,  2.98it/s](raylet) [
+2024-08-09 22:38:41,665 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79460888576; capacity: 1887507697664. Object creation will fail
+ if spilling is required. [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to d
+isable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html
+#log-deduplication for more options.)
+ 20%|████████████▊                                                   | 1169/5833 [01:25<01:00, 77.70it/s](raylet) [
+2024-08-09 22:38:51,673 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79460876288; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 23%|██████████████▊                                                 | 1348/5833 [01:27<00:48, 92.26it/s](raylet) [
+2024-08-09 22:39:01,679 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79460864000; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 24%|███████████████▎                                                | 1395/5833 [01:44<01:21, 54.73it/s](raylet) [
+2024-08-09 22:39:11,690 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79460855808; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 28%|█████████████████▉                                              | 1634/5833 [01:47<01:14, 56.65it/s](raylet) [
+2024-08-09 22:39:21,699 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79460843520; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 28%|██████████████████▏                                             | 1661/5833 [02:07<57:17,  1.21it/s](raylet) [
+2024-08-09 22:39:31,710 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79460790272; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 29%|██████████████████▎                                             | 1665/5833 [02:07<46:39,  1.49it/s](raylet) [
+2024-08-09 22:39:41,720 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79459811328; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 34%|█████████████████████▋                                          | 1982/5833 [02:38<58:15,  1.10it/s](raylet) [
+2024-08-09 22:39:51,728 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79459786752; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+(raylet) [2024-08-09 22:40:01,735 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-
+09_22-37-29_785314_1312425 is over 95% full, available space: 79459799040; capacity: 1887507697664. Object creation
+ will fail if spilling is required.
+ 41%|█████████████████████████▏                                    | 2366/5833 [03:13<1:08:38,  1.19s/it](raylet) [
+2024-08-09 22:40:21,745 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79459782656; capacity: 1887507697664. Object creation will fail
+ if spilling is required. [repeated 2x across cluster]
+ 49%|███████████████████████████████▋                                | 2883/5833 [03:58<00:34, 84.41it/s](raylet) [
+2024-08-09 22:41:01,766 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79458226176; capacity: 1887507697664. Object creation will fail
+ if spilling is required. [repeated 4x across cluster]
+ 58%|███████████████████████████████████▊                          | 3369/5833 [04:53<1:24:12,  2.05s/it](raylet) [
+2024-08-09 22:41:41,793 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79457210368; capacity: 1887507697664. Object creation will fail
+ if spilling is required. [repeated 4x across cluster]
+ 69%|██████████████████████████████████████████▋                   | 4018/5833 [06:01<1:39:06,  3.28s/it](raylet) [
+2024-08-09 22:42:41,836 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79456063488; capacity: 1887507697664. Object creation will fail
+ if spilling is required. [repeated 6x across cluster]
+ 76%|████████████████████████████████████████████████▌               | 4426/5833 [06:07<00:22, 62.38it/s](raylet) [
+2024-08-09 22:43:41,875 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79454969856; capacity: 1887507697664. Object creation will fail
+ if spilling is required. [repeated 6x across cluster]
+ 84%|█████████████████████████████████████████████████████▊          | 4904/5833 [07:26<44:55,  2.90s/it](raylet) [
+2024-08-09 22:43:51,884 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79454949376; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+(raylet) [2024-08-09 22:44:01,894 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-
+09_22-37-29_785314_1312425 is over 95% full, available space: 79454941184; capacity: 1887507697664. Object creation
+ will fail if spilling is required.
+ 97%|█████████████████████████████████████████████████████████████▉  | 5646/5833 [07:38<00:02, 71.91it/s](raylet) [
+2024-08-09 22:45:11,947 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79453941760; capacity: 1887507697664. Object creation will fail
+ if spilling is required. [repeated 7x across cluster]
+100%|███████████████████████████████████████████████████████████████▉| 5831/5833 [09:01<00:06,  3.40s/it](raylet) [
+2024-08-09 22:45:21,951 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-37-2
+9_785314_1312425 is over 95% full, available space: 79453933568; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+(raylet) [2024-08-09 22:45:31,955 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-
+09_22-37-29_785314_1312425 is over 95% full, available space: 79453888512; capacity: 1887507697664. Object creation
+ will fail if spilling is required.
+100%|████████████████████████████████████████████████████████████████| 5833/5833 [09:01<00:00, 10.77it/s]
+(raylet) [2024-08-09 22:46:31,988 E 1617642 1617671] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-
+09_22-37-29_785314_1312425 is over 95% full, available space: 79452692480; capacity: 1887507697664. Object creation
+ will fail if spilling is required. [repeated 6x across cluster]
+2024-08-09 22:46:37.806 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='82cb2b375c412582c35e759f991d3e6aac97781
+5')
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-08-09 22:46:39.343 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.6.0-rc1
+2024-08-09 22:46:54.381 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.7.0-rc1
+2024-08-09 22:47:09.147 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.0.0
+2024-08-09 22:47:23.645 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://gi
+thub.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4a0f6ef5') relies on an unsupported Lean ve
+rsion: ec941735c80dc54c53948e30c428905b6600f95a
+2024-08-09 22:47:24.012 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 22:47:25.130 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 22:47:27.696 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or mathlib4 v4.7.0
+2024-08-09 22:48:18.503 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='a45ae63747140c1b2cbad9d46f518015c0
+47047a')
+2024-08-09 22:48:18.983 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 22:48:20.233 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 22:48:22.801 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or doc-gen4 main
+2024-08-09 22:48:23.446 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.11.0-rc1
+2024-08-09 22:48:37.695 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or batteries main
+2024-08-09 22:48:46.234 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or quote4 master
+2024-08-09 22:48:46.800 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.10.0
+2024-08-09 22:49:00.832 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or aesop master
+2024-08-09 22:49:01.460 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or ProofWidgets4 v0.0.30
+2024-08-09 22:49:02.138 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4-cli main
+2024-08-09 22:49:02.923 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.9.0
+2024-08-09 22:49:17.463 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or import-graph main
+2024-08-09 22:49:18.189 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8')
+2024-08-09 22:49:18.954 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.9.0-rc1
+2024-08-09 22:49:33.657 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.10.0-rc2
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-08-09 22:49:49.075 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4-nightly nightly-2024-06-05
+2024-08-09 22:49:50.196 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://gi
+thub.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an unsupported Lean versio
+n: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-08-09 22:49:50.196 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover/std4', commit='dc167d260ff7ee9849b436037add06bed15104be')
+2024-08-09 22:49:50.390 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa75f3aef33a2813a789839
+2222')
+2024-08-09 22:49:50.601 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b4216e944d5be2ce42a25d7410c678
+76f')
+2024-08-09 22:49:51.247 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='fb65c476595a453a9b8ffc4a1cea2
+db3a89b9cd8')
+2024-08-09 22:49:51.649 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0')
+2024-08-09 22:49:51.841 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1dbea5e9235646fb836c7
+cea9ab03b6')
+2024-08-09 22:50:17.211 | DEBUG    | lean_dojo.data_extraction.traced_data:save_to_disk:1140 - Saving 5833 traced X
+ML files to /tmp/tmpxlvoth5y/PutnamBench with 31 workers
+2024-08-09 22:50:21,864 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8268
+  4%|██▊                                                              | 254/5833 [00:07<02:31, 36.86it/s](raylet) [
+2024-08-09 22:50:31,323 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 79308275712; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 12%|████████                                                         | 725/5833 [00:17<00:58, 87.84it/s](raylet) [
+2024-08-09 22:50:41,328 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 79067054080; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 20%|████████████▌                                                   | 1140/5833 [00:27<01:54, 41.06it/s](raylet) [
+2024-08-09 22:50:51,333 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 78825865216; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 27%|█████████████████▎                                              | 1577/5833 [00:37<01:32, 46.12it/s](raylet) [
+2024-08-09 22:51:01,339 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 78574354432; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 34%|█████████████████████▋                                          | 1977/5833 [00:47<01:51, 34.69it/s](raylet) [
+2024-08-09 22:51:11,346 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 78321053696; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 41%|██████████████████████████▎                                     | 2402/5833 [00:57<01:20, 42.73it/s](raylet) [
+2024-08-09 22:51:21,352 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 78079741952; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 49%|███████████████████████████████▍                                | 2868/5833 [01:07<01:28, 33.61it/s](raylet) [
+2024-08-09 22:51:31,357 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 77829787648; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 56%|███████████████████████████████████▋                            | 3256/5833 [01:17<01:13, 35.29it/s](raylet) [
+2024-08-09 22:51:41,361 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 77578854400; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 63%|████████████████████████████████████████                        | 3652/5833 [01:27<01:01, 35.27it/s](raylet) [
+2024-08-09 22:51:51,366 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 77321789440; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 69%|████████████████████████████████████████████                    | 4019/5833 [01:37<01:15, 24.00it/s](raylet) [
+2024-08-09 22:52:01,371 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 77081518080; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 77%|█████████████████████████████████████████████████               | 4477/5833 [01:47<00:30, 44.70it/s](raylet) [
+2024-08-09 22:52:11,376 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 76817031168; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 84%|█████████████████████████████████████████████████████▊          | 4901/5833 [01:57<00:36, 25.70it/s](raylet) [
+2024-08-09 22:52:21,383 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 76583600128; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 91%|██████████████████████████████████████████████████████████▌     | 5332/5833 [02:07<00:13, 37.33it/s](raylet) [
+2024-08-09 22:52:31,389 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 76337344512; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+ 99%|███████████████████████████████████████████████████████████████ | 5751/5833 [02:17<00:02, 39.81it/s](raylet) [
+2024-08-09 22:52:41,394 E 1662050 1662081] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_22-50-1
+7_340078_1312425 is over 95% full, available space: 76082208768; capacity: 1887507697664. Object creation will fail
+ if spilling is required.
+100%|████████████████████████████████████████████████████████████████| 5833/5833 [02:19<00:00, 41.69it/s]
+2024-08-09 22:53:04.426 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /raid
+/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-82cb2b375c412582c35e759f991d3e6aac977815/PutnamBench
+2024-08-09 22:53:04.577 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading 5833 trace
+d XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-82cb2b375c412582c35e759f991d3e6aac977815/Pu
+tnamBench with 31 workers
+2024-08-09 22:53:09,157 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8268
+100%|████████████████████████████████████████████████████████████████| 5833/5833 [11:45<00:00,  8.26it/s]
+2024-08-09 23:04:59.924 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='82cb2b375c412582c35e759f991d3e6aac97781
+5')
+2024-08-09 23:05:00.131 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:05:01.252 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:05:03.374 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='a45ae63747140c1b2cbad9d46f518015c0
+47047a')
+2024-08-09 23:05:03.747 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:05:04.875 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:05:06.997 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8')
+2024-08-09 23:05:06.998 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover/std4', commit='dc167d260ff7ee9849b436037add06bed15104be')
+2024-08-09 23:05:06.998 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa75f3aef33a2813a789839
+2222')
+2024-08-09 23:05:06.998 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b4216e944d5be2ce42a25d7410c678
+76f')
+2024-08-09 23:05:06.998 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='fb65c476595a453a9b8ffc4a1cea2
+db3a89b9cd8')
+2024-08-09 23:05:06.998 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0')
+2024-08-09 23:05:06.998 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1dbea5e9235646fb836c7
+cea9ab03b6')
+2024-08-09 23:05:35.085 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking the sanity
+of TracedRepo(repo=LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='82cb2b375c412582c35e759f9
+91d3e6aac977815'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanprover/lean4', commit='daa2218764
+2d4cf6954c39a23eab20d8a8675416'), 'std': LeanGitRepo(url='https://github.com/leanprover/std4', commit='ff9850c4726f
+6b9fb8d8e96980c3fcb2900be8bd'), 'Qq': LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='643
+65c656d5e1bffa127d2a1795f471529ee0178'), 'aesop': LeanGitRepo(url='https://github.com/leanprover-community/aesop',
+commit='5fefb40a7c9038a7150e7edd92e43b1b94c49e79'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-
+community/ProofWidgets4', commit='fb65c476595a453a9b8ffc4a1cea2db3a89b9cd8'), 'Cli': LeanGitRepo(url='https://githu
+b.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(url='https:
+//github.com/leanprover-community/mathlib4', commit='a45ae63747140c1b2cbad9d46f518015c047047a'), '«doc-gen4»': Lean
+GitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8'), 'MD4Lean'
+: LeanGitRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f325c7e9d619bb56fb005'), 'Unicod
+eBasic': LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='5c11428272fe190b7e726ebe448f934
+37d057b74'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQuery', commit='bd8747df9ee72fca365ef
+a5bd3bd0d8dcd083b9f'), 'batteries': LeanGitRepo(url='https://github.com/leanprover-community/batteries', commit='02
+1e272cb5cdcc82b7e1e760fe915ff2f64169ad'), 'importGraph': LeanGitRepo(url='https://github.com/leanprover-community/i
+mport-graph', commit='57bd2065f1dbea5e9235646fb836c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cache/lean_doj
+o/Adarsh321123-PutnamBench-82cb2b375c412582c35e759f991d3e6aac977815/PutnamBench'))
+2024-08-09 23:05:50.958 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-09 23:06:07.985 | INFO     | generate_benchmark_lean4:split_data:132 - 117845 theorems in total
+2024-08-09 23:06:07.985 | INFO     | generate_benchmark_lean4:split_data:137 - 117845 theorems in total, with 2356
+for validation and 2356 for testing
+2024-08-09 23:06:07.985 | INFO     | generate_benchmark_lean4:split_randomly:80 - Splitting the theorems randomly
+2024-08-09 23:06:08.036 | INFO     | generate_benchmark_lean4:split_by_premise:94 - Splitting the theorems by premi
+ses
+2024-08-09 23:06:20.778 | INFO     | generate_benchmark_lean4:main:352 - Successfully split the data
+2024-08-09 23:06:51.006 | INFO     | generate_benchmark_lean4:export_proofs:194 - 113133 theorems and 236173 tactic
+s saved to /raid/adarsh/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815/random/train.json
+2024-08-09 23:06:52.032 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2356 theorems and 5028 tactics sa
+ved to /raid/adarsh/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815/random/val.json
+2024-08-09 23:06:52.734 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2356 theorems and 5132 tactics sa
+ved to /raid/adarsh/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815/random/test.json
+2024-08-09 23:07:19.958 | INFO     | generate_benchmark_lean4:export_proofs:194 - 113133 theorems and 232688 tactic
+s saved to /raid/adarsh/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815/novel_premises/train.json
+2024-08-09 23:07:21.083 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2356 theorems and 6940 tactics sa
+ved to /raid/adarsh/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815/novel_premises/val.json
+2024-08-09 23:07:21.850 | INFO     | generate_benchmark_lean4:export_proofs:194 - 2356 theorems and 6705 tactics sa
+ved to /raid/adarsh/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815/novel_premises/test.json
+2024-08-09 23:07:21.857 | INFO     | generate_benchmark_lean4:export_data:270 - Successfully exported the proofs
+2024-08-09 23:07:56.004 | INFO     | generate_benchmark_lean4:export_premises:218 - 173062 theorems/definitions fro
+m 5833 files saved to /raid/adarsh/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815/corpus.jsonl
+2024-08-09 23:07:56.005 | INFO     | generate_benchmark_lean4:export_data:274 - Successfully exported the premises
+2024-08-09 23:07:56.005 | INFO     | generate_benchmark_lean4:export_data:282 - Successfully exported the metadata
+2024-08-09 23:07:56.005 | INFO     | generate_benchmark_lean4:main:354 - Successfully exported the data
+2024-08-09 23:07:56.216 | INFO     | __main__:retrieve_proof:608 - Finished generating benchmark at /raid/adarsh/da
+tasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815
+2024-08-09 23:07:56.217 | INFO     | __main__:find_latest_checkpoint:405 - Using the latest checkpoint: /raid/adars
+h/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-09 23:07:56.217 | INFO     | __main__:retrieve_proof:613 - Found latest checkpoint: /raid/adarsh/checkpoint
+s_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-09 23:07:56.217 | INFO     | __main__:train_test_fisher:419 - Inside train_test_fisher
+Seed set to 3407
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWar
+ning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible.
+If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or traine
+d.
+2024-08-09 23:09:11.391 | INFO     | __main__:train_test_fisher:443 - Loaded premise retriever at /raid/adarsh/chec
+kpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-09 23:09:11.391 | INFO     | __main__:find_latest_fisher:415 - Using the latest Fisher Information Matrix:
+/raid/adarsh/fisher_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_fisher_info.pkl
+2024-08-09 23:09:12.047 | INFO     | __main__:load_fisher_information:392 - Fisher Information successfully loaded.
+2024-08-09 23:09:12.047 | INFO     | retrieval.model:set_fisher_info:60 - Fisher Information has been updated in th
+e model.
+2024-08-09 23:09:12.047 | INFO     | __main__:train_test_fisher:449 - Fisher Information Matrix loaded.
+Data path: /raid/adarsh/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815/random
+2024-08-09 23:09:12.148 | INFO     | common:__init__:199 - Building the corpus from /raid/adarsh/datasets_new/Putna
+mBench_82cb2b375c412582c35e759f991d3e6aac977815/corpus.jsonl
+100%|██████████████████████████████████████████████████████████| 113133/113133 [00:15<00:00, 7389.50it/s]
+2024-08-09 23:10:08.805 | INFO     | retrieval.datamodule:load_or_cache_data:61 - Saved loaded data to cache /raid/
+adarsh/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815/random/cache_train/cached_data.pkl
+Training dataset size: 349940
+100%|██████████████████████████████████████████████████████████████| 2356/2356 [00:00<00:00, 7272.76it/s]
+2024-08-09 23:10:09.221 | INFO     | retrieval.datamodule:load_or_cache_data:61 - Saved loaded data to cache /raid/
+adarsh/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815/random/cache_val/cached_data.pkl
+Validation dataset size: 5028
+100%|██████████████████████████████████████████████████████████████| 2356/2356 [00:00<00:00, 7252.72it/s]
+2024-08-09 23:10:09.642 | INFO     | retrieval.datamodule:load_or_cache_data:61 - Saved loaded data to cache /raid/
+adarsh/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815/random/cache_pred/cached_data.pkl
+Testing dataset size: 5132
+Training dataset size after load: 349940
+Validation dataset size after load: 5028
+Testing dataset size after load: 5132
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+2024-08-09 23:10:09.753 | INFO     | __main__:train_test_fisher:508 - Starting progressive training...
+[rank: 0] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/2
+[2024-08-09 23:10:23,920] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto det
+ect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment va
+riables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+2024-08-09 23:10:45.196 | INFO     | __main__:main:753 - Configuring LeanDojo...
+2024-08-09 23:10:45.200 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working directory: /
+home/adarsh/ReProver
+2024-08-09 23:10:45.200 | INFO     | __main__:main:755 - LeanDojo configured
+Cloning https://github.com/Adarsh321123/PutnamBench.git
+Repo name: Adarsh321123/PutnamBench
+2024-08-09 23:10:45.798 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.7.0
+Found 1 repositories
+Training and testing with lambda = 0.1
+Processing /raid/adarsh/repos_new/Adarsh321123/PutnamBench
+2024-08-09 23:10:59.821 | INFO     | __main__:retrieve_proof:591 - Processing https://github.com/Adarsh321123/Putna
+mBench.git
+2024-08-09 23:11:00.029 | INFO     | __main__:get_compatible_commit:245 - Latest commit: 82cb2b375c412582c35e759f99
+1d3e6aac977815
+2024-08-09 23:11:00.030 | INFO     | __main__:get_compatible_commit:248 - Creating LeanGitRepo for https://github.c
+om/Adarsh321123/PutnamBench
+2024-08-09 23:11:00.030 | INFO     | __main__:get_compatible_commit:250 - Getting config for https://github.com/Ada
+rsh321123/PutnamBench.git
+2024-08-09 23:11:00.030 | INFO     | __main__:get_compatible_commit:254 - Latest commit compatible for url https://
+github.com/Adarsh321123/PutnamBench.git
+2024-08-09 23:11:00.030 | INFO     | __main__:retrieve_proof:596 - Found compatible commit 82cb2b375c412582c35e759f
+991d3e6aac977815 for https://github.com/Adarsh321123/PutnamBench.git
+2024-08-09 23:11:00.030 | INFO     | __main__:retrieve_proof:597 - Lean version: v4.7.0
+2024-08-09 23:11:00.030 | INFO     | __main__:retrieve_proof:603 - Generating benchmark at /raid/adarsh/datasets_ne
+w/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815
+2024-08-09 23:11:00.030 | INFO     | generate_benchmark_lean4:main:301 - Generating dataset to go into /raid/adarsh
+/datasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815
+2024-08-09 23:11:00.030 | INFO     | generate_benchmark_lean4:main:308 - lean toolchain version: {'content': 'leanp
+rover/lean4:v4.7.0\n'}
+2024-08-09 23:11:00.031 | INFO     | generate_benchmark_lean4:main:310 - lean version v: v4.7.0
+2024-08-09 23:11:00.031 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-09 23:11:00.031 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/toolchains/l
+eanprover--lean4---4.7.0
+2024-08-09 23:11:00.031 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/leanprover--l
+ean4---4.7.0
+2024-08-09 23:11:00.031 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/leanprover--
+lean4---4.7.0
+2024-08-09 23:11:00.031 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not exist: /.el
+an/toolchains/leanprover--lean4---4.7.0
+2024-08-09 23:11:00.031 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not exist: ~/.e
+lan/toolchains/leanprover--lean4---4.7.0
+2024-08-09 23:11:00.031 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /home/adars
+h/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-09 23:11:00.062 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.7.0, x86_6
+4-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-08-09 23:11:00.063 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://github.com/
+Adarsh321123/PutnamBench', commit='82cb2b375c412582c35e759f991d3e6aac977815')
+2024-08-09 23:11:00.063 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-09 23:11:00.066 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working directory: /
+home/adarsh/ReProver
+2024-08-09 23:11:00.066 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-09 23:11:00.066 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-09 23:11:00.066 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced repo is a
+vailable in the cache.
+2024-08-09 23:11:00.066 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /raid
+/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-82cb2b375c412582c35e759f991d3e6aac977815/PutnamBench
+2024-08-09 23:11:00.207 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading 5833 trace
+d XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-82cb2b375c412582c35e759f991d3e6aac977815/Pu
+tnamBench with 31 workers
+2024-08-09 23:11:02,425 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+100%|████████████████████████████████████████████████████████████████| 5833/5833 [08:36<00:00, 11.29it/s]
+2024-08-09 23:19:43.479 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='82cb2b375c412582c35e759f991d3e6aac97781
+5')
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-08-09 23:19:45.346 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.6.0-rc1
+2024-08-09 23:20:00.803 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.7.0-rc1
+2024-08-09 23:20:15.859 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.0.0
+2024-08-09 23:20:30.285 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://gi
+thub.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4a0f6ef5') relies on an unsupported Lean ve
+rsion: ec941735c80dc54c53948e30c428905b6600f95a
+2024-08-09 23:20:30.654 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:20:31.780 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:20:34.369 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or mathlib4 v4.7.0
+2024-08-09 23:21:24.723 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='a45ae63747140c1b2cbad9d46f518015c0
+47047a')
+2024-08-09 23:21:25.021 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:21:26.144 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:21:28.736 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or doc-gen4 main
+2024-08-09 23:21:29.358 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.11.0-rc1
+2024-08-09 23:21:43.484 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or batteries main
+2024-08-09 23:21:51.831 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or quote4 master
+2024-08-09 23:21:52.248 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.10.0
+2024-08-09 23:22:06.263 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or aesop master
+2024-08-09 23:22:06.860 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or ProofWidgets4 v0.0.30
+2024-08-09 23:22:07.552 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4-cli main
+2024-08-09 23:22:08.211 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.9.0
+2024-08-09 23:22:22.734 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or import-graph main
+2024-08-09 23:22:23.322 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8')
+2024-08-09 23:22:23.868 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.9.0-rc1
+2024-08-09 23:22:38.546 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.10.0-rc2
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-08-09 23:22:53.601 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4-nightly nightly-2024-06-05
+2024-08-09 23:22:54.759 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://gi
+thub.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an unsupported Lean versio
+n: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-08-09 23:22:54.759 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover/std4', commit='dc167d260ff7ee9849b436037add06bed15104be')
+2024-08-09 23:22:54.924 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa75f3aef33a2813a789839
+2222')
+2024-08-09 23:22:55.093 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b4216e944d5be2ce42a25d7410c678
+76f')
+2024-08-09 23:22:55.734 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='fb65c476595a453a9b8ffc4a1cea2
+db3a89b9cd8')
+2024-08-09 23:22:56.147 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0')
+2024-08-09 23:22:56.347 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1dbea5e9235646fb836c7
+cea9ab03b6')
+2024-08-09 23:23:25.581 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking the sanity
+of TracedRepo(repo=LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='82cb2b375c412582c35e759f9
+91d3e6aac977815'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanprover/lean4', commit='daa2218764
+2d4cf6954c39a23eab20d8a8675416'), 'std': LeanGitRepo(url='https://github.com/leanprover/std4', commit='ff9850c4726f
+6b9fb8d8e96980c3fcb2900be8bd'), 'Qq': LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='643
+65c656d5e1bffa127d2a1795f471529ee0178'), 'aesop': LeanGitRepo(url='https://github.com/leanprover-community/aesop',
+commit='5fefb40a7c9038a7150e7edd92e43b1b94c49e79'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-
+community/ProofWidgets4', commit='fb65c476595a453a9b8ffc4a1cea2db3a89b9cd8'), 'Cli': LeanGitRepo(url='https://githu
+b.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(url='https:
+//github.com/leanprover-community/mathlib4', commit='a45ae63747140c1b2cbad9d46f518015c047047a'), '«doc-gen4»': Lean
+GitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8'), 'MD4Lean'
+: LeanGitRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f325c7e9d619bb56fb005'), 'Unicod
+eBasic': LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='5c11428272fe190b7e726ebe448f934
+37d057b74'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQuery', commit='bd8747df9ee72fca365ef
+a5bd3bd0d8dcd083b9f'), 'batteries': LeanGitRepo(url='https://github.com/leanprover-community/batteries', commit='02
+1e272cb5cdcc82b7e1e760fe915ff2f64169ad'), 'importGraph': LeanGitRepo(url='https://github.com/leanprover-community/i
+mport-graph', commit='57bd2065f1dbea5e9235646fb836c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cache/lean_doj
+o/Adarsh321123-PutnamBench-82cb2b375c412582c35e759f991d3e6aac977815/PutnamBench'))
+2024-08-09 23:23:40.249 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-09 23:23:40.249 | WARNING  | generate_benchmark_lean4:main:349 - /raid/adarsh/datasets_new/PutnamBench_82cb
+2b375c412582c35e759f991d3e6aac977815 already exists. Using it instead.
+2024-08-09 23:23:40.249 | INFO     | __main__:retrieve_proof:608 - Finished generating benchmark at /raid/adarsh/da
+tasets_new/PutnamBench_82cb2b375c412582c35e759f991d3e6aac977815
+2024-08-09 23:23:53.950 | INFO     | __main__:retrieve_proof:634 - Traced all theorems
+2024-08-09 23:23:53.950 | INFO     | __main__:retrieve_proof:637 - 50650
+2024-08-09 23:23:53.979 | INFO     | __main__:retrieve_proof:651 - Found 0 sorries!
+2024-08-09 23:23:53.980 | INFO     | __main__:retrieve_proof:662 - MAIN: about to search for proofs
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files p
+ermanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../../raid/adarsh/kaiyuy_leandojo-lean
+4-retriever-tacgen-byt5-small/model_lightning.ckpt`
+2024-08-09 23:23:54.677 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: /raid/adarsh/checkpo
+ints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-08-09 23:23:54.677 | INFO     | generator.model:__init__:123 - Loading the retriever from /raid/adarsh/checkpo
+ints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files p
+ermanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../../raid/adarsh/checkpoints/mathlib4
+_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWar
+ning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible.
+If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or traine
+d.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or traine
+d.
+2024-08-09 23:23:56.776 | INFO     | generator.model:__init__:136 - RetrievalAugmentedGenerator initialized
+2024-08-09 23:24:45.364 | INFO     | common:__init__:199 - Building the corpus from /raid/adarsh/datasets_new/Putna
+mBench_82cb2b375c412582c35e759f991d3e6aac977815/corpus.jsonl
+2024-08-09 23:25:18.145 | INFO     | prover.proof_search:search_unordered:491 - Starting search_unordered with 0 th
+eorems
+2024-08-09 23:25:18.146 | INFO     | prover.proof_search:search_unordered:511 - Completed search_unordered with 0 r
+esults
+2024-08-09 23:25:18.146 | INFO     | __main__:retrieve_proof:675 - MAIN: done searching for proofs
+2024-08-09 23:25:18.146 | INFO     | __main__:retrieve_proof:702 - Finished searching for proofs
+2024-08-09 23:25:20.634 | INFO     | __main__:main:817 - Results saved to results_lambda_0.1_putnam_bench_retrieval
+_real.json
+^C^Z
+[1]+  Stopped                 bash run_code.sh
+(base) adarsh@tensorlab-DGX-Station-A100-9(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:(base) adarsh
+@tensorlab-DGX-Station-A100-920-23487(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2(base) adarsh@tensorlab-DG
+X-Station-A100-920-23487-2531-000:~/ReProver$ bash run_code.sh
+Script executed from: /home/adarsh/ReProver
+[2024-08-09 23:47:09,587] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto det
+ect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment va
+riables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+2024-08-09 23:47:24.508 | INFO     | __main__:main:756 - Configuring LeanDojo...
+2024-08-09 23:47:24.511 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working directory: /
+home/adarsh/ReProver
+2024-08-09 23:47:24.511 | INFO     | __main__:main:758 - LeanDojo configured
+2024-08-09 23:47:26.226 | INFO     | __main__:search_github_repositories:322 - Processing leanprover/lean4
+2024-08-09 23:47:26.226 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover/lean4 since it i
+s a known repository
+2024-08-09 23:47:26.227 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/math
+lib3
+Cloning https://github.com/leanprover-community/mathlib3.git
+Repo name: leanprover-community/mathlib3
+2024-08-09 23:47:27.216 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/mathlib3/65a1391a0106c9204fe45bc73a039f056558cb83/lean-toolchain failed. Retrying...
+2024-08-09 23:47:28.231 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/mathlib3/65a1391a0106c9204fe45bc73a039f056558cb83/lean-toolchain failed. Retrying...
+2024-08-09 23:47:30.246 | INFO     | __main__:search_github_repositories:338 - Failed to clone leanprover-community
+/mathlib3 because of HTTP Error 404: Not Found
+2024-08-09 23:47:30.246 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/math
+lib4
+2024-08-09 23:47:30.247 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/mathli
+b4 since it is a known repository
+2024-08-09 23:47:30.247 | INFO     | __main__:search_github_repositories:322 - Processing uwdb/Cosette
+Cloning https://github.com/uwdb/Cosette.git
+Repo name: uwdb/Cosette
+2024-08-09 23:47:31.004 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/uw
+db/Cosette/c16b48ec7d278c717a9f1da3684f69621b3863f2/lean-toolchain failed. Retrying...
+2024-08-09 23:47:32.019 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/uw
+db/Cosette/c16b48ec7d278c717a9f1da3684f69621b3863f2/lean-toolchain failed. Retrying...
+2024-08-09 23:47:34.035 | INFO     | __main__:search_github_repositories:338 - Failed to clone uwdb/Cosette because
+ of HTTP Error 404: Not Found
+2024-08-09 23:47:34.035 | INFO     | __main__:search_github_repositories:322 - Processing AndrasKovacs/smalltt
+Cloning https://github.com/AndrasKovacs/smalltt.git
+Repo name: AndrasKovacs/smalltt
+2024-08-09 23:47:34.661 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/An
+drasKovacs/smalltt/b5fc9b3747dcbf8c71ca9f976afb7b574b630996/lean-toolchain failed. Retrying...
+2024-08-09 23:47:35.678 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/An
+drasKovacs/smalltt/b5fc9b3747dcbf8c71ca9f976afb7b574b630996/lean-toolchain failed. Retrying...
+2024-08-09 23:47:37.695 | INFO     | __main__:search_github_repositories:338 - Failed to clone AndrasKovacs/smalltt
+ because of HTTP Error 404: Not Found
+2024-08-09 23:47:37.696 | INFO     | __main__:search_github_repositories:322 - Processing dselsam/certigrad
+Cloning https://github.com/dselsam/certigrad.git
+Repo name: dselsam/certigrad
+2024-08-09 23:47:38.350 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/ds
+elsam/certigrad/c9a06e93f1ec58196d6d3b8563b29868d916727f/lean-toolchain failed. Retrying...
+2024-08-09 23:47:39.367 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/ds
+elsam/certigrad/c9a06e93f1ec58196d6d3b8563b29868d916727f/lean-toolchain failed. Retrying...
+2024-08-09 23:47:41.384 | INFO     | __main__:search_github_repositories:338 - Failed to clone dselsam/certigrad be
+cause of HTTP Error 404: Not Found
+2024-08-09 23:47:41.384 | INFO     | __main__:search_github_repositories:322 - Processing Kha/electrolysis
+Cloning https://github.com/Kha/electrolysis.git
+Repo name: Kha/electrolysis
+2024-08-09 23:47:42.013 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Kh
+a/electrolysis/bd4655d91ca65856fb8373637ce3e7b17ee3a190/lean-toolchain failed. Retrying...
+2024-08-09 23:47:43.029 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Kh
+a/electrolysis/bd4655d91ca65856fb8373637ce3e7b17ee3a190/lean-toolchain failed. Retrying...
+2024-08-09 23:47:45.046 | INFO     | __main__:search_github_repositories:338 - Failed to clone Kha/electrolysis bec
+ause of HTTP Error 404: Not Found
+2024-08-09 23:47:45.046 | INFO     | __main__:search_github_repositories:322 - Processing ImperialCollegeLondon/for
+malising-mathematics
+Cloning https://github.com/ImperialCollegeLondon/formalising-mathematics.git
+Repo name: ImperialCollegeLondon/formalising-mathematics
+2024-08-09 23:47:45.724 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/formalising-mathematics/d81ad67e36774eb68f242bcc1b88d33dacfd87bf/lean-toolchain failed. Retryin
+g...
+2024-08-09 23:47:46.740 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/formalising-mathematics/d81ad67e36774eb68f242bcc1b88d33dacfd87bf/lean-toolchain failed. Retryin
+g...
+2024-08-09 23:47:48.757 | INFO     | __main__:search_github_repositories:338 - Failed to clone ImperialCollegeLondo
+n/formalising-mathematics because of HTTP Error 404: Not Found
+2024-08-09 23:47:48.758 | INFO     | __main__:search_github_repositories:322 - Processing ImperialCollegeLondon/nat
+ural_number_game
+Cloning https://github.com/ImperialCollegeLondon/natural_number_game.git
+Repo name: ImperialCollegeLondon/natural_number_game
+2024-08-09 23:47:49.449 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/natural_number_game/6b30156c5025760d1ed8753de3b44a075e2f8a51/lean-toolchain failed. Retrying...
+2024-08-09 23:47:50.464 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/natural_number_game/6b30156c5025760d1ed8753de3b44a075e2f8a51/lean-toolchain failed. Retrying...
+2024-08-09 23:47:52.488 | INFO     | __main__:search_github_repositories:338 - Failed to clone ImperialCollegeLondo
+n/natural_number_game because of HTTP Error 404: Not Found
+2024-08-09 23:47:52.489 | INFO     | __main__:search_github_repositories:322 - Processing lecopivo/SciLean
+2024-08-09 23:47:52.489 | INFO     | __main__:search_github_repositories:340 - Skipping lecopivo/SciLean since it i
+s a known repository
+2024-08-09 23:47:52.490 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/batt
+eries
+2024-08-09 23:47:52.490 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/batter
+ies since it is a known repository
+2024-08-09 23:47:52.490 | INFO     | __main__:search_github_repositories:322 - Processing kbuzzard/xena
+Cloning https://github.com/kbuzzard/xena.git
+Repo name: kbuzzard/xena
+2024-08-09 23:47:53.121 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/kb
+uzzard/xena/936b113e4741ab2a3d9d9883d31cbe5ac5669bbb/lean-toolchain failed. Retrying...
+2024-08-09 23:47:54.138 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/kb
+uzzard/xena/936b113e4741ab2a3d9d9883d31cbe5ac5669bbb/lean-toolchain failed. Retrying...
+2024-08-09 23:47:56.155 | INFO     | __main__:search_github_repositories:338 - Failed to clone kbuzzard/xena becaus
+e of HTTP Error 404: Not Found
+2024-08-09 23:47:56.156 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/lean
+4-metaprogramming-book
+2024-08-09 23:47:56.156 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/lean4-
+metaprogramming-book since it is a known repository
+2024-08-09 23:47:56.156 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/tuto
+rials
+Cloning https://github.com/leanprover-community/tutorials.git
+Repo name: leanprover-community/tutorials
+2024-08-09 23:47:56.785 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/tutorials/cf6d067632cedda813d880eaf730324d021c653e/lean-toolchain failed. Retrying...
+2024-08-09 23:47:57.802 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/tutorials/cf6d067632cedda813d880eaf730324d021c653e/lean-toolchain failed. Retrying...
+2024-08-09 23:47:59.820 | INFO     | __main__:search_github_repositories:338 - Failed to clone leanprover-community
+/tutorials because of HTTP Error 404: Not Found
+2024-08-09 23:47:59.822 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/aeso
+p
+2024-08-09 23:47:59.822 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/aesop
+since it is a known repository
+2024-08-09 23:47:59.822 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/lean
+-liquid
+Cloning https://github.com/leanprover-community/lean-liquid.git
+Repo name: leanprover-community/lean-liquid
+2024-08-09 23:48:00.697 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/lean-liquid/087fffad55dc1dd8d54ab35c9816926a45b8c0fd/lean-toolchain failed. Retrying...
+2024-08-09 23:48:01.714 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/lean-liquid/087fffad55dc1dd8d54ab35c9816926a45b8c0fd/lean-toolchain failed. Retrying...
+2024-08-09 23:48:03.731 | INFO     | __main__:search_github_repositories:338 - Failed to clone leanprover-community
+/lean-liquid because of HTTP Error 404: Not Found
+2024-08-09 23:48:03.732 | INFO     | __main__:search_github_repositories:322 - Processing ImperialCollegeLondon/FLT
+2024-08-09 23:48:03.732 | INFO     | __main__:search_github_repositories:340 - Skipping ImperialCollegeLondon/FLT s
+ince it is a known repository
+2024-08-09 23:48:03.733 | INFO     | __main__:search_github_repositories:322 - Processing formalabstracts/formalabs
+tracts
+Cloning https://github.com/formalabstracts/formalabstracts.git
+Repo name: formalabstracts/formalabstracts
+2024-08-09 23:48:04.346 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/fo
+rmalabstracts/formalabstracts/b0173da1af45421239d44492eeecd54bf65ee0f6/lean-toolchain failed. Retrying...
+2024-08-09 23:48:05.363 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/fo
+rmalabstracts/formalabstracts/b0173da1af45421239d44492eeecd54bf65ee0f6/lean-toolchain failed. Retrying...
+2024-08-09 23:48:07.385 | INFO     | __main__:search_github_repositories:338 - Failed to clone formalabstracts/form
+alabstracts because of HTTP Error 404: Not Found
+2024-08-09 23:48:07.386 | INFO     | __main__:search_github_repositories:322 - Processing ImperialCollegeLondon/M40
+001_lean
+Cloning https://github.com/ImperialCollegeLondon/M40001_lean.git
+Repo name: ImperialCollegeLondon/M40001_lean
+2024-08-09 23:48:08.079 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/M40001_lean/8cc4a60897dabdd5bc0d116144776f3286fde70c/lean-toolchain failed. Retrying...
+2024-08-09 23:48:09.095 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/M40001_lean/8cc4a60897dabdd5bc0d116144776f3286fde70c/lean-toolchain failed. Retrying...
+2024-08-09 23:48:11.111 | INFO     | __main__:search_github_repositories:338 - Failed to clone ImperialCollegeLondo
+n/M40001_lean because of HTTP Error 404: Not Found
+2024-08-09 23:48:11.112 | INFO     | __main__:search_github_repositories:322 - Processing openai/lean-gym
+2024-08-09 23:48:11.112 | INFO     | __main__:search_github_repositories:340 - Skipping openai/lean-gym since it is
+ a known repository
+2024-08-09 23:48:11.112 | INFO     | __main__:search_github_repositories:322 - Processing teorth/pfr
+2024-08-09 23:48:11.112 | INFO     | __main__:search_github_repositories:340 - Skipping teorth/pfr since it is a kn
+own repository
+2024-08-09 23:48:11.112 | INFO     | __main__:search_github_repositories:322 - Processing AlexKontorovich/PrimeNumb
+erTheoremAnd
+2024-08-09 23:48:11.112 | INFO     | __main__:search_github_repositories:340 - Skipping AlexKontorovich/PrimeNumber
+TheoremAnd since it is a known repository
+2024-08-09 23:48:11.112 | INFO     | __main__:search_github_repositories:322 - Processing ImperialCollegeLondon/for
+malising-mathematics-2022
+Cloning https://github.com/ImperialCollegeLondon/formalising-mathematics-2022.git
+Repo name: ImperialCollegeLondon/formalising-mathematics-2022
+2024-08-09 23:48:11.753 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/formalising-mathematics-2022/a1686aaa72a3c387d3a9bb68e5d15764246cb58b/lean-toolchain failed. Re
+trying...
+2024-08-09 23:48:12.768 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/formalising-mathematics-2022/a1686aaa72a3c387d3a9bb68e5d15764246cb58b/lean-toolchain failed. Re
+trying...
+2024-08-09 23:48:14.786 | INFO     | __main__:search_github_repositories:338 - Failed to clone ImperialCollegeLondo
+n/formalising-mathematics-2022 because of HTTP Error 404: Not Found
+2024-08-09 23:48:14.787 | INFO     | __main__:search_github_repositories:322 - Processing kmill/lean4-raytracer
+2024-08-09 23:48:14.787 | INFO     | __main__:search_github_repositories:340 - Skipping kmill/lean4-raytracer since
+ it is a known repository
+2024-08-09 23:48:14.787 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/lean
+-perfectoid-spaces
+Cloning https://github.com/leanprover-community/lean-perfectoid-spaces.git
+Repo name: leanprover-community/lean-perfectoid-spaces
+2024-08-09 23:48:15.405 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/lean-perfectoid-spaces/95a6520ce578b30a80b4c36e36ab2d559a842690/lean-toolchain failed. Retrying.
+..
+2024-08-09 23:48:16.421 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/lean-perfectoid-spaces/95a6520ce578b30a80b4c36e36ab2d559a842690/lean-toolchain failed. Retrying.
+..
+2024-08-09 23:48:18.438 | INFO     | __main__:search_github_repositories:338 - Failed to clone leanprover-community
+/lean-perfectoid-spaces because of HTTP Error 404: Not Found
+2024-08-09 23:48:18.439 | INFO     | __main__:search_github_repositories:322 - Processing flypitch/flypitch
+Cloning https://github.com/flypitch/flypitch.git
+Repo name: flypitch/flypitch
+2024-08-09 23:48:19.065 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/fl
+ypitch/flypitch/aea5800db1f4cce53fc4a113711454b27388ecf8/lean-toolchain failed. Retrying...
+2024-08-09 23:48:20.081 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/fl
+ypitch/flypitch/aea5800db1f4cce53fc4a113711454b27388ecf8/lean-toolchain failed. Retrying...
+2024-08-09 23:48:22.098 | INFO     | __main__:search_github_repositories:338 - Failed to clone flypitch/flypitch be
+cause of HTTP Error 404: Not Found
+2024-08-09 23:48:22.101 | INFO     | __main__:search_github_repositories:322 - Processing jesse-michael-han/lean-gp
+tf
+Cloning https://github.com/jesse-michael-han/lean-gptf.git
+Repo name: jesse-michael-han/lean-gptf
+2024-08-09 23:48:22.697 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/je
+sse-michael-han/lean-gptf/e2adeef81f6cf089cde493fa1b7f4af5d53c747a/lean-toolchain failed. Retrying...
+2024-08-09 23:48:23.713 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/je
+sse-michael-han/lean-gptf/e2adeef81f6cf089cde493fa1b7f4af5d53c747a/lean-toolchain failed. Retrying...
+2024-08-09 23:48:25.734 | INFO     | __main__:search_github_repositories:338 - Failed to clone jesse-michael-han/le
+an-gptf because of HTTP Error 404: Not Found
+2024-08-09 23:48:25.735 | INFO     | __main__:search_github_repositories:322 - Processing argumentcomputer/yatima
+2024-08-09 23:48:25.736 | INFO     | __main__:search_github_repositories:340 - Skipping argumentcomputer/yatima sin
+ce it is a known repository
+2024-08-09 23:48:25.736 | INFO     | __main__:search_github_repositories:322 - Processing TwoFX/sudoku
+Cloning https://github.com/TwoFX/sudoku.git
+Repo name: TwoFX/sudoku
+2024-08-09 23:48:26.326 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Tw
+oFX/sudoku/1c02dbefebb4ed670ff3786ae1dcabab5470d806/lean-toolchain failed. Retrying...
+2024-08-09 23:48:27.348 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Tw
+oFX/sudoku/1c02dbefebb4ed670ff3786ae1dcabab5470d806/lean-toolchain failed. Retrying...
+2024-08-09 23:48:29.379 | INFO     | __main__:search_github_repositories:338 - Failed to clone TwoFX/sudoku because
+ of HTTP Error 404: Not Found
+2024-08-09 23:48:29.381 | INFO     | __main__:search_github_repositories:322 - Processing leanprover/lake
+2024-08-09 23:48:29.381 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover/lake since it is
+ a known repository
+2024-08-09 23:48:29.381 | INFO     | __main__:search_github_repositories:322 - Processing ImperialCollegeLondon/for
+malising-mathematics-2024
+2024-08-09 23:48:29.381 | INFO     | __main__:search_github_repositories:340 - Skipping ImperialCollegeLondon/forma
+lising-mathematics-2024 since it is a known repository
+2024-08-09 23:48:29.381 | INFO     | __main__:search_github_repositories:322 - Processing blanchette/logical_verifi
+cation_2020
+Cloning https://github.com/blanchette/logical_verification_2020.git
+Repo name: blanchette/logical_verification_2020
+2024-08-09 23:48:29.986 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/bl
+anchette/logical_verification_2020/7a9f4bd73498189d9beb5d4591e0f2b3ca316111/lean-toolchain failed. Retrying...
+2024-08-09 23:48:31.002 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/bl
+anchette/logical_verification_2020/7a9f4bd73498189d9beb5d4591e0f2b3ca316111/lean-toolchain failed. Retrying...
+2024-08-09 23:48:33.018 | INFO     | __main__:search_github_repositories:338 - Failed to clone blanchette/logical_v
+erification_2020 because of HTTP Error 404: Not Found
+2024-08-09 23:48:33.019 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/Proo
+fWidgets4
+2024-08-09 23:48:33.019 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/ProofW
+idgets4 since it is a known repository
+2024-08-09 23:48:33.019 | INFO     | __main__:search_github_repositories:322 - Processing leanprover/verso
+2024-08-09 23:48:33.019 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover/verso since it i
+s a known repository
+2024-08-09 23:48:33.019 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/NNG4
+2024-08-09 23:48:33.019 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/NNG4 s
+ince it is a known repository
+2024-08-09 23:48:33.019 | INFO     | __main__:search_github_repositories:322 - Processing ufmg-smite/lean-smt
+2024-08-09 23:48:33.019 | INFO     | __main__:search_github_repositories:340 - Skipping ufmg-smite/lean-smt since i
+t is a known repository
+2024-08-09 23:48:33.020 | INFO     | __main__:search_github_repositories:322 - Processing zhangir-azerbayev/ProofNe
+t
+Cloning https://github.com/zhangir-azerbayev/ProofNet.git
+Repo name: zhangir-azerbayev/ProofNet
+2024-08-09 23:48:33.658 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/zh
+angir-azerbayev/ProofNet/02b47219879da3a4fcb4d6ad5f2f29f384cf2de0/lean-toolchain failed. Retrying...
+2024-08-09 23:48:34.674 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/zh
+angir-azerbayev/ProofNet/02b47219879da3a4fcb4d6ad5f2f29f384cf2de0/lean-toolchain failed. Retrying...
+2024-08-09 23:48:36.691 | INFO     | __main__:search_github_repositories:338 - Failed to clone zhangir-azerbayev/Pr
+oofNet because of HTTP Error 404: Not Found
+2024-08-09 23:48:36.692 | INFO     | __main__:search_github_repositories:322 - Processing google-deepmind/debate
+2024-08-09 23:48:36.692 | INFO     | __main__:search_github_repositories:340 - Skipping google-deepmind/debate sinc
+e it is a known repository
+2024-08-09 23:48:36.693 | INFO     | __main__:search_github_repositories:322 - Processing cmu-l3/llmlean
+2024-08-09 23:48:36.693 | INFO     | __main__:search_github_repositories:340 - Skipping cmu-l3/llmlean since it is
+a known repository
+2024-08-09 23:48:36.693 | INFO     | __main__:search_github_repositories:322 - Processing blanchette/logical_verifi
+cation_2023
+Cloning https://github.com/blanchette/logical_verification_2023.git
+Repo name: blanchette/logical_verification_2023
+2024-08-09 23:48:37.304 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/bl
+anchette/logical_verification_2023/0b9ca22d512230ca1932f08ebb459f676438c64d/lean-toolchain failed. Retrying...
+2024-08-09 23:48:38.319 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/bl
+anchette/logical_verification_2023/0b9ca22d512230ca1932f08ebb459f676438c64d/lean-toolchain failed. Retrying...
+2024-08-09 23:48:40.339 | INFO     | __main__:search_github_repositories:338 - Failed to clone blanchette/logical_v
+erification_2023 because of HTTP Error 404: Not Found
+2024-08-09 23:48:40.340 | INFO     | __main__:search_github_repositories:322 - Processing dwrensha/compfiles
+2024-08-09 23:48:40.340 | INFO     | __main__:search_github_repositories:340 - Skipping dwrensha/compfiles since it
+ is a known repository
+2024-08-09 23:48:40.340 | INFO     | __main__:search_github_repositories:322 - Processing teorth/symmetric_project
+2024-08-09 23:48:40.340 | INFO     | __main__:search_github_repositories:340 - Skipping teorth/symmetric_project si
+nce it is a known repository
+2024-08-09 23:48:40.340 | INFO     | __main__:search_github_repositories:322 - Processing PatrickMassot/GlimpseOfLe
+an
+2024-08-09 23:48:40.340 | INFO     | __main__:search_github_repositories:340 - Skipping PatrickMassot/GlimpseOfLean
+ since it is a known repository
+2024-08-09 23:48:40.340 | INFO     | __main__:search_github_repositories:322 - Processing ImperialCollegeLondon/rea
+l-number-game
+Cloning https://github.com/ImperialCollegeLondon/real-number-game.git
+Repo name: ImperialCollegeLondon/real-number-game
+2024-08-09 23:48:41.049 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/real-number-game/f9dcb7d9255a79b57e62038228a23346c2dc301b/lean-toolchain failed. Retrying...
+2024-08-09 23:48:42.067 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/real-number-game/f9dcb7d9255a79b57e62038228a23346c2dc301b/lean-toolchain failed. Retrying...
+2024-08-09 23:48:44.083 | INFO     | __main__:search_github_repositories:338 - Failed to clone ImperialCollegeLondo
+n/real-number-game because of HTTP Error 404: Not Found
+2024-08-09 23:48:44.084 | INFO     | __main__:search_github_repositories:322 - Processing cedar-policy/cedar-spec
+Cloning https://github.com/cedar-policy/cedar-spec.git
+Repo name: cedar-policy/cedar-spec
+2024-08-09 23:48:44.832 | INFO     | __main__:search_github_repositories:338 - Failed to clone cedar-policy/cedar-s
+pec because of Invalid Lean 4 version: cedar-lean/lean-toolchain
+2024-08-09 23:48:44.833 | INFO     | __main__:search_github_repositories:322 - Processing avigad/lamr
+2024-08-09 23:48:44.833 | INFO     | __main__:search_github_repositories:340 - Skipping avigad/lamr since it is a k
+nown repository
+2024-08-09 23:48:44.833 | INFO     | __main__:search_github_repositories:322 - Processing gebner/hott3
+Cloning https://github.com/gebner/hott3.git
+Repo name: gebner/hott3
+2024-08-09 23:48:45.557 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/ge
+bner/hott3/7ead7a8a2503049eacd45cbff6587802bae2add2/lean-toolchain failed. Retrying...
+2024-08-09 23:48:46.573 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/ge
+bner/hott3/7ead7a8a2503049eacd45cbff6587802bae2add2/lean-toolchain failed. Retrying...
+2024-08-09 23:48:48.590 | INFO     | __main__:search_github_repositories:338 - Failed to clone gebner/hott3 because
+ of HTTP Error 404: Not Found
+2024-08-09 23:48:48.591 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/quot
+e4
+2024-08-09 23:48:48.591 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/quote4
+ since it is a known repository
+2024-08-09 23:48:48.592 | INFO     | __main__:search_github_repositories:322 - Processing digama0/lean4lean
+2024-08-09 23:48:48.592 | INFO     | __main__:search_github_repositories:340 - Skipping digama0/lean4lean since it
+is a known repository
+2024-08-09 23:48:48.592 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/lean
+4-samples
+Cloning https://github.com/leanprover-community/lean4-samples.git
+Repo name: leanprover-community/lean4-samples
+2024-08-09 23:48:49.228 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/lean4-samples/c3690b7a51667cfe74a64a49b0057dbc42d8716a/lean-toolchain failed. Retrying...
+2024-08-09 23:48:50.244 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/lean4-samples/c3690b7a51667cfe74a64a49b0057dbc42d8716a/lean-toolchain failed. Retrying...
+2024-08-09 23:48:52.259 | INFO     | __main__:search_github_repositories:338 - Failed to clone leanprover-community
+/lean4-samples because of HTTP Error 404: Not Found
+2024-08-09 23:48:52.259 | INFO     | __main__:search_github_repositories:322 - Processing jldodds/coq-lean-cheatshe
+et
+Cloning https://github.com/jldodds/coq-lean-cheatsheet.git
+Repo name: jldodds/coq-lean-cheatsheet
+2024-08-09 23:48:52.883 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/jl
+dodds/coq-lean-cheatsheet/69ad5987ec59ee7c9806855b2bb9de73c096c617/lean-toolchain failed. Retrying...
+2024-08-09 23:48:53.899 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/jl
+dodds/coq-lean-cheatsheet/69ad5987ec59ee7c9806855b2bb9de73c096c617/lean-toolchain failed. Retrying...
+2024-08-09 23:48:55.916 | INFO     | __main__:search_github_repositories:338 - Failed to clone jldodds/coq-lean-che
+atsheet because of HTTP Error 404: Not Found
+2024-08-09 23:48:55.916 | INFO     | __main__:search_github_repositories:322 - Processing avigad/mathematics_in_lea
+n_source
+2024-08-09 23:48:55.916 | INFO     | __main__:search_github_repositories:340 - Skipping avigad/mathematics_in_lean_
+source since it is a known repository
+2024-08-09 23:48:55.916 | INFO     | __main__:search_github_repositories:322 - Processing yuma-mizuno/lean-math-wor
+kshop
+2024-08-09 23:48:55.916 | INFO     | __main__:search_github_repositories:340 - Skipping yuma-mizuno/lean-math-works
+hop since it is a known repository
+2024-08-09 23:48:55.917 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/iris
+-lean
+2024-08-09 23:48:55.917 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/iris-l
+ean since it is a known repository
+2024-08-09 23:48:55.917 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/lftc
+m2020
+Cloning https://github.com/leanprover-community/lftcm2020.git
+Repo name: leanprover-community/lftcm2020
+2024-08-09 23:48:56.552 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/lftcm2020/64d1861d32d4bb38a65994f7c47d96892333130f/lean-toolchain failed. Retrying...
+2024-08-09 23:48:57.567 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/le
+anprover-community/lftcm2020/64d1861d32d4bb38a65994f7c47d96892333130f/lean-toolchain failed. Retrying...
+2024-08-09 23:48:59.586 | INFO     | __main__:search_github_repositories:338 - Failed to clone leanprover-community
+/lftcm2020 because of HTTP Error 404: Not Found
+2024-08-09 23:48:59.587 | INFO     | __main__:search_github_repositories:322 - Processing aripiprazole/rinha
+2024-08-09 23:48:59.587 | INFO     | __main__:search_github_repositories:340 - Skipping aripiprazole/rinha since it
+ is a known repository
+2024-08-09 23:48:59.587 | INFO     | __main__:search_github_repositories:322 - Processing loganrjmurphy/LeanEuclid
+2024-08-09 23:48:59.587 | INFO     | __main__:search_github_repositories:340 - Skipping loganrjmurphy/LeanEuclid si
+nce it is a known repository
+2024-08-09 23:48:59.587 | INFO     | __main__:search_github_repositories:322 - Processing leanprover/lean4-cli
+2024-08-09 23:48:59.587 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover/lean4-cli since
+it is a known repository
+2024-08-09 23:48:59.587 | INFO     | __main__:search_github_repositories:322 - Processing leanprover/LeanInk
+2024-08-09 23:48:59.587 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover/LeanInk since it
+ is a known repository
+2024-08-09 23:48:59.587 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/lean
+-auto
+2024-08-09 23:48:59.587 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/lean-a
+uto since it is a known repository
+2024-08-09 23:48:59.587 | INFO     | __main__:search_github_repositories:322 - Processing emilyriehl/yoneda
+Cloning https://github.com/emilyriehl/yoneda.git
+Repo name: emilyriehl/yoneda
+2024-08-09 23:49:00.274 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/em
+ilyriehl/yoneda/2677941b4908168c63ff3ca87fa369690761d98a/lean-toolchain failed. Retrying...
+2024-08-09 23:49:01.289 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/em
+ilyriehl/yoneda/2677941b4908168c63ff3ca87fa369690761d98a/lean-toolchain failed. Retrying...
+2024-08-09 23:49:03.309 | INFO     | __main__:search_github_repositories:338 - Failed to clone emilyriehl/yoneda be
+cause of HTTP Error 404: Not Found
+2024-08-09 23:49:03.310 | INFO     | __main__:search_github_repositories:322 - Processing PatrickMassot/lean-verbos
+e
+Cloning https://github.com/PatrickMassot/lean-verbose.git
+Repo name: PatrickMassot/lean-verbose
+2024-08-09 23:49:03.923 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Pa
+trickMassot/lean-verbose/eefa06d2a5ed81eb73eceaa0f8029c1d6f2d0023/lean-toolchain failed. Retrying...
+2024-08-09 23:49:04.939 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Pa
+trickMassot/lean-verbose/eefa06d2a5ed81eb73eceaa0f8029c1d6f2d0023/lean-toolchain failed. Retrying...
+2024-08-09 23:49:06.955 | INFO     | __main__:search_github_repositories:338 - Failed to clone PatrickMassot/lean-v
+erbose because of HTTP Error 404: Not Found
+2024-08-09 23:49:06.956 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/repl
+2024-08-09 23:49:06.956 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/repl s
+ince it is a known repository
+2024-08-09 23:49:06.956 | INFO     | __main__:search_github_repositories:322 - Processing leanprover/doc-gen4
+2024-08-09 23:49:06.956 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover/doc-gen4 since i
+t is a known repository
+2024-08-09 23:49:06.956 | INFO     | __main__:search_github_repositories:322 - Processing ImperialCollegeLondon/gro
+up-theory-game
+Cloning https://github.com/ImperialCollegeLondon/group-theory-game.git
+Repo name: ImperialCollegeLondon/group-theory-game
+2024-08-09 23:49:07.702 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/group-theory-game/152ec4a92ad67b6174a3d240c63fa56a6df6017e/lean-toolchain failed. Retrying...
+2024-08-09 23:49:08.721 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/group-theory-game/152ec4a92ad67b6174a3d240c63fa56a6df6017e/lean-toolchain failed. Retrying...
+2024-08-09 23:49:10.737 | INFO     | __main__:search_github_repositories:338 - Failed to clone ImperialCollegeLondo
+n/group-theory-game because of HTTP Error 404: Not Found
+2024-08-09 23:49:10.737 | INFO     | __main__:search_github_repositories:322 - Processing ImperialCollegeLondon/M4P
+33
+Cloning https://github.com/ImperialCollegeLondon/M4P33.git
+Repo name: ImperialCollegeLondon/M4P33
+2024-08-09 23:49:11.385 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/M4P33/1a179372db71ad6802d11eacbc1f02f327d55f8f/lean-toolchain failed. Retrying...
+2024-08-09 23:49:12.402 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/M4P33/1a179372db71ad6802d11eacbc1f02f327d55f8f/lean-toolchain failed. Retrying...
+2024-08-09 23:49:14.420 | INFO     | __main__:search_github_repositories:338 - Failed to clone ImperialCollegeLondo
+n/M4P33 because of HTTP Error 404: Not Found
+2024-08-09 23:49:14.420 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/con-
+nf
+2024-08-09 23:49:14.420 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/con-nf
+ since it is a known repository
+2024-08-09 23:49:14.420 | INFO     | __main__:search_github_repositories:322 - Processing FormalizedFormalLogic/Fou
+ndation
+2024-08-09 23:49:14.421 | INFO     | __main__:search_github_repositories:340 - Skipping FormalizedFormalLogic/Found
+ation since it is a known repository
+2024-08-09 23:49:14.421 | INFO     | __main__:search_github_repositories:322 - Processing b-mehta/topos
+Cloning https://github.com/b-mehta/topos.git
+Repo name: b-mehta/topos
+2024-08-09 23:49:15.133 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/b-
+mehta/topos/c9032b11789e36038bc841a1e2b486972421b983/lean-toolchain failed. Retrying...
+2024-08-09 23:49:16.149 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/b-
+mehta/topos/c9032b11789e36038bc841a1e2b486972421b983/lean-toolchain failed. Retrying...
+2024-08-09 23:49:18.171 | INFO     | __main__:search_github_repositories:338 - Failed to clone b-mehta/topos becaus
+e of HTTP Error 404: Not Found
+2024-08-09 23:49:18.172 | INFO     | __main__:search_github_repositories:322 - Processing leanprover/SampCert
+2024-08-09 23:49:18.172 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover/SampCert since i
+t is a known repository
+2024-08-09 23:49:18.172 | INFO     | __main__:search_github_repositories:322 - Processing nomeata/loogle
+2024-08-09 23:49:18.172 | INFO     | __main__:search_github_repositories:340 - Skipping nomeata/loogle since it is
+a known repository
+2024-08-09 23:49:18.308 | INFO     | __main__:search_github_repositories:322 - Processing risc0/risc0-lean4
+2024-08-09 23:49:18.308 | INFO     | __main__:search_github_repositories:340 - Skipping risc0/risc0-lean4 since it
+is a known repository
+2024-08-09 23:49:18.308 | INFO     | __main__:search_github_repositories:322 - Processing siddhartha-gadgil/Saturn
+2024-08-09 23:49:18.309 | INFO     | __main__:search_github_repositories:340 - Skipping siddhartha-gadgil/Saturn si
+nce it is a known repository
+2024-08-09 23:49:18.309 | INFO     | __main__:search_github_repositories:322 - Processing IPDSnelting/tba-2021
+Cloning https://github.com/IPDSnelting/tba-2021.git
+Repo name: IPDSnelting/tba-2021
+2024-08-09 23:49:18.999 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/IP
+DSnelting/tba-2021/b6390e55b768423d3266969e81d19290129c5914/lean-toolchain failed. Retrying...
+2024-08-09 23:49:20.015 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/IP
+DSnelting/tba-2021/b6390e55b768423d3266969e81d19290129c5914/lean-toolchain failed. Retrying...
+2024-08-09 23:49:22.032 | INFO     | __main__:search_github_repositories:338 - Failed to clone IPDSnelting/tba-2021
+ because of HTTP Error 404: Not Found
+2024-08-09 23:49:22.033 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/flt-
+regular
+2024-08-09 23:49:22.034 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/flt-re
+gular since it is a known repository
+2024-08-09 23:49:22.034 | INFO     | __main__:search_github_repositories:322 - Processing ImperialCollegeLondon/for
+malising-mathematics-2023
+Cloning https://github.com/ImperialCollegeLondon/formalising-mathematics-2023.git
+Repo name: ImperialCollegeLondon/formalising-mathematics-2023
+2024-08-09 23:49:22.725 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/formalising-mathematics-2023/3e5638bc32dde9570be7f2bd44bcafec8520f411/lean-toolchain failed. Re
+trying...
+2024-08-09 23:49:23.741 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Im
+perialCollegeLondon/formalising-mathematics-2023/3e5638bc32dde9570be7f2bd44bcafec8520f411/lean-toolchain failed. Re
+trying...
+2024-08-09 23:49:25.761 | INFO     | __main__:search_github_repositories:338 - Failed to clone ImperialCollegeLondo
+n/formalising-mathematics-2023 because of HTTP Error 404: Not Found
+2024-08-09 23:49:25.762 | INFO     | __main__:search_github_repositories:322 - Processing eric-wieser/lean-matrix-c
+ookbook
+Cloning https://github.com/eric-wieser/lean-matrix-cookbook.git
+Repo name: eric-wieser/lean-matrix-cookbook
+2024-08-09 23:49:26.403 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.9.0-rc1
+2024-08-09 23:49:40.527 | INFO     | __main__:search_github_repositories:322 - Processing PatrickMassot/verbose-lea
+n4
+2024-08-09 23:49:40.527 | INFO     | __main__:search_github_repositories:340 - Skipping PatrickMassot/verbose-lean4
+ since it is a known repository
+2024-08-09 23:49:40.527 | INFO     | __main__:search_github_repositories:322 - Processing blanchette/interactive_th
+eorem_proving_2024
+Cloning https://github.com/blanchette/interactive_theorem_proving_2024.git
+Repo name: blanchette/interactive_theorem_proving_2024
+2024-08-09 23:49:41.135 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/bl
+anchette/interactive_theorem_proving_2024/0f8dda14487c7b6de420c89ff75f0a69aea45738/lean-toolchain failed. Retrying.
+..
+2024-08-09 23:49:42.154 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/bl
+anchette/interactive_theorem_proving_2024/0f8dda14487c7b6de420c89ff75f0a69aea45738/lean-toolchain failed. Retrying.
+..
+2024-08-09 23:49:44.171 | INFO     | __main__:search_github_repositories:338 - Failed to clone blanchette/interacti
+ve_theorem_proving_2024 because of HTTP Error 404: Not Found
+2024-08-09 23:49:44.172 | INFO     | __main__:search_github_repositories:322 - Processing zhangir-azerbayev/lean-ch
+at
+Cloning https://github.com/zhangir-azerbayev/lean-chat.git
+Repo name: zhangir-azerbayev/lean-chat
+2024-08-09 23:49:44.764 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/zh
+angir-azerbayev/lean-chat/cc2832852e1858b879234b0a0f3ac7017df4a195/lean-toolchain failed. Retrying...
+2024-08-09 23:49:45.779 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/zh
+angir-azerbayev/lean-chat/cc2832852e1858b879234b0a0f3ac7017df4a195/lean-toolchain failed. Retrying...
+2024-08-09 23:49:47.796 | INFO     | __main__:search_github_repositories:338 - Failed to clone zhangir-azerbayev/le
+an-chat because of HTTP Error 404: Not Found
+2024-08-09 23:49:47.797 | INFO     | __main__:search_github_repositories:322 - Processing tydeu/lean4-alloy
+2024-08-09 23:49:47.797 | INFO     | __main__:search_github_repositories:340 - Skipping tydeu/lean4-alloy since it
+is a known repository
+2024-08-09 23:49:47.797 | INFO     | __main__:search_github_repositories:322 - Processing pygae/lean-ga
+Cloning https://github.com/pygae/lean-ga.git
+Repo name: pygae/lean-ga
+2024-08-09 23:49:48.577 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/py
+gae/lean-ga/0947a6d21cf5a724732c29dabbc7f543edb66d4e/lean-toolchain failed. Retrying...
+2024-08-09 23:49:49.592 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/py
+gae/lean-ga/0947a6d21cf5a724732c29dabbc7f543edb66d4e/lean-toolchain failed. Retrying...
+2024-08-09 23:49:51.609 | INFO     | __main__:search_github_repositories:338 - Failed to clone pygae/lean-ga becaus
+e of HTTP Error 404: Not Found
+2024-08-09 23:49:51.610 | INFO     | __main__:search_github_repositories:322 - Processing opencompl/lean-mlir-old
+2024-08-09 23:49:51.610 | INFO     | __main__:search_github_repositories:340 - Skipping opencompl/lean-mlir-old sin
+ce it is a known repository
+2024-08-09 23:49:51.610 | INFO     | __main__:search_github_repositories:322 - Processing starkware-libs/formal-pro
+ofs
+Cloning https://github.com/starkware-libs/formal-proofs.git
+Repo name: starkware-libs/formal-proofs
+2024-08-09 23:49:52.227 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/st
+arkware-libs/formal-proofs/a6e08ae761cb0f52a7043c4d3a650e01af764294/lean-toolchain failed. Retrying...
+2024-08-09 23:49:53.245 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/st
+arkware-libs/formal-proofs/a6e08ae761cb0f52a7043c4d3a650e01af764294/lean-toolchain failed. Retrying...
+2024-08-09 23:49:55.264 | INFO     | __main__:search_github_repositories:338 - Failed to clone starkware-libs/forma
+l-proofs because of HTTP Error 404: Not Found
+2024-08-09 23:49:55.265 | INFO     | __main__:search_github_repositories:322 - Processing leanprover/leansat
+2024-08-09 23:49:55.265 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover/leansat since it
+ is a known repository
+2024-08-09 23:49:55.265 | INFO     | __main__:search_github_repositories:322 - Processing semorrison/lean-category-
+theory
+Cloning https://github.com/semorrison/lean-category-theory.git
+Repo name: semorrison/lean-category-theory
+2024-08-09 23:49:55.830 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/se
+morrison/lean-category-theory/1f2bff331a6b1e79fa51df7a843b7ae5383c4160/lean-toolchain failed. Retrying...
+2024-08-09 23:49:56.846 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/se
+morrison/lean-category-theory/1f2bff331a6b1e79fa51df7a843b7ae5383c4160/lean-toolchain failed. Retrying...
+2024-08-09 23:49:58.868 | INFO     | __main__:search_github_repositories:338 - Failed to clone semorrison/lean-cate
+gory-theory because of HTTP Error 404: Not Found
+2024-08-09 23:49:58.870 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/dupe
+r
+2024-08-09 23:49:58.870 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/duper
+since it is a known repository
+2024-08-09 23:49:58.870 | INFO     | __main__:search_github_repositories:322 - Processing cmu-phil/Spectral
+Cloning https://github.com/cmu-phil/Spectral.git
+Repo name: cmu-phil/Spectral
+2024-08-09 23:49:59.648 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/cm
+u-phil/Spectral/3b078f5f1de251637decf04bd3fc8aa01930a6b3/lean-toolchain failed. Retrying...
+2024-08-09 23:50:00.666 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/cm
+u-phil/Spectral/3b078f5f1de251637decf04bd3fc8aa01930a6b3/lean-toolchain failed. Retrying...
+2024-08-09 23:50:02.684 | INFO     | __main__:search_github_repositories:338 - Failed to clone cmu-phil/Spectral be
+cause of HTTP Error 404: Not Found
+2024-08-09 23:50:02.685 | INFO     | __main__:search_github_repositories:322 - Processing BoltonBailey/formal-snark
+s-project
+2024-08-09 23:50:02.686 | INFO     | __main__:search_github_repositories:340 - Skipping BoltonBailey/formal-snarks-
+project since it is a known repository
+2024-08-09 23:50:02.686 | INFO     | __main__:search_github_repositories:322 - Processing dwrensha/lean4-maze
+2024-08-09 23:50:02.686 | INFO     | __main__:search_github_repositories:340 - Skipping dwrensha/lean4-maze since i
+t is a known repository
+2024-08-09 23:50:02.686 | INFO     | __main__:search_github_repositories:322 - Processing ramonfmir/lean-scheme
+Cloning https://github.com/ramonfmir/lean-scheme.git
+Repo name: ramonfmir/lean-scheme
+2024-08-09 23:50:03.297 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/ra
+monfmir/lean-scheme/6d3ec18fecfd174b79d0ce5c85a783f326dd50f6/lean-toolchain failed. Retrying...
+2024-08-09 23:50:04.319 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/ra
+monfmir/lean-scheme/6d3ec18fecfd174b79d0ce5c85a783f326dd50f6/lean-toolchain failed. Retrying...
+2024-08-09 23:50:06.337 | INFO     | __main__:search_github_repositories:338 - Failed to clone ramonfmir/lean-schem
+e because of HTTP Error 404: Not Found
+2024-08-09 23:50:06.338 | INFO     | __main__:search_github_repositories:322 - Processing leanprover/LNSym
+2024-08-09 23:50:06.338 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover/LNSym since it i
+s a known repository
+2024-08-09 23:50:06.338 | INFO     | __main__:search_github_repositories:322 - Processing jesse-michael-han/lean-st
+ep-public
+Cloning https://github.com/jesse-michael-han/lean-step-public.git
+Repo name: jesse-michael-han/lean-step-public
+2024-08-09 23:50:07.171 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/je
+sse-michael-han/lean-step-public/1abd55d25fe01e581a040a815aceb379d8e1bee1/lean-toolchain failed. Retrying...
+2024-08-09 23:50:08.187 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/je
+sse-michael-han/lean-step-public/1abd55d25fe01e581a040a815aceb379d8e1bee1/lean-toolchain failed. Retrying...
+2024-08-09 23:50:10.204 | INFO     | __main__:search_github_repositories:338 - Failed to clone jesse-michael-han/le
+an-step-public because of HTTP Error 404: Not Found
+2024-08-09 23:50:10.205 | INFO     | __main__:search_github_repositories:322 - Processing GaloisInc/lean-protocol-s
+upport
+Cloning https://github.com/GaloisInc/lean-protocol-support.git
+Repo name: GaloisInc/lean-protocol-support
+2024-08-09 23:50:10.978 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Ga
+loisInc/lean-protocol-support/cabfa3abedbdd6fdca6e2da6fbbf91a13ed48dda/lean-toolchain failed. Retrying...
+2024-08-09 23:50:11.994 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/Ga
+loisInc/lean-protocol-support/cabfa3abedbdd6fdca6e2da6fbbf91a13ed48dda/lean-toolchain failed. Retrying...
+2024-08-09 23:50:14.010 | INFO     | __main__:search_github_repositories:338 - Failed to clone GaloisInc/lean-proto
+col-support because of HTTP Error 404: Not Found
+2024-08-09 23:50:14.010 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/math
+port
+2024-08-09 23:50:14.011 | INFO     | __main__:search_github_repositories:340 - Skipping leanprover-community/mathpo
+rt since it is a known repository
+2024-08-09 23:50:14.011 | INFO     | __main__:search_github_repositories:322 - Processing forked-from-1kasper/groun
+d_zero
+2024-08-09 23:50:14.011 | INFO     | __main__:search_github_repositories:340 - Skipping forked-from-1kasper/ground_
+zero since it is a known repository
+2024-08-09 23:50:14.011 | INFO     | __main__:search_github_repositories:322 - Processing mo271/formal_book
+Cloning https://github.com/mo271/formal_book.git
+Repo name: mo271/formal_book
+2024-08-09 23:50:14.652 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.8.0-rc1
+2024-08-09 23:50:28.870 | INFO     | __main__:search_github_repositories:322 - Processing rami3l/plfl
+2024-08-09 23:50:28.870 | INFO     | __main__:search_github_repositories:340 - Skipping rami3l/plfl since it is a k
+nown repository
+2024-08-09 23:50:28.870 | INFO     | __main__:search_github_repositories:322 - Processing bhgomes/lean-riemann-hypo
+thesis
+Cloning https://github.com/bhgomes/lean-riemann-hypothesis.git
+Repo name: bhgomes/lean-riemann-hypothesis
+2024-08-09 23:50:29.507 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/bh
+gomes/lean-riemann-hypothesis/c36b744a2dc4a7a50c7de770096bd9a051f42ab9/lean-toolchain failed. Retrying...
+2024-08-09 23:50:30.526 | DEBUG    | lean_dojo.utils:read_url:204 - Request to https://raw.githubusercontent.com/bh
+gomes/lean-riemann-hypothesis/c36b744a2dc4a7a50c7de770096bd9a051f42ab9/lean-toolchain failed. Retrying...
+2024-08-09 23:50:32.543 | INFO     | __main__:search_github_repositories:338 - Failed to clone bhgomes/lean-riemann
+-hypothesis because of HTTP Error 404: Not Found
+2024-08-09 23:50:32.544 | INFO     | __main__:search_github_repositories:322 - Processing leanprover-community/sphe
+re-eversion
+Cloning https://github.com/leanprover-community/sphere-eversion.git
+Repo name: leanprover-community/sphere-eversion
+2024-08-09 23:50:33.298 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.10.0
+Found 3 repositories
+Training and testing with lambda = 0.1
+Processing /raid/adarsh/repos_new/eric-wieser/lean-matrix-cookbook
+2024-08-09 23:50:47.803 | INFO     | __main__:retrieve_proof:594 - Processing https://github.com/eric-wieser/lean-m
+atrix-cookbook.git
+2024-08-09 23:50:48.032 | INFO     | __main__:get_compatible_commit:245 - Latest commit: 4a4aed723b1c725a62031c5389
+991eeecc9c5301
+2024-08-09 23:50:48.033 | INFO     | __main__:get_compatible_commit:248 - Creating LeanGitRepo for https://github.c
+om/eric-wieser/lean-matrix-cookbook
+2024-08-09 23:50:48.033 | INFO     | __main__:get_compatible_commit:250 - Getting config for https://github.com/eri
+c-wieser/lean-matrix-cookbook.git
+2024-08-09 23:50:48.033 | INFO     | __main__:get_compatible_commit:257 - Searching for compatible commit for https
+://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-08-09 23:50:48.035 | INFO     | __main__:get_compatible_commit:263 - Already in a Git repository
+2024-08-09 23:50:48.035 | INFO     | __main__:get_compatible_commit:273 - Fetching commits for https://github.com/e
+ric-wieser/lean-matrix-cookbook.git
+2024-08-09 23:50:49.044 | INFO     | __main__:get_compatible_commit:277 - Fetched commits for https://github.com/er
+ic-wieser/lean-matrix-cookbook.git
+2024-08-09 23:50:49.046 | INFO     | __main__:get_compatible_commit:283 - Getting list of commits for https://githu
+b.com/eric-wieser/lean-matrix-cookbook.git
+2024-08-09 23:50:49.049 | INFO     | __main__:get_compatible_commit:288 - Found 125 commits for https://github.com/
+eric-wieser/lean-matrix-cookbook.git
+2024-08-09 23:50:49.507 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.8.0
+2024-08-09 23:51:03.548 | INFO     | __main__:get_compatible_commit:295 - Found compatible commit f15a149d321ac99ff
+9b9c024b58e7882f564669f for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-08-09 23:51:03.548 | INFO     | __main__:retrieve_proof:599 - Found compatible commit f15a149d321ac99ff9b9c024
+b58e7882f564669f for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-08-09 23:51:03.548 | INFO     | __main__:retrieve_proof:600 - Lean version: v4.8.0
+2024-08-09 23:51:03.549 | INFO     | __main__:retrieve_proof:606 - Generating benchmark at /raid/adarsh/datasets_ne
+w/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f
+2024-08-09 23:51:03.549 | INFO     | generate_benchmark_lean4:main:301 - Generating dataset to go into /raid/adarsh
+/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f
+2024-08-09 23:51:03.549 | INFO     | generate_benchmark_lean4:main:308 - lean toolchain version: {'content': 'leanp
+rover/lean4:v4.8.0\n'}
+2024-08-09 23:51:03.549 | INFO     | generate_benchmark_lean4:main:310 - lean version v: v4.8.0
+2024-08-09 23:51:03.549 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-09 23:51:03.549 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/toolchains/l
+eanprover--lean4---4.8.0
+2024-08-09 23:51:03.549 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/leanprover--l
+ean4---4.8.0
+2024-08-09 23:51:03.549 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/leanprover--
+lean4---4.8.0
+2024-08-09 23:51:03.549 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not exist: /.el
+an/toolchains/leanprover--lean4---4.8.0
+2024-08-09 23:51:03.549 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not exist: ~/.e
+lan/toolchains/leanprover--lean4---4.8.0
+2024-08-09 23:51:03.549 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /home/adars
+h/.elan/toolchains/leanprover--lean4---4.8.0
+2024-08-09 23:51:03.690 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.8.0, x86_6
+4-unknown-linux-gnu, commit df668f00e6c0, Release)
+
+2024-08-09 23:51:03.691 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://github.com/
+eric-wieser/lean-matrix-cookbook', commit='f15a149d321ac99ff9b9c024b58e7882f564669f')
+2024-08-09 23:51:03.691 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-09 23:51:03.694 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working directory: /
+home/adarsh/ReProver
+2024-08-09 23:51:03.694 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-09 23:51:03.694 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-09 23:51:03.694 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced repo is a
+vailable in the cache.
+2024-08-09 23:51:03.694 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /raid
+/adarsh/.cache/lean_dojo/eric-wieser-lean-matrix-cookbook-f15a149d321ac99ff9b9c024b58e7882f564669f/lean-matrix-cook
+book
+2024-08-09 23:51:03.802 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading 2734 trace
+d XML files from /raid/adarsh/.cache/lean_dojo/eric-wieser-lean-matrix-cookbook-f15a149d321ac99ff9b9c024b58e7882f56
+4669f/lean-matrix-cookbook with 31 workers
+2024-08-09 23:51:05,860 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8267
+  9%|█████▍                                                        | 241/2734 [00:07<00:57, 43.20it/s](raylet) [202
+4-08-09 23:51:15,743 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93472993280; capacity: 1887507697664. Object creation will fail if
+ spilling is required.
+ 17%|██████████▋                                                   | 471/2734 [00:17<01:15, 30.10it/s](raylet) [202
+4-08-09 23:51:25,751 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93472956416; capacity: 1887507697664. Object creation will fail if
+ spilling is required.
+ 27%|████████████████▉                                             | 746/2734 [00:28<00:28, 70.10it/s](raylet) [202
+4-08-09 23:51:35,758 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93472935936; capacity: 1887507697664. Object creation will fail if
+ spilling is required.
+ 32%|███████████████████▌                                          | 862/2734 [00:34<00:45, 41.19it/s](raylet) [202
+4-08-09 23:51:45,762 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93472894976; capacity: 1887507697664. Object creation will fail if
+ spilling is required.
+ 36%|██████████████████████                                        | 975/2734 [00:50<09:52,  2.97it/s](raylet) [202
+4-08-09 23:51:55,768 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93472894976; capacity: 1887507697664. Object creation will fail if
+ spilling is required.
+ 38%|███████████████████████▏                                     | 1041/2734 [00:52<00:44, 37.62it/s](raylet) [202
+4-08-09 23:52:05,772 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93472821248; capacity: 1887507697664. Object creation will fail if
+ spilling is required.
+ 42%|█████████████████████████▍                                   | 1142/2734 [01:17<00:42, 37.50it/s](raylet) [202
+4-08-09 23:52:15,781 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93471928320; capacity: 1887507697664. Object creation will fail if
+ spilling is required.
+ 47%|████████████████████████████▋                                | 1283/2734 [01:35<19:09,  1.26it/s](raylet) [202
+4-08-09 23:52:35,793 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93471899648; capacity: 1887507697664. Object creation will fail if
+ spilling is required. [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disa
+ble log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#lo
+g-deduplication for more options.)
+ 54%|█████████████████████████████████                            | 1484/2734 [01:57<18:43,  1.11it/s](raylet) [202
+4-08-09 23:52:55,810 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93471846400; capacity: 1887507697664. Object creation will fail if
+ spilling is required. [repeated 2x across cluster]
+ 60%|████████████████████████████████████▍                        | 1634/2734 [02:26<32:56,  1.80s/it](raylet) [202
+4-08-09 23:53:15,822 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93470834688; capacity: 1887507697664. Object creation will fail if
+ spilling is required. [repeated 2x across cluster]
+ 72%|███████████████████████████████████████████▊                 | 1963/2734 [03:01<22:57,  1.79s/it](raylet) [202
+4-08-09 23:53:45,837 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93470769152; capacity: 1887507697664. Object creation will fail if
+ spilling is required. [repeated 3x across cluster]
+ 80%|████████████████████████████████████████████████▉            | 2191/2734 [03:43<00:16, 32.59it/s](raylet) [202
+4-08-09 23:54:15,851 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93468999680; capacity: 1887507697664. Object creation will fail if
+ spilling is required. [repeated 3x across cluster]
+ 99%|████████████████████████████████████████████████████████████ | 2694/2734 [04:35<00:38,  1.04it/s](raylet) [202
+4-08-09 23:55:05,878 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-09_23-51-03_9
+21595_1799861 is over 95% full, available space: 93468729344; capacity: 1887507697664. Object creation will fail if
+ spilling is required. [repeated 5x across cluster]
+100%|█████████████████████████████████████████████████████████████| 2734/2734 [04:36<00:00,  9.90it/s]
+(raylet) [2024-08-09 23:55:35,894 E 1807056 1807085] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-08-
+09_23-51-03_921595_1799861 is over 95% full, available space: 93467783168; capacity: 1887507697664. Object creation
+ will fail if spilling is required. [repeated 3x across cluster]
+2024-08-09 23:55:46.196 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/eric-wieser/lean-matrix-cookbook', commit='f15a149d321ac99ff9b9c024b58e788
+2f564669f')
+2024-08-09 23:55:47.609 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.6.0-rc1
+2024-08-09 23:56:03.419 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.7.0
+2024-08-09 23:56:17.683 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:56:18.804 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:56:21.385 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or mathlib4 v4.8.0
+2024-08-09 23:57:11.723 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='b5eba595428809e96f3ed113bc7ba776c5
+f801ac')
+2024-08-09 23:57:12.071 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:57:13.186 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.co
+m/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-09 23:57:15.763 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or doc-gen4 main
+2024-08-09 23:57:16.355 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.11.0-rc1
+2024-08-09 23:57:30.249 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or batteries main
+2024-08-09 23:57:38.540 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or quote4 master
+2024-08-09 23:57:39.025 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or aesop master
+2024-08-09 23:57:39.435 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or ProofWidgets4 v0.0.36
+2024-08-09 23:57:40.113 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4-cli main
+2024-08-09 23:57:40.759 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.9.0
+2024-08-09 23:57:55.329 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or import-graph main
+2024-08-09 23:57:55.935 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8')
+2024-08-09 23:57:57.138 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4 v4.10.0-rc2
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-08-09 23:58:12.400 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash f
+or lean4-nightly nightly-2024-06-05
+2024-08-09 23:58:13.409 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='https://gi
+thub.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an unsupported Lean versio
+n: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-08-09 23:58:13.409 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/batteries', commit='dc167d260ff7ee9849b436037add06bed
+15104be')
+2024-08-09 23:58:13.617 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa75f3aef33a2813a789839
+2222')
+2024-08-09 23:58:13.785 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b4216e944d5be2ce42a25d7410c678
+76f')
+2024-08-09 23:58:14.143 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='e6b6247c61280c77ade6bbf0bc3c6
+6a44fe2e0c5')
+2024-08-09 23:58:14.642 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0')
+2024-08-09 23:58:14.806 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the dependencie
+s of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1dbea5e9235646fb836c7
+cea9ab03b6')
+2024-08-09 23:58:29.493 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking the sanity
+of TracedRepo(repo=LeanGitRepo(url='https://github.com/eric-wieser/lean-matrix-cookbook', commit='f15a149d321ac99ff
+9b9c024b58e7882f564669f'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanprover/lean4', commit='da
+a22187642d4cf6954c39a23eab20d8a8675416'), 'batteries': LeanGitRepo(url='https://github.com/leanprover-community/bat
+teries', commit='021e272cb5cdcc82b7e1e760fe915ff2f64169ad'), 'Qq': LeanGitRepo(url='https://github.com/leanprover-c
+ommunity/quote4', commit='53156671405fbbd5402ed17a79bd129b961bd8d6'), 'aesop': LeanGitRepo(url='https://github.com/
+leanprover-community/aesop', commit='53ba96ad7666d4a2515292974631629b5ea5dfee'), 'proofwidgets': LeanGitRepo(url='h
+ttps://github.com/leanprover-community/ProofWidgets4', commit='e6b6247c61280c77ade6bbf0bc3c66a44fe2e0c5'), 'Cli': L
+eanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'math
+lib': LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='b5eba595428809e96f3ed113bc7ba776c
+5f801ac'), '«doc-gen4»': LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf
+9f05dc34e5c423a8'), 'MD4Lean': LeanGitRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f32
+5c7e9d619bb56fb005'), 'UnicodeBasic': LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='5c
+11428272fe190b7e726ebe448f93437d057b74'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQuery',
+commit='bd8747df9ee72fca365efa5bd3bd0d8dcd083b9f'), 'importGraph': LeanGitRepo(url='https://github.com/leanprover-c
+ommunity/import-graph', commit='57bd2065f1dbea5e9235646fb836c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cach
+e/lean_dojo/eric-wieser-lean-matrix-cookbook-f15a149d321ac99ff9b9c024b58e7882f564669f/lean-matrix-cookbook'))
+2024-08-09 23:58:37.802 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-09 23:58:44.602 | INFO     | generate_benchmark_lean4:split_data:132 - 67585 theorems in total
+2024-08-09 23:58:44.602 | INFO     | generate_benchmark_lean4:split_data:137 - 67585 theorems in total, with 1351 f
+or validation and 1351 for testing
+2024-08-09 23:58:44.602 | INFO     | generate_benchmark_lean4:split_randomly:80 - Splitting the theorems randomly
+2024-08-09 23:58:44.627 | INFO     | generate_benchmark_lean4:split_by_premise:94 - Splitting the theorems by premi
+ses
+2024-08-09 23:58:49.662 | INFO     | generate_benchmark_lean4:main:352 - Successfully split the data
+2024-08-09 23:59:01.753 | INFO     | generate_benchmark_lean4:export_proofs:194 - 64883 theorems and 95963 tactics
+saved to /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/train.json
+2024-08-09 23:59:02.121 | INFO     | generate_benchmark_lean4:export_proofs:194 - 1351 theorems and 1745 tactics sa
+ved to /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/val.json
+2024-08-09 23:59:02.385 | INFO     | generate_benchmark_lean4:export_proofs:194 - 1351 theorems and 2100 tactics sa
+ved to /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/test.json
+2024-08-09 23:59:13.570 | INFO     | generate_benchmark_lean4:export_proofs:194 - 64883 theorems and 93692 tactics
+saved to /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/novel_premises/tra
+in.json
+2024-08-09 23:59:13.994 | INFO     | generate_benchmark_lean4:export_proofs:194 - 1351 theorems and 3072 tactics sa
+ved to /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/novel_premises/val.j
+son
+2024-08-09 23:59:14.310 | INFO     | generate_benchmark_lean4:export_proofs:194 - 1351 theorems and 3044 tactics sa
+ved to /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/novel_premises/test.
+json
+2024-08-09 23:59:14.312 | INFO     | generate_benchmark_lean4:export_data:270 - Successfully exported the proofs
+2024-08-09 23:59:31.038 | INFO     | generate_benchmark_lean4:export_premises:218 - 102294 theorems/definitions fro
+m 2734 files saved to /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/corpu
+s.jsonl
+2024-08-09 23:59:31.038 | INFO     | generate_benchmark_lean4:export_data:274 - Successfully exported the premises
+2024-08-09 23:59:31.039 | INFO     | generate_benchmark_lean4:export_data:282 - Successfully exported the metadata
+2024-08-09 23:59:31.039 | INFO     | generate_benchmark_lean4:main:354 - Successfully exported the data
+2024-08-09 23:59:31.104 | INFO     | __main__:retrieve_proof:611 - Finished generating benchmark at /raid/adarsh/da
+tasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f
+2024-08-09 23:59:31.105 | INFO     | __main__:find_latest_checkpoint:405 - Using the latest checkpoint: /raid/adars
+h/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-09 23:59:31.105 | INFO     | __main__:retrieve_proof:616 - Found latest checkpoint: /raid/adarsh/checkpoint
+s_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-09 23:59:31.105 | INFO     | __main__:train_test_fisher:419 - Inside train_test_fisher
+Seed set to 3407
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWar
+ning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible.
+If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or traine
+d.
+2024-08-10 00:00:36.718 | INFO     | __main__:train_test_fisher:443 - Loaded premise retriever at /raid/adarsh/chec
+kpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-10 00:00:36.733 | INFO     | __main__:find_latest_fisher:415 - Using the latest Fisher Information Matrix:
+/raid/adarsh/fisher_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_fisher_info.pkl
+2024-08-10 00:00:39.493 | INFO     | __main__:load_fisher_information:392 - Fisher Information successfully loaded.
+2024-08-10 00:00:39.493 | INFO     | retrieval.model:set_fisher_info:60 - Fisher Information has been updated in th
+e model.
+2024-08-10 00:00:39.493 | INFO     | __main__:train_test_fisher:449 - Fisher Information Matrix loaded.
+Data path: /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random
+2024-08-10 00:00:39.614 | INFO     | common:__init__:199 - Building the corpus from /raid/adarsh/datasets_new/lean-
+matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/corpus.jsonl
+100%|█████████████████████████████████████████████████████████| 64883/64883 [00:28<00:00, 2237.96it/s]
+2024-08-10 00:01:53.787 | INFO     | retrieval.datamodule:load_or_cache_data:61 - Saved loaded data to cache /raid/
+adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cache_train/cached_data.pk
+l
+Training dataset size: 134422
+100%|███████████████████████████████████████████████████████████| 1351/1351 [00:00<00:00, 8405.87it/s]
+2024-08-10 00:01:53.985 | INFO     | retrieval.datamodule:load_or_cache_data:61 - Saved loaded data to cache /raid/
+adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cache_val/cached_data.pkl
+Validation dataset size: 1745
+100%|███████████████████████████████████████████████████████████| 1351/1351 [00:00<00:00, 6055.65it/s]
+2024-08-10 00:01:54.252 | INFO     | retrieval.datamodule:load_or_cache_data:61 - Saved loaded data to cache /raid/
+adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cache_pred/cached_data.pkl
+Testing dataset size: 2100
+Training dataset size after load: 134422
+Validation dataset size after load: 1745
+Testing dataset size after load: 2100
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+2024-08-10 00:01:54.503 | INFO     | __main__:train_test_fisher:508 - Starting progressive training...
+[rank: 0] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+
+2024-08-10 00:02:01.880937: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT
+ factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-08-10 00:02:01.987505: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuD
+NN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-08-10 00:02:01.988220: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuB
+LAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-08-10 00:02:02.147153: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimize
+d to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compil
+er flags.
+2024-08-10 00:02:02.949975: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find
+TensorRT
+2024-08-10 00:02:04.258 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /raid/adar
+sh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cache_train/cached_data.pkl
+Training dataset size: 134422
+2024-08-10 00:02:04.369 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /raid/adar
+sh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cache_val/cached_data.pkl
+Validation dataset size: 1745
+2024-08-10 00:02:04.385 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /raid/adar
+sh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cache_pred/cached_data.pkl
+Testing dataset size: 2100
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:
+653: Checkpoint directory /raid/adarsh/checkpoints_new exists and is not empty.
+Restoring states from the checkpoint path at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2
+147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2024-08-10 00:02:10.660 | INFO     | common:get_optimizers:432 - Optimizing with AdamW
+
+  | Name    | Type           | Params
+-------------------------------------------
+0 | encoder | T5EncoderModel | 217 M
+-------------------------------------------
+217 M     Trainable params
+0         Non-trainable params
+217 M     Total params
+870.630   Total estimated model params size (MB)
+Restored all states from the checkpoint at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e214
+7_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+`Trainer.fit` stopped: `max_epochs=1` reached.
+2024-08-10 00:02:26.069 | INFO     | __main__:train_test_fisher:512 - Finished progressive training
+2024-08-10 00:02:26.070 | INFO     | __main__:train_test_fisher:518 - Testing...
+2024-08-10 00:02:26.070 | INFO     | retrieval.main:run_cli:55 - PID: 1799861
+[rank: 0] Seed set to 3407
+2024-08-10 00:02:26.237 | INFO     | retrieval.main:before_instantiate_classes:28 - Data path: /raid/adarsh/dataset
+s_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random
+2024-08-10 00:02:26.237 | INFO     | retrieval.main:before_instantiate_classes:29 - Corpus path: /raid/adarsh/datas
+ets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/corpus.jsonl
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWar
+ning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible.
+If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+2024-08-10 00:02:27.425 | INFO     | common:__init__:199 - Building the corpus from /raid/adarsh/datasets_new/lean-
+matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+2024-08-10 00:02:35.024 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /raid/adar
+sh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cache_train/cached_data.pkl
+Training dataset size: 134422
+2024-08-10 00:02:35.041 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /raid/adar
+sh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cache_pred/cached_data.pkl
+Testing dataset size: 2100
+Restoring states from the checkpoint path at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2
+147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e21
+47_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+Predicting: |                                                                                | 0/? [00:00<?, ?it/s]
+2024-08-10 00:02:43.812 | INFO     | retrieval.model:reindex_corpus:268 - Re-indexing the retrieval corpus
+
+  2%|█▍                                                                          | 31/1599 [00:26<33:06,  1.27s/it]

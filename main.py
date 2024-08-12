@@ -41,6 +41,7 @@ from typing import Dict, List, Union
 import generate_benchmark_lean4
 import traceback
 import sys
+from tqdm import tqdm
 
 from common import set_logger
 from prover.proof_search import Status, DistributedProver
@@ -69,6 +70,11 @@ CHECKPOINT_DIR = "checkpoints_new"
 FISHER_DIR = "fisher_new"
 # TODO: do we still need this?
 load_dotenv()
+
+global_results = {
+    "total_repositories": 0,
+    "repositories": {}
+}
 
 # Feel free to remove any repos from this list if you would like to test on them
 known_repositories = [
@@ -415,8 +421,9 @@ def find_latest_fisher():
     logger.info(f"Using the latest Fisher Information Matrix: {latest_fisher}")
     return latest_fisher
 
-def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, max_epochs=1): # TODO: chagne back to 2
+def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, current_epoch, epochs_per_repo=1):
     logger.info("Inside train_test_fisher")
+    logger.info(f"Starting training at epoch {current_epoch}")
     seed_everything(3407)
 
     ### PROGRESSIVE TRAINING
@@ -436,14 +443,6 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, max_ep
         "num_retrieved": 100,
     }
 
-    # TODO: apply to compute server if works
-    logger.info("Resetting the epoch count of the model")
-    state_dict = torch.load(model_checkpoint_path)
-    state_dict['global_step'] = None
-    state_dict['epoch'] = 0
-    torch.save(state_dict, model_checkpoint_path)
-    logger.info("Epoch count reset")
-    
     model = PremiseRetriever.load(
         model_checkpoint_path, device, freeze=False, config=config
     )
@@ -507,17 +506,17 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, max_ep
         strategy="ddp",
         devices=1, # TODO: change for GPU
         callbacks=[lr_monitor, checkpoint_callback, early_stop_callback],
-        max_epochs=max_epochs,
+        max_epochs=current_epoch + epochs_per_repo,
         log_every_n_steps=1,
         num_sanity_val_steps=0,
         default_root_dir=os.path.join("lightning_logs_main")  # TODO: can remove later
     )
 
-    logger.info("Starting progressive training...")
+    logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
 
     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
 
-    logger.info("Finished progressive training")
+    logger.info(f"Finished progressive training at epoch {trainer.current_epoch}")
 
     ### TESTING FOR AVERAGE RECALL
 
@@ -593,7 +592,15 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, max_ep
 
     return model
 
-def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
+def update_and_output_results(repo_url: str, repository_results, lambda_value: float):
+    global global_results
+    global_results["repositories"][repo_url] = repository_results
+    results_file = f"results_lambda_{lambda_value}_PT_matrix_cookbook_partial.json"
+    with open(results_file, 'w', encoding='utf-8') as f:
+        json.dump(global_results, f, indent=4, ensure_ascii=False)
+    logger.info(f"Partial results saved to {results_file}")
+
+def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_per_repo):
     # TODO: update comments throughout
     """
     This method does the following:
@@ -636,7 +643,7 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
         logger.error(str(e))
         return None
     
-    # train_test_fisher(model_checkpoint_path, dst_dir, lambda_value)
+    train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, epochs_per_repo)
 
     data = []
 
@@ -668,9 +675,6 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
             positions.append(elem[2])
             ends.append(elem[3])
 
-    num_sorries = len(theorems)
-    logger.info(f"Found {num_sorries} sorries!")
-
     corpus_path = dst_dir + "/corpus.jsonl"
     tactic = None  # `None` since we are not using a fixed tactic generator
     module = None  # `None` since we are not using a fixed tactic generator
@@ -680,7 +684,7 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
     num_sampled_tactics = 64
     debug = False
     ckpt_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
-    logger.info("MAIN: about to search for proofs")
+    logger.info("About to search for proofs")
     prover = DistributedProver(
         ckpt_path,
         corpus_path,
@@ -692,11 +696,28 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
         num_sampled_tactics=num_sampled_tactics,
         debug=debug,
     )
-    results = prover.search_unordered(repo, theorems, positions)
-    logger.info("MAIN: done searching for proofs")
+
     proofs = []
-    unproved_sorries = []
-    for result in results:
+    num_sorries = len(theorems)
+    logger.info(f"Found {num_sorries} sorries!")
+    repository_results = {
+        "commit": sha,
+        "number_of_sorries": num_sorries,
+        "number_of_proofs_found": 0,
+        "proofs_details": [],
+        "unproved_sorries": [],
+        "number_of_premises_theorems_retrieved": num_premises,
+        "num_files_traced": num_files_traced,
+        "PR": "",
+    }
+    for i in tqdm(range(num_sorries), desc="Processing theorems", unit="theorem"):
+        theorem = theorems[i]
+        position = positions[i]
+        logger.info(f"Searching for proof for {theorem.full_name}")
+        logger.info(f"Position: {position}")
+
+        results = prover.search_unordered(repo, [theorem], [position])
+        result = results[0] if results else None
         if result is not None:
             if result.status == Status.PROVED:
                 proof_text = "\n".join(result.proof)
@@ -712,17 +733,29 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value):
                     if theorems[i] == result.theorem:
                         start = positions[i]
                         end = ends[i]
+                repository_results["number_of_proofs_found"] += 1
+                repository_results["proofs_details"].append({
+                    "file_path": file_path,
+                    "theorem_name": theorem_name,
+                    "proof_text": proof_text
+                })
                 proofs.append((file_path, start, end, proof_text, theorem_name))
             else:
                 repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
                 repo_name = repo_dir + "/" + repo_name
                 file_path = repo_name + "/" + str(result.theorem.file_path)
                 theorem_name = str(result.theorem.full_name)
-                unproved_sorries.append((file_path, theorem_name))
-        
+                repository_results["unproved_sorries"].append({
+                    "file_path": file_path,
+                    "theorem_name": theorem_name
+                })
+            
+            # Update global results and output partial results after each proof is processed
+            update_and_output_results(repo.url, repository_results, lambda_value)
+    
     logger.info("Finished searching for proofs")
 
-    return num_sorries, proofs, num_premises, num_files_traced, unproved_sorries, repo
+    return repository_results, proofs
 
 def replace_sorry_with_proof(proofs):
     """Replace the `sorry` with the proof text in the Lean files."""
@@ -759,15 +792,10 @@ def main():
     try:
         # TODO: incorporate latest changes from ReProver repo
         # TODO: for PR, we need to make fork and then push to there
-        results = {
-            "total_repositories": 0,
-            "repositories": {}
-        }
-
         # lambdas = [0.01, 0.1, 1, 10, 100, 1000, 5000, 10000]
         # lambdas = [0.01, 0.1, 1, 10, 100, 10000]
         # lambdas = [1, 10, 100, 10000]
-        lambdas = [0.1]
+        lambdas = [0.0]
         # lambdas = [0.01]
         # lambdas = [0.0]
 
@@ -775,17 +803,21 @@ def main():
         generate_benchmark_lean4.configure_leandojo()
         logger.info("LeanDojo configured")
 
-        clone_url = "https://github.com/Adarsh321123/PutnamBench.git"
+        clone_url = "https://github.com/eric-wieser/lean-matrix-cookbook.git"
         repo_name, sha = clone_repo(clone_url)
         url = clone_url.replace('.git', '')
         lean_git_repo = LeanGitRepo(url, sha)
         lean_git_repos.append(lean_git_repo)
-        repos.append("Adarsh321123/PutnamBench")
+        repos.append("eric-wieser/lean-matrix-cookbook")
 
-        # search_github_repositories("Lean", 15)
+        current_epoch = 1 # TODO: change
+        epochs_per_repo = 1
+
+        # search_github_repositories("Lean", 30)
         num_repos = len(repos)
-        results["total_repositories"] = num_repos
+        global_results["total_repositories"] = num_repos
         print(f"Found {num_repos} repositories")
+
         for i in range(num_repos):
             for lambda_value in lambdas:
                 print(f"Training and testing with lambda = {lambda_value}")
@@ -794,59 +826,40 @@ def main():
                 repo = repo_dir + "/" + repo
                 lean_git_repo = lean_git_repos[i]
                 print(f"Processing {repo}")
-                results["repositories"][repo] = {
-                    "commit": None,
-                    "number_of_sorries": 0,
-                    "number_of_proofs_found": 0,
-                    "proofs_details": [],
-                    "unproved_sorries": [],
-                    "number_of_premises_theorems_retrieved": 0,
-                    "num_files_traced": 0,
-                    "PR": "",
-                }
-                # base_branch = get_default_branch(repo_no_dir)
-                # subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
-                # subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
-                # subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
-                # create_or_switch_branch(repo, TMP_BRANCH, base_branch)
-                result = retrieve_proof(lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value)
-                if result is None:
+                repository_results, proofs = retrieve_proof(lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo)
+                current_epoch += epochs_per_repo
+                if repository_results is None:
                     logger.info("Skipping repository due to configuration or error.")
                     continue
-                num_sorries, proofs, num_premises, num_files_traced, unproved_sorries, returned_repo = result
-                if proofs is None:
-                    continue
-                results["repositories"][repo]["commit"] = returned_repo.commit
-                results["repositories"][repo]["number_of_sorries"] = num_sorries
-                results["repositories"][repo]["number_of_proofs_found"] = len(proofs)
-                results["repositories"][repo]["number_of_premises_theorems_retrieved"] = num_premises
-                results["repositories"][repo]["num_files_traced"] = num_files_traced
-                for proof in proofs:
-                    results["repositories"][repo]["proofs_details"].append({
-                        "file_path": proof[0],
-                        "theorem_name": proof[4],
-                        "proof_text": proof[3]
-                    })
-                for unproved_sorry in unproved_sorries:
-                    results["repositories"][repo]["unproved_sorries"].append({
-                        "file_path": unproved_sorry[0],
-                        "theorem_name": unproved_sorry[1]
-                    })
-                results_file = f"results_lambda_{lambda_value}_full_retrieval_putnambench_real_continuous.json"
+                
+                if proofs:
+                    base_branch = get_default_branch(repo_no_dir)
+                    subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
+                    subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
+                    subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
+                    create_or_switch_branch(repo, TMP_BRANCH, base_branch)
+                    # Uncomment if you would like to contribute back to the repos!
+                    # replace_sorry_with_proof(proofs)
+                    # committed = commit_changes(repo, COMMIT_MESSAGE)
+                    # if committed:
+                    #     push_changes(repo, TMP_BRANCH)
+                    #     url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
+                    #     global_results["repositories"][lean_git_repo.url]["PR"] = url
+                    # shutil.rmtree(repo)
+
+                results_file = f"results_lambda_{lambda_value}_PT_matrix_cookbook.json"
                 with open(results_file, 'w', encoding='utf-8') as f:
-                    json.dump(results, f, indent=4, ensure_ascii=False)
-                    logger.info(f"Results saved to {results_file}")
-                # Uncomment if you would like to contribute back to the repos!
-                # replace_sorry_with_proof(proofs)
-                # committed = commit_changes(repo, COMMIT_MESSAGE)
-                # if committed:
-                #     push_changes(repo, TMP_BRANCH)
-                #     url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
-                #     results["repositories"][repo]["PR"] = url
-                # shutil.rmtree(repo)
+                    json.dump(global_results, f, indent=4, ensure_ascii=False)
+                    logger.info(f"Final results saved to {results_file}")
     except Exception as e:
         logger.info(f"An error occurred: {e}", file=sys.stderr)
         traceback.print_exc()
+    finally:
+        # Ensure final results are saved even if an exception occurs
+        results_file = f"results_lambda_{lambda_value}_PT_matrix_cookbook.json"
+        with open(results_file, 'w', encoding='utf-8') as f:
+            json.dump(global_results, f, indent=4, ensure_ascii=False)
+        logger.info(f"Exception occurred. Final results saved to {results_file}")
 
 if __name__ == "__main__":
     main()

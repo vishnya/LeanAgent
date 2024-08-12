@@ -1,0 +1,1092 @@
+al.datamodule:load_or_cache_data:52 - Loaded data from cache /raid/adarsh/datasets_new/formal_book_6fb
+e8c2985008c0bfb30050750a71b90388ad3a3/random/cache_pred/cached_data.pkl
+Testing dataset size: 2632
+Training dataset size after load: 152670
+Validation dataset size after load: 2312
+Testing dataset size after load: 2632
+2024-08-10 07:51:58.132 | INFO     | __main__:train_test_fisher:508 - Starting progressive training...
+[rank: 1] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/2
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 2 processes
+----------------------------------------------------------------------------------------------------
+
+2024-08-10 07:52:09.050481: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to r
+egister cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been regis
+tered
+2024-08-10 07:52:09.079756: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to
+ register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been reg
+istered
+2024-08-10 07:52:09.079815: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to
+ register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been r
+egistered
+2024-08-10 07:52:09.094024: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binar
+y is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appro
+priate compiler flags.
+2024-08-10 07:52:09.676753: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Co
+uld not find TensorRT
+2024-08-10 07:52:10.637 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/cache_train/c
+ached_data.pkl
+Training dataset size: 152670
+2024-08-10 07:52:10.755 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/cache_val/cac
+hed_data.pkl
+Validation dataset size: 2312
+2024-08-10 07:52:10.774 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/cache_pred/ca
+ched_data.pkl
+Testing dataset size: 2632
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_c
+heckpoint.py:653: Checkpoint directory /raid/adarsh/checkpoints_new exists and is not empty.
+2024-08-10 07:52:11.132 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/cache_train/c
+ached_data.pkl
+Training dataset size: 152670
+2024-08-10 07:52:11.236 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/cache_val/cac
+hed_data.pkl
+Validation dataset size: 2312
+2024-08-10 07:52:11.255 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/cache_pred/ca
+ched_data.pkl
+Testing dataset size: 2632
+Restoring states from the checkpoint path at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165
+f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1,2]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [1,2]
+2024-08-10 07:52:15.486 | INFO     | common:get_optimizers:432 - Optimizing with AdamW
+
+  | Name    | Type           | Params
+-------------------------------------------
+0 | encoder | T5EncoderModel | 217 M
+-------------------------------------------
+217 M     Trainable params
+0         Non-trainable params
+217 M     Total params
+870.630   Total estimated model params size (MB)
+2024-08-10 07:52:15.496 | INFO     | common:get_optimizers:432 - Optimizing with AdamW
+Restored all states from the checkpoint at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0
+b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+`Trainer.fit` stopped: `max_epochs=1` reached.
+2024-08-10 07:52:25.245 | INFO     | __main__:train_test_fisher:512 - Finished progressive training
+2024-08-10 07:52:25.246 | INFO     | __main__:train_test_fisher:518 - Testing...
+2024-08-10 07:52:25.246 | INFO     | retrieval.main:run_cli:55 - PID: 2548655
+[rank: 0] Seed set to 3407
+2024-08-10 07:52:25.411 | INFO     | retrieval.main:before_instantiate_classes:28 - Data path: /raid/a
+darsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random
+2024-08-10 07:52:25.411 | INFO     | retrieval.main:before_instantiate_classes:29 - Corpus path: /raid
+/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/corpus.jsonl
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:11
+32: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads alw
+ays resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+2024-08-10 07:52:25.748 | INFO     | __main__:train_test_fisher:512 - Finished progressive training
+2024-08-10 07:52:25.749 | INFO     | __main__:train_test_fisher:518 - Testing...
+2024-08-10 07:52:25.749 | INFO     | retrieval.main:run_cli:55 - PID: 2579903
+[rank: 1] Seed set to 3407
+2024-08-10 07:52:25.922 | INFO     | retrieval.main:before_instantiate_classes:28 - Data path: /raid/a
+darsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random
+2024-08-10 07:52:25.922 | INFO     | retrieval.main:before_instantiate_classes:29 - Corpus path: /raid
+/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/corpus.jsonl
+2024-08-10 07:52:26.463 | INFO     | common:__init__:199 - Building the corpus from /raid/adarsh/datas
+ets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/corpus.jsonl
+2024-08-10 07:52:27.007 | INFO     | common:__init__:199 - Building the corpus from /raid/adarsh/datas
+ets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/corpus.jsonl
+2024-08-10 07:52:33.461 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the
+commit hash for lean4 v4.8.0
+2024-08-10 07:52:33.475 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the
+commit hash for lean4 v4.8.0
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+2024-08-10 07:52:47.954 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cach
+e_train/cached_data.pkl
+Training dataset size: 134422
+2024-08-10 07:52:47.956 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cach
+e_train/cached_data.pkl
+Training dataset size: 134422
+2024-08-10 07:52:47.967 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cach
+e_pred/cached_data.pkl
+Testing dataset size: 2100
+2024-08-10 07:52:47.968 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/cach
+e_pred/cached_data.pkl
+Testing dataset size: 2100
+Restoring states from the checkpoint path at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165
+f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1,2]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1,2]
+Loaded model weights from the checkpoint at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f
+0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+Predicting: |                                                                   | 0/? [00:00<?, ?it/s]
+2024-08-10 07:52:52.398 | INFO     | retrieval.model:reindex_corpus:268 - Re-indexing the retrieval co
+rpus
+Predicting: |                                                                   | 0/? [00:00<?, ?it/s]
+2024-08-10 07:52:52.412 | INFO     | retrieval.model:reindex_corpus:268 - Re-indexing the retrieval co
+rpus
+100%|█████████████████████████████████████████████████████████████| 1599/1599 [22:02<00:00,  1.21it/s]
+100%|█████████████████████████████████████████████████████████████| 1599/1599 [22:06<00:00,  1.21it/s]
+Predicting DataLoader 0:   3%|█▏                                       | 1/33 [00:04<02:16,  0.24it/s]
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/loops/prediction_
+loop.py:255: predict returned None if it was on purpose, ignore this warning...
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 33/33 [01:14<00:00,  0.45it/s]
+2024-08-10 08:16:10.566 | INFO     | retrieval.model:on_predict_epoch_end:490 - About to construct pre
+dictions map
+2024-08-10 08:16:10.736 | INFO     | retrieval.model:on_predict_epoch_end:510 - Retrieval predictions
+saved to test_pickle_0.pkl
+2024-08-10 08:16:10.737 | INFO     | retrieval.model:on_predict_epoch_end:552 - All GPUs have complete
+d their predictions and saved the data.
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 33/33 [01:14<00:00,  0.44it/s]
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 33/33 [01:19<00:00,  0.41it/s]
+2024-08-10 08:16:19.201 | INFO     | retrieval.model:on_predict_epoch_end:490 - About to construct pre
+dictions map
+2024-08-10 08:16:19.382 | INFO     | retrieval.model:on_predict_epoch_end:510 - Retrieval predictions
+saved to test_pickle_0.pkl
+2024-08-10 08:16:19.383 | INFO     | retrieval.model:on_predict_epoch_end:552 - All GPUs have complete
+d their predictions and saved the data.
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 33/33 [01:20<00:00,  0.41it/s]
+2024-08-10 08:16:20.425 | INFO     | retrieval.main:run_cli:59 - Configuration:
+
+2024-08-10 08:16:20.662 | INFO     | retrieval.main:run_cli:59 - Configuration:
+
+2024-08-10 08:16:20.670 | INFO     | __main__:train_test_fisher:532 - Loaded the predictions pickle fi
+les
+2024-08-10 08:16:20.694 | INFO     | __main__:train_test_fisher:535 - Evaluating on /raid/adarsh/datas
+ets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/test.json
+100%|██████████████████████████████████████████████████████████| 1351/1351 [00:00<00:00, 55991.47it/s]
+2024-08-10 08:16:20.719 | INFO     | __main__:train_test_fisher:537 - R@1 = 24.368970694338344 %, R@10
+ = 63.805461623151935 %, MRR = 0.5461249843477273
+2024-08-10 08:16:20.719 | INFO     | retrieval.main:run_cli:55 - PID: 2579903
+[rank: 1] Seed set to 3407
+2024-08-10 08:16:20.876 | INFO     | retrieval.main:before_instantiate_classes:28 - Data path: /raid/a
+darsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random
+2024-08-10 08:16:20.876 | INFO     | retrieval.main:before_instantiate_classes:29 - Corpus path: /raid
+/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/corpus.jsonl
+2024-08-10 08:16:20.887 | INFO     | __main__:train_test_fisher:532 - Loaded the predictions pickle fi
+les
+2024-08-10 08:16:20.911 | INFO     | __main__:train_test_fisher:535 - Evaluating on /raid/adarsh/datas
+ets_new/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/test.json
+100%|██████████████████████████████████████████████████████████| 1351/1351 [00:00<00:00, 57723.11it/s]
+2024-08-10 08:16:20.935 | INFO     | __main__:train_test_fisher:537 - R@1 = 24.368970694338344 %, R@10
+ = 63.805461623151935 %, MRR = 0.5461249843477273
+2024-08-10 08:16:20.936 | INFO     | retrieval.main:run_cli:55 - PID: 2548655
+[rank: 0] Seed set to 3407
+2024-08-10 08:16:21.094 | INFO     | retrieval.main:before_instantiate_classes:28 - Data path: /raid/a
+darsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random
+2024-08-10 08:16:21.094 | INFO     | retrieval.main:before_instantiate_classes:29 - Corpus path: /raid
+/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/corpus.jsonl
+2024-08-10 08:16:21.920 | INFO     | common:__init__:199 - Building the corpus from /raid/adarsh/datas
+ets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/corpus.jsonl
+2024-08-10 08:16:22.075 | INFO     | common:__init__:199 - Building the corpus from /raid/adarsh/datas
+ets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+2024-08-10 08:16:30.355 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/cache_train/c
+ached_data.pkl
+Training dataset size: 152670
+2024-08-10 08:16:30.370 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/cache_pred/ca
+ched_data.pkl
+Testing dataset size: 2632
+Restoring states from the checkpoint path at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165
+f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-10 08:16:30.716 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/cache_train/c
+ached_data.pkl
+Training dataset size: 152670
+2024-08-10 08:16:30.731 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/cache_pred/ca
+ched_data.pkl
+Testing dataset size: 2632
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1,2]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1,2]
+Loaded model weights from the checkpoint at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f
+0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+Predicting: |                                                                   | 0/? [00:00<?, ?it/s]
+2024-08-10 08:16:33.971 | INFO     | retrieval.model:reindex_corpus:268 - Re-indexing the retrieval co
+rpus
+Predicting: |                                                                   | 0/? [00:00<?, ?it/s]
+2024-08-10 08:16:34.292 | INFO     | retrieval.model:reindex_corpus:268 - Re-indexing the retrieval co
+rpus
+100%|█████████████████████████████████████████████████████████████| 1758/1758 [24:26<00:00,  1.20it/s]
+100%|█████████████████████████████████████████████████████████████| 1758/1758 [24:32<00:00,  1.19it/s]
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 42/42 [01:30<00:00,  0.46it/s]
+2024-08-10 08:42:31.867 | INFO     | retrieval.model:on_predict_epoch_end:490 - About to construct pre
+dictions map
+2024-08-10 08:42:32.050 | INFO     | retrieval.model:on_predict_epoch_end:510 - Retrieval predictions
+saved to test_pickle_0.pkl
+2024-08-10 08:42:32.402 | INFO     | retrieval.model:on_predict_epoch_end:552 - All GPUs have complete
+d their predictions and saved the data.
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 42/42 [01:31<00:00,  0.46it/s]
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 42/42 [02:35<00:00,  0.27it/s]
+2024-08-10 08:43:42.527 | INFO     | retrieval.model:on_predict_epoch_end:490 - About to construct pre
+dictions map
+2024-08-10 08:43:42.728 | INFO     | retrieval.model:on_predict_epoch_end:510 - Retrieval predictions
+saved to test_pickle_0.pkl
+2024-08-10 08:43:42.729 | INFO     | retrieval.model:on_predict_epoch_end:552 - All GPUs have complete
+d their predictions and saved the data.
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 42/42 [02:35<00:00,  0.27it/s]
+2024-08-10 08:43:43.580 | INFO     | retrieval.main:run_cli:59 - Configuration:
+
+2024-08-10 08:43:43.947 | INFO     | __main__:train_test_fisher:532 - Loaded the predictions pickle fi
+les
+2024-08-10 08:43:43.987 | INFO     | __main__:train_test_fisher:535 - Evaluating on /raid/adarsh/datas
+ets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/test.json
+100%|██████████████████████████████████████████████████████████| 1493/1493 [00:00<00:00, 44214.47it/s]
+2024-08-10 08:43:44.022 | INFO     | __main__:train_test_fisher:537 - R@1 = 23.71966687636344 %, R@10
+= 64.10792315208211 %, MRR = 0.5352553191845676
+2024-08-10 08:43:44.022 | INFO     | retrieval.main:run_cli:55 - PID: 2579903
+[rank: 1] Seed set to 3407
+2024-08-10 08:43:44.182 | INFO     | retrieval.main:before_instantiate_classes:28 - Data path: /raid/a
+darsh/datasets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random
+2024-08-10 08:43:44.182 | INFO     | retrieval.main:before_instantiate_classes:29 - Corpus path: /raid
+/adarsh/datasets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/corpus.jsonl
+2024-08-10 08:43:44.470 | INFO     | retrieval.main:run_cli:59 - Configuration:
+
+2024-08-10 08:43:44.812 | INFO     | __main__:train_test_fisher:532 - Loaded the predictions pickle fi
+les
+2024-08-10 08:43:44.848 | INFO     | __main__:train_test_fisher:535 - Evaluating on /raid/adarsh/datas
+ets_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/test.json
+100%|██████████████████████████████████████████████████████████| 1493/1493 [00:00<00:00, 50635.94it/s]
+2024-08-10 08:43:44.879 | INFO     | __main__:train_test_fisher:537 - R@1 = 23.71966687636344 %, R@10
+= 64.10792315208211 %, MRR = 0.5352553191845676
+2024-08-10 08:43:44.879 | INFO     | retrieval.main:run_cli:55 - PID: 2548655
+[rank: 0] Seed set to 3407
+2024-08-10 08:43:45.036 | INFO     | retrieval.main:before_instantiate_classes:28 - Data path: /raid/a
+darsh/datasets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random
+2024-08-10 08:43:45.036 | INFO     | retrieval.main:before_instantiate_classes:29 - Corpus path: /raid
+/adarsh/datasets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/corpus.jsonl
+2024-08-10 08:43:45.337 | INFO     | common:__init__:199 - Building the corpus from /raid/adarsh/datas
+ets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/corpus.jsonl
+2024-08-10 08:43:46.097 | INFO     | common:__init__:199 - Building the corpus from /raid/adarsh/datas
+ets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+2024-08-10 08:43:54.303 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random/cache_train/cached_da
+ta.pkl
+Training dataset size: 155881
+2024-08-10 08:43:54.317 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random/cache_pred/cached_dat
+a.pkl
+Testing dataset size: 2538
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+2024-08-10 08:43:55.360 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random/cache_train/cached_da
+ta.pkl
+Training dataset size: 155881
+2024-08-10 08:43:55.375 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cac
+he /raid/adarsh/datasets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random/cache_pred/cached_dat
+a.pkl
+Testing dataset size: 2538
+Restoring states from the checkpoint path at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165
+f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1,2]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1,2]
+Loaded model weights from the checkpoint at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f
+0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+Predicting: |                                                                   | 0/? [00:00<?, ?it/s]
+2024-08-10 08:43:59.020 | INFO     | retrieval.model:reindex_corpus:268 - Re-indexing the retrieval co
+rpus
+2024-08-10 08:43:59.021 | INFO     | retrieval.model:reindex_corpus:268 - Re-indexing the retrieval co
+rpus
+100%|█████████████████████████████████████████████████████████████| 1795/1795 [25:10<00:00,  1.19it/s]
+100%|█████████████████████████████████████████████████████████████| 1795/1795 [25:15<00:00,  1.18it/s]
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 40/40 [01:34<00:00,  0.42it/s]
+2024-08-10 09:10:44.190 | INFO     | retrieval.model:on_predict_epoch_end:490 - About to construct pre
+dictions map
+2024-08-10 09:10:44.397 | INFO     | retrieval.model:on_predict_epoch_end:510 - Retrieval predictions
+saved to test_pickle_0.pkl
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 40/40 [01:33<00:00,  0.43it/s]
+2024-08-10 09:10:48.422 | INFO     | retrieval.model:on_predict_epoch_end:490 - About to construct pre
+dictions map
+2024-08-10 09:10:48.620 | INFO     | retrieval.model:on_predict_epoch_end:510 - Retrieval predictions
+saved to test_pickle_0.pkl
+2024-08-10 09:10:49.042 | INFO     | retrieval.model:on_predict_epoch_end:552 - All GPUs have complete
+d their predictions and saved the data.
+2024-08-10 09:10:49.042 | INFO     | retrieval.model:on_predict_epoch_end:552 - All GPUs have complete
+d their predictions and saved the data.
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 40/40 [01:34<00:00,  0.42it/s]
+Predicting DataLoader 0: 100%|████████████████████████████████████████| 40/40 [01:39<00:00,  0.40it/s]
+2024-08-10 09:10:51.575 | INFO     | retrieval.main:run_cli:59 - Configuration:
+
+2024-08-10 09:10:51.594 | INFO     | retrieval.main:run_cli:59 - Configuration:
+
+2024-08-10 09:10:51.955 | INFO     | __main__:train_test_fisher:532 - Loaded the predictions pickle fi
+les
+2024-08-10 09:10:51.963 | INFO     | __main__:train_test_fisher:532 - Loaded the predictions pickle fi
+les
+2024-08-10 09:10:51.992 | INFO     | __main__:train_test_fisher:535 - Evaluating on /raid/adarsh/datas
+ets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random/test.json
+  0%|                                                                        | 0/1501 [00:00<?, ?it/s]
+2024-08-10 09:10:51.997 | INFO     | __main__:train_test_fisher:535 - Evaluating on /raid/adarsh/datas
+ets_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random/test.json
+100%|██████████████████████████████████████████████████████████| 1501/1501 [00:00<00:00, 40293.19it/s]
+2024-08-10 09:10:52.031 | INFO     | __main__:train_test_fisher:537 - R@1 = 20.67962358806165 %, R@10
+= 59.47971471310789 %, MRR = 0.4984284391535889
+2024-08-10 09:10:52.031 | INFO     | __main__:train_test_fisher:546 - Average R@1 = 22.922753719587813
+ %, R@10 = 62.464366496113975 %, MRR = 0.5266029142286279
+100%|██████████████████████████████████████████████████████████| 1501/1501 [00:00<00:00, 41654.98it/s]
+2024-08-10 09:10:52.034 | INFO     | __main__:train_test_fisher:537 - R@1 = 20.67962358806165 %, R@10
+= 59.47971471310789 %, MRR = 0.4984284391535889
+2024-08-10 09:10:52.034 | INFO     | __main__:train_test_fisher:546 - Average R@1 = 22.922753719587813
+ %, R@10 = 62.464366496113975 %, MRR = 0.5266029142286279
+2024-08-10 09:10:53.671 | INFO     | retrieval.model:compute_fisher_information:68 - Computing Fisher
+Information
+  0%|                                                                       | 0/38167 [00:00<?, ?it/s]
+2024-08-10 09:10:54.033 | INFO     | retrieval.model:compute_fisher_information:68 - Computing Fisher
+Information
+  1%|▌                                                          | 366/38167   1%|▌
+                                      | 366/38167   1%|▌
+            | 367/38167   1%|▌                                                          | 367/38167
+1%|▌                                                          | 368/38167   1%|▌
+                                    | 368/38167   1%|▌
+          | 369/38167   1%|▌                                                          | 369/38167   1%
+|▌                                                          | 370/38167   1%|▌
+                                  | 370/38167   1%|▌
+        | 371/38167   1%|▌                                                          | 371/38167   1%|▌
+                                                          | 372/38167   1%|▌
+                                | 372/38167   1%|▌
+      | 373/38167   1%|▌                                                          | 373/38167   1%|▌
+                                                        | 374/38167   1%|▌
+                              | 374/38167   1%|▌
+    | 375/38167   1%|▌                                                          | 376/38167   1%|▌
+                                                      | 375/38167   1%|▌
+                            | 377/38167   1%|▌
+  | 376/38167   1%|▌                                                          | 378/38167   1%|▌
+                                                    | 377/38167   1%|▌
+                          | 379/38167   1%|▌
+| 378/38167   1%|▌                                                          | 380/38167   1%|▌
+                                                  | 381/38167   1%|▌
+                        | 379/38167   1%|▌                                                          |
+380/38167   1%|▌                                                          | 382/38167 [03:42<4:57:52,
+  6%|███▌                                                     6%|███▍
+                     | 2295/38167   6%|███▌                                                      | 235
+2/38167   6%|███▍                                                      | 2296/38167   6%|███▌
+                                             | 2353/38167   6%|███▍
+                   | 2297/38167   6%|███▌                                                      | 2354/
+38167   6%|███▍                                                      | 2298/38167   6%|███▌
+                                           | 2355/38167   6%|███▌
+                 | 2356/38167   6%|███▍                                                      | 2299/38
+167   6%|███▍                                                      | 2300/38167   6%|███▌
+                                         | 2357/38167   6%|███▍
+               | 2301/38167   6%|███▌                                                      | 2358/3816
+7   6%|███▍                                                      | 2302/38167   6%|███▌
+                                       | 2359/38167   6%|███▍
+             | 2303/38167   6%|███▌                                                      | 2360/38167
+  6%|███▌                                                      | 2304/38167   6%|███▌
+                                     | 2361/38167   6%|███▌
+           | 2305/38167   6%|███▌                                                      | 2362/38167
+6%|███▌                                                      | 2306/38167   6%|███▌
+                                   | 2363/38167   6%|███▌
+         | 2307/38167   6%|███▌                                                      | 2364/38167   6%
+|███▌                                                      | 2308/38167   6%|███▌
+                                 | 2365/38167   6%|███▌
+       | 2309/38167   6%|███▌                                                      | 2366/38167   6%|█
+ 23%|████████████▉                   36%|████████████████████                                   | 1392
+ 37%|████████████████████▌                                  | 14229/38167 [1:59:39<3:21:32,  1.9 37%|█
+███████████████████▌                                  | 14230/38167 [1:5 37%|████████████████████
+                              | 13935/38167 [1:5 37%|████████████████████▌
+      | 14231/38167 [1:5 37%|████████████████████                                   | 13936/38167 [1:5
+ 37%|████████████████████▌                                  | 14232/38167 [1:5 37%|███████████████████
+█                                   | 13937/38167 [1:5 37%|████████████████████▌
+            | 14233/38167 [1:5 37%|████████████████████                                   | 13938/3816
+7 [1:5 37%|████████████████████                                   | 13939/38167 [1:5 37%|█████████████
+███████▌                                  | 14234/38167 [1:5 37%|████████████████████
+                  | 13940/38167 [1:5 37%|████████████████████▌                                  | 1423
+5/38167 [1:5 37%|████████████████████                                   | 13941/38167 [1:5 37%|███████
+█████████████▌                                  | 14236/38167 [1:5 37%|████████████████████
+                        | 13942/38167 [1:5 37%|████████████████████▌
+| 14237/38167 [1:5 37%|████████████████████                                   | 13943/38167 [1:5 37%|█
+███████████████████▌                                  | 14238/38167 [1:5 37%|████ 37%|████████████████
+████                                   | 13949/3 37%|████████████████████
+      | 13950/38167 [1:5 37%|████████████████████▌                                  | 14244/38167 [1:5
+ 37%|████████████████████                                   | 13951/38167 [1:5 37%|███████████████████
+█▌                                  | 14245/38167 [1:5 37%|████████████████████
+            | 13952/38167 [1:5 37%|████████████████████▌                                  | 14246/3816
+7 [1:5 37%|████████████████████                                   | 13953/38167 [1:5 37%|█████████████
+███████▌                                  | 14247/38167 [1:5 37%|████████████████████
+                  | 13954/38167 [1:5 37%|████████████████████▌                                  | 1424
+8/38167 [1:5 37%|████████████████████                                   | 13955/38167 [1:5 37%|███████
+█████████████▌                                  | 14249/38167 [1:5 37%|████████████████████
+                        | 13956/38167 [1:5 37%|████████████████████▌
+| 14250/38167 [1:5 37%|████████████████████                                   | 13957/38167 [1:5 37%|█
+███████████████████▌                                  | 14251/38167 [1:5 37%|████████████████████
+                              | 13958/38167 [1:5 37%|████████████████████
+      | 13959/38167 [1:5 37%|████████████████████▌                                  | 14252/38167 [1:5
+ 37%|████████████████████▌                                  | 14253/38167 [1:5 37%|███████████████████
+█                                   | 13960/38167 [1:5 37%|████████████████████▌
+            | 14254/38167 [1:5 37%|████████████████████                                   | 13961/3816
+7 [1:5 37%|████████████████████                                   | 13962/38167 [1:5 37%|█████████████
+███████▌                                  | 14255/38167 [1:5 37%|████████████████████
+                  | 13963/38167 [1:5 37%|████████████████████▌                                  | 1425
+6/38167 [1:5 37%|████████████████████                                   | 13964/38167 [1:5 37%|███████
+█████████████▌                                  | 14257/38167 [1:5 37%|████████████████████▌
+                        | 14258/38167 [1:5 37%|████████████████████
+| 13965/38167 [1:5 37%|████████████████████▏                                  | 13966/38167 [1:5 37%|█
+███████████████████▌                                  | 14259/38167 [1:5 37%|████████████████████▏
+                              | 13967/38167 [1:5 37%|████████████████████▌
+      | 14260/38167 [1:5 37%|████████████████████▏                                  | 13968/38167 [1:5
+ 37%|████████████████████▌                                  | 14261/38167 [1:5 37%|███████████████████
+█▏                                  | 13969/38167 [1:5 37%|████████████████████▌
+            | 14262/38167 [1:5 37%|████████████████████▌                                  | 14263/3816
+7 [1:5 37%|████████████████████▏                                  | 13970/38167 [1:5 37%|█████████████
+███████▌                                  | 14264/38167 [1:5 37%|████████████████████▏
+                  | 13971/38167 [1:5 37%|████████████████████▌                                  | 1426
+5/38167 [1:5 37%|████████████████████▏                                  | 13972/38167 [1:5 37%|███████
+█████████████▌                                  | 14266/38167 [1:5 37%|████████████████████▏
+                        | 13973/38167 [1:5 37%|████████████████████▏
+| 13974/38167 [1:5 37%|████████████████████▌                                  | 14267/38167 [1:5 37%|█
+███████████████████▏                                  | 13975/38167 [1:5 37%|████████████████████▌
+                              | 14268/38167 [1:5 37%|████████████████████▏
+      | 13976/38167 [1:5 37%|████████████████████▌                                  | 14269/38167 [1:5
+ 37%|████████████████████▏                                  | 13977/38167 [1:5 37%|███████████████████
+█▌                                  | 14270/38167 [2:0 37%|████████████████████▏
+            | 13978/38167 [2:0 37%|████████████████████▌                                  | 14271/3816
+7 [2:0 37%|████████████████████▏                                  | 13979/38167 [2:0 37%|█████████████
+███████▌                                  | 14272/38167 [2:0 37%|████████████████████▏
+                  | 13980/38167 [2:0 37%|████████████████████▌                                  | 1427
+3/38167 [2:0 37%|████████████████████▏                                  | 13981/38167 [2:0 37%|███████
+█████████████▌                                  | 14274/38167 [2:0 37%|████████████████████▏
+                        | 13982/38167 [2:0 37%|████████████████████▌
+| 14275/38167 [2:0 37%|████████████████████▏                                  | 13983/38167 [2:0 37%|█
+███████████████████▌                                  | 14276/38167 [2:0 37%|████████████████████▏
+                              | 13984/38167 [2:0 37%|████████████████████▌
+      | 14277/38167 [2:0 37%|████████████████████▏                                  | 13985/38167 [2:0
+ 37%|████████████████████▌                                  | 14278/38167 [2:0 37%|███████████████████
+█▏                                  | 13986/38167 [2:0 37%|████████████████████▌
+            | 14279/38167 [2:0 37%|████████████████████▏                                  | 13987/3816
+7 [2:0 37%|████████████████████▌                                  | 14280/38167 [2:0 37%|█████████████
+███████▏                                  | 13988/38167 [2:0 37%|████████████████████▏
+                  | 13989/38167 [2:0 37%|████████████████████▌                                  | 1428
+1/38167 [2:0 37%|████████████████████▏                                  | 13990/38167 [2:0 37%|███████
+█████████████▌                                  | 14282/38167 [2:0 37%|████████████████████▏
+                        | 13991/38167 [2:0 37%|████████████████████▌
+| 14283/38167 [2:0 37%|████████████████████▏                                  | 13992/38167 [2:0 37%|█
+███████████████████▌                                  | 14284/38167 [2:0 37%|████████████████████▏
+                              | 13993/38167 [2:0 37%|████████████████████▌
+      | 14285/38167 [2:0 37%|████████████████████▏                                  | 13994/38167 [2:0
+ 37%|████████████████████▌                                  | 14286/38167 [2:0 37%|███████████████████
+█▏                                  | 13995/38167 [2:0 37%|████████████████████▌
+            | 14287/38167 [2:0 37%|████████████████████▏                                  | 13996/3816
+7 [2:0 37%|████████████████████▌                                  | 14288/38167 [2:0 37%|█████████████
+███████▌                                  | 14289/38167 [2:0 37%|████████████████████▏
+                  | 13997/38167 [2:0 37%|████████████████████▌                                  | 1429
+0/38167 [2:0 37%|████████████████████▏                                  | 13998/38167 [2:0 37%|███████
+█████████████▏                                  | 13999/38167 [2:0 37%|████████████████████▌
+                        | 14291/38167 [2:0 37%|████████████████████▌
+| 14292/38167 [2:0 37%|████████████████████▏                                  | 14000/38167 [2:0 37%|█
+███████████████████▌                                  | 14293/38167 [2:0 37%|████████████████████▏
+                              | 14001/38167 [2:0 37%|████████████████████▌
+      | 14294/38167 [2:0 37%|████████████████████▏                                  | 14002/38167 [2:0
+ 37%|████████████████████▌                                  | 14295/38167 [2:0 37%|███████████████████
+█▏                                  | 14003/38167 [2:0 37%|████████████████████▏
+            | 14004/38167 [2:0 37%|████████████████████▌                                  | 14296/3816
+7 [2:0 37%|████████████████████▏                                  | 14005/38167 [2:0 37%|█████████████
+███████▌                                  | 14297/38167 [2:0 37%|████████████████████▏
+                  | 14006/38167 [2:0 37%|████████████████████▏                                  | 1400
+7/38167 [2:0 37%|████████████████████▌                                  | 14298/38167 [2:0 37%|███████
+█████████████▏                                  | 14008/38167 [2:0 37%|████████████████████▌
+                        | 14299/38167 [2:0 37%|████████████████████▏
+| 14009/38167 [2:0 37%|████████████████████▌                                  | 14300/38167 [2:0 37%|█
+███████████████████▌                                  | 14301/38167 [2:0 37%|████████████████████▏
+                              | 14010/38167 [2:0 37%|████████████████████▌
+      | 14302/38167 [2:0 37%|████████████████████▏                                  | 14011/38167 [2:0
+ 37%|████████████████████▌                                  | 14303/38167 [2:0 37%|███████████████████
+█▏                                  | 14012/38167 [2:0 37%|████████████████████▌
+            | 14304/38167 [2:0 37%|████████████████████▏                                  | 14013/3816
+7 [2:0 37%|████████████████████▌                                  | 14305/38167 [2:0 37%|█████████████
+███████▌                                  | 14306/38167 [2:0 37%|████████████████████▏
+                  | 14014/38167 [2:0 37%|████████████████████▏                                  | 1401
+5/38167 [2:0 37%|████████████████████▌                                  | 14307/38167 [2:0 37%|███████
+█████████████▏                                  | 14016/38167 [2:0 37%|████████████████████▌
+                        | 14308/38167 [2:0 37%|████████████████████▏
+| 14017/38167 [2:0 37%|████████████████████▏                                  | 14018/38167 [2:0 37%|█
+███████████████████▌                                  | 14309/38167 [2:0 37%|████████████████████▌
+                              | 14310/38167 [2:0 37%|████████████████████▏
+      | 14019/38167 [2:0 37%|████████████████████▌                                  | 14311/38167 [2:0
+ 37%|████████████████████▏                                  | 14020/38167 [2:0 37%|███████████████████
+█▌                                  | 14312/38167 [2:0 37%|████████████████████▏
+            | 14021/38167 [2:0 38%|████████████████████▋                                  | 14313/3816
+7 [2:0 37%|████████████████████▏                                  | 14022/38167 [2:0 38%|█████████████
+███████▋                                  | 14314/38167 [2:0 37%|████████████████████▏
+                  | 14023/38167 [2:0 38%|████████████████████▋                                  | 1431
+5/38167 [2:0 37%|████████████████████▏                                  | 14024/38167 [2:0 37%|███████
+█████████████▏                                  | 14025/38167 [2:0 38%|████████████████████▋
+                        | 14316/38167 [2:0 37%|████████████████████▏
+| 14026/38167 [2:0 38%|████████████████████▋                                  | 14317/38167 [2:0 38%|█
+███████████████████▋                                  | 14318/38167 [2:0 37%|████████████████████▏
+                              | 14027/38167 [2:0 37%|████████████████████▏
+      | 14028/38167 [2:0 38%|████████████████████▋                                  | 14319/38167 [2:0
+ 37%|████████████████████▏                                  | 14029/38167 [2:0 38%|███████████████████
+█▋                                  | 14320/38167 [2:0 37%|████████████████████▏
+            | 14030/38167 [2:0 38%|████████████████████▋                                  | 14321/3816
+7 [2:0 37%|████████████████████▏                                  | 14031/38167 [2:0 38%|█████████████
+███████▋                                  | 14322/38167 [2:0 37%|████████████████████▏
+                  | 14032/38167 [2:0 38%|████████████████████▋                                  | 1432
+3/38167 [2:0 37%|████████████████████▏                                  | 14033/38167 [2:0 38%|███████
+█████████████▋                                  | 14324/38167 [2:0 37%|████████████████████▏
+                        | 14034/38167 [2:0 38%|████████████████████▋
+| 14325/38167 [2:0 37%|████████████████████▏                                  | 14035/38167 [2:0 38%|█
+███████████████████▋                                  | 14326/38167 [2:0 37%|████████████████████▏
+                              | 14036/38167 [2:0 38%|████████████████████▋
+      | 14327/38167 [2:0 37%|████████████████████▏                                  | 14037/38167 [2:0
+ 38%|████████████████████▋                                  | 14328/38167 [2:0 37%|███████████████████
+█▏                                  | 14038/38167 [2:0 38%|████████████████████▋
+            | 14329/38167 [2:0 37%|████████████████████▏                                  | 14039/3816
+7 [2:0 38%|████████████████████▋                                  | 14330/38167 [2:0 37%|█████████████
+███████▏                                  | 14040/38167 [2:0 38%|████████████████████▋
+                  | 14331/38167 [2:0 37%|████████████████████▏                                  | 1404
+1/38167 [2:0 38%|████████████████████▋                                  | 14332/38167 [2:0 37%|███████
+█████████████▏                                  | 14042/38167 [2:0 38%|████████████████████▋
+                        | 14333/38167 [2:0 37%|████████████████████▏
+| 14043/38167 [2:0 38%|████████████████████▋                                  | 14334/38167 [2:0 38%|█
+███████████████████▋                                  | 14335/38167 [2:0 37%|████████████████████▏
+                              | 14044/38167 [2:0 38%|████████████████████▋
+      | 14336/38167 [2:0 37%|████████████████████▏                                  | 14045/38167 [2:0
+ 38%|████████████████████▋                                  | 14337/38167 [2:0 37%|███████████████████
+█▏                                  | 14046/38167 [2:0 37%|████████████████████▏
+            | 14047/38167 [2:0 38%|████████████████████▋                                  | 14338/3816
+7 [2:0 37%|████████████████████▏                                  | 14048/38167 [2:0 38%|█████████████
+███████▋                                  | 14339/38167 [2:0 38%|████████████████████▋
+                  | 14340/38167 [2:0 37%|████████████████████▏                                  | 1404
+9/38167 [2:0 38%|████████████████████▋                                  | 14341/38167 [2:0 37%|███████
+█████████████▏                                  | 14050/38167 [2:0 37%|████████████████████▏
+                        | 14051/38167 [2:0 38%|████████████████████▋
+| 14342/38167 [2:0 38%|████████████████████▋                                  | 14343/38167 [2:0 37%|█
+███████████████████▏                                  | 14052/38167 [2:0 37%|████████████████████▎
+                              | 14053/38167 [2:0 38%|████████████████████▋
+      | 14344/38167 [2:0 38%|████████████████████▋                                  | 14345/38167 [2:0
+ 37%|████████████████████▎                                  | 14054/38167 [2:0 37%|███████████████████
+█▎                                  | 14055/38167 [2:0 38%|████████████████████▋
+            | 14346/38167 [2:0 38%|████████████████████▋                                  | 14347/3816
+7 [2:0 37%|████████████████████▎                                  | 14056/38167 [2:0 38%|█████████████
+███████▋                                  | 14348/38167 [2:0 37%|████████████████████▎
+                  | 14057/38167 [2:0 38%|████████████████████▋                                  | 1434
+9/38167 [2:0 37%|████████████████████▎                                  | 14058/38167 [2:0 38%|███████
+█████████████▋                                  | 14350/38167 [2:0 37%|████████████████████▎
+                        | 14059/38167 [2:0 38%|████████████████████▋
+| 14351/38167 [2:0 38%|████████████████████▋                                  | 14352/38167 [2:0 37%|█
+███████████████████▎                                  | 14060/38167 [2:0 38%|████████████████████▋
+                              | 14353/38167 [2:0 37%|████████████████████▎
+      | 14061/38167 [2:0 37%|████████████████████▎                                  | 14062/38167 [2:0
+ 38%|████████████████████▋                                  | 14354/38167 [2:0 37%|███████████████████
+█▎                                  | 14063/38167 [2:0 38%|████████████████████▋
+            | 14355/38167 [2:0 37%|████████████████████▎                                  | 14064/3816
+7 [2:0 38%|████████████████████▋                                  | 14356/38167 [2:0 37%|█████████████
+███████▎                                  | 14065/38167 [2:0 38%|████████████████████▋
+                  | 14357/38167 [2:0 37%|████████████████████▎                                  | 1406
+6/38167 [2:0 38%|████████████████████▋                                  | 14358/38167 [2:0 37%|███████
+█████████████▎                                  | 14067/38167 [2:0 37%|████████████████████▎
+                        | 14068/38167 [2:0 38%|████████████████████▋
+| 14359/38167 [2:0 37%|████████████████████▎                                  | 14069/38167 [2:0 38%|█
+███████████████████▋                                  | 14360/38167 [2:0 37%|████████████████████▎
+                              | 14070/38167 [2:0 38%|████████████████████▋
+      | 14361/38167 [2:0 37%|████████████████████▎                                  | 14071/38167 [2:0
+ 38%|████████████████████▋                                  | 14362/38167 [2:0 37%|███████████████████
+█▎                                  | 14072/38167 [2:0 38%|████████████████████▋
+            | 14363/38167 [2:0 37%|████████████████████▎                                  | 14073/3816
+7 [2:0 38%|████████████████████▋                                  | 14364/38167 [2:0 38%|█████████████
+███████▋                                  | 14365/38167 [2:0 37%|████████████████████▎
+                  | 14074/38167 [2:0 38%|████████████████████▋                                  | 1436
+6/38167 [2:00:49<2:50:18 38%|████████████████████▋                                  | 1438 38%|███████
+█████████████▋                                  | 14384/38167 [2:0 37%|████████████████████▎
+                        | 14091/38167 [2:0 37%|████████████████████▎
+| 14092/38167 [2:0 38%|████████████████████▋                                  | 14385/38167 [2:0 37%|█
+███████████████████▎                                  | 14093/38167 [2:0 38%|████████████████████▋
+                              | 14386/3 38%|█████████████████████                                  | 1
+4585/38167 [2:02:37<3:00 37%|████████████████████▌                                  | 14288/38167 [2:0
+ 38%|█████████████████████                                  | 14586/38167 [2:0 37%|███████████████████
+█▌                                  | 14289/38167 [2:0 38%|█████████████████████
+            | 14587/38167 [2:0 37%|████████████████████▌                                  | 14290/3816
+7 [2:0 38%|█████████████████████                                  | 14588/38167 [2:0 37%|█████████████
+███████▌                                  | 14291/38167 [ 39%|█████████████████████▎
+               | 14758/38167 [ 39%|█████████████████████▋                                 | 15047/3816
+7 [2:06:38<4:03: 39%|█████████████████████▎                                 | 14759/38167 [2:06:38<3:4
+8: 39%|█████████████████████▎                                 | 14760/38167 [2:06:38<3:36: 39%|███████
+██████████████▋                                 | 15048/38167 [2:06:39<4:01: 39%|█████████████████████
+▎                                 | 14761/38167 [2:06:39<3:37: 39%|█████████████████████▋
+                    | 15049/38167 [2:06:39<3:45: 39%|█████████████████████▋
+      | 15050/38167 [2:06:39<3:21: 39%|█████████████████████▎                                 | 14762/
+38167 [2:06:39<3:48: 39%|█████████████████████▋                                 | 15051/38167 [2:06:40
+<3:17: 39%|█████████████████████▎                                 | 14763/38167 [2:06:40<3:41: 39%|███
+██████████████████▋                                 | 15052/38167 [2:06:41<3:31: 39%|█████████████████
+████▎                                 | 14764/38167 [2:06:40<3:32: 39%|█████████████████████▋
+                        | 15053/38167 [2:06:41<3:13: 39%|█████████████████████▎
+          | 14765/38167 [2:06:41<3:34: 39%|█████████████████████▋                                 | 15
+054/38167 [2:06:41<3:03: 39%|█████████████████████▎                                 | 14766/38167 [2:0
+6:41<3:26: 39%|█████████████████████▋                                 | 15055/38167 [2:06:42<3:20: 39%
+|█████████████████████▎                                 | 14767/38167 [2:06:42<3:10: 39%|█████████████
+████████▋                                 | 15056/38167 [2:06:42<3:20: 39%|█████████████████████▎
+                            | 14768/38167 [2:06:42<3:23: 39%|█████████████████████▋
+              | 15057/38167 [2:06:43<3:02: 39%|█████████████████████▎
+| 14769/38167 [2:06:43<3:30: 39%|█████████████████████▋                                 | 15058/38167
+[2:06:44<3:50: 39%|█████████████████████▎                                 | 14770/38167 [2:06:43<3:37:
+ 39%|█████████████████████▎                                 | 14771/38167 [2:06:44<3:17: 39%|█████████
+████████████▋                                 | 15059/38167 [2:06:44<3:52: 39%|█████████████████████▎
+                                | 14772/38167 [2:06:44<3:03: 39%|█████████████████████▋
+                  | 15060/38167 [2:06:45<3:31: 39%|█████████████████████▋
+    | 15061/38167 [2:06:45<3:37: 39%|█████████████████████▎                                 | 14773/38
+167 [2:06:45<3:41: 39%|█████████████████████▋                                 | 15062/38167 [2:06:46<3
+:31: 39%|█████████████████████▎                                 | 14774/38167 [2:06:46<3:43: 39%|█████
+████████████████▋                                 | 15063/38167 [2:06:46<3:22: 39%|███████████████████
+██▎                                 | 14775/38167 [2:06:46<3:22: 39%|█████████████████████▋
+                      | 15064/38167 [2:06:47<3:35: 39%|█████████████████████▎
+        | 14776/38167 [2:06:47<3:31: 39%|█████████████████████▎                                 | 1477
+7/38167 [2:06:47<3:17: 39%|█████████████████████▋                                 | 15065/38167 [2:06:
+48<3:42: 39%|█████████████████████▎                                 | 14778/38167 [2:06:48<3:12: 39%|█
+████████████████████▋                                 | 15066/38167 [2:06:48<4:05: 39%|███████████████
+██████▎                                 | 14779/38167 [2:06:48<3:22: 39%|█████████████████████▋
+                          | 15067/38167 [2:06:49<3:36: 39%|█████████████████████▎
+            | 14780/38167 [2:06:49<3:19: 39%|█████████████████████▋                                 |
+15068/38167 [2:06:49<3:15: 39%|█████████████████████▎                                 | 14781/38167 [2
+:06:49<3:24: 39%|█████████████████████▋                                 | 15069/38167 [2:06:50<3:02: 3
+9%|█████████████████████▋                                 | 15070/38167 [2:06:50<2:57: 39%|███████████
+██████████▎                                 | 14782/38167 [2:06:50<3:17: 39%|█████████████████████▋
+                              | 15071/38167 [2:06:50<2:44: 39%|█████████████████████▎
+                | 14783/38167 [2:06:50<3:10: 39%|█████████████████████▋
+  | 15072/38167 [2:06:51<2:35: 39%|█████████████████████▎                                 | 14784/3816
+7 [2:06:50<2:59: 39%|█████████████████████▋                                 | 15073/38167 [2:06:51<2:3
+2: 39%|█████████████████████▎                                 | 14785/38167 [2:06:51<3:14: 39%|███████
+██████████████▋                                 | 15074/38167 [2:06:52<3:06: 39%|█████████████████████
+▎                                 | 14786/38167 [2:06:52<3:14: 39%|█████████████████████▋
+                    | 15075/38167 [2:06:52<3:24: 39%|█████████████████████▎
+      | 14787/38167 [2:06:52<3:15: 40%|█████████████████████▋                                 | 15076/
+38167 [2:06:53<3:03: 39%|█████████████████████▎                                 | 14788/38167 [2:06:52
+<2:52: 39%|█████████████████████▎                                 | 14789/38167 [2:06:53<2:45: 40%|███
+██████████████████▋                                 | 15077/38167 [2:06:53<3:08: 39%|█████████████████
+████▎                                 | 14790/38167 [2:06:53<2:57: 40%|█████████████████████▋
+                        | 15078/38167 [2:06:54<3:14: 40%|█████████████████████▋
+          | 15079/38167 [2:06:54<2:57: 39%|█████████████████████▎                                 | 14
+791/38167 [2:06:54<3:17: 40%|█████████████████████▋                                 | 15080/38167 [2:0
+6:55<2:59: 39%|█████████████████████▎                                 | 14792/38167 [2:06:54<3:10: 40%
+|█████████████████████▋                                 | 15081/38167 [2:06:55<2:48: 39%|█████████████
+████████▎                                 | 14793/38167 [2:06:55<3:07: 40%|█████████████████████▋
+                            | 15082/38167 [2:06:56<3:09: 39%|█████████████████████▎
+              | 14794/38167 [2:06:55<3:07: 40%|█████████████████████▋
+| 15083/38167 [2:06:56<3:17: 39%|█████████████████████▎                                 | 14795/38167
+[2:06:56<3:14: 39%|█████████████████████▎                                 | 14796/38167 [2:06:56<3:20:
+ 40%|█████████████████████▋                                 | 15084/38167 [2:06:57<3:27: 40%|█████████
+████████████▋                                 | 15085/38167 [2:06:57<3:20: 39%|█████████████████████▎
+                                | 14797/38167 [2:06:57<3:40: 40%|█████████████████████▋
+                  | 15086/38167 [2:06:58<3:12: 39%|█████████████████████▎
+    | 14798/38167 [2:06:57<3:21: 40%|█████████████████████▋                                 | 15087/38
+167 [2:06:58<3:07: 39%|█████████████████████▎                                 | 14799/38167 [2:06:58<3
+:13: 40%|█████████████████████▋                                 | 15088/38167 [2:06:59<3:22: 39%|█████
+████████████████▎                                 | 14800/38167 [2:06:58<3:17: 40%|███████████████████
+██▋                                 | 15089/38167 [2:06:59<3:11: 39%|█████████████████████▎
+                      | 14801/38167 [2:06:59<3:41: 40%|█████████████████████▋
+        | 15090/38167 [2:07:00<2:59: 40%|█████████████████████▋                                 | 1509
+1/38167 [2:07:00<2:49: 39%|█████████████████████▎                                 | 14802/38167 [2:07:
+00<3:39: 40%|█████████████████████▋                                 | 15092/38167 [2:07:00<2:42: 39%|█
+████████████████████▎                                 | 14803/38167 [2:07:00<3:22: 40%|███████████████
+██████▋                                 | 15093/38167 [2:07:01<2:54: 39%|█████████████████████▎
+                          | 14804/38167 [2:07:01<3:17: 40%|█████████████████████▊
+            | 15094/38167 [2:07:01<2:55: 39%|█████████████████████▎                                 |
+14805/38167 [2:07:01<3:03: 39%|█████████████████████▎                                 | 14806/38167 [2
+:07:02<3:09: 40%|█████████████████████▊                                 | 15095/38167 [2:07:02<3:09: 3
+9%|█████████████████████▎                                 | 14807/38167 [2:07:02<2:50: 40%|███████████
+██████████▊                                 | 15096/38167 [2:07:02<2:54: 39%|█████████████████████▎
+                              | 14808/38167 [2:07:02<2:37: 40%|█████████████████████▊
+                | 15097/38167 [2:07:03<3:10: 39%|█████████████████████▎
+  | 14809/38167 [2:07:03<3:05: 40%|█████████████████████▊                                 | 15098/3816
+7 [2:07:03<3:03: 39%|█████████████████████▎                                 | 14810/38167 [2:07:03<3:0
+1: 40%|█████████████████████▊                                 | 15099/38167 [2:07:04<2:58: 39%|███████
+██████████████▎                                 | 14811/38167 [2:07:04<3:01: 40%|█████████████████████
+▊                                 | 15100/38167 [2:07:04<3:11: 39%|█████████████████████▎
+                    | 14812/38167 [2:07:04<3:03: 40%|█████████████████████▊
+      | 15101/38167 [2:07:05<3:05: 39%|█████████████████████▎                                 | 14813/
+38167 [2:07:05<3:04: 40%|█████████████████████▊                                 | 15102/38167 [2:07:05
+<2:54: 40%|█████████████████████▊                                 | 15103/38167 [2:07:06<2:42: 39%|███
+██████████████████▎                                 | 14814/38167 [2:07:05<3:15: 40%|█████████████████
+████▊                                 | 15104/38167 [2:07:06<2:45: 39%|█████████████████████▎
+                        | 14815/38167 [2:07:06<3:06: 40%|█████████████████████▊
+          | 15105/38167 [2:07:07<3:01: 39%|█████████████████████▎                                 | 14
+816/38167 [2:07:07<3:47: 40%|█████████████████████▊                                 | 15106/38167 [2:0
+7:07<3:01: 39%|█████████████████████▎                                 | 14817/38167 [2:07:07<3:21: 40%
+|█████████████████████▊                                 | 15107/38167 [2:07:07<2:50: 39%|█████████████
+████████▎                                 | 14818/38167 [2:07:07<3:19: 40%|█████████████████████▊
+                            | 15108/38167 [2:07:08<2:41: 39%|█████████████████████▎
+              | 14819/38167 [2:07:08<3:15: 40%|█████████████████████▊
+| 15109/38167 [2:07:08<2:49: 40%|█████████████████████▊                                 | 15110/38167
+[2:07:09<3:07: 39%|█████████████████████▎                                 | 14820/38167 [2:07:09<3:50:
+ 40%|█████████████████████▊                                 | 15111/38167 [2:07:09<2:56: 39%|█████████
+████████████▎                                 | 14821/38167 [2:07:09<3:54: 40%|█████████████████████▊
+                                | 15112/38167 [2:07:10<3:04: 39%|█████████████████████▎
+                  | 14822/38167 [2:07:10<3:44: 40%|█████████████████████▊
+    | 15113/38167 [2:07:10<3:06: 40%|█████████████████████▊                                 | 15114/38
+167 [2:07:11<3:04: 39%|█████████████████████▎                                 | 14823/38167 [2:07:10<3
+:47: 40%|█████████████████████▊                                 | 15115/38167 [2:07:11<3:08: 39%|█████
+████████████████▎                                 | 14824/38167 [2:07:11<3:44: 40%|███████████████████
+██▊                                 | 15116/38167 [2:07:12<2:54: 39%|█████████████████████▎
+                      | 14825/38167 [2:07:12<3:48: 40%|█████████████████████▊
+        | 15117/38167 [2:07:12<2:43: 39%|█████████████████████▎                                 | 1482
+6/38167 [2:07:12<3:31: 40%|█████████████████████▊                                 | 15118/38167 [2:07:
+13<3:07: 39%|█████████████████████▎                                 | 14827/38167 [2:07:13<3:42: 40%|█
+████████████████████▊                                 | 15119/38167 [2:07:13<3:16: 39%|███████████████
+██████▎                                 | 14828/38167 [2:07:13<3:59: 40%|█████████████████████▊
+                          | 15120/38167 [2:07:14<3:38: 40%|█████████████████████▊
+            | 15121/38167 [2:07:14<3:22: 39%|█████████████████████▎                                 |
+14829/38167 [2:07:14<4:17: 40%|█████████████████████▊                                 | 15122/38167 [2
+:07:15<3:26: 39%|█████████████████████▎                                 | 14830/38167 [2:07:15<4:09: 4
+0%|█████████████████████▊                                 | 15123/38167 [2:07:15<3:35: 39%|███████████
+██████████▎                                 | 14831/38167 [2:07:15<3:41: 39%|█████████████████████▎
+                              | 14832/38167 [2:07:16<3:23: 40%|█████████████████████▊
+                | 15124/38167 [2:07:16<3:25: 39%|█████████████████████▎
+  | 14833/38167 [2:07:16<3:08: 40%|█████████████████████▊                                 | 15125/3816
+7 [2:07:16<3:12: 39%|█████████████████████▍                                 | 14834/38167 [2:07:16<3:0
+5: 40%|█████████████████████▊                                 | 15126/38167 [2:07:17<3:01: 39%|███████
+██████████████▍                                 | 14835/38167 [2:07:17<2:50: 40%|█████████████████████
+▊                                 | 15127/38167 [2:07:17<2:55: 40%|█████████████████████▊
+                    | 15128/38167 [2:07:18<2:54: 39%|█████████████████████▍
+      | 14836/38167 [2:07:17<3:09: 40%|█████████████████████▊                                 | 15129/
+38167 [2:07:18<2:59: 39%|█████████████████████▍                                 | 14837/38167 [2:07:18
+<3:17: 40%|█████████████████████▊                                 | 15130/38167 [2:07:19<3:14: 39%|███
+██████████████████▍                                 | 14838/38167 [2:07:18<3:20: 40%|█████████████████
+████▊                                 | 15131/38167 [2:07:19<3:00: 39%|█████████████████████▍
+                        | 14839/38167 [2:07:19<3:07: 39%|█████████████████████▍
+          | 14840/38167 [2:07:19<2:54: 40%|█████████████████████▊                                 | 15
+132/38167 [2:07:20<3:09: 39%|█████████████████████▍                                 | 14841/38167 [2:0
+7:20<3:00: 40%|█████████████████████▊                                 | 15133/38167 [2:07:20<3:14: 39%
+|█████████████████████▍                                 | 14842/38167 [2:07:20<3:00: 40%|█████████████
+████████▊                                 | 15134/38167 [2:07:21<3:24: 39%|█████████████████████▍
+                            | 14843/38167 [2:07:21<2:50: 40%|█████████████████████▊
+              | 15135/38167 [2:07:21<3:24: 39%|█████████████████████▍
+| 14844/38167 [2:07:21<2:58: 39%|█████████████████████▍                                 | 14845/38167
+[2:07:22<3:05: 40%|█████████████████████▊                                 | 15136/38167 [2:07:22<3:44:
+ 40%|█████████████████████▊                                 | 15137/38167 [2:07:22<3:21: 39%|█████████
+████████████▍                                 | 14846/38167 [2:07:22<3:15: 40%|█████████████████████▊
+                                | 15138/38167 [2:07:23<3:06: 39%|█████████████████████▍
+                  | 14847/38167 [2:07:23<3:06: 40%|█████████████████████▊
+    | 15139/38167 [2:07:23<3:21: 39%|█████████████████████▍                                 | 14848/38
+167 [2:07:23<3:46: 40%|█████████████████████▊                                 | 15140/38167 [2:07:24<3
+:20: 39%|█████████████████████▍                                 | 14849/38167 [2:07:24<3:17: 40%|█████
+████████████████▊                                 | 15141/38167 [2:07:25<3:25: 39%|███████████████████
+██▍                                 | 14850/38167 [2:07:24<3:10: 40%|█████████████████████▊
+                      | 15142/38167 [2:07:25<3:29: 39%|█████████████████████▍
+        | 14851/38167 [2:07:25<3:20: 40%|█████████████████████▊                                 | 1514
+3/38167 [2:07:25<3:07: 39%|█████████████████████▍                                 | 14852/38167 [2:07:
+25<3:17: 40%|█████████████████████▊                                 | 15144/38167 [2:07:26<2:52: 39%|█
+████████████████████▍                                 | 14853/38167 [2:07:26<3:05: 40%|███████████████
+██████▊                                 | 15145/38167 [2:07:26<2:42: 39%|█████████████████████▍
+                          | 14854/38167 [2:07:26<3:23: 40%|█████████████████████▊
+            | 15146/38167 [2:07:27<2:50: 40%|█████████████████████▊                                 |
+15147/38167 [2:07:27<3:08: 39%|█████████████████████▍                                 | 14855/38167 [2
+:07:27<3:45: 39%|█████████████████████▍                                 | 14856/38167 [2:07:27<3:17: 4
+0%|█████████████████████▊                                 | 15148/38167 [2:07:28<3:14: 39%|███████████
+██████████▍                                 | 14857/38167 [2:07:28<3:28: 40%|█████████████████████▊
+                              | 15149/38167 [2:07:28<3:22: 39%|█████████████████████▍
+                | 14858/38167 [2:07:28<3:19: 40%|█████████████████████▊
+  | 15150/38167 [2:07:29<3:29: 39%|█████████████████████▍                                 | 14859/3816
+7 [2:07:29<3:18: 40%|█████████████████████▊                                 | 15151/38167 [2:07:30<3:3
+2: 39%|█████████████████████▍                                 | 14860/38167 [2:07:29<3:13: 40%|███████
+██████████████▊                                 | 15152/38167 [2:07:30<3:19: 39%|█████████████████████
+▍                                 | 14861/38167 [2:07:30<3:41: 40%|█████████████████████▊
+                    | 15153/38167 [2:07:30<3:16: 39%|█████████████████████▍
+      | 14862/38167 [2:07:31<3:33: 40%|█████████████████████▊                                 | 15154/
+38167 [2:07:31<3:27: 39%|█████████████████████▍                                 | 14863/38167 [2:07:31
+<3:18: 40%|█████████████████████▊                                 | 15155/38167 [2:07:32<3:37: 39%|███
+██████████████████▍                                 | 14864/38167 [2:07:32<3:14: 39%|█████████████████
+████▍                                 | 14865/38167 [2:07:32<3:13: 40%|█████████████████████▊
+                        | 15156/38167 [2:07:32<3:49: 40%|█████████████████████▊
+          | 15157/38167 [2:07:33<3:22: 39%|█████████████████████▍                                 | 14
+866/38167 [2:07:33<3:24: 40%|█████████████████████▊                                 | 15158/38167 [2:0
+7:33<3:06: 40%|█████████████████████▊                                 | 15159/38167 [2:07:34<2:56: 39%
+|█████████████████████▍                                 | 14867/38167 [2:07:33<3:55: 40%|█████████████
+████████▊                                 | 15160/38167 [2:07:34<2:53: 39%|█████████████████████▍
+                            | 14868/38167 [2:07:34<3:51: 40%|█████████████████████▊
+              | 15161/38167 [2:07:35<3:33: 39%|█████████████████████▍
+| 14869/38167 [2:07:35<3:48: 40%|█████████████████████▊                                 | 15162/38167
+[2:07:35<3:20: 39%|█████████████████████▍                                 | 14870/38167 [2:07:35<3:23:
+ 40%|█████████████████████▊                                 | 15163/38167 [2:07:36<3:36: 39%|█████████
+████████████▍                                 | 14871/38167 [2:07:36<3:39: 39%|█████████████████████▍
+                                | 14872/38167 [2:07:36<3:31: 40%|█████████████████████▊
+                  | 15164/38167 [2:07:36<3:40: 39%|█████████████████████▍
+    | 14873/38167 [2:07:37<3:36: 40%|█████████████████████▊                                 | 15165/38
+167 [2:07:37<3:39: 39%|█████████████████████▍                                 | 14874/38167 [2:07:37<3
+:11: 40%|█████████████████████▊                                 | 15166/38167 [2:07:38<3:31: 39%|█████
+████████████████▍                                 | 14875/38167 [2:07:37<2:50: 40%|███████████████████
+██▊                                 | 15167/38167 [2:07:38<3:15: 39%|█████████████████████▍
+                      | 14876/38167 [2:07:38<2:59: 40%|█████████████████████▊
+        | 15168/38167 [2:07:38<2:58: 40%|█████████████████████▊                                 | 1516
+9/38167 [2:07:39<2:59: 39%|█████████████████████▍                                 | 14877/38167 [2:07:
+39<3:33: 39%|█████████████████████▍                                 | 14878/38167 [2:07:39<3:38: 40%|█
+████████████████████▊                                 | 15170/38167 [2:07:40<3:33: 40%|███████████████
+██████▊                                 | 15171/38167 [2:07:40<3:15: 39%|█████████████████████▍
+                          | 14879/38167 [2:07:40<3:23: 40%|█████████████████████▊
+            | 15172/38167 [2:07:40<2:58: 39%|█████████████████████▍                                 |
+14880/38167 [2:07:40<3:05: 39%|█████████████████████▍                                 | 14881/38167 [2
+:07:40<3:00: 40%|█████████████████████▊                                 | 15173/38167 [2:07:41<3:12: 3
+9%|█████████████████████▍                                 | 14882/38167 [2:07:41<2:57: 40%|███████████
+██████████▊                                 | 15174/38167 [2:07:41<3:12: 39%|█████████████████████▍
+                              | 14883/38167 [2:07:41<2:47: 40%|█████████████████████▊
+                | 15175/38167 [2:07:42<3:26: 39%|█████████████████████▍
+  | 14884/38167 [2:07:42<3:02: 39%|█████████████████████▍                                 | 14885/3816
+7 [2:07:42<2:53: 40%|█████████████████████▊                                 | 15176/38167 [2:07:43<3:3
+8: 39%|█████████████████████▍                                 | 14886/38167 [2:07:43<2:47: 40%|███████
+██████████████▊                                 | 15177/38167 [2:07:43<3:22: 39%|█████████████████████
+▍                                 | 14887/38167 [2:07:43<2:46: 40%|█████████████████████▊
+                    | 15178/38167 [2:07:44<3:08: 39%|█████████████████████▍
+      | 14888/38167 [2:07:43<2:39: 40%|█████████████████████▊                                 | 15179/
+38167 [2:07:44<2:52: 39%|█████████████████████▍                                 | 14889/38167 [2:07:44
+<2:39: 40%|█████████████████████▊                                 | 15180/38167 [2:07:44<2:51: 39%|███
+██████████████████▍                                 | 14890/38167 [2:07:44<3:02: 40%|█████████████████
+████▉                                 | 15181/38167 [2:07:45<3:10: 39%|█████████████████████▍
+                        | 14891/38167 [2:07:45<2:50: 40%|█████████████████████▉
+          | 15182/38167 [2:07:45<3:13: 39%|█████████████████████▍                                 | 14
+892/38167 [2:07:45<2:53: 39%|█████████████████████▍                                 | 14893/38167 [2:0
+7:46<2:47: 40%|█████████████████████▉                                 | 15183/38167 [2:07:46<3:15: 40%
+|█████████████████████▉                                 | 15184/38167 [2:07:46<3:09: 39%|█████████████
+████████▍                         39%|█████████████████████▌                                 | 14958/3
+8167 [2:08:2 40%|█████████████████████▉                                 | 15248/38167 [2:08:20<3:24: 3
+9%|█████████████████████▌                                 | 14959/38167 [2:08:20<2:54: 40%|███████████
+██████████▉                                 | 15249/38167 [2:08:21<3:07: 39%|█████████████████████▌
+                              | 14960/38167 [2:08:21<3:18: 40%|█████████████████████▉
+                | 15250/38167 [2:08:21<2:56: 39%|█████████████████████▌
+  | 14961/38167 [2:08:21<3:09: 40%|█████████████████████▉                                 | 15251/3816
+7 [2:08:22<3:00: 39%|█████████████████████▌                                 | 14962/38167 [2:08:22<3:1
+0: 40%|█████████████████████▉                                 | 15252/38167 [2:08:22<3:15: 39%|███████
+██████████████▌                                 | 14963/38167 [2:08:22<3:43: 40%|█████████████████████
+▉                                 | 15253/38167 [2:08:23<3:40: 39%|█████████████████████▌
+                    | 14964/38167 [2:08:23<3:24: 40%|█████████████████████▉
+      | 15254/38167 [2:08:23<3:27: 39%|█████████████████████▌                                 | 14965/
+38167 [2:08:24<3:42: 40%|█████████████████████▉                                 | 15255/38167 [2:08:24
+<3:43: 39%|█████████████████████▌                                 | 14966/38167 [2:08:24<3:37: 40%|███
+██████████████████▉                                 | 15256/38167 [2:08:25<3:51: 39%|█████████████████
+████▌                                 | 14967/38167 [2:08:25<3:25: 40%|█████████████████████▉
+                        | 15257/38167 [2:08:25<3:21: 39%|█████████████████████▌
+          | 14968/38167 [2:08:25<3:14: 40%|█████████████████████▉                                 | 15
+258/38167 [2:08:25<2:59: 39%|█████████████████████▌                                 | 14969/38167 [2:0
+8:25<2:56: 39%|█████████████████████▌                                 | 14970/38167 [2:08:26<2:45: 40%
+|█████████████████████▉                                 | 15259/38167 [2:08:26<3:37: 39%|█████████████
+████████▌                                 | 14971/38167 [2:08:26<2:43: 40%|█████████████████████▉
+                            | 15260/38167 [2:08:27<3:30: 39%|█████████████████████▌
+              | 14972/38167 [2:08:27<3:06: 40%|█████████████████████▉
+| 1 39%|█████████████████████▋                                 | 15022/38167 [2:08:51<3:04 40%|███████
+███████████████                                 | 15310/38167 [2:0 39%|█████████████████████▋
+                        | 15023/38167 [2:0 40%|██████████████████████
+| 15311/38167 [2:0 39%|█████████████████████▋                                 | 15024/38167 [2:0 40%|█
+█████████████████████                                 | 15312/38167 [2:0 39%|█████████████████████▋
+                              | 15025/38167 [2:0 40%|██████████████████████
+      | 15313/38167 [2:0 39%|█████████████████████▋                                 | 15026/38167 [2:0
+ 40%|██████████████████████                                 | 15314/38167 [2:0 39%|███████████████████
+██▋                                 | 15027/38167 [2:0 40%|██████████████████████
+            | 15315/38167 [2:0 39%|█████████████████████▋                                 | 15028/3816
+7 [2:0 40%|██████████████████████                                 | 15316/38167 [2:0 39%|█████████████
+████████▋                                 | 15029/38167 [2:0 40%|██████████████████████
+                  | 15317/38167 [2:0 39%|█████████████████████▋                                 | 1503
+0/38167 [2:0 40%|██████████████████████                                 | 15318/38167 [2:0 39%|███████
+██████████████▋                                 | 15031/38167 [2:0 40%|██████████████████████
+                        | 15319/38167 [2:0 40%|██████████████████████
+| 15320/38167 [2:0 39%|█████████████████████▋                                 | 15032/38167 [2:0 40%|█
+█████████████████████                                 | 15321/38167 [2:0 39%|█████████████████████▋
+                              | 15033/38167 [2:0 40%|██████████████████████
+      | 15322/38167 [2:0 39%|█████████████████████▋                                 | 15034/38167 [2:0
+ 39%|█████████████████████▋                                 | 15035/38167 [2:0 40%|███████████████████
+███                                 | 15323/38167 [2:0 39%|█████████████████████▋
+            | 15036/38167 [2:0 40%|██████████████████████                                 | 15324/3816
+7 [2:0 40%|██████████████████████                                 | 15325/38167 [2:0 39%|█████████████
+████████▋                                 | 15037/38167 [2:0 40%|██████████████████████
+                  | 15326/38167 [2:0 39%|█████████████████████▋                                 | 1503
+8/38167 [2:0 40%|██████████████████████                                 | 15327/38167 [2:0 39%|███████
+██████████████▋                                 | 15039/38167 [2:0 40%|██████████████████████
+                        | 15328/38167 [2:0 39%|█████████████████████▋
+| 15040/38167 [2:0 39%|█████████████████████▋                                 | 15041/38167 [2:0 40%|█
+█████████████████████                                 | 15329/38167 [2:0 39%|█████████████████████▋
+                              | 15042/38167 [2:0 40%|██████████████████████
+      | 15330/38167 [2:0 39%|█████████████████████▋                                 | 15043/38167 [2:0
+ 40%|██████████████████████                                 | 15331/38167 [2:0 39%|███████████████████
+██▋                                 | 15044/38167 [2:0 40%|██████████████████████
+            | 15332/38167 [2:0 40%|██████████████████████                                 | 15333/3816
+7 [2:0 39%|█████████████████████▋                                 | 15045/38167 [2:0 39%|█████████████
+████████▋                                 | 15046/38167 [2:0 40%|██████████████████████
+                  | 15334/38167 [2:0 39%|█████████████████████▋                                 | 1504
+7/38167 [2:0 40%|██████████████████████                                 | 15335/38167 [2:0 40%|███████
+███████████████                                 | 15336/38167 [2:0 39%|█████████████████████▋
+                        | 15048/38167 [2:0 40%|██████████████████████
+| 15337/38167 [2:0 39%|█████████████████████▋                                 | 15049/38167 [2:0 40%|█
+█████████████████████                                 | 15338/38167 [2:0 39%|█████████████████████▋
+                              | 15050/38167 [2:0 40%|██████████████████████
+      | 15339/38167 [2:0 39%|█████████████████████▋                                 | 15051/38167 [2:0
+ 40%|██████████████████████                                 | 15340/38167 [2:0 39%|███████████████████
+██▋                                 | 15052/38167 [2:0 40%|██████████████████████
+            | 15341/38167 [2:0 39%|█████████████████████▋                                 | 15053/3816
+7 [2:0 39%|█████████████████████▋                                 | 15054/38167 [2:0 40%|█████████████
+█████████                                 | 15342/38167 [2:0 40%|██████████████████████
+                  | 15343/38167 [2:0 39%|█████████████████████▋                                 | 1505
+5/38167 [2:0 39%|█████████████████████▋                                 | 15056/38167 [2:0 40%|███████
+███████████████                                 | 15344/38167 [2:0 39%|█████████████████████▋
+                        | 15057/38167 [2:0 40%|██████████████████████
+| 15345/38167 [2:0 39%|█████████████████████▋                                 | 15058/38167 [2:0 40%|█
+█████████████████████                                 | 15346/38167 [2:0 39%|█████████████████████▋
+                              | 15059/38167 [2:0 40%|██████████████████████
+      | 15347/38167 [2:0 39%|█████████████████████▋                                 | 15060/38167 [2:0
+ 39%|█████████████████████▋                                 | 15061/38167 [2:0 40%|███████████████████
+███                                 | 15348/38167 [2:0 39%|█████████████████████▋
+            | 15062/38167 [2:0 40%|██████████████████████                                 | 15349/3816
+7 [2:0 39%|█████████████████████▋                                 | 15063/38167 [2:0 40%|█████████████
+█████████                                 | 15350/38167 [2:0 39%|█████████████████████▋
+                  | 15064/38167 [2:0 40%|██████████████████████                                 | 1535
+1/38167 [2:0 39%|█████████████████████▋                                 | 15065/38167 [2:0 40%|███████
+███████████████                                 | 15352/38167 [2:0 40%|██████████████████████
+                        | 15353/38167 [2:0 39%|█████████████████████▋
+| 15066/38167 [2:0 40%|██████████████████████▏                                | 15354/38167 [2:0 39%|█
+████████████████████▋                                 | 15067/38167 [2:0 39%|█████████████████████▋
+                              | 15068/38167 [2:0 40%|██████████████████████▏
+      | 15355/38167 [2:0 39%|█████████████████████▋                                 | 15069/38167 [2:0
+ 40%|██████████████████████▏                                | 15356/38167 [2:0 39%|███████████████████
+██▋                                 | 15070/38167 [2:0 40%|██████████████████████▏
+            | 15357/38167 [2:0 39%|█████████████████████▋                                 | 15071/3816
+7 [2:0 40%|██████████████████████▏                                | 15358/38167 [2:0 39%|█████████████
+████████▋                                 | 15072/38167 [2:0 39%|█████████████████████▋
+                  | 15073/38167 [2:0 40%|██████████████████████▏                                | 1535
+9/38167 [2:0 39%|█████████████████████▋                                 | 15074/38167 [2:0 40%|███████
+███████████████▏                                | 15360/38167 [2:0 39%|█████████████████████▋
+                        | 15075/38167 [2:0 40%|██████████████████████▏
+| 15361/38167 [2:0 40%|█████████████████████▋                                 | 15076/38167 [2:0 40%|█
+█████████████████████▏                                | 15362/38167 [2:0 40%|█████████████████████▋
+                              | 15077/38167 [2:0 40%|██████████████████████▏
+      | 15363/38167 [2:0 40%|█████████████████████▋                                 | 15078/38167 [2:0
+ 40%|██████████████████████▏                                | 15364/38167 [2:0 40%|███████████████████
+██▋                                 | 15079/38167 [2:0 40%|██████████████████████▏
+            | 15365/38167 [2:0 40%|█████████████████████▋                                 | 15080/3816
+7 [2:0 40%|██████████████████████▏                                | 15366/38167 [2:0 40%|█████████████
+████████▋                                 | 15081/38167 [2:0 40%|██████████████████████▏
+                  | 15367/38167 [2:0 40%|██████████████████████▏                                | 1536
+8/38167 [2:0 40%|█████████████████████▋                                 | 15082/38167 [2:0 40%|███████
+██████████████▋                                 | 15083/38167 [2:0 40%|██████████████████████▏
+                        | 15369/38167 [2:0 40%|█████████████████████▋
+| 15084/38167 [2:0 40%|██████████████████████▏                                | 15370/38167 [2:0 40%|█
+█████████████████████▏                                | 15371/38167 [2:0 40%|█████████████████████▋
+                              | 15085/38167 [2:0 40%|██████████████████████▏
+      | 15372/38167 [2:0 40%|█████████████████████▋                                 | 15086/38167 [2:0
+ 40%|██████████████████████▏                                | 15373/38167 [2:0 40%|███████████████████
+██▋                                 | 15087/38167 [2:0 40%|██████████████████████▏
+            | 15374/38167 [2:0 40%|█████████████████████▋                                 | 15088/3816
+7 [2:0 40%|██████████████████████▏                                | 15375/38167 [2:0 40%|█████████████
+█████████▏                                | 15376/38167 [2:0 40%|█████████████████████▋
+                  | 15089/38167 [2:0 40%|██████████████████████▏                                | 1537
+7/38167 [2:0 40%|█████████████████████▋                                 | 15090/38167 [2:0 40%|███████
+██████████████▋                                 | 15091/38167 [2:0 40%|██████████████████████▏
+                        | 15378/38167 [2:0 40%|█████████████████████▋
+| 15092/38167 [2:0 40%|██████████████████████▏                                | 15379/38167 [2:0 40%|█
+█████████████████████▏                                | 15380/38167 [2:0 40%|█████████████████████▋
+                              | 15093/38167 [2:0 40%|██████████████████████▏
+      | 15381/38167 [2:0 40%|█████████████████████▊                                 | 15094/38167 [2:0
+ 40%|██████████████████████▏                                | 15382/38167 [2:0 40%|███████████████████
+███▏                                | 15383/38167 [2:0 40%|█████████████████████▊
+            | 15095/38167 [2:0 40%|█████████████████████▊                                 | 15096/3816
+7 [2:0 40%|██████████████████████▏                                | 15384/38167 [2:0 40%|█████████████
+████████▊                                 | 15097/38167 [2:0 40%|██████████████████████▏
+                  | 15385/38167 [2:0 40%|██████████████████████▏                                | 1538
+6/38167 [2:0 40%|█████████████████████▊                                 | 15098/38167 [2:0 40%|███████
+███████████████▏                                | 15387/38167 [2:0 40%|█████████████████████▊
+                        | 15099/38167 [2:0 40%|██████████████████████▏
+| 15388/38167 [2:0 40%|█████████████████████▊                                 | 15100/38167 [2:0 40%|█
+█████████████████████▏                                | 15389/38167 [2:0 40%|█████████████████████▊
+                              | 15101/38167 [2:0 40%|██████████████████████▏
+      | 15390/38167 [2:0 40%|█████████████████████▊                                 | 15102/38167 [2:0
+ 40%|██████████████████████▏                                | 15391/38167 [2:0 40%|███████████████████
+██▊                                 | 15103/38167 [2:0 40%|██████████████████████▏
+            | 15392/38167 [2:0 40%|█████████████████████▊          40%|██████████████████████
+       41%|██████████████████████▌                                | 15636/38167 [2:1 40%|█████████████
+█████████                                 | 15345/38167 [2:1 41%|██████████████████████▌
+                  | 15637/38167 [2:1 40%|██████████████████████                                 | 1534
+6/38167 [2:1 40%|██████████████████████                                 | 15347/38167 [2:1 41%|███████
+███████████████▌                                | 15638/38167 [2:1 40%|██████████████████████
+                        | 15348/38167 [2:1 41%|██████████████████████▌
+| 15639/38167 [2:1 40%|██████████████████████                                 | 15349/38167 [2:1 41%|█
+█████████████████████▌                                | 15640/38167 [2:1 40%|██████████████████████
+                              | 15350/38167 [2:1 41%|██████████████████████▌
+      | 15641/38167 [2:1 40%|██████████████████████                                 | 15351/3816 72%|█
+██████████████████████████████████████▌               | 27438/38167 [3:54:19<1:31:37,  1.95it/s]
+2024-08-10 13:05:13.443 | INFO     | __main__:main:830 - An error occurred: CUDA out of memory. Tried
+to allocate 50.00 MiB. GPU
+Traceback (most recent call last):
+  File "/home/adarsh/ReProver/main.py", line 794, in main
+    "unproved_sorries": [],
+  File "/home/adarsh/ReProver/main.py", line 621, in retrieve_proof
+    logger.info(f"Finished generating benchmark at {dst_dir}")
+  File "/home/adarsh/ReProver/main.py", line 567, in train_test_fisher
+    f.write("\n")
+  File "/home/adarsh/ReProver/retrieval/model.py", line 85, in compute_fisher_information
+    loss = self.forward(
+  File "/home/adarsh/ReProver/retrieval/model.py", line 199, in forward
+    neg_premise_embs = [
+  File "/home/adarsh/ReProver/retrieval/model.py", line 200, in <listcomp>
+    self._encode(ids, mask)
+  File "/home/adarsh/ReProver/retrieval/model.py", line 169, in _encode
+    hidden_states = self.encoder(
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/models/t5/mode
+ling_t5.py", line 1974, in forward
+    encoder_outputs = self.encoder(
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/models/t5/mode
+ling_t5.py", line 1109, in forward
+    layer_outputs = layer_module(
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/models/t5/mode
+ling_t5.py", line 749, in forward
+    hidden_states = self.layer[-1](hidden_states)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/models/t5/mode
+ling_t5.py", line 338, in forward
+    forwarded_states = self.DenseReluDense(forwarded_states)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/models/t5/mode
+ling_t5.py", line 306, in forward
+    hidden_gelu = self.act(self.wi_0(hidden_states))
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py"
+, line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/activations.py
+", line 56, in forward
+    return 0.5 * input * (1.0 + torch.tanh(math.sqrt(2.0 / math.pi) * (input + 0.044715 * torch.pow(in
+put, 3.0))))
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 50.00 MiB. GPU
+ 93%|████████████████████████████████████████████████████▉    | 35479/38167 [4:26:37<10:32,  4.25it/s]
+ 93%|████████████████████████████████████████████████████▉    | 35480/38167 [4:26:37<10:02,  4.46it/s]
+ 93%|█████████████████████████████████████████████████████    | 35500/38167 [4:26:42<11:22,  3.91it/s]

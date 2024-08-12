@@ -298,7 +298,7 @@ class BestFirstSearchProver:
 
                 node.check_invariants()
 
-
+# TODO: later ensure this has correct stuff like config dict
 @ray.remote
 class CpuProver(BestFirstSearchProver):
     """Ray actor for running an instance of `BestFirstSearchProver` on a CPU."""
@@ -333,7 +333,7 @@ class CpuProver(BestFirstSearchProver):
 # TODO: reduce repetition with main
 
 RAID_DIR = "/raid/adarsh"
-CHECKPOINT_DIR = "checkpoints"
+CHECKPOINT_DIR = "checkpoints_new"
 
 def find_latest_checkpoint():
     """Finds the most recent checkpoint."""
@@ -363,15 +363,15 @@ class GpuProver(BestFirstSearchProver):
             tac_gen = FixedTacticGenerator(tactic, module)
         else:
             # TODO: change
-            model_checkpoint_path = find_latest_checkpoint() # TODO: but should not use latest premise retriever for tacitc generator 
-            # model_checkpoint_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt"
+            model_checkpoint_path = find_latest_checkpoint()
+            # model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
             config = {
-                "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small", # TODO: change the names to correct retriever and generator throughout
+                "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",
                 "lr": 1e-3,
                 "warmup_steps": 1000,
                 "num_beams": 5,
                 "eval_num_retrieved": 10,
-                "eval_num_workers": 5,
+                "eval_num_workers": 1,
                 "eval_num_gpus": 1,
                 "eval_num_theorems": 100,
                 "max_inp_seq_len": 512,
@@ -430,15 +430,15 @@ class DistributedProver:
                 device = torch.device("cuda") if num_gpus > 0 else torch.device("cpu")
                 # TODO: change
                 model_checkpoint_path = find_latest_checkpoint()
-                # model_checkpoint_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning_retriever.ckpt"
+                # model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
                 config = {
-                    "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
+                    "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",
                     "lr": 1e-3,
                     "warmup_steps": 1000,
                     "num_beams": 5,
                     "eval_num_retrieved": 10,
-                    "eval_num_workers": 5,
-                    "eval_num_gpus": 1,
+                    "eval_num_workers": 1,
+                    "eval_num_gpus": 1,  # TODO: change for GPU
                     "eval_num_theorems": 100,
                     "max_inp_seq_len": 512,
                     "max_oup_seq_len": 128,
@@ -488,25 +488,23 @@ class DistributedProver:
         self.prover_pool = ActorPool(provers)
 
     def search_unordered(self, repo: LeanGitRepo, theorems: List[Theorem], positions: List[Pos]) -> List[Optional[SearchResult]]:
-        logger.info(f"Starting search_unordered with {len(theorems)} theorems")
         results = []
         for i, (thm, pos) in enumerate(zip_strict(theorems, positions)):
-            logger.info(f"Processing theorem {i+1}/{len(theorems)}: {thm.full_name}")
             try:
                 if not self.distributed:
-                    logger.info(f"Not distributed, searching theorem {i+1}/{len(theorems)}: {thm.full_name}")
+                    logger.info(f"Not distributed")
                     result = self.prover.search(repo, thm, pos)
-                    logger.info(f"Not distributed, finished searching theorem {i+1}/{len(theorems)}: {thm.full_name}")
+                    logger.info(f"Not distributed, finished")
                 else:
                     # TODO: fix this later
-                    logger.info(f"Distributed, searching theorem {i+1}/{len(theorems)}: {thm.full_name}")
+                    logger.info(f"Distributed")
                     result = ray.get(self.prover_pool.submit(lambda p, args: p.search.remote(*args), (repo, thm, pos)))
-                    logger.info(f"Distributed, finished searching theorem {i+1}/{len(theorems)}: {thm.full_name}")
+                    logger.info(f"Distributed, finished")
                 results.append(result)
-                logger.info(f"Completed theorem {i+1}/{len(theorems)}: {thm.full_name}")
+                logger.info(f"Completed theorem: {thm.full_name}")
                 logger.info(f"Result: {result}")
             except Exception as e:
                 logger.error(f"Error processing theorem {thm.full_name}: {str(e)}")
                 results.append(None)
-        logger.info(f"Completed search_unordered with {len(results)} results")
+        logger.info(f"Completed search_unordered")
         return results

@@ -327,9 +327,9 @@ def main(url, commit, dst_dir):
         logger.info(f"Lean toolchain path 2 does not exist: {lean_dir2}")
     if not os.path.exists(lean_dir3):
         logger.info(f"Lean toolchain path 3 does not exist: {lean_dir3}")
-    os.environ['LEAN4_PATH'] = lean_dir2
-    os.environ['PATH'] = f"{lean_dir2}/bin:{os.environ.get('PATH', '')}"
-    logger.info(f"Switched to Lean toolchain at: {lean_dir2}")
+    os.environ['LEAN4_PATH'] = lean_dir1
+    os.environ['PATH'] = f"{lean_dir1}/bin:{os.environ.get('PATH', '')}"
+    logger.info(f"Switched to Lean toolchain at: {lean_dir1}")
 
     logger.info(f"lean --version: {subprocess.run(['lean', '--version'], capture_output=True).stdout.decode('utf-8')}")
     logger.info(f"repo: {repo}")

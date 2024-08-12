@@ -9,12 +9,12 @@ ENV HUGGINGFACE_API_URL="https://huggingface.co/api/models"
 ENV HUGGINGFACE_USER="AK123321"
 ENV HUGGINGFACE_TOKEN="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"
 ENV PYTHONPATH="${PYTHONPATH}:/workspace/ReProver"
-ENV GITHUB_ACCESS_TOKEN="<ADD YOURS>"
+ENV GITHUB_ACCESS_TOKEN="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"
 ENV CACHE_DIR="/workspace/.cache/lean_dojo"
 ENV ELAN_HOME="/.elan"
 ENV PATH="${ELAN_HOME}/bin:${PATH}"
-ENV MEGA_EMAIL="<ADD YOURS>"
-ENV MEGA_PASSWORD="<ADD YOURS>"
+ENV MEGA_EMAIL="adarshk1234567@gmail.com"
+ENV MEGA_PASSWORD="0879197abc"
 
 WORKDIR /workspace
 
@@ -54,3 +54,4 @@ CMD ["python", "/workspace/ReProver/compute_server.py"]
 # docker build -t ak123321/leancopilot-compute:latest . && docker push ak123321/leancopilot-compute:latest
 # docker build -t ak123321/leancopilot-compute-medium:latest . && docker push ak123321/leancopilot-compute-medium:latest
 # docker build -t ak123321/leancopilot-compute-new:latest --no-cache . && docker push ak123321/leancopilot-compute-new:latest
+# docker run --rm --gpus all --cpus 9.0 --memory 50g ak123321/leancopilot-compute-new:latest

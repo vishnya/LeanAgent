@@ -1,0 +1,2012 @@
+2024-08-11 09:14:33.520 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-11 09:14:33.520 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/to
+olchains/leanprover--lean4---4.7.0
+2024-08-11 09:14:33.520 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/lea
+nprover--lean4---4.7.0
+2024-08-11 09:14:33.520 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/le
+anprover--lean4---4.7.0
+2024-08-11 09:14:33.520 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not e
+xist: /.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 09:14:33.520 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not e
+xist: ~/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 09:14:33.520 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /
+home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 09:14:33.552 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.
+7.0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-08-11 09:14:33.553 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://g
+ithub.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4417d50bd9cf6cd0b')
+2024-08-11 09:14:33.553 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-11 09:14:33.556 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 09:14:33.556 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-11 09:14:33.556 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-11 09:14:33.557 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced
+ repo is available in the cache.
+2024-08-11 09:14:33.557 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo
+from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d4417d50bd9cf6cd0b/Putn
+amBench
+2024-08-11 09:14:33.697 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading
+5833 traced XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d
+4417d50bd9cf6cd0b/PutnamBench with 31 workers
+2024-08-11 09:14:35,909 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.
+0.1:8267
+ 13%|████████▋                                                        | 782/5833 [00:07<01:11, 71.01it/s]
+(raylet) [2024-08-11 09:14:45,802 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75362885632; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 18%|███████████▎                                                    | 1033/5833 [00:19<08:44,  9.16it/s]
+(raylet) [2024-08-11 09:14:55,809 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75362865152; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 22%|█████████████▊                                                  | 1262/5833 [00:25<01:02, 72.68it/s]
+(raylet) [2024-08-11 09:15:05,816 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75362840576; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 24%|███████████████▋                                                | 1426/5833 [00:37<12:49,  5.73it/s]
+(raylet) [2024-08-11 09:15:15,825 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75362828288; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 27%|█████████████████▎                                              | 1581/5833 [00:47<02:16, 31.08it/s]
+(raylet) [2024-08-11 09:15:25,831 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75362820096; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 28%|██████████████████                                              | 1651/5833 [00:57<19:24,  3.59it/s]
+(raylet) [2024-08-11 09:15:35,837 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75362770944; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 30%|███████████████████▎                                            | 1760/5833 [01:10<00:53, 75.81it/s]
+(raylet) [2024-08-11 09:15:45,847 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75361890304; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 32%|████████████████████▋                                           | 1881/5833 [01:27<01:39, 39.78it/s]
+(raylet) [2024-08-11 09:15:55,854 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75361882112; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 32%|████████████████████▋                                           | 1887/5833 [01:27<40:23,  1.63it/s]
+(raylet) [2024-08-11 09:16:05,857 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75361861632; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 36%|██████████████████████▊                                         | 2080/5833 [01:48<01:14, 50.70it/s]
+(raylet) [2024-08-11 09:16:15,866 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75361845248; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 36%|██████████████████████▉                                         | 2086/5833 [01:48<55:18,  1.13it/s]
+(raylet) [2024-08-11 09:16:25,871 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75361828864; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 40%|█████████████████████████▋                                      | 2338/5833 [02:16<01:06, 52.57it/s]
+(raylet) [2024-08-11 09:16:35,881 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75361779712; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 40%|█████████████████████████▋                                      | 2344/5833 [02:16<57:17,  1.02it/s]
+(raylet) [2024-08-11 09:16:45,892 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75360849920; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 45%|████████████████████████████                                  | 2644/5833 [02:48<1:05:06,  1.22s/it]
+(raylet) [2024-08-11 09:17:05,906 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75360813056; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 2x across cluster] (Ray deduplicates lo
+gs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ra
+y-observability/user-guides/configure-logging.html#log-deduplication for more options.)
+ 50%|███████████████████████████████                               | 2921/5833 [03:30<1:49:59,  2.27s/it]
+(raylet) [2024-08-11 09:17:35,931 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75360727040; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 3x across cluster]
+ 56%|███████████████████████████████████▋                            | 3253/5833 [03:37<00:40, 63.68it/s]
+(raylet) [2024-08-11 09:18:15,957 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75359121408; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 4x across cluster]
+ 57%|███████████████████████████████████▌                          | 3343/5833 [04:23<1:27:01,  2.10s/it]
+(raylet) [2024-08-11 09:18:25,962 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75359117312; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+(raylet) [2024-08-11 09:18:35,966 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75359064064; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 69%|████████████████████████████████████████████                    | 4019/5833 [05:25<50:59,  1.69s/it]
+(raylet) [2024-08-11 09:19:15,986 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75358097408; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 4x across cluster]
+ 78%|█████████████████████████████████████████████████▋              | 4530/5833 [05:37<00:27, 47.06it/s]
+(raylet) [2024-08-11 09:20:16,018 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75356864512; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 6x across cluster]
+ 78%|████████████████████████████████████████████████▍             | 4553/5833 [06:42<1:33:10,  4.37s/it]
+(raylet) [2024-08-11 09:20:26,025 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75356848128; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+(raylet) [2024-08-11 09:20:36,029 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75356803072; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 82%|████████████████████████████████████████████████████▏           | 4759/5833 [06:47<00:32, 33.22it/s]
+(raylet) [2024-08-11 09:21:26,056 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75355762688; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 5x across cluster]
+ 88%|██████████████████████████████████████████████████████▎       | 5104/5833 [08:13<1:03:10,  5.20s/it]
+(raylet) [2024-08-11 09:21:36,063 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75355697152; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+(raylet) [2024-08-11 09:21:46,068 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75354841088; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+100%|████████████████████████████████████████████████████████████████| 5833/5833 [08:25<00:00, 11.53it/s]
+(raylet) [2024-08-11 09:22:56,103 E 3146610 3146640] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-14-33_816798_3145147 is over 95% full, available space: 75353591808; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 7x across cluster]
+2024-08-11 09:23:06.357 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046
+183d4417d50bd9cf6cd0b')
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-08-11 09:23:07.951 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.6.0-rc1
+2024-08-11 09:23:23.457 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0-rc1
+2024-08-11 09:23:38.264 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.0.0
+2024-08-11 09:23:52.673 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4a0f6ef5') relies on an
+ unsupported Lean version: ec941735c80dc54c53948e30c428905b6600f95a
+2024-08-11 09:23:53.054 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 09:23:54.186 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 09:23:56.765 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for mathlib4 v4.7.0
+2024-08-11 09:24:50.713 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='a45ae63747140c
+1b2cbad9d46f518015c047047a')
+2024-08-11 09:24:51.074 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 09:24:52.193 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 09:24:54.766 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for doc-gen4 main
+2024-08-11 09:24:55.364 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.11.0-rc1
+2024-08-11 09:25:09.601 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for batteries main
+2024-08-11 09:25:18.186 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for quote4 master
+2024-08-11 09:25:18.679 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0
+2024-08-11 09:25:32.930 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for aesop master
+2024-08-11 09:25:33.645 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for ProofWidgets4 v0.0.30
+2024-08-11 09:25:34.276 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-cli main
+2024-08-11 09:25:34.983 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0
+2024-08-11 09:25:49.525 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for import-graph main
+2024-08-11 09:25:50.161 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf
+9f05dc34e5c423a8')
+2024-08-11 09:25:50.659 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0-rc1
+2024-08-11 09:26:05.432 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0-rc2
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-08-11 09:26:21.001 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-nightly nightly-2024-06-05
+2024-08-11 09:26:22.182 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an uns
+upported Lean version: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-08-11 09:26:22.183 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/std4', commit='dc167d260ff7ee9849b436037add
+06bed15104be')
+2024-08-11 09:26:22.353 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa7
+5f3aef33a2813a7898392222')
+2024-08-11 09:26:22.528 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b4216e944d
+5be2ce42a25d7410c67876f')
+2024-08-11 09:26:23.134 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='fb65c4765
+95a453a9b8ffc4a1cea2db3a89b9cd8')
+2024-08-11 09:26:23.541 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a0
+9350b675ef3e347d0')
+2024-08-11 09:26:23.747 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1
+dbea5e9235646fb836c7cea9ab03b6')
+2024-08-11 09:26:53.746 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking t
+he sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea7
+0715649764b046183d4417d50bd9cf6cd0b'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanpro
+ver/lean4', commit='daa22187642d4cf6954c39a23eab20d8a8675416'), 'std': LeanGitRepo(url='https://github.co
+m/leanprover/std4', commit='ff9850c4726f6b9fb8d8e96980c3fcb2900be8bd'), 'Qq': LeanGitRepo(url='https://gi
+thub.com/leanprover-community/quote4', commit='64365c656d5e1bffa127d2a1795f471529ee0178'), 'aesop': LeanG
+itRepo(url='https://github.com/leanprover-community/aesop', commit='5fefb40a7c9038a7150e7edd92e43b1b94c49
+e79'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='f
+b65c476595a453a9b8ffc4a1cea2db3a89b9cd8'), 'Cli': LeanGitRepo(url='https://github.com/leanprover/lean4-cl
+i', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(url='https://github.com/le
+anprover-community/mathlib4', commit='a45ae63747140c1b2cbad9d46f518015c047047a'), '«doc-gen4»': LeanGitRe
+po(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8'), 'MD4
+Lean': LeanGitRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f325c7e9d619bb56f
+b005'), 'UnicodeBasic': LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='5c1142
+8272fe190b7e726ebe448f93437d057b74'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQu
+ery', commit='bd8747df9ee72fca365efa5bd3bd0d8dcd083b9f'), 'batteries': LeanGitRepo(url='https://github.co
+m/leanprover-community/batteries', commit='021e272cb5cdcc82b7e1e760fe915ff2f64169ad'), 'importGraph': Lea
+nGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1dbea5e9235646fb836
+c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea707156497
+64b046183d4417d50bd9cf6cd0b/PutnamBench'))
+2024-08-11 09:27:08.167 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-11 09:27:08.168 | WARNING  | generate_benchmark_lean4:main:349 - /raid/adarsh/datasets_new/Putnam
+Bench_14ea70715649764b046183d4417d50bd9cf6cd0b already exists. Using it instead.
+2024-08-11 09:27:08.168 | INFO     | __main__:retrieve_proof:621 - Finished generating benchmark at /raid
+/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 09:27:08.168 | INFO     | __main__:find_latest_checkpoint:405 - Using the latest checkpoint: /
+raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val
+=60.45.ckpt
+2024-08-11 09:27:08.168 | INFO     | __main__:retrieve_proof:626 - Found latest checkpoint: /raid/adarsh/
+checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-11 09:27:08.168 | INFO     | __main__:train_test_fisher:419 - Inside train_test_fisher
+Seed set to 3407
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132:
+ FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always re
+sume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned
+ or trained.
+2024-08-11 09:27:57.459 | INFO     | __main__:train_test_fisher:443 - Loaded premise retriever at /raid/a
+darsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45
+.ckpt
+2024-08-11 09:27:57.459 | INFO     | __main__:find_latest_fisher:415 - Using the latest Fisher Informatio
+n Matrix: /raid/adarsh/fisher_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3_fisher_info.pkl
+2024-08-11 09:27:57.827 | INFO     | __main__:load_fisher_information:392 - Fisher Information successful
+ly loaded.
+2024-08-11 09:27:57.827 | INFO     | retrieval.model:set_fisher_info:60 - Fisher Information has been upd
+ated in the model.
+2024-08-11 09:27:57.827 | INFO     | __main__:train_test_fisher:449 - Fisher Information Matrix loaded.
+Data path: /raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random
+2024-08-11 09:27:57.940 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/datasets
+_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/corpus.jsonl
+2024-08-11 09:28:30.245 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_train/cached_
+data.pkl
+Training dataset size: 349837
+2024-08-11 09:28:30.279 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_val/cached_da
+ta.pkl
+Validation dataset size: 5344
+2024-08-11 09:28:30.309 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_pred/cached_d
+ata.pkl
+Testing dataset size: 4856
+Training dataset size after load: 349837
+Validation dataset size after load: 5344
+Testing dataset size after load: 4856
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+2024-08-11 09:28:30.419 | INFO     | __main__:train_test_fisher:508 - Starting progressive training...
+[rank: 0] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/2
+[2024-08-11 09:28:36,576] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS envi
+ronment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+2024-08-11 09:28:51.880 | INFO     | __main__:main:766 - Configuring LeanDojo...
+2024-08-11 09:28:51.883 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 09:28:51.883 | INFO     | __main__:main:768 - LeanDojo configured
+Cloning https://github.com/Adarsh321123/PutnamBench.git
+Repo name: Adarsh321123/PutnamBench
+2024-08-11 09:28:52.410 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0
+Found 1 repositories
+Training and testing with lambda = 0.1
+Processing /raid/adarsh/repos_new/Adarsh321123/PutnamBench
+2024-08-11 09:29:06.735 | INFO     | __main__:retrieve_proof:604 - Processing https://github.com/Adarsh32
+1123/PutnamBench.git
+2024-08-11 09:29:06.932 | INFO     | __main__:get_compatible_commit:245 - Latest commit: 14ea70715649764b
+046183d4417d50bd9cf6cd0b
+2024-08-11 09:29:06.932 | INFO     | __main__:get_compatible_commit:248 - Creating LeanGitRepo for https:
+//github.com/Adarsh321123/PutnamBench
+2024-08-11 09:29:06.932 | INFO     | __main__:get_compatible_commit:250 - Getting config for https://gith
+ub.com/Adarsh321123/PutnamBench.git
+2024-08-11 09:29:06.933 | INFO     | __main__:get_compatible_commit:254 - Latest commit compatible for ur
+l https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 09:29:06.933 | INFO     | __main__:retrieve_proof:609 - Found compatible commit 14ea7071564976
+4b046183d4417d50bd9cf6cd0b for https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 09:29:06.933 | INFO     | __main__:retrieve_proof:610 - Lean version: v4.7.0
+2024-08-11 09:29:06.933 | INFO     | __main__:retrieve_proof:616 - Generating benchmark at /raid/adarsh/d
+atasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 09:29:06.933 | INFO     | generate_benchmark_lean4:main:301 - Generating dataset to go into /r
+aid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 09:29:06.933 | INFO     | generate_benchmark_lean4:main:308 - lean toolchain version: {'conten
+t': 'leanprover/lean4:v4.7.0\n'}
+2024-08-11 09:29:06.933 | INFO     | generate_benchmark_lean4:main:310 - lean version v: v4.7.0
+2024-08-11 09:29:06.933 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-11 09:29:06.933 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/to
+olchains/leanprover--lean4---4.7.0
+2024-08-11 09:29:06.933 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/lea
+nprover--lean4---4.7.0
+2024-08-11 09:29:06.933 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/le
+anprover--lean4---4.7.0
+2024-08-11 09:29:06.933 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not e
+xist: /.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 09:29:06.933 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not e
+xist: ~/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 09:29:06.934 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /
+home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 09:29:06.965 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.
+7.0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-08-11 09:29:06.965 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://g
+ithub.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4417d50bd9cf6cd0b')
+2024-08-11 09:29:06.965 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-11 09:29:06.969 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 09:29:06.969 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-11 09:29:06.969 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-11 09:29:06.969 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced
+ repo is available in the cache.
+2024-08-11 09:29:06.969 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo
+from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d4417d50bd9cf6cd0b/Putn
+amBench
+2024-08-11 09:29:07.109 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading
+5833 traced XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d
+4417d50bd9cf6cd0b/PutnamBench with 31 workers
+2024-08-11 09:29:09,316 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.
+0.1:8267
+ 13%|████████▋                                                        | 782/5833 [00:07<01:20, 63.03it/s]
+(raylet) [2024-08-11 09:29:19,209 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75350925312; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 18%|███████████▎                                                    | 1031/5833 [00:16<02:13, 36.01it/s]
+(raylet) [2024-08-11 09:29:29,215 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75350892544; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 22%|██████████████                                                  | 1282/5833 [00:29<08:15,  9.19it/s]
+(raylet) [2024-08-11 09:29:39,221 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75350880256; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 25%|███████████████▊                                                | 1438/5833 [00:37<10:29,  6.98it/s]
+(raylet) [2024-08-11 09:29:49,228 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75350867968; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 27%|█████████████████▍                                              | 1592/5833 [00:47<02:09, 32.82it/s]
+(raylet) [2024-08-11 09:29:59,233 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75350859776; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 28%|██████████████████                                              | 1644/5833 [00:57<29:00,  2.41it/s]
+(raylet) [2024-08-11 09:30:09,238 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75350790144; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 30%|███████████████████▎                                            | 1760/5833 [01:11<38:01,  1.79it/s]
+(raylet) [2024-08-11 09:30:19,243 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75349970944; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 33%|████████████████████▉                                           | 1904/5833 [01:27<51:46,  1.26it/s]
+(raylet) [2024-08-11 09:30:29,248 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75349966848; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+(raylet) [2024-08-11 09:30:39,253 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75349950464; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 36%|██████████████████████▊                                         | 2080/5833 [01:49<01:33, 40.24it/s]
+(raylet) [2024-08-11 09:30:49,258 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75349880832; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 36%|██████████████████████▉                                         | 2089/5833 [01:49<46:00,  1.36it/s]
+(raylet) [2024-08-11 09:30:59,262 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75349876736; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 40%|█████████████████████████▊                                      | 2349/5833 [02:16<50:55,  1.14it/s]
+(raylet) [2024-08-11 09:31:09,268 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75349798912; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+(raylet) [2024-08-11 09:31:19,272 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75348848640; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 45%|████████████████████████████▊                                   | 2626/5833 [02:49<01:04, 49.98it/s]
+(raylet) [2024-08-11 09:31:39,282 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75348824064; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 2x across cluster] (Ray deduplicates lo
+gs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ra
+y-observability/user-guides/configure-logging.html#log-deduplication for more options.)
+ 50%|███████████████████████████████▏                              | 2932/5833 [03:29<1:36:49,  2.00s/it]
+(raylet) [2024-08-11 09:32:09,300 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75348729856; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 3x across cluster]
+ 57%|████████████████████████████████████▍                           | 3322/5833 [03:37<00:50, 50.05it/s]
+(raylet) [2024-08-11 09:32:49,321 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75347046400; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 4x across cluster]
+ 57%|████████████████████████████████████▌                           | 3338/5833 [04:19<00:50, 49.25it/s]
+(raylet) [2024-08-11 09:32:59,325 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75347038208; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 57%|███████████████████████████████████▌                          | 3345/5833 [04:19<1:05:43,  1.58s/it]
+(raylet) [2024-08-11 09:33:09,329 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75346976768; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 65%|█████████████████████████████████████████▎                      | 3769/5833 [04:27<00:33, 60.81it/s]
+(raylet) [2024-08-11 09:33:39,343 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75346120704; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 3x across cluster]
+ 69%|███████████████████████████████████████████▉                    | 4008/5833 [05:21<00:32, 56.86it/s]
+(raylet) [2024-08-11 09:33:49,348 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75346112512; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 69%|████████████████████████████████████████████                    | 4014/5833 [05:21<55:18,  1.82s/it]
+(raylet) [2024-08-11 09:33:59,352 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75346108416; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 74%|███████████████████████████████████████████████▏                | 4296/5833 [05:27<00:43, 35.74it/s]
+(raylet) [2024-08-11 09:34:39,374 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75344818176; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 4x across cluster]
+ 78%|████████████████████████████████████████████████▍             | 4557/5833 [06:35<1:13:00,  3.43s/it]
+(raylet) [2024-08-11 09:34:49,379 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75344805888; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+(raylet) [2024-08-11 09:34:59,384 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75344789504; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+ 85%|██████████████████████████████████████████████████████▌         | 4975/5833 [06:47<00:36, 23.72it/s]
+(raylet) [2024-08-11 09:35:59,413 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75343798272; capacity: 1887507697
+664. Object creation will fail if spilling is required. [repeated 6x across cluster]
+ 87%|███████████████████████████████████████████████████████▉        | 5097/5833 [08:07<59:54,  4.88s/it]
+(raylet) [2024-08-11 09:36:09,419 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75343745024; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+(raylet) [2024-08-11 09:36:19,424 E 3176434 3176464] (raylet) file_system_monitor.cc:111: /tmp/ray/sessio
+n_2024-08-11_09-29-07_228577_3175256 is over 95% full, available space: 75342848000; capacity: 1887507697
+664. Object creation will fail if spilling is required.
+100%|████████████████████████████████████████████████████████████████| 5833/5833 [08:19<00:00, 11.68it/s]
+2024-08-11 09:37:34.176 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046
+183d4417d50bd9cf6cd0b')
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-08-11 09:37:35.696 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.6.0-rc1
+2024-08-11 09:37:51.046 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0-rc1
+2024-08-11 09:38:06.045 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.0.0
+2024-08-11 09:38:20.386 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4a0f6ef5') relies on an
+ unsupported Lean version: ec941735c80dc54c53948e30c428905b6600f95a
+2024-08-11 09:38:20.761 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 09:38:21.908 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 09:38:24.508 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for mathlib4 v4.7.0
+2024-08-11 09:39:16.159 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='a45ae63747140c
+1b2cbad9d46f518015c047047a')
+2024-08-11 09:39:16.523 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 09:39:17.649 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 09:39:20.223 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for doc-gen4 main
+2024-08-11 09:39:20.825 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.11.0-rc1
+2024-08-11 09:39:35.384 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for batteries main
+2024-08-11 09:39:44.041 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for quote4 master
+2024-08-11 09:39:44.482 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0
+2024-08-11 09:39:58.652 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for aesop master
+2024-08-11 09:39:59.259 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for ProofWidgets4 v0.0.30
+2024-08-11 09:39:59.940 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-cli main
+2024-08-11 09:40:00.538 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0
+2024-08-11 09:40:15.220 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for import-graph main
+2024-08-11 09:40:15.830 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf
+9f05dc34e5c423a8')
+2024-08-11 09:40:16.355 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0-rc1
+2024-08-11 09:40:31.347 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0-rc2
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-08-11 09:40:46.718 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-nightly nightly-2024-06-05
+2024-08-11 09:40:47.795 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an uns
+upported Lean version: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-08-11 09:40:47.795 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/std4', commit='dc167d260ff7ee9849b436037add
+06bed15104be')
+2024-08-11 09:40:48.018 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa7
+5f3aef33a2813a7898392222')
+2024-08-11 09:40:48.182 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b4216e944d
+5be2ce42a25d7410c67876f')
+2024-08-11 09:40:48.772 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='fb65c4765
+95a453a9b8ffc4a1cea2db3a89b9cd8')
+2024-08-11 09:40:49.202 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a0
+9350b675ef3e347d0')
+2024-08-11 09:40:49.379 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1
+dbea5e9235646fb836c7cea9ab03b6')
+2024-08-11 09:41:18.424 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking t
+he sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea7
+0715649764b046183d4417d50bd9cf6cd0b'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanpro
+ver/lean4', commit='daa22187642d4cf6954c39a23eab20d8a8675416'), 'std': LeanGitRepo(url='https://github.co
+m/leanprover/std4', commit='ff9850c4726f6b9fb8d8e96980c3fcb2900be8bd'), 'Qq': LeanGitRepo(url='https://gi
+thub.com/leanprover-community/quote4', commit='64365c656d5e1bffa127d2a1795f471529ee0178'), 'aesop': LeanG
+itRepo(url='https://github.com/leanprover-community/aesop', commit='5fefb40a7c9038a7150e7edd92e43b1b94c49
+e79'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='f
+b65c476595a453a9b8ffc4a1cea2db3a89b9cd8'), 'Cli': LeanGitRepo(url='https://github.com/leanprover/lean4-cl
+i', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(url='https://github.com/le
+anprover-community/mathlib4', commit='a45ae63747140c1b2cbad9d46f518015c047047a'), '«doc-gen4»': LeanGitRe
+po(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8'), 'MD4
+Lean': LeanGitRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f325c7e9d619bb56f
+b005'), 'UnicodeBasic': LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='5c1142
+8272fe190b7e726ebe448f93437d057b74'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQu
+ery', commit='bd8747df9ee72fca365efa5bd3bd0d8dcd083b9f'), 'batteries': LeanGitRepo(url='https://github.co
+m/leanprover-community/batteries', commit='021e272cb5cdcc82b7e1e760fe915ff2f64169ad'), 'importGraph': Lea
+nGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1dbea5e9235646fb836
+c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea707156497
+64b046183d4417d50bd9cf6cd0b/PutnamBench'))
+2024-08-11 09:41:32.541 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-11 09:41:32.541 | WARNING  | generate_benchmark_lean4:main:349 - /raid/adarsh/datasets_new/Putnam
+Bench_14ea70715649764b046183d4417d50bd9cf6cd0b already exists. Using it instead.
+2024-08-11 09:41:32.541 | INFO     | __main__:retrieve_proof:621 - Finished generating benchmark at /raid
+/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 09:41:32.541 | INFO     | __main__:find_latest_checkpoint:405 - Using the latest checkpoint: /
+raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val
+=60.45.ckpt
+2024-08-11 09:41:32.541 | INFO     | __main__:retrieve_proof:626 - Found latest checkpoint: /raid/adarsh/
+checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-11 09:41:32.541 | INFO     | __main__:train_test_fisher:419 - Inside train_test_fisher
+[rank: 1] Seed set to 3407
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132:
+ FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always re
+sume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned
+ or trained.
+2024-08-11 09:42:13.010 | INFO     | __main__:train_test_fisher:443 - Loaded premise retriever at /raid/a
+darsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45
+.ckpt
+2024-08-11 09:42:13.010 | INFO     | __main__:find_latest_fisher:415 - Using the latest Fisher Informatio
+n Matrix: /raid/adarsh/fisher_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3_fisher_info.pkl
+2024-08-11 09:42:13.384 | INFO     | __main__:load_fisher_information:392 - Fisher Information successful
+ly loaded.
+2024-08-11 09:42:13.384 | INFO     | retrieval.model:set_fisher_info:60 - Fisher Information has been upd
+ated in the model.
+2024-08-11 09:42:13.384 | INFO     | __main__:train_test_fisher:449 - Fisher Information Matrix loaded.
+Data path: /raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random
+2024-08-11 09:42:13.482 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/datasets
+_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/corpus.jsonl
+2024-08-11 09:42:49.420 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_train/cached_
+data.pkl
+Training dataset size: 349837
+2024-08-11 09:42:49.450 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_val/cached_da
+ta.pkl
+Validation dataset size: 5344
+2024-08-11 09:42:49.480 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_pred/cached_d
+ata.pkl
+Testing dataset size: 4856
+Training dataset size after load: 349837
+Validation dataset size after load: 5344
+Testing dataset size after load: 4856
+2024-08-11 09:42:49.591 | INFO     | __main__:train_test_fisher:508 - Starting progressive training...
+[rank: 1] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/2
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 2 processes
+----------------------------------------------------------------------------------------------------
+
+2024-08-11 09:43:11.676725: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to regi
+ster cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-08-11 09:43:11.817819: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to re
+gister cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registere
+d
+2024-08-11 09:43:11.818533: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to re
+gister cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registe
+red
+2024-08-11 09:43:11.984167: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary i
+s optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropri
+ate compiler flags.
+2024-08-11 09:43:12.770027: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could
+ not find TensorRT
+2024-08-11 09:43:14.627 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_train/cached_
+data.pkl
+2024-08-11 09:43:14.635 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_train/cached_
+data.pkl
+Training dataset size: 349837
+Training dataset size: 349837
+2024-08-11 09:43:14.855 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_val/cached_da
+ta.pkl
+Validation dataset size: 5344
+2024-08-11 09:43:14.887 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_val/cached_da
+ta.pkl
+2024-08-11 09:43:14.894 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_pred/cached_d
+ata.pkl
+Validation dataset size: 5344
+Testing dataset size: 4856
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_chec
+kpoint.py:653: Checkpoint directory /raid/adarsh/checkpoints_new exists and is not empty.
+2024-08-11 09:43:14.925 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_pred/cached_d
+ata.pkl
+Testing dataset size: 4856
+Restoring states from the checkpoint path at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b
+054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [1,2]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1,2]
+2024-08-11 09:43:21.943 | INFO     | common:get_optimizers:437 - Optimizing with AdamW
+2024-08-11 09:43:21.955 | INFO     | common:get_optimizers:437 - Optimizing with AdamW
+
+  | Name    | Type           | Params
+-------------------------------------------
+0 | encoder | T5EncoderModel | 217 M
+-------------------------------------------
+217 M     Trainable params
+0         Non-trainable params
+217 M     Total params
+870.630   Total estimated model params size (MB)
+Restored all states from the checkpoint at /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b05
+4bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+`Trainer.fit` stopped: `max_epochs=1` reached.
+2024-08-11 09:43:31.351 | INFO     | __main__:train_test_fisher:512 - Finished progressive training
+2024-08-11 09:43:33.655 | INFO     | __main__:train_test_fisher:512 - Finished progressive training
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132:
+ FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always re
+sume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned
+ or trained.
+2024-08-11 09:43:41.113 | INFO     | __main__:train_test_fisher:528 - Testing...
+2024-08-11 09:43:41.114 | INFO     | retrieval.main:run_cli:55 - PID: 3145147
+[rank: 0] Seed set to 3407
+2024-08-11 09:43:41.297 | INFO     | retrieval.main:before_instantiate_classes:28 - Data path: /raid/adar
+sh/datasets_new/sphere-eversion_5c52693db4b515f8daaf2d56724c4e54d9265974/random
+2024-08-11 09:43:41.297 | INFO     | retrieval.main:before_instantiate_classes:29 - Corpus path: /raid/ad
+arsh/datasets_new/sphere-eversion_5c52693db4b515f8daaf2d56724c4e54d9265974/corpus.jsonl
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned
+ or trained.
+2024-08-11 09:43:43.925 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/datasets
+_new/sphere-eversion_5c52693db4b515f8daaf2d56724c4e54d9265974/corpus.jsonl
+^Z
+[1]+  Stopped                 bash run_code.sh
+(base) adarsh@tensorlab-DGX-Station-A100-920(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ bash run_code.sh
+Script executed from: /home/adarsh/ReProver
+[2024-08-11 09:50:56,887] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS envi
+ronment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+2024-08-11 09:51:02.276 | INFO     | __main__:main:774 - Configuring LeanDojo...
+2024-08-11 09:51:02.291 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 09:51:02.291 | INFO     | __main__:main:776 - LeanDojo configured
+Cloning https://github.com/Adarsh321123/PutnamBench.git
+Repo name: Adarsh321123/PutnamBench
+2024-08-11 09:51:02.850 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0
+Found 1 repositories
+Training and testing with lambda = 0.1
+Processing /raid/adarsh/repos_new/Adarsh321123/PutnamBench
+2024-08-11 09:51:17.461 | INFO     | __main__:retrieve_proof:612 - Processing https://github.com/Adarsh32
+1123/PutnamBench.git
+2024-08-11 09:51:17.695 | INFO     | __main__:get_compatible_commit:245 - Latest commit: 14ea70715649764b
+046183d4417d50bd9cf6cd0b
+2024-08-11 09:51:17.695 | INFO     | __main__:get_compatible_commit:248 - Creating LeanGitRepo for https:
+//github.com/Adarsh321123/PutnamBench
+2024-08-11 09:51:17.695 | INFO     | __main__:get_compatible_commit:250 - Getting config for https://gith
+ub.com/Adarsh321123/PutnamBench.git
+2024-08-11 09:51:17.695 | INFO     | __main__:get_compatible_commit:254 - Latest commit compatible for ur
+l https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 09:51:17.695 | INFO     | __main__:retrieve_proof:617 - Found compatible commit 14ea7071564976
+4b046183d4417d50bd9cf6cd0b for https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 09:51:17.696 | INFO     | __main__:retrieve_proof:618 - Lean version: v4.7.0
+2024-08-11 09:51:17.696 | INFO     | __main__:retrieve_proof:624 - Generating benchmark at /raid/adarsh/d
+atasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 09:51:17.696 | INFO     | generate_benchmark_lean4:main:301 - Generating dataset to go into /r
+aid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 09:51:17.696 | INFO     | generate_benchmark_lean4:main:308 - lean toolchain version: {'conten
+t': 'leanprover/lean4:v4.7.0\n'}
+2024-08-11 09:51:17.696 | INFO     | generate_benchmark_lean4:main:310 - lean version v: v4.7.0
+2024-08-11 09:51:17.696 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-11 09:51:17.696 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/to
+olchains/leanprover--lean4---4.7.0
+2024-08-11 09:51:17.696 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/lea
+nprover--lean4---4.7.0
+2024-08-11 09:51:17.696 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/le
+anprover--lean4---4.7.0
+2024-08-11 09:51:17.696 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not e
+xist: /.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 09:51:17.696 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not e
+xist: ~/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 09:51:17.696 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /
+home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 09:51:17.730 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.
+7.0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-08-11 09:51:17.731 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://g
+ithub.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4417d50bd9cf6cd0b')
+2024-08-11 09:51:17.731 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-11 09:51:17.734 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 09:51:17.734 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-11 09:51:17.734 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-11 09:51:17.734 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced
+ repo is available in the cache.
+2024-08-11 09:51:17.734 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo
+from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d4417d50bd9cf6cd0b/Putn
+amBench
+2024-08-11 09:51:17.923 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading
+5833 traced XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d
+4417d50bd9cf6cd0b/PutnamBench with 31 workers
+2024-08-11 09:51:20,549 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.
+0.1:8267
+100%|████████████████████████████████████████████████████████████████| 5833/5833 [08:41<00:00, 11.18it/s]
+2024-08-11 10:00:06.588 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046
+183d4417d50bd9cf6cd0b')
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-08-11 10:00:08.236 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.6.0-rc1
+2024-08-11 10:00:23.744 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0-rc1
+2024-08-11 10:00:38.606 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.0.0
+2024-08-11 10:00:53.268 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4a0f6ef5') relies on an
+ unsupported Lean version: ec941735c80dc54c53948e30c428905b6600f95a
+2024-08-11 10:00:53.642 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:00:54.765 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:00:57.359 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for mathlib4 v4.7.0
+2024-08-11 10:01:49.185 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='a45ae63747140c
+1b2cbad9d46f518015c047047a')
+2024-08-11 10:01:49.524 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:01:50.653 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:01:53.231 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for doc-gen4 main
+2024-08-11 10:01:53.854 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.11.0-rc1
+2024-08-11 10:02:08.303 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for batteries main
+2024-08-11 10:02:16.991 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for quote4 master
+2024-08-11 10:02:17.397 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0
+2024-08-11 10:02:31.789 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for aesop master
+2024-08-11 10:02:32.437 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for ProofWidgets4 v0.0.30
+2024-08-11 10:02:33.125 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-cli main
+2024-08-11 10:02:33.721 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0
+2024-08-11 10:02:48.389 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for import-graph main
+2024-08-11 10:02:49.004 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf
+9f05dc34e5c423a8')
+2024-08-11 10:02:49.618 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0-rc1
+2024-08-11 10:03:04.591 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0-rc2
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-08-11 10:03:20.368 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-nightly nightly-2024-06-05
+2024-08-11 10:03:21.431 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an uns
+upported Lean version: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-08-11 10:03:21.431 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/std4', commit='dc167d260ff7ee9849b436037add
+06bed15104be')
+2024-08-11 10:03:21.594 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa7
+5f3aef33a2813a7898392222')
+2024-08-11 10:03:21.781 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b4216e944d
+5be2ce42a25d7410c67876f')
+2024-08-11 10:03:22.416 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='fb65c4765
+95a453a9b8ffc4a1cea2db3a89b9cd8')
+2024-08-11 10:03:22.818 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a0
+9350b675ef3e347d0')
+2024-08-11 10:03:23.001 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1
+dbea5e9235646fb836c7cea9ab03b6')
+2024-08-11 10:04:07.179 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking t
+he sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea7
+0715649764b046183d4417d50bd9cf6cd0b'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanpro
+ver/lean4', commit='daa22187642d4cf6954c39a23eab20d8a8675416'), 'std': LeanGitRepo(url='https://github.co
+m/leanprover/std4', commit='ff9850c4726f6b9fb8d8e96980c3fcb2900be8bd'), 'Qq': LeanGitRepo(url='https://gi
+thub.com/leanprover-community/quote4', commit='64365c656d5e1bffa127d2a1795f471529ee0178'), 'aesop': LeanG
+itRepo(url='https://github.com/leanprover-community/aesop', commit='5fefb40a7c9038a7150e7edd92e43b1b94c49
+e79'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='f
+b65c476595a453a9b8ffc4a1cea2db3a89b9cd8'), 'Cli': LeanGitRepo(url='https://github.com/leanprover/lean4-cl
+i', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(url='https://github.com/le
+anprover-community/mathlib4', commit='a45ae63747140c1b2cbad9d46f518015c047047a'), '«doc-gen4»': LeanGitRe
+po(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8'), 'MD4
+Lean': LeanGitRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f325c7e9d619bb56f
+b005'), 'UnicodeBasic': LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='5c1142
+8272fe190b7e726ebe448f93437d057b74'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQu
+ery', commit='bd8747df9ee72fca365efa5bd3bd0d8dcd083b9f'), 'batteries': LeanGitRepo(url='https://github.co
+m/leanprover-community/batteries', commit='021e272cb5cdcc82b7e1e760fe915ff2f64169ad'), 'importGraph': Lea
+nGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1dbea5e9235646fb836
+c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea707156497
+64b046183d4417d50bd9cf6cd0b/PutnamBench'))
+2024-08-11 10:04:27.334 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-11 10:04:27.334 | WARNING  | generate_benchmark_lean4:main:349 - /raid/adarsh/datasets_new/Putnam
+Bench_14ea70715649764b046183d4417d50bd9cf6cd0b already exists. Using it instead.
+2024-08-11 10:04:27.334 | INFO     | __main__:retrieve_proof:629 - Finished generating benchmark at /raid
+/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:04:27.334 | INFO     | __main__:find_latest_checkpoint:405 - Using the latest checkpoint: /
+raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val
+=60.45.ckpt
+2024-08-11 10:04:27.334 | INFO     | __main__:retrieve_proof:634 - Found latest checkpoint: /raid/adarsh/
+checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-11 10:04:27.335 | INFO     | __main__:train_test_fisher:419 - Inside train_test_fisher
+Seed set to 3407
+2024-08-11 10:04:27.339 | INFO     | __main__:train_test_fisher:440 - Resetting the epoch count of the mo
+del
+2024-08-11 10:04:45.008 | INFO     | __main__:train_test_fisher:445 - Epoch count reset
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132:
+ FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always re
+sume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned
+ or trained.
+2024-08-11 10:04:54.621 | INFO     | __main__:train_test_fisher:451 - Loaded premise retriever at /raid/a
+darsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45
+.ckpt and reset epoch count
+2024-08-11 10:04:54.621 | INFO     | __main__:find_latest_fisher:415 - Using the latest Fisher Informatio
+n Matrix: /raid/adarsh/fisher_new/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3_fisher_info.pkl
+2024-08-11 10:04:54.985 | INFO     | __main__:load_fisher_information:392 - Fisher Information successful
+ly loaded.
+2024-08-11 10:04:54.985 | INFO     | retrieval.model:set_fisher_info:60 - Fisher Information has been upd
+ated in the model.
+2024-08-11 10:04:54.985 | INFO     | __main__:train_test_fisher:457 - Fisher Information Matrix loaded.
+Data path: /raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random
+2024-08-11 10:04:55.079 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/datasets
+_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/corpus.jsonl
+2024-08-11 10:05:43.347 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_train/cached_
+data.pkl
+Training dataset size: 349837
+2024-08-11 10:05:43.390 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_val/cached_da
+ta.pkl
+Validation dataset size: 5344
+2024-08-11 10:05:43.437 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache
+/raid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/random/cache_pred/cached_d
+ata.pkl
+Testing dataset size: 4856
+Training dataset size after load: 349837
+Validation dataset size after load: 5344
+Testing dataset size after load: 4856
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+2024-08-11 10:05:43.555 | INFO     | __main__:train_test_fisher:516 - Starting progressive training...
+[rank: 0] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/2
+[2024-08-11 10:05:50,343] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS envi
+ronment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+2024-08-11 10:05:54.674 | INFO     | __main__:main:774 - Configuring LeanDojo...
+2024-08-11 10:05:54.677 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 10:05:54.677 | INFO     | __main__:main:776 - LeanDojo configured
+Cloning https://github.com/Adarsh321123/PutnamBench.git
+Repo name: Adarsh321123/PutnamBench
+2024-08-11 10:05:55.275 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0
+Found 1 repositories
+Training and testing with lambda = 0.1
+Processing /raid/adarsh/repos_new/Adarsh321123/PutnamBench
+2024-08-11 10:06:09.711 | INFO     | __main__:retrieve_proof:612 - Processing https://github.com/Adarsh32
+1123/PutnamBench.git
+2024-08-11 10:06:09.948 | INFO     | __main__:get_compatible_commit:245 - Latest commit: 14ea70715649764b
+046183d4417d50bd9cf6cd0b
+2024-08-11 10:06:09.948 | INFO     | __main__:get_compatible_commit:248 - Creating LeanGitRepo for https:
+//github.com/Adarsh321123/PutnamBench
+2024-08-11 10:06:09.948 | INFO     | __main__:get_compatible_commit:250 - Getting config for https://gith
+ub.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:06:09.948 | INFO     | __main__:get_compatible_commit:254 - Latest commit compatible for ur
+l https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:06:09.948 | INFO     | __main__:retrieve_proof:617 - Found compatible commit 14ea7071564976
+4b046183d4417d50bd9cf6cd0b for https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:06:09.948 | INFO     | __main__:retrieve_proof:618 - Lean version: v4.7.0
+2024-08-11 10:06:09.948 | INFO     | __main__:retrieve_proof:624 - Generating benchmark at /raid/adarsh/d
+atasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:06:09.948 | INFO     | generate_benchmark_lean4:main:301 - Generating dataset to go into /r
+aid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:06:09.948 | INFO     | generate_benchmark_lean4:main:308 - lean toolchain version: {'conten
+t': 'leanprover/lean4:v4.7.0\n'}
+2024-08-11 10:06:09.948 | INFO     | generate_benchmark_lean4:main:310 - lean version v: v4.7.0
+2024-08-11 10:06:09.949 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-11 10:06:09.949 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/to
+olchains/leanprover--lean4---4.7.0
+2024-08-11 10:06:09.949 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/lea
+nprover--lean4---4.7.0
+2024-08-11 10:06:09.949 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/le
+anprover--lean4---4.7.0
+2024-08-11 10:06:09.949 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not e
+xist: /.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:06:09.949 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not e
+xist: ~/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:06:09.949 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /
+home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:06:09.981 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.
+7.0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-08-11 10:06:09.981 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://g
+ithub.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4417d50bd9cf6cd0b')
+2024-08-11 10:06:09.981 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-11 10:06:09.984 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 10:06:09.984 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-11 10:06:09.985 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-11 10:06:09.985 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced
+ repo is available in the cache.
+2024-08-11 10:06:09.985 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo
+from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d4417d50bd9cf6cd0b/Putn
+amBench
+2024-08-11 10:06:10.165 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading
+5833 traced XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d
+4417d50bd9cf6cd0b/PutnamBench with 31 workers
+2024-08-11 10:06:12,782 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.
+0.1:8267
+ 40%|█████████████████████████▋                                      | 2339/5833 [02:01<00:45, 76.55it/s]
+^Z
+[2]+  Stopped                 bash run_code.sh
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ bash run_code.sh
+Script executed from: /home/adarsh/ReProver
+[2024-08-11 10:09:21,381] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS envi
+ronment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+2024-08-11 10:09:25.271 | INFO     | __main__:main:774 - Configuring LeanDojo...
+2024-08-11 10:09:25.274 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 10:09:25.274 | INFO     | __main__:main:776 - LeanDojo configured
+Cloning https://github.com/Adarsh321123/PutnamBench.git
+Repo name: Adarsh321123/PutnamBench
+2024-08-11 10:09:25.683 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0
+Found 1 repositories
+Training and testing with lambda = 0.1
+Processing /raid/adarsh/repos_new/Adarsh321123/PutnamBench
+2024-08-11 10:09:40.403 | INFO     | __main__:retrieve_proof:612 - Processing https://github.com/Adarsh32
+1123/PutnamBench.git
+2024-08-11 10:09:40.600 | INFO     | __main__:get_compatible_commit:245 - Latest commit: 14ea70715649764b
+046183d4417d50bd9cf6cd0b
+2024-08-11 10:09:40.600 | INFO     | __main__:get_compatible_commit:248 - Creating LeanGitRepo for https:
+//github.com/Adarsh321123/PutnamBench
+2024-08-11 10:09:40.601 | INFO     | __main__:get_compatible_commit:250 - Getting config for https://gith
+ub.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:09:40.601 | INFO     | __main__:get_compatible_commit:254 - Latest commit compatible for ur
+l https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:09:40.601 | INFO     | __main__:retrieve_proof:617 - Found compatible commit 14ea7071564976
+4b046183d4417d50bd9cf6cd0b for https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:09:40.601 | INFO     | __main__:retrieve_proof:618 - Lean version: v4.7.0
+2024-08-11 10:09:40.601 | INFO     | __main__:retrieve_proof:624 - Generating benchmark at /raid/adarsh/d
+atasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:09:40.601 | INFO     | generate_benchmark_lean4:main:301 - Generating dataset to go into /r
+aid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:09:40.601 | INFO     | generate_benchmark_lean4:main:308 - lean toolchain version: {'conten
+t': 'leanprover/lean4:v4.7.0\n'}
+2024-08-11 10:09:40.601 | INFO     | generate_benchmark_lean4:main:310 - lean version v: v4.7.0
+2024-08-11 10:09:40.601 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-11 10:09:40.601 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/to
+olchains/leanprover--lean4---4.7.0
+2024-08-11 10:09:40.601 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/lea
+nprover--lean4---4.7.0
+2024-08-11 10:09:40.601 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/le
+anprover--lean4---4.7.0
+2024-08-11 10:09:40.602 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not e
+xist: /.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:09:40.602 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not e
+xist: ~/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:09:40.602 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /
+home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:09:40.633 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.
+7.0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-08-11 10:09:40.633 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://g
+ithub.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4417d50bd9cf6cd0b')
+2024-08-11 10:09:40.633 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-11 10:09:40.636 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 10:09:40.636 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-11 10:09:40.637 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-11 10:09:40.637 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced
+ repo is available in the cache.
+2024-08-11 10:09:40.637 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo
+from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d4417d50bd9cf6cd0b/Putn
+amBench
+2024-08-11 10:09:40.777 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading
+5833 traced XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d
+4417d50bd9cf6cd0b/PutnamBench with 31 workers
+2024-08-11 10:09:42,993 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.
+0.1:8268
+100%|████████████████████████████████████████████████████████████████| 5833/5833 [08:07<00:00, 11.96it/s]
+2024-08-11 10:17:54.198 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046
+183d4417d50bd9cf6cd0b')
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-08-11 10:17:55.745 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.6.0-rc1
+2024-08-11 10:18:11.288 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0-rc1
+2024-08-11 10:18:25.942 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.0.0
+2024-08-11 10:18:40.640 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4a0f6ef5') relies on an
+ unsupported Lean version: ec941735c80dc54c53948e30c428905b6600f95a
+2024-08-11 10:18:41.004 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:18:42.123 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:18:44.742 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for mathlib4 v4.7.0
+2024-08-11 10:19:36.807 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='a45ae63747140c
+1b2cbad9d46f518015c047047a')
+2024-08-11 10:19:37.137 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:19:38.256 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:19:40.852 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for doc-gen4 main
+2024-08-11 10:19:41.493 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.11.0-rc1
+2024-08-11 10:19:55.671 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for batteries main
+2024-08-11 10:20:04.121 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for quote4 master
+2024-08-11 10:20:04.581 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0
+2024-08-11 10:20:19.150 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for aesop master
+2024-08-11 10:20:19.789 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for ProofWidgets4 v0.0.30
+2024-08-11 10:20:20.434 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-cli main
+2024-08-11 10:20:21.016 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0
+2024-08-11 10:20:35.598 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for import-graph main
+2024-08-11 10:20:36.312 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf
+9f05dc34e5c423a8')
+2024-08-11 10:20:37.022 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0-rc1
+2024-08-11 10:20:51.575 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0-rc2
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-08-11 10:21:06.876 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-nightly nightly-2024-06-05
+2024-08-11 10:21:07.969 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an uns
+upported Lean version: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-08-11 10:21:07.969 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/std4', commit='dc167d260ff7ee9849b436037add
+06bed15104be')
+2024-08-11 10:21:08.143 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa7
+5f3aef33a2813a7898392222')
+2024-08-11 10:21:08.310 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b4216e944d
+5be2ce42a25d7410c67876f')
+2024-08-11 10:21:08.871 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='fb65c4765
+95a453a9b8ffc4a1cea2db3a89b9cd8')
+2024-08-11 10:21:09.222 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a0
+9350b675ef3e347d0')
+2024-08-11 10:21:09.388 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1
+dbea5e9235646fb836c7cea9ab03b6')
+2024-08-11 10:21:36.762 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking t
+he sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea7
+0715649764b046183d4417d50bd9cf6cd0b'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanpro
+ver/lean4', commit='daa22187642d4cf6954c39a23eab20d8a8675416'), 'std': LeanGitRepo(url='https://github.co
+m/leanprover/std4', commit='ff9850c4726f6b9fb8d8e96980c3fcb2900be8bd'), 'Qq': LeanGitRepo(url='https://gi
+thub.com/leanprover-community/quote4', commit='64365c656d5e1bffa127d2a1795f471529ee0178'), 'aesop': LeanG
+itRepo(url='https://github.com/leanprover-community/aesop', commit='5fefb40a7c9038a7150e7edd92e43b1b94c49
+e79'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='f
+b65c476595a453a9b8ffc4a1cea2db3a89b9cd8'), 'Cli': LeanGitRepo(url='https://github.com/leanprover/lean4-cl
+i', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(url='https://github.com/le
+anprover-community/mathlib4', commit='a45ae63747140c1b2cbad9d46f518015c047047a'), '«doc-gen4»': LeanGitRe
+po(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8'), 'MD4
+Lean': LeanGitRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f325c7e9d619bb56f
+b005'), 'UnicodeBasic': LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='5c1142
+8272fe190b7e726ebe448f93437d057b74'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQu
+ery', commit='bd8747df9ee72fca365efa5bd3bd0d8dcd083b9f'), 'batteries': LeanGitRepo(url='https://github.co
+m/leanprover-community/batteries', commit='021e272cb5cdcc82b7e1e760fe915ff2f64169ad'), 'importGraph': Lea
+nGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1dbea5e9235646fb836
+c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea707156497
+64b046183d4417d50bd9cf6cd0b/PutnamBench'))
+2024-08-11 10:21:50.805 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-11 10:21:50.805 | WARNING  | generate_benchmark_lean4:main:349 - /raid/adarsh/datasets_new/Putnam
+Bench_14ea70715649764b046183d4417d50bd9cf6cd0b already exists. Using it instead.
+2024-08-11 10:21:50.805 | INFO     | __main__:retrieve_proof:629 - Finished generating benchmark at /raid
+/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:21:50.806 | INFO     | __main__:find_latest_checkpoint:405 - Using the latest checkpoint: /
+raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val
+=60.45.ckpt
+2024-08-11 10:21:50.806 | INFO     | __main__:retrieve_proof:634 - Found latest checkpoint: /raid/adarsh/
+checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-11 10:22:02.560 | INFO     | __main__:retrieve_proof:655 - Traced all theorems
+2024-08-11 10:22:02.561 | INFO     | __main__:retrieve_proof:658 - 51290
+2024-08-11 10:22:02.587 | INFO     | __main__:retrieve_proof:672 - Found 640 sorries!
+2024-08-11 10:22:02.587 | INFO     | __main__:retrieve_proof:683 - MAIN: about to search for proofs
+2024-08-11 10:22:02.588 | INFO     | prover.proof_search:find_latest_checkpoint:345 - Using the latest ch
+eckpoint: /raid/adarsh/checkpoints/SciLean_7c879e81db4717311feb04628f8dbb990b61744a_lambda_0.1_epoch=0-Re
+call@10_val=71.54.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to yo
+ur files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../../raid/adarsh/
+kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt`
+2024-08-11 10:22:03.151 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: /raid/adar
+sh/checkpoints/SciLean_7c879e81db4717311feb04628f8dbb990b61744a_lambda_0.1_epoch=0-Recall@10_val=71.54.ck
+pt
+2024-08-11 10:22:03.152 | INFO     | generator.model:__init__:123 - Loading the retriever from /raid/adar
+sh/checkpoints/SciLean_7c879e81db4717311feb04628f8dbb990b61744a_lambda_0.1_epoch=0-Recall@10_val=71.54.ck
+pt
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132:
+ FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always re
+sume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned
+ or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned
+ or trained.
+2024-08-11 10:22:14.140 | INFO     | generator.model:__init__:136 - RetrievalAugmentedGenerator initializ
+ed
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184:
+Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight'
+, 'retriever.encoder.encoder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttenti
+on.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.enco
+der.block.0.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.o.w
+eight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retrie
+ver.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseR
+eluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever
+.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.la
+yer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.
+encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention
+.v.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encode
+r.block.1.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weig
+ht', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.b
+lock.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.1.layer.1.layer_norm.weight',
+'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.2.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'retri
+ever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.
+layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.en
+coder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.Den
+seReluDense.wo.weight', 'retriever.encoder.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder
+.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttentio
+n.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.v.weight', 'retriever.encoder.encod
+er.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight'
+, 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.bloc
+k.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.wei
+ght', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.l
+ayer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retr
+iever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0
+.SelfAttention.o.weight', 'retriever.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encod
+er.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseR
+eluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'retriever.e
+ncoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttenti
+on.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.enco
+der.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.w
+eight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5
+.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weig
+ht', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.blo
+ck.5.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'ret
+riever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.
+0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.o.weight', 'retriever
+.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseRelu
+Dense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.en
+coder.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer
+_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.enc
+oder.block.7.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.
+weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.b
+lock.7.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight'
+, 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.bloc
+k.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer
+.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retrieve
+r.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.lay
+er_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encod
+er.encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseR
+eluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight', 'retriever.encoder.en
+coder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k
+.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.
+block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', '
+retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9
+.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight
+', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.lay
+er.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retri
+ever.encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.
+0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.enc
+oder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.De
+nseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retrie
+ver.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.Self
+Attention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.enco
+der.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAtt
+ention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.enco
+der.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDe
+nse.wi_1.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encod
+er.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188:
+Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'glo
+bal_step', 'epoch', 'state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parame
+ters']
+2024-08-11 10:22:14.477 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/datasets
+_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/corpus.jsonl
+2024-08-11 10:22:41.717 | INFO     | prover.proof_search:search_unordered:491 - Starting search_unordered
+ with 640 theorems
+2024-08-11 10:22:41.717 | INFO     | prover.proof_search:search_unordered:494 - Processing theorem 1/640:
+ putnam_1975_b5
+2024-08-11 10:22:41.717 | INFO     | prover.proof_search:search_unordered:497 - Not distributed, searchin
+g theorem 1/640: putnam_1975_b5
+2024-08-11 10:22:41.717 | INFO     | prover.proof_search:search:73 - Proving Theorem(repo=LeanGitRepo(url
+='https://github.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4417d50bd9cf6cd0b'), file_
+path=PosixPath('PutnamBench/putnam_1975_b5.lean'), full_name='putnam_1975_b5')
+2024-08-11 10:22:41.718 | DEBUG    | lean_dojo.interaction.dojo:__enter__:164 - Initializing Dojo for The
+orem(repo=LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4
+417d50bd9cf6cd0b'), file_path=PosixPath('PutnamBench/putnam_1975_b5.lean'), full_name='putnam_1975_b5')
+2024-08-11 10:22:41.718 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced
+ repo is available in the cache.
+2024-08-11 10:22:59.340 | DEBUG    | lean_dojo.interaction.dojo:_modify_file:356 - Modifying PutnamBench/
+putnam_1975_b5.lean
+2024-08-11 10:22:59.340 | DEBUG    | lean_dojo.interaction.dojo:__enter__:195 - Launching the proof using
+ <class 'lean_dojo.container.NativeContainer'>
+2024-08-11 10:23:13.700 | DEBUG    | lean_dojo.container:run:184 - lake build Lean4Repl
+2024-08-11 10:23:47.072 | DEBUG    | lean_dojo.container:run_interactive:214 - lake env lean --threads=1
+--memory=32768 PutnamBench/putnam_1975_b5.lean
+2024-08-11 10:23:50.097 | DEBUG    | lean_dojo.interaction.dojo:_read_next_line:523 - REPL> {"tacticState
+": "e : ℝ\nhe : e = rexp 1\nf : ℕ → ℝ → ℝ\nh0 : ∀ (x : ℝ), f 0 x = e ^ x\nhf : ∀ (n : ℕ) (x : ℝ), f (n +
+1) x = x * deriv (f n) x\n⊢ ∑' (n : ℕ), f n 1 / ↑(Nat.factorial n) = e ^ e", "sid": 0, "error": null}
+2024-08-11 10:23:50.098 | DEBUG    | prover.proof_search:_step:167 - Expanding node: InternalNode(state=T
+acticState(pp="e : ℝ\nhe : e = rexp 1\nf : ℕ → ℝ → ℝ\nh0 : ∀ (x : ℝ), f 0 x = e ^ x\nhf : ∀ (n : ℕ) (x :
+ℝ), f (n + 1) x = x * deriv (f n) x\n⊢ ∑' (n : ℕ), f n 1 / ↑(Nat.factorial n) = e ^ e", id=0, message=Non
+e), _status=<Status.OPEN: 'Open'>)
+2024-08-11 10:23:50.098 | DEBUG    | generator.model:batch_generate:321 - ["e : ℝ\nhe : e = rexp 1\nf : ℕ
+ → ℝ → ℝ\nh0 : ∀ (x : ℝ), f 0 x = e ^ x\nhf : ∀ (n : ℕ) (x : ℝ), f (n + 1) x = x * deriv (f n) x\n⊢ ∑' (n
+ : ℕ), f n 1 / ↑(Nat.factorial n) = e ^ e"]
+2024-08-11 10:23:50.098 | INFO     | retrieval.model:reindex_corpus:268 - Re-indexing the retrieval corpu
+s
+ 27%|█████████████████                                               | 1443/5409 [02:38<07:34,  8.72it/s]
+^Z
+[3]+  Stopped                 bash run_code.sh
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ bash run_code.sh
+Script executed from: /home/adarsh/ReProver
+[2024-08-11 10:27:41,609] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS envi
+ronment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+2024-08-11 10:27:48.232 | INFO     | __main__:main:774 - Configuring LeanDojo...
+2024-08-11 10:27:48.247 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 10:27:48.248 | INFO     | __main__:main:776 - LeanDojo configured
+Cloning https://github.com/Adarsh321123/PutnamBench.git
+Repo name: Adarsh321123/PutnamBench
+2024-08-11 10:27:48.816 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0
+Found 1 repositories
+Training and testing with lambda = 0.1
+Processing /raid/adarsh/repos_new/Adarsh321123/PutnamBench
+2024-08-11 10:28:03.146 | INFO     | __main__:retrieve_proof:612 - Processing https://github.com/Adarsh32
+1123/PutnamBench.git
+2024-08-11 10:28:03.354 | INFO     | __main__:get_compatible_commit:245 - Latest commit: 14ea70715649764b
+046183d4417d50bd9cf6cd0b
+2024-08-11 10:28:03.354 | INFO     | __main__:get_compatible_commit:248 - Creating LeanGitRepo for https:
+//github.com/Adarsh321123/PutnamBench
+2024-08-11 10:28:03.354 | INFO     | __main__:get_compatible_commit:250 - Getting config for https://gith
+ub.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:28:03.354 | INFO     | __main__:get_compatible_commit:254 - Latest commit compatible for ur
+l https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:28:03.354 | INFO     | __main__:retrieve_proof:617 - Found compatible commit 14ea7071564976
+4b046183d4417d50bd9cf6cd0b for https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:28:03.354 | INFO     | __main__:retrieve_proof:618 - Lean version: v4.7.0
+2024-08-11 10:28:03.354 | INFO     | __main__:retrieve_proof:624 - Generating benchmark at /raid/adarsh/d
+atasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:28:03.354 | INFO     | generate_benchmark_lean4:main:301 - Generating dataset to go into /r
+aid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:28:03.354 | INFO     | generate_benchmark_lean4:main:308 - lean toolchain version: {'conten
+t': 'leanprover/lean4:v4.7.0\n'}
+2024-08-11 10:28:03.354 | INFO     | generate_benchmark_lean4:main:310 - lean version v: v4.7.0
+2024-08-11 10:28:03.354 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-11 10:28:03.355 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/to
+olchains/leanprover--lean4---4.7.0
+2024-08-11 10:28:03.355 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/lea
+nprover--lean4---4.7.0
+2024-08-11 10:28:03.355 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/le
+anprover--lean4---4.7.0
+2024-08-11 10:28:03.355 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not e
+xist: /.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:28:03.355 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not e
+xist: ~/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:28:03.355 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /
+home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:28:03.388 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.
+7.0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-08-11 10:28:03.389 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://g
+ithub.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4417d50bd9cf6cd0b')
+2024-08-11 10:28:03.389 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-11 10:28:03.392 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 10:28:03.392 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-11 10:28:03.392 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-11 10:28:03.392 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced
+ repo is available in the cache.
+2024-08-11 10:28:03.392 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo
+from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d4417d50bd9cf6cd0b/Putn
+amBench
+2024-08-11 10:28:03.582 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading
+5833 traced XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d
+4417d50bd9cf6cd0b/PutnamBench with 31 workers
+2024-08-11 10:28:06,259 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.
+0.1:8268
+  8%|████▉                                                           | 450/5833 [00:04<00:24, 220.70it/s]
+^Z
+[4]+  Stopped                 bash run_code.sh
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$
+[1]   Killed                  bash run_code.sh
+[2]   Killed                  bash run_code.sh
+[3]-  Killed                  bash run_code.sh
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ bash run_code.sh
+Script executed from: /home/adarsh/ReProver
+[2024-08-11 10:31:16,978] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS envi
+ronment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+2024-08-11 10:31:32.889 | INFO     | __main__:main:774 - Configuring LeanDojo...
+2024-08-11 10:31:32.892 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 10:31:32.892 | INFO     | __main__:main:776 - LeanDojo configured
+Cloning https://github.com/Adarsh321123/PutnamBench.git
+Repo name: Adarsh321123/PutnamBench
+2024-08-11 10:31:33.375 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0
+Found 1 repositories
+Training and testing with lambda = 0.1
+Processing /raid/adarsh/repos_new/Adarsh321123/PutnamBench
+2024-08-11 10:31:47.850 | INFO     | __main__:retrieve_proof:612 - Processing https://github.com/Adarsh32
+1123/PutnamBench.git
+2024-08-11 10:31:48.046 | INFO     | __main__:get_compatible_commit:245 - Latest commit: 14ea70715649764b
+046183d4417d50bd9cf6cd0b
+2024-08-11 10:31:48.046 | INFO     | __main__:get_compatible_commit:248 - Creating LeanGitRepo for https:
+//github.com/Adarsh321123/PutnamBench
+2024-08-11 10:31:48.046 | INFO     | __main__:get_compatible_commit:250 - Getting config for https://gith
+ub.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:31:48.047 | INFO     | __main__:get_compatible_commit:254 - Latest commit compatible for ur
+l https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:31:48.047 | INFO     | __main__:retrieve_proof:617 - Found compatible commit 14ea7071564976
+4b046183d4417d50bd9cf6cd0b for https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:31:48.047 | INFO     | __main__:retrieve_proof:618 - Lean version: v4.7.0
+2024-08-11 10:31:48.047 | INFO     | __main__:retrieve_proof:624 - Generating benchmark at /raid/adarsh/d
+atasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:31:48.047 | INFO     | generate_benchmark_lean4:main:301 - Generating dataset to go into /r
+aid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:31:48.047 | INFO     | generate_benchmark_lean4:main:308 - lean toolchain version: {'conten
+t': 'leanprover/lean4:v4.7.0\n'}
+2024-08-11 10:31:48.047 | INFO     | generate_benchmark_lean4:main:310 - lean version v: v4.7.0
+2024-08-11 10:31:48.048 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-11 10:31:48.048 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/to
+olchains/leanprover--lean4---4.7.0
+2024-08-11 10:31:48.048 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/lea
+nprover--lean4---4.7.0
+2024-08-11 10:31:48.048 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/le
+anprover--lean4---4.7.0
+2024-08-11 10:31:48.048 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not e
+xist: /.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:31:48.048 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not e
+xist: ~/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:31:48.048 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /
+home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:31:48.081 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.
+7.0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-08-11 10:31:48.081 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://g
+ithub.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4417d50bd9cf6cd0b')
+2024-08-11 10:31:48.081 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-11 10:31:48.084 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 10:31:48.085 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-11 10:31:48.085 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-11 10:31:48.085 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced
+ repo is available in the cache.
+2024-08-11 10:31:48.085 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo
+from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d4417d50bd9cf6cd0b/Putn
+amBench
+2024-08-11 10:31:48.228 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading
+5833 traced XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d
+4417d50bd9cf6cd0b/PutnamBench with 31 workers
+2024-08-11 10:31:50,478 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.
+0.1:8267
+100%|████████████████████████████████████████████████████████████████| 5833/5833 [08:27<00:00, 11.49it/s]
+2024-08-11 10:40:23.513 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046
+183d4417d50bd9cf6cd0b')
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-08-11 10:40:25.098 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.6.0-rc1
+2024-08-11 10:40:40.521 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0-rc1
+2024-08-11 10:40:55.134 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.0.0
+2024-08-11 10:41:09.971 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4a0f6ef5') relies on an
+ unsupported Lean version: ec941735c80dc54c53948e30c428905b6600f95a
+2024-08-11 10:41:10.341 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:41:11.459 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:41:14.048 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for mathlib4 v4.7.0
+2024-08-11 10:42:05.752 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='a45ae63747140c
+1b2cbad9d46f518015c047047a')
+2024-08-11 10:42:06.073 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:42:07.197 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:42:09.788 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for doc-gen4 main
+2024-08-11 10:42:10.386 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.11.0-rc1
+2024-08-11 10:42:24.879 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for batteries main
+2024-08-11 10:42:33.603 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for quote4 master
+2024-08-11 10:42:34.045 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0
+2024-08-11 10:42:48.272 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for aesop master
+2024-08-11 10:42:48.878 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for ProofWidgets4 v0.0.30
+2024-08-11 10:42:49.569 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-cli main
+2024-08-11 10:42:50.278 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0
+2024-08-11 10:43:04.621 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for import-graph main
+2024-08-11 10:43:05.260 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf
+9f05dc34e5c423a8')
+2024-08-11 10:43:05.789 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0-rc1
+2024-08-11 10:43:20.482 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0-rc2
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-08-11 10:43:35.955 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-nightly nightly-2024-06-05
+2024-08-11 10:43:36.973 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an uns
+upported Lean version: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-08-11 10:43:36.973 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/std4', commit='dc167d260ff7ee9849b436037add
+06bed15104be')
+2024-08-11 10:43:37.142 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa7
+5f3aef33a2813a7898392222')
+2024-08-11 10:43:37.312 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b4216e944d
+5be2ce42a25d7410c67876f')
+2024-08-11 10:43:37.898 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='fb65c4765
+95a453a9b8ffc4a1cea2db3a89b9cd8')
+2024-08-11 10:43:38.237 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a0
+9350b675ef3e347d0')
+2024-08-11 10:43:38.413 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1
+dbea5e9235646fb836c7cea9ab03b6')
+2024-08-11 10:44:08.466 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking t
+he sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea7
+0715649764b046183d4417d50bd9cf6cd0b'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanpro
+ver/lean4', commit='daa22187642d4cf6954c39a23eab20d8a8675416'), 'std': LeanGitRepo(url='https://github.co
+m/leanprover/std4', commit='ff9850c4726f6b9fb8d8e96980c3fcb2900be8bd'), 'Qq': LeanGitRepo(url='https://gi
+thub.com/leanprover-community/quote4', commit='64365c656d5e1bffa127d2a1795f471529ee0178'), 'aesop': LeanG
+itRepo(url='https://github.com/leanprover-community/aesop', commit='5fefb40a7c9038a7150e7edd92e43b1b94c49
+e79'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='f
+b65c476595a453a9b8ffc4a1cea2db3a89b9cd8'), 'Cli': LeanGitRepo(url='https://github.com/leanprover/lean4-cl
+i', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(url='https://github.com/le
+anprover-community/mathlib4', commit='a45ae63747140c1b2cbad9d46f518015c047047a'), '«doc-gen4»': LeanGitRe
+po(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8'), 'MD4
+Lean': LeanGitRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f325c7e9d619bb56f
+b005'), 'UnicodeBasic': LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='5c1142
+8272fe190b7e726ebe448f93437d057b74'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQu
+ery', commit='bd8747df9ee72fca365efa5bd3bd0d8dcd083b9f'), 'batteries': LeanGitRepo(url='https://github.co
+m/leanprover-community/batteries', commit='021e272cb5cdcc82b7e1e760fe915ff2f64169ad'), 'importGraph': Lea
+nGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1dbea5e9235646fb836
+c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea707156497
+64b046183d4417d50bd9cf6cd0b/PutnamBench'))
+2024-08-11 10:44:22.655 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-11 10:44:22.655 | WARNING  | generate_benchmark_lean4:main:349 - /raid/adarsh/datasets_new/Putnam
+Bench_14ea70715649764b046183d4417d50bd9cf6cd0b already exists. Using it instead.
+2024-08-11 10:44:22.655 | INFO     | __main__:retrieve_proof:629 - Finished generating benchmark at /raid
+/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:44:22.655 | INFO     | __main__:find_latest_checkpoint:405 - Using the latest checkpoint: /
+raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val
+=60.45.ckpt
+2024-08-11 10:44:22.655 | INFO     | __main__:retrieve_proof:634 - Found latest checkpoint: /raid/adarsh/
+checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-11 10:44:34.485 | INFO     | __main__:retrieve_proof:655 - Traced all theorems
+2024-08-11 10:44:34.486 | INFO     | __main__:retrieve_proof:658 - 51290
+2024-08-11 10:44:34.512 | INFO     | __main__:retrieve_proof:672 - Found 640 sorries!
+2024-08-11 10:44:34.512 | INFO     | __main__:retrieve_proof:683 - MAIN: about to search for proofs
+2024-08-11 10:44:34.512 | INFO     | prover.proof_search:find_latest_checkpoint:345 - Using the latest ch
+eckpoint: /raid/adarsh/checkpoints/SciLean_7c879e81db4717311feb04628f8dbb990b61744a_lambda_0.1_epoch=0-Re
+call@10_val=71.54.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to yo
+ur files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../../raid/adarsh/
+kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt`
+2024-08-11 10:44:35.085 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: /raid/adar
+sh/checkpoints/SciLean_7c879e81db4717311feb04628f8dbb990b61744a_lambda_0.1_epoch=0-Recall@10_val=71.54.ck
+pt
+2024-08-11 10:44:35.085 | INFO     | generator.model:__init__:123 - Loading the retriever from /raid/adar
+sh/checkpoints/SciLean_7c879e81db4717311feb04628f8dbb990b61744a_lambda_0.1_epoch=0-Recall@10_val=71.54.ck
+pt
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132:
+ FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always re
+sume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned
+ or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned
+ or trained.
+2024-08-11 10:45:31.913 | INFO     | generator.model:__init__:136 - RetrievalAugmentedGenerator initializ
+ed
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184:
+Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight'
+, 'retriever.encoder.encoder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttenti
+on.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.enco
+der.block.0.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.o.w
+eight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retrie
+ver.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseR
+eluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever
+.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.la
+yer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.
+encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention
+.v.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encode
+r.block.1.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weig
+ht', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.b
+lock.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.1.layer.1.layer_norm.weight',
+'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.2.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'retri
+ever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.
+layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.en
+coder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.Den
+seReluDense.wo.weight', 'retriever.encoder.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder
+.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttentio
+n.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.v.weight', 'retriever.encoder.encod
+er.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight'
+, 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.bloc
+k.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.wei
+ght', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.l
+ayer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retr
+iever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0
+.SelfAttention.o.weight', 'retriever.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encod
+er.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseR
+eluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'retriever.e
+ncoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttenti
+on.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.enco
+der.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.w
+eight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5
+.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weig
+ht', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.blo
+ck.5.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'ret
+riever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.
+0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.o.weight', 'retriever
+.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseRelu
+Dense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.en
+coder.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer
+_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.enc
+oder.block.7.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.
+weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.b
+lock.7.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight'
+, 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.bloc
+k.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer
+.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retrieve
+r.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.lay
+er_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encod
+er.encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseR
+eluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight', 'retriever.encoder.en
+coder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k
+.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.
+block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', '
+retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9
+.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight
+', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.lay
+er.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retri
+ever.encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.
+0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.enc
+oder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.De
+nseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retrie
+ver.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.Self
+Attention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.enco
+der.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAtt
+ention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.enco
+der.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDe
+nse.wi_1.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encod
+er.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188:
+Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'glo
+bal_step', 'epoch', 'state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parame
+ters']
+2024-08-11 10:45:32.977 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/datasets
+_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/corpus.jsonl
+^Z
+[5]+  Stopped                 bash run_code.sh
+(base) adarsh@tensorlab-DGX-Station-A100-920(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~
+(base) adarsh@tensorlab-DGX-Station-A100-920-23(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-00
+(base) adarsh@tensorlab-DGX-Station-A100-920-23487-2531-000:~/ReProver$ bash run_code.sh
+Script executed from: /home/adarsh/ReProver
+[2024-08-11 10:48:50,398] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+ [WARNING]  async_io requires the dev libaio .so object and headers but these were not found.
+ [WARNING]  async_io: please install the libaio-dev package with apt
+ [WARNING]  If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS envi
+ronment variables to where it can be found.
+ [WARNING]  Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+ [WARNING]  sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+ [WARNING]  using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+2024-08-11 10:49:15.463 | INFO     | __main__:main:774 - Configuring LeanDojo...
+2024-08-11 10:49:15.466 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 10:49:15.466 | INFO     | __main__:main:776 - LeanDojo configured
+Cloning https://github.com/Adarsh321123/PutnamBench.git
+Repo name: Adarsh321123/PutnamBench
+2024-08-11 10:49:16.085 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0
+Found 1 repositories
+Training and testing with lambda = 0.1
+Processing /raid/adarsh/repos_new/Adarsh321123/PutnamBench
+2024-08-11 10:49:30.422 | INFO     | __main__:retrieve_proof:612 - Processing https://github.com/Adarsh32
+1123/PutnamBench.git
+2024-08-11 10:49:30.616 | INFO     | __main__:get_compatible_commit:245 - Latest commit: 14ea70715649764b
+046183d4417d50bd9cf6cd0b
+2024-08-11 10:49:30.616 | INFO     | __main__:get_compatible_commit:248 - Creating LeanGitRepo for https:
+//github.com/Adarsh321123/PutnamBench
+2024-08-11 10:49:30.616 | INFO     | __main__:get_compatible_commit:250 - Getting config for https://gith
+ub.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:49:30.616 | INFO     | __main__:get_compatible_commit:254 - Latest commit compatible for ur
+l https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:49:30.617 | INFO     | __main__:retrieve_proof:617 - Found compatible commit 14ea7071564976
+4b046183d4417d50bd9cf6cd0b for https://github.com/Adarsh321123/PutnamBench.git
+2024-08-11 10:49:30.617 | INFO     | __main__:retrieve_proof:618 - Lean version: v4.7.0
+2024-08-11 10:49:30.617 | INFO     | __main__:retrieve_proof:624 - Generating benchmark at /raid/adarsh/d
+atasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:49:30.617 | INFO     | generate_benchmark_lean4:main:301 - Generating dataset to go into /r
+aid/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 10:49:30.617 | INFO     | generate_benchmark_lean4:main:308 - lean toolchain version: {'conten
+t': 'leanprover/lean4:v4.7.0\n'}
+2024-08-11 10:49:30.617 | INFO     | generate_benchmark_lean4:main:310 - lean version v: v4.7.0
+2024-08-11 10:49:30.617 | INFO     | generate_benchmark_lean4:main:311 - is supported: True
+2024-08-11 10:49:30.617 | INFO     | generate_benchmark_lean4:main:321 - lean path1 /home/adarsh/.elan/to
+olchains/leanprover--lean4---4.7.0
+2024-08-11 10:49:30.617 | INFO     | generate_benchmark_lean4:main:322 - lean path2 /.elan/toolchains/lea
+nprover--lean4---4.7.0
+2024-08-11 10:49:30.617 | INFO     | generate_benchmark_lean4:main:323 - lean path3 ~/.elan/toolchains/le
+anprover--lean4---4.7.0
+2024-08-11 10:49:30.617 | INFO     | generate_benchmark_lean4:main:327 - Lean toolchain path 2 does not e
+xist: /.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:49:30.617 | INFO     | generate_benchmark_lean4:main:329 - Lean toolchain path 3 does not e
+xist: ~/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:49:30.617 | INFO     | generate_benchmark_lean4:main:332 - Switched to Lean toolchain at: /
+home/adarsh/.elan/toolchains/leanprover--lean4---4.7.0
+2024-08-11 10:49:30.650 | INFO     | generate_benchmark_lean4:main:334 - lean --version: Lean (version 4.
+7.0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-08-11 10:49:30.650 | INFO     | generate_benchmark_lean4:main:335 - repo: LeanGitRepo(url='https://g
+ithub.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4417d50bd9cf6cd0b')
+2024-08-11 10:49:30.650 | INFO     | generate_benchmark_lean4:main:337 - Configuring LeanDojo again...
+2024-08-11 10:49:30.653 | INFO     | generate_benchmark_lean4:configure_leandojo:294 - Current working di
+rectory: /home/adarsh/ReProver
+2024-08-11 10:49:30.653 | INFO     | generate_benchmark_lean4:main:339 - LeanDojo configured
+2024-08-11 10:49:30.653 | INFO     | generate_benchmark_lean4:main:342 - Tracing the repo...
+2024-08-11 10:49:30.653 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced
+ repo is available in the cache.
+2024-08-11 10:49:30.653 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo
+from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d4417d50bd9cf6cd0b/Putn
+amBench
+2024-08-11 10:49:30.796 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1169 - Loading
+5833 traced XML files from /raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea70715649764b046183d
+4417d50bd9cf6cd0b/PutnamBench with 31 workers
+2024-08-11 10:49:33,045 INFO worker.py:1740 -- Started a local Ray instance. View the dashboard at 127.0.
+0.1:8267
+100%|████████████████████████████████████████████████████████████████| 5833/5833 [08:32<00:00, 11.39it/s]
+2024-08-11 10:58:10.996 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046
+183d4417d50bd9cf6cd0b')
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-08-11 10:58:12.807 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.6.0-rc1
+2024-08-11 10:58:28.149 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.7.0-rc1
+2024-08-11 10:58:42.926 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.0.0
+2024-08-11 10:58:57.500 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4a0f6ef5') relies on an
+ unsupported Lean version: ec941735c80dc54c53948e30c428905b6600f95a
+2024-08-11 10:58:57.874 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:58:58.997 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:59:01.599 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for mathlib4 v4.7.0
+2024-08-11 10:59:53.216 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='a45ae63747140c
+1b2cbad9d46f518015c047047a')
+2024-08-11 10:59:53.571 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:59:54.721 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https:/
+/github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-08-11 10:59:57.329 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for doc-gen4 main
+2024-08-11 10:59:57.954 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.11.0-rc1
+2024-08-11 11:00:12.491 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for batteries main
+2024-08-11 11:00:21.760 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for quote4 master
+2024-08-11 11:00:22.121 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0
+2024-08-11 11:00:36.271 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for aesop master
+2024-08-11 11:00:36.968 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for ProofWidgets4 v0.0.30
+2024-08-11 11:00:37.626 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-cli main
+2024-08-11 11:00:38.222 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0
+2024-08-11 11:00:53.044 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for import-graph main
+2024-08-11 11:00:53.648 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf
+9f05dc34e5c423a8')
+2024-08-11 11:00:54.168 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.9.0-rc1
+2024-08-11 11:01:08.942 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4 v4.10.0-rc2
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-08-11 11:01:24.330 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the com
+mit hash for lean4-nightly nightly-2024-06-05
+2024-08-11 11:01:25.452 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:442 - LeanGitRepo(url='
+https://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an uns
+upported Lean version: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-08-11 11:01:25.452 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/std4', commit='dc167d260ff7ee9849b436037add
+06bed15104be')
+2024-08-11 11:01:25.613 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='71f54425e6fe0fa7
+5f3aef33a2813a7898392222')
+2024-08-11 11:01:25.859 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='0444234b4216e944d
+5be2ce42a25d7410c67876f')
+2024-08-11 11:01:26.436 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='fb65c4765
+95a453a9b8ffc4a1cea2db3a89b9cd8')
+2024-08-11 11:01:26.799 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a0
+9350b675ef3e347d0')
+2024-08-11 11:01:27.013 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:495 - Querying the d
+ependencies of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1
+dbea5e9235646fb836c7cea9ab03b6')
+2024-08-11 11:01:56.119 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1032 - Checking t
+he sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea7
+0715649764b046183d4417d50bd9cf6cd0b'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanpro
+ver/lean4', commit='daa22187642d4cf6954c39a23eab20d8a8675416'), 'std': LeanGitRepo(url='https://github.co
+m/leanprover/std4', commit='ff9850c4726f6b9fb8d8e96980c3fcb2900be8bd'), 'Qq': LeanGitRepo(url='https://gi
+thub.com/leanprover-community/quote4', commit='64365c656d5e1bffa127d2a1795f471529ee0178'), 'aesop': LeanG
+itRepo(url='https://github.com/leanprover-community/aesop', commit='5fefb40a7c9038a7150e7edd92e43b1b94c49
+e79'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='f
+b65c476595a453a9b8ffc4a1cea2db3a89b9cd8'), 'Cli': LeanGitRepo(url='https://github.com/leanprover/lean4-cl
+i', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(url='https://github.com/le
+anprover-community/mathlib4', commit='a45ae63747140c1b2cbad9d46f518015c047047a'), '«doc-gen4»': LeanGitRe
+po(url='https://github.com/leanprover/doc-gen4', commit='6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8'), 'MD4
+Lean': LeanGitRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f325c7e9d619bb56f
+b005'), 'UnicodeBasic': LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='5c1142
+8272fe190b7e726ebe448f93437d057b74'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQu
+ery', commit='bd8747df9ee72fca365efa5bd3bd0d8dcd083b9f'), 'batteries': LeanGitRepo(url='https://github.co
+m/leanprover-community/batteries', commit='021e272cb5cdcc82b7e1e760fe915ff2f64169ad'), 'importGraph': Lea
+nGitRepo(url='https://github.com/leanprover-community/import-graph', commit='57bd2065f1dbea5e9235646fb836
+c7cea9ab03b6')}, root_dir=PosixPath('/raid/adarsh/.cache/lean_dojo/Adarsh321123-PutnamBench-14ea707156497
+64b046183d4417d50bd9cf6cd0b/PutnamBench'))
+2024-08-11 11:02:10.866 | INFO     | generate_benchmark_lean4:main:344 - Successfully traced the repo
+2024-08-11 11:02:10.866 | WARNING  | generate_benchmark_lean4:main:349 - /raid/adarsh/datasets_new/Putnam
+Bench_14ea70715649764b046183d4417d50bd9cf6cd0b already exists. Using it instead.
+2024-08-11 11:02:10.866 | INFO     | __main__:retrieve_proof:629 - Finished generating benchmark at /raid
+/adarsh/datasets_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b
+2024-08-11 11:02:10.867 | INFO     | __main__:find_latest_checkpoint:405 - Using the latest checkpoint: /
+raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val
+=60.45.ckpt
+2024-08-11 11:02:10.867 | INFO     | __main__:retrieve_proof:634 - Found latest checkpoint: /raid/adarsh/
+checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ckpt
+2024-08-11 11:02:23.554 | INFO     | __main__:retrieve_proof:655 - Traced all theorems
+2024-08-11 11:02:23.554 | INFO     | __main__:retrieve_proof:658 - 51290
+2024-08-11 11:02:23.585 | INFO     | __main__:retrieve_proof:672 - Found 640 sorries!
+2024-08-11 11:02:23.585 | INFO     | __main__:retrieve_proof:683 - MAIN: about to search for proofs
+2024-08-11 11:02:23.585 | INFO     | prover.proof_search:find_latest_checkpoint:345 - Using the latest ch
+eckpoint: /raid/adarsh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Re
+call@10_val=60.45.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to yo
+ur files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../../raid/adarsh/
+kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt`
+2024-08-11 11:02:24.068 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: /raid/adar
+sh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ck
+pt
+2024-08-11 11:02:24.068 | INFO     | generator.model:__init__:123 - Loading the retriever from /raid/adar
+sh/checkpoints_new/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=0-Recall@10_val=60.45.ck
+pt
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132:
+ FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always re
+sume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned
+ or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned
+ or trained.
+2024-08-11 11:02:49.980 | INFO     | generator.model:__init__:136 - RetrievalAugmentedGenerator initializ
+ed
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184:
+Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight'
+, 'retriever.encoder.encoder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttenti
+on.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.enco
+der.block.0.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.o.w
+eight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retrie
+ver.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseR
+eluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever
+.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.la
+yer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.
+encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention
+.v.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encode
+r.block.1.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weig
+ht', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.b
+lock.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.1.layer.1.layer_norm.weight',
+'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.2.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'retri
+ever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.
+layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.en
+coder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.Den
+seReluDense.wo.weight', 'retriever.encoder.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder
+.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttentio
+n.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.v.weight', 'retriever.encoder.encod
+er.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight'
+, 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.bloc
+k.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.wei
+ght', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.l
+ayer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retr
+iever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0
+.SelfAttention.o.weight', 'retriever.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encod
+er.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseR
+eluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'retriever.e
+ncoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttenti
+on.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.enco
+der.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.w
+eight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5
+.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weig
+ht', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.blo
+ck.5.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'ret
+riever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.
+0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.o.weight', 'retriever
+.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseRelu
+Dense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.en
+coder.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer
+_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.enc
+oder.block.7.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.
+weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.b
+lock.7.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight'
+, 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.bloc
+k.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer
+.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retrieve
+r.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.lay
+er_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encod
+er.encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseR
+eluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight', 'retriever.encoder.en
+coder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k
+.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.
+block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', '
+retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9
+.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight
+', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.lay
+er.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retri
+ever.encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.
+0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.enc
+oder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.De
+nseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retrie
+ver.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.Self
+Attention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.enco
+der.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAtt
+ention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.enco
+der.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDe
+nse.wi_1.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encod
+er.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/home/adarsh/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188:
+Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'glo
+bal_step', 'epoch', 'state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parame
+ters']
+2024-08-11 11:02:50.311 | INFO     | common:__init__:200 - Building the corpus from /raid/adarsh/datasets
+_new/PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b/corpus.jsonl
+2024-08-11 11:03:18.686 | INFO     | prover.proof_search:search_unordered:491 - Starting search_unordered
+ with 640 theorems
+2024-08-11 11:03:18.686 | INFO     | prover.proof_search:search_unordered:494 - Processing theorem 1/640:
+ putnam_1978_a2
+2024-08-11 11:03:18.686 | INFO     | prover.proof_search:search_unordered:497 - Not distributed, searchin
+g theorem 1/640: putnam_1978_a2
+2024-08-11 11:03:18.686 | INFO     | prover.proof_search:search:73 - Proving Theorem(repo=LeanGitRepo(url
+='https://github.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4417d50bd9cf6cd0b'), file_
+path=PosixPath('PutnamBench/putnam_1978_a2.lean'), full_name='putnam_1978_a2')
+2024-08-11 11:03:18.687 | DEBUG    | lean_dojo.interaction.dojo:__enter__:164 - Initializing Dojo for The
+orem(repo=LeanGitRepo(url='https://github.com/Adarsh321123/PutnamBench', commit='14ea70715649764b046183d4
+417d50bd9cf6cd0b'), file_path=PosixPath('PutnamBench/putnam_1978_a2.lean'), full_name='putnam_1978_a2')
+2024-08-11 11:03:18.687 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced
+ repo is available in the cache.
+2024-08-11 11:03:35.772 | DEBUG    | lean_dojo.interaction.dojo:_modify_file:356 - Modifying PutnamBench/
+putnam_1978_a2.lean
+2024-08-11 11:03:35.773 | DEBUG    | lean_dojo.interaction.dojo:__enter__:195 - Launching the proof using
+ <class 'lean_dojo.container.NativeContainer'>
+

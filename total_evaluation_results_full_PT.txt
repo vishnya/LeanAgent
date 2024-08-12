@@ -6,7 +6,7 @@ Average R@1 = 29.45825031999575 %, R@10 = 70.78343508334234 %, MRR = 0.607686911
 
 
 
-
+BAD
 
 Results for lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f with lambda = 0.1
 
@@ -24,3 +24,14 @@ Results for formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3 with lambda = 0
 
 
 Average R@1 = 22.922753719587813 %, R@10 = 62.464366496113975 %, MRR = 0.5266029142286279
+
+GOOD (USES FLT AND PUTNAM BENCH DATASET IN AVERAGE)
+
+
+
+
+
+Results for lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f with lambda = 0.0
+
+
+Average R@1 = 22.923722509811796 %, R@10 = 62.19109523538801 %, MRR = 0.5282595749614701

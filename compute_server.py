@@ -25,11 +25,11 @@ from loguru import logger
 import atexit
 from mega import Mega
 
-ROOT_DIR = os.environ.get('ROOT_DIR', '/workspace')
-DATA_DIR = os.environ.get('DATA_DIR', 'datasets')
-CHECKPOINT_DIR = os.environ.get('CHECKPOINT_DIR', 'checkpoints')
-HUGGINGFACE_API_URL = os.environ.get('HUGGINGFACE_API_URL', 'https://huggingface.co/api/models')
-USER = os.environ.get('USER', 'AK123321')
+ROOT_DIR = "/raid/adarsh"
+DATA_DIR = "datasets_test"
+CHECKPOINT_DIR = "checkpoints_test"
+HUGGINGFACE_API_URL = "https://huggingface.co/api/models"
+USER = "AK123321"
 HUGGINGFACE_TOKEN = os.environ.get('HUGGINGFACE_TOKEN')
 EXIT_FLAG_FILE = ROOT_DIR + "/exit_flag"
 MEGA_EMAIL = os.environ.get('MEGA_EMAIL')
@@ -372,9 +372,13 @@ def index_corpus(model_checkpoint_path, corpus_path, batch_size, embeddings_path
     logger.info(f"Indexed corpus saved to {embeddings_path}")
 
 def upload_logs():
+    # logs_to_upload = [
+    #     ("lightning_logs", "lightning_logs.zip"),
+    #     ("disk_usage_log.txt", "disk_usage_log.txt")
+    # ]
+
     logs_to_upload = [
-        ("lightning_logs", "lightning_logs.zip"),
-        ("disk_usage_log.txt", "disk_usage_log.txt")
+        ("lightning_logs", "lightning_logs.zip")
     ]
 
     mega = Mega()
@@ -490,8 +494,8 @@ def train(model_checkpoint_path, new_data_path, next_suffix, max_epochs=1):
         num_negatives=3,
         num_in_file_negatives=1,
         model_name="google/byt5-small",
-        batch_size=4,
-        eval_batch_size=64,
+        batch_size=2,
+        eval_batch_size=32,
         max_seq_len=1024,
         num_workers=4
     )
@@ -530,7 +534,7 @@ def train(model_checkpoint_path, new_data_path, next_suffix, max_epochs=1):
         max_epochs=max_epochs,
         log_every_n_steps=1,
         num_sanity_val_steps=0,
-        accumulate_grad_batches=2,
+        # accumulate_grad_batches=2,
         # limit_train_batches=0.0001,
         # limit_val_batches=0.02,
         # limit_test_batches=0.02,
@@ -557,7 +561,7 @@ def train(model_checkpoint_path, new_data_path, next_suffix, max_epochs=1):
     convert_and_upload_models(best_model_path, new_data_path, next_suffix)
     logger.info("Finished converting and uploading models")
     logger.info("Uploading lightning logs")
-    stop_disk_monitor()
+    # stop_disk_monitor()
     upload_logs()
     logger.info("Finished uploading lightning logs")
     
@@ -590,10 +594,10 @@ def check_progress_file():
 
 def main():
     try:
-        atexit.register(exit_handler)
-        atexit.register(stop_disk_monitor)
+        # atexit.register(exit_handler)
+        # atexit.register(stop_disk_monitor)
         check_progress_file()
-        start_disk_monitor()
+        # start_disk_monitor()
 
         # TODO: put this back for runpod
         # if os.path.exists(EXIT_FLAG_FILE):
@@ -603,8 +607,12 @@ def main():
 
         logger.info("Starting compute server...")
         logger.info(f"Current working directory: {os.getcwd()}")
+        os.environ["RAY_memory_usage_threshold"] = "1.0"
+        os.environ["RAY_memory_monitor_refresh_ms"] = "0"
         if ray.is_initialized():
             ray.shutdown()
+        os.environ["RAY_memory_usage_threshold"] = "1.0"
+        os.environ["RAY_memory_monitor_refresh_ms"] = "0"
         
         logger.info(f"ROOT_DIR: {ROOT_DIR}")
         logger.info(f"DATA_DIR: {DATA_DIR}")
