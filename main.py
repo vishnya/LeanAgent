@@ -595,7 +595,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
 def update_and_output_results(repo_url: str, repository_results, lambda_value: float):
     global global_results
     global_results["repositories"][repo_url] = repository_results
-    results_file = f"results_lambda_{lambda_value}_PT_matrix_cookbook_partial.json"
+    results_file = f"results_lambda_{lambda_value}_PT_formal_book_partial.json"
     with open(results_file, 'w', encoding='utf-8') as f:
         json.dump(global_results, f, indent=4, ensure_ascii=False)
     logger.info(f"Partial results saved to {results_file}")
@@ -803,14 +803,14 @@ def main():
         generate_benchmark_lean4.configure_leandojo()
         logger.info("LeanDojo configured")
 
-        clone_url = "https://github.com/eric-wieser/lean-matrix-cookbook.git"
+        clone_url = "https://github.com/teorth/pfr.git"
         repo_name, sha = clone_repo(clone_url)
         url = clone_url.replace('.git', '')
         lean_git_repo = LeanGitRepo(url, sha)
         lean_git_repos.append(lean_git_repo)
-        repos.append("eric-wieser/lean-matrix-cookbook")
+        repos.append("teorth/pfr")
 
-        current_epoch = 1 # TODO: change
+        current_epoch = 2 # TODO: change
         epochs_per_repo = 1
 
         # search_github_repositories("Lean", 30)
@@ -847,7 +847,7 @@ def main():
                     #     global_results["repositories"][lean_git_repo.url]["PR"] = url
                     # shutil.rmtree(repo)
 
-                results_file = f"results_lambda_{lambda_value}_PT_matrix_cookbook.json"
+                results_file = f"results_lambda_{lambda_value}_PT_formal_book.json"
                 with open(results_file, 'w', encoding='utf-8') as f:
                     json.dump(global_results, f, indent=4, ensure_ascii=False)
                     logger.info(f"Final results saved to {results_file}")
@@ -856,7 +856,7 @@ def main():
         traceback.print_exc()
     finally:
         # Ensure final results are saved even if an exception occurs
-        results_file = f"results_lambda_{lambda_value}_PT_matrix_cookbook.json"
+        results_file = f"results_lambda_{lambda_value}_PT_formal_book.json"
         with open(results_file, 'w', encoding='utf-8') as f:
             json.dump(global_results, f, indent=4, ensure_ascii=False)
         logger.info(f"Exception occurred. Final results saved to {results_file}")
