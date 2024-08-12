@@ -35,18 +35,18 @@ difficulties_by_url = defaultdict(list)
 for item in data:
     proof_steps = item['traced_tactics']
     difficulty = calculate_difficulty(proof_steps)
-    difficulties_by_url[item['url']].append((item['full_name'], difficulty))
+    difficulties_by_url[item['url']].append((item['full_name'], item['file_path'], difficulty))
 
-all_difficulties = [diff for url_difficulties in difficulties_by_url.values() for _, diff in url_difficulties]
+all_difficulties = [diff for url_difficulties in difficulties_by_url.values() for _, _, diff in url_difficulties]
 
 percentiles = np.percentile(all_difficulties, [33, 67])
 
 categorized_theorems = defaultdict(lambda: defaultdict(list))
 
 for url, theorems in difficulties_by_url.items():
-    for theorem_name, difficulty in theorems:
+    for theorem_name, file_path, difficulty in theorems:
         category = categorize_difficulty(difficulty)
-        categorized_theorems[url][category].append((theorem_name, difficulty))
+        categorized_theorems[url][category].append((theorem_name, file_path, difficulty))
 
 print("Summary of theorem difficulties by URL:")
 for url, categories in categorized_theorems.items():
@@ -55,9 +55,9 @@ for url, categories in categorized_theorems.items():
         theorems = categories[category]
         print(f"  {category}: {len(theorems)} theorems")
         if theorems:
-            sorted_theorems = sorted(theorems, key=lambda x: x[1], reverse=True)[:3]
-            for name, diff in sorted_theorems:
-                print(f"    - {name} (Difficulty: {diff:.2f})")
+            sorted_theorems = sorted(theorems, key=lambda x: x[2], reverse=True)[:3]
+            for name, path, diff in sorted_theorems:
+                print(f"    - {name} (File: {path}, Difficulty: {diff:.2f})")
 
 print("\nOverall Statistics:")
 total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
