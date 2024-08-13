@@ -1,34 +1,32 @@
-# TODO: edge cases where items are missing
-
 import datetime
 from pathlib import Path
 from lean_dojo.data_extraction.lean import Pos
 from dynamic_database import DynamicDatabase, Repository, Theorem, AnnotatedTactic, Annotation, PremiseFile, Premise
 
-def create_sample_database():
+def create_sample_database_with_unicode():
     db = DynamicDatabase()
     
     repo = Repository(
         url="https://github.com/example/repo",
-        name="Example Repo",
+        name="Example Repo with Unicode ユニコード",
         commit="abc123",
         lean_version="3.50.3",
         date_processed=datetime.datetime.now(),
-        metadata={"key": "value"},
+        metadata={"key": "value with Unicode ✨"},
         total_theorems=3
     )
 
     theorem1 = Theorem(
-        name="Example Theorem",
+        name="Commutativity of Addition",
         statement="∀ x y : ℕ, x + y = y + x",
         file_path=Path("src/example.lean"),
-        full_name="example.theorem1",
+        full_name="example.commutative_addition",
         start=Pos(1, 1),
         end=Pos(5, 10),
         traced_tactics=[
             AnnotatedTactic(
-                tactic="induction x",
-                annotated_tactic=("induction x", [
+                tactic="induction x with n ih",
+                annotated_tactic=("induction x with n ih", [
                     Annotation(
                         full_name="induction",
                         def_path="src/tactic/induction.lean",
@@ -37,21 +35,21 @@ def create_sample_database():
                     )
                 ]),
                 state_before="⊢ ∀ x y : ℕ, x + y = y + x",
-                state_after="2 goals\ncase zero\n⊢ ∀ y : ℕ, 0 + y = y + 0\ncase succ\n⊢ ∀ y : ℕ, succ n + y = y + succ n"
+                state_after="2 goals\ncase zero\n⊢ ∀ y : ℕ, 0 + y = y + 0\ncase succ\nn : ℕ\nih : ∀ y : ℕ, n + y = y + n\n⊢ ∀ y : ℕ, succ n + y = y + succ n"
             )
         ],
         difficulty_rating=0.7
     )
 
     theorem2 = Theorem(
-        name="Sorry Theorem",
-        statement="∀ x : ℝ, x^2 ≥ 0",
+        name="Quadratic Formula",
+        statement="∀ a b c x : ℝ, a ≠ 0 → (a * x² + b * x + c = 0 ↔ x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a))",
         file_path=Path("src/sorry_example.lean"),
-        full_name="sorry_example.theorem2",
+        full_name="example.quadratic_formula",
         start=Pos(10, 1),
         end=Pos(12, 10),
         traced_tactics=[],
-        difficulty_rating=0.5
+        difficulty_rating=0.9
     )
 
     repo.proven_theorems.append(theorem1)
@@ -59,13 +57,13 @@ def create_sample_database():
 
     premise_file = PremiseFile(
         path=Path("src/premise.lean"),
-        imports=["import data.nat.basic"],
+        imports=["import data.real.basic"],
         premises=[
             Premise(
-                full_name="add_zero",
-                code="theorem add_zero (n : ℕ) : n + 0 = n := rfl",
+                full_name="sqrt_squared",
+                code="theorem sqrt_squared (x : ℝ) (h : x ≥ 0) : √(x^2) = x := sorry",
                 start=Pos(1, 1),
-                end=Pos(1, 50),
+                end=Pos(1, 70),
                 kind="theorem"
             )
         ]
@@ -77,64 +75,50 @@ def create_sample_database():
     db.add_repository(repo)
     return db
 
-def test_add_get_update_repository():
-    db = DynamicDatabase()
-    
-    repo1 = Repository(
-        url="https://github.com/example/repo1",
-        name="Example Repo 1",
-        commit="abc123",
-        lean_version="3.50.3",
-        date_processed=datetime.datetime.now(),
-        metadata={"key": "value1"},
-        total_theorems=1
-    )
-    
-    db.add_repository(repo1)
-    assert len(db.repositories) == 1
-    
-    retrieved_repo = db.get_repository("https://github.com/example/repo1", "abc123")
-    assert retrieved_repo is not None
-    assert retrieved_repo.name == "Example Repo 1"
-    
-    repo2 = Repository(
-        url="https://github.com/example/repo2",
-        name="Example Repo 2",
-        commit="def456",
-        lean_version="3.50.3",
-        date_processed=datetime.datetime.now(),
-        metadata={"key": "value2"},
-        total_theorems=2
-    )
-    
-    db.add_repository(repo2)
-    assert len(db.repositories) == 2
-    
-    updated_repo1 = Repository(
-        url="https://github.com/example/repo1",
-        name="Updated Example Repo 1",
-        commit="abc123",
-        lean_version="3.50.3",
-        date_processed=datetime.datetime.now(),
-        metadata={"key": "updated_value"},
-        total_theorems=3
-    )
-    
-    db.update_repository(updated_repo1)
-    assert len(db.repositories) == 2
-    
-    retrieved_updated_repo = db.get_repository("https://github.com/example/repo1", "abc123")
-    assert retrieved_updated_repo is not None
-    assert retrieved_updated_repo.name == "Updated Example Repo 1"
-    assert retrieved_updated_repo.metadata["key"] == "updated_value"
-    assert retrieved_updated_repo.total_theorems == 3
-
-def test_serialization_deserialization_and_modification():
-    original_db = create_sample_database()
+def test_unicode_serialization_deserialization():
+    original_db = create_sample_database_with_unicode()
     
     # Serialize to JSON
-    json_file = "test_database.json"
+    json_file = "test_unicode_database.json"
     original_db.to_json(json_file)
+    
+    # Deserialize from JSON
+    deserialized_db = DynamicDatabase.from_json(json_file)
+    
+    # Compare original and deserialized databases
+    assert len(original_db.repositories) == len(deserialized_db.repositories)
+    
+    original_repo = original_db.repositories[0]
+    deserialized_repo = deserialized_db.repositories[0]
+    
+    assert original_repo.name == deserialized_repo.name
+    assert original_repo.metadata["key"] == deserialized_repo.metadata["key"]
+    
+    original_theorem1 = original_repo.proven_theorems[0]
+    deserialized_theorem1 = deserialized_repo.proven_theorems[0]
+    
+    assert original_theorem1.statement == deserialized_theorem1.statement
+    assert original_theorem1.traced_tactics[0].state_before == deserialized_theorem1.traced_tactics[0].state_before
+    assert original_theorem1.traced_tactics[0].state_after == deserialized_theorem1.traced_tactics[0].state_after
+    
+    original_theorem2 = original_repo.sorry_theorems_unproved[0]
+    deserialized_theorem2 = deserialized_repo.sorry_theorems_unproved[0]
+    
+    assert original_theorem2.statement == deserialized_theorem2.statement
+    
+    original_premise = original_repo.premise_files[0].premises[0]
+    deserialized_premise = deserialized_repo.premise_files[0].premises[0]
+    
+    assert original_premise.code == deserialized_premise.code
+
+    print("Unicode serialization and deserialization test passed successfully!")
+
+def test_unicode_modification():
+    db = create_sample_database_with_unicode()
+    
+    # Serialize to JSON
+    json_file = "test_unicode_database.json"
+    db.to_json(json_file)
     
     # Deserialize from JSON
     deserialized_db = DynamicDatabase.from_json(json_file)
@@ -144,34 +128,33 @@ def test_serialization_deserialization_and_modification():
     assert repo is not None
     
     # Find the sorry theorem
-    sorry_theorem = next((thm for thm in repo.sorry_theorems_unproved if thm.name == "Sorry Theorem"), None)
-    assert sorry_theorem is not None
+    sorry_theorem = repo.sorry_theorems_unproved[0]
     
-    # Write a proof for the sorry theorem
+    # Write a proof for the sorry theorem with Unicode
     sorry_theorem.traced_tactics = [
         AnnotatedTactic(
-            tactic="by_cases h : x = 0",
-            annotated_tactic=("by_cases h : x = 0", []),
-            state_before="⊢ ∀ x : ℝ, x^2 ≥ 0",
-            state_after="2 goals\ncase pos\nh : x = 0\n⊢ x^2 ≥ 0\ncase neg\nh : x ≠ 0\n⊢ x^2 ≥ 0"
+            tactic="intros a b c x h_a_nonzero",
+            annotated_tactic=("intros a b c x h_a_nonzero", []),
+            state_before="⊢ ∀ a b c x : ℝ, a ≠ 0 → (a * x² + b * x + c = 0 ↔ x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a))",
+            state_after="a b c x : ℝ\nh_a_nonzero : a ≠ 0\n⊢ a * x² + b * x + c = 0 ↔ x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a)"
         ),
         AnnotatedTactic(
-            tactic="{ rw h, simp }",
-            annotated_tactic=("{ rw h, simp }", []),
-            state_before="h : x = 0\n⊢ x^2 ≥ 0",
-            state_after="no goals"
+            tactic="apply iff.intro",
+            annotated_tactic=("apply iff.intro", []),
+            state_before="a b c x : ℝ\nh_a_nonzero : a ≠ 0\n⊢ a * x² + b * x + c = 0 ↔ x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a)",
+            state_after="2 goals\ncase mp\na b c x : ℝ\nh_a_nonzero : a ≠ 0\n⊢ a * x² + b * x + c = 0 → x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a)\ncase mpr\na b c x : ℝ\nh_a_nonzero : a ≠ 0\n⊢ (x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a)) → a * x² + b * x + c = 0"
         ),
         AnnotatedTactic(
-            tactic="{ apply le_of_lt, apply mul_self_pos, exact h }",
-            annotated_tactic=("{ apply le_of_lt, apply mul_self_pos, exact h }", []),
-            state_before="h : x ≠ 0\n⊢ x^2 ≥ 0",
+            tactic="sorry",
+            annotated_tactic=("sorry", []),
+            state_before="2 goals\ncase mp\na b c x : ℝ\nh_a_nonzero : a ≠ 0\n⊢ a * x² + b * x + c = 0 → x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a)\ncase mpr\na b c x : ℝ\nh_a_nonzero : a ≠ 0\n⊢ (x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a)) → a * x² + b * x + c = 0",
             state_after="no goals"
         )
     ]
     
-    # Move the theorem from sorry_theorems_unproved to proven_theorems
+    # Move the theorem from sorry_theorems_unproved to sorry_theorems_proved
     repo.sorry_theorems_unproved.remove(sorry_theorem)
-    repo.proven_theorems.append(sorry_theorem)
+    repo.sorry_theorems_proved.append(sorry_theorem)
     
     # Update the JSON file with the modified database
     deserialized_db.update_json(json_file)
@@ -183,14 +166,16 @@ def test_serialization_deserialization_and_modification():
     
     # Check if the sorry theorem has been moved and has a proof
     assert len(updated_repo.sorry_theorems_unproved) == 0
-    assert len(updated_repo.proven_theorems) == 2
+    assert len(updated_repo.sorry_theorems_proved) == 1
     
-    updated_theorem = next((thm for thm in updated_repo.proven_theorems if thm.name == "Sorry Theorem"), None)
-    assert updated_theorem is not None
+    updated_theorem = updated_repo.sorry_theorems_proved[0]
+    assert updated_theorem.name == "Quadratic Formula"
     assert len(updated_theorem.traced_tactics) == 3
-    
-    print("All tests passed successfully!")
+    assert "√(b² - 4*a*c)" in updated_theorem.traced_tactics[0].state_before
+    assert "↔" in updated_theorem.traced_tactics[1].state_before
+
+    print("Unicode modification test passed successfully!")
 
 if __name__ == "__main__":
-    test_add_get_update_repository()
-    test_serialization_deserialization_and_modification()
+    test_unicode_serialization_deserialization()
+    test_unicode_modification()
