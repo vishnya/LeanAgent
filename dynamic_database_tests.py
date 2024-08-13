@@ -1,3 +1,13 @@
+# TODO: test changing Annotation, adding Theorem, changing Theorem, adding Repository, changing Repository, adding Premise, changing Premise, adding PremiseFile, changing PremiseFile, saving for all
+# TODO: test all methods in Repository
+# TODO: missing data
+# TODO: repo with no theorems, no premises, no files_traced
+# TODO: empty lists
+# TODO: None for optional values
+# TODO: empty string for required like name
+# TODO: very large JSON may cause memory issues
+# TODO: write unit tests
+
 import datetime
 from pathlib import Path
 from lean_dojo.data_extraction.lean import Pos
@@ -153,8 +163,7 @@ def test_unicode_modification():
     ]
     
     # Move the theorem from sorry_theorems_unproved to sorry_theorems_proved
-    repo.sorry_theorems_unproved.remove(sorry_theorem)
-    repo.sorry_theorems_proved.append(sorry_theorem)
+    repo.change_sorry_to_proven(sorry_theorem)
     
     # Update the JSON file with the modified database
     deserialized_db.update_json(json_file)

@@ -2,7 +2,8 @@
 # TODO: Test 
 # TODO: Write unit tests
 # TODO: Check which of these fields can be empty. Reference the source code.
-# TODO: add validation. For example, len(proven) = len(sorry_proved) + len(sorry_unproved)
+# TODO: add validation. For example, total =  len(proven) + len(sorry_proved) + len(sorry_unproved)
+# TODO: implement merging here, check for duplicates, add that to tests
 
 from __future__ import annotations
 import datetime
@@ -90,6 +91,13 @@ class Repository:
     @property
     def num_files_traced(self) -> int:
         return len(self.files_traced)
+    
+    def change_sorry_to_proven(self, theorem: Theorem) -> None:
+        if theorem in self.sorry_theorems_unproved:
+            self.sorry_theorems_unproved.remove(theorem)
+            self.sorry_theorems_proved.append(theorem)
+        else:
+            raise ValueError("The theorem is not in the list of unproved sorry theorems.")
 
 @dataclass
 class DynamicDatabase:
