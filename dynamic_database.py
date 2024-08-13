@@ -90,6 +90,97 @@ class Repository:
     def num_files_traced(self) -> int:
         return len(self.files_traced)
     
+    @property
+    def get_all_theorems(self) -> List[Theorem]:
+        return self.proven_theorems + self.sorry_theorems_proved + self.sorry_theorems_unproved
+
+    def add_theorem(self, theorem: Theorem) -> None:
+        if not theorem.traced_tactics:  # Theorem is proven with a term-style proof
+            if theorem not in self.proven_theorems:
+                self.proven_theorems.append(theorem)
+                self.total_theorems += 1
+        elif any(step.tactic == 'sorry' for step in theorem.traced_tactics):
+            if theorem not in self.sorry_theorems_unproved:
+                self.sorry_theorems_unproved.append(theorem)
+                self.total_theorems += 1
+        else:
+            if theorem not in self.sorry_theorems_proved:
+                self.sorry_theorems_proved.append(theorem)
+                self.total_theorems += 1
+
+    def get_theorem(self, file_path: str, full_name: str) -> Optional[Theorem]:
+        for thm in self.get_all_theorems:
+            if thm.file_path == file_path and thm.full_name == full_name:
+                return thm
+        return None
+
+    def update_theorem(self, updated_theorem: Theorem) -> None:
+        for thm_list in [self.proven_theorems, self.sorry_theorems_proved, self.sorry_theorems_unproved]:
+            for i, thm in enumerate(thm_list):
+                if thm.file_path == updated_theorem.file_path and thm.full_name == updated_theorem.full_name:
+                    thm_list[i] = updated_theorem
+                    return
+        raise ValueError(f"Theorem '{updated_theorem.full_name}' not found.")
+
+    def delete_theorem(self, file_path: str, full_name: str) -> None:
+        for thm_list in [self.proven_theorems, self.sorry_theorems_proved, self.sorry_theorems_unproved]:
+            for i, thm in enumerate(thm_list):
+                if thm.file_path == file_path and thm.full_name == full_name:
+                    del thm_list[i]
+                    self.total_theorems -= 1
+                    return
+        raise ValueError(f"Theorem '{full_name}' not found.")
+
+    def add_premise_file(self, premise_file: PremiseFile) -> None:
+        if premise_file not in self.premise_files:
+            self.premise_files.append(premise_file)
+
+    def get_premise_file(self, path: str) -> Optional[PremiseFile]:
+        for pf in self.premise_files:
+            if str(pf.path) == path:
+                return pf
+        return None
+
+    def update_premise_file(self, updated_premise_file: PremiseFile) -> None:
+        for i, pf in enumerate(self.premise_files):
+            if pf.path == updated_premise_file.path:
+                self.premise_files[i] = updated_premise_file
+                return
+        raise ValueError(f"Premise file '{updated_premise_file.path}' not found.")
+
+    def delete_premise_file(self, path: str) -> None:
+        for i, pf in enumerate(self.premise_files):
+            if str(pf.path) == path:
+                del self.premise_files[i]
+                return
+        raise ValueError(f"Premise file '{path}' not found.")
+
+    def add_traced_file(self, file_path: Path) -> None:
+        if file_path not in self.files_traced:
+            self.files_traced.append(file_path)
+
+    def get_traced_file(self, file_path: str) -> Optional[Path]:
+        path = Path(file_path)
+        if path in self.files_traced:
+            return path
+        return None
+
+    def update_traced_file(self, old_file_path: str, new_file_path: str) -> None:
+        old_path = Path(old_file_path)
+        new_path = Path(new_file_path)
+        if old_path in self.files_traced:
+            self.files_traced.remove(old_path)
+            self.files_traced.append(new_path)
+        else:
+            raise ValueError(f"Traced file '{old_file_path}' not found.")
+
+    def delete_traced_file(self, file_path: str) -> None:
+        path = Path(file_path)
+        if path in self.files_traced:
+            self.files_traced.remove(path)
+        else:
+            raise ValueError(f"Traced file '{file_path}' not found.")
+
     def change_sorry_to_proven(self, theorem: Theorem) -> None:
         if theorem in self.sorry_theorems_unproved:
             self.sorry_theorems_unproved.remove(theorem)
@@ -102,7 +193,8 @@ class DynamicDatabase:
     repositories: List[Repository] = field(default_factory=list)
 
     def add_repository(self, repo: Repository) -> None:
-        self.repositories.append(repo)
+        if repo not in self.repositories:
+            self.repositories.append(repo)
 
     def get_repository(self, url: str, commit: str) -> Optional[Repository]:
         for repo in self.repositories:
@@ -110,12 +202,19 @@ class DynamicDatabase:
                 return repo
         return None
 
-    def update_repository(self, repo: Repository) -> None:
-        for i, existing_repo in enumerate(self.repositories):
-            if existing_repo.url == repo.url and existing_repo.commit == repo.commit:
-                self.repositories[i] = repo
+    def update_repository(self, updated_repo: Repository) -> None:
+        for i, repo in enumerate(self.repositories):
+            if repo.url == updated_repo.url and repo.commit == updated_repo.commit:
+                self.repositories[i] = updated_repo
                 return
-        self.add_repository(repo)
+        raise ValueError(f"Repository '{updated_repo.url}' with commit '{updated_repo.commit}' not found.")
+
+    def delete_repository(self, url: str, commit: str) -> None:
+        for i, repo in enumerate(self.repositories):
+            if repo.url == url and repo.commit == commit:
+                del self.repositories[i]
+                return
+        raise ValueError(f"Repository '{url}' with commit '{commit}' not found.")
 
     def to_dict(self) -> Dict:
         return {
