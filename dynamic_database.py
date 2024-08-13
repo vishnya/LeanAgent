@@ -2,7 +2,7 @@
 # TODO: Test 
 # TODO: Write unit tests
 # TODO: Check which of these fields can be empty. Reference the source code.
-# TODO: add validation. For example, total = len(proven) + len(sorry_proved) + len(sorry_unproved)
+# TODO: add validation. For example, len(proven) = len(sorry_proved) + len(sorry_unproved)
 
 from __future__ import annotations
 import datetime
@@ -316,8 +316,8 @@ class DynamicDatabase:
 
     def to_json(self, file_path: str) -> None:
         """Serialize the database to a JSON file."""
-        with open(file_path, 'w') as f:
-            json.dump(self.to_dict(), f, indent=2)
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(self.to_dict(), f, indent=2, ensure_ascii=False)
 
     @classmethod
     def from_json(cls, file_path: str) -> DynamicDatabase:
