@@ -1,10 +1,3 @@
-# TODO: Think about use case and add more accordingly
-# TODO: Test 
-# TODO: Write unit tests
-# TODO: Check which of these fields can be empty. Reference the source code.
-# TODO: add validation. For example, total =  len(proven) + len(sorry_proved) + len(sorry_unproved)
-# TODO: implement merging here, check for duplicates, add that to tests
-
 from __future__ import annotations
 import datetime
 import json
@@ -58,6 +51,7 @@ class Repository:
     name: str
     commit: str
     lean_version: str
+    lean_dojo_version: str
     date_processed: datetime.datetime
     metadata: Dict[str, str]
     total_theorems: int
@@ -83,9 +77,13 @@ class Repository:
     @property
     def num_sorry_theorems(self) -> int:
         return self.num_sorry_theorems_proved + self.num_sorry_theorems_unproved
+    
+    @property
+    def num_premise_files(self) -> int:
+        return len(self.premise_files)
 
     @property
-    def total_premises(self) -> int:
+    def num_premises(self) -> int:
         return sum(len(pf.premises) for pf in self.premise_files)
 
     @property
@@ -127,9 +125,17 @@ class DynamicDatabase:
                     "name": repo.name,
                     "commit": repo.commit,
                     "lean_version": repo.lean_version,
+                    "lean_dojo_version": repo.lean_dojo_version,
                     "date_processed": repo.date_processed.isoformat(),
                     "metadata": repo.metadata,
                     "total_theorems": repo.total_theorems,
+                    "num_proven_theorems": repo.num_proven_theorems,
+                    "num_sorry_theorems": repo.num_sorry_theorems,
+                    "num_sorry_theorems_proved": repo.num_sorry_theorems_proved,
+                    "num_sorry_theorems_unproved": repo.num_sorry_theorems_unproved,
+                    "num_premise_files": repo.num_premise_files,
+                    "num_premises": repo.num_premises,
+                    "num_files_traced": repo.num_files_traced,
                     "proven_theorems": [
                         {
                             "name": thm.name,
@@ -229,6 +235,7 @@ class DynamicDatabase:
                 name=repo_data["name"],
                 commit=repo_data["commit"],
                 lean_version=repo_data["lean_version"],
+                lean_dojo_version=repo_data["lean_dojo_version"],
                 date_processed=datetime.datetime.fromisoformat(repo_data["date_processed"]),
                 metadata=repo_data["metadata"],
                 total_theorems=repo_data["total_theorems"],
