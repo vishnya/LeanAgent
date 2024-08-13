@@ -2,6 +2,7 @@
 # TODO: Test 
 # TODO: Write unit tests
 # TODO: Check which of these fields can be empty. Reference the source code.
+# TODO: add validation. For example, total = len(proven) + len(sorry_proved) + len(sorry_unproved)
 
 from __future__ import annotations
 import datetime
@@ -9,7 +10,7 @@ import json
 from dataclasses import dataclass, field, asdict
 from typing import List, Dict, Optional, Union, Tuple
 from pathlib import Path
-from lean_dojo.data_extraction import Pos
+from lean_dojo.data_extraction.lean import Pos
 
 @dataclass
 class Annotation:
