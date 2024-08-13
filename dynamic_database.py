@@ -7,15 +7,23 @@ from __future__ import annotations
 import datetime
 import json
 from dataclasses import dataclass, field, asdict
-from typing import List, Dict, Optional, Union
+from typing import List, Dict, Optional, Union, Tuple
 from pathlib import Path
 from lean_dojo.data_extraction import Pos
 
 @dataclass
+class Annotation:
+    full_name: str
+    def_path: str
+    def_pos: Pos
+    def_end_pos: Pos
+
+@dataclass
 class AnnotatedTactic:
     tactic: str
-    annotated_tactic: List[str]
-    annotations: List[Dict[str, Union[str, Pos]]]
+    annotated_tactic: Tuple[str, List[Annotation]]
+    state_before: str
+    state_after: str
 
 @dataclass
 class Theorem:
@@ -124,15 +132,19 @@ class DynamicDatabase:
                             "traced_tactics": [
                                 {
                                     "tactic": t.tactic,
-                                    "annotated_tactic": t.annotated_tactic,
-                                    "annotations": [
-                                        {
-                                            "full_name": a["full_name"],
-                                            "def_path": a["def_path"],
-                                            "def_pos": repr(a["def_pos"]),
-                                            "def_end_pos": repr(a["def_end_pos"])
-                                        } for a in t.annotations
-                                    ]
+                                    "annotated_tactic": [
+                                        t.annotated_tactic[0],
+                                        [
+                                            {
+                                                "full_name": a.full_name,
+                                                "def_path": a.def_path,
+                                                "def_pos": repr(a.def_pos),
+                                                "def_end_pos": repr(a.def_end_pos)
+                                            } for a in t.annotated_tactic[1]
+                                        ]
+                                    ],
+                                    "state_before": t.state_before,
+                                    "state_after": t.state_after
                                 } for t in (thm.traced_tactics or [])
                             ],
                             "difficulty_rating": thm.difficulty_rating
@@ -149,15 +161,19 @@ class DynamicDatabase:
                             "traced_tactics": [
                                 {
                                     "tactic": t.tactic,
-                                    "annotated_tactic": t.annotated_tactic,
-                                    "annotations": [
-                                        {
-                                            "full_name": a["full_name"],
-                                            "def_path": a["def_path"],
-                                            "def_pos": repr(a["def_pos"]),
-                                            "def_end_pos": repr(a["def_end_pos"])
-                                        } for a in t.annotations
-                                    ]
+                                    "annotated_tactic": [
+                                        t.annotated_tactic[0],
+                                        [
+                                            {
+                                                "full_name": a.full_name,
+                                                "def_path": a.def_path,
+                                                "def_pos": repr(a.def_pos),
+                                                "def_end_pos": repr(a.def_end_pos)
+                                            } for a in t.annotated_tactic[1]
+                                        ]
+                                    ],
+                                    "state_before": t.state_before,
+                                    "state_after": t.state_after
                                 } for t in (thm.traced_tactics or [])
                             ],
                             "difficulty_rating": thm.difficulty_rating
@@ -218,15 +234,19 @@ class DynamicDatabase:
                         traced_tactics=[
                             AnnotatedTactic(
                                 tactic=t["tactic"],
-                                annotated_tactic=t["annotated_tactic"],
-                                annotations=[
-                                    {
-                                        "full_name": a["full_name"],
-                                        "def_path": a["def_path"],
-                                        "def_pos": Pos.from_str(a["def_pos"]),
-                                        "def_end_pos": Pos.from_str(a["def_end_pos"])
-                                    } for a in t["annotations"]
-                                ]
+                                annotated_tactic=(
+                                    t["annotated_tactic"][0],
+                                    [
+                                        Annotation(
+                                            full_name=a["full_name"],
+                                            def_path=a["def_path"],
+                                            def_pos=Pos.from_str(a["def_pos"]),
+                                            def_end_pos=Pos.from_str(a["def_end_pos"])
+                                        ) for a in t["annotated_tactic"][1]
+                                    ]
+                                ),
+                                state_before=t["state_before"],
+                                state_after=t["state_after"]
                             ) for t in thm.get("traced_tactics", [])
                         ],
                         difficulty_rating=thm.get("difficulty_rating")
@@ -243,15 +263,19 @@ class DynamicDatabase:
                         traced_tactics=[
                             AnnotatedTactic(
                                 tactic=t["tactic"],
-                                annotated_tactic=t["annotated_tactic"],
-                                annotations=[
-                                    {
-                                        "full_name": a["full_name"],
-                                        "def_path": a["def_path"],
-                                        "def_pos": Pos.from_str(a["def_pos"]),
-                                        "def_end_pos": Pos.from_str(a["def_end_pos"])
-                                    } for a in t["annotations"]
-                                ]
+                                annotated_tactic=(
+                                    t["annotated_tactic"][0],
+                                    [
+                                        Annotation(
+                                            full_name=a["full_name"],
+                                            def_path=a["def_path"],
+                                            def_pos=Pos.from_str(a["def_pos"]),
+                                            def_end_pos=Pos.from_str(a["def_end_pos"])
+                                        ) for a in t["annotated_tactic"][1]
+                                    ]
+                                ),
+                                state_before=t["state_before"],
+                                state_after=t["state_after"]
                             ) for t in thm.get("traced_tactics", [])
                         ],
                         difficulty_rating=thm.get("difficulty_rating")
