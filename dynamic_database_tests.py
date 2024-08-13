@@ -1,13 +1,3 @@
-# TODO: test changing Annotation, adding Theorem, changing Theorem, adding Repository, changing Repository, adding Premise, changing Premise, adding PremiseFile, changing PremiseFile, saving for all
-# TODO: test all methods in Repository
-# TODO: missing data
-# TODO: repo with no theorems, no premises, no files_traced
-# TODO: empty lists
-# TODO: None for optional values
-# TODO: empty string for required like name
-# TODO: very large JSON may cause memory issues
-# TODO: write unit tests
-
 import datetime
 from pathlib import Path
 from lean_dojo.data_extraction.lean import Pos
@@ -21,6 +11,7 @@ def create_sample_database_with_unicode():
         name="Example Repo with Unicode ユニコード",
         commit="abc123",
         lean_version="3.50.3",
+        lean_dojo_version="1.8.4",
         date_processed=datetime.datetime.now(),
         metadata={"key": "value with Unicode ✨"},
         total_theorems=3
