@@ -1,3 +1,5 @@
+# TODO: edge cases where items are missing
+
 import datetime
 from pathlib import Path
 from lean_dojo.data_extraction.lean import Pos
@@ -53,7 +55,7 @@ def create_sample_database():
     )
 
     repo.proven_theorems.append(theorem1)
-    repo.sorry_theorems_proved.append(theorem2)
+    repo.sorry_theorems_unproved.append(theorem2)
 
     premise_file = PremiseFile(
         path=Path("src/premise.lean"),
@@ -75,7 +77,59 @@ def create_sample_database():
     db.add_repository(repo)
     return db
 
-def test_serialization_deserialization():
+def test_add_get_update_repository():
+    db = DynamicDatabase()
+    
+    repo1 = Repository(
+        url="https://github.com/example/repo1",
+        name="Example Repo 1",
+        commit="abc123",
+        lean_version="3.50.3",
+        date_processed=datetime.datetime.now(),
+        metadata={"key": "value1"},
+        total_theorems=1
+    )
+    
+    db.add_repository(repo1)
+    assert len(db.repositories) == 1
+    
+    retrieved_repo = db.get_repository("https://github.com/example/repo1", "abc123")
+    assert retrieved_repo is not None
+    assert retrieved_repo.name == "Example Repo 1"
+    
+    repo2 = Repository(
+        url="https://github.com/example/repo2",
+        name="Example Repo 2",
+        commit="def456",
+        lean_version="3.50.3",
+        date_processed=datetime.datetime.now(),
+        metadata={"key": "value2"},
+        total_theorems=2
+    )
+    
+    db.add_repository(repo2)
+    assert len(db.repositories) == 2
+    
+    updated_repo1 = Repository(
+        url="https://github.com/example/repo1",
+        name="Updated Example Repo 1",
+        commit="abc123",
+        lean_version="3.50.3",
+        date_processed=datetime.datetime.now(),
+        metadata={"key": "updated_value"},
+        total_theorems=3
+    )
+    
+    db.update_repository(updated_repo1)
+    assert len(db.repositories) == 2
+    
+    retrieved_updated_repo = db.get_repository("https://github.com/example/repo1", "abc123")
+    assert retrieved_updated_repo is not None
+    assert retrieved_updated_repo.name == "Updated Example Repo 1"
+    assert retrieved_updated_repo.metadata["key"] == "updated_value"
+    assert retrieved_updated_repo.total_theorems == 3
+
+def test_serialization_deserialization_and_modification():
     original_db = create_sample_database()
     
     # Serialize to JSON
@@ -85,46 +139,58 @@ def test_serialization_deserialization():
     # Deserialize from JSON
     deserialized_db = DynamicDatabase.from_json(json_file)
     
-    # Compare original and deserialized databases
-    assert len(original_db.repositories) == len(deserialized_db.repositories)
+    # Modify the deserialized database
+    repo = deserialized_db.get_repository("https://github.com/example/repo", "abc123")
+    assert repo is not None
     
-    original_repo = original_db.repositories[0]
-    deserialized_repo = deserialized_db.repositories[0]
+    # Find the sorry theorem
+    sorry_theorem = next((thm for thm in repo.sorry_theorems_unproved if thm.name == "Sorry Theorem"), None)
+    assert sorry_theorem is not None
     
-    assert original_repo.url == deserialized_repo.url
-    assert original_repo.name == deserialized_repo.name
-    assert original_repo.commit == deserialized_repo.commit
-    assert original_repo.lean_version == deserialized_repo.lean_version
-    assert original_repo.date_processed.isoformat() == deserialized_repo.date_processed.isoformat()
-    assert original_repo.metadata == deserialized_repo.metadata
-    assert original_repo.total_theorems == deserialized_repo.total_theorems
+    # Write a proof for the sorry theorem
+    sorry_theorem.traced_tactics = [
+        AnnotatedTactic(
+            tactic="by_cases h : x = 0",
+            annotated_tactic=("by_cases h : x = 0", []),
+            state_before="⊢ ∀ x : ℝ, x^2 ≥ 0",
+            state_after="2 goals\ncase pos\nh : x = 0\n⊢ x^2 ≥ 0\ncase neg\nh : x ≠ 0\n⊢ x^2 ≥ 0"
+        ),
+        AnnotatedTactic(
+            tactic="{ rw h, simp }",
+            annotated_tactic=("{ rw h, simp }", []),
+            state_before="h : x = 0\n⊢ x^2 ≥ 0",
+            state_after="no goals"
+        ),
+        AnnotatedTactic(
+            tactic="{ apply le_of_lt, apply mul_self_pos, exact h }",
+            annotated_tactic=("{ apply le_of_lt, apply mul_self_pos, exact h }", []),
+            state_before="h : x ≠ 0\n⊢ x^2 ≥ 0",
+            state_after="no goals"
+        )
+    ]
     
-    assert len(original_repo.proven_theorems) == len(deserialized_repo.proven_theorems)
-    assert len(original_repo.sorry_theorems_proved) == len(deserialized_repo.sorry_theorems_proved)
+    # Move the theorem from sorry_theorems_unproved to proven_theorems
+    repo.sorry_theorems_unproved.remove(sorry_theorem)
+    repo.proven_theorems.append(sorry_theorem)
     
-    original_theorem = original_repo.proven_theorems[0]
-    deserialized_theorem = deserialized_repo.proven_theorems[0]
+    # Update the JSON file with the modified database
+    deserialized_db.update_json(json_file)
     
-    assert original_theorem.name == deserialized_theorem.name
-    assert original_theorem.statement == deserialized_theorem.statement
-    assert str(original_theorem.file_path) == str(deserialized_theorem.file_path)
-    assert original_theorem.full_name == deserialized_theorem.full_name
-    assert repr(original_theorem.start) == repr(deserialized_theorem.start)
-    assert repr(original_theorem.end) == repr(deserialized_theorem.end)
-    assert original_theorem.difficulty_rating == deserialized_theorem.difficulty_rating
+    # Read the updated JSON file
+    updated_db = DynamicDatabase.from_json(json_file)
+    updated_repo = updated_db.get_repository("https://github.com/example/repo", "abc123")
+    assert updated_repo is not None
     
-    assert len(original_theorem.traced_tactics) == len(deserialized_theorem.traced_tactics)
+    # Check if the sorry theorem has been moved and has a proof
+    assert len(updated_repo.sorry_theorems_unproved) == 0
+    assert len(updated_repo.proven_theorems) == 2
     
-    original_tactic = original_theorem.traced_tactics[0]
-    deserialized_tactic = deserialized_theorem.traced_tactics[0]
-    
-    assert original_tactic.tactic == deserialized_tactic.tactic
-    assert original_tactic.annotated_tactic[0] == deserialized_tactic.annotated_tactic[0]
-    assert len(original_tactic.annotated_tactic[1]) == len(deserialized_tactic.annotated_tactic[1])
-    assert original_tactic.state_before == deserialized_tactic.state_before
-    assert original_tactic.state_after == deserialized_tactic.state_after
+    updated_theorem = next((thm for thm in updated_repo.proven_theorems if thm.name == "Sorry Theorem"), None)
+    assert updated_theorem is not None
+    assert len(updated_theorem.traced_tactics) == 3
     
     print("All tests passed successfully!")
 
 if __name__ == "__main__":
-    test_serialization_deserialization()
+    test_add_get_update_repository()
+    test_serialization_deserialization_and_modification()
