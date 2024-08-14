@@ -178,13 +178,18 @@ def export_proofs(
                     and "·" not in t.tactic  # Ignore "·".
                 ]
                 num_tactics += len(tactics)
+
+                theorem_statement = None
+                if thm.has_tactic_proof() and thm.get_tactic_proof() is not None:
+                    theorem_statement = thm.get_theorem_statement()
+                
                 data.append(
                     {
                         "url": traced_repo.repo.url,
                         "commit": traced_repo.repo.commit,
                         "file_path": _get_file_path(traced_repo, thm),
                         "full_name": thm.theorem.full_name,
-                        "theorem_statement": thm.get_theorem_statement(),
+                        "theorem_statement": theorem_statement,
                         "start": list(thm.start),
                         "end": list(thm.end),
                         "traced_tactics": tactics,
