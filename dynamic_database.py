@@ -7,6 +7,10 @@ from typing import List, Dict, Optional, Union, Tuple
 from pathlib import Path
 from lean_dojo.data_extraction.lean import Pos
 from tqdm import tqdm
+import random
+from collections import defaultdict
+from loguru import logger
+import shutil
 
 def parse_pos(pos_str):
     if isinstance(pos_str, str):
@@ -59,17 +63,29 @@ class Theorem:
     file_path: Path
     start: Pos
     end: Pos
-    traced_tactics: Optional[List[AnnotatedTactic]] = None
+    url: str
+    commit: str
+    traced_tactics: Optional[List[AnnotatedTactic]] = None # TODO: isn't the default []
     difficulty_rating: Optional[float] = None
 
+    def __eq__(self, other):
+        if not isinstance(other, Theorem):
+            return NotImplemented
+        return (self.full_name == other.full_name and
+                self.file_path == other.file_path and
+                self.start == other.start and
+                self.end == other.end)
+
     @classmethod
-    def from_dict(cls, data: Dict) -> Theorem:
+    def from_dict(cls, data: Dict, url: str, commit: str) -> Theorem:
         return cls(
             full_name=data["full_name"],
             theorem_statement=data["theorem_statement"],
             file_path=Path(data["file_path"]),
             start=parse_pos(data["start"]),
             end=parse_pos(data["end"]),
+            url=url,
+            commit=commit,
             traced_tactics=[
                 AnnotatedTactic.from_dict(t) for t in data.get("traced_tactics", [])
             ],
@@ -182,7 +198,7 @@ class Repository:
                 with open(file, 'r') as f:
                     theorem_data = json.load(f)
                 for t_data in tqdm(theorem_data):
-                    theorem = Theorem.from_dict(t_data)
+                    theorem = Theorem.from_dict(t_data, repo.url, repo.commit)
                     if any(step.tactic == 'sorry' for step in (theorem.traced_tactics or [])):
                         repo.sorry_theorems_unproved.append(theorem)
                     else:
@@ -200,9 +216,9 @@ class Repository:
                     repo.files_traced.append(Path(traced_file_data["traced_file_path"]))
         else:
             # Process theorems and premises from the existing data structure
-            repo.proven_theorems = [Theorem.from_dict(t) for t in data.get("proven_theorems", [])]
-            repo.sorry_theorems_proved = [Theorem.from_dict(t) for t in data.get("sorry_theorems_proved", [])]
-            repo.sorry_theorems_unproved = [Theorem.from_dict(t) for t in data.get("sorry_theorems_unproved", [])]
+            repo.proven_theorems = [Theorem.from_dict(t, repo.url, repo.commit) for t in data.get("proven_theorems", [])]
+            repo.sorry_theorems_proved = [Theorem.from_dict(t, repo.url, repo.commit) for t in data.get("sorry_theorems_proved", [])]
+            repo.sorry_theorems_unproved = [Theorem.from_dict(t, repo.url, repo.commit) for t in data.get("sorry_theorems_unproved", [])]
             repo.premise_files = [PremiseFile.from_dict(pf) for pf in data.get("premise_files", [])]
             repo.files_traced = [Path(file) for file in data.get("files_traced", [])]
 
@@ -317,6 +333,182 @@ class Repository:
 class DynamicDatabase:
     repositories: List[Repository] = field(default_factory=list)
 
+    SPLIT = Dict[str, List[Theorem]]
+
+    # TODO: ensure no duplicates and similar to generation code
+    # TODO: ensure that generated is same as original
+    def generate_merged_dataset(self, output_path: Path, repos_to_include: Optional[List[Tuple[str, str]]] = None) -> None:
+        """
+        Generate a merged dataset from multiple repositories in the database.
+        
+        :param output_path: Path where the merged dataset will be saved
+        :param repos_to_include: List of tuples (url, commit) of repositories to include in the dataset. 
+                                 If None, all repos are included.
+        """
+        output_path.mkdir(parents=True, exist_ok=True)
+
+        repos_to_process = self.repositories
+        if repos_to_include:
+            repos_to_process = [repo for repo in self.repositories 
+                                if (repo.url, repo.commit) in repos_to_include]
+
+        all_theorems = []
+        for repo in repos_to_process:
+            all_theorems.extend(repo.get_all_theorems)
+
+        splits = self._split_data(all_theorems)
+
+        if output_path.exists():
+            logger.warning(f"{output_path} already exists. Removing it now.")
+            shutil.rmtree(output_path)
+
+        self._export_proofs(repos_to_process, splits, output_path)
+
+        self._export_premises(repos_to_process, output_path)
+
+        self._export_traced_files(repos_to_process, output_path)
+
+        self._export_metadata(repos_to_process, output_path)
+
+    def _split_data(self, theorems: List[Theorem], num_val_pct: float = 0.02, num_test_pct: float = 0.02) -> Dict[str, SPLIT]:
+        num_theorems = len(theorems)
+        num_val = int(num_theorems * num_val_pct)
+        num_test = int(num_theorems * num_test_pct)
+
+        return {
+            "random": self._split_randomly(theorems, num_val, num_test),
+            "novel_premises": self._split_by_premise(theorems, num_val, num_test),
+        }
+
+    def _split_randomly(self, theorems: List[Theorem], num_val: int, num_test: int) -> SPLIT:
+        random.shuffle(theorems)
+        num_train = len(theorems) - num_val - num_test
+        return {
+            "train": theorems[:num_train],
+            "val": theorems[num_train : num_train + num_val],
+            "test": theorems[num_train + num_val :],
+        }
+
+    def _split_by_premise(self, theorems: List[Theorem], num_val: int, num_test: int) -> SPLIT:
+        num_val_test = num_val + num_test
+        theorems_val_test = []
+
+        theorems_by_premises = defaultdict(list)
+        for t in theorems:
+            if t.traced_tactics:
+                for tactic in t.traced_tactics:
+                    for annotation in tactic.annotated_tactic[1]:
+                        theorems_by_premises[annotation.full_name].append(t)
+
+        theorems_by_premises = sorted(theorems_by_premises.items(), key=lambda x: len(x[1]))
+
+        for _, thms in theorems_by_premises:
+            if len(theorems_val_test) < num_val_test:
+                theorems_val_test.extend([t for t in thms if t not in theorems_val_test])
+            else:
+                break
+
+        theorems_train = [t for t in theorems if t not in theorems_val_test]
+        random.shuffle(theorems_val_test)
+
+        return {
+            "train": theorems_train,
+            "val": theorems_val_test[:num_val],
+            "test": theorems_val_test[num_val:],
+        }
+
+    def _export_proofs(self, repos: List[Repository], splits: Dict[str, SPLIT], output_path: Path) -> None:
+        for strategy, split in splits.items():
+            strategy_dir = output_path / strategy
+            strategy_dir.mkdir(parents=True, exist_ok=True)
+
+            for name, theorems in split.items():
+                data = []
+                for thm in theorems:
+                    tactics = [
+                        {
+                            "tactic": t.tactic,
+                            "annotated_tactic": [
+                                t.annotated_tactic[0],
+                                [
+                                    {
+                                        "full_name": a.full_name,
+                                        "def_path": str(a.def_path),
+                                        "def_pos": list(a.def_pos),
+                                        "def_end_pos": list(a.def_end_pos)
+                                    } for a in t.annotated_tactic[1]
+                                ]
+                            ],
+                            "state_before": t.state_before,
+                            "state_after": t.state_after,
+                        }
+                        for t in thm.traced_tactics
+                        if t.state_before != "no goals" and "·" not in t.tactic
+                    ]
+                    data.append({
+                        "url": thm.url,
+                        "commit": thm.commit,
+                        "file_path": str(thm.file_path),
+                        "full_name": thm.full_name,
+                        "theorem_statement": thm.theorem_statement,
+                        "start": list(thm.start),
+                        "end": list(thm.end),
+                        "traced_tactics": tactics,
+                    })
+
+                output_file = strategy_dir / f"{name}.json"
+                with open(output_file, 'w') as f:
+                    json.dump(data, f, indent=2)
+
+    def _export_premises(self, repos: List[Repository], output_path: Path) -> None:
+       with open(output_path / "corpus.jsonl", 'w') as f:
+            for repo in repos:
+                for premise_file in repo.premise_files:
+                    f.write(json.dumps({
+                        "path": str(premise_file.path),
+                        "imports": premise_file.imports,
+                        "premises": [
+                            {
+                                "full_name": premise.full_name,
+                                "code": premise.code,
+                                "start": repr(premise.start),
+                                "end": repr(premise.end),
+                                "kind": premise.kind
+                            } for premise in premise_file.premises
+                        ]
+                    }) + "\n")
+
+    def _export_traced_files(self, repos: List[Repository], output_path: Path) -> None:
+        with open(output_path / "traced_files.jsonl", 'w') as f:
+            for repo in repos:
+                for file in repo.files_traced:
+                    f.write(json.dumps({
+                        "traced_file_path": str(file)
+                    }) + "\n")
+
+    def _export_metadata(self, repos: List[Repository], output_path: Path) -> None:
+        metadata = {
+            "repositories": [
+                {
+                    "url": repo.url,
+                    "name": repo.name,
+                    "commit": repo.commit,
+                    "lean_version": repo.lean_version,
+                    "lean_dojo_version": repo.lean_dojo_version,
+                    "date_processed": repo.date_processed.isoformat(),
+                    "metadata": repo.metadata,
+                } for repo in repos
+            ],
+            "total_theorems": sum(repo.total_theorems for repo in repos),
+            "num_proven_theorems": sum(repo.num_proven_theorems for repo in repos),
+            "num_sorry_theorems": sum(repo.num_sorry_theorems for repo in repos),
+            "num_premise_files": sum(repo.num_premise_files for repo in repos),
+            "num_premises": sum(repo.num_premises for repo in repos),
+            "num_files_traced": sum(repo.num_files_traced for repo in repos),
+        }
+        with open(output_path / "metadata.json", 'w') as f:
+            json.dump(metadata, f, indent=2)
+
     def add_repository(self, repo: Repository) -> None:
         if repo not in self.repositories:
             self.repositories.append(repo)
@@ -367,6 +559,8 @@ class DynamicDatabase:
                             "file_path": str(thm.file_path),
                             "start": repr(thm.start),
                             "end": repr(thm.end),
+                            "url": thm.url,
+                            "commit": thm.commit,
                             "traced_tactics": [
                                 {
                                     "tactic": t.tactic,
@@ -395,6 +589,8 @@ class DynamicDatabase:
                             "file_path": str(thm.file_path),
                             "start": repr(thm.start),
                             "end": repr(thm.end),
+                            "url": thm.url,
+                            "commit": thm.commit,
                             "traced_tactics": [
                                 {
                                     "tactic": t.tactic,
@@ -423,6 +619,8 @@ class DynamicDatabase:
                             "file_path": str(thm.file_path),
                             "start": repr(thm.start),
                             "end": repr(thm.end),
+                            "url": thm.url,
+                            "commit": thm.commit,
                             "difficulty_rating": thm.difficulty_rating
                         } for thm in repo.sorry_theorems_unproved
                     ],

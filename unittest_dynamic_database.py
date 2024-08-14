@@ -5,6 +5,8 @@ from dynamic_database import DynamicDatabase, Repository, Theorem, AnnotatedTact
 from lean_dojo.data_extraction.lean import Pos, LeanGitRepo
 import generate_benchmark_lean4
 import lean_dojo
+import json
+import shutil
 
 RAID_DIR = "/raid/adarsh"
 DATA_DIR = "datasets_new"
@@ -32,6 +34,8 @@ class TestDynamicDatabaseUnicode(unittest.TestCase):
             file_path=Path("src/example.lean"),
             start=Pos(1, 1),
             end=Pos(5, 10),
+            url="https://github.com/example/repo",
+            commit="abc123",
             traced_tactics=[
                 AnnotatedTactic(
                     tactic="induction x with n ih",
@@ -56,6 +60,8 @@ class TestDynamicDatabaseUnicode(unittest.TestCase):
             file_path=Path("src/sorry_example.lean"),
             start=Pos(10, 1),
             end=Pos(12, 10),
+            url="https://github.com/example/repo",
+            commit="abc123",
             traced_tactics=[],
             difficulty_rating=0.9
         )
@@ -299,12 +305,153 @@ class TestDynamicDatabasePFR(unittest.TestCase):
         self.assertEqual(len(original_repo.proven_theorems), len(deserialized_repo.proven_theorems))
         self.assertEqual(len(original_repo.premise_files), len(deserialized_repo.premise_files))
 
+    def test_generate_dataset_structure(self):
+        url = "https://github.com/teorth/pfr"
+        commit = "6a5082ee465f9e44cea479c7b741b3163162bb7e"
+        dir_name = url.split("/")[-1] + "_" + commit
+        dst_dir = Path(RAID_DIR) / DATA_DIR / f"{dir_name}_generated"
+        self.db.generate_merged_dataset(dst_dir)
+
+        self.assertTrue(dst_dir.exists())
+        self.assertTrue((dst_dir / "random").exists())
+        self.assertTrue((dst_dir / "novel_premises").exists())
+        self.assertTrue((dst_dir / "random" / "train.json").exists())
+        self.assertTrue((dst_dir / "random" / "val.json").exists())
+        self.assertTrue((dst_dir / "random" / "test.json").exists())
+        self.assertTrue((dst_dir / "novel_premises" / "train.json").exists())
+        self.assertTrue((dst_dir / "novel_premises" / "val.json").exists())
+        self.assertTrue((dst_dir / "novel_premises" / "test.json").exists())
+        self.assertTrue((dst_dir / "corpus.jsonl").exists())
+        self.assertTrue((dst_dir / "traced_files.jsonl").exists())
+        self.assertTrue((dst_dir / "metadata.json").exists())
+
+    def test_generated_dataset_content(self):
+        url = "https://github.com/teorth/pfr"
+        commit = "6a5082ee465f9e44cea479c7b741b3163162bb7e"
+        dir_name = url.split("/")[-1] + "_" + commit
+        dst_dir = Path(RAID_DIR) / DATA_DIR / f"{dir_name}_generated"
+        self.db.generate_merged_dataset(dst_dir)
+
+        with open(dst_dir / "random" / "train.json", 'r') as f:
+            train_data = json.load(f)
+            self.assertIsInstance(train_data, list)
+            self.assertGreater(len(train_data), 0)
+            first_theorem = train_data[0]
+            self.assertIn("url", first_theorem)
+            self.assertIn("commit", first_theorem)
+            self.assertIn("file_path", first_theorem)
+            self.assertIn("full_name", first_theorem)
+            self.assertIn("theorem_statement", first_theorem)
+            self.assertIn("start", first_theorem)
+            self.assertIn("end", first_theorem)
+            self.assertIn("traced_tactics", first_theorem)
+
+        with open(dst_dir / "corpus.jsonl", 'r') as f:
+            first_line = f.readline().strip()
+            first_premise_file = json.loads(first_line)
+            self.assertIn("path", first_premise_file)
+            self.assertIn("imports", first_premise_file)
+            self.assertIn("premises", first_premise_file)
+
+        with open(dst_dir / "traced_files.jsonl", 'r') as f:
+            first_line = f.readline().strip()
+            first_traced_file = json.loads(first_line)
+            self.assertIn("traced_file_path", first_traced_file)
+
+        with open(dst_dir / "metadata.json", 'r') as f:
+            metadata = json.load(f)
+            self.assertIn("repositories", metadata)
+            self.assertIn("total_theorems", metadata)
+            self.assertIn("num_proven_theorems", metadata)
+            self.assertIn("num_sorry_theorems", metadata)
+            self.assertIn("num_premise_files", metadata)
+            self.assertIn("num_premises", metadata)
+            self.assertIn("num_files_traced", metadata)
+
+    def test_dataset_splitting(self):
+        url = "https://github.com/teorth/pfr"
+        commit = "6a5082ee465f9e44cea479c7b741b3163162bb7e"
+        dir_name = url.split("/")[-1] + "_" + commit
+        dst_dir = Path(RAID_DIR) / DATA_DIR / f"{dir_name}_generated"
+        self.db.generate_merged_dataset(dst_dir)
+
+        for strategy in ['random', 'novel_premises']:
+            train_set = set()
+            val_set = set()
+            test_set = set()
+
+            with open(dst_dir / strategy / "train.json", 'r') as f:
+                train_data = json.load(f)
+                train_set = set(item['full_name'] for item in train_data)
+
+            with open(dst_dir / strategy / "val.json", 'r') as f:
+                val_data = json.load(f)
+                val_set = set(item['full_name'] for item in val_data)
+
+            with open(dst_dir / strategy / "test.json", 'r') as f:
+                test_data = json.load(f)
+                test_set = set(item['full_name'] for item in test_data)
+
+            self.assertGreater(len(train_set), 0)
+            self.assertGreater(len(val_set), 0)
+            self.assertGreater(len(test_set), 0)
+
+            self.assertEqual(len(train_set.intersection(val_set)), 0)
+            self.assertEqual(len(train_set.intersection(test_set)), 0)
+            self.assertEqual(len(val_set.intersection(test_set)), 0)
+
+    def test_dataset_consistency(self):
+        url = "https://github.com/teorth/pfr"
+        commit = "6a5082ee465f9e44cea479c7b741b3163162bb7e"
+        dir_name = url.split("/")[-1] + "_" + commit
+        dst_dir = Path(RAID_DIR) / DATA_DIR / f"{dir_name}_generated"
+        self.db.generate_merged_dataset(dst_dir)
+
+        # Check that all theorems in the dataset are from the original repository
+        all_theorems = set(thm.full_name for thm in self.sample_repo.get_all_theorems)
+
+        for strategy in ['random', 'novel_premises']:
+            for split in ['train', 'val', 'test']:
+                with open(dst_dir / strategy / f"{split}.json", 'r') as f:
+                    data = json.load(f)
+                    for item in data:
+                        self.assertIn(item['full_name'], all_theorems)
+
+    def test_unicode_handling_in_dataset(self):
+        url = "https://github.com/teorth/pfr"
+        commit = "6a5082ee465f9e44cea479c7b741b3163162bb7e"
+        dir_name = url.split("/")[-1] + "_" + commit
+        dst_dir = Path(RAID_DIR) / DATA_DIR / f"{dir_name}_generated"
+        self.db.generate_merged_dataset(dst_dir)
+
+        with open(dst_dir / "metadata.json", 'r', encoding='utf-8') as f:
+            metadata = json.load(f)
+            self.assertIn('repositories', metadata, "No 'repositories' key in metadata")
+            self.assertGreater(len(metadata['repositories']), 0, "No repositories in metadata")
+            repo = metadata['repositories'][0]
+            self.assertIn('metadata', repo, "No 'metadata' key in repository")
+            repo_metadata = repo['metadata']
+            self.assertIn('unicode', repo_metadata, "No 'unicode' key in repository metadata")
+            self.assertIn("ユニコード", repo_metadata['unicode'], "Unicode string not found in metadata")
+            self.assertIn("ユニコード", metadata['repositories'][0]['metadata']['unicode'])
+
+    def tearDown(self):
+        # Clean up generated files after tests
+        url = "https://github.com/teorth/pfr"
+        commit = "6a5082ee465f9e44cea479c7b741b3163162bb7e"
+        dir_name = url.split("/")[-1] + "_" + commit
+        dst_dir = Path(RAID_DIR) / DATA_DIR / f"{dir_name}_generated"
+        if dst_dir.exists():
+            shutil.rmtree(dst_dir)
+
     def test_theorem_statement(self):
         theorem = next(t for t in self.sample_repo.proven_theorems if t.full_name == "ContinuousLinearMap.opNorm_lsmul")
         self.assertIsNotNone(theorem.theorem_statement)
         self.assertIn("opNorm_lsmul", theorem.theorem_statement)
 
     def test_unicode_handling(self):
+        self.assertIsNotNone(self.sample_repo.metadata)
+        self.assertIsNotNone(self.sample_repo.metadata["unicode"])
         self.assertIn("ユニコード", self.sample_repo.metadata["unicode"])
 
     def test_difficulty_rating(self):
