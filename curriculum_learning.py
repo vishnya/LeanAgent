@@ -27,6 +27,12 @@ def categorize_difficulty(difficulty, percentiles):
     else:
         return "Hard"
 
+file_path = "/raid/adarsh/datasets_new/pfr_6a5082ee465f9e44cea479c7b741b3163162bb7e/corpus.jsonl"
+for line in open(file_path):
+    file_data = json.loads(line)
+
+# {"path": ".lake/packages/lean4/src/lean/Init/Prelude.lean", "imports": [], "premises": [{"full_name": "id", "code": "@[inline] def id {\\u03b1 : Sort u} (a : \\u03b1) : \\u03b1 := a", "start": [21, 1], "end": [33, 47], "kind": "commanddeclaration"}, {"full_name": "Function.comp", "code": "@[inline] def Function.comp {\\u03b1 : Sort u} {\\u03b2 : Sort v} {\\u03b4 : Sort w} (f : \\u03b2 \\u2192 \\u03b4) (g : \\u03b1 \\u2192 \\u03b2) : \\u03b1 \\u2192 \\u03b4 :=\\n  fun x => f (g x)", "start": [35, 1], "end": [53, 19], "kind": "commanddeclaration"}, {"full_name": "Function.const", "code": "@[inline] def Function.const {\\u03b1 : Sort u} (\\u03b2 : Sort v) (a : \\u03b1) : \\u03b2 \\u2192 \\u03b1 :=\\n  fun _ => a", "start": [55, 1], "end": [67, 13], "kind": "commanddeclaration"}, {"full_name": "letFun", "code": "@[irreducible] def letFun {\\u03b1 : Sort u} {\\u03b2 : \\u03b1 \\u2192 Sort v} (v : \\u03b1) (f : (x : \\u03b1) \\u2192 \\u03b2 x) : \\u03b2 v := f v", "start": [69, 1], "end": [80, 97], "kind": "commanddeclaration"}, {"full_name": "inferInstance", "code": "abbrev inferInstance {\\u03b1 : Sort u} [i : \\u03b1] : \\u03b1 := i", "start": [83, 1], "end": [99, 51], "kind": "commanddeclaration"}, {"full_name": "inferInstanceAs", "code": "abbrev inferInstanceAs (\\u03b1 : Sort u) [i : \\u03b1] : \\u03b1 := i", "start": [102, 1], "end": [113, 53], "kind": "commanddeclaration"} ...]
+
 file_path = "/raid/adarsh/datasets_new/pfr_6a5082ee465f9e44cea479c7b741b3163162bb7e/random/train.json"
 with open(file_path, 'r') as file:
     data = json.load(file)

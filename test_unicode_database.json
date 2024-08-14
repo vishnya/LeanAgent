@@ -1,0 +1,83 @@
+{
+  "repositories": [
+    {
+      "url": "https://github.com/example/repo",
+      "name": "Example Repo with Unicode ユニコード",
+      "commit": "abc123",
+      "lean_version": "3.50.3",
+      "lean_dojo_version": "1.8.4",
+      "date_processed": "2024-08-13T17:10:50.485925",
+      "metadata": {
+        "key": "value with Unicode ✨"
+      },
+      "total_theorems": 2,
+      "num_proven_theorems": 1,
+      "num_sorry_theorems": 1,
+      "num_sorry_theorems_proved": 0,
+      "num_sorry_theorems_unproved": 1,
+      "num_premise_files": 1,
+      "num_premises": 1,
+      "num_files_traced": 1,
+      "proven_theorems": [
+        {
+          "full_name": "example.commutative_addition",
+          "theorem_statement": "∀ x y : ℕ, x + y = y + x",
+          "file_path": "src/example.lean",
+          "start": "(1, 1)",
+          "end": "(5, 10)",
+          "traced_tactics": [
+            {
+              "tactic": "induction x with n ih",
+              "annotated_tactic": [
+                "induction x with n ih",
+                [
+                  {
+                    "full_name": "induction",
+                    "def_path": "src/tactic/induction.lean",
+                    "def_pos": "(100, 1)",
+                    "def_end_pos": "(100, 10)"
+                  }
+                ]
+              ],
+              "state_before": "⊢ ∀ x y : ℕ, x + y = y + x",
+              "state_after": "2 goals\ncase zero\n⊢ ∀ y : ℕ, 0 + y = y + 0\ncase succ\nn : ℕ\nih : ∀ y : ℕ, n + y = y + n\n⊢ ∀ y : ℕ, succ n + y = y + succ n"
+            }
+          ],
+          "difficulty_rating": 0.7
+        }
+      ],
+      "sorry_theorems_proved": [],
+      "sorry_theorems_unproved": [
+        {
+          "full_name": "example.quadratic_formula",
+          "theorem_statement": "∀ a b c x : ℝ, a ≠ 0 → (a * x² + b * x + c = 0 ↔ x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a))",
+          "file_path": "src/sorry_example.lean",
+          "start": "(10, 1)",
+          "end": "(12, 10)",
+          "difficulty_rating": 0.9
+        }
+      ],
+      "premise_files": [
+        {
+          "path": "src/premise.lean",
+          "imports": [
+            "import data.real.basic"
+          ],
+          "premises": [
+            {
+              "full_name": "sqrt_squared",
+              "code": "theorem sqrt_squared (x : ℝ) (h : x ≥ 0) : √(x^2) = x := sorry",
+              "start": "(1, 1)",
+              "end": "(1, 70)",
+              "kind": "theorem"
+            }
+          ]
+        }
+      ],
+      "files_traced": [
+        "src/example.lean"
+      ],
+      "pr_url": null
+    }
+  ]
+}

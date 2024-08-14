@@ -184,6 +184,7 @@ def export_proofs(
                         "commit": traced_repo.repo.commit,
                         "file_path": _get_file_path(traced_repo, thm),
                         "full_name": thm.theorem.full_name,
+                        "theorem_statement": thm.get_theorem_statement(),
                         "start": list(thm.start),
                         "end": list(thm.end),
                         "traced_tactics": tactics,
@@ -218,6 +219,19 @@ def export_premises(traced_repo: TracedRepo, dst_path: Path) -> None:
     logger.info(
         f"{num_premises} theorems/definitions from {len(traced_repo.traced_files)} files saved to {oup_path}"
     )
+    
+    oup_path = dst_path / "traced_files.jsonl"
+    with oup_path.open("wt") as oup:
+        for traced_file in traced_repo.traced_files:
+            source_file = traced_file.lean_file
+            source_file_path = source_file.path
+            oup.write(
+                json.dumps(
+                    {"traced_file_path": str(source_file_path)}
+                )
+                + "\n"
+            )
+
     return num_premises, len(traced_repo.traced_files)
 
 
