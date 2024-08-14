@@ -59,12 +59,12 @@ class AnnotatedTactic:
 @dataclass
 class Theorem:
     full_name: str
-    theorem_statement: str
     file_path: Path
     start: Pos
     end: Pos
     url: str
     commit: str
+    theorem_statement: str = None
     traced_tactics: Optional[List[AnnotatedTactic]] = None # TODO: isn't the default []
     difficulty_rating: Optional[float] = None
 
@@ -335,8 +335,7 @@ class DynamicDatabase:
 
     SPLIT = Dict[str, List[Theorem]]
 
-    # TODO: ensure no duplicates and similar to generation code
-    # TODO: ensure that generated is same as original
+    # TODO: ensure no duplicates
     def generate_merged_dataset(self, output_path: Path, repos_to_include: Optional[List[Tuple[str, str]]] = None) -> None:
         """
         Generate a merged dataset from multiple repositories in the database.
@@ -345,6 +344,8 @@ class DynamicDatabase:
         :param repos_to_include: List of tuples (url, commit) of repositories to include in the dataset. 
                                  If None, all repos are included.
         """
+        random.seed(3407)
+
         output_path.mkdir(parents=True, exist_ok=True)
 
         repos_to_process = self.repositories
@@ -363,12 +364,16 @@ class DynamicDatabase:
             shutil.rmtree(output_path)
 
         self._export_proofs(repos_to_process, splits, output_path)
+        logger.info(f"Exported proofs to {output_path}")
 
         self._export_premises(repos_to_process, output_path)
+        logger.info(f"Exported premises to {output_path}")
 
         self._export_traced_files(repos_to_process, output_path)
+        logger.info(f"Exported traced files to {output_path}")
 
         self._export_metadata(repos_to_process, output_path)
+        logger.info(f"Exported metadata to {output_path}")
 
     def _split_data(self, theorems: List[Theorem], num_val_pct: float = 0.02, num_test_pct: float = 0.02) -> Dict[str, SPLIT]:
         num_theorems = len(theorems)
@@ -471,8 +476,8 @@ class DynamicDatabase:
                             {
                                 "full_name": premise.full_name,
                                 "code": premise.code,
-                                "start": repr(premise.start),
-                                "end": repr(premise.end),
+                                "start": list(premise.start),
+                                "end": list(premise.end),
                                 "kind": premise.kind
                             } for premise in premise_file.premises
                         ]
