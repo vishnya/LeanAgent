@@ -3,7 +3,7 @@ import datetime
 import json
 import os
 from dataclasses import dataclass, field, asdict
-from typing import List, Dict, Optional, Union, Tuple
+from typing import List, Dict, Optional, Union, Tuple, Set
 from pathlib import Path
 from lean_dojo.data_extraction.lean import Pos
 from tqdm import tqdm
@@ -335,7 +335,6 @@ class DynamicDatabase:
 
     SPLIT = Dict[str, List[Theorem]]
 
-    # TODO: ensure no duplicates
     def generate_merged_dataset(self, output_path: Path, repos_to_include: Optional[List[Tuple[str, str]]] = None) -> None:
         """
         Generate a merged dataset from multiple repositories in the database.
@@ -345,35 +344,67 @@ class DynamicDatabase:
                                  If None, all repos are included.
         """
         random.seed(3407)
-
+        
         output_path.mkdir(parents=True, exist_ok=True)
 
-        repos_to_process = self.repositories
-        if repos_to_include:
-            repos_to_process = [repo for repo in self.repositories 
-                                if (repo.url, repo.commit) in repos_to_include]
+        repos_to_process = self.repositories if repos_to_include is None else [
+            repo for repo in self.repositories if (repo.url, repo.commit) in repos_to_include
+        ]
 
-        all_theorems = []
+        all_theorems = {}
+        all_traced_files = set()
+
         for repo in repos_to_process:
-            all_theorems.extend(repo.get_all_theorems)
+            for theorem in repo.get_all_theorems:
+                key = (theorem.file_path, theorem.full_name)
+                if key not in all_theorems or repo.date_processed > all_theorems[key][1]:
+                    all_theorems[key] = (theorem, repo.date_processed)
 
-        splits = self._split_data(all_theorems)
+            all_traced_files.update(repo.files_traced)
+
+        theorems = [t for t, _ in all_theorems.values()]
+        splits = self._split_data(theorems)
 
         if output_path.exists():
             logger.warning(f"{output_path} already exists. Removing it now.")
             shutil.rmtree(output_path)
 
-        self._export_proofs(repos_to_process, splits, output_path)
+        self._export_proofs(splits, output_path)
         logger.info(f"Exported proofs to {output_path}")
 
-        self._export_premises(repos_to_process, output_path)
-        logger.info(f"Exported premises to {output_path}")
+        self._merge_corpus(repos_to_process, output_path)
+        logger.info(f"Merged and exported corpus to {output_path}")
 
-        self._export_traced_files(repos_to_process, output_path)
+        self._export_traced_files(all_traced_files, output_path)
         logger.info(f"Exported traced files to {output_path}")
 
         self._export_metadata(repos_to_process, output_path)
         logger.info(f"Exported metadata to {output_path}")
+
+    def _merge_corpus(self, repos: List[Repository], output_path: Path) -> None:
+        merged_corpus = {}
+        for repo in repos:
+            for premise_file in repo.premise_files:
+                file_data = {
+                    "path": str(premise_file.path),
+                    "imports": premise_file.imports,
+                    "premises": [
+                        {
+                            "full_name": premise.full_name,
+                            "code": premise.code,
+                            "start": list(premise.start),
+                            "end": list(premise.end),
+                            "kind": premise.kind
+                        } for premise in premise_file.premises
+                    ]
+                }
+                path = file_data['path']
+                if path not in merged_corpus or repo.date_processed > merged_corpus[path][1]:
+                    merged_corpus[path] = (json.dumps(file_data), repo.date_processed)
+
+        with open(output_path / "corpus.jsonl", 'w') as f:
+            for line, _ in merged_corpus.values():
+                f.write(line + "\n")
 
     def _split_data(self, theorems: List[Theorem], num_val_pct: float = 0.02, num_test_pct: float = 0.02) -> Dict[str, SPLIT]:
         num_theorems = len(theorems)
@@ -422,7 +453,7 @@ class DynamicDatabase:
             "test": theorems_val_test[num_val:],
         }
 
-    def _export_proofs(self, repos: List[Repository], splits: Dict[str, SPLIT], output_path: Path) -> None:
+    def _export_proofs(self, splits: Dict[str, SPLIT], output_path: Path) -> None:
         for strategy, split in splits.items():
             strategy_dir = output_path / strategy
             strategy_dir.mkdir(parents=True, exist_ok=True)
@@ -465,31 +496,12 @@ class DynamicDatabase:
                 with open(output_file, 'w') as f:
                     json.dump(data, f, indent=2)
 
-    def _export_premises(self, repos: List[Repository], output_path: Path) -> None:
-       with open(output_path / "corpus.jsonl", 'w') as f:
-            for repo in repos:
-                for premise_file in repo.premise_files:
-                    f.write(json.dumps({
-                        "path": str(premise_file.path),
-                        "imports": premise_file.imports,
-                        "premises": [
-                            {
-                                "full_name": premise.full_name,
-                                "code": premise.code,
-                                "start": list(premise.start),
-                                "end": list(premise.end),
-                                "kind": premise.kind
-                            } for premise in premise_file.premises
-                        ]
-                    }) + "\n")
-
-    def _export_traced_files(self, repos: List[Repository], output_path: Path) -> None:
+    def _export_traced_files(self, all_traced_files: Set[Path], output_path: Path) -> None:
         with open(output_path / "traced_files.jsonl", 'w') as f:
-            for repo in repos:
-                for file in repo.files_traced:
-                    f.write(json.dumps({
-                        "traced_file_path": str(file)
-                    }) + "\n")
+            for file in all_traced_files:
+                f.write(json.dumps({
+                    "traced_file_path": str(file)
+                }) + "\n")
 
     def _export_metadata(self, repos: List[Repository], output_path: Path) -> None:
         metadata = {
