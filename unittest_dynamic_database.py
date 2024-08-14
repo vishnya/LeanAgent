@@ -7,9 +7,13 @@ import generate_benchmark_lean4
 import lean_dojo
 import json
 import shutil
+import random
+from loguru import logger
 
 RAID_DIR = "/raid/adarsh"
 DATA_DIR = "datasets_new"
+
+logger.add("test_output.log", level="DEBUG")
 
 class TestDynamicDatabaseUnicode(unittest.TestCase):
     def setUp(self):
@@ -416,6 +420,120 @@ class TestDynamicDatabasePFR(unittest.TestCase):
                     data = json.load(f)
                     for item in data:
                         self.assertIn(item['full_name'], all_theorems)
+
+    def test_compare_manual_and_dynamic_datasets(self):
+        random.seed(3407)
+
+        manual_dataset_path = Path(RAID_DIR) / DATA_DIR / "pfr_6a5082ee465f9e44cea479c7b741b3163162bb7e_updated"
+        dynamic_dataset_path = Path(RAID_DIR) / DATA_DIR / "pfr_6a5082ee465f9e44cea479c7b741b3163162bb7e_generated"
+
+        self.db.generate_merged_dataset(dynamic_dataset_path)
+        
+        for strategy in ['random', 'novel_premises']:
+            logger.info(f"Comparing datasets for {strategy} strategy")
+            manual_theorems = []
+            dynamic_theorems = []
+
+            for split in ['train', 'val', 'test']:
+                logger.info(f"Loading {split} split for {strategy} strategy")
+                manual_file = manual_dataset_path / strategy / f"{split}.json"
+                dynamic_file = dynamic_dataset_path / strategy / f"{split}.json"
+                
+                with open(manual_file, 'r') as f:
+                    manual_data = json.load(f)
+                    manual_theorems.extend(manual_data)
+                logger.info(f"Loaded {len(manual_data)} theorems from manual {split} split")
+                
+                with open(dynamic_file, 'r') as f:
+                    dynamic_data = json.load(f)
+                    dynamic_theorems.extend(dynamic_data)
+                logger.info(f"Loaded {len(dynamic_data)} theorems from dynamic {split} split")
+            
+            assert len(manual_theorems) == len(dynamic_theorems), "Manual and dynamic datasets have different number of theorems"
+            logger.info(f"Comparing {len(manual_theorems)} manual theorems with {len(dynamic_theorems)} dynamic theorems for {strategy} strategy")
+            self.assertTrue(self._fast_compare_theorems(manual_theorems, dynamic_theorems), 
+                        f"Theorem content for {strategy} strategy does not match")
+            logger.info(f"Theorem content for {strategy} strategy matches")
+
+        self.maxDiff = None
+        logger.info("Comparing corpus and traced files")
+        with open(manual_dataset_path / "corpus.jsonl", 'r') as f:
+            manual_corpus = [json.loads(line) for line in f]
+        logger.info(f"Loaded {len(manual_corpus)} items from manual corpus")
+
+        with open(dynamic_dataset_path / "corpus.jsonl", 'r') as f:
+            dynamic_corpus = [json.loads(line) for line in f]
+        logger.info(f"Loaded {len(dynamic_corpus)} items from dynamic corpus")
+
+        assert len(manual_corpus) == len(dynamic_corpus), "Manual and dynamic datasets have different number of premise files"
+        logger.info("Comparing corpus content")
+        try:
+            self.assertCountEqual(manual_corpus, dynamic_corpus)
+            logger.info("Corpus content matches")
+        except AssertionError as e:
+            logger.info("Corpus content mismatch:")
+            logger.info(str(e))
+            raise
+
+        with open(manual_dataset_path / "traced_files.jsonl", 'r') as f:
+            manual_traced = [json.loads(line) for line in f]
+        logger.info(f"Loaded {len(manual_traced)} items from manual traced files")
+
+        with open(dynamic_dataset_path / "traced_files.jsonl", 'r') as f:
+            dynamic_traced = [json.loads(line) for line in f]
+        logger.info(f"Loaded {len(dynamic_traced)} items from dynamic traced files")
+
+        assert len(manual_traced) == len(dynamic_traced), "Manual and dynamic datasets have different number of traced files"
+        logger.info("Comparing traced files content")
+        try:
+            self.assertCountEqual(manual_traced, dynamic_traced)
+            logger.info("Traced files content matches")
+        except AssertionError as e:
+            logger.info("Traced files content mismatch:")
+            logger.info(str(e))
+            raise
+
+    def _fast_compare_theorems(self, manual_theorems, dynamic_theorems):
+        logger.info(f"Converting {len(manual_theorems)} manual theorems to hashable format")
+        manual_set = set(map(self._theorem_to_hashable, manual_theorems))
+        assert len(manual_set) == len(manual_theorems), "Manual theorems contain duplicates"
+        logger.info(f"Converting {len(dynamic_theorems)} dynamic theorems to hashable format")
+        dynamic_set = set(map(self._theorem_to_hashable, dynamic_theorems))
+        assert len(dynamic_set) == len(dynamic_theorems), "Dynamic theorems contain duplicates"
+
+        logger.info("Comparing theorem sets")
+        only_in_manual = manual_set - dynamic_set
+        only_in_dynamic = dynamic_set - manual_set
+
+        if only_in_manual or only_in_dynamic:
+            if only_in_manual:
+                logger.info(f"{len(only_in_manual)} theorems only in manual dataset")
+            if only_in_dynamic:
+                logger.info(f"{len(only_in_dynamic)} theorems only in dynamic dataset")
+            return False
+        return True
+
+    def _theorem_to_hashable(self, theorem):
+        return (
+            theorem['url'],
+            theorem['commit'],
+            theorem['file_path'],
+            theorem['full_name'],
+            theorem['theorem_statement'],
+            tuple(theorem['start']),
+            tuple(theorem['end']),
+            tuple(self._tactic_to_hashable(t) for t in theorem['traced_tactics'])
+        )
+
+    def _tactic_to_hashable(self, tactic):
+        return (
+            tactic['tactic'],
+            tactic['annotated_tactic'][0],
+            tuple((a['full_name'], a['def_path'], tuple(a['def_pos']), tuple(a['def_end_pos']))
+                for a in tactic['annotated_tactic'][1]),
+            tactic['state_before'],
+            tactic['state_after']
+        )
 
     def test_unicode_handling_in_dataset(self):
         url = "https://github.com/teorth/pfr"
