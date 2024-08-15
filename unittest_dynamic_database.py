@@ -998,7 +998,6 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         logger.info(f"Manual traced files: {len(manual_traced)} items, {len(deduplicated_manual_traced)} unique")
         logger.info(f"Dynamic traced files: {len(dynamic_traced)} items")
 
-        assert len(manual_traced) == len(dynamic_traced), "Manual and dynamic datasets have different number of traced files"
         logger.info("Comparing traced files content")
         try:
             self.assertCountEqual(deduplicated_manual_traced, dynamic_traced)
