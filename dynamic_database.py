@@ -30,6 +30,8 @@ class Annotation:
 
     @classmethod
     def from_dict(cls, data: Dict) -> Annotation:
+        if not all(key in data for key in ["full_name", "def_path", "def_pos", "def_end_pos"]):
+            raise ValueError("Invalid Annotation data format")
         return cls(
             full_name=data["full_name"],
             def_path=data["def_path"],
@@ -54,6 +56,8 @@ class AnnotatedTactic:
 
     @classmethod
     def from_dict(cls, data: Dict) -> AnnotatedTactic:
+        if not all(key in data for key in ["tactic", "annotated_tactic", "state_before", "state_after"]):
+            raise ValueError("Invalid AnnotatedTactic data format")
         return cls(
             tactic=data["tactic"],
             annotated_tactic=(
@@ -97,9 +101,11 @@ class Theorem:
 
     @classmethod
     def from_dict(cls, data: Dict, url: str, commit: str) -> Theorem:
+        if not all(key in data for key in ["full_name", "file_path", "start", "end"]):
+            raise ValueError("Invalid Theorem data format")
         return cls(
             full_name=data["full_name"],
-            theorem_statement=data["theorem_statement"],
+            theorem_statement=data.get("theorem_statement"),
             file_path=Path(data["file_path"]),
             start=parse_pos(data["start"]),
             end=parse_pos(data["end"]),
@@ -134,6 +140,8 @@ class Premise:
 
     @classmethod
     def from_dict(cls, data: Dict) -> Premise:
+        if not all(key in data for key in ["full_name", "code", "start", "end", "kind"]):
+            raise ValueError("Invalid Premise data format")
         return cls(
             full_name=data["full_name"],
             code=data["code"],
@@ -159,6 +167,8 @@ class PremiseFile:
 
     @classmethod
     def from_dict(cls, data: Dict) -> PremiseFile:
+        if not all(key in data for key in ["path", "imports", "premises"]):
+            raise ValueError("Invalid PremiseFile data format")
         return cls(
             path=Path(data["path"]),
             imports=data["imports"],
@@ -226,6 +236,9 @@ class Repository:
     
     @classmethod
     def from_dict(cls, data: Dict) -> Repository:
+        if not all(key in data for key in ["url", "name", "commit", "lean_version", "lean_dojo_version", "date_processed", "metadata"]):
+            raise ValueError("Invalid Repository data format")
+
         if isinstance(data["date_processed"], str):
             data["date_processed"] = datetime.datetime.fromisoformat(data["date_processed"])
         repo = cls(
@@ -532,6 +545,8 @@ class DynamicDatabase:
 
     @classmethod
     def from_dict(cls, data: Dict) -> DynamicDatabase:
+        if "repositories" not in data:
+            raise ValueError("Invalid DynamicDatabase data format")
         db = cls()
         for repo_data in data.get("repositories", []):
             repo = Repository.from_dict(repo_data)
