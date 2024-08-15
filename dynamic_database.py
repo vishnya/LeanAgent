@@ -94,6 +94,9 @@ class Theorem:
     def __eq__(self, other):
         if not isinstance(other, Theorem):
             return NotImplemented
+        return self.is_same_theorem(other)
+
+    def is_same_theorem(self, other: Theorem) -> bool:
         return (self.full_name == other.full_name and
                 self.file_path == other.file_path and
                 self.start == other.start and
@@ -234,6 +237,27 @@ class Repository:
     def get_all_theorems(self) -> List[Theorem]:
         return self.proven_theorems + self.sorry_theorems_proved + self.sorry_theorems_unproved
     
+    def get_theorem(self, full_name: str, file_path: str) -> Optional[Theorem]:
+        for thm_list in [self.proven_theorems, self.sorry_theorems_proved, self.sorry_theorems_unproved]:
+            for thm in thm_list:
+                if thm.full_name == full_name and str(thm.file_path) == file_path:
+                    return thm
+        return None
+    
+    def update_theorem(self, theorem: Theorem) -> None:
+        for thm_list in [self.proven_theorems, self.sorry_theorems_proved, self.sorry_theorems_unproved]:
+            for i, thm in enumerate(thm_list):
+                if thm.is_same_theorem(theorem):
+                    thm_list[i] = theorem
+                    return
+        raise ValueError(f"Theorem '{theorem.full_name}' not found.")
+    
+    def get_premise_file(self, path: str) -> Optional[PremiseFile]:
+        return next((pf for pf in self.premise_files if str(pf.path) == path), None)
+
+    def get_file_traced(self, path: str) -> Optional[Path]:
+        return next((f for f in self.files_traced if str(f) == path), None)
+
     @classmethod
     def from_dict(cls, data: Dict) -> Repository:
         if not all(key in data for key in ["url", "name", "commit", "lean_version", "lean_dojo_version", "date_processed", "metadata"]):
