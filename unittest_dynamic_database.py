@@ -506,8 +506,8 @@ class TestDynamicDatabasePFR(unittest.TestCase):
 
         if only_in_manual or only_in_dynamic:
             # Sort by file path and full name
-            only_in_manual = sorted(only_in_manual, key=lambda x: (x[2], x[3]))
-            only_in_dynamic = sorted(only_in_dynamic, key=lambda x: (x[2], x[3]))
+            only_in_manual = sorted(only_in_manual, key=lambda x: (x[0], x[1]))
+            only_in_dynamic = sorted(only_in_dynamic, key=lambda x: (x[0], x[1]))
             if only_in_manual:
                 logger.info(f"{len(only_in_manual)} theorems only in manual dataset")
                 for i, thm in enumerate(only_in_manual):
@@ -1041,8 +1041,8 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
 
         if only_in_manual or only_in_dynamic:
             # Sort by file path and full name
-            only_in_manual = sorted(only_in_manual, key=lambda x: (x[2], x[3]))
-            only_in_dynamic = sorted(only_in_dynamic, key=lambda x: (x[2], x[3]))
+            only_in_manual = sorted(only_in_manual, key=lambda x: (x[0], x[1]))
+            only_in_dynamic = sorted(only_in_dynamic, key=lambda x: (x[0], x[1]))
             if only_in_manual:
                 logger.info(f"{len(only_in_manual)} theorems only in manual dataset")
                 for i, thm in enumerate(only_in_manual):
