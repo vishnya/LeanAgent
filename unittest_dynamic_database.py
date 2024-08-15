@@ -31,8 +31,7 @@ class TestDynamicDatabaseUnicode(unittest.TestCase):
             commit="abc123",
             lean_version="3.50.3",
             lean_dojo_version="1.8.4",
-            date_processed=datetime.datetime.now(),
-            metadata={"key": "value with Unicode ✨"},
+            metadata={"date_processed": datetime.datetime.now()},
         )
 
         theorem1 = Theorem(
@@ -106,7 +105,7 @@ class TestDynamicDatabaseUnicode(unittest.TestCase):
         deserialized_repo = deserialized_db.repositories[0]
         
         assert original_repo.name == deserialized_repo.name
-        assert original_repo.metadata["key"] == deserialized_repo.metadata["key"]
+        assert original_repo.metadata["date_processed"] == deserialized_repo.metadata["date_processed"]
         
         original_theorem1 = original_repo.proven_theorems[0]
         deserialized_theorem1 = deserialized_repo.proven_theorems[0]
@@ -181,9 +180,9 @@ class TestDynamicDatabase(unittest.TestCase):
             commit="abc123",
             lean_version="3.50.3",
             lean_dojo_version="1.8.4",
-            date_processed=datetime.datetime.now(),
-            metadata={"key": "value"},
+            metadata={"date_processed": datetime.datetime.now()},
         )
+        self.current_datetime = datetime.datetime.now()
 
     def test_add_repository(self):
         self.db.add_repository(self.repo)
@@ -202,13 +201,12 @@ class TestDynamicDatabase(unittest.TestCase):
             commit="abc123",
             lean_version="3.50.3",
             lean_dojo_version="1.8.4",
-            date_processed=datetime.datetime.now(),
-            metadata={"key": "new_value"},
+            metadata={"date_processed": self.current_datetime},
         )
         self.db.update_repository(updated_repo)
         retrieved_repo = self.db.get_repository("https://github.com/test/repo", "abc123")
         self.assertEqual(retrieved_repo.name, "Updated Test Repo")
-        self.assertEqual(retrieved_repo.metadata["key"], "new_value")
+        self.assertEqual(retrieved_repo.metadata["date_processed"], self.current_datetime)
 
     def test_delete_repository(self):
         self.db.add_repository(self.repo)
@@ -223,7 +221,7 @@ class TestDynamicDatabase(unittest.TestCase):
         self.assertEqual(len(loaded_db.repositories), 1)
         loaded_repo = loaded_db.get_repository("https://github.com/test/repo", "abc123")
         self.assertEqual(loaded_repo.name, "Test Repo")
-        self.assertEqual(loaded_repo.metadata["key"], "value")
+        self.assertEqual(loaded_repo.metadata["date_processed"], self.current_datetime )
 
 class TestDynamicDatabasePFR(unittest.TestCase):
     def setUp(self):
@@ -249,10 +247,10 @@ class TestDynamicDatabasePFR(unittest.TestCase):
             "commit": lean_git_repo.commit,
             "lean_version": v,
             "lean_dojo_version": lean_dojo.__version__,
-            "date_processed": datetime.datetime.now(),
             "metadata": {
                 "key": "value",
-                "unicode": "ユニコード ✨"
+                "unicode": "ユニコード ✨",
+                "date_processed": datetime.datetime.now(),
             },
             "theorems_folder": theorems_folder,
             "premise_files_corpus": premise_files_corpus,
@@ -621,10 +619,10 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
             "commit": lean_git_repo.commit,
             "lean_version": v,
             "lean_dojo_version": lean_dojo.__version__,
-            "date_processed": datetime.datetime.now(),
             "metadata": {
                 "key": "value",
-                "unicode": "ユニコード ✨"
+                "unicode": "ユニコード ✨",
+                "date_processed": datetime.datetime.now(),
             },
             "theorems_folder": theorems_folder,
             "premise_files_corpus": premise_files_corpus,
@@ -652,10 +650,10 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
             "commit": lean_git_repo.commit,
             "lean_version": v,
             "lean_dojo_version": lean_dojo.__version__,
-            "date_processed": datetime.datetime.now(),
             "metadata": {
                 "key": "value",
-                "unicode": "ユニコード ✨"
+                "unicode": "ユニコード ✨",
+                "date_processed": datetime.datetime.now(),
             },
             "theorems_folder": theorems_folder,
             "premise_files_corpus": premise_files_corpus,
@@ -1154,8 +1152,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
             commit="abcdef1234567890",
             lean_version="4.0.0",
             lean_dojo_version="1.0.0",
-            date_processed=datetime.datetime.now(),
-            metadata={"key": "value"},
+            metadata={"date_processed": datetime.datetime.now()},
             sorry_theorems_unproved=[
                 Theorem(
                     full_name="test_theorem",
@@ -1304,8 +1301,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
             "commit": "1234567890abcdef",
             "lean_version": "4.0.0",
             "lean_dojo_version": "1.0.0",
-            "date_processed": datetime.datetime.now().isoformat(),
-            "metadata": {"key": "new_value"},
+            "metadata": {"date_processed": datetime.datetime.now().isoformat()},
             "sorry_theorems_unproved": [
                 {
                     "full_name": "new_test_theorem",
