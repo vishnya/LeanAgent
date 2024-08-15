@@ -9,13 +9,10 @@ import json
 import shutil
 import random
 from loguru import logger
-import sys
 
 RAID_DIR = "/raid/adarsh"
 DATA_DIR = "datasets_new"
 MERGED_DATA_DIR = "datasets_merged"
-
-logger.add(sys.stderr, level="DEBUG")
 
 class TestDynamicDatabaseUnicode(unittest.TestCase):
     def setUp(self):
@@ -508,31 +505,32 @@ class TestDynamicDatabasePFR(unittest.TestCase):
         only_in_dynamic = dynamic_set - manual_set
 
         if only_in_manual or only_in_dynamic:
+            # Sort by file path and full name
+            only_in_manual = sorted(only_in_manual, key=lambda x: (x[2], x[3]))
+            only_in_dynamic = sorted(only_in_dynamic, key=lambda x: (x[2], x[3]))
             if only_in_manual:
                 logger.info(f"{len(only_in_manual)} theorems only in manual dataset")
                 for i, thm in enumerate(only_in_manual):
                     if i >= 10:
                         break
-                    logger.info(f"Manual only: {thm[3]} in {thm[2]}")
-                    logger.info(f"  URL: {thm[0]}, Commit: {thm[1]}")
-                    logger.info(f"  Start: {thm[5]}, End: {thm[6]}")
-                    logger.info(f"  Theorem statement: {thm[4][:100]}...")  # First 100 chars
+                    logger.info(f"Manual only: {thm[1]} in {thm[0]}")
+                    logger.info(f"  Start: {thm[3]}, End: {thm[4]}")
+                    if thm[4] is not None:
+                        logger.info(f"  Theorem statement: {thm[2][:100]}...")  # First 100 chars
             if only_in_dynamic:
                 logger.info(f"{len(only_in_dynamic)} theorems only in dynamic dataset")
                 for i, thm in enumerate(only_in_dynamic):
                     if i >= 10:
                         break
-                    logger.info(f"Dynamic only: {thm[3]} in {thm[2]}")
-                    logger.info(f"  URL: {thm[0]}, Commit: {thm[1]}")
-                    logger.info(f"  Start: {thm[5]}, End: {thm[6]}")
-                    logger.info(f"  Theorem statement: {thm[4][:100]}...")  # First 100 chars
+                    logger.info(f"Dynamic only: {thm[1]} in {thm[0]}")
+                    logger.info(f"  Start: {thm[3]}, End: {thm[4]}")
+                    if thm[4] is not None:
+                        logger.info(f"  Theorem statement: {thm[2][:100]}...")  # First 100 chars
             return False
         return True
 
     def _theorem_to_hashable(self, theorem):
         return (
-            theorem['url'],
-            theorem['commit'],
             theorem['file_path'],
             theorem['full_name'],
             theorem['theorem_statement'],
@@ -1042,31 +1040,32 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         only_in_dynamic = dynamic_set - manual_set
 
         if only_in_manual or only_in_dynamic:
+            # Sort by file path and full name
+            only_in_manual = sorted(only_in_manual, key=lambda x: (x[2], x[3]))
+            only_in_dynamic = sorted(only_in_dynamic, key=lambda x: (x[2], x[3]))
             if only_in_manual:
                 logger.info(f"{len(only_in_manual)} theorems only in manual dataset")
                 for i, thm in enumerate(only_in_manual):
                     if i >= 10:
                         break
-                    logger.info(f"Manual only: {thm[3]} in {thm[2]}")
-                    logger.info(f"  URL: {thm[0]}, Commit: {thm[1]}")
-                    logger.info(f"  Start: {thm[5]}, End: {thm[6]}")
-                    logger.info(f"  Theorem statement: {thm[4][:100]}...")  # First 100 chars
+                    logger.info(f"Manual only: {thm[1]} in {thm[0]}")
+                    logger.info(f"  Start: {thm[3]}, End: {thm[4]}")
+                    if thm[4] is not None:
+                        logger.info(f"  Theorem statement: {thm[2][:100]}...")  # First 100 chars
             if only_in_dynamic:
                 logger.info(f"{len(only_in_dynamic)} theorems only in dynamic dataset")
                 for i, thm in enumerate(only_in_dynamic):
                     if i >= 10:
                         break
-                    logger.info(f"Dynamic only: {thm[3]} in {thm[2]}")
-                    logger.info(f"  URL: {thm[0]}, Commit: {thm[1]}")
-                    logger.info(f"  Start: {thm[5]}, End: {thm[6]}")
-                    logger.info(f"  Theorem statement: {thm[4][:100]}...")  # First 100 chars
+                    logger.info(f"Dynamic only: {thm[1]} in {thm[0]}")
+                    logger.info(f"  Start: {thm[3]}, End: {thm[4]}")
+                    if thm[4] is not None:
+                        logger.info(f"  Theorem statement: {thm[2][:100]}...")  # First 100 chars
             return False
         return True
 
     def _theorem_to_hashable(self, theorem):
         return (
-            theorem['url'],
-            theorem['commit'],
             theorem['file_path'],
             theorem['full_name'],
             theorem['theorem_statement'],
