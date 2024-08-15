@@ -389,15 +389,15 @@ class TestDynamicDatabasePFR(unittest.TestCase):
 
             with open(dst_dir / strategy / "train.json", 'r') as f:
                 train_data = json.load(f)
-                train_set = set(item['full_name'] for item in train_data)
+                train_set = set((item['full_name'], item['file_path'], tuple(item['start']), tuple(item['end'])) for item in train_data)
 
             with open(dst_dir / strategy / "val.json", 'r') as f:
                 val_data = json.load(f)
-                val_set = set(item['full_name'] for item in val_data)
+                val_set = set((item['full_name'], item['file_path'], tuple(item['start']), tuple(item['end'])) for item in val_data)
 
             with open(dst_dir / strategy / "test.json", 'r') as f:
                 test_data = json.load(f)
-                test_set = set(item['full_name'] for item in test_data)
+                test_set = set((item['full_name'], item['file_path'], tuple(item['start']), tuple(item['end'])) for item in test_data)
 
             self.assertGreater(len(train_set), 0)
             self.assertGreater(len(val_set), 0)
@@ -838,15 +838,15 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
 
             with open(dst_dir / strategy / "train.json", 'r') as f:
                 train_data = json.load(f)
-                train_set = set(item['full_name'] for item in train_data)
+                train_set = set((item['full_name'], item['file_path'], tuple(item['start']), tuple(item['end'])) for item in train_data)
 
             with open(dst_dir / strategy / "val.json", 'r') as f:
                 val_data = json.load(f)
-                val_set = set(item['full_name'] for item in val_data)
+                val_set = set((item['full_name'], item['file_path'], tuple(item['start']), tuple(item['end'])) for item in val_data)
 
             with open(dst_dir / strategy / "test.json", 'r') as f:
                 test_data = json.load(f)
-                test_set = set(item['full_name'] for item in test_data)
+                test_set = set((item['full_name'], item['file_path'], tuple(item['start']), tuple(item['end'])) for item in test_data)
 
             self.assertGreater(len(train_set), 0)
             self.assertGreater(len(val_set), 0)
