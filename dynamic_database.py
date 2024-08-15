@@ -356,7 +356,7 @@ class DynamicDatabase:
 
         for repo in repos_to_process:
             for theorem in repo.get_all_theorems:
-                key = (theorem.file_path, theorem.full_name)
+                key = (theorem.file_path, theorem.full_name, list(theorem.start)[0], list(theorem.start)[1], list(theorem.end)[0], list(theorem.end)[1])
                 if key not in all_theorems or repo.date_processed > all_theorems[key][1]:
                     all_theorems[key] = (theorem, repo.date_processed)
 

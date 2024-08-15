@@ -66,7 +66,8 @@ if __name__ == "__main__":
     # Usage
     ROOT_DIR = "/raid/adarsh"
     DATA_DIR = "datasets_test"
-    merged_dir = os.path.join(ROOT_DIR, DATA_DIR, "merged")
-    old_merged_dir = os.path.join(ROOT_DIR, DATA_DIR, "../merged_dup")
+    MERGED_DATA_DIR = "datasets_merged"
+    merged_dir = os.path.join(ROOT_DIR, MERGED_DATA_DIR, "merged_pfr_6a5082ee465f9e44cea479c7b741b3163162bb7e_new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5_generated")
+    old_merged_dir = os.path.join(ROOT_DIR, MERGED_DATA_DIR, "merged_pfr_6a5082ee465f9e44cea479c7b741b3163162bb7e_new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5_updated")
 
     verify_no_duplicates(merged_dir, old_merged_dir)
