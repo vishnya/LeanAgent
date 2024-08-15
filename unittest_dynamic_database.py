@@ -12,6 +12,7 @@ from loguru import logger
 from unittest.mock import Mock, patch
 from dynamic_database import DynamicDatabase, Repository, Theorem, AnnotatedTactic
 from prover.proof_search import Status, SearchResult
+from main import prove_sorry_theorems, retrieve_proof
 
 RAID_DIR = "/raid/adarsh"
 DATA_DIR = "datasets_new"
@@ -1298,31 +1299,32 @@ class TestDynamicDatabaseProver(unittest.TestCase):
             self.db._export_traced_files.assert_called_once()
             self.db._export_metadata.assert_called_once()
 
-    def test_retrieve_proof(self):
-        with patch('generate_benchmark_lean4.main') as mock_generate_benchmark, \
-             patch('dynamic_database.DynamicDatabase.from_json') as mock_from_json, \
-             patch('dynamic_database.DynamicDatabase.to_json') as mock_to_json, \
-             patch('dynamic_database.DynamicDatabase.generate_merged_dataset') as mock_generate_merged_dataset, \
-             patch('train_test_fisher') as mock_train_test_fisher, \
-             patch('DistributedProver') as MockDistributedProver, \
-             patch('prove_sorry_theorems') as mock_prove_sorry_theorems:
+    @patch('generate_benchmark_lean4.main')
+    @patch('dynamic_database.DynamicDatabase.from_json')
+    @patch('dynamic_database.DynamicDatabase.to_json')
+    @patch('dynamic_database.DynamicDatabase.generate_merged_dataset')
+    @patch('main.train_test_fisher')
+    @patch('prover.DistributedProver')
+    @patch('main.prove_sorry_theorems')
+    def test_retrieve_proof(self, mock_prove_sorry_theorems, MockDistributedProver, 
+                            mock_train_test_fisher, mock_generate_merged_dataset, 
+                            mock_to_json, mock_from_json, mock_generate_benchmark):
+        mock_generate_benchmark.return_value = (Mock(), 100, 50)
+        mock_from_json.return_value = self.db
+        mock_prover = MockDistributedProver.return_value
 
-            mock_generate_benchmark.return_value = (Mock(), 100, 50)
-            mock_from_json.return_value = self.db
-            mock_prover = MockDistributedProver.return_value
+        repo = LeanGitRepo("https://github.com/test/repo", "abcdef1234567890")
+        proofs = retrieve_proof(repo, "test_repo", "abcdef1234567890", 0.1, 1, 5)
 
-            repo = LeanGitRepo("https://github.com/test/repo", "abcdef1234567890")
-            proofs = retrieve_proof(repo, "test_repo", "abcdef1234567890", 0.1, 1, 5)
+        mock_generate_benchmark.assert_called_once()
+        mock_from_json.assert_called_once()
+        mock_to_json.assert_called()
+        mock_generate_merged_dataset.assert_called_once()
+        mock_train_test_fisher.assert_called_once()
+        MockDistributedProver.assert_called_once()
+        mock_prove_sorry_theorems.assert_called_once_with(self.db, mock_prover)
 
-            mock_generate_benchmark.assert_called_once()
-            mock_from_json.assert_called_once()
-            mock_to_json.assert_called()
-            mock_generate_merged_dataset.assert_called_once()
-            mock_train_test_fisher.assert_called_once()
-            MockDistributedProver.assert_called_once()
-            mock_prove_sorry_theorems.assert_called_once_with(self.db, mock_prover)
-
-            self.assertEqual(proofs, [])
+        self.assertEqual(proofs, [])
 
     def test_save_load_dynamic_database(self):
         json_file = "temp_file.json"
