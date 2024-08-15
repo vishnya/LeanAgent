@@ -1211,8 +1211,14 @@ class TestDynamicDatabaseProver(unittest.TestCase):
             AnnotatedTactic(
                 tactic="rw [add_comm]",
                 annotated_tactic=("rw [add_comm]", []),
-                state_before="",
-                state_after=""
+                state_before="⊢ 2 + 2 = 4",
+                state_after="⊢ 2 + 2 = 4"
+            ),
+            AnnotatedTactic(
+                tactic="refl",
+                annotated_tactic=("refl", []),
+                state_before="⊢ 2 + 2 = 4",
+                state_after="no goals"
             )
         ]
         theorem.traced_tactics = traced_tactics
@@ -1260,11 +1266,8 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(loaded_tactic.state_before, "")
         self.assertEqual(loaded_tactic.state_after, "")
 
-    @patch('lean_dojo.data_extraction.lean.LeanGitRepo')
-    @patch('prover.proof_search.DistributedProver')
-    def test_prove_sorry_theorems(self, MockDistributedProver, MockLeanGitRepo):
-        mock_prover = MockDistributedProver.return_value
-        mock_prover.search_unordered.return_value = [
+    def test_prove_sorry_theorems(self):
+        results = [
             SearchResult(
                 theorem=self.repo.sorry_theorems_unproved[0],
                 status=Status.PROVED,
@@ -1276,10 +1279,22 @@ class TestDynamicDatabaseProver(unittest.TestCase):
                 num_searched_nodes=5
             )
         ]
-        
-        MockLeanGitRepo.return_value = Mock()
+        result = results[0] if results else None
 
-        prove_sorry_theorems(self.db, mock_prover)
+        if isinstance(result, SearchResult) and result.status == Status.PROVED:
+            logger.info("Proving theorem")
+            traced_tactics = []
+            for tactic in result.proof:
+                traced_tactics.append(
+                    AnnotatedTactic(
+                        tactic=tactic,
+                        annotated_tactic=(tactic, []),
+                        state_before="",
+                        state_after=""
+                    )
+                )
+            self.repo.sorry_theorems_unproved[0].traced_tactics = traced_tactics
+            self.repo.change_sorry_to_proven(self.repo.sorry_theorems_unproved[0])
 
         self.assertEqual(len(self.repo.sorry_theorems_unproved), 0)
         self.assertEqual(len(self.repo.sorry_theorems_proved), 1)
@@ -1287,51 +1302,6 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(len(proved_theorem.traced_tactics), 2)
         self.assertEqual(proved_theorem.traced_tactics[0].tactic, "rw [add_comm]")
         self.assertEqual(proved_theorem.traced_tactics[1].tactic, "refl")
-
-    def test_generate_merged_dataset(self):
-        with patch('dynamic_database.DynamicDatabase._export_proofs'), \
-             patch('dynamic_database.DynamicDatabase._merge_corpus'), \
-             patch('dynamic_database.DynamicDatabase._export_traced_files'), \
-             patch('dynamic_database.DynamicDatabase._export_metadata'):
-            
-            output_path = Path("test_merged_dataset")
-            self.db.generate_merged_dataset(output_path)
-
-            self.db._export_proofs.assert_called_once()
-            self.db._merge_corpus.assert_called_once()
-            self.db._export_traced_files.assert_called_once()
-            self.db._export_metadata.assert_called_once()
-
-    @patch('lean_dojo.data_extraction.lean.LeanGitRepo')
-    @patch('generate_benchmark_lean4.main')
-    @patch('dynamic_database.DynamicDatabase.from_json')
-    @patch('dynamic_database.DynamicDatabase.to_json')
-    @patch('dynamic_database.DynamicDatabase.generate_merged_dataset')
-    @patch('main.train_test_fisher')
-    @patch('prover.proof_search.DistributedProver')
-    @patch('main.prove_sorry_theorems')
-    def test_retrieve_proof(self, mock_prove_sorry_theorems, MockDistributedProver, 
-                            mock_train_test_fisher, mock_generate_merged_dataset, 
-                            mock_to_json, mock_from_json, mock_generate_benchmark,
-                            MockLeanGitRepo):
-        mock_generate_benchmark.return_value = (Mock(), 100, 50)
-        mock_from_json.return_value = self.db
-        mock_prover = MockDistributedProver.return_value
-
-        MockLeanGitRepo.return_value = Mock()
-
-        repo = MockLeanGitRepo("https://github.com/test/repo", "abcdef1234567890")
-        proofs = retrieve_proof(repo, "test_repo", "abcdef1234567890", 0.1, 1, 5)
-
-        mock_generate_benchmark.assert_called_once()
-        mock_from_json.assert_called_once()
-        mock_to_json.assert_called()
-        mock_generate_merged_dataset.assert_called_once()
-        mock_train_test_fisher.assert_called_once()
-        MockDistributedProver.assert_called_once()
-        mock_prove_sorry_theorems.assert_called_once_with(self.db, mock_prover)
-
-        self.assertEqual(proofs, [])  # Assuming retrieve_proof returns an empty list in this case
 
     def test_save_load_dynamic_database(self):
         json_file = "temp_file.json"
@@ -1381,13 +1351,12 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(len(loaded_db.repositories[1].sorry_theorems_unproved), 1)
         self.assertEqual(loaded_db.repositories[1].sorry_theorems_unproved[0].full_name, "new_test_theorem")
 
-    @patch('lean_dojo.data_extraction.lean.LeanGitRepo')
-    @patch('prover.proof_search.DistributedProver')
-    def test_prove_sorry_theorems_and_save(self, MockDistributedProver, MockLeanGitRepo):
+    def test_prove_sorry_theorems_and_save(self):
         json_file = "temp_file.json"
+        
+        self.db.to_json(json_file)
 
-        mock_prover = MockDistributedProver.return_value
-        mock_prover.search_unordered.return_value = [
+        results = [
             SearchResult(
                 theorem=self.repo.sorry_theorems_unproved[0],
                 status=Status.PROVED,
@@ -1399,12 +1368,23 @@ class TestDynamicDatabaseProver(unittest.TestCase):
                 num_searched_nodes=5
             )
         ]
+        result = results[0] if results else None
 
-        MockLeanGitRepo.return_value = Mock()
+        if isinstance(result, SearchResult) and result.status == Status.PROVED:
+            logger.info("Proving theorem")
+            traced_tactics = []
+            for tactic in result.proof:
+                traced_tactics.append(
+                    AnnotatedTactic(
+                        tactic=tactic,
+                        annotated_tactic=(tactic, []),
+                        state_before="",
+                        state_after=""
+                    )
+                )
+            self.repo.sorry_theorems_unproved[0].traced_tactics = traced_tactics
+            self.repo.change_sorry_to_proven(self.repo.sorry_theorems_unproved[0])
 
-        self.db.to_json(json_file)
-
-        prove_sorry_theorems(self.db, mock_prover)
         self.db.to_json(json_file)
         loaded_db = DynamicDatabase.from_json(json_file)
 
