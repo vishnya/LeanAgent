@@ -68,6 +68,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 repo_dir = "/raid/adarsh/repos_new" # TODO: for release change these back to <DIR>
 RAID_DIR = "/raid/adarsh"
 DATA_DIR = "datasets_new"
+MERGED_DATA_DIR = "datasets_merged"
 CHECKPOINT_DIR = "checkpoints_new"
 FISHER_DIR = "fisher_new"
 # TODO: do we still need this?
@@ -424,7 +425,7 @@ def find_latest_fisher():
     return latest_fisher
 
 def merge_datasets():
-    data_dir = RAID_DIR + "/" + DATA_DIR
+    data_dir = RAID_DIR + "/" + MERGED_DATA_DIR
     # TODO: dynamicaly update name
     merged_dir = data_dir + "/" + "merged_pfr_6a5082ee465f9e44cea479c7b741b3163162bb7e_new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5_updated"
     if not os.path.exists(merged_dir):
@@ -493,6 +494,32 @@ def merge_datasets():
             f.write(line + "\n")
 
     logger.info("Finished merging corpus")
+
+    logger.info("Merging traced files")
+    traced_files = set()
+    for dataset in os.listdir(data_dir):
+        if "merged" in dataset:
+            continue
+        logger.info(f"Processing {dataset}")
+        dataset_path = os.path.join(data_dir, dataset)
+        if os.path.isdir(dataset_path):
+            traced_paths_file = os.path.join(dataset_path, "traced_files.jsonl")
+            if os.path.exists(traced_paths_file):
+                with open(traced_paths_file, 'r') as f:
+                    for line in f:
+                        file_data = json.loads(line.strip())
+                        traced_file_path = file_data['traced_file_path']
+                        traced_files.add(traced_file_path)
+                # os.remove(traced_paths_file)
+                # logger.info(f"Deleted processed traced paths file: {traced_paths_file}")
+
+    with open(os.path.join(merged_dir, "traced_files.jsonl"), 'w') as f:
+        for file in traced_files:
+            f.write(json.dumps({
+                    "traced_file_path": str(file)
+                }) + "\n")
+
+    logger.info("Finished merging traced files")
 
     logger.info("Adding metadata")
     metadata_added = False
@@ -771,7 +798,6 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_p
     # url1 = "https://github.com/teorth/pfr.git"
     # url2 = "https://github.com/Adarsh321123/new-version-test.git"
     # for url in [url1, url2]:
-    # for url in [url1]:
     #     if ray.is_initialized():
     #         ray.shutdown()
 
