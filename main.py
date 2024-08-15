@@ -27,7 +27,8 @@ from tqdm import tqdm
 from loguru import logger
 from lean_dojo import Theorem
 from typing import List, Tuple, Optional
-from lean_dojo import LeanGitRepo, Theorem, Pos, is_available_in_cache
+from lean_dojo import LeanGitRepo, Pos, is_available_in_cache
+from lean_dojo import Theorem as LeanDojoTheorem
 import json
 import shutil
 import random
@@ -42,9 +43,10 @@ import generate_benchmark_lean4
 import traceback
 import sys
 from tqdm import tqdm
+from dynamic_database import *
 
 from common import set_logger
-from prover.proof_search import Status, DistributedProver
+from prover.proof_search import Status, DistributedProver, SearchResult
 import ray
 import re
 import lean_dojo
@@ -421,6 +423,106 @@ def find_latest_fisher():
     logger.info(f"Using the latest Fisher Information Matrix: {latest_fisher}")
     return latest_fisher
 
+def merge_datasets():
+    data_dir = RAID_DIR + "/" + DATA_DIR
+    # TODO: dynamicaly update name
+    merged_dir = data_dir + "/" + "merged_pfr_6a5082ee465f9e44cea479c7b741b3163162bb7e_new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5_updated"
+    if not os.path.exists(merged_dir):
+        os.makedirs(merged_dir)
+    split_strategies = ['random', 'novel_premises']
+    split_types = ['train', 'val', 'test']
+    datasets = os.listdir(data_dir) # TODO: remove
+    datasets = sorted(datasets) # TODO: remove
+
+    for strategy in split_strategies:
+        logger.info(f"Merging datasets for {strategy}")
+        strategy_dir = merged_dir + "/" + strategy
+        if not os.path.exists(strategy_dir):
+            os.makedirs(strategy_dir)
+
+        for split in split_types:
+            logger.info(f"Processing {split} split")
+            merged_data = {}
+            
+            # for dataset in os.listdir(data_dir): # TODO: put back
+            for dataset in datasets:
+                if "merged" in dataset:
+                    continue
+                logger.info(f"Processing {dataset}")
+                dataset_path = os.path.join(data_dir, dataset)
+                if os.path.isdir(dataset_path):
+                    json_file = os.path.join(dataset_path, strategy, f"{split}.json")
+                    if os.path.exists(json_file):
+                        with open(json_file, 'r') as f:
+                            data = json.load(f)
+                            for item in data:
+                                key = (item['file_path'], item['full_name'], list(item['start'])[0], list(item['start'])[1], list(item['end'])[0], list(item['end'])[1])
+                                if key not in merged_data:
+                                    merged_data[key] = item
+                        # os.remove(json_file)
+                        # logger.info(f"Deleted processed file: {json_file}")
+            
+            output_file = os.path.join(strategy_dir, f"{split}.json")
+            with open(output_file, 'w') as f:
+                json.dump(list(merged_data.values()), f)
+            
+            logger.info(f"Finished processing {split} split")
+        logger.info(f"Finished merging datasets for {strategy}")
+    
+    logger.info("Merging corpus")
+    merged_corpus = {}
+    for dataset in os.listdir(data_dir):
+        if "merged" in dataset:
+            continue
+        logger.info(f"Processing {dataset}")
+        dataset_path = os.path.join(data_dir, dataset)
+        if os.path.isdir(dataset_path):
+            corpus_file = os.path.join(dataset_path, "corpus.jsonl")
+            if os.path.exists(corpus_file):
+                with open(corpus_file, 'r') as f:
+                    for line in f:
+                        file_data = json.loads(line.strip())
+                        path = file_data['path']
+                        if path not in merged_corpus:
+                            merged_corpus[path] = line.strip()
+                # os.remove(corpus_file)
+                # logger.info(f"Deleted processed corpus file: {corpus_file}")
+
+    with open(os.path.join(merged_dir, "corpus.jsonl"), 'w') as f:
+        for line in merged_corpus.values():
+            f.write(line + "\n")
+
+    logger.info("Finished merging corpus")
+
+    logger.info("Adding metadata")
+    metadata_added = False
+    for dataset in os.listdir(data_dir):
+        if "merged" in dataset:
+            continue
+        logger.info(f"Checking for metadata in {dataset}")
+        dataset_path = os.path.join(data_dir, dataset)
+        if os.path.isdir(dataset_path):
+            metadata_file = os.path.join(dataset_path, "metadata.json")
+            if os.path.exists(metadata_file):
+                with open(os.path.join(merged_dir, "metadata.json"), 'w') as f:
+                    json.dump(json.load(open(metadata_file)), f)
+                # os.remove(metadata_file)
+                # logger.info(f"Deleted processed metadata file: {metadata_file}")
+                metadata_added = True
+                break
+    
+    if metadata_added:
+        logger.info("Finished adding metadata")
+    else:
+        logger.warning("No metadata file found")
+
+    # logger.info("Deleting individual datasets")
+    # for dataset in os.listdir(data_dir):
+    #     dataset_path = os.path.join(data_dir, dataset)
+    #     if os.path.isdir(dataset_path) and "merged" not in dataset:
+    #         logger.info(f"Deleting dataset: {dataset}")
+    #         shutil.rmtree(dataset_path)
+
 def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, current_epoch, epochs_per_repo=1):
     logger.info("Inside train_test_fisher")
     logger.info(f"Starting training at epoch {current_epoch}")
@@ -600,6 +702,63 @@ def update_and_output_results(repo_url: str, repository_results, lambda_value: f
         json.dump(global_results, f, indent=4, ensure_ascii=False)
     logger.info(f"Partial results saved to {results_file}")
 
+def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, repos_to_include: Optional[List[Tuple[str, str]]] = None):
+    repos_to_process = db.repositories if repos_to_include is None else [
+        repo for repo in db.repositories if (repo.url, repo.commit) in repos_to_include
+    ]
+
+    for repo in repos_to_process:
+        sorry_theorems = repo.sorry_theorems_unproved
+        repo_url = repo.url
+        repo_commit = repo.commit
+
+        logger.info(f"Found {len(sorry_theorems)} sorry theorems to prove")
+    
+        for theorem in tqdm(sorry_theorems, desc=f"Processing theorems from {repo.name}", unit="theorem"):
+            # Ignore sorry theorems from the repo's dependencies
+            if theorem.url != repo_url or theorem.commit != repo_commit:
+                continue
+
+            logger.info(f"Searching for proof for {theorem.full_name}")
+            logger.info(f"Position: {theorem.start}")
+
+            # Convert our Theorem to LeanDojo Theorem
+            lean_dojo_theorem = LeanDojoTheorem(
+                repo=LeanGitRepo(repo_url, repo_commit),
+                file_path=theorem.file_path,
+                full_name=theorem.full_name
+            )
+
+            results = prover.search_unordered(LeanGitRepo(repo_url, repo_commit), [lean_dojo_theorem], [Pos(*theorem.start)])
+            result = results[0] if results else None
+
+            if isinstance(result, SearchResult) and result.status == Status.PROVED:
+                logger.info(f"Proof found for {theorem.full_name}")
+
+                # Convert the proof to AnnotatedTactic objects
+                # We have to simplify some of the fields since LeanDojo does not
+                # prvoide all the necessary information
+                traced_tactics = []
+                for tactic in result.proof:
+                    traced_tactics.append(
+                        AnnotatedTactic(
+                            tactic=tactic,
+                            annotated_tactic=(tactic, []),
+                            state_before="",
+                            state_after=""
+                        )
+                    )
+                
+                theorem.traced_tactics = traced_tactics
+                repo.change_sorry_to_proven(theorem)
+                db.update_repository(repo)
+
+                logger.info(f"Updated theorem {theorem.full_name} in the database")
+            else:
+                logger.info(f"No proof found for {theorem.full_name}")
+            
+    logger.info("Finished attempting to prove sorry theorems")
+
 def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_per_repo):
     # TODO: update comments throughout
     """
@@ -609,13 +768,47 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_p
     3. Generate a corpus of the repo's premises.
     4. Search for proofs for theorems with `sorry` in them.
     """
+    # url1 = "https://github.com/teorth/pfr.git"
+    # url2 = "https://github.com/Adarsh321123/new-version-test.git"
+    # for url in [url1, url2]:
+    # for url in [url1]:
+    #     if ray.is_initialized():
+    #         ray.shutdown()
+
+    #     if not url.endswith('.git'):
+    #         url = url + '.git'
+
+    #     logger.info(f"Processing {url}")
+    #     sha, v = get_compatible_commit(url)
+    #     if not sha:
+    #         logger.info(f"Failed to find a compatible commit for {url}")
+    #         return None
+    #     logger.info(f"Found compatible commit {sha} for {url}")
+    #     logger.info(f"Lean version: {v}")
+    #     url = url.replace('.git', '')
+    #     repo = LeanGitRepo(url, sha)
+
+    #     dir_name = repo.url.split("/")[-1] + "_" + sha
+    #     # dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name
+    #     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name + "_updated"
+    #     logger.info(f"Generating benchmark at {dst_dir}")
+    #     traced_repo, num_premises, num_files_traced = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
+    #     if not traced_repo:
+    #         logger.info(f"Failed to trace {url}")
+    #         return None
+    #     logger.info(f"Finished generating benchmark at {dst_dir}")
+
+    # logger.info("Merging datasets")
+    # merge_datasets()
+    # logger.info("Finished merging datasets")
+
     if ray.is_initialized():
         ray.shutdown()
 
+    # Prepare the data necessary to add this repo to the dynamic database
     url = repo.url
     if not url.endswith('.git'):
         url = url + '.git'
-
     logger.info(f"Processing {url}")
     sha, v = get_compatible_commit(url)
     if not sha:
@@ -625,7 +818,6 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_p
     logger.info(f"Lean version: {v}")
     url = url.replace('.git', '')
     repo = LeanGitRepo(url, sha)
-
     dir_name = repo.url.split("/")[-1] + "_" + sha
     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name
     logger.info(f"Generating benchmark at {dst_dir}")
@@ -635,6 +827,41 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_p
         return None
     logger.info(f"Finished generating benchmark at {dst_dir}")
 
+    # Add the new repo to the dynamic database
+    config = repo.get_config("lean-toolchain")
+    v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
+    theorems_folder = dst_dir + "/random"
+    premise_files_corpus = dst_dir + "/corpus.jsonl"
+    files_traced = dst_dir + "/traced_files.jsonl"
+    pr_url = None
+    data = {
+        "url": repo.url,
+        "name": "/".join(repo.url.split("/")[-2:]),
+        "commit": repo.commit,
+        "lean_version": v,
+        "lean_dojo_version": lean_dojo.__version__,
+        "date_processed": datetime.datetime.now(),
+        "metadata": { # TODO: update
+            "key": "value",
+            "unicode": "ユニコード ✨"
+        },
+        "theorems_folder": theorems_folder,
+        "premise_files_corpus": premise_files_corpus,
+        "files_traced": files_traced,
+        "pr_url": pr_url
+    }
+    json_file = RAID_DIR + "/" + DATA_DIR + "/" + "dynamic_database.json"
+    db = DynamicDatabase.from_json(json_file)
+    repo = Repository.from_dict(data)
+    db.add_repository(repo)
+    db.to_json(json_file)
+
+    # Generate a new dataset from the dynamic database.
+    # The user can choose to generate a dataset from the entire dynamic database or a subset of it.
+    dir_name = repo.url.split("/")[-1] + "_" + sha
+    dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_with_new_{dir_name}"
+    db.generate_merged_dataset(dst_dir)
+
     # model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
     try:
         model_checkpoint_path = find_latest_checkpoint()
@@ -643,38 +870,10 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_p
         logger.error(str(e))
         return None
     
+    # Train the model on the new dataset that we generated from the dynamic database.
     train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, epochs_per_repo)
 
-    data = []
-
-    thms = traced_repo.get_traced_theorems()
-    for thm in thms:
-        if not thm.has_tactic_proof():
-            continue
-        proof = thm.get_tactic_proof()
-        if proof is None:
-            continue
-        theorem = thm.theorem
-        start = thm.start
-        end = thm.end
-        data.append((theorem, proof, start, end))
-
-    logger.info("Traced all theorems")
-
-    # TODO: optimize
-    logger.info(len(data))
-    theorems = []
-    positions = []
-    ends = []
-    for elem in data:
-        cur_repo = elem[0].repo
-        cur_theorem = elem[0]
-        cur_proof = elem[1]
-        if (cur_repo == repo) and ("sorry" in cur_proof):  # avoid proving theorems in Lean4 and other dependencies
-            theorems.append(cur_theorem)
-            positions.append(elem[2])
-            ends.append(elem[3])
-
+    # Set up the prover
     corpus_path = dst_dir + "/corpus.jsonl"
     tactic = None  # `None` since we are not using a fixed tactic generator
     module = None  # `None` since we are not using a fixed tactic generator
@@ -684,7 +883,6 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_p
     num_sampled_tactics = 64
     debug = False
     ckpt_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
-    logger.info("About to search for proofs")
     prover = DistributedProver(
         ckpt_path,
         corpus_path,
@@ -697,65 +895,15 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_p
         debug=debug,
     )
 
+    # Prove sorry theorems
+    prove_sorry_theorems(db, prover)
+    db.to_json(json_file)
+
+    logger.info("Finished searching for proofs of sorry theorems")
+
+    # TODO: need to return proofs
     proofs = []
-    num_sorries = len(theorems)
-    logger.info(f"Found {num_sorries} sorries!")
-    repository_results = {
-        "commit": sha,
-        "number_of_sorries": num_sorries,
-        "number_of_proofs_found": 0,
-        "proofs_details": [],
-        "unproved_sorries": [],
-        "number_of_premises_theorems_retrieved": num_premises,
-        "num_files_traced": num_files_traced,
-        "PR": "",
-    }
-    for i in tqdm(range(num_sorries), desc="Processing theorems", unit="theorem"):
-        theorem = theorems[i]
-        position = positions[i]
-        logger.info(f"Searching for proof for {theorem.full_name}")
-        logger.info(f"Position: {position}")
-
-        results = prover.search_unordered(repo, [theorem], [position])
-        result = results[0] if results else None
-        if result is not None:
-            if result.status == Status.PROVED:
-                proof_text = "\n".join(result.proof)
-                # TODO: find more efficient way to get url and repo name
-                repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
-                repo_name = repo_dir + "/" + repo_name
-                file_path = repo_name + "/" + str(result.theorem.file_path)
-                theorem_name = str(result.theorem.full_name)
-                start = None
-                end = None
-                # TODO: optimize
-                for i in range(len(theorems)):
-                    if theorems[i] == result.theorem:
-                        start = positions[i]
-                        end = ends[i]
-                repository_results["number_of_proofs_found"] += 1
-                repository_results["proofs_details"].append({
-                    "file_path": file_path,
-                    "theorem_name": theorem_name,
-                    "proof_text": proof_text
-                })
-                proofs.append((file_path, start, end, proof_text, theorem_name))
-            else:
-                repo_name = "/".join(result.theorem.repo.url.split('/')[-2:]).replace('.git', '')
-                repo_name = repo_dir + "/" + repo_name
-                file_path = repo_name + "/" + str(result.theorem.file_path)
-                theorem_name = str(result.theorem.full_name)
-                repository_results["unproved_sorries"].append({
-                    "file_path": file_path,
-                    "theorem_name": theorem_name
-                })
-            
-            # Update global results and output partial results after each proof is processed
-            update_and_output_results(repo.url, repository_results, lambda_value)
-    
-    logger.info("Finished searching for proofs")
-
-    return repository_results, proofs
+    return proofs
 
 def replace_sorry_with_proof(proofs):
     """Replace the `sorry` with the proof text in the Lean files."""
@@ -826,18 +974,17 @@ def main():
                 repo = repo_dir + "/" + repo
                 lean_git_repo = lean_git_repos[i]
                 print(f"Processing {repo}")
-                repository_results, proofs = retrieve_proof(lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo)
+                proofs = retrieve_proof(lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo)
                 current_epoch += epochs_per_repo
-                if repository_results is None:
+                if proofs is None:
                     logger.info("Skipping repository due to configuration or error.")
                     continue
-                
-                if proofs:
-                    base_branch = get_default_branch(repo_no_dir)
-                    subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
-                    subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
-                    subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
-                    create_or_switch_branch(repo, TMP_BRANCH, base_branch)
+                # else:
+                #     base_branch = get_default_branch(repo_no_dir)
+                #     subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
+                #     subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
+                #     subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
+                #     create_or_switch_branch(repo, TMP_BRANCH, base_branch)
                     # Uncomment if you would like to contribute back to the repos!
                     # replace_sorry_with_proof(proofs)
                     # committed = commit_changes(repo, COMMIT_MESSAGE)
