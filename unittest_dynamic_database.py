@@ -9,6 +9,9 @@ import json
 import shutil
 import random
 from loguru import logger
+from unittest.mock import Mock, patch
+from dynamic_database import DynamicDatabase, Repository, Theorem, AnnotatedTactic
+from prover.proof_search import Status, SearchResult
 
 RAID_DIR = "/raid/adarsh"
 DATA_DIR = "datasets_new"
@@ -1162,6 +1165,244 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         self.assertGreater(len(self.sample_repo_new_version.files_traced), 0)
         self.assertIn(Path("NewVersionTest/ExercisesOne.lean"), self.sample_repo_new_version.files_traced)
         self.assertIn(Path(".lake/packages/batteries/Batteries/Data/List/Lemmas.lean"), self.sample_repo_new_version.files_traced)
+
+class TestDynamicDatabaseProver(unittest.TestCase):
+    def setUp(self):
+        self.db = DynamicDatabase()
+        self.repo = Repository(
+            url="https://github.com/test/repo",
+            name="test_repo",
+            commit="abcdef1234567890",
+            lean_version="4.0.0",
+            lean_dojo_version="1.0.0",
+            date_processed=datetime.datetime.now(),
+            metadata={"key": "value"},
+            sorry_theorems_unproved=[
+                Theorem(
+                    full_name="test_theorem",
+                    file_path=Path("src/test.lean"),
+                    start=Pos(1, 1),
+                    end=Pos(10, 1),
+                    url="https://github.com/test/repo",
+                    commit="abcdef1234567890",
+                    theorem_statement="theorem test_theorem : 2 + 2 = 4 := sorry"
+                )
+            ]
+        )
+        self.db.add_repository(self.repo)
+
+    def test_create_annotated_tactic(self):
+        tactic = "rw [add_comm]"
+        annotated_tactic = AnnotatedTactic(
+            tactic=tactic,
+            annotated_tactic=(tactic, []),
+            state_before="",
+            state_after=""
+        )
+        self.assertEqual(annotated_tactic.tactic, tactic)
+        self.assertEqual(annotated_tactic.annotated_tactic, (tactic, []))
+        self.assertEqual(annotated_tactic.state_before, "")
+        self.assertEqual(annotated_tactic.state_after, "")
+
+    def test_update_theorem_with_proof(self):
+        theorem = self.repo.sorry_theorems_unproved[0]
+        traced_tactics = [
+            AnnotatedTactic(
+                tactic="rw [add_comm]",
+                annotated_tactic=("rw [add_comm]", []),
+                state_before="",
+                state_after=""
+            )
+        ]
+        theorem.traced_tactics = traced_tactics
+        self.repo.change_sorry_to_proven(theorem)
+        self.db.update_repository(self.repo)
+
+        updated_repo = self.db.get_repository(self.repo.url, self.repo.commit)
+        self.assertEqual(len(updated_repo.sorry_theorems_proved), 1)
+        self.assertEqual(len(updated_repo.sorry_theorems_unproved), 0)
+        self.assertEqual(updated_repo.sorry_theorems_proved[0].traced_tactics, traced_tactics)
+
+    def test_update_theorem_with_proof_and_json(self):
+        json_file = "temp_file.json"
+        theorem = self.repo.sorry_theorems_unproved[0]
+        
+        traced_tactics = [
+            AnnotatedTactic(
+                tactic="rw [add_comm]",
+                annotated_tactic=("rw [add_comm]", []),
+                state_before="",
+                state_after=""
+            )
+        ]
+        
+        theorem.traced_tactics = traced_tactics
+        self.repo.change_sorry_to_proven(theorem)
+        self.db.update_repository(self.repo)
+        self.db.to_json(json_file)
+
+        loaded_db = DynamicDatabase.from_json(json_file)
+        loaded_repo = loaded_db.get_repository(self.repo.url, self.repo.commit)
+
+        self.assertEqual(len(loaded_repo.sorry_theorems_proved), 1)
+        self.assertEqual(len(loaded_repo.sorry_theorems_unproved), 0)
+        proved_theorem = loaded_repo.sorry_theorems_proved[0]
+        self.assertEqual(proved_theorem.full_name, theorem.full_name)
+        self.assertEqual(proved_theorem.file_path, theorem.file_path)
+        self.assertEqual(proved_theorem.start, theorem.start)
+        self.assertEqual(proved_theorem.end, theorem.end)
+        
+        self.assertEqual(len(proved_theorem.traced_tactics), 1)
+        loaded_tactic = proved_theorem.traced_tactics[0]
+        self.assertEqual(loaded_tactic.tactic, "rw [add_comm]")
+        self.assertEqual(loaded_tactic.annotated_tactic, ("rw [add_comm]", []))
+        self.assertEqual(loaded_tactic.state_before, "")
+        self.assertEqual(loaded_tactic.state_after, "")
+
+    @patch('prover.DistributedProver')
+    def test_prove_sorry_theorems(self, MockDistributedProver):
+        mock_prover = MockDistributedProver.return_value
+        mock_prover.search_unordered.return_value = [
+            SearchResult(
+                theorem=self.repo.sorry_theorems_unproved[0],
+                status=Status.PROVED,
+                proof=["rw [add_comm]", "refl"],
+                actor_time=1.0,
+                environment_time=2.0,
+                total_time=3.0,
+                num_total_nodes=10,
+                num_searched_nodes=5
+            )
+        ]
+
+        prove_sorry_theorems(self.db, mock_prover)
+
+        self.assertEqual(len(self.repo.sorry_theorems_unproved), 0)
+        self.assertEqual(len(self.repo.sorry_theorems_proved), 1)
+        proved_theorem = self.repo.sorry_theorems_proved[0]
+        self.assertEqual(len(proved_theorem.traced_tactics), 2)
+        self.assertEqual(proved_theorem.traced_tactics[0].tactic, "rw [add_comm]")
+        self.assertEqual(proved_theorem.traced_tactics[1].tactic, "refl")
+
+    def test_generate_merged_dataset(self):
+        with patch('dynamic_database.DynamicDatabase._export_proofs'), \
+             patch('dynamic_database.DynamicDatabase._merge_corpus'), \
+             patch('dynamic_database.DynamicDatabase._export_traced_files'), \
+             patch('dynamic_database.DynamicDatabase._export_metadata'):
+            
+            output_path = Path("test_merged_dataset")
+            self.db.generate_merged_dataset(output_path)
+
+            self.db._export_proofs.assert_called_once()
+            self.db._merge_corpus.assert_called_once()
+            self.db._export_traced_files.assert_called_once()
+            self.db._export_metadata.assert_called_once()
+
+    def test_retrieve_proof(self):
+        with patch('generate_benchmark_lean4.main') as mock_generate_benchmark, \
+             patch('dynamic_database.DynamicDatabase.from_json') as mock_from_json, \
+             patch('dynamic_database.DynamicDatabase.to_json') as mock_to_json, \
+             patch('dynamic_database.DynamicDatabase.generate_merged_dataset') as mock_generate_merged_dataset, \
+             patch('train_test_fisher') as mock_train_test_fisher, \
+             patch('DistributedProver') as MockDistributedProver, \
+             patch('prove_sorry_theorems') as mock_prove_sorry_theorems:
+
+            mock_generate_benchmark.return_value = (Mock(), 100, 50)
+            mock_from_json.return_value = self.db
+            mock_prover = MockDistributedProver.return_value
+
+            repo = LeanGitRepo("https://github.com/test/repo", "abcdef1234567890")
+            proofs = retrieve_proof(repo, "test_repo", "abcdef1234567890", 0.1, 1, 5)
+
+            mock_generate_benchmark.assert_called_once()
+            mock_from_json.assert_called_once()
+            mock_to_json.assert_called()
+            mock_generate_merged_dataset.assert_called_once()
+            mock_train_test_fisher.assert_called_once()
+            MockDistributedProver.assert_called_once()
+            mock_prove_sorry_theorems.assert_called_once_with(self.db, mock_prover)
+
+            self.assertEqual(proofs, [])
+
+    def test_save_load_dynamic_database(self):
+        json_file = "temp_file.json"
+
+        self.db.to_json(json_file)
+        loaded_db = DynamicDatabase.from_json(json_file)
+
+        self.assertEqual(len(self.db.repositories), len(loaded_db.repositories))
+        self.assertEqual(self.db.repositories[0].url, loaded_db.repositories[0].url)
+        self.assertEqual(self.db.repositories[0].commit, loaded_db.repositories[0].commit)
+        self.assertEqual(len(self.db.repositories[0].sorry_theorems_unproved),
+                            len(loaded_db.repositories[0].sorry_theorems_unproved))
+    
+    def test_add_repository_and_save(self):
+        json_file = "temp_file.json"
+
+        self.db.to_json(json_file)
+
+        new_repo_data = {
+            "url": "https://github.com/test/new-repo",
+            "name": "new_test_repo",
+            "commit": "1234567890abcdef",
+            "lean_version": "4.0.0",
+            "lean_dojo_version": "1.0.0",
+            "date_processed": datetime.datetime.now().isoformat(),
+            "metadata": {"key": "new_value"},
+            "sorry_theorems_unproved": [
+                {
+                    "full_name": "new_test_theorem",
+                    "file_path": "src/new_test.lean",
+                    "start": [1, 1],
+                    "end": [10, 1],
+                    "url": "https://github.com/test/new-repo",
+                    "commit": "1234567890abcdef",
+                    "theorem_statement": "theorem new_test_theorem : 3 + 3 = 6 := sorry"
+                }
+            ]
+        }
+
+        new_repo = Repository.from_dict(new_repo_data)
+        self.db.add_repository(new_repo)
+        self.db.to_json(json_file)
+        loaded_db = DynamicDatabase.from_json(json_file)
+
+        self.assertEqual(len(loaded_db.repositories), 2)
+        self.assertEqual(loaded_db.repositories[1].url, "https://github.com/test/new-repo")
+        self.assertEqual(len(loaded_db.repositories[1].sorry_theorems_unproved), 1)
+        self.assertEqual(loaded_db.repositories[1].sorry_theorems_unproved[0].full_name, "new_test_theorem")
+
+    @patch('prover.DistributedProver')
+    def test_prove_sorry_theorems_and_save(self, MockDistributedProver):
+        json_file = "temp_file.json"
+
+        self.db.to_json(json_file)
+
+        mock_prover = MockDistributedProver.return_value
+        mock_prover.search_unordered.return_value = [
+            SearchResult(
+                theorem=self.repo.sorry_theorems_unproved[0],
+                status=Status.PROVED,
+                proof=["rw [add_comm]", "refl"],
+                actor_time=1.0,
+                environment_time=2.0,
+                total_time=3.0,
+                num_total_nodes=10,
+                num_searched_nodes=5
+            )
+        ]
+
+        prove_sorry_theorems(self.db, mock_prover)
+        self.db.to_json(json_file)
+        loaded_db = DynamicDatabase.from_json(json_file)
+
+        self.assertEqual(len(loaded_db.repositories[0].sorry_theorems_unproved), 0)
+        self.assertEqual(len(loaded_db.repositories[0].sorry_theorems_proved), 1)
+        proved_theorem = loaded_db.repositories[0].sorry_theorems_proved[0]
+        self.assertEqual(proved_theorem.full_name, "test_theorem")
+        self.assertEqual(len(proved_theorem.traced_tactics), 2)
+        self.assertEqual(proved_theorem.traced_tactics[0].tactic, "rw [add_comm]")
+        self.assertEqual(proved_theorem.traced_tactics[1].tactic, "refl")
 
 if __name__ == '__main__':
     unittest.main()
