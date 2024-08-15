@@ -36,6 +36,14 @@ class Annotation:
             def_pos=parse_pos(data["def_pos"]),
             def_end_pos=parse_pos(data["def_end_pos"])
         )
+    
+    def to_dict(self) -> Dict:
+        return {
+            "full_name": self.full_name,
+            "def_path": self.def_path,
+            "def_pos": repr(self.def_pos),
+            "def_end_pos": repr(self.def_end_pos)
+        }
 
 @dataclass
 class AnnotatedTactic:
@@ -55,6 +63,17 @@ class AnnotatedTactic:
             state_before=data["state_before"],
             state_after=data["state_after"]
         )
+    
+    def to_dict(self) -> Dict:
+        return {
+            "tactic": self.tactic,
+            "annotated_tactic": [
+                self.annotated_tactic[0],
+                [a.to_dict() for a in self.annotated_tactic[1]]
+            ],
+            "state_before": self.state_before,
+            "state_after": self.state_after
+        }
 
 @dataclass
 class Theorem:
@@ -65,7 +84,7 @@ class Theorem:
     url: str
     commit: str
     theorem_statement: str = None
-    traced_tactics: Optional[List[AnnotatedTactic]] = None # TODO: isn't the default []
+    traced_tactics: Optional[List[AnnotatedTactic]] = []
     difficulty_rating: Optional[float] = None
 
     def __eq__(self, other):
@@ -91,6 +110,19 @@ class Theorem:
             ],
             difficulty_rating=data.get("difficulty_rating")
         )
+    
+    def to_dict(self) -> Dict:
+        return {
+            "full_name": self.full_name,
+            "theorem_statement": self.theorem_statement,
+            "file_path": str(self.file_path),
+            "start": repr(self.start),
+            "end": repr(self.end),
+            "url": self.url,
+            "commit": self.commit,
+            "traced_tactics": [t.to_dict() for t in (self.traced_tactics or [])],
+            "difficulty_rating": self.difficulty_rating
+        }
 
 @dataclass
 class Premise:
@@ -109,6 +141,15 @@ class Premise:
             end=parse_pos(data["end"]),
             kind=data["kind"]
         )
+    
+    def to_dict(self) -> Dict:
+        return {
+            "full_name": self.full_name,
+            "code": self.code,
+            "start": repr(self.start),
+            "end": repr(self.end),
+            "kind": self.kind
+        }
 
 @dataclass
 class PremiseFile:
@@ -123,6 +164,13 @@ class PremiseFile:
             imports=data["imports"],
             premises=[Premise.from_dict(p) for p in data["premises"]]
         )
+    
+    def to_dict(self) -> Dict:
+        return {
+            "path": str(self.path),
+            "imports": self.imports,
+            "premises": [p.to_dict() for p in self.premises]
+        }
 
 @dataclass
 class Repository:
@@ -224,103 +272,30 @@ class Repository:
 
         return repo
     
-    # def add_or_update_theorem(self, theorem: Theorem) -> None:
-    #     existing_theorem = self.get_theorem(str(theorem.file_path), theorem.full_name)
-    #     if existing_theorem:
-    #         for thm_list in [self.proven_theorems, self.sorry_theorems_proved, self.sorry_theorems_unproved]:
-    #             if existing_theorem in thm_list:
-    #                 thm_list[thm_list.index(existing_theorem)] = theorem
-    #                 break
-    #     else:
-    #         if not theorem.traced_tactics:  # Theorem is proven with a term-style proof
-    #             self.proven_theorems.append(theorem)
-    #         elif any(step.tactic == 'sorry' for step in theorem.traced_tactics):
-    #             self.sorry_theorems_unproved.append(theorem)
-    #         else:
-    #             self.sorry_theorems_proved.append(theorem)
-
-    # def add_theorem(self, theorem: Theorem) -> None:
-    #     if not theorem.traced_tactics:  # Theorem is proven with a term-style proof
-    #         if theorem not in self.proven_theorems:
-    #             self.proven_theorems.append(theorem)
-    #     elif any(step.tactic == 'sorry' for step in theorem.traced_tactics):
-    #         if theorem not in self.sorry_theorems_unproved:
-    #             self.sorry_theorems_unproved.append(theorem)
-    #     else:
-    #         if theorem not in self.sorry_theorems_proved:
-    #             self.sorry_theorems_proved.append(theorem)
-
-    # def get_theorem(self, file_path: str, full_name: str) -> Optional[Theorem]:
-    #     for thm in self.get_all_theorems:
-    #         if thm.file_path == file_path and thm.full_name == full_name:
-    #             return thm
-    #     return None
-
-    # def update_theorem(self, updated_theorem: Theorem) -> None:
-    #     for thm_list in [self.proven_theorems, self.sorry_theorems_proved, self.sorry_theorems_unproved]:
-    #         for i, thm in enumerate(thm_list):
-    #             if thm.file_path == updated_theorem.file_path and thm.full_name == updated_theorem.full_name:
-    #                 thm_list[i] = updated_theorem
-    #                 return
-    #     raise ValueError(f"Theorem '{updated_theorem.full_name}' not found.")
-
-    # def delete_theorem(self, file_path: str, full_name: str) -> None:
-    #     for thm_list in [self.proven_theorems, self.sorry_theorems_proved, self.sorry_theorems_unproved]:
-    #         for i, thm in enumerate(thm_list):
-    #             if thm.file_path == file_path and thm.full_name == full_name:
-    #                 del thm_list[i]
-    #                 return
-    #     raise ValueError(f"Theorem '{full_name}' not found.")
-
-    # def add_premise_file(self, premise_file: PremiseFile) -> None:
-    #     if premise_file not in self.premise_files:
-    #         self.premise_files.append(premise_file)
-
-    # def get_premise_file(self, path: str) -> Optional[PremiseFile]:
-    #     for pf in self.premise_files:
-    #         if str(pf.path) == path:
-    #             return pf
-    #     return None
-
-    # def update_premise_file(self, updated_premise_file: PremiseFile) -> None:
-    #     for i, pf in enumerate(self.premise_files):
-    #         if pf.path == updated_premise_file.path:
-    #             self.premise_files[i] = updated_premise_file
-    #             return
-    #     raise ValueError(f"Premise file '{updated_premise_file.path}' not found.")
-
-    # def delete_premise_file(self, path: str) -> None:
-    #     for i, pf in enumerate(self.premise_files):
-    #         if str(pf.path) == path:
-    #             del self.premise_files[i]
-    #             return
-    #     raise ValueError(f"Premise file '{path}' not found.")
-
-    # def add_traced_file(self, file_path: Path) -> None:
-    #     if file_path not in self.files_traced:
-    #         self.files_traced.append(file_path)
-
-    # def get_traced_file(self, file_path: str) -> Optional[Path]:
-    #     path = Path(file_path)
-    #     if path in self.files_traced:
-    #         return path
-    #     return None
-
-    # def update_traced_file(self, old_file_path: str, new_file_path: str) -> None:
-    #     old_path = Path(old_file_path)
-    #     new_path = Path(new_file_path)
-    #     if old_path in self.files_traced:
-    #         self.files_traced.remove(old_path)
-    #         self.files_traced.append(new_path)
-    #     else:
-    #         raise ValueError(f"Traced file '{old_file_path}' not found.")
-
-    # def delete_traced_file(self, file_path: str) -> None:
-    #     path = Path(file_path)
-    #     if path in self.files_traced:
-    #         self.files_traced.remove(path)
-    #     else:
-    #         raise ValueError(f"Traced file '{file_path}' not found.")
+    def to_dict(self) -> Dict:
+        return {
+            "url": self.url,
+            "name": self.name,
+            "commit": self.commit,
+            "lean_version": self.lean_version,
+            "lean_dojo_version": self.lean_dojo_version,
+            "date_processed": self.date_processed.isoformat(),
+            "metadata": self.metadata,
+            "total_theorems": self.total_theorems,
+            "num_proven_theorems": self.num_proven_theorems,
+            "num_sorry_theorems": self.num_sorry_theorems,
+            "num_sorry_theorems_proved": self.num_sorry_theorems_proved,
+            "num_sorry_theorems_unproved": self.num_sorry_theorems_unproved,
+            "num_premise_files": self.num_premise_files,
+            "num_premises": self.num_premises,
+            "num_files_traced": self.num_files_traced,
+            "proven_theorems": [t.to_dict() for t in self.proven_theorems],
+            "sorry_theorems_proved": [t.to_dict() for t in self.sorry_theorems_proved],
+            "sorry_theorems_unproved": [t.to_dict() for t in self.sorry_theorems_unproved],
+            "premise_files": [pf.to_dict() for pf in self.premise_files],
+            "files_traced": [str(file) for file in self.files_traced],
+            "pr_url": self.pr_url
+        }
 
     def change_sorry_to_proven(self, theorem: Theorem) -> None:
         if theorem in self.sorry_theorems_unproved:
@@ -552,114 +527,7 @@ class DynamicDatabase:
 
     def to_dict(self) -> Dict:
         return {
-            "repositories": [
-                {
-                    "url": repo.url,
-                    "name": repo.name,
-                    "commit": repo.commit,
-                    "lean_version": repo.lean_version,
-                    "lean_dojo_version": repo.lean_dojo_version,
-                    "date_processed": repo.date_processed.isoformat(),
-                    "metadata": repo.metadata,
-                    "total_theorems": repo.total_theorems,
-                    "num_proven_theorems": repo.num_proven_theorems,
-                    "num_sorry_theorems": repo.num_sorry_theorems,
-                    "num_sorry_theorems_proved": repo.num_sorry_theorems_proved,
-                    "num_sorry_theorems_unproved": repo.num_sorry_theorems_unproved,
-                    "num_premise_files": repo.num_premise_files,
-                    "num_premises": repo.num_premises,
-                    "num_files_traced": repo.num_files_traced,
-                    "proven_theorems": [
-                        {
-                            "full_name": thm.full_name,
-                            "theorem_statement": thm.theorem_statement,
-                            "file_path": str(thm.file_path),
-                            "start": repr(thm.start),
-                            "end": repr(thm.end),
-                            "url": thm.url,
-                            "commit": thm.commit,
-                            "traced_tactics": [
-                                {
-                                    "tactic": t.tactic,
-                                    "annotated_tactic": [
-                                        t.annotated_tactic[0],
-                                        [
-                                            {
-                                                "full_name": a.full_name,
-                                                "def_path": a.def_path,
-                                                "def_pos": repr(a.def_pos),
-                                                "def_end_pos": repr(a.def_end_pos)
-                                            } for a in t.annotated_tactic[1]
-                                        ]
-                                    ],
-                                    "state_before": t.state_before,
-                                    "state_after": t.state_after
-                                } for t in (thm.traced_tactics or [])
-                            ],
-                            "difficulty_rating": thm.difficulty_rating
-                        } for thm in repo.proven_theorems
-                    ],
-                    "sorry_theorems_proved": [
-                        {
-                            "full_name": thm.full_name,
-                            "theorem_statement": thm.theorem_statement,
-                            "file_path": str(thm.file_path),
-                            "start": repr(thm.start),
-                            "end": repr(thm.end),
-                            "url": thm.url,
-                            "commit": thm.commit,
-                            "traced_tactics": [
-                                {
-                                    "tactic": t.tactic,
-                                    "annotated_tactic": [
-                                        t.annotated_tactic[0],
-                                        [
-                                            {
-                                                "full_name": a.full_name,
-                                                "def_path": a.def_path,
-                                                "def_pos": repr(a.def_pos),
-                                                "def_end_pos": repr(a.def_end_pos)
-                                            } for a in t.annotated_tactic[1]
-                                        ]
-                                    ],
-                                    "state_before": t.state_before,
-                                    "state_after": t.state_after
-                                } for t in (thm.traced_tactics or [])
-                            ],
-                            "difficulty_rating": thm.difficulty_rating
-                        } for thm in repo.sorry_theorems_proved
-                    ],
-                    "sorry_theorems_unproved": [
-                        {
-                            "full_name": thm.full_name,
-                            "theorem_statement": thm.theorem_statement,
-                            "file_path": str(thm.file_path),
-                            "start": repr(thm.start),
-                            "end": repr(thm.end),
-                            "url": thm.url,
-                            "commit": thm.commit,
-                            "difficulty_rating": thm.difficulty_rating
-                        } for thm in repo.sorry_theorems_unproved
-                    ],
-                    "premise_files": [
-                        {
-                            "path": str(pf.path),
-                            "imports": pf.imports,
-                            "premises": [
-                                {
-                                    "full_name": premise.full_name,
-                                    "code": premise.code,
-                                    "start": repr(premise.start),
-                                    "end": repr(premise.end),
-                                    "kind": premise.kind,
-                                } for premise in pf.premises
-                            ]
-                        } for pf in repo.premise_files
-                    ],
-                    "files_traced": [str(file) for file in repo.files_traced],
-                    "pr_url": repo.pr_url
-                } for repo in self.repositories
-            ]
+            "repositories": [repo.to_dict() for repo in self.repositories]
         }
 
     @classmethod
