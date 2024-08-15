@@ -282,15 +282,17 @@ class Repository:
         if "date_processed" not in data["metadata"]:
             raise ValueError("Metadata must contain the 'date_processed' key")
 
-        if isinstance(data["metadata"]["date_processed"], str):
-            data["metadata"]["date_processed"] = datetime.datetime.fromisoformat(data["metadata"]["date_processed"])
+        metadata = data["metadata"].copy()
+        if isinstance(metadata["date_processed"], str):
+            metadata["date_processed"] = datetime.datetime.fromisoformat(metadata["date_processed"])
+        
         repo = cls(
             url=data["url"],
             name=data["name"],
             commit=data["commit"],
             lean_version=data["lean_version"],
             lean_dojo_version=data["lean_dojo_version"],
-            metadata=data["metadata"],
+            metadata=metadata,
             files_traced=[],
             pr_url=data.get("pr_url")
         )
@@ -331,13 +333,15 @@ class Repository:
         return repo
     
     def to_dict(self) -> Dict:
+        metadata_copy = self.metadata.copy()
+        metadata_copy["date_processed"] = metadata_copy["date_processed"].isoformat()
         return {
             "url": self.url,
             "name": self.name,
             "commit": self.commit,
             "lean_version": self.lean_version,
             "lean_dojo_version": self.lean_dojo_version,
-            "metadata": self.metadata,
+            "metadata": metadata_copy,
             "total_theorems": self.total_theorems,
             "num_proven_theorems": self.num_proven_theorems,
             "num_sorry_theorems": self.num_sorry_theorems,
