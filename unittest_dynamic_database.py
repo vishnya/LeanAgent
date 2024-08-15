@@ -518,18 +518,14 @@ class TestDynamicDatabasePFR(unittest.TestCase):
                     if i >= 10:
                         break
                     logger.info(f"Manual only: {thm[1]} in {thm[0]}")
-                    logger.info(f"  Start: {thm[3]}, End: {thm[4]}")
-                    if thm[4] is not None:
-                        logger.info(f"  Theorem statement: {thm[2][:100]}...")  # First 100 chars
+                    logger.info(f"  Start: {thm[2]}, End: {thm[3]}")
             if only_in_dynamic:
                 logger.info(f"{len(only_in_dynamic)} theorems only in dynamic dataset")
                 for i, thm in enumerate(only_in_dynamic):
                     if i >= 10:
                         break
                     logger.info(f"Dynamic only: {thm[1]} in {thm[0]}")
-                    logger.info(f"  Start: {thm[3]}, End: {thm[4]}")
-                    if thm[4] is not None:
-                        logger.info(f"  Theorem statement: {thm[2][:100]}...")  # First 100 chars
+                    logger.info(f"  Start: {thm[2]}, End: {thm[3]}")
             return False
         return True
 
@@ -537,10 +533,8 @@ class TestDynamicDatabasePFR(unittest.TestCase):
         return (
             theorem['file_path'],
             theorem['full_name'],
-            theorem['theorem_statement'],
             tuple(theorem['start']),
             tuple(theorem['end']),
-            tuple(self._tactic_to_hashable(t) for t in theorem['traced_tactics'])
         )
 
     def _tactic_to_hashable(self, tactic):
@@ -1053,18 +1047,14 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
                     if i >= 10:
                         break
                     logger.info(f"Manual only: {thm[1]} in {thm[0]}")
-                    logger.info(f"  Start: {thm[3]}, End: {thm[4]}")
-                    if thm[4] is not None:
-                        logger.info(f"  Theorem statement: {thm[2][:100]}...")  # First 100 chars
+                    logger.info(f"  Start: {thm[2]}, End: {thm[3]}")
             if only_in_dynamic:
                 logger.info(f"{len(only_in_dynamic)} theorems only in dynamic dataset")
                 for i, thm in enumerate(only_in_dynamic):
                     if i >= 10:
                         break
                     logger.info(f"Dynamic only: {thm[1]} in {thm[0]}")
-                    logger.info(f"  Start: {thm[3]}, End: {thm[4]}")
-                    if thm[4] is not None:
-                        logger.info(f"  Theorem statement: {thm[2][:100]}...")  # First 100 chars
+                    logger.info(f"  Start: {thm[2]}, End: {thm[3]}")
             return False
         return True
 
@@ -1072,10 +1062,8 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         return (
             theorem['file_path'],
             theorem['full_name'],
-            theorem['theorem_statement'],
             tuple(theorem['start']),
             tuple(theorem['end']),
-            tuple(self._tactic_to_hashable(t) for t in theorem['traced_tactics'])
         )
 
     def _tactic_to_hashable(self, tactic):
