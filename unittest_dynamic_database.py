@@ -1260,8 +1260,9 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(loaded_tactic.state_before, "")
         self.assertEqual(loaded_tactic.state_after, "")
 
+    @patch('lean_dojo.data_extraction.lean.LeanGitRepo')
     @patch('prover.proof_search.DistributedProver')
-    def test_prove_sorry_theorems(self, MockDistributedProver):
+    def test_prove_sorry_theorems(self, MockDistributedProver, MockLeanGitRepo):
         mock_prover = MockDistributedProver.return_value
         mock_prover.search_unordered.return_value = [
             SearchResult(
@@ -1275,6 +1276,8 @@ class TestDynamicDatabaseProver(unittest.TestCase):
                 num_searched_nodes=5
             )
         ]
+        
+        MockLeanGitRepo.return_value = Mock()
 
         prove_sorry_theorems(self.db, mock_prover)
 
@@ -1299,6 +1302,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
             self.db._export_traced_files.assert_called_once()
             self.db._export_metadata.assert_called_once()
 
+    @patch('lean_dojo.data_extraction.lean.LeanGitRepo')
     @patch('generate_benchmark_lean4.main')
     @patch('dynamic_database.DynamicDatabase.from_json')
     @patch('dynamic_database.DynamicDatabase.to_json')
@@ -1308,12 +1312,15 @@ class TestDynamicDatabaseProver(unittest.TestCase):
     @patch('main.prove_sorry_theorems')
     def test_retrieve_proof(self, mock_prove_sorry_theorems, MockDistributedProver, 
                             mock_train_test_fisher, mock_generate_merged_dataset, 
-                            mock_to_json, mock_from_json, mock_generate_benchmark):
+                            mock_to_json, mock_from_json, mock_generate_benchmark,
+                            MockLeanGitRepo):
         mock_generate_benchmark.return_value = (Mock(), 100, 50)
         mock_from_json.return_value = self.db
         mock_prover = MockDistributedProver.return_value
 
-        repo = LeanGitRepo("https://github.com/test/repo", "abcdef1234567890")
+        MockLeanGitRepo.return_value = Mock()
+
+        repo = MockLeanGitRepo("https://github.com/test/repo", "abcdef1234567890")
         proofs = retrieve_proof(repo, "test_repo", "abcdef1234567890", 0.1, 1, 5)
 
         mock_generate_benchmark.assert_called_once()
@@ -1324,7 +1331,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         MockDistributedProver.assert_called_once()
         mock_prove_sorry_theorems.assert_called_once_with(self.db, mock_prover)
 
-        self.assertEqual(proofs, [])
+        self.assertEqual(proofs, [])  # Assuming retrieve_proof returns an empty list in this case
 
     def test_save_load_dynamic_database(self):
         json_file = "temp_file.json"
@@ -1374,11 +1381,10 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(len(loaded_db.repositories[1].sorry_theorems_unproved), 1)
         self.assertEqual(loaded_db.repositories[1].sorry_theorems_unproved[0].full_name, "new_test_theorem")
 
+    @patch('lean_dojo.data_extraction.lean.LeanGitRepo')
     @patch('prover.proof_search.DistributedProver')
-    def test_prove_sorry_theorems_and_save(self, MockDistributedProver):
+    def test_prove_sorry_theorems_and_save(self, MockDistributedProver, MockLeanGitRepo):
         json_file = "temp_file.json"
-
-        self.db.to_json(json_file)
 
         mock_prover = MockDistributedProver.return_value
         mock_prover.search_unordered.return_value = [
@@ -1393,6 +1399,10 @@ class TestDynamicDatabaseProver(unittest.TestCase):
                 num_searched_nodes=5
             )
         ]
+
+        MockLeanGitRepo.return_value = Mock()
+
+        self.db.to_json(json_file)
 
         prove_sorry_theorems(self.db, mock_prover)
         self.db.to_json(json_file)
