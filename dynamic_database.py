@@ -14,9 +14,11 @@ import shutil
 
 def parse_pos(pos_str):
     if isinstance(pos_str, str):
+        # pos_str came from a JSON file
         pos_parts = pos_str.replace('Pos', '').replace('(', '').replace(')', '').split(',')
         return Pos(int(pos_parts[0]), int(pos_parts[1]))
     elif isinstance(pos_str, list):
+        # pos_str came from a dictionary initialization
         return Pos(*pos_str)
     else:
         raise ValueError(f"Unexpected format for Pos: {pos_str}")
