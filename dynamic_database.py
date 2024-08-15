@@ -204,7 +204,6 @@ class Repository:
     commit: str
     lean_version: str
     lean_dojo_version: str
-    date_processed: datetime.datetime
     metadata: Dict[str, str]
     proven_theorems: List[Theorem] = field(default_factory=list)
     sorry_theorems_proved: List[Theorem] = field(default_factory=list)
@@ -272,24 +271,28 @@ class Repository:
 
     @classmethod
     def from_dict(cls, data: Dict) -> Repository:
-        if not all(key in data for key in ["url", "name", "commit", "lean_version", "lean_dojo_version", "date_processed", "metadata"]):
+        if not all(key in data for key in ["url", "name", "commit", "lean_version", "lean_dojo_version", "metadata"]):
             raise ValueError("Invalid Repository data format")
+        if "date_processed" not in data["metadata"]:
+            raise ValueError("Metadata must contain the 'date_processed' key")
 
-        if isinstance(data["date_processed"], str):
-            data["date_processed"] = datetime.datetime.fromisoformat(data["date_processed"])
+        if isinstance(data["metadata"]["date_processed"], str):
+            data["metadata"]["date_processed"] = datetime.datetime.fromisoformat(data["metadata"]["date_processed"])
         repo = cls(
             url=data["url"],
             name=data["name"],
             commit=data["commit"],
             lean_version=data["lean_version"],
             lean_dojo_version=data["lean_dojo_version"],
-            date_processed=data["date_processed"],
             metadata=data["metadata"],
             files_traced=[],
             pr_url=data.get("pr_url")
         )
 
-        if "theorems_folder" in data and "premise_files_corpus" in data and "files_traced" in data:
+        if all(key in data for key in ["theorems_folder", "premise_files_corpus", "files_traced"]):
+            if not all(os.path.exists(data[key]) for key in ["theorems_folder", "premise_files_corpus", "files_traced"]):
+                raise ValueError("Paths to data cannot be empty when creating repo from dataset")
+
             theorems_folder = Path(data["theorems_folder"])
             for file in theorems_folder.glob("*.json"):
                 with open(file, 'r') as f:
@@ -328,7 +331,6 @@ class Repository:
             "commit": self.commit,
             "lean_version": self.lean_version,
             "lean_dojo_version": self.lean_dojo_version,
-            "date_processed": self.date_processed.isoformat(),
             "metadata": self.metadata,
             "total_theorems": self.total_theorems,
             "num_proven_theorems": self.num_proven_theorems,
@@ -381,8 +383,8 @@ class DynamicDatabase:
         for repo in repos_to_process:
             for theorem in repo.get_all_theorems:
                 key = (theorem.file_path, theorem.full_name, list(theorem.start)[0], list(theorem.start)[1], list(theorem.end)[0], list(theorem.end)[1])
-                if key not in all_theorems or repo.date_processed > all_theorems[key][1]:
-                    all_theorems[key] = (theorem, repo.date_processed)
+                if key not in all_theorems or repo.metadata["date_processed"] > all_theorems[key][1]:
+                    all_theorems[key] = (theorem, repo.metadata["date_processed"])
 
             all_traced_files.update(repo.files_traced)
 
@@ -423,8 +425,8 @@ class DynamicDatabase:
                     ]
                 }
                 path = file_data['path']
-                if path not in merged_corpus or repo.date_processed > merged_corpus[path][1]:
-                    merged_corpus[path] = (json.dumps(file_data), repo.date_processed)
+                if path not in merged_corpus or repo.metadata["date_processed"] > merged_corpus[path][1]:
+                    merged_corpus[path] = (json.dumps(file_data), repo.metadata["date_processed"])
 
         with open(output_path / "corpus.jsonl", 'w') as f:
             for line, _ in merged_corpus.values():
@@ -536,7 +538,6 @@ class DynamicDatabase:
                     "commit": repo.commit,
                     "lean_version": repo.lean_version,
                     "lean_dojo_version": repo.lean_dojo_version,
-                    "date_processed": repo.date_processed.isoformat(),
                     "metadata": repo.metadata,
                 } for repo in repos
             ],
@@ -547,6 +548,11 @@ class DynamicDatabase:
             "num_premises": sum(repo.num_premises for repo in repos),
             "num_files_traced": sum(repo.num_files_traced for repo in repos),
         }
+
+        for repo_data in metadata["repositories"]:
+            if isinstance(repo_data["metadata"]["date_processed"], datetime.datetime):
+                repo_data["metadata"]["date_processed"] = repo_data["metadata"]["date_processed"].isoformat()
+        
         with open(output_path / "metadata.json", 'w') as f:
             json.dump(metadata, f, indent=2)
 
@@ -584,7 +590,7 @@ class DynamicDatabase:
         if "repositories" not in data:
             raise ValueError("Invalid DynamicDatabase data format")
         db = cls()
-        for repo_data in data.get("repositories", []):
+        for repo_data in data["repositories"]:
             repo = Repository.from_dict(repo_data)
             db.add_repository(repo)
         return db
