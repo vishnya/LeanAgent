@@ -90,8 +90,15 @@ class Theorem:
     url: str
     commit: str
     theorem_statement: str = None
-    _traced_tactics: Optional[List[AnnotatedTactic]] = field(default_factory=list)
+    traced_tactics: Optional[List[AnnotatedTactic]] = field(default_factory=list)
     difficulty_rating: Optional[float] = None
+
+    def __post_init__(self):
+        self._validate_traced_tactics()
+
+    def _validate_traced_tactics(self):
+        if self.traced_tactics is not None and not all(isinstance(t, AnnotatedTactic) for t in self.traced_tactics):
+            raise ValueError("All traced tactics must be AnnotatedTactic instances")
 
     def __eq__(self, other):
         if not isinstance(other, Theorem):
@@ -110,9 +117,8 @@ class Theorem:
     
     @traced_tactics.setter
     def traced_tactics(self, value: Optional[List[AnnotatedTactic]]):
-        if value is not None and not all(isinstance(t, AnnotatedTactic) for t in value):
-            raise ValueError("All traced tactics must be AnnotatedTactic instances")
         self._traced_tactics = value
+        self._validate_traced_tactics()
 
     @classmethod
     def from_dict(cls, data: Dict, url: str, commit: str) -> Theorem:
