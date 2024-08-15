@@ -922,16 +922,6 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
             dynamic_dict = {self._theorem_to_key(t): t for t in dynamic_theorems}
 
             logger.info(f"After deduplication - Manual theorems: {len(deduplicated_manual_theorems)}, Dynamic theorems: {len(dynamic_theorems)}")
-
-            # if manual_duplicates:
-            #     logger.error("Duplicates found in manual dataset:")
-            #     for i, (key, thm1, thm2) in enumerate(manual_duplicates[:1]):
-            #         logger.error(f"Duplicate {i+1}:")
-            #         logger.error(f"  Key: {key}")
-            #         logger.error(f"  Theorem 1: {thm1['full_name']} in {thm1['file_path']}")
-            #         logger.error(f"    URL: {thm1['url']}, Commit: {thm1['commit']}")
-            #         logger.error(f"  Theorem 2: {thm2['full_name']} in {thm2['file_path']}")
-            #         logger.error(f"    URL: {thm2['url']}, Commit: {thm2['commit']}")
             
             only_in_manual = set(manual_dict.keys()) - set(dynamic_dict.keys())
             only_in_dynamic = set(dynamic_dict.keys()) - set(manual_dict.keys())
