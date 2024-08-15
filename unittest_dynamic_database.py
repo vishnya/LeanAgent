@@ -221,7 +221,7 @@ class TestDynamicDatabase(unittest.TestCase):
         self.assertEqual(len(loaded_db.repositories), 1)
         loaded_repo = loaded_db.get_repository("https://github.com/test/repo", "abc123")
         self.assertEqual(loaded_repo.name, "Test Repo")
-        self.assertEqual(loaded_repo.metadata["date_processed"], self.current_datetime )
+        self.assertEqual(loaded_repo.metadata["date_processed"], self.current_datetime)
 
 class TestDynamicDatabasePFR(unittest.TestCase):
     def setUp(self):
