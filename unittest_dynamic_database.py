@@ -510,8 +510,22 @@ class TestDynamicDatabasePFR(unittest.TestCase):
         if only_in_manual or only_in_dynamic:
             if only_in_manual:
                 logger.info(f"{len(only_in_manual)} theorems only in manual dataset")
+                for i, thm in enumerate(only_in_manual):
+                    if i >= 10:
+                        break
+                    logger.info(f"Manual only: {thm[3]} in {thm[2]}")
+                    logger.info(f"  URL: {thm[0]}, Commit: {thm[1]}")
+                    logger.info(f"  Start: {thm[5]}, End: {thm[6]}")
+                    logger.info(f"  Theorem statement: {thm[4][:100]}...")  # First 100 chars
             if only_in_dynamic:
                 logger.info(f"{len(only_in_dynamic)} theorems only in dynamic dataset")
+                for i, thm in enumerate(only_in_dynamic):
+                    if i >= 10:
+                        break
+                    logger.info(f"Dynamic only: {thm[3]} in {thm[2]}")
+                    logger.info(f"  URL: {thm[0]}, Commit: {thm[1]}")
+                    logger.info(f"  Start: {thm[5]}, End: {thm[6]}")
+                    logger.info(f"  Theorem statement: {thm[4][:100]}...")  # First 100 chars
             return False
         return True
 
@@ -1030,8 +1044,22 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         if only_in_manual or only_in_dynamic:
             if only_in_manual:
                 logger.info(f"{len(only_in_manual)} theorems only in manual dataset")
+                for i, thm in enumerate(only_in_manual):
+                    if i >= 10:
+                        break
+                    logger.info(f"Manual only: {thm[3]} in {thm[2]}")
+                    logger.info(f"  URL: {thm[0]}, Commit: {thm[1]}")
+                    logger.info(f"  Start: {thm[5]}, End: {thm[6]}")
+                    logger.info(f"  Theorem statement: {thm[4][:100]}...")  # First 100 chars
             if only_in_dynamic:
                 logger.info(f"{len(only_in_dynamic)} theorems only in dynamic dataset")
+                for i, thm in enumerate(only_in_dynamic):
+                    if i >= 10:
+                        break
+                    logger.info(f"Dynamic only: {thm[3]} in {thm[2]}")
+                    logger.info(f"  URL: {thm[0]}, Commit: {thm[1]}")
+                    logger.info(f"  Start: {thm[5]}, End: {thm[6]}")
+                    logger.info(f"  Theorem statement: {thm[4][:100]}...")  # First 100 chars
             return False
         return True
 
