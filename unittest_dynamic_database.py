@@ -23,6 +23,14 @@ class TestDynamicDatabaseUnicode(unittest.TestCase):
         self.db = DynamicDatabase()
         self.unicode_repo = self.create_unicode_sample_repo()
         self.db.add_repository(self.unicode_repo)
+
+    def assertDatetimeEqual(self, dt1, dt2):
+        """
+        Assert that two datetimes are equal, ignoring microseconds.
+        This is important because serialization and deserialization of datetimes
+        may lose microsecond precision.
+        """
+        self.assertEqual(dt1.replace(microsecond=0), dt2.replace(microsecond=0))
     
     def create_unicode_sample_repo(self):
         repo = Repository(
@@ -105,7 +113,7 @@ class TestDynamicDatabaseUnicode(unittest.TestCase):
         deserialized_repo = deserialized_db.repositories[0]
         
         assert original_repo.name == deserialized_repo.name
-        assert original_repo.metadata["date_processed"] == deserialized_repo.metadata["date_processed"]
+        self.assertDatetimeEqual(original_repo.metadata["date_processed"], deserialized_repo.metadata["date_processed"])
         
         original_theorem1 = original_repo.proven_theorems[0]
         deserialized_theorem1 = deserialized_repo.proven_theorems[0]
@@ -184,6 +192,14 @@ class TestDynamicDatabase(unittest.TestCase):
         )
         self.current_datetime = datetime.datetime.now()
 
+    def assertDatetimeEqual(self, dt1, dt2):
+        """
+        Assert that two datetimes are equal, ignoring microseconds.
+        This is important because serialization and deserialization of datetimes
+        may lose microsecond precision.
+        """
+        self.assertEqual(dt1.replace(microsecond=0), dt2.replace(microsecond=0))
+
     def test_add_repository(self):
         self.db.add_repository(self.repo)
         self.assertEqual(len(self.db.repositories), 1)
@@ -206,7 +222,7 @@ class TestDynamicDatabase(unittest.TestCase):
         self.db.update_repository(updated_repo)
         retrieved_repo = self.db.get_repository("https://github.com/test/repo", "abc123")
         self.assertEqual(retrieved_repo.name, "Updated Test Repo")
-        self.assertEqual(retrieved_repo.metadata["date_processed"], self.current_datetime)
+        self.assertDatetimeEqual(retrieved_repo.metadata["date_processed"], self.current_datetime)
 
     def test_delete_repository(self):
         self.db.add_repository(self.repo)
@@ -221,7 +237,7 @@ class TestDynamicDatabase(unittest.TestCase):
         self.assertEqual(len(loaded_db.repositories), 1)
         loaded_repo = loaded_db.get_repository("https://github.com/test/repo", "abc123")
         self.assertEqual(loaded_repo.name, "Test Repo")
-        self.assertEqual(loaded_repo.metadata["date_processed"], self.current_datetime)
+        self.assertDatetimeEqual(loaded_repo.metadata["date_processed"], self.current_datetime)
 
 class TestDynamicDatabasePFR(unittest.TestCase):
     def setUp(self):
