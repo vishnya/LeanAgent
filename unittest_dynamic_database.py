@@ -1260,7 +1260,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(loaded_tactic.state_before, "")
         self.assertEqual(loaded_tactic.state_after, "")
 
-    @patch('prover.DistributedProver')
+    @patch('prover.proof_search.DistributedProver')
     def test_prove_sorry_theorems(self, MockDistributedProver):
         mock_prover = MockDistributedProver.return_value
         mock_prover.search_unordered.return_value = [
@@ -1304,7 +1304,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
     @patch('dynamic_database.DynamicDatabase.to_json')
     @patch('dynamic_database.DynamicDatabase.generate_merged_dataset')
     @patch('main.train_test_fisher')
-    @patch('prover.DistributedProver')
+    @patch('prover.proof_search.DistributedProver')
     @patch('main.prove_sorry_theorems')
     def test_retrieve_proof(self, mock_prove_sorry_theorems, MockDistributedProver, 
                             mock_train_test_fisher, mock_generate_merged_dataset, 
@@ -1374,7 +1374,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(len(loaded_db.repositories[1].sorry_theorems_unproved), 1)
         self.assertEqual(loaded_db.repositories[1].sorry_theorems_unproved[0].full_name, "new_test_theorem")
 
-    @patch('prover.DistributedProver')
+    @patch('prover.proof_search.DistributedProver')
     def test_prove_sorry_theorems_and_save(self, MockDistributedProver):
         json_file = "temp_file.json"
 
