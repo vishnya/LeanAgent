@@ -190,6 +190,46 @@ class TestDynamicDatabaseCore(unittest.TestCase):
         self.assertIsInstance(repo_dict, dict)
         self.assertEqual(repo_dict["url"], "https://github.com/test/repo")
 
+        annotation = Annotation(
+            full_name="test_annotation",
+            def_path="test/path.lean",
+            def_pos=Pos(1, 1),
+            def_end_pos=Pos(2, 1)
+        )
+        annotation_dict = annotation.to_dict()
+        self.assertIsInstance(annotation_dict, dict)
+        self.assertEqual(annotation_dict["full_name"], "test_annotation")
+        self.assertEqual(annotation_dict["def_path"], "test/path.lean")
+        self.assertEqual(annotation_dict["def_pos"], "(1, 1)")
+        self.assertEqual(annotation_dict["def_end_pos"], "(2, 1)")
+
+        annotated_tactic = AnnotatedTactic(
+            tactic="test_tactic",
+            annotated_tactic=("test_tactic", [annotation]),
+            state_before="test_state_before",
+            state_after="test_state_after"
+        )
+        annotated_tactic_dict = annotated_tactic.to_dict()
+        self.assertIsInstance(annotated_tactic_dict, dict)
+        self.assertEqual(annotated_tactic_dict["tactic"], "test_tactic")
+        self.assertEqual(annotated_tactic_dict["state_before"], "test_state_before")
+        self.assertEqual(annotated_tactic_dict["state_after"], "test_state_after")
+
+        premise = Premise(
+            full_name="test_premise",
+            code="test_code",
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            kind="theorem"
+        )
+        premise_dict = premise.to_dict()
+        self.assertIsInstance(premise_dict, dict)
+        self.assertEqual(premise_dict["full_name"], "test_premise")
+        self.assertEqual(premise_dict["code"], "test_code")
+        self.assertEqual(premise_dict["start"], "(1, 1)")
+        self.assertEqual(premise_dict["end"], "(2, 1)")
+        self.assertEqual(premise_dict["kind"], "theorem")
+
     def test_is_same_theorem(self):
         theorem1 = Theorem(
             full_name="test_theorem",
