@@ -72,6 +72,7 @@ MERGED_DATA_DIR = "datasets_merged_PT_full_merge_each_time"
 CHECKPOINT_DIR = "checkpoints_PT_full_merge_each_time"
 FISHER_DIR = "fisher_PT_full_merge_each_time"
 EVAL_RESULTS_FILE_PATH = "/home/adarsh/ReProver/total_evaluation_results_PT_full_merge_each_time.txt"
+DB_FILE_NAME = "dynamic_database_PT_full_merge_each_time.json"
 # TODO: do we still need this?
 load_dotenv()
 
@@ -979,7 +980,7 @@ def main():
         epochs_per_repo = 1
         run_progressive_training = True
         num_repos = 15
-        dynamic_database_json_path = RAID_DIR + "/" + DATA_DIR + "/" + "dynamic_database.json"
+        dynamic_database_json_path = RAID_DIR + "/" + DATA_DIR + "/" + DB_FILE_NAME
         
         lambdas = None
         if run_progressive_training:
