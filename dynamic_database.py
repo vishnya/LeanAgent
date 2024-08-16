@@ -241,7 +241,7 @@ class Repository:
     def get_theorem(self, full_name: str, file_path: str) -> Optional[Theorem]:
         for thm_list in [self.proven_theorems, self.sorry_theorems_proved, self.sorry_theorems_unproved]:
             for thm in thm_list:
-                if thm.full_name == full_name and str(thm.file_path) == file_path:
+                if thm.full_name == full_name and (str(thm.file_path) == file_path or (file_path == "" and str(thm.file_path) == ".")):
                     return thm
         return None
     
