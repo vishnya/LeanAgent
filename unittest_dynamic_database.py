@@ -1614,7 +1614,7 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         url_new_version = "https://github.com/Adarsh321123/new-version-test"
         commit_new_version = "f465306be03ced999caa157a85558a6c41b3e3f5"
         dir_name_new_version = url_new_version.split("/")[-1] + "_" + commit_new_version
-        dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_{dir_name_PFR}_{dir_name_new_version}_generated"
+        dst_dir = Path(RAID_DIR) / DATA_DIR / f"{dir_name_PFR}_{dir_name_new_version}_generated"
         self.db.generate_merged_dataset(dst_dir)
 
         # Check that all theorems in the dataset are from the original repositories
@@ -1934,7 +1934,7 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         url_new_version = "https://github.com/Adarsh321123/new-version-test"
         commit_new_version = "f465306be03ced999caa157a85558a6c41b3e3f5"
         dir_name_new_version = url_new_version.split("/")[-1] + "_" + commit_new_version
-        dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_{dir_name_PFR}_{dir_name_new_version}_generated"
+        dst_dir = Path(RAID_DIR) / DATA_DIR / f"{dir_name_PFR}_{dir_name_new_version}_generated"
         if dst_dir.exists():
             shutil.rmtree(dst_dir)
 
