@@ -346,6 +346,16 @@ class Repository:
         if theorem in self.sorry_theorems_unproved:
             self.sorry_theorems_unproved.remove(theorem)
             self.sorry_theorems_proved.append(theorem)
+
+            message = f"Theorem proved: {theorem.full_name} in {theorem.file_path} for repo {self.name} (commit: {self.commit})"
+            log_file = 'proof_logs/theorem_proofs.log'
+            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            log_entry = f"{timestamp} - {message}\n"
+            
+            os.makedirs(os.path.dirname(log_file), exist_ok=True)
+            
+            with open(log_file, 'a') as f:
+                f.write(log_entry)
         else:
             raise ValueError("The theorem is not in the list of unproved sorry theorems.")
 
@@ -553,6 +563,8 @@ class DynamicDatabase:
     def add_repository(self, repo: Repository) -> None:
         if repo not in self.repositories:
             self.repositories.append(repo)
+        else:
+            logger.info(f"Repository '{repo.url}' with commit '{repo.commit}' already exists in the database.")
 
     def get_repository(self, url: str, commit: str) -> Optional[Repository]:
         for repo in self.repositories:
