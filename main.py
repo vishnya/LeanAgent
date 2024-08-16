@@ -77,15 +77,15 @@ load_dotenv()
 
 # Feel free to remove any repos from this list if you would like to test on them
 known_repositories = [
-    "leanprover-community/mathlib4",  # ReProver is trained on this + LeanDojo already tests on it
-    "leanprover-community/batteries", # ReProver is trained on this + LeanDojo already tests on it
+    # "leanprover-community/mathlib4",  # ReProver is trained on this + LeanDojo already tests on it
+    "leanprover-community/batteries", # functional programming instead of math
     "leanprover-community/aesop",
     "leanprover/lean4",
-    "leanprover-community/mathlib",
+    "leanprover-community/mathlib", # Mathlib3 version
     "leanprover/std4",  # moved to batteries
-    "leanprover-community/duper",  # functional programming instead of math
+    # "leanprover-community/duper",  # functional programming instead of math
     "leanprover/lake",
-    "openai/lean-gym",
+    # "openai/lean-gym",
     # already tested:
     # "lecopivo/SciLean",
     # "avigad/mathematics_in_lean_source",
