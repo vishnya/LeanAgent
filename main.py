@@ -980,7 +980,7 @@ def main():
         epochs_per_repo = 1
         run_progressive_training = True
         num_repos = 15
-        dynamic_database_json_path = RAID_DIR + "/" + DATA_DIR + "/" + DB_FILE_NAME
+        dynamic_database_json_path = RAID_DIR + "/" + DB_FILE_NAME
         
         lambdas = None
         if run_progressive_training:
