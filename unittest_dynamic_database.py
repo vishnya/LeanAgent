@@ -257,6 +257,121 @@ class TestDynamicDatabaseCore(unittest.TestCase):
         self.assertEqual(loaded_theorem.commit, "abc123")
         self.assertIsNone(loaded_theorem.theorem_statement)
         self.assertIsNone(loaded_theorem.difficulty_rating)
+    
+    def test_complex_json_serialization(self):
+        theorem1 = Theorem(
+            full_name="theorem1",
+            file_path=Path("test1.lean"),
+            start=Pos(1, 1),
+            end=Pos(10, 1),
+            url="https://github.com/test/repo",
+            commit="abc123",
+            theorem_statement="theorem1 : 2 + 2 = 4",
+            traced_tactics=[
+                AnnotatedTactic(
+                    tactic="rw [add_comm]",
+                    annotated_tactic=("rw [add_comm]", [
+                        Annotation(
+                            full_name="add_comm",
+                            def_path="src/add_comm.lean",
+                            def_pos=Pos(5, 1),
+                            def_end_pos=Pos(7, 1)
+                        )
+                    ]),
+                    state_before="⊢ 2 + 2 = 4",
+                    state_after="⊢ 2 + 2 = 4"
+                )
+            ],
+            difficulty_rating=0.7
+        )
+        
+        theorem2 = Theorem(
+            full_name="theorem2",
+            file_path=Path("test2.lean"),
+            start=Pos(1, 1),
+            end=Pos(5, 1),
+            url="https://github.com/test/repo",
+            commit="abc123",
+            theorem_statement="theorem2 : ∀ x y : ℕ, x + y = y + x",
+            traced_tactics=[],
+            difficulty_rating=None
+        )
+        
+        premise_file = PremiseFile(
+            path=Path("premise.lean"),
+            imports=["import data.nat.basic"],
+            premises=[
+                Premise(
+                    full_name="nat_add_comm",
+                    code="theorem nat_add_comm : ∀ a b : ℕ, a + b = b + a := sorry",
+                    start=Pos(1, 1),
+                    end=Pos(1, 60),
+                    kind="theorem"
+                )
+            ]
+        )
+        
+        complex_repo = Repository(
+            url="https://github.com/test/complex-repo",
+            name="Complex Test Repo",
+            commit="complex123",
+            lean_version="4.0.0",
+            lean_dojo_version="1.0.0",
+            metadata={
+                "date_processed": datetime.datetime.now(),
+                "extra_info": {"key1": "value1", "key2": 2}
+            },
+            proven_theorems=[theorem1],
+            sorry_theorems_unproved=[theorem2],
+            premise_files=[premise_file],
+            files_traced=[Path("test1.lean"), Path("test2.lean")],
+            pr_url="https://github.com/test/complex-repo/pull/1"
+        )
+        
+        self.db.add_repository(complex_repo)
+        
+        json_file = "complex_test_database.json"
+        self.db.to_json(json_file)
+        
+        loaded_db = DynamicDatabase.from_json(json_file)
+        
+        self.assertEqual(len(loaded_db.repositories), len(self.db.repositories))
+        loaded_repo = loaded_db.get_repository("https://github.com/test/complex-repo", "complex123")
+        self.assertIsNotNone(loaded_repo)
+        
+        self.assertEqual(loaded_repo.name, "Complex Test Repo")
+        self.assertEqual(loaded_repo.lean_version, "4.0.0")
+        self.assertEqual(loaded_repo.pr_url, "https://github.com/test/complex-repo/pull/1")
+        
+        # Check theorems
+        self.assertEqual(len(loaded_repo.proven_theorems), 1)
+        self.assertEqual(len(loaded_repo.sorry_theorems_unproved), 1)
+        
+        loaded_theorem1 = loaded_repo.proven_theorems[0]
+        self.assertEqual(loaded_theorem1.full_name, "theorem1")
+        self.assertEqual(loaded_theorem1.theorem_statement, "theorem1 : 2 + 2 = 4")
+        self.assertEqual(len(loaded_theorem1.traced_tactics), 1)
+        self.assertEqual(loaded_theorem1.difficulty_rating, 0.7)
+        
+        loaded_theorem2 = loaded_repo.sorry_theorems_unproved[0]
+        self.assertEqual(loaded_theorem2.full_name, "theorem2")
+        self.assertIsNone(loaded_theorem2.difficulty_rating)
+        
+        # Check premise files
+        self.assertEqual(len(loaded_repo.premise_files), 1)
+        loaded_premise_file = loaded_repo.premise_files[0]
+        self.assertEqual(str(loaded_premise_file.path), "premise.lean")
+        self.assertEqual(len(loaded_premise_file.premises), 1)
+        
+        # Check metadata
+        self.assertIn("extra_info", loaded_repo.metadata)
+        self.assertEqual(loaded_repo.metadata["extra_info"]["key1"], "value1")
+        self.assertEqual(loaded_repo.metadata["extra_info"]["key2"], 2)
+        
+        # Check files traced
+        self.assertEqual(len(loaded_repo.files_traced), 2)
+        self.assertIn(Path("test1.lean"), loaded_repo.files_traced)
+        self.assertIn(Path("test2.lean"), loaded_repo.files_traced)
 
     def test_is_same_theorem(self):
         theorem1 = Theorem(
@@ -1222,6 +1337,50 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         }
         repo = Repository.from_dict(data)
         return repo
+    
+    def test_multiple_json_serialization_deserialization(self):
+        json_file1 = "test_multiple_1.json"
+        json_file2 = "test_multiple_2.json"
+        
+        # First serialization
+        self.db.to_json(json_file1)
+        
+        # Deserialize and modify
+        loaded_db1 = DynamicDatabase.from_json(json_file1)
+        new_repo = Repository(
+            url="https://github.com/test/new-repo",
+            name="New Test Repo",
+            commit="newcommit123",
+            lean_version="4.0.0",
+            lean_dojo_version="1.0.0",
+            metadata={"date_processed": datetime.datetime.now()}
+        )
+        loaded_db1.add_repository(new_repo)
+        
+        # Second serialization
+        loaded_db1.to_json(json_file2)
+        
+        # Final deserialization
+        loaded_db2 = DynamicDatabase.from_json(json_file2)
+        
+        self.assertEqual(len(loaded_db2.repositories), 3)  # PFR, new-version-test, and new-repo
+        self.assertEqual(loaded_db2.repositories[2].url, "https://github.com/test/new-repo")
+        self.assertEqual(loaded_db2.repositories[2].commit, "newcommit123")
+        
+        # Check that the original repositories are still intact
+        self.assertEqual(loaded_db2.repositories[0].url, "https://github.com/teorth/pfr")
+        self.assertEqual(loaded_db2.repositories[1].url, "https://github.com/Adarsh321123/new-version-test")
+        
+        # Verify that the content of the repositories is preserved
+        pfr_repo = loaded_db2.get_repository("https://github.com/teorth/pfr", "6a5082ee465f9e44cea479c7b741b3163162bb7e")
+        self.assertIsNotNone(pfr_repo)
+        self.assertGreater(len(pfr_repo.proven_theorems), 0)
+        self.assertGreater(len(pfr_repo.sorry_theorems_unproved), 0)
+        
+        new_version_repo = loaded_db2.get_repository("https://github.com/Adarsh321123/new-version-test", "f465306be03ced999caa157a85558a6c41b3e3f5")
+        self.assertIsNotNone(new_version_repo)
+        self.assertGreater(len(new_version_repo.proven_theorems), 0)
+        self.assertGreater(len(new_version_repo.sorry_theorems_unproved), 0)
 
     def test_repository_creation(self):
         self.assertIsNotNone(self.sample_repo_PFR)
@@ -1842,6 +2001,76 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(len(updated_repo.sorry_theorems_proved), 1)
         self.assertEqual(len(updated_repo.sorry_theorems_unproved), 0)
         self.assertEqual(updated_repo.sorry_theorems_proved[0].traced_tactics, traced_tactics)
+
+    def test_json_serialization_with_proved_theorems(self):
+        results = [
+            SearchResult(
+                theorem=self.repo.sorry_theorems_unproved[0],
+                status=Status.PROVED,
+                proof=["rw [add_comm]", "refl"],
+                actor_time=1.0,
+                environment_time=2.0,
+                total_time=3.0,
+                num_total_nodes=10,
+                num_searched_nodes=5
+            )
+        ]
+        result = results[0]
+        
+        traced_tactics = [
+            AnnotatedTactic(
+                tactic=tactic,
+                annotated_tactic=(tactic, []),
+                state_before="",
+                state_after=""
+            ) for tactic in result.proof
+        ]
+        self.repo.sorry_theorems_unproved[0].traced_tactics = traced_tactics
+        self.repo.change_sorry_to_proven(self.repo.sorry_theorems_unproved[0])
+        
+        # Serialize to JSON
+        json_file = "proved_theorems_test.json"
+        self.db.to_json(json_file)
+        
+        # Deserialize from JSON
+        loaded_db = DynamicDatabase.from_json(json_file)
+        
+        # Verify the loaded data
+        loaded_repo = loaded_db.get_repository(self.repo.url, self.repo.commit)
+        self.assertIsNotNone(loaded_repo)
+        
+        self.assertEqual(len(loaded_repo.sorry_theorems_unproved), 0)
+        self.assertEqual(len(loaded_repo.sorry_theorems_proved), 1)
+        
+        proved_theorem = loaded_repo.sorry_theorems_proved[0]
+        self.assertEqual(proved_theorem.full_name, "test_theorem")
+        self.assertEqual(len(proved_theorem.traced_tactics), 2)
+        self.assertEqual(proved_theorem.traced_tactics[0].tactic, "rw [add_comm]")
+        self.assertEqual(proved_theorem.traced_tactics[1].tactic, "refl")
+        
+        # Test updating the loaded database
+        new_theorem = Theorem(
+            full_name="new_theorem",
+            file_path=Path("src/new_test.lean"),
+            start=Pos(1, 1),
+            end=Pos(5, 1),
+            url="https://github.com/test/repo",
+            commit="abcdef1234567890",
+            theorem_statement="theorem new_theorem : 3 + 3 = 6 := sorry"
+        )
+        loaded_repo.sorry_theorems_unproved.append(new_theorem)
+        
+        # Serialize the updated database
+        updated_json_file = "updated_proved_theorems_test.json"
+        loaded_db.to_json(updated_json_file)
+        
+        # Deserialize and verify the update
+        final_db = DynamicDatabase.from_json(updated_json_file)
+        final_repo = final_db.get_repository(self.repo.url, self.repo.commit)
+        
+        self.assertEqual(len(final_repo.sorry_theorems_proved), 1)
+        self.assertEqual(len(final_repo.sorry_theorems_unproved), 1)
+        self.assertEqual(final_repo.sorry_theorems_unproved[0].full_name, "new_theorem")
 
     def test_update_theorem_with_proof_and_json(self):
         json_file = "temp_file.json"
