@@ -15,6 +15,7 @@ from prover.proof_search import Status, SearchResult
 from main import prove_sorry_theorems, retrieve_proof
 from dynamic_database import parse_pos
 from typing import Tuple
+import os
 
 RAID_DIR = "/raid/adarsh"
 DATA_DIR = "datasets_new"
@@ -2381,6 +2382,67 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(len(proved_theorem.traced_tactics), 2)
         self.assertEqual(proved_theorem.traced_tactics[0].tactic, "rw [add_comm]")
         self.assertEqual(proved_theorem.traced_tactics[1].tactic, "refl")
+
+class TestDynamicDatabaseEmpty(unittest.TestCase):
+    def setUp(self):
+        self.empty_json_path = "empty_database.json"
+        self.db = DynamicDatabase()
+
+    def tearDown(self):
+        if os.path.exists(self.empty_json_path):
+            os.remove(self.empty_json_path)
+
+    def test_from_json_empty_file(self):
+        with open(self.empty_json_path, 'w') as f:
+            json.dump({"repositories": []}, f)
+        
+        db = DynamicDatabase.from_json(self.empty_json_path)
+        self.assertEqual(len(db.repositories), 0)
+
+    def test_to_json_empty_database(self):
+        self.db.to_json(self.empty_json_path)
+        
+        self.assertTrue(os.path.exists(self.empty_json_path))
+        with open(self.empty_json_path, 'r') as f:
+            content = json.load(f)
+            self.assertEqual(content, {"repositories": []})
+
+    def test_from_json_invalid_empty_object(self):
+        with open(self.empty_json_path, 'w') as f:
+            json.dump({}, f)
+        
+        with self.assertRaises(ValueError):
+            DynamicDatabase.from_json(self.empty_json_path)
+
+    def test_from_json_nonexistent_file(self):
+        if os.path.exists(self.empty_json_path):
+            os.remove(self.empty_json_path)
+        
+        with self.assertRaises(FileNotFoundError):
+            DynamicDatabase.from_json(self.empty_json_path)
+
+    def test_add_repository_to_empty_database(self):
+        with open(self.empty_json_path, 'w') as f:
+            json.dump({"repositories": []}, f)
+        
+        db = DynamicDatabase.from_json(self.empty_json_path)
+
+        repo_data = {
+            "url": "https://github.com/test/repo",
+            "name": "Test Repo",
+            "commit": "abc123",
+            "lean_version": "3.50.3",
+            "lean_dojo_version": "1.8.4",
+            "metadata": {"date_processed": datetime.datetime.now().isoformat()}
+        }
+        repo = Repository.from_dict(repo_data)
+        db.add_repository(repo)
+        
+        db.to_json(self.empty_json_path)
+        
+        loaded_db = DynamicDatabase.from_json(self.empty_json_path)
+        self.assertEqual(len(loaded_db.repositories), 1)
+        self.assertEqual(loaded_db.repositories[0].url, "https://github.com/test/repo")
 
 def main():
     unittest.main()
