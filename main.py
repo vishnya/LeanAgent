@@ -67,17 +67,13 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 repo_dir = "/raid/adarsh/repos_new" # TODO: for release change these back to <DIR>
 RAID_DIR = "/raid/adarsh"
-DATA_DIR = "datasets_new"
-MERGED_DATA_DIR = "datasets_merged"
-CHECKPOINT_DIR = "checkpoints_new"
-FISHER_DIR = "fisher_new"
+DATA_DIR = "datasets_PT_full_merge_each_time"
+MERGED_DATA_DIR = "datasets_merged_PT_full_merge_each_time"
+CHECKPOINT_DIR = "checkpoints_PT_full_merge_each_time"
+FISHER_DIR = "fisher_PT_full_merge_each_time"
+EVAL_RESULTS_FILE_PATH = "/home/adarsh/ReProver/total_evaluation_results_PT_full_merge_each_time.txt"
 # TODO: do we still need this?
 load_dotenv()
-
-global_results = {
-    "total_repositories": 0,
-    "repositories": {}
-}
 
 # Feel free to remove any repos from this list if you would like to test on them
 known_repositories = [
@@ -91,56 +87,56 @@ known_repositories = [
     "leanprover/lake",
     "openai/lean-gym",
     # already tested:
-    "lecopivo/SciLean",
-    "avigad/mathematics_in_lean_source",
-    "teorth/pfr",
-    "dwrensha/compfiles",
-    "digama0/lean4lean",
-    "AlexKontorovich/PrimeNumberTheoremAnd",
+    # "lecopivo/SciLean",
+    # "avigad/mathematics_in_lean_source",
+    # "teorth/pfr",
+    # "dwrensha/compfiles",
+    # "digama0/lean4lean",
+    # "AlexKontorovich/PrimeNumberTheoremAnd",
     # newly tested:
-    "leanprover-community/lean4-metaprogramming-book",
-    "ImperialCollegeLondon/FLT",
-    "kmill/lean4-raytracer",
-    "argumentcomputer/yatima",
-    "ImperialCollegeLondon/formalising-mathematics-2024",
-    "leanprover-community/ProofWidgets4",
-    "leanprover/verso",
-    "leanprover-community/NNG4",
-    "ufmg-smite/lean-smt",
-    "google-deepmind/debate",
-    "teorth/symmetric_project",
-    "cmu-l3/llmlean",
-    "PatrickMassot/GlimpseOfLean",
-    "avigad/lamr",
-    "leanprover-community/quote4",
-    "yuma-mizuno/lean-math-workshop",
-    "leanprover-community/iris-lean",
-    "aripiprazole/rinha",
-    "loganrjmurphy/LeanEuclid",
-    "leanprover/lean4-cli",
-    "leanprover/LeanInk",
-    "leanprover-community/lean-auto",
-    "leanprover-community/repl",
-    "leanprover/doc-gen4",
-    "leanprover-community/con-nf",
-    "FormalizedFormalLogic/Foundation",
-    "leanprover/SampCert",
-    "nomeata/loogle",
-    "risc0/risc0-lean4",
-    "siddhartha-gadgil/Saturn",
-    "leanprover-community/flt-regular",
-    "eric-wieser/lean-matrix-cookbook",
-    "PatrickMassot/verbose-lean4",
-    "tydeu/lean4-alloy",
-    "opencompl/lean-mlir-old",
-    "leanprover/leansat",
-    "BoltonBailey/formal-snarks-project",
-    "dwrensha/lean4-maze",
-    "leanprover/LNSym",
-    "leanprover-community/mathport",
-    "forked-from-1kasper/ground_zero",
-    "mo271/formal_book",
-    "rami3l/plfl",
+    # "leanprover-community/lean4-metaprogramming-book",
+    # "ImperialCollegeLondon/FLT",
+    # "kmill/lean4-raytracer",
+    # "argumentcomputer/yatima",
+    # "ImperialCollegeLondon/formalising-mathematics-2024",
+    # "leanprover-community/ProofWidgets4",
+    # "leanprover/verso",
+    # "leanprover-community/NNG4",
+    # "ufmg-smite/lean-smt",
+    # "google-deepmind/debate",
+    # "teorth/symmetric_project",
+    # "cmu-l3/llmlean",
+    # "PatrickMassot/GlimpseOfLean",
+    # "avigad/lamr",
+    # "leanprover-community/quote4",
+    # "yuma-mizuno/lean-math-workshop",
+    # "leanprover-community/iris-lean",
+    # "aripiprazole/rinha",
+    # "loganrjmurphy/LeanEuclid",
+    # "leanprover/lean4-cli",
+    # "leanprover/LeanInk",
+    # "leanprover-community/lean-auto",
+    # "leanprover-community/repl",
+    # "leanprover/doc-gen4",
+    # "leanprover-community/con-nf",
+    # "FormalizedFormalLogic/Foundation",
+    # "leanprover/SampCert",
+    # "nomeata/loogle",
+    # "risc0/risc0-lean4",
+    # "siddhartha-gadgil/Saturn",
+    # "leanprover-community/flt-regular",
+    # "eric-wieser/lean-matrix-cookbook",
+    # "PatrickMassot/verbose-lean4",
+    # "tydeu/lean4-alloy",
+    # "opencompl/lean-mlir-old",
+    # "leanprover/leansat",
+    # "BoltonBailey/formal-snarks-project",
+    # "dwrensha/lean4-maze",
+    # "leanprover/LNSym",
+    # "leanprover-community/mathport",
+    # "forked-from-1kasper/ground_zero",
+    # "mo271/formal_book",
+    # "rami3l/plfl",
 ]
 
 repos = []  # stores the names of all the repos
@@ -638,7 +634,6 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
         max_epochs=current_epoch + epochs_per_repo,
         log_every_n_steps=1,
         num_sanity_val_steps=0,
-        default_root_dir=os.path.join("lightning_logs_main")  # TODO: can remove later
     )
 
     logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
@@ -649,10 +644,8 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
 
     ### TESTING FOR AVERAGE RECALL
 
-    # TODO: uncomment later
     # TODO: don't load corpus and reindex for every repo we use for average recall
-    # 
-    # # Load the best model checkpoint
+    # Load the best model checkpoint
     best_model_path = checkpoint_callback.best_model_path
     if best_model_path:
         best_model = PremiseRetriever.load(best_model_path, device, freeze=False, config=config)
@@ -692,8 +685,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
 
     # Save average accuracies to a file
-    file_path = "/home/adarsh/ReProver/total_evaluation_results_full_PT.txt"
-    with open(file_path, "a") as f:
+    with open(EVAL_RESULTS_FILE_PATH, "a") as f:
         f.write("\n")
         f.write("\n")
         f.write("\n")
@@ -720,14 +712,6 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     # TODO: add anything else from yaml conf if needed
 
     return model
-
-def update_and_output_results(repo_url: str, repository_results, lambda_value: float):
-    global global_results
-    global_results["repositories"][repo_url] = repository_results
-    results_file = f"results_lambda_{lambda_value}_PT_formal_book_partial.json"
-    with open(results_file, 'w', encoding='utf-8') as f:
-        json.dump(global_results, f, indent=4, ensure_ascii=False)
-    logger.info(f"Partial results saved to {results_file}")
 
 def theorem_identifier(theorem: Theorem) -> Tuple[str, str, Tuple[int, int], Tuple[int, int]]:
     return (theorem.full_name, str(theorem.file_path), tuple(theorem.start), tuple(theorem.end))
@@ -802,7 +786,7 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, repos_t
             
     logger.info("Finished attempting to prove sorry theorems")
 
-def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_per_repo):
+def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_per_repo):
     # TODO: update comments throughout
     """
     This method does the following:
@@ -863,7 +847,7 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_p
     dir_name = repo.url.split("/")[-1] + "_" + sha
     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name
     logger.info(f"Generating benchmark at {dst_dir}")
-    traced_repo, num_premises, num_files_traced = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
+    traced_repo, _, _ = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
     if not traced_repo:
         logger.info(f"Failed to trace {url}")
         return None
@@ -892,11 +876,10 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_p
         "files_traced": files_traced,
         "pr_url": pr_url
     }
-    json_file = RAID_DIR + "/" + DATA_DIR + "/" + "dynamic_database.json"
-    db = DynamicDatabase.from_json(json_file)
+    db = DynamicDatabase.from_json(dynamic_database_json_path)
     repo = Repository.from_dict(data)
     db.add_repository(repo)
-    db.to_json(json_file)
+    db.to_json(dynamic_database_json_path)
 
     # Generate a new dataset from the dynamic database.
     # The user can choose to generate a dataset from the entire dynamic database or a subset of it.
@@ -904,16 +887,19 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_p
     dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_with_new_{dir_name}"
     db.generate_merged_dataset(dst_dir)
 
-    # model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
-    try:
-        model_checkpoint_path = find_latest_checkpoint()
-        logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
-    except FileNotFoundError as e:
-        logger.error(str(e))
-        return None
-    
-    # Train the model on the new dataset that we generated from the dynamic database.
-    train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, epochs_per_repo)
+    model_checkpoint_path = None
+    if run_progressive_training:
+        try:
+            model_checkpoint_path = find_latest_checkpoint()
+            logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
+        except FileNotFoundError as e:
+            logger.error(str(e))
+            return None
+        
+        # Train the model on the new dataset that we generated from the dynamic database.
+        train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, epochs_per_repo)
+    else:
+        model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
 
     # Set up the prover
     corpus_path = dst_dir + "/corpus.jsonl"
@@ -934,12 +920,15 @@ def retrieve_proof(repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_p
         num_gpus=num_gpus,
         timeout=timeout,
         num_sampled_tactics=num_sampled_tactics,
+        raid_dir=RAID_DIR,
+        checkpoint_dir=CHECKPOINT_DIR,
         debug=debug,
+        run_progressive_training=run_progressive_training
     )
 
     # Prove sorry theorems
     prove_sorry_theorems(db, prover)
-    db.to_json(json_file)
+    db.to_json(dynamic_database_json_path)
 
     logger.info("Finished searching for proofs of sorry theorems")
 
@@ -977,78 +966,60 @@ def replace_sorry_with_proof(proofs):
 
     logger.info("Finished replacing sorries with proofs!")
 
+# TODO: incorporate latest changes from ReProver repo
 def main():
     """The main function that drives the bot."""
     try:
-        # TODO: incorporate latest changes from ReProver repo
-        # TODO: for PR, we need to make fork and then push to there
-        # lambdas = [0.01, 0.1, 1, 10, 100, 1000, 5000, 10000]
-        # lambdas = [0.01, 0.1, 1, 10, 100, 10000]
-        # lambdas = [1, 10, 100, 10000]
-        lambdas = [0.0]
-        # lambdas = [0.01]
-        # lambdas = [0.0]
+        # Configure these parameters!
+        current_epoch = 0
+        epochs_per_repo = 1
+        run_progressive_training = True
+        num_repos = 15
+        dynamic_database_json_path = RAID_DIR + "/" + DATA_DIR + "/" + "dynamic_database.json"
+        
+        lambdas = None
+        if run_progressive_training:
+            lambdas = [0.1]
+        else:
+            lambdas = [0.0]
 
         logger.info("Configuring LeanDojo...")
         generate_benchmark_lean4.configure_leandojo()
         logger.info("LeanDojo configured")
 
-        clone_url = "https://github.com/teorth/pfr.git"
-        repo_name, sha = clone_repo(clone_url)
-        url = clone_url.replace('.git', '')
-        lean_git_repo = LeanGitRepo(url, sha)
-        lean_git_repos.append(lean_git_repo)
-        repos.append("teorth/pfr")
-
-        current_epoch = 2 # TODO: change
-        epochs_per_repo = 1
-
-        # search_github_repositories("Lean", 30)
-        num_repos = len(repos)
-        global_results["total_repositories"] = num_repos
+        search_github_repositories("Lean", num_repos)
         print(f"Found {num_repos} repositories")
 
         for i in range(num_repos):
             for lambda_value in lambdas:
-                print(f"Training and testing with lambda = {lambda_value}")
+                print(f"Using lambda = {lambda_value}")
                 repo = repos[i]
                 repo_no_dir = repo
                 repo = repo_dir + "/" + repo
                 lean_git_repo = lean_git_repos[i]
                 print(f"Processing {repo}")
-                proofs = retrieve_proof(lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo)
+                proofs = retrieve_proof(run_progressive_training, dynamic_database_json_path, lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo)
                 current_epoch += epochs_per_repo
                 if proofs is None:
                     logger.info("Skipping repository due to configuration or error.")
                     continue
+                # Uncomment if you would like to contribute back to the repos!
                 # else:
                 #     base_branch = get_default_branch(repo_no_dir)
                 #     subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
                 #     subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
                 #     subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
                 #     create_or_switch_branch(repo, TMP_BRANCH, base_branch)
-                    # Uncomment if you would like to contribute back to the repos!
-                    # replace_sorry_with_proof(proofs)
-                    # committed = commit_changes(repo, COMMIT_MESSAGE)
-                    # if committed:
-                    #     push_changes(repo, TMP_BRANCH)
-                    #     url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
-                    #     global_results["repositories"][lean_git_repo.url]["PR"] = url
-                    # shutil.rmtree(repo)
-
-                results_file = f"results_lambda_{lambda_value}_PT_formal_book.json"
-                with open(results_file, 'w', encoding='utf-8') as f:
-                    json.dump(global_results, f, indent=4, ensure_ascii=False)
-                    logger.info(f"Final results saved to {results_file}")
+                #     replace_sorry_with_proof(proofs)
+                #     committed = commit_changes(repo, COMMIT_MESSAGE)
+                #     if committed:
+                #         push_changes(repo, TMP_BRANCH)
+                #         url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
+                #         # TODO: add the PR URL to the database
+                #     shutil.rmtree(repo)
     except Exception as e:
         logger.info(f"An error occurred: {e}", file=sys.stderr)
         traceback.print_exc()
-    finally:
-        # Ensure final results are saved even if an exception occurs
-        results_file = f"results_lambda_{lambda_value}_PT_formal_book.json"
-        with open(results_file, 'w', encoding='utf-8') as f:
-            json.dump(global_results, f, indent=4, ensure_ascii=False)
-        logger.info(f"Exception occurred. Final results saved to {results_file}")
 
 if __name__ == "__main__":
     main()
