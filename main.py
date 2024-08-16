@@ -866,10 +866,8 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
         "commit": repo.commit,
         "lean_version": v,
         "lean_dojo_version": lean_dojo.__version__,
-        "date_processed": datetime.datetime.now(),
-        "metadata": { # TODO: update
-            "key": "value",
-            "unicode": "ユニコード ✨"
+        "metadata": {
+            "date_processed": datetime.datetime.now(),
         },
         "theorems_folder": theorems_folder,
         "premise_files_corpus": premise_files_corpus,
