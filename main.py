@@ -981,6 +981,7 @@ def main():
         if run_progressive_training:
             lambdas = [0.1]
         else:
+            # Run retrieval baseline
             lambdas = [0.0]
 
         logger.info("Configuring LeanDojo...")
