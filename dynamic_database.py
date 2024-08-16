@@ -318,7 +318,8 @@ class Repository:
     
     def to_dict(self) -> Dict:
         metadata_copy = self.metadata.copy()
-        metadata_copy["date_processed"] = metadata_copy["date_processed"].isoformat()
+        if isinstance(metadata_copy["date_processed"], datetime.datetime):
+            metadata_copy["date_processed"] = metadata_copy["date_processed"].isoformat()
         return {
             "url": self.url,
             "name": self.name,
