@@ -243,9 +243,6 @@ class RetrievalDataModule(pl.LightningDataModule):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.corpus = Corpus(corpus_path)
 
-        metadata = json.load(open(os.path.join(data_path, "../metadata.json")))
-        repo = LeanGitRepo(**metadata["from_repo"])
-
     def prepare_data(self) -> None:
         pass
 
