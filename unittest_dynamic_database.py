@@ -229,6 +229,34 @@ class TestDynamicDatabaseCore(unittest.TestCase):
         self.assertEqual(premise_dict["start"], "(1, 1)")
         self.assertEqual(premise_dict["end"], "(2, 1)")
         self.assertEqual(premise_dict["kind"], "theorem")
+    
+    def test_empty_string_and_none_json_serialization(self):
+        empty_theorem = Theorem(
+            full_name="",
+            file_path=Path(""),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123",
+            theorem_statement=None,
+            difficulty_rating=None
+        )
+        self.repo.proven_theorems.append(empty_theorem)
+        self.db.add_repository(self.repo)
+        
+        json_file = "empty_none_test.json"
+        self.db.to_json(json_file)
+        
+        loaded_db = DynamicDatabase.from_json(json_file)
+        loaded_repo = loaded_db.get_repository(self.repo.url, self.repo.commit)
+        loaded_theorem = loaded_repo.proven_theorems[-1]
+        
+        self.assertEqual(loaded_theorem.full_name, "")
+        self.assertEqual(str(loaded_theorem.file_path), ".")
+        self.assertEqual(loaded_theorem.url, "https://github.com/test/repo")
+        self.assertEqual(loaded_theorem.commit, "abc123")
+        self.assertIsNone(loaded_theorem.theorem_statement)
+        self.assertIsNone(loaded_theorem.difficulty_rating)
 
     def test_is_same_theorem(self):
         theorem1 = Theorem(
