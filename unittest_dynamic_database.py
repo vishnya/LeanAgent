@@ -2262,6 +2262,113 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(proved_theorem.traced_tactics[0].tactic, "rw [add_comm]")
         self.assertEqual(proved_theorem.traced_tactics[1].tactic, "refl")
 
+    def test_prove_sorry_theorems_with_duplicates(self):
+        # Create two repositories with the same theorem but different commits
+        repo1 = Repository(
+            url="https://github.com/test/repo",
+            name="test_repo_1",
+            commit="commit1",
+            lean_version="4.0.0",
+            lean_dojo_version="1.0.0",
+            metadata={"date_processed": datetime.datetime(2023, 1, 1)},
+            sorry_theorems_unproved=[
+                Theorem(
+                    full_name="duplicate_theorem",
+                    file_path=Path("src/test.lean"),
+                    start=Pos(1, 1),
+                    end=Pos(10, 1),
+                    url="https://github.com/test/repo",
+                    commit="commit1",
+                    theorem_statement="theorem duplicate_theorem : 2 + 2 = 4 := sorry"
+                )
+            ]
+        )
+
+        repo2 = Repository(
+            url="https://github.com/test/repo",
+            name="test_repo_2",
+            commit="commit2",
+            lean_version="4.0.0",
+            lean_dojo_version="1.0.0",
+            metadata={"date_processed": datetime.datetime(2023, 1, 2)},
+            sorry_theorems_unproved=[
+                Theorem(
+                    full_name="duplicate_theorem",
+                    file_path=Path("src/test.lean"),
+                    start=Pos(1, 1),
+                    end=Pos(10, 1),
+                    url="https://github.com/test/repo",
+                    commit="commit2",
+                    theorem_statement="theorem duplicate_theorem : 2 + 2 = 4 := sorry"
+                )
+            ]
+        )
+
+        # Create a test database with both repositories
+        test_db = DynamicDatabase()
+        test_db.add_repository(repo1)
+        test_db.add_repository(repo2)
+
+        json_file = "duplicate_theorems_test.json"
+        test_db.to_json(json_file)
+
+        loaded_db = DynamicDatabase.from_json(json_file)
+
+        self.assertEqual(len(loaded_db.repositories), 2)
+        loaded_repo1 = loaded_db.get_repository(repo1.url, repo1.commit)
+        loaded_repo2 = loaded_db.get_repository(repo2.url, repo2.commit)
+        self.assertIsNotNone(loaded_repo1)
+        self.assertIsNotNone(loaded_repo2)
+
+        results = [
+            SearchResult(
+                theorem=loaded_repo2.sorry_theorems_unproved[0],
+                status=Status.PROVED,
+                proof=["rw [add_comm]", "refl"],
+                actor_time=1.0,
+                environment_time=2.0,
+                total_time=3.0,
+                num_total_nodes=10,
+                num_searched_nodes=5
+            )
+        ]
+
+        # Apply the proof to the more recent theorem
+        result = results[0]
+        traced_tactics = [
+            AnnotatedTactic(
+                tactic=tactic,
+                annotated_tactic=(tactic, []),
+                state_before="",
+                state_after=""
+            ) for tactic in result.proof
+        ]
+        loaded_repo2.sorry_theorems_unproved[0].traced_tactics = traced_tactics
+        loaded_repo2.change_sorry_to_proven(loaded_repo2.sorry_theorems_unproved[0])
+
+
+        loaded_db.update_repository(loaded_repo2)
+
+        updated_json_file = "updated_duplicate_theorems_test.json"
+        loaded_db.to_json(updated_json_file)
+        
+        final_db = DynamicDatabase.from_json(updated_json_file)
+        final_repo1 = final_db.get_repository(repo1.url, repo1.commit)
+        final_repo2 = final_db.get_repository(repo2.url, repo2.commit)
+
+        # Verify that only the more recent theorem was proved
+        self.assertEqual(len(final_repo1.sorry_theorems_unproved), 1)
+        self.assertEqual(len(final_repo1.sorry_theorems_proved), 0)
+        self.assertEqual(len(final_repo2.sorry_theorems_unproved), 0)
+        self.assertEqual(len(final_repo2.sorry_theorems_proved), 1)
+
+        # Verify the proof of the more recent theorem
+        proved_theorem = final_repo2.sorry_theorems_proved[0]
+        self.assertEqual(proved_theorem.full_name, "duplicate_theorem")
+        self.assertEqual(len(proved_theorem.traced_tactics), 2)
+        self.assertEqual(proved_theorem.traced_tactics[0].tactic, "rw [add_comm]")
+        self.assertEqual(proved_theorem.traced_tactics[1].tactic, "refl")
+
 def main():
     unittest.main()
 

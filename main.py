@@ -729,10 +729,19 @@ def update_and_output_results(repo_url: str, repository_results, lambda_value: f
         json.dump(global_results, f, indent=4, ensure_ascii=False)
     logger.info(f"Partial results saved to {results_file}")
 
+def theorem_identifier(theorem: Theorem) -> Tuple[str, str, Tuple[int, int], Tuple[int, int]]:
+    return (theorem.full_name, str(theorem.file_path), tuple(theorem.start), tuple(theorem.end))
+
 def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, repos_to_include: Optional[List[Tuple[str, str]]] = None):
     repos_to_process = db.repositories if repos_to_include is None else [
         repo for repo in db.repositories if (repo.url, repo.commit) in repos_to_include
     ]
+
+    # To avoid proving the same theorem multiple times, potentially from different versions of the
+    # same repo, we sort the repositories
+    repos_to_process.sort(key=lambda r: r.metadata['date_processed'], reverse=True)
+
+    processed_theorems: Set[Tuple[str, str, Tuple[int, int], Tuple[int, int]]] = set()
 
     for repo in repos_to_process:
         sorry_theorems = repo.sorry_theorems_unproved
@@ -746,6 +755,13 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, repos_t
             if theorem.url != repo_url or theorem.commit != repo_commit:
                 continue
 
+            theorem_id = theorem_identifier(theorem)
+            if theorem_id in processed_theorems:
+                logger.info(f"Skipping already processed theorem: {theorem.full_name}")
+                continue
+
+            processed_theorems.add(theorem_id)
+            
             logger.info(f"Searching for proof for {theorem.full_name}")
             logger.info(f"Position: {theorem.start}")
 
