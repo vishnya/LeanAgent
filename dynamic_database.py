@@ -601,6 +601,7 @@ class DynamicDatabase:
             data = json.load(f)
         return cls.from_dict(data)
 
+    # TODO: do we need this?
     def update_json(self, file_path: str) -> None:
         """Update an existing JSON file with the current database state."""
         try:
