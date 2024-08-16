@@ -1502,6 +1502,26 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         dst_dir = Path(RAID_DIR) / DATA_DIR / f"{dir_name_PFR}_{dir_name_new_version}_generated"
         self.db.generate_merged_dataset(dst_dir)
 
+        # Count sorry theorems in each repository
+        repo_sorry_counts = {
+            self.sample_repo_PFR.url: len(self.sample_repo_PFR.sorry_theorems_unproved),
+            self.sample_repo_new_version.url: len(self.sample_repo_new_version.sorry_theorems_unproved)
+        }
+        total_sorry_theorems = sum(repo_sorry_counts.values())
+
+        # Count sorry theorems in the generated dataset
+        dataset_sorry_count = 0
+        for split in ['train', 'val', 'test']:
+            with open(dst_dir / "random" / f"{split}.json", 'r') as f:
+                data = json.load(f)
+                for theorem in data:
+                    if any(tactic.get('tactic') == 'sorry' for tactic in theorem.get('traced_tactics', [])):
+                        dataset_sorry_count += 1
+
+        self.assertEqual(dataset_sorry_count, total_sorry_theorems, 
+                            f"Number of sorry theorems in dataset ({dataset_sorry_count}) does not match "
+                            f"the sum from individual repositories ({total_sorry_theorems})")
+
         with open(dst_dir / "random" / "train.json", 'r') as f:
             train_data = json.load(f)
             self.assertIsInstance(train_data, list)
@@ -1538,6 +1558,11 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
             self.assertIn("num_premise_files", metadata)
             self.assertIn("num_premises", metadata)
             self.assertIn("num_files_traced", metadata)
+
+            # Check if the total number of sorry theorems in metadata matches our count
+            self.assertEqual(metadata["num_sorry_theorems"], total_sorry_theorems,
+                                f"Number of sorry theorems in metadata ({metadata['num_sorry_theorems']}) "
+                                f"does not match the sum from individual repositories ({total_sorry_theorems})")
 
             for repo in metadata["repositories"]:
                 self.assertIn("url", repo)
