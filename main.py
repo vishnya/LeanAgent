@@ -889,6 +889,8 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
     dir_name = repo.url.split("/")[-1] + "_" + sha
     dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_with_new_{dir_name}"
     db.generate_merged_dataset(dst_dir)
+    # TODO: reduce repition later with all path
+    dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
 
     model_checkpoint_path = None
     if run_progressive_training:
