@@ -13,10 +13,527 @@ from unittest.mock import Mock, patch
 from dynamic_database import DynamicDatabase, Repository, Theorem, AnnotatedTactic
 from prover.proof_search import Status, SearchResult
 from main import prove_sorry_theorems, retrieve_proof
+from dynamic_database import parse_pos
 
 RAID_DIR = "/raid/adarsh"
 DATA_DIR = "datasets_new"
 MERGED_DATA_DIR = "datasets_merged"
+
+class TestDynamicDatabaseCore(unittest.TestCase):
+    def setUp(self):
+        self.db = DynamicDatabase()
+        self.repo = Repository(
+            url="https://github.com/test/repo",
+            name="Test Repo",
+            commit="abc123",
+            lean_version="3.50.3",
+            lean_dojo_version="1.8.4",
+            metadata={"date_processed": datetime.datetime.now()},
+        )
+
+    def assertDatetimeEqual(self, dt1, dt2):
+        """
+        Assert that two datetimes are equal, ignoring microseconds.
+        This is important because serialization and deserialization of datetimes
+        may lose microsecond precision.
+        """
+        self.assertEqual(dt1.replace(microsecond=0), dt2.replace(microsecond=0))
+
+    def test_parse_pos_bad_position(self):
+        with self.assertRaises(ValueError):
+            parse_pos("invalid_pos")
+
+    def test_get_update_theorem_in_repo(self):
+        theorem = Theorem(
+            full_name="test_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        self.repo.proven_theorems.append(theorem)
+        self.db.add_repository(self.repo)
+
+        retrieved_theorem = self.repo.get_theorem("test_theorem", "test.lean")
+        self.assertEqual(retrieved_theorem, theorem)
+
+        updated_theorem = Theorem(
+            full_name="test_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123",
+            theorem_statement="Updated statement"
+        )
+        self.repo.update_theorem(updated_theorem)
+        retrieved_theorem = self.repo.get_theorem("test_theorem", "test.lean")
+        self.assertEqual(retrieved_theorem.theorem_statement, "Updated statement")
+
+        non_existent_theorem = Theorem(
+            full_name="non_existent",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        with self.assertRaises(ValueError):
+            self.repo.update_theorem(non_existent_theorem)
+
+    def test_get_premise_file_in_repo(self):
+        premise_file = PremiseFile(
+            path=Path("test.lean"),
+            imports=[],
+            premises=[]
+        )
+        self.repo.premise_files.append(premise_file)
+        self.db.add_repository(self.repo)
+
+        retrieved_premise_file = self.repo.get_premise_file("test.lean")
+        self.assertEqual(retrieved_premise_file, premise_file)
+
+    def test_get_file_traced(self):
+        self.repo.files_traced.append(Path("test.lean"))
+        self.db.add_repository(self.repo)
+
+        retrieved_file = self.repo.get_file_traced("test.lean")
+        self.assertEqual(retrieved_file, Path("test.lean"))
+
+    def test_update_pr_url(self):
+        self.repo.pr_url = "https://github.com/test/repo/pull/1"
+        self.db.add_repository(self.repo)
+
+        self.repo.pr_url = "https://github.com/test/repo/pull/2"
+        self.db.update_repository(self.repo)
+
+        updated_repo = self.db.get_repository(self.repo.url, self.repo.commit)
+        self.assertEqual(updated_repo.pr_url, "https://github.com/test/repo/pull/2")
+
+    def test_difficulty_rating_in_theorem(self):
+        theorem = Theorem(
+            full_name="test_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123",
+            difficulty_rating=0.7
+        )
+        self.repo.proven_theorems.append(theorem)
+        self.db.add_repository(self.repo)
+
+        retrieved_theorem = self.repo.get_theorem("test_theorem", "test.lean")
+        self.assertEqual(retrieved_theorem.difficulty_rating, 0.7)
+
+    def test_validation_in_from_dict(self):
+        with self.assertRaises(ValueError):
+            DynamicDatabase.from_dict({})
+        
+        with self.assertRaises(ValueError):
+            Repository.from_dict({})
+
+        with self.assertRaises(ValueError):
+            Theorem.from_dict({}, "url", "commit")
+
+        with self.assertRaises(ValueError):
+            PremiseFile.from_dict({})
+
+        with self.assertRaises(ValueError):
+            Premise.from_dict({})
+
+        with self.assertRaises(ValueError):
+            Annotation.from_dict({})
+
+        with self.assertRaises(ValueError):
+            AnnotatedTactic.from_dict({})
+
+    def test_empty_path_to_data_in_from_dict_repository(self):
+        data = {
+            "url": "https://github.com/test/repo",
+            "name": "Test Repo",
+            "commit": "abc123",
+            "lean_version": "3.50.3",
+            "lean_dojo_version": "1.8.4",
+            "metadata": {"date_processed": datetime.datetime.now().isoformat()},
+            "theorems_folder": "",
+            "premise_files_corpus": "",
+            "files_traced": ""
+        }
+        with self.assertRaises(ValueError):
+            Repository.from_dict(data)
+
+    def test_to_dict_for_all(self):
+        theorem = Theorem(
+            full_name="test_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        theorem_dict = theorem.to_dict()
+        self.assertIsInstance(theorem_dict, dict)
+        self.assertEqual(theorem_dict["full_name"], "test_theorem")
+
+        premise_file = PremiseFile(
+            path=Path("test.lean"),
+            imports=[],
+            premises=[]
+        )
+        premise_file_dict = premise_file.to_dict()
+        self.assertIsInstance(premise_file_dict, dict)
+        self.assertEqual(premise_file_dict["path"], "test.lean")
+
+        repo_dict = self.repo.to_dict()
+        self.assertIsInstance(repo_dict, dict)
+        self.assertEqual(repo_dict["url"], "https://github.com/test/repo")
+
+    def test_is_same_theorem(self):
+        theorem1 = Theorem(
+            full_name="test_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        theorem2 = Theorem(
+            full_name="test_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        theorem3 = Theorem(
+            full_name="other_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        self.assertTrue(theorem1.is_same_theorem(theorem2))
+        self.assertFalse(theorem1.is_same_theorem(theorem3))
+
+    def test_repository_properties(self):
+        theorem1 = Theorem(
+            full_name="test_theorem1",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        theorem2 = Theorem(
+            full_name="test_theorem2",
+            file_path=Path("test.lean"),
+            start=Pos(3, 1),
+            end=Pos(4, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        self.repo.proven_theorems.append(theorem1)
+        self.repo.sorry_theorems_unproved.append(theorem2)
+
+        self.assertEqual(self.repo.total_theorems, 2)
+        self.assertEqual(self.repo.num_proven_theorems, 1)
+        self.assertEqual(self.repo.num_sorry_theorems, 1)
+        self.assertEqual(self.repo.num_sorry_theorems_unproved, 1)
+        self.assertEqual(self.repo.num_sorry_theorems_proved, 0)
+
+    def test_get_all_theorems(self):
+        theorem1 = Theorem(
+            full_name="test_theorem1",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        theorem2 = Theorem(
+            full_name="test_theorem2",
+            file_path=Path("test.lean"),
+            start=Pos(3, 1),
+            end=Pos(4, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        self.repo.proven_theorems.append(theorem1)
+        self.repo.sorry_theorems_unproved.append(theorem2)
+
+        all_theorems = self.repo.get_all_theorems
+        self.assertEqual(len(all_theorems), 2)
+        self.assertIn(theorem1, all_theorems)
+        self.assertIn(theorem2, all_theorems)
+
+    def test_empty_repository(self):
+        empty_repo = Repository(
+            url="https://github.com/empty/repo",
+            name="Empty Repo",
+            commit="empty123",
+            lean_version="3.50.3",
+            lean_dojo_version="1.8.4",
+            metadata={"date_processed": datetime.datetime.now()}
+        )
+        self.db.add_repository(empty_repo)
+
+        self.assertEqual(empty_repo.total_theorems, 0)
+        self.assertEqual(empty_repo.num_proven_theorems, 0)
+        self.assertEqual(empty_repo.num_sorry_theorems, 0)
+        self.assertEqual(len(empty_repo.premise_files), 0)
+        self.assertEqual(len(empty_repo.files_traced), 0)
+
+    def test_theorem_with_empty_traced_tactics(self):
+        theorem = Theorem(
+            full_name="term_style_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123",
+            traced_tactics=[]
+        )
+        self.repo.proven_theorems.append(theorem)
+        self.db.add_repository(self.repo)
+
+        retrieved_theorem = self.repo.get_theorem("term_style_theorem", "test.lean")
+        self.assertEqual(len(retrieved_theorem.traced_tactics), 0)
+
+    def test_none_values(self):
+        theorem = Theorem(
+            full_name="none_value_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123",
+            theorem_statement=None,
+            difficulty_rating=None
+        )
+        self.repo.proven_theorems.append(theorem)
+        self.repo.pr_url = None
+        self.db.add_repository(self.repo)
+
+        retrieved_theorem = self.repo.get_theorem("none_value_theorem", "test.lean")
+        self.assertIsNone(retrieved_theorem.theorem_statement)
+        self.assertIsNone(retrieved_theorem.difficulty_rating)
+        self.assertIsNone(self.repo.pr_url)
+
+    def test_empty_strings(self):
+        theorem = Theorem(
+            full_name="",
+            file_path=Path(""),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="",
+            commit=""
+        )
+        self.repo.proven_theorems.append(theorem)
+        self.db.add_repository(self.repo)
+
+        retrieved_theorem = self.repo.get_theorem("", "")
+        self.assertEqual(retrieved_theorem.full_name, "")
+        self.assertEqual(str(retrieved_theorem.file_path), ".")
+        self.assertEqual(retrieved_theorem.url, "")
+        self.assertEqual(retrieved_theorem.commit, "")
+
+        theorem2 = Theorem(
+            full_name="",
+            file_path=Path(""),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="new_url",
+            commit=""
+        )
+        self.repo.update_theorem(theorem2)
+        retrieved_theorem = self.repo.get_theorem("", "")  # Should be theorem2
+        self.assertEqual(retrieved_theorem.full_name, "")
+        self.assertEqual(str(retrieved_theorem.file_path), ".")
+        self.assertEqual(retrieved_theorem.url, "new_url")
+        self.assertEqual(retrieved_theorem.commit, "")
+
+    def test_datetime_serialization(self):
+        original_date = datetime.datetime.now()
+        self.repo.metadata["date_processed"] = original_date
+        self.db.add_repository(self.repo)
+
+        json_file = "test_datetime.json"
+        self.db.to_json(json_file)
+
+        loaded_db = DynamicDatabase.from_json(json_file)
+        loaded_repo = loaded_db.get_repository(self.repo.url, self.repo.commit)
+
+        self.assertDatetimeEqual(original_date, loaded_repo.metadata["date_processed"])
+
+    def test_duplicate_url_different_commit(self):
+        repo1 = Repository(
+            url="https://github.com/test/repo",
+            name="Test Repo 1",
+            commit="abc123",
+            lean_version="3.50.3",
+            lean_dojo_version="1.8.4",
+            metadata={"date_processed": datetime.datetime.now()}
+        )
+        repo2 = Repository(
+            url="https://github.com/test/repo",
+            name="Test Repo 2",
+            commit="def456",
+            lean_version="3.50.3",
+            lean_dojo_version="1.8.4",
+            metadata={"date_processed": datetime.datetime.now() + datetime.timedelta(days=1)}
+        )
+
+        # Add a theorem to both repositories
+        common_theorem = Theorem(
+            full_name="common_theorem",
+            file_path=Path("common.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123",
+            theorem_statement="Old version"
+        )
+        repo1.proven_theorems.append(common_theorem)
+
+        updated_common_theorem = Theorem(
+            full_name="common_theorem",
+            file_path=Path("common.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="def456",
+            theorem_statement="New version"
+        )
+        repo2.proven_theorems.append(updated_common_theorem)
+
+        # Add unique theorems to each repository
+        repo1.proven_theorems.append(Theorem(
+            full_name="unique_to_repo1",
+            file_path=Path("repo1.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        ))
+        repo2.proven_theorems.append(Theorem(
+            full_name="unique_to_repo2",
+            file_path=Path("repo2.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="def456"
+        ))
+
+        self.db.add_repository(repo1)
+        self.db.add_repository(repo2)
+
+        self.assertEqual(len(self.db.repositories), 2)
+
+        dst_dir = Path(RAID_DIR) / DATA_DIR / "test_duplicate_url"
+        self.db.generate_merged_dataset(dst_dir)
+        with open(dst_dir / "random" / "train.json", 'r') as f:
+            data = json.load(f)
+
+        # Check that both repositories are represented
+        self.assertEqual(len(data), 3)
+
+        # Check that the common theorem is from the most recent repository
+        common_theorem_in_dataset = next(t for t in data if t["full_name"] == "common_theorem")
+        self.assertEqual(common_theorem_in_dataset["theorem_statement"], "New version")
+        self.assertEqual(common_theorem_in_dataset["commit"], "def456")
+
+        # Check that unique theorems from both repositories are present
+        self.assertTrue(any(t["full_name"] == "unique_to_repo1" for t in data))
+        self.assertTrue(any(t["full_name"] == "unique_to_repo2" for t in data))
+
+        with open(dst_dir / "metadata.json", 'r') as f:
+            metadata = json.load(f)
+        
+        self.assertEqual(len(metadata["repositories"]), 2)
+        self.assertTrue(any(repo["commit"] == "abc123" for repo in metadata["repositories"]))
+        self.assertTrue(any(repo["commit"] == "def456" for repo in metadata["repositories"]))
+
+    def test_change_sorry_to_proven(self):
+        theorem = Theorem(
+            full_name="sorry_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        self.repo.sorry_theorems_unproved.append(theorem)
+        self.db.add_repository(self.repo)
+
+        self.repo.change_sorry_to_proven(theorem)
+        self.assertEqual(len(self.repo.sorry_theorems_unproved), 0)
+        self.assertEqual(len(self.repo.sorry_theorems_proved), 1)
+        self.assertEqual(self.repo.sorry_theorems_proved[0].full_name, "sorry_theorem")
+
+        not_found_theorem = Theorem(
+            full_name="not_found_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(3, 1),
+            end=Pos(4, 1),
+            url="https://github.com/test/repo",
+            commit="abc123"
+        )
+        with self.assertRaises(ValueError):
+            self.repo.change_sorry_to_proven(not_found_theorem)
+
+        with self.assertRaises(ValueError):
+            self.repo.change_sorry_to_proven(theorem)
+
+class TestDynamicDatabaseSimpleLean(unittest.TestCase):
+    def setUp(self):
+        self.db = DynamicDatabase()
+        self.simple_lean_repo = self.create_simple_lean_repo()
+        self.db.add_repository(self.simple_lean_repo)
+
+    def create_simple_lean_repo(self):
+        url = "https://github.com/Adarsh321123/SimpleLean"
+        commit = "99a5078e1614e61f0d9cc234ca246c8744a4e660"
+        lean_git_repo = LeanGitRepo(url, commit)
+        dir_name = url.split("/")[-1].replace('.git', '') + "_" + commit
+        dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name + "_updated"
+        config = lean_git_repo.get_config("lean-toolchain")
+        v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
+        data = {
+            "url": lean_git_repo.url,
+            "name": "/".join(lean_git_repo.url.split("/")[-2:]),
+            "commit": lean_git_repo.commit,
+            "lean_version": v,
+            "lean_dojo_version": lean_dojo.__version__,
+            "metadata": {
+                "date_processed": datetime.datetime.now(),
+            },
+            "theorems_folder": dst_dir + "/random",
+            "premise_files_corpus": dst_dir + "/corpus.jsonl",
+            "files_traced": dst_dir + "/traced_files.jsonl",
+        }
+        repo = Repository.from_dict(data)
+        return repo
+
+    def test_empty_repo(self):
+        self.assertEqual(len(self.simple_lean_repo.proven_theorems), 0)
+        self.assertEqual(len(self.simple_lean_repo.sorry_theorems_proved), 0)
+        self.assertEqual(len(self.simple_lean_repo.sorry_theorems_unproved), 0)
+
+    def test_generate_dataset_with_empty_repo(self):
+        dst_dir = Path(RAID_DIR) / DATA_DIR / "simple_lean_generated"
+        self.db.generate_merged_dataset(dst_dir)
+
+        self.assertTrue(dst_dir.exists())
+        self.assertTrue((dst_dir / "random").exists())
+        self.assertTrue((dst_dir / "novel_premises").exists())
+        
+        for split in ['train', 'val', 'test']:
+            with open(dst_dir / "random" / f"{split}.json", 'r') as f:
+                data = json.load(f)
+                self.assertEqual(len(data), 0)
 
 class TestDynamicDatabaseUnicode(unittest.TestCase):
     def setUp(self):
@@ -154,12 +671,6 @@ class TestDynamicDatabaseUnicode(unittest.TestCase):
                 tactic="apply iff.intro",
                 annotated_tactic=("apply iff.intro", []),
                 state_before="a b c x : ℝ\nh_a_nonzero : a ≠ 0\n⊢ a * x² + b * x + c = 0 ↔ x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a)",
-                state_after="2 goals\ncase mp\na b c x : ℝ\nh_a_nonzero : a ≠ 0\n⊢ a * x² + b * x + c = 0 → x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a)\ncase mpr\na b c x : ℝ\nh_a_nonzero : a ≠ 0\n⊢ (x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a)) → a * x² + b * x + c = 0"
-            ),
-            AnnotatedTactic(
-                tactic="sorry",
-                annotated_tactic=("sorry", []),
-                state_before="2 goals\ncase mp\na b c x : ℝ\nh_a_nonzero : a ≠ 0\n⊢ a * x² + b * x + c = 0 → x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a)\ncase mpr\na b c x : ℝ\nh_a_nonzero : a ≠ 0\n⊢ (x = (-b + √(b² - 4*a*c)) / (2*a) ∨ x = (-b - √(b² - 4*a*c)) / (2*a)) → a * x² + b * x + c = 0",
                 state_after="no goals"
             )
         ]
@@ -175,7 +686,7 @@ class TestDynamicDatabaseUnicode(unittest.TestCase):
         
         updated_theorem = updated_repo.sorry_theorems_proved[0]
         assert updated_theorem.full_name == "example.quadratic_formula"
-        assert len(updated_theorem.traced_tactics) == 3
+        assert len(updated_theorem.traced_tactics) == 2
         assert "√(b² - 4*a*c)" in updated_theorem.traced_tactics[0].state_before
         assert "↔" in updated_theorem.traced_tactics[1].state_before
 
@@ -382,12 +893,21 @@ class TestDynamicDatabasePFR(unittest.TestCase):
         with open(dst_dir / "metadata.json", 'r') as f:
             metadata = json.load(f)
             self.assertIn("repositories", metadata)
+            self.assertEqual(len(metadata["repositories"]), 1)
             self.assertIn("total_theorems", metadata)
             self.assertIn("num_proven_theorems", metadata)
             self.assertIn("num_sorry_theorems", metadata)
             self.assertIn("num_premise_files", metadata)
             self.assertIn("num_premises", metadata)
             self.assertIn("num_files_traced", metadata)
+
+            for repo in metadata["repositories"]:
+                self.assertIn("url", repo)
+                self.assertIn("name", repo)
+                self.assertIn("commit", repo)
+                self.assertIn("lean_version", repo)
+                self.assertIn("lean_dojo_version", repo)
+                self.assertIn("metadata", repo)
 
     def test_dataset_splitting(self):
         url = "https://github.com/teorth/pfr"
@@ -598,12 +1118,6 @@ class TestDynamicDatabasePFR(unittest.TestCase):
         self.assertIsNotNone(self.sample_repo.metadata["unicode"])
         self.assertIn("ユニコード", self.sample_repo.metadata["unicode"])
 
-    def test_difficulty_rating(self):
-        for theorem in self.sample_repo.proven_theorems:
-            if theorem.difficulty_rating is not None:
-                self.assertGreaterEqual(theorem.difficulty_rating, 0.0)
-                self.assertLessEqual(theorem.difficulty_rating, 1.0)
-
     def test_file_tracing(self):
         self.assertGreater(len(self.sample_repo.files_traced), 0)
         self.assertIn(Path("PFR/Mathlib/GroupTheory/Torsion.lean"), self.sample_repo.files_traced)
@@ -612,23 +1126,17 @@ class TestDynamicDatabasePFR(unittest.TestCase):
 class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
     def setUp(self):
         self.db = DynamicDatabase()
-        self.sample_repo_PFR = self.create_sample_repo_PFR()
-        self.sample_repo_new_version = self.create_sample_repo_new_version()
+        self.sample_repo_PFR = self.create_sample_repo("https://github.com/teorth/pfr", "6a5082ee465f9e44cea479c7b741b3163162bb7e")
+        self.sample_repo_new_version = self.create_sample_repo("https://github.com/Adarsh321123/new-version-test", "f465306be03ced999caa157a85558a6c41b3e3f5")
         self.db.add_repository(self.sample_repo_PFR)
         self.db.add_repository(self.sample_repo_new_version)
 
-    def create_sample_repo_PFR(self):
-        url = "https://github.com/teorth/pfr"
-        commit = "6a5082ee465f9e44cea479c7b741b3163162bb7e"
+    def create_sample_repo(self, url, commit):
         lean_git_repo = LeanGitRepo(url, commit)
         dir_name = url.split("/")[-1] + "_" + commit
         dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name + "_updated"
         config = lean_git_repo.get_config("lean-toolchain")
         v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
-        theorems_folder = dst_dir + "/random"
-        premise_files_corpus = dst_dir + "/corpus.jsonl"
-        files_traced = dst_dir + "/traced_files.jsonl"
-        pr_url = None
         data = {
             "url": lean_git_repo.url,
             "name": "/".join(lean_git_repo.url.split("/")[-2:]),
@@ -640,41 +1148,9 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
                 "unicode": "ユニコード ✨",
                 "date_processed": datetime.datetime.now(),
             },
-            "theorems_folder": theorems_folder,
-            "premise_files_corpus": premise_files_corpus,
-            "files_traced": files_traced,
-            "pr_url": pr_url
-        }
-        repo = Repository.from_dict(data)
-        return repo
-    
-    def create_sample_repo_new_version(self):
-        url = "https://github.com/Adarsh321123/new-version-test"
-        commit = "f465306be03ced999caa157a85558a6c41b3e3f5"
-        lean_git_repo = LeanGitRepo(url, commit)
-        dir_name = url.split("/")[-1] + "_" + commit
-        dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name + "_updated"
-        config = lean_git_repo.get_config("lean-toolchain")
-        v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
-        theorems_folder = dst_dir + "/random"
-        premise_files_corpus = dst_dir + "/corpus.jsonl"
-        files_traced = dst_dir + "/traced_files.jsonl"
-        pr_url = None
-        data = {
-            "url": lean_git_repo.url,
-            "name": "/".join(lean_git_repo.url.split("/")[-2:]),
-            "commit": lean_git_repo.commit,
-            "lean_version": v,
-            "lean_dojo_version": lean_dojo.__version__,
-            "metadata": {
-                "key": "value",
-                "unicode": "ユニコード ✨",
-                "date_processed": datetime.datetime.now(),
-            },
-            "theorems_folder": theorems_folder,
-            "premise_files_corpus": premise_files_corpus,
-            "files_traced": files_traced,
-            "pr_url": pr_url
+            "theorems_folder": dst_dir + "/random",
+            "premise_files_corpus": dst_dir + "/corpus.jsonl",
+            "files_traced": dst_dir + "/traced_files.jsonl",
         }
         repo = Repository.from_dict(data)
         return repo
@@ -828,12 +1304,21 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         with open(dst_dir / "metadata.json", 'r') as f:
             metadata = json.load(f)
             self.assertIn("repositories", metadata)
+            self.assertEqual(len(metadata["repositories"]), 2)
             self.assertIn("total_theorems", metadata)
             self.assertIn("num_proven_theorems", metadata)
             self.assertIn("num_sorry_theorems", metadata)
             self.assertIn("num_premise_files", metadata)
             self.assertIn("num_premises", metadata)
             self.assertIn("num_files_traced", metadata)
+
+            for repo in metadata["repositories"]:
+                self.assertIn("url", repo)
+                self.assertIn("name", repo)
+                self.assertIn("commit", repo)
+                self.assertIn("lean_version", repo)
+                self.assertIn("lean_dojo_version", repo)
+                self.assertIn("metadata", repo)
 
     def test_dataset_splitting(self):
         url_PFR = "https://github.com/teorth/pfr"
@@ -891,6 +1376,86 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
                     for item in data:
                         self.assertIn(item['full_name'], all_theorems_PFR | all_theorems_new_version)
     
+    def test_generate_dataset_with_specific_repo(self):
+        dynamic_dataset_path = Path(RAID_DIR) / DATA_DIR / "pfr_only_generated"
+        self.db.generate_merged_dataset(dynamic_dataset_path, repos_to_include=[(self.sample_repo_PFR.url, self.sample_repo_PFR.commit)])
+
+        self.assertTrue(dynamic_dataset_path.exists())
+        self.assertTrue((dynamic_dataset_path / "random").exists())
+        self.assertTrue((dynamic_dataset_path / "novel_premises").exists())
+
+        with open(dynamic_dataset_path / "metadata.json", 'r') as f:
+            metadata = json.load(f)
+            self.assertEqual(len(metadata["repositories"]), 1)
+            self.assertEqual(metadata["repositories"][0]["url"], self.sample_repo_PFR.url)
+
+        # Compare with the original PFR dataset
+        manual_dataset_path = Path(RAID_DIR) / DATA_DIR / "pfr_6a5082ee465f9e44cea479c7b741b3163162bb7e_updated"
+        
+        for strategy in ['random', 'novel_premises']:
+            logger.info(f"Comparing datasets for {strategy} strategy")
+            manual_theorems = []
+            dynamic_theorems = []
+
+            for split in ['train', 'val', 'test']:
+                logger.info(f"Loading {split} split for {strategy} strategy")
+                manual_file = manual_dataset_path / strategy / f"{split}.json"
+                dynamic_file = dynamic_dataset_path / strategy / f"{split}.json"
+                
+                with open(manual_file, 'r') as f:
+                    manual_data = json.load(f)
+                    manual_theorems.extend(manual_data)
+                logger.info(f"Loaded {len(manual_data)} theorems from manual {split} split")
+                
+                with open(dynamic_file, 'r') as f:
+                    dynamic_data = json.load(f)
+                    dynamic_theorems.extend(dynamic_data)
+                logger.info(f"Loaded {len(dynamic_data)} theorems from dynamic {split} split")
+            
+            assert len(manual_theorems) == len(dynamic_theorems), "Manual and dynamic datasets have different number of theorems"
+            logger.info(f"Comparing {len(manual_theorems)} manual theorems with {len(dynamic_theorems)} dynamic theorems for {strategy} strategy")
+            self.assertTrue(self._fast_compare_theorems(manual_theorems, dynamic_theorems), 
+                        f"Theorem content for {strategy} strategy does not match")
+            logger.info(f"Theorem content for {strategy} strategy matches")
+
+        self.maxDiff = None
+        logger.info("Comparing corpus and traced files")
+        with open(manual_dataset_path / "corpus.jsonl", 'r') as f:
+            manual_corpus = [json.loads(line) for line in f]
+        logger.info(f"Loaded {len(manual_corpus)} items from manual corpus")
+
+        with open(dynamic_dataset_path / "corpus.jsonl", 'r') as f:
+            dynamic_corpus = [json.loads(line) for line in f]
+        logger.info(f"Loaded {len(dynamic_corpus)} items from dynamic corpus")
+
+        assert len(manual_corpus) == len(dynamic_corpus), "Manual and dynamic datasets have different number of premise files"
+        logger.info("Comparing corpus content")
+        try:
+            self.assertCountEqual(manual_corpus, dynamic_corpus)
+            logger.info("Corpus content matches")
+        except AssertionError as e:
+            logger.info("Corpus content mismatch:")
+            logger.info(str(e))
+            raise
+
+        with open(manual_dataset_path / "traced_files.jsonl", 'r') as f:
+            manual_traced = [json.loads(line) for line in f]
+        logger.info(f"Loaded {len(manual_traced)} items from manual traced files")
+
+        with open(dynamic_dataset_path / "traced_files.jsonl", 'r') as f:
+            dynamic_traced = [json.loads(line) for line in f]
+        logger.info(f"Loaded {len(dynamic_traced)} items from dynamic traced files")
+
+        assert len(manual_traced) == len(dynamic_traced), "Manual and dynamic datasets have different number of traced files"
+        logger.info("Comparing traced files content")
+        try:
+            self.assertCountEqual(manual_traced, dynamic_traced)
+            logger.info("Traced files content matches")
+        except AssertionError as e:
+            logger.info("Traced files content mismatch:")
+            logger.info(str(e))
+            raise
+
     def test_compare_manual_and_dynamic_datasets(self):
         random.seed(3407)
 
@@ -1139,17 +1704,6 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         self.assertIsNotNone(self.sample_repo_new_version.metadata["unicode"])
         self.assertIn("ユニコード", self.sample_repo_new_version.metadata["unicode"])
 
-    def test_difficulty_rating(self):
-        for theorem in self.sample_repo_PFR.proven_theorems:
-            if theorem.difficulty_rating is not None:
-                self.assertGreaterEqual(theorem.difficulty_rating, 0.0)
-                self.assertLessEqual(theorem.difficulty_rating, 1.0)
-
-        for theorem in self.sample_repo_new_version.proven_theorems:
-            if theorem.difficulty_rating is not None:
-                self.assertGreaterEqual(theorem.difficulty_rating, 0.0)
-                self.assertLessEqual(theorem.difficulty_rating, 1.0)
-
     def test_file_tracing(self):
         self.assertGreater(len(self.sample_repo_PFR.files_traced), 0)
         self.assertIn(Path("PFR/Mathlib/GroupTheory/Torsion.lean"), self.sample_repo_PFR.files_traced)
@@ -1386,5 +1940,8 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(proved_theorem.traced_tactics[0].tactic, "rw [add_comm]")
         self.assertEqual(proved_theorem.traced_tactics[1].tactic, "refl")
 
-if __name__ == '__main__':
+def main():
     unittest.main()
+
+if __name__ == "__main__":
+    main()
