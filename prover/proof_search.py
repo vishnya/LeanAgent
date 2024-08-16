@@ -332,12 +332,9 @@ class CpuProver(BestFirstSearchProver):
 
 # TODO: reduce repetition with main
 
-RAID_DIR = "/raid/adarsh"
-CHECKPOINT_DIR = "checkpoints_new"
-
-def find_latest_checkpoint():
+def find_latest_checkpoint(raid_dir, checkpoint_dir):
     """Finds the most recent checkpoint."""
-    checkpoint_dir = RAID_DIR + "/" + CHECKPOINT_DIR
+    checkpoint_dir = raid_dir + "/" + checkpoint_dir
     all_checkpoints = [os.path.join(checkpoint_dir, f) for f in os.listdir(checkpoint_dir) if f.endswith(".ckpt")]
     if not all_checkpoints:
         raise FileNotFoundError("No checkpoints found.")
@@ -357,14 +354,21 @@ class GpuProver(BestFirstSearchProver):
         module: Optional[str],
         timeout: int,
         num_sampled_tactics: int,
+        raid_dir: str,
+        checkpoint_dir: str,
         debug: bool,
+        run_progressive_training: bool = True,
     ) -> None:
+    
         if ckpt_path is None:
             tac_gen = FixedTacticGenerator(tactic, module)
         else:
-            # TODO: change
-            model_checkpoint_path = find_latest_checkpoint()
-            # model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+            model_checkpoint_path = None
+            if run_progressive_training:
+                model_checkpoint_path = find_latest_checkpoint(raid_dir, checkpoint_dir)
+            else:
+                model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+            
             config = {
                 "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",
                 "lr": 1e-3,
@@ -415,7 +419,10 @@ class DistributedProver:
         num_gpus: int,
         timeout: int,
         num_sampled_tactics: int,
+        raid_dir: str,
+        checkpoint_dir: str,
         debug: Optional[bool] = False,
+        run_progressive_training: bool = True,
     ) -> None:
         if ckpt_path is None:
             assert tactic and not indexed_corpus_path
@@ -428,9 +435,13 @@ class DistributedProver:
                 tac_gen = FixedTacticGenerator(tactic, module)
             else:
                 device = torch.device("cuda") if num_gpus > 0 else torch.device("cpu")
-                # TODO: change
-                model_checkpoint_path = find_latest_checkpoint()
-                # model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+
+                model_checkpoint_path = None
+                if run_progressive_training:
+                    model_checkpoint_path = find_latest_checkpoint(raid_dir, checkpoint_dir)
+                else:
+                    model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                
                 config = {
                     "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",
                     "lr": 1e-3,
