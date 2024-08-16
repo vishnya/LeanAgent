@@ -685,14 +685,13 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
 
     # Save average accuracies to a file
+    if not os.path.exists(EVAL_RESULTS_FILE_PATH):
+        open(EVAL_RESULTS_FILE_PATH, 'w').close()
+
     with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-        f.write("\n")
-        f.write("\n")
-        f.write("\n")
+        f.write("\n\n\n")
         f.write(f"Results for {dir_name} with lambda = {lambda_value}")
-        f.write("\n")
-        f.write("\n")
-        f.write("\n")
+        f.write("\n\n\n")
         f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
 
     
@@ -876,6 +875,11 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
         "files_traced": files_traced,
         "pr_url": pr_url
     }
+
+    if not os.path.exists(dynamic_database_json_path):
+        with open(dynamic_database_json_path, 'w') as f:
+            json.dump({}, f)
+    
     db = DynamicDatabase.from_json(dynamic_database_json_path)
     repo = Repository.from_dict(data)
     db.add_repository(repo)
