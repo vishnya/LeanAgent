@@ -430,11 +430,11 @@ class DynamicDatabase:
                     ]
                 }
                 path = file_data['path']
-                if path not in merged_corpus or repo.metadata["date_processed"] > merged_corpus[path][1]:
-                    merged_corpus[path] = (json.dumps(file_data), repo.metadata["date_processed"])
+                if path not in merged_corpus:
+                    merged_corpus[path] = json.dumps(file_data)
 
         with open(output_path / "corpus.jsonl", 'w') as f:
-            for line, _ in merged_corpus.values():
+            for line in merged_corpus.values():
                 f.write(line + "\n")
 
     def _split_data(self, theorems: List[Theorem], num_val_pct: float = 0.02, num_test_pct: float = 0.02) -> Dict[str, SPLIT]:
