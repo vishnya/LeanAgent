@@ -878,7 +878,7 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
 
     if not os.path.exists(dynamic_database_json_path):
         with open(dynamic_database_json_path, 'w') as f:
-            json.dump({}, f)
+            json.dump({"repositories": []}, f)
     
     db = DynamicDatabase.from_json(dynamic_database_json_path)
     repo = Repository.from_dict(data)
