@@ -14,6 +14,7 @@ from dynamic_database import DynamicDatabase, Repository, Theorem, AnnotatedTact
 from prover.proof_search import Status, SearchResult
 from main import prove_sorry_theorems, retrieve_proof
 from dynamic_database import parse_pos
+from typing import Tuple
 
 RAID_DIR = "/raid/adarsh"
 DATA_DIR = "datasets_new"
@@ -2262,6 +2263,9 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(proved_theorem.traced_tactics[0].tactic, "rw [add_comm]")
         self.assertEqual(proved_theorem.traced_tactics[1].tactic, "refl")
 
+    def _theorem_identifier(self, theorem: Theorem) -> Tuple[str, str, Tuple[int, int], Tuple[int, int]]:
+        return (theorem.full_name, str(theorem.file_path), tuple(theorem.start), tuple(theorem.end))
+
     def test_prove_sorry_theorems_with_duplicates(self):
         # Create two repositories with the same theorem but different commits
         repo1 = Repository(
@@ -2333,25 +2337,34 @@ class TestDynamicDatabaseProver(unittest.TestCase):
             )
         ]
 
-        # Apply the proof to the more recent theorem
-        result = results[0]
-        traced_tactics = [
-            AnnotatedTactic(
-                tactic=tactic,
-                annotated_tactic=(tactic, []),
-                state_before="",
-                state_after=""
-            ) for tactic in result.proof
-        ]
-        loaded_repo2.sorry_theorems_unproved[0].traced_tactics = traced_tactics
-        loaded_repo2.change_sorry_to_proven(loaded_repo2.sorry_theorems_unproved[0])
-
-
-        loaded_db.update_repository(loaded_repo2)
+        # Simulate the prove_sorry_theorems function
+        processed_theorems = set()
+        for repo in sorted(loaded_db.repositories, key=lambda r: r.metadata['date_processed'], reverse=True):
+            for theorem in repo.sorry_theorems_unproved:
+                theorem_id = self._theorem_identifier(theorem)
+                if theorem_id in processed_theorems:
+                    continue
+                
+                processed_theorems.add(theorem_id)
+                
+                # Apply the proof to the theorem
+                result = results[0]  # In a real scenario, this would be the result of calling the prover
+                traced_tactics = [
+                    AnnotatedTactic(
+                        tactic=tactic,
+                        annotated_tactic=(tactic, []),
+                        state_before="",
+                        state_after=""
+                    ) for tactic in result.proof
+                ]
+                theorem.traced_tactics = traced_tactics
+                repo.change_sorry_to_proven(theorem)
+                loaded_db.update_repository(repo)
+                break  # Simulate proving only one theorem
 
         updated_json_file = "updated_duplicate_theorems_test.json"
         loaded_db.to_json(updated_json_file)
-        
+
         final_db = DynamicDatabase.from_json(updated_json_file)
         final_repo1 = final_db.get_repository(repo1.url, repo1.commit)
         final_repo2 = final_db.get_repository(repo2.url, repo2.commit)
