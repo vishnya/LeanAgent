@@ -671,6 +671,30 @@ class TestDynamicDatabaseCore(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             self.repo.change_sorry_to_proven(theorem)
+    
+    def test_add_repository_duplicate(self):
+        repo = Repository(
+            url="https://github.com/test/repo",
+            name="Test Repo",
+            commit="abc123",
+            lean_version="3.50.3",
+            lean_dojo_version="1.8.4",
+            metadata={"date_processed": datetime.datetime.now()},
+        )
+
+        # Add the repository for the first time
+        self.db.add_repository(repo)
+        self.assertEqual(len(self.db.repositories), 1)
+
+        # Try to add the same repository again
+        self.db.add_repository(repo)
+        self.assertEqual(len(self.db.repositories), 1, "Repository should not be added twice")
+
+        # Verify that the repository details are unchanged
+        added_repo = self.db.get_repository("https://github.com/test/repo", "abc123")
+        self.assertIsNotNone(added_repo)
+        self.assertEqual(added_repo.name, "Test Repo")
+        self.assertEqual(added_repo.commit, "abc123")
 
 class TestDynamicDatabaseSimpleLean(unittest.TestCase):
     def setUp(self):
