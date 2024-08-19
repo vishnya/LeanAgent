@@ -291,7 +291,7 @@ class Repository:
                     theorem_data = json.load(f)
                 for t_data in tqdm(theorem_data):
                     theorem = Theorem.from_dict(t_data, repo.url, repo.commit)
-                    if any(step.tactic == 'sorry' for step in (theorem.traced_tactics or [])):
+                    if any('sorry' in step.tactic for step in (theorem.traced_tactics or [])):
                         repo.sorry_theorems_unproved.append(theorem)
                     else:
                         repo.proven_theorems.append(theorem)
@@ -343,13 +343,12 @@ class Repository:
             "pr_url": self.pr_url
         }
 
-    def change_sorry_to_proven(self, theorem: Theorem) -> None:
+    def change_sorry_to_proven(self, theorem: Theorem, log_file: str) -> None:
         if theorem in self.sorry_theorems_unproved:
             self.sorry_theorems_unproved.remove(theorem)
             self.sorry_theorems_proved.append(theorem)
 
             message = f"Theorem proved: {theorem.full_name} in {theorem.file_path} for repo {self.name} (commit: {self.commit})"
-            log_file = 'proof_logs/theorem_proofs.log'
             timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             log_entry = f"{timestamp} - {message}\n"
             
