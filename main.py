@@ -67,15 +67,24 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 repo_dir = "/raid/adarsh/repos_new" # TODO: for release change these back to <DIR>
 RAID_DIR = "/raid/adarsh"
+# DATA_DIR = "datasets_retrieval_full_merge_each_time"
+# MERGED_DATA_DIR = "datasets_retrieval_PT_full_merge_each_time"
+# CHECKPOINT_DIR = "checkpoints_retrieval_full_merge_each_time"
+# FISHER_DIR = "fisher_retrieval_full_merge_each_time"
+# EVAL_RESULTS_FILE_PATH = "/home/adarsh/ReProver/total_evaluation_results_retrieval_full_merge_each_time.txt"
+# DB_FILE_NAME = "dynamic_database_retrieval_full_merge_each_time.json"
+# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_full_merge_each_time.log"
 DATA_DIR = "datasets_PT_full_merge_each_time"
 MERGED_DATA_DIR = "datasets_merged_PT_full_merge_each_time"
 CHECKPOINT_DIR = "checkpoints_PT_full_merge_each_time"
 FISHER_DIR = "fisher_PT_full_merge_each_time"
 EVAL_RESULTS_FILE_PATH = "/home/adarsh/ReProver/total_evaluation_results_PT_full_merge_each_time.txt"
 DB_FILE_NAME = "dynamic_database_PT_full_merge_each_time.json"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_full_merge_each_time.log"
 # TODO: do we still need this?
 load_dotenv()
 
+# TODO: automate this
 # Feel free to remove any repos from this list if you would like to test on them
 known_repositories = [
     # "leanprover-community/mathlib4",  # ReProver is trained on this + LeanDojo already tests on it
@@ -712,6 +721,53 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     # TODO: add anything else from yaml conf if needed
 
     return model
+    # else:
+    #     logger.info("Inside scilean fisher info")
+    #      ### FISHER INFORMATION MATRIX FOR NEXT EWC
+
+    #     # Switch to one GPU for calculating the Fisher Information Matrix
+    #     if not torch.cuda.is_available():
+    #         logger.warning("Indexing the corpus using CPU can be very slow.")
+    #         device = torch.device("cpu")
+    #     else:
+    #         device = torch.device("cuda")
+    #     config = {
+    #         "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
+    #         "lr": 1e-3,
+    #         "warmup_steps": 1000,
+    #         "max_seq_len": 512,
+    #         "num_retrieved": 100,
+    #     }
+    #     best_model = PremiseRetriever.load("/raid/adarsh/checkpoints_PT_full_merge_each_time/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744_lambda_0.1_epoch=1-Recall@10_val=57.05.ckpt", device, freeze=False, config=config)
+    #     best_model.set_lambda(lambda_value)
+    #     corpus_path = new_data_path + "/corpus.jsonl"
+    #     data_path = new_data_path + "/random"
+    #     print(f"Data path: {data_path}")
+    #     data_module = RetrievalDataModule(
+    #         data_path=data_path,
+    #         corpus_path=corpus_path,
+    #         num_negatives=3,
+    #         num_in_file_negatives=1,
+    #         model_name="google/byt5-small",
+    #         batch_size=4,
+    #         eval_batch_size=64,
+    #         max_seq_len=1024,
+    #         num_workers=4
+    #     )
+    #     data_module.setup(stage='fit')
+    #     best_model.eval()
+    #     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    #     best_model.to(device)
+    #     train_dataloader = data_module.train_dataloader()
+    #     fisher_info = best_model.compute_fisher_information(train_dataloader)
+    #     dir_path = RAID_DIR + "/" + FISHER_DIR
+    #     dir_name = new_data_path.split("/")[-1]
+    #     fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
+    #     with open(fisher_name, "wb") as f:
+    #         pickle.dump(fisher_info, f)
+    #     logger.info(f"Fisher info saved to {fisher_name}")
+
+    #     return model
 
 def theorem_identifier(theorem: Theorem) -> Tuple[str, str, Tuple[int, int], Tuple[int, int]]:
     return (theorem.full_name, str(theorem.file_path), tuple(theorem.start), tuple(theorem.end))
@@ -777,7 +833,7 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, repos_t
                     )
                 
                 theorem.traced_tactics = traced_tactics
-                repo.change_sorry_to_proven(theorem)
+                repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
                 db.update_repository(repo)
 
                 logger.info(f"Updated theorem {theorem.full_name} in the database")
@@ -875,11 +931,19 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
         "pr_url": pr_url
     }
 
-    if not os.path.exists(dynamic_database_json_path):
-        with open(dynamic_database_json_path, 'w') as f:
-            json.dump({"repositories": []}, f)
+    if not os.path.exists(dynamic_database_json_path) or os.path.getsize(dynamic_database_json_path) == 0:
+        # File doesn't exist or is empty, initialize it
+        db = DynamicDatabase()
+        db.to_json(dynamic_database_json_path)
+    else:
+        try:
+            db = DynamicDatabase.from_json(dynamic_database_json_path)
+        except json.JSONDecodeError:
+            # If there's an error decoding the JSON, initialize a new database
+            logger.warning(f"Error decoding JSON from {dynamic_database_json_path}. Initializing new database.")
+            db = DynamicDatabase()
+            db.to_json(dynamic_database_json_path)
     
-    db = DynamicDatabase.from_json(dynamic_database_json_path)
     repo = Repository.from_dict(data)
     db.add_repository(repo)
     db.to_json(dynamic_database_json_path)
@@ -902,7 +966,8 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
             return None
         
         # Train the model on the new dataset that we generated from the dynamic database.
-        train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, epochs_per_repo)
+        if "mathlib4" not in repo.url and "SciLean" not in repo.url:  # TODO: remove later
+            train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, epochs_per_repo)
     else:
         model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
 
@@ -978,6 +1043,7 @@ def main():
         # Configure these parameters!
         current_epoch = 0
         epochs_per_repo = 1
+        # run_progressive_training = False
         run_progressive_training = True
         num_repos = 15
         dynamic_database_json_path = RAID_DIR + "/" + DB_FILE_NAME
