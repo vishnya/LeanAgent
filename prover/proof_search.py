@@ -458,9 +458,15 @@ class DistributedProver:
                 tac_gen = RetrievalAugmentedGenerator.load(
                     ckpt_path, device=device, freeze=True, config=config
                 )
+                logger.info(f"Loaded model from {ckpt_path}")
+                logger.info(f"Using retriever: {tac_gen.retriever}")
                 if tac_gen.retriever is not None:
-                    assert indexed_corpus_path is not None
-                    tac_gen.retriever.load_corpus(indexed_corpus_path)
+                    if indexed_corpus_path is not None:
+                        logger.info(f"Loading indexed corpus from {indexed_corpus_path}")
+                        tac_gen.retriever.load_corpus(indexed_corpus_path)
+                        logger.info(f"Loaded indexed corpus from {indexed_corpus_path}")
+                    tac_gen.retriever.reindex_corpus(batch_size=32)
+                    logger.info("Finished reindexing!")
             self.prover = BestFirstSearchProver(
                 tac_gen, timeout, num_sampled_tactics, debug
             )
