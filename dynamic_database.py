@@ -349,7 +349,7 @@ class Repository:
             self.sorry_theorems_proved.append(theorem)
 
             message = f"Theorem proved: {theorem.full_name} in {theorem.file_path} for repo {self.name} (commit: {self.commit})"
-            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             log_entry = f"{timestamp} - {message}\n"
             
             os.makedirs(os.path.dirname(log_file), exist_ok=True)
