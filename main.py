@@ -945,7 +945,11 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
             db.to_json(dynamic_database_json_path)
     
     repo = Repository.from_dict(data)
+    logger.info("Before adding new repo:")
+    db.print_database_contents()
     db.add_repository(repo)
+    logger.info("After adding new repo:")
+    db.print_database_contents()
     db.to_json(dynamic_database_json_path)
 
     # Generate a new dataset from the dynamic database.
@@ -1050,9 +1054,11 @@ def main():
         
         lambdas = None
         if run_progressive_training:
+            logger.info("Running progressive training")
             lambdas = [0.1]
         else:
             # Run retrieval baseline
+            logger.info("Running retrieval baseline")
             lambdas = [0.0]
 
         logger.info("Configuring LeanDojo...")
