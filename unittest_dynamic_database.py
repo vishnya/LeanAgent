@@ -21,6 +21,7 @@ from unittest.mock import patch, MagicMock
 RAID_DIR = "/raid/adarsh"
 DATA_DIR = "datasets_new"
 MERGED_DATA_DIR = "datasets_merged"
+PROOF_LOG_FILE_NAME = "proof_logs_test/proof_log_unit_tests.log"
 
 class TestDynamicDatabaseCore(unittest.TestCase):
     def setUp(self):
@@ -654,7 +655,7 @@ class TestDynamicDatabaseCore(unittest.TestCase):
         self.repo.sorry_theorems_unproved.append(theorem)
         self.db.add_repository(self.repo)
 
-        self.repo.change_sorry_to_proven(theorem)
+        self.repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
         self.assertEqual(len(self.repo.sorry_theorems_unproved), 0)
         self.assertEqual(len(self.repo.sorry_theorems_proved), 1)
         self.assertEqual(self.repo.sorry_theorems_proved[0].full_name, "sorry_theorem")
@@ -668,10 +669,10 @@ class TestDynamicDatabaseCore(unittest.TestCase):
             commit="abc123"
         )
         with self.assertRaises(ValueError):
-            self.repo.change_sorry_to_proven(not_found_theorem)
+            self.repo.change_sorry_to_proven(not_found_theorem, PROOF_LOG_FILE_NAME)
 
         with self.assertRaises(ValueError):
-            self.repo.change_sorry_to_proven(theorem)
+            self.repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
     
     def test_add_repository_duplicate(self):
         repo = Repository(
@@ -1050,7 +1051,7 @@ class TestDynamicDatabaseUnicode(unittest.TestCase):
             )
         ]
         
-        repo.change_sorry_to_proven(sorry_theorem)
+        repo.change_sorry_to_proven(sorry_theorem, PROOF_LOG_FILE_NAME)
         deserialized_db.update_json(json_file)
         updated_db = DynamicDatabase.from_json(json_file)
         updated_repo = updated_db.get_repository("https://github.com/example/repo", "abc123")
@@ -2211,7 +2212,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
             )
         ]
         theorem.traced_tactics = traced_tactics
-        self.repo.change_sorry_to_proven(theorem)
+        self.repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
         self.db.update_repository(self.repo)
 
         updated_repo = self.db.get_repository(self.repo.url, self.repo.commit)
@@ -2243,7 +2244,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
             ) for tactic in result.proof
         ]
         self.repo.sorry_theorems_unproved[0].traced_tactics = traced_tactics
-        self.repo.change_sorry_to_proven(self.repo.sorry_theorems_unproved[0])
+        self.repo.change_sorry_to_proven(self.repo.sorry_theorems_unproved[0], PROOF_LOG_FILE_NAME)
         
         # Serialize to JSON
         json_file = "proved_theorems_test.json"
@@ -2303,7 +2304,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         ]
         
         theorem.traced_tactics = traced_tactics
-        self.repo.change_sorry_to_proven(theorem)
+        self.repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
         self.db.update_repository(self.repo)
         self.db.to_json(json_file)
 
@@ -2353,7 +2354,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
                     )
                 )
             self.repo.sorry_theorems_unproved[0].traced_tactics = traced_tactics
-            self.repo.change_sorry_to_proven(self.repo.sorry_theorems_unproved[0])
+            self.repo.change_sorry_to_proven(self.repo.sorry_theorems_unproved[0], PROOF_LOG_FILE_NAME)
 
         self.assertEqual(len(self.repo.sorry_theorems_unproved), 0)
         self.assertEqual(len(self.repo.sorry_theorems_proved), 1)
@@ -2441,7 +2442,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
                     )
                 )
             self.repo.sorry_theorems_unproved[0].traced_tactics = traced_tactics
-            self.repo.change_sorry_to_proven(self.repo.sorry_theorems_unproved[0])
+            self.repo.change_sorry_to_proven(self.repo.sorry_theorems_unproved[0], PROOF_LOG_FILE_NAME)
 
         self.db.to_json(json_file)
         loaded_db = DynamicDatabase.from_json(json_file)
@@ -2549,7 +2550,7 @@ class TestDynamicDatabaseProver(unittest.TestCase):
                     ) for tactic in result.proof
                 ]
                 theorem.traced_tactics = traced_tactics
-                repo.change_sorry_to_proven(theorem)
+                repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
                 loaded_db.update_repository(repo)
                 break  # Simulate proving only one theorem
 
