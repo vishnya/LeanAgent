@@ -202,6 +202,18 @@ class Repository:
     files_traced: List[Path] = field(default_factory=list)
     pr_url: Optional[str] = None
 
+    def __eq__(self, other):
+        if not isinstance(other, Repository):
+            return NotImplemented
+        return (self.url == other.url and 
+                self.name == other.name and
+                self.commit == other.commit and
+                self.lean_version == other.lean_version and
+                self.lean_dojo_version == other.lean_dojo_version)
+
+    def __hash__(self):
+        return hash((self.url, self.name, self.commit, self.lean_version, self.lean_dojo_version))
+
     @property
     def total_theorems(self) -> int:
         return self.num_proven_theorems + self.num_sorry_theorems
@@ -561,8 +573,10 @@ class DynamicDatabase:
             json.dump(metadata, f, indent=2)
 
     def add_repository(self, repo: Repository) -> None:
+        logger.info(f"Attempting to add repository: {repo.url} (commit: {repo.commit})")
         if repo not in self.repositories:
             self.repositories.append(repo)
+            logger.info(f"Added new repository: {repo.url} (commit: {repo.commit})")
         else:
             logger.info(f"Repository '{repo.url}' with commit '{repo.commit}' already exists in the database.")
 
@@ -573,11 +587,19 @@ class DynamicDatabase:
         return None
 
     def update_repository(self, updated_repo: Repository) -> None:
+        logger.info(f"Attempting to update repository: {updated_repo.url} (commit: {updated_repo.commit})")
         for i, repo in enumerate(self.repositories):
-            if repo.url == updated_repo.url and repo.commit == updated_repo.commit:
+            if repo == updated_repo:
                 self.repositories[i] = updated_repo
+                logger.info(f"Updated repository: {updated_repo.url} (commit: {updated_repo.commit})")
                 return
+        logger.error(f"Repository '{updated_repo.url}' with commit '{updated_repo.commit}' not found for update.")
         raise ValueError(f"Repository '{updated_repo.url}' with commit '{updated_repo.commit}' not found.")
+
+    def print_database_contents(self):
+        logger.info("Current database contents:")
+        for repo in self.repositories:
+            logger.info(f"  - {repo.url} (commit: {repo.commit})")
 
     def delete_repository(self, url: str, commit: str) -> None:
         for i, repo in enumerate(self.repositories):
