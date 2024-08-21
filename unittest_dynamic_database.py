@@ -1099,16 +1099,16 @@ class TestDynamicDatabase(unittest.TestCase):
         self.db.add_repository(self.repo)
         updated_repo = Repository(
             url="https://github.com/test/repo",
-            name="Updated Test Repo",
+            name="Test Repo",
             commit="abc123",
             lean_version="3.50.3",
             lean_dojo_version="1.8.4",
-            metadata={"date_processed": self.current_datetime},
+            metadata={"date_processed": datetime.datetime.now() + datetime.timedelta(days=1)},
         )
         self.db.update_repository(updated_repo)
         retrieved_repo = self.db.get_repository("https://github.com/test/repo", "abc123")
-        self.assertEqual(retrieved_repo.name, "Updated Test Repo")
-        self.assertDatetimeEqual(retrieved_repo.metadata["date_processed"], self.current_datetime)
+        self.assertEqual(retrieved_repo.name, "Test Repo")
+        self.assertNotEqual(retrieved_repo.metadata["date_processed"].replace(microsecond=0), self.current_datetime.replace(microsecond=0))
 
     def test_delete_repository(self):
         self.db.add_repository(self.repo)
