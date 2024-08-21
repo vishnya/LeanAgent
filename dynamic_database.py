@@ -393,6 +393,13 @@ class DynamicDatabase:
             repo for repo in self.repositories if (repo.url, repo.commit) in repos_to_include
         ]
 
+        if repos_to_include is None:
+            logger.info("Merging all repositories in the database.")
+        else:
+            logger.info("Merging selected repositories in the database:")
+            for url, commit in repos_to_include:
+                logger.info(f"  - {url} (commit: {commit})")
+
         all_theorems = {}
         all_traced_files = set()
 
