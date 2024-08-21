@@ -16,6 +16,7 @@ from main import prove_sorry_theorems, retrieve_proof
 from dynamic_database import parse_pos
 from typing import Tuple
 import os
+from unittest.mock import patch, MagicMock
 
 RAID_DIR = "/raid/adarsh"
 DATA_DIR = "datasets_new"
@@ -695,6 +696,171 @@ class TestDynamicDatabaseCore(unittest.TestCase):
         self.assertIsNotNone(added_repo)
         self.assertEqual(added_repo.name, "Test Repo")
         self.assertEqual(added_repo.commit, "abc123")
+
+    def test_repository_equality(self):
+        repo1 = Repository(
+            url="https://github.com/test/repo",
+            name="Test Repo",
+            commit="abc123",
+            lean_version="3.50.3",
+            lean_dojo_version="1.8.4",
+            metadata={"date_processed": datetime.datetime.now()}
+        )
+        repo2 = Repository(
+            url="https://github.com/test/repo",
+            name="Test Repo",
+            commit="abc123",
+            lean_version="3.50.3",
+            lean_dojo_version="1.8.4",
+            metadata={"date_processed": datetime.datetime.now()}
+        )
+        repo3 = Repository(
+            url="https://github.com/test/repo",
+            name="Test Repo",
+            commit="def456",
+            lean_version="3.50.3",
+            lean_dojo_version="1.8.4",
+            metadata={"date_processed": datetime.datetime.now()}
+        )
+        self.assertEqual(repo1, repo2)
+        self.assertNotEqual(repo1, repo3)
+
+    def test_add_repository_duplicate(self):
+        repo = Repository(
+            url="https://github.com/test/repo",
+            name="Test Repo",
+            commit="abc123",
+            lean_version="3.50.3",
+            lean_dojo_version="1.8.4",
+            metadata={"date_processed": datetime.datetime.now()}
+        )
+        self.db.add_repository(repo)
+        self.assertEqual(len(self.db.repositories), 1)
+        self.db.add_repository(repo)
+        self.assertEqual(len(self.db.repositories), 1)
+    
+    def test_update_repository_duplicate(self):
+        repo = Repository(
+            url="https://github.com/test/repo",
+            name="Test Repo",
+            commit="abc123",
+            lean_version="3.50.3",
+            lean_dojo_version="1.8.4",
+            metadata={"date_processed": datetime.datetime.now()}
+        )
+        self.db.add_repository(repo)
+        self.assertEqual(len(self.db.repositories), 1)
+        self.db.update_repository(repo)
+        added_repo = self.db.get_repository("https://github.com/test/repo", "abc123")
+        self.assertEqual(len(self.db.repositories), 1)
+        self.assertEqual(added_repo.name, "Test Repo")
+        self.assertEqual(added_repo.commit, "abc123")
+        self.assertEqual(added_repo.lean_version, "3.50.3")
+        added_repo.name = "Updated Repo"
+        added_repo.lean_version = "3.50.4"
+        self.db.update_repository(added_repo)
+        updated_repo = self.db.get_repository("https://github.com/test/repo", "abc123")
+        self.assertEqual(len(self.db.repositories), 1)
+        self.assertEqual(updated_repo.name, "Updated Repo")
+        self.assertEqual(updated_repo.commit, "abc123")
+        self.assertEqual(added_repo.lean_version, "3.50.4")
+        self.db.update_repository(added_repo)
+        updated_repo = self.db.get_repository("https://github.com/test/repo", "abc123")
+        self.assertEqual(len(self.db.repositories), 1)
+        self.assertEqual(updated_repo.name, "Updated Repo")
+        self.assertEqual(updated_repo.commit, "abc123")
+        self.assertEqual(added_repo.lean_version, "3.50.4")
+    
+    @patch('lean_dojo.__version__', '1.0.0')
+    @patch('generate_benchmark_lean4.get_lean4_version_from_config')
+    def test_add_repository_from_lean_git_repo_duplicate(self, mock_get_lean_version):
+        mock_get_lean_version.return_value = '4.0.0'
+
+        # Mock LeanGitRepo
+        mock_repo = MagicMock()
+        mock_repo.url = "https://github.com/test/repo"
+        mock_repo.commit = "abcdef123456"
+        mock_repo.get_config.return_value = {"content": "mock_content"}
+
+        dst_dir = "/raid/adarsh/datasets_retrieval_full_merge_each_time/merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310"
+        
+        data = {
+            "url": mock_repo.url,
+            "name": "test/repo",
+            "commit": mock_repo.commit,
+            "lean_version": '4.0.0',
+            "lean_dojo_version": '1.0.0',
+            "metadata": {
+                "date_processed": datetime.datetime.now(),
+            },
+            "theorems_folder": os.path.join(dst_dir, "random"),
+            "premise_files_corpus": os.path.join(dst_dir, "corpus.jsonl"),
+            "files_traced": os.path.join(dst_dir, "traced_files.jsonl"),
+            "pr_url": None
+        }
+
+        repo = Repository.from_dict(data)
+        logger.info("Before adding new repo:")
+        self.db.print_database_contents()
+        self.db.add_repository(repo)
+        logger.info("After adding new repo:")
+        self.db.print_database_contents()
+
+        # Verify the repository was added correctly
+        self.assertEqual(len(self.db.repositories), 1)
+        added_repo = self.db.repositories[0]
+        self.assertEqual(added_repo.url, "https://github.com/test/repo")
+        self.assertEqual(added_repo.name, "test/repo")
+        self.assertEqual(added_repo.commit, "abcdef123456")
+        self.assertEqual(added_repo.lean_version, "4.0.0")
+        self.assertEqual(added_repo.lean_dojo_version, "1.0.0")
+        self.assertIsInstance(added_repo.metadata["date_processed"], datetime.datetime)
+        self.assertEqual(added_repo.pr_url, None)
+
+        # Add same repo again
+
+        mock_get_lean_version.return_value = '4.0.0'
+
+        # Mock LeanGitRepo
+        mock_repo = MagicMock()
+        mock_repo.url = "https://github.com/test/repo"
+        mock_repo.commit = "abcdef123456"
+        mock_repo.get_config.return_value = {"content": "mock_content"}
+
+        dst_dir = "/raid/adarsh/datasets_retrieval_full_merge_each_time/merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310"
+        
+        data = {
+            "url": mock_repo.url,
+            "name": "test/repo",
+            "commit": mock_repo.commit,
+            "lean_version": '4.0.0',
+            "lean_dojo_version": '1.0.0',
+            "metadata": {
+                "date_processed": datetime.datetime.now(),
+            },
+            "theorems_folder": os.path.join(dst_dir, "random"),
+            "premise_files_corpus": os.path.join(dst_dir, "corpus.jsonl"),
+            "files_traced": os.path.join(dst_dir, "traced_files.jsonl"),
+            "pr_url": None
+        }
+
+        repo = Repository.from_dict(data)
+        logger.info("Before adding new repo:")
+        self.db.print_database_contents()
+        self.db.add_repository(repo)
+        logger.info("After adding new repo:")
+        self.db.print_database_contents()
+
+        # Verify the repository was added correctly
+        self.assertEqual(len(self.db.repositories), 1)
+        added_repo = self.db.repositories[0]
+        self.assertEqual(added_repo.url, "https://github.com/test/repo")
+        self.assertEqual(added_repo.name, "test/repo")
+        self.assertEqual(added_repo.commit, "abcdef123456")
+        self.assertEqual(added_repo.lean_version, "4.0.0")
+        self.assertEqual(added_repo.lean_dojo_version, "1.0.0")
+        self.assertIsInstance(added_repo.metadata["date_processed"], datetime.datetime)
+        self.assertEqual(added_repo.pr_url, None)
 
 class TestDynamicDatabaseSimpleLean(unittest.TestCase):
     def setUp(self):
