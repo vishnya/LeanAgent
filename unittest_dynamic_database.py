@@ -2578,6 +2578,49 @@ class TestDynamicDatabaseProver(unittest.TestCase):
         self.assertEqual(len(proved_theorem.traced_tactics), 2)
         self.assertEqual(proved_theorem.traced_tactics[0].tactic, "rw [add_comm]")
         self.assertEqual(proved_theorem.traced_tactics[1].tactic, "refl")
+    
+    def test_repeated_to_json_during_proving(self):
+        json_file = "repeated_save_test.json"
+        
+        # Initial save
+        self.db.to_json(json_file)
+        
+        results = [
+            SearchResult(
+                theorem=self.repo.sorry_theorems_unproved[0],
+                status=Status.PROVED,
+                proof=["rw [add_comm]", "refl"],
+                actor_time=1.0,
+                environment_time=2.0,
+                total_time=3.0,
+                num_total_nodes=10,
+                num_searched_nodes=5
+            )
+        ]
+        
+        # Simulate proving and saving after each theorem
+        for result in results:
+            if isinstance(result, SearchResult) and result.status == Status.PROVED:
+                traced_tactics = [
+                    AnnotatedTactic(
+                        tactic=tactic,
+                        annotated_tactic=(tactic, []),
+                        state_before="",
+                        state_after=""
+                    ) for tactic in result.proof
+                ]
+                self.repo.sorry_theorems_unproved[0].traced_tactics = traced_tactics
+                self.repo.change_sorry_to_proven(self.repo.sorry_theorems_unproved[0], PROOF_LOG_FILE_NAME)
+                self.db.update_repository(self.repo)
+                self.db.to_json(json_file)  # Save after each theorem is proved
+        
+        # Final save
+        self.db.to_json(json_file)
+        
+        # Load and verify
+        loaded_db = DynamicDatabase.from_json(json_file)
+        self.assertEqual(len(loaded_db.repositories[0].sorry_theorems_proved), 1)
+        self.assertEqual(len(loaded_db.repositories[0].sorry_theorems_unproved), 0)
 
 class TestDynamicDatabaseEmpty(unittest.TestCase):
     def setUp(self):
