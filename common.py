@@ -38,21 +38,29 @@ class Context:
     path: str
     theorem_full_name: str
     theorem_pos: Pos = field(compare=False)
-    state: str
+    state: Optional[str] = None
 
     def __post_init__(self) -> None:
         assert isinstance(self.path, str)
         assert isinstance(self.theorem_full_name, str)
         assert isinstance(self.theorem_pos, Pos)
-        assert (
-            isinstance(self.state, str)
-            and "⊢" in self.state
-            and MARK_START_SYMBOL not in self.state
-            and MARK_END_SYMBOL not in self.state
-        )
+        if self.state is not None:
+            if not (isinstance(self.state, str)
+                and "⊢" in self.state
+                and MARK_START_SYMBOL not in self.state
+                and MARK_END_SYMBOL not in self.state):
+                logger.warning(f"Invalid state: {self.state}")
+            assert (
+                isinstance(self.state, str)
+                and "⊢" in self.state
+                and MARK_START_SYMBOL not in self.state
+                and MARK_END_SYMBOL not in self.state
+            )
 
     def serialize(self) -> str:
         """Serialize the context into a string for Transformers."""
+        if self.state is None:
+            return ""
         return self.state
 
 

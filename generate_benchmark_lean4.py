@@ -157,6 +157,7 @@ def export_proofs(
     splits: Dict[SPLIT_STRATEGY, SPLIT], dst_path: Path, traced_repo: TracedRepo
 ) -> None:
     """Export all proofs in a traced repo to ``dst_path''."""
+    total_theorems = 0
     for strategy, split in splits.items():
         split_dir = dst_path / strategy
         split_dir.mkdir(parents=True)
@@ -200,6 +201,9 @@ def export_proofs(
             logger.info(
                 f"{len(theorems)} theorems and {num_tactics} tactics saved to {oup_path}"
             )
+            total_theorems += len(theorems)
+    logger.info(f"{total_theorems} theorems saved in total")
+    return total_theorems
 
 
 def export_premises(traced_repo: TracedRepo, dst_path: Path) -> None:
@@ -285,7 +289,7 @@ def export_data(
         shutil.rmtree(dst_path)
 
     # Export the proofs.
-    export_proofs(splits, dst_path, traced_repo)
+    total_theorems = export_proofs(splits, dst_path, traced_repo)
     logger.info("Successfully exported the proofs")
 
     # Export the premises (theorems, definitions, etc.).
@@ -300,7 +304,7 @@ def export_data(
     export_metadata(traced_repo, dst_path, **kwargs)
     logger.info("Successfully exported the metadata")
 
-    return num_premises, num_files_traced
+    return num_premises, num_files_traced, total_theorems
 
 def configure_leandojo():
     constants.logger.remove()
@@ -363,12 +367,12 @@ def main(url, commit, dst_dir):
         logger.info("Successfully traced the repo")
     except Exception as e:
         logger.info(f"Failed to trace repo {repo} because of {e}")
-        return None, 0, 0
+        return None, 0, 0, 10
     if os.path.exists(dst_dir):
         logger.warning(f"{dst_dir} already exists. Using it instead.")
-        return traced_repo, 0, 0
+        return traced_repo, 0, 0, 10
     splits = split_data(traced_repo)
     logger.info("Successfully split the data")
-    num_premises, num_files_traced = export_data(traced_repo, splits, dst_dir)
+    num_premises, num_files_traced, total_theorems = export_data(traced_repo, splits, dst_dir)
     logger.info("Successfully exported the data")
-    return traced_repo, num_premises, num_files_traced
+    return traced_repo, num_premises, num_files_traced, total_theorems
