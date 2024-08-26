@@ -36,7 +36,7 @@ import networkx as nx
 from copy import copy
 from pathlib import Path
 from loguru import logger
-from datetime import datetime
+from datetime import datetime, timedelta
 from collections import defaultdict
 from typing import Dict, List, Union
 import generate_benchmark_lean4
@@ -58,7 +58,7 @@ from retrieval.model import PremiseRetriever
 from retrieval.datamodule import RetrievalDataModule
 from retrieval.main import run_cli
 import torch
-from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping, LearningRateMonitor
+from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping, LearningRateMonitor, Callback
 from pytorch_lightning import seed_everything
 
 # TODO: standardize with all Path or just string
@@ -74,6 +74,7 @@ RAID_DIR = "/raid/adarsh"
 # EVAL_RESULTS_FILE_PATH = "/home/adarsh/ReProver/total_evaluation_results_retrieval_full_merge_each_time.txt"
 # DB_FILE_NAME = "dynamic_database_retrieval_full_merge_each_time.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_full_merge_each_time.log"
+# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_full_merge_each_time.pkl"
 DATA_DIR = "datasets_PT_full_merge_each_time"
 MERGED_DATA_DIR = "datasets_merged_PT_full_merge_each_time"
 CHECKPOINT_DIR = "checkpoints_PT_full_merge_each_time"
@@ -81,8 +82,11 @@ FISHER_DIR = "fisher_PT_full_merge_each_time"
 EVAL_RESULTS_FILE_PATH = "/home/adarsh/ReProver/total_evaluation_results_PT_full_merge_each_time.txt"
 DB_FILE_NAME = "dynamic_database_PT_full_merge_each_time.json"
 PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_full_merge_each_time.log"
+ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_full_merge_each_time.pkl"
 # TODO: do we still need this?
 load_dotenv()
+
+repos_for_merged_dataset = []
 
 # TODO: automate this
 # Feel free to remove any repos from this list if you would like to test on them
@@ -104,7 +108,7 @@ known_repositories = [
     # "digama0/lean4lean",
     # "AlexKontorovich/PrimeNumberTheoremAnd",
     # newly tested:
-    # "leanprover-community/lean4-metaprogramming-book",
+    "leanprover-community/lean4-metaprogramming-book",
     # "ImperialCollegeLondon/FLT",
     # "kmill/lean4-raytracer",
     # "argumentcomputer/yatima",
@@ -634,13 +638,18 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     print(f"Validation dataset size after load: {len(data_module.ds_val)}")
     print(f"Testing dataset size after load: {len(data_module.ds_pred)}")
 
+    mid_epoch_checkpoint_dir = os.path.join(RAID_DIR, "mid_epoch_checkpoints")
+    os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
+    timed_checkpoint_callback = TimedCheckpoint(checkpoint_dir=mid_epoch_checkpoint_dir)
+
     trainer = pl.Trainer(
         accelerator="gpu",
         gradient_clip_val=1.0,
         precision="bf16-mixed",
         strategy="ddp",
         devices=1, # TODO: change for GPU
-        callbacks=[lr_monitor, checkpoint_callback, early_stop_callback],
+        accumulate_grad_batches=4,
+        callbacks=[lr_monitor, checkpoint_callback, early_stop_callback, timed_checkpoint_callback],
         max_epochs=current_epoch + epochs_per_repo,
         log_every_n_steps=1,
         num_sanity_val_steps=0,
@@ -662,13 +671,21 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     else:
         logger.warning("No best model found. Using the last trained model.")
         best_model = model
+        # TODO: change this to the last model trained later
+        best_model_path = RAID_DIR + "/" + CHECKPOINT_DIR + "/" + "merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=2-Recall@10_val=57.22.ckpt"
     best_model.eval()
 
     logger.info("Testing...")
     total_R1, total_R10, total_MRR = [], [], []
     dataset_path = RAID_DIR + "/" + DATA_DIR
     testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
+    with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+        f.write("\n\n\n")
+        f.write(f"Results for {dir_name} with lambda = {lambda_value}")
     for data_path in testing_paths:
+        # TODO: remove this for tests that do not use merged dataset
+        if "merged" not in data_path:
+            continue
         # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
         run_cli(best_model_path, data_path)
         num_gpus = 1 # TODO: change for GPU
@@ -687,6 +704,9 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
         total_R1.append(R1)
         total_R10.append(R10)
         total_MRR.append(MRR)
+        with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+            f.write(f"Intermediate results for {data_path}")
+            f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
 
     avg_R1 = np.mean(total_R1)
     avg_R10 = np.mean(total_R10)
@@ -700,8 +720,6 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
 
     with open(EVAL_RESULTS_FILE_PATH, "a") as f:
         f.write("\n\n\n")
-        f.write(f"Results for {dir_name} with lambda = {lambda_value}")
-        f.write("\n\n\n")
         f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
 
     
@@ -711,7 +729,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     best_model.to(device)
     train_dataloader = data_module.train_dataloader()
-    fisher_info = best_model.compute_fisher_information(train_dataloader)
+    fisher_info = best_model.compute_fisher_information(train_dataloader, RAID_DIR + "/" + FISHER_DIR)
     dir_path = RAID_DIR + "/" + FISHER_DIR
     fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
     with open(fisher_name, "wb") as f:
@@ -772,7 +790,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
 def theorem_identifier(theorem: Theorem) -> Tuple[str, str, Tuple[int, int], Tuple[int, int]]:
     return (theorem.full_name, str(theorem.file_path), tuple(theorem.start), tuple(theorem.end))
 
-def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, repos_to_include: Optional[List[Tuple[str, str]]] = None):
+def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic_database_json_path, repos_to_include: Optional[List[Tuple[str, str]]] = None):
     repos_to_process = db.repositories if repos_to_include is None else [
         repo for repo in db.repositories if (repo.url, repo.commit) in repos_to_include
     ]
@@ -782,6 +800,9 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, repos_t
     repos_to_process.sort(key=lambda r: r.metadata['date_processed'], reverse=True)
 
     processed_theorems: Set[Tuple[str, str, Tuple[int, int], Tuple[int, int]]] = set()
+    all_encountered_theorems: Set[Tuple[str, str, Tuple[int, int], Tuple[int, int]]] = set()
+    last_save_time = datetime.datetime.now()
+    save_interval = timedelta(minutes=30)
 
     for repo in repos_to_process:
         sorry_theorems = repo.sorry_theorems_unproved
@@ -796,6 +817,7 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, repos_t
                 continue
 
             theorem_id = theorem_identifier(theorem)
+            all_encountered_theorems.add(theorem_id)
             if theorem_id in processed_theorems:
                 logger.info(f"Skipping already processed theorem: {theorem.full_name}")
                 continue
@@ -835,12 +857,40 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, repos_t
                 theorem.traced_tactics = traced_tactics
                 repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
                 db.update_repository(repo)
+                db.to_json(dynamic_database_json_path)
 
                 logger.info(f"Updated theorem {theorem.full_name} in the database")
             else:
                 logger.info(f"No proof found for {theorem.full_name}")
             
+            current_time = datetime.datetime.now()
+            if current_time - last_save_time >= save_interval:
+                logger.info("Saving encountered theorems...")
+                with open(ENCOUNTERED_THEOREMS_FILE, 'wb') as f:
+                    pickle.dump(all_encountered_theorems, f)
+                last_save_time = current_time
+
+    logger.info("Final save to JSON file...")
+    with open(ENCOUNTERED_THEOREMS_FILE, 'wb') as f:
+        pickle.dump(all_encountered_theorems, f)
+
     logger.info("Finished attempting to prove sorry theorems")
+
+class TimedCheckpoint(Callback):
+    def __init__(self, checkpoint_dir, interval=timedelta(hours=4)):
+        self.checkpoint_dir = checkpoint_dir
+        self.interval = interval
+        self.last_checkpoint_time = datetime.datetime.now()
+
+    def on_train_batch_end(self, trainer, pl_module, outputs, batch, batch_idx):
+        now = datetime.datetime.now()
+        if now - self.last_checkpoint_time >= self.interval:
+            epoch = trainer.current_epoch
+            global_step = trainer.global_step
+            checkpoint_path = os.path.join(self.checkpoint_dir, f'mid_epoch_checkpoint_epoch_{epoch}_step_{global_step}.ckpt')
+            trainer.save_checkpoint(checkpoint_path)
+            self.last_checkpoint_time = now
+            logger.info(f"Mid-epoch checkpoint saved at {checkpoint_path}")
 
 def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_per_repo):
     # TODO: update comments throughout
@@ -874,10 +924,13 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
     #     # dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name
     #     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name + "_updated"
     #     logger.info(f"Generating benchmark at {dst_dir}")
-    #     traced_repo, num_premises, num_files_traced = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
+    #     traced_repo, num_premises, num_files_traced, total_theorems = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
     #     if not traced_repo:
     #         logger.info(f"Failed to trace {url}")
     #         return None
+    #     if total_theorems == 0:
+    #          logger.info(f"No theorems found in {url}")
+    #          return None
     #     logger.info(f"Finished generating benchmark at {dst_dir}")
 
     # logger.info("Merging datasets")
@@ -903,9 +956,12 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
     dir_name = repo.url.split("/")[-1] + "_" + sha
     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name
     logger.info(f"Generating benchmark at {dst_dir}")
-    traced_repo, _, _ = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
+    traced_repo, _, _, total_theorems = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
     if not traced_repo:
         logger.info(f"Failed to trace {url}")
+        return None
+    if total_theorems == 0:
+        logger.info(f"No theorems found in {url}")
         return None
     logger.info(f"Finished generating benchmark at {dst_dir}")
 
@@ -956,7 +1012,12 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
     # The user can choose to generate a dataset from the entire dynamic database or a subset of it.
     dir_name = repo.url.split("/")[-1] + "_" + sha
     dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_with_new_{dir_name}"
-    db.generate_merged_dataset(dst_dir)
+    if (repo.url, repo.commit) not in repos_for_merged_dataset:
+        logger.info("Adding repo to repos_for_merged_dataset")
+        repos_for_merged_dataset.append((repo.url, repo.commit))
+    else:
+        logger.info("Repo already in repos_for_merged_dataset")
+    db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
     # TODO: reduce repition later with all path
     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
 
@@ -1001,7 +1062,8 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
     )
 
     # Prove sorry theorems
-    prove_sorry_theorems(db, prover)
+    # if "mathlib4" not in repo.url and "SciLean" not in repo.url:  # TODO: remove later
+    prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_merged_dataset)
     db.to_json(dynamic_database_json_path)
 
     logger.info("Finished searching for proofs of sorry theorems")
