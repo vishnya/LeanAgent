@@ -14,6 +14,7 @@ import torch.nn.functional as F
 from typing import List, Dict, Any, Tuple, Union
 from transformers import T5EncoderModel, AutoTokenizer
 from torch.distributed import barrier
+from datetime import datetime, timedelta
 
 from common import (
     Premise,
@@ -64,7 +65,7 @@ class PremiseRetriever(pl.LightningModule):
     def set_lambda(self, lambda_value):
         self.lamda = lambda_value
 
-    def compute_fisher_information(self, dataloader):
+    def compute_fisher_information(self, dataloader, checkpoint_dir_original):
         logger.info("Computing Fisher Information")
         if not torch.cuda.is_available():
             logger.warning("Indexing the corpus using CPU can be very slow.")
@@ -73,8 +74,12 @@ class PremiseRetriever(pl.LightningModule):
             device = torch.device("cuda")
         # Code to compute the Fisher Information Matrix after training on the first task
         self.eval()
+        last_checkpoint_time = datetime.now()
+        checkpoint_interval = timedelta(hours=4)
+        checkpoint_dir = checkpoint_dir_original + "_mid_computation"
+        os.makedirs(checkpoint_dir, exist_ok=True)
         # Use tqdm to see progress
-        for batch in tqdm(dataloader):
+        for batch_idx, batch in enumerate(tqdm(dataloader)):
             self.zero_grad()
             # output = self.forward(**batch)
             # loss = self.loss_function(output, batch['labels'])
@@ -95,6 +100,14 @@ class PremiseRetriever(pl.LightningModule):
             for name, param in self.named_parameters():
                 if param.grad is not None:
                     self.fisher_info[name] = param.grad ** 2 + self.fisher_info.get(name, 0)
+
+            now = datetime.now()
+            if now - last_checkpoint_time >= checkpoint_interval:
+                checkpoint_path = os.path.join(checkpoint_dir, f'fisher_checkpoint_batch_{batch_idx}.pkl')
+                with open(checkpoint_path, 'wb') as f:
+                    pickle.dump(self.fisher_info, f)
+                last_checkpoint_time = now
+                logger.info(f"Fisher information checkpoint saved at {checkpoint_path}")
 
         return self.fisher_info
 
@@ -135,6 +148,7 @@ class PremiseRetriever(pl.LightningModule):
             self.corpus = path_or_corpus
             self.corpus_embeddings = None
             self.embeddings_staled = True
+            logger.info(f"Embeddings staled load corpus: {self.embeddings_staled}")
             # logger.info("End of load_corpus inside if")
             return
 
@@ -143,11 +157,13 @@ class PremiseRetriever(pl.LightningModule):
             self.corpus = Corpus(path)
             self.corpus_embeddings = None
             self.embeddings_staled = True
+            logger.info(f"Embeddings staled load corpus jsonl: {self.embeddings_staled}")
         else:  # A corpus with pre-computed embeddings.
             indexed_corpus = pickle.load(open(path, "rb"))
             self.corpus = indexed_corpus.corpus
             self.corpus_embeddings = indexed_corpus.embeddings
             self.embeddings_staled = False
+            logger.info(f"Embeddings staled load corpus pickle: {self.embeddings_staled}")
         # logger.info("End of load_corpus outside if")
 
     @property
@@ -220,6 +236,7 @@ class PremiseRetriever(pl.LightningModule):
         self.corpus = self.trainer.datamodule.corpus
         self.corpus_embeddings = None
         self.embeddings_staled = True
+        # logger.info(f"Embeddings staled on fit start: {self.embeddings_staled}")
 
     def training_step(self, batch: Dict[str, Any], _) -> torch.Tensor:
         # logger.info("Inside training_step")
@@ -246,6 +263,7 @@ class PremiseRetriever(pl.LightningModule):
         """Mark the embeddings as staled after a training batch."""
         # logger.info("Inside on_train_batch_end")
         self.embeddings_staled = True
+        # logger.info(f"Embeddings staled on train batch end: {self.embeddings_staled}")
         # logger.info("End of on_train_batch_end")
 
     def configure_optimizers(self) -> Dict[str, Any]:
@@ -261,9 +279,10 @@ class PremiseRetriever(pl.LightningModule):
 
     @torch.no_grad()
     def reindex_corpus(self, batch_size: int) -> None:
-        # logger.info("Inside reindex_corpus")
+        logger.info("Inside reindex_corpus")
         """Re-index the retrieval corpus using the up-to-date encoder."""
         if not self.embeddings_staled:
+            logger.info(f"Embeddings staled about to return reindex corpus: {self.embeddings_staled}")
             return
         logger.info("Re-indexing the retrieval corpus")
 
@@ -287,7 +306,8 @@ class PremiseRetriever(pl.LightningModule):
                 tokenized_premises.input_ids, tokenized_premises.attention_mask
             )
         self.embeddings_staled = False
-        # logger.info("End of reindex_corpus")
+        logger.info("End of reindex_corpus")
+        logger.info(f"Embeddings staled end of reindex corpus: {self.embeddings_staled}")
 
     def on_validation_start(self) -> None:
         # logger.info("Inside on_validation_start")
@@ -301,6 +321,7 @@ class PremiseRetriever(pl.LightningModule):
         # Retrieval.
         context_emb = self._encode(batch["context_ids"], batch["context_mask"])
         assert not self.embeddings_staled
+        logger.info(f"Embeddings staled validation step: {self.embeddings_staled}")
         retrieved_premises, _ = self.corpus.get_nearest_premises(
             self.corpus_embeddings,
             batch["context"],
@@ -378,6 +399,7 @@ class PremiseRetriever(pl.LightningModule):
         self.corpus = self.trainer.datamodule.corpus
         self.corpus_embeddings = None
         self.embeddings_staled = True
+        logger.info(f"Embeddings staled on predict start: {self.embeddings_staled}")
         self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
         # self.corpus_embeddings = torch.zeros(
         #     len(self.corpus.all_premises),
