@@ -69,8 +69,9 @@ class RetrievalDataset(Dataset):
 
             for i, tac in enumerate(thm["traced_tactics"]):
                 state = format_state(tac["state_before"])
+                # Some states are empty because they are from sorry theorems that have been proven.
                 context = Context(
-                    file_path, thm["full_name"], Pos(*thm["start"]), state
+                    file_path, thm["full_name"], Pos(*thm["start"]), state if state else None
                 )
                 all_pos_premises = get_all_pos_premises(
                     tac["annotated_tactic"], self.corpus
