@@ -44,10 +44,14 @@ import traceback
 import sys
 from tqdm import tqdm
 from dynamic_database import *
+import time
+from packaging import version
+import psutil
+import atexit
+from pytorch_lightning.strategies import DDPStrategy
 
 from common import set_logger
 from prover.proof_search import Status, DistributedProver, SearchResult
-import ray
 import re
 import lean_dojo
 from lean_dojo import *
@@ -65,24 +69,51 @@ from pytorch_lightning import seed_everything
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: constant?
 # TODO: do we still need repo_dir
-repo_dir = "/raid/adarsh/repos_new" # TODO: for release change these back to <DIR>
-RAID_DIR = "/raid/adarsh"
-# DATA_DIR = "datasets_retrieval_full_merge_each_time"
-# MERGED_DATA_DIR = "datasets_retrieval_PT_full_merge_each_time"
-# CHECKPOINT_DIR = "checkpoints_retrieval_full_merge_each_time"
-# FISHER_DIR = "fisher_retrieval_full_merge_each_time"
-# EVAL_RESULTS_FILE_PATH = "/home/adarsh/ReProver/total_evaluation_results_retrieval_full_merge_each_time.txt"
-# DB_FILE_NAME = "dynamic_database_retrieval_full_merge_each_time.json"
-# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_full_merge_each_time.log"
-# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_full_merge_each_time.pkl"
-DATA_DIR = "datasets_PT_full_merge_each_time"
-MERGED_DATA_DIR = "datasets_merged_PT_full_merge_each_time"
-CHECKPOINT_DIR = "checkpoints_PT_full_merge_each_time"
-FISHER_DIR = "fisher_PT_full_merge_each_time"
-EVAL_RESULTS_FILE_PATH = "/home/adarsh/ReProver/total_evaluation_results_PT_full_merge_each_time.txt"
-DB_FILE_NAME = "dynamic_database_PT_full_merge_each_time.json"
-PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_full_merge_each_time.log"
-ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_full_merge_each_time.pkl"
+repo_dir = "/data/yingzi_ma/lean_project/repos_new" # TODO: for release change these back to <DIR>
+RAID_DIR = "/data/yingzi_ma/lean_project"
+
+DATA_DIR = "datasets_PT_single_repo_ewc"
+MERGED_DATA_DIR = "datasets_merged_PT_single_repo_ewc"
+CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc"
+FISHER_DIR = "fisher_PT_single_repo_ewc"
+EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_ewc.txt"
+DB_FILE_NAME = "dynamic_database_PT_single_repo_ewc.json"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_ewc.log"
+ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc.pkl"
+
+# DATA_DIR = "datasets_PT_single_repo_no_ewc"
+# MERGED_DATA_DIR = "datasets_merged_PT_single_repo_no_ewc"
+# CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc"
+# FISHER_DIR = "fisher_PT_single_repo_no_ewc"
+# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_no_ewc.txt"
+# DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc.json"
+# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc.log"
+# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
+
+# DATA_DIR = "datasets_retrieval_single_repo_no_ewc"
+# MERGED_DATA_DIR = "datasets_merged_retrieval_single_repo_no_ewc"
+# CHECKPOINT_DIR = "checkpoints_retrieval_single_repo_no_ewc"
+# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_retrieval_single_repo_no_ewc.txt"
+# DB_FILE_NAME = "dynamic_database_retrieval_single_repo_no_ewc.json"
+# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_single_repo_no_ewc.log"
+# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_single_repo_no_ewc.pkl"
+
+# DATA_DIR = "datasets_PT_full_merge_each_time_ewc"
+# MERGED_DATA_DIR = "datasets_merged_PT_full_merge_each_time_ewc"
+# CHECKPOINT_DIR = "checkpoints_PT_full_merge_each_time_ewc"
+# FISHER_DIR = "fisher_PT_full_merge_each_time_ewc"
+# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_full_merge_each_time_ewc.txt"
+# DB_FILE_NAME = "dynamic_database_PT_full_merge_each_time_ewc.json"
+# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_full_merge_each_time_ewc.log"
+# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_full_merge_each_time_ewc.pkl"
+
+# DATA_DIR = "datasets_retrieval_full_merge_each_time_ewc"
+# MERGED_DATA_DIR = "datasets_merged_retrieval_full_merge_each_time_ewc"
+# CHECKPOINT_DIR = "checkpoints_retrieval_full_merge_each_time_ewc"
+# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_retrieval_full_merge_each_time_ewc.txt"
+# DB_FILE_NAME = "dynamic_database_retrieval_full_merge_each_time_ewc.json"
+# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_full_merge_each_time_ewc.log"
+# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_full_merge_each_time_ewc.pkl"
 # TODO: do we still need this?
 load_dotenv()
 
@@ -560,7 +591,7 @@ def merge_datasets():
     #         logger.info(f"Deleting dataset: {dataset}")
     #         shutil.rmtree(dataset_path)
 
-def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, current_epoch, epochs_per_repo=1):
+def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, current_epoch, use_fisher, epochs_per_repo=1):
     logger.info("Inside train_test_fisher")
     logger.info(f"Starting training at epoch {current_epoch}")
     seed_everything(3407)
@@ -638,26 +669,42 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     print(f"Validation dataset size after load: {len(data_module.ds_val)}")
     print(f"Testing dataset size after load: {len(data_module.ds_pred)}")
 
+    # TODO: have separate ones and save the epoch and data point, same for fisher
     mid_epoch_checkpoint_dir = os.path.join(RAID_DIR, "mid_epoch_checkpoints")
     os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
     timed_checkpoint_callback = TimedCheckpoint(checkpoint_dir=mid_epoch_checkpoint_dir)
 
+    VERY_LONG_TIMEOUT = 7 * 24 * 60 * 60  # 1 week
+    os.environ['TORCH_NCCL_ASYNC_ERROR_HANDLING'] = '1'
+    os.environ['NCCL_TIMEOUT'] = str(VERY_LONG_TIMEOUT * 1000)
+
+    custom_log_dir = os.path.join(RAID_DIR, "lightning_logs", f"{dir_name}_{use_fisher}_lambda_{lambda_value}")
+    os.makedirs(custom_log_dir, exist_ok=True)
+
+    ddp_strategy = DDPStrategy(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
     trainer = pl.Trainer(
         accelerator="gpu",
         gradient_clip_val=1.0,
         precision="bf16-mixed",
-        strategy="ddp",
-        devices=1, # TODO: change for GPU
+        strategy=ddp_strategy,
+        devices=4, # TODO: change for GPU
         accumulate_grad_batches=4,
         callbacks=[lr_monitor, checkpoint_callback, early_stop_callback, timed_checkpoint_callback],
         max_epochs=current_epoch + epochs_per_repo,
         log_every_n_steps=1,
         num_sanity_val_steps=0,
+        default_root_dir=custom_log_dir,
     )
 
     logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
 
+    # if "mathlib4" not in new_data_path:
+    #     trainer.strategy.barrier()
+    #     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+    #     trainer.strategy.barrier()
+    trainer.strategy.barrier()
     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+    trainer.strategy.barrier()
 
     logger.info(f"Finished progressive training at epoch {trainer.current_epoch}")
 
@@ -672,7 +719,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
         logger.warning("No best model found. Using the last trained model.")
         best_model = model
         # TODO: change this to the last model trained later
-        best_model_path = RAID_DIR + "/" + CHECKPOINT_DIR + "/" + "merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=2-Recall@10_val=57.22.ckpt"
+        best_model_path = RAID_DIR + "/" + CHECKPOINT_DIR + "/" + "merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310_lambda_0.1_epoch=0-Recall@10_val=58.95.ckpt"
     best_model.eval()
 
     logger.info("Testing...")
@@ -688,7 +735,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
             continue
         # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
         run_cli(best_model_path, data_path)
-        num_gpus = 1 # TODO: change for GPU
+        num_gpus = 4 # TODO: change for GPU
         preds_map = {}
         for gpu_id in range(num_gpus):
             with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
@@ -726,15 +773,29 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     ### FISHER INFORMATION MATRIX FOR NEXT EWC
 
     # Switch to one GPU for calculating the Fisher Information Matrix
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    best_model.to(device)
-    train_dataloader = data_module.train_dataloader()
-    fisher_info = best_model.compute_fisher_information(train_dataloader, RAID_DIR + "/" + FISHER_DIR)
-    dir_path = RAID_DIR + "/" + FISHER_DIR
-    fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
-    with open(fisher_name, "wb") as f:
-        pickle.dump(fisher_info, f)
-    logger.info(f"Fisher info saved to {fisher_name}")
+    # device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    # best_model.to(device)
+    if use_fisher:
+        trainer.strategy.barrier()
+        train_dataloader = data_module.train_dataloader()
+
+        def compute_fisher_wrapper(best_model, train_dataloader):
+            return best_model.compute_fisher_information(train_dataloader, RAID_DIR + "/" + FISHER_DIR)
+        
+        try:
+            fisher_info = trainer.strategy.launcher.launch(compute_fisher_wrapper, best_model, train_dataloader)
+        except Exception as e:
+            logger.error(f"Error computing Fisher Information: {str(e)}")
+            fisher_info = None
+        
+        trainer.strategy.barrier()
+
+        if trainer.is_global_zero:
+            dir_path = RAID_DIR + "/" + FISHER_DIR
+            fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
+            with open(fisher_name, "wb") as f:
+                pickle.dump(fisher_info, f)
+            logger.info(f"Fisher info saved to {fisher_name}")
 
     # TODO: add anything else from yaml conf if needed
 
@@ -756,7 +817,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     #         "max_seq_len": 512,
     #         "num_retrieved": 100,
     #     }
-    #     best_model = PremiseRetriever.load("/raid/adarsh/checkpoints_PT_full_merge_each_time/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744_lambda_0.1_epoch=1-Recall@10_val=57.05.ckpt", device, freeze=False, config=config)
+    #     best_model = PremiseRetriever.load("/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744_lambda_0.1_epoch=1-Recall@10_val=57.05.ckpt", device, freeze=False, config=config)
     #     best_model.set_lambda(lambda_value)
     #     corpus_path = new_data_path + "/corpus.jsonl"
     #     data_path = new_data_path + "/random"
@@ -892,7 +953,7 @@ class TimedCheckpoint(Callback):
             self.last_checkpoint_time = now
             logger.info(f"Mid-epoch checkpoint saved at {checkpoint_path}")
 
-def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_per_repo):
+def retrieve_proof(run_progressive_training, use_fisher, single_repo, dynamic_database_json_path, repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_per_repo):
     # TODO: update comments throughout
     """
     This method does the following:
@@ -937,15 +998,26 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
     # merge_datasets()
     # logger.info("Finished merging datasets")
 
-    if ray.is_initialized():
-        ray.shutdown()
+    if single_repo:
+        repos_for_merged_dataset = []
 
     # Prepare the data necessary to add this repo to the dynamic database
     url = repo.url
     if not url.endswith('.git'):
         url = url + '.git'
     logger.info(f"Processing {url}")
-    sha, v = get_compatible_commit(url)
+    # TODO: remove later
+    # sha, v = get_compatible_commit(url)
+    sha = None
+    v = None
+    if "mathlib4" in url:
+        sha = "2b29e73438e240a427bcecc7c0fe19306beb1310"
+        v = "v4.8.0"
+    elif "SciLean" in url:
+        sha = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
+        v = "v4.7.0"
+    else:
+        sha, v = get_compatible_commit(url)
     if not sha:
         logger.info(f"Failed to find a compatible commit for {url}")
         return None
@@ -1031,21 +1103,20 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
             return None
         
         # Train the model on the new dataset that we generated from the dynamic database.
-        if "mathlib4" not in repo.url and "SciLean" not in repo.url:  # TODO: remove later
-            train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, epochs_per_repo)
+        train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, use_fisher, epochs_per_repo)
     else:
-        model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+        model_checkpoint_path = "/data/yingzi_ma/lean_project/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
 
     # Set up the prover
     corpus_path = dst_dir + "/corpus.jsonl"
     tactic = None  # `None` since we are not using a fixed tactic generator
     module = None  # `None` since we are not using a fixed tactic generator
     num_workers = 1 # TODO: do everywhere if good
-    num_gpus = 1 # TODO: change for GPU
+    num_gpus = 4 # TODO: change for GPU
     timeout = 600
     num_sampled_tactics = 64
     debug = False
-    ckpt_path = "/raid/adarsh/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+    ckpt_path = "/data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     prover = DistributedProver(
         ckpt_path,
         corpus_path,
@@ -1062,7 +1133,6 @@ def retrieve_proof(run_progressive_training, dynamic_database_json_path, repo, r
     )
 
     # Prove sorry theorems
-    # if "mathlib4" not in repo.url and "SciLean" not in repo.url:  # TODO: remove later
     prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_merged_dataset)
     db.to_json(dynamic_database_json_path)
 
@@ -1109,9 +1179,13 @@ def main():
         # Configure these parameters!
         current_epoch = 0
         epochs_per_repo = 1
-        # run_progressive_training = False
         run_progressive_training = True
-        num_repos = 15
+        # run_progressive_training = False
+        use_fisher = True
+        # use_fisher = False
+        single_repo = True
+        # single_repo = False
+        num_repos = 2
         dynamic_database_json_path = RAID_DIR + "/" + DB_FILE_NAME
         
         lambdas = None
@@ -1119,7 +1193,6 @@ def main():
             logger.info("Running progressive training")
             lambdas = [0.1]
         else:
-            # Run retrieval baseline
             logger.info("Running retrieval baseline")
             lambdas = [0.0]
 
@@ -1138,7 +1211,7 @@ def main():
                 repo = repo_dir + "/" + repo
                 lean_git_repo = lean_git_repos[i]
                 print(f"Processing {repo}")
-                proofs = retrieve_proof(run_progressive_training, dynamic_database_json_path, lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo)
+                proofs = retrieve_proof(run_progressive_training, use_fisher, single_repo, dynamic_database_json_path, lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo)
                 current_epoch += epochs_per_repo
                 if proofs is None:
                     logger.info("Skipping repository due to configuration or error.")
