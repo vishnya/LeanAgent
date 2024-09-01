@@ -49,6 +49,7 @@ from packaging import version
 import psutil
 import atexit
 from pytorch_lightning.strategies import DDPStrategy
+import torch.distributed as dist
 
 from common import set_logger
 from prover.proof_search import Status, DistributedProver, SearchResult
@@ -204,6 +205,36 @@ PR_BODY = """We identify the files containing theorems that have `sorry`, and re
 TMP_BRANCH = "_LeanCopilotBot"
 
 COMMIT_MESSAGE = "[LeanDojoBot] `sorry` Removed"
+
+def custom_barrier(timeout=600):
+    if isinstance(timeout, timedelta):
+        timeout = timeout.total_seconds()
+    
+    rank = dist.get_rank()
+    world_size = dist.get_world_size()
+    print(f"rank: {rank}")
+    print(f"world size: {world_size}")
+    
+    # Use a tensor to synchronize
+    tensor = torch.tensor([1.0], device=f"cuda:{rank}")
+    
+    # Use all_reduce as a barrier
+    start_time = time.time()
+    while True:
+        try:
+            dist.all_reduce(tensor, op=dist.ReduceOp.SUM)
+            break
+        except RuntimeError:
+            if time.time() - start_time > timeout:
+                raise TimeoutError(f"Barrier timed out after {timeout} seconds")
+            print("sleeping")
+            time.sleep(0.1)
+    
+    # Check if all processes have reached the barrier
+    if tensor.item() == world_size:
+        print(f"Rank {rank}: Barrier completed successfully")
+    else:
+        raise RuntimeError(f"Barrier failed: expected sum {world_size}, got {tensor.item()}")
 
 def clone_repo(repo_url):
     """Clone a git repository and return the path to the repository and its sha."""
@@ -681,7 +712,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     custom_log_dir = os.path.join(RAID_DIR, "lightning_logs", f"{dir_name}_{use_fisher}_lambda_{lambda_value}")
     os.makedirs(custom_log_dir, exist_ok=True)
 
-    ddp_strategy = DDPStrategy(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
+    ddp_strategy = DDPStrategy(timeout=timedelta(seconds=VERY_LONG_TIMEOUT), process_group_backend='nccl')
     trainer = pl.Trainer(
         accelerator="gpu",
         gradient_clip_val=1.0,
@@ -698,13 +729,25 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
 
     logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
 
-    # if "mathlib4" not in new_data_path:
-    #     trainer.strategy.barrier()
-    #     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
-    #     trainer.strategy.barrier()
-    trainer.strategy.barrier()
-    trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
-    trainer.strategy.barrier()
+    if "mathlib4" not in new_data_path:
+        print("before first custom barrier")
+        custom_barrier(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
+        print("after first custom barrier")
+        try:
+            trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+        except Exception as e:
+            print(f"An error occurred during training: {str(e)}")
+            print(traceback.format_exc())
+        print("before second custom barrier")
+        custom_barrier(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
+        print("after second custom barrier")
+    # print("before first custom barrier")
+    # custom_barrier(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
+    # print("after first custom barrier")
+    # trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+    # print("before second custom barrier")
+    # custom_barrier(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
+    # print("after second custom barrier")
 
     logger.info(f"Finished progressive training at epoch {trainer.current_epoch}")
 
@@ -773,29 +816,37 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     ### FISHER INFORMATION MATRIX FOR NEXT EWC
 
     # Switch to one GPU for calculating the Fisher Information Matrix
-    # device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    # best_model.to(device)
     if use_fisher:
-        trainer.strategy.barrier()
-        train_dataloader = data_module.train_dataloader()
-
-        def compute_fisher_wrapper(best_model, train_dataloader):
-            return best_model.compute_fisher_information(train_dataloader, RAID_DIR + "/" + FISHER_DIR)
-        
         try:
-            fisher_info = trainer.strategy.launcher.launch(compute_fisher_wrapper, best_model, train_dataloader)
-        except Exception as e:
-            logger.error(f"Error computing Fisher Information: {str(e)}")
-            fisher_info = None
-        
-        trainer.strategy.barrier()
+            print("before third custom barrier")
+            custom_barrier(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
+            print("after third custom barrier")
+            logger.info("Going to start fisher after barrier")
+            if trainer.is_global_zero:
+                device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+                if isinstance(best_model, torch.nn.parallel.DistributedDataParallel):
+                    logger.info("Extracting module")
+                    best_model = best_model.module
+                
+                best_model = best_model.to(device)
+                train_dataloader = data_module.train_dataloader()
 
-        if trainer.is_global_zero:
-            dir_path = RAID_DIR + "/" + FISHER_DIR
-            fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
-            with open(fisher_name, "wb") as f:
-                pickle.dump(fisher_info, f)
-            logger.info(f"Fisher info saved to {fisher_name}")
+                logger.info("Starting fisher computation")
+                fisher_info = best_model.compute_fisher_information(train_dataloader, RAID_DIR + "/" + FISHER_DIR)
+                logger.info("Finished fisher computation")
+
+                dir_path = RAID_DIR + "/" + FISHER_DIR
+                fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
+                with open(fisher_name, "wb") as f:
+                    pickle.dump(fisher_info, f)
+                logger.info(f"Fisher info saved to {fisher_name}")
+
+            print("before fourth custom barrier")
+            custom_barrier(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
+            print("after fourth custom barrier")
+        except Exception as e:
+            print(f"An error occurred during fisher: {str(e)}")
+            print(traceback.format_exc())
 
     # TODO: add anything else from yaml conf if needed
 
@@ -1105,7 +1156,7 @@ def retrieve_proof(run_progressive_training, use_fisher, single_repo, dynamic_da
         # Train the model on the new dataset that we generated from the dynamic database.
         train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, use_fisher, epochs_per_repo)
     else:
-        model_checkpoint_path = "/data/yingzi_ma/lean_project/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+        model_checkpoint_path = "/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
 
     # Set up the prover
     corpus_path = dst_dir + "/corpus.jsonl"
