@@ -3,7 +3,6 @@
 
 import os
 import sys
-import ray
 import time
 import heapq
 import torch
@@ -24,7 +23,6 @@ from lean_dojo import (
 from loguru import logger
 from dataclasses import dataclass
 from typing import List, Optional, Tuple
-from ray.util.actor_pool import ActorPool
 
 from common import zip_strict
 from prover.search_tree import *
@@ -298,38 +296,6 @@ class BestFirstSearchProver:
 
                 node.check_invariants()
 
-# TODO: later ensure this has correct stuff like config dict
-@ray.remote
-class CpuProver(BestFirstSearchProver):
-    """Ray actor for running an instance of `BestFirstSearchProver` on a CPU."""
-
-    def __init__(
-        self,
-        ckpt_path: Optional[str],
-        indexed_corpus_path: Optional[str],
-        tactic: Optional[str],
-        module: Optional[str],
-        timeout: int,
-        num_sampled_tactics: int,
-        debug: bool,
-    ) -> None:
-        if ckpt_path is None:
-            tac_gen = FixedTacticGenerator(tactic, module)
-        else:
-            tac_gen = RetrievalAugmentedGenerator.load(
-                ckpt_path, device=torch.device("cpu"), freeze=True
-            )
-            if tac_gen.retriever is not None:
-                if indexed_corpus_path is not None:
-                    tac_gen.retriever.load_corpus(indexed_corpus_path)
-                tac_gen.retriever.reindex_corpus(batch_size=32)
-        super().__init__(
-            tac_gen,
-            timeout,
-            num_sampled_tactics,
-            debug,
-        )
-
 # TODO: reduce repetition with main
 
 def find_latest_checkpoint(raid_dir, checkpoint_dir):
@@ -341,66 +307,6 @@ def find_latest_checkpoint(raid_dir, checkpoint_dir):
     latest_checkpoint = max(all_checkpoints, key=os.path.getmtime)
     logger.info(f"Using the latest checkpoint: {latest_checkpoint}")
     return latest_checkpoint
-
-@ray.remote(num_gpus=1)
-class GpuProver(BestFirstSearchProver):
-    """Ray actor for running an instance of `BestFirstSearchProver` on a GPU."""
-
-    def __init__(
-        self,
-        ckpt_path: Optional[str],
-        indexed_corpus_path: Optional[str],
-        tactic: Optional[str],
-        module: Optional[str],
-        timeout: int,
-        num_sampled_tactics: int,
-        raid_dir: str,
-        checkpoint_dir: str,
-        debug: bool,
-        run_progressive_training: bool = True,
-    ) -> None:
-    
-        if ckpt_path is None:
-            tac_gen = FixedTacticGenerator(tactic, module)
-        else:
-            model_checkpoint_path = None
-            if run_progressive_training:
-                model_checkpoint_path = find_latest_checkpoint(raid_dir, checkpoint_dir)
-            else:
-                model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
-            
-            config = {
-                "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",
-                "lr": 1e-3,
-                "warmup_steps": 1000,
-                "num_beams": 5,
-                "eval_num_retrieved": 10,
-                "eval_num_workers": 1,
-                "eval_num_gpus": 1,
-                "eval_num_theorems": 100,
-                "max_inp_seq_len": 512,
-                "max_oup_seq_len": 128,
-                "ret_ckpt_path": model_checkpoint_path,
-            }
-
-            tac_gen = RetrievalAugmentedGenerator.load(
-                ckpt_path, device=torch.device("cuda"), freeze=True, config=config
-            )
-            logger.info(f"Loaded model from {ckpt_path}")
-            logger.info(f"Using retriever: {tac_gen.retriever}")
-            if tac_gen.retriever is not None:
-                if indexed_corpus_path is not None:
-                    logger.info(f"Loading indexed corpus from {indexed_corpus_path}")
-                    tac_gen.retriever.load_corpus(indexed_corpus_path)
-                    logger.info(f"Loaded indexed corpus from {indexed_corpus_path}")
-                tac_gen.retriever.reindex_corpus(batch_size=32)
-                logger.info("Finished reindexing!")
-        super().__init__(
-            tac_gen,
-            timeout,
-            num_sampled_tactics,
-            debug,
-        )
 
 class DistributedProver:
     """A distributed prover that uses Ray to parallelize the proof search.
@@ -440,7 +346,7 @@ class DistributedProver:
                 if run_progressive_training:
                     model_checkpoint_path = find_latest_checkpoint(raid_dir, checkpoint_dir)
                 else:
-                    model_checkpoint_path = "/raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                    model_checkpoint_path = "/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
                 
                 config = {
                     "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",
@@ -449,7 +355,7 @@ class DistributedProver:
                     "num_beams": 5,
                     "eval_num_retrieved": 10,
                     "eval_num_workers": 1,
-                    "eval_num_gpus": 1,  # TODO: change for GPU
+                    "eval_num_gpus": 4,  # TODO: change for GPU
                     "eval_num_theorems": 100,
                     "max_inp_seq_len": 512,
                     "max_oup_seq_len": 128,
@@ -470,53 +376,14 @@ class DistributedProver:
             self.prover = BestFirstSearchProver(
                 tac_gen, timeout, num_sampled_tactics, debug
             )
-            return
-
-        if num_gpus >= 1:
-            logger.info(f"Launching {num_workers} workers with {num_gpus} GPUs.")
-            num_gpus_per_worker = num_gpus / num_workers
-            provers = [
-                GpuProver.options(num_gpus=num_gpus_per_worker).remote(
-                    ckpt_path,
-                    indexed_corpus_path,
-                    tactic,
-                    module,
-                    timeout=timeout,
-                    num_sampled_tactics=num_sampled_tactics,
-                    debug=debug,
-                )
-                for _ in range(num_workers)
-            ]
-        else:
-            logger.info(f"Launching {num_workers} CPU workers.")
-            provers = [
-                CpuProver.remote(
-                    ckpt_path,
-                    indexed_corpus_path,
-                    tactic,
-                    module,
-                    timeout=timeout,
-                    num_sampled_tactics=num_sampled_tactics,
-                    debug=debug,
-                )
-                for _ in range(num_workers)
-            ]
-
-        self.prover_pool = ActorPool(provers)
 
     def search_unordered(self, repo: LeanGitRepo, theorems: List[Theorem], positions: List[Pos]) -> List[Optional[SearchResult]]:
         results = []
         for i, (thm, pos) in enumerate(zip_strict(theorems, positions)):
             try:
-                if not self.distributed:
-                    logger.info(f"Not distributed")
-                    result = self.prover.search(repo, thm, pos)
-                    logger.info(f"Not distributed, finished")
-                else:
-                    # TODO: fix this later
-                    logger.info(f"Distributed")
-                    result = ray.get(self.prover_pool.submit(lambda p, args: p.search.remote(*args), (repo, thm, pos)))
-                    logger.info(f"Distributed, finished")
+                logger.info(f"Not distributed")
+                result = self.prover.search(repo, thm, pos)
+                logger.info(f"Not distributed, finished")
                 results.append(result)
                 logger.info(f"Completed theorem: {thm.full_name}")
                 logger.info(f"Result: {result}")
