@@ -15,7 +15,6 @@ from typing import List, Dict, Any, Tuple, Union
 from transformers import T5EncoderModel, AutoTokenizer
 from torch.distributed import barrier
 from datetime import datetime, timedelta
-import torch.distributed as dist
 
 from common import (
     Premise,
@@ -29,37 +28,6 @@ from common import (
 
 
 torch.set_float32_matmul_precision("medium")
-
-def custom_barrier(timeout=600):
-    if isinstance(timeout, timedelta):
-        timeout = timeout.total_seconds()
-    
-    rank = dist.get_rank()
-    world_size = dist.get_world_size()
-    print(f"rank: {rank}")
-    print(f"world size: {world_size}")
-    
-    # Use a tensor to synchronize
-    tensor = torch.tensor([1.0], device=f"cuda:{rank}")
-    
-    # Use all_reduce as a barrier
-    start_time = time.time()
-    while True:
-        try:
-            dist.all_reduce(tensor, op=dist.ReduceOp.SUM)
-            break
-        except RuntimeError:
-            if time.time() - start_time > timeout:
-                raise TimeoutError(f"Barrier timed out after {timeout} seconds")
-            print("sleeping")
-            time.sleep(0.1)
-    
-    # Check if all processes have reached the barrier
-    if tensor.item() == world_size:
-        print(f"Rank {rank}: Barrier completed successfully")
-    else:
-        raise RuntimeError(f"Barrier failed: expected sum {world_size}, got {tensor.item()}")
-
 
 class PremiseRetriever(pl.LightningModule):
     def __init__(
@@ -98,19 +66,17 @@ class PremiseRetriever(pl.LightningModule):
 
     def compute_fisher_information(self, dataloader, checkpoint_dir_original):
         logger.info("Computing Fisher Information")
-        device = self.device
-        # if not torch.cuda.is_available():
-        #     logger.warning("Indexing the corpus using CPU can be very slow.")
-        #     device = torch.device("cpu")
-        # else:
-        #     device = torch.device("cuda")
+        if not torch.cuda.is_available():
+            logger.warning("Indexing the corpus using CPU can be very slow.")
+            device = torch.device("cpu")
+        else:
+            device = torch.device("cuda")
         # Code to compute the Fisher Information Matrix after training on the first task
         self.eval()
         last_checkpoint_time = datetime.now()
         checkpoint_interval = timedelta(hours=4)
         checkpoint_dir = checkpoint_dir_original + "_mid_computation"
         os.makedirs(checkpoint_dir, exist_ok=True)
-        fisher_info = {}
 
         for batch_idx, batch in enumerate(tqdm(dataloader)):
             self.zero_grad()
@@ -132,37 +98,16 @@ class PremiseRetriever(pl.LightningModule):
             loss.backward()
             for name, param in self.named_parameters():
                 if param.grad is not None:
-                    # self.fisher_info[name] = param.grad ** 2 + self.fisher_info.get(name, 0)
-                    grad_square = param.grad.detach().pow(2)
-                    if name not in fisher_info:
-                        fisher_info[name] = grad_square
-                    else:
-                        fisher_info[name] += grad_square
+                    self.fisher_info[name] = param.grad ** 2 + self.fisher_info.get(name, 0)
 
             now = datetime.now()
             if now - last_checkpoint_time >= checkpoint_interval:
                 checkpoint_path = os.path.join(checkpoint_dir, f'fisher_checkpoint_batch_{batch_idx}.pkl')
                 with open(checkpoint_path, 'wb') as f:
-                    pickle.dump(fisher_info, f)
+                    pickle.dump(self.fisher_info, f)
                 last_checkpoint_time = now
                 logger.info(f"Fisher information checkpoint saved at {checkpoint_path}")
     
-        VERY_LONG_TIMEOUT = 7 * 24 * 60 * 60  # 1 week
-        os.environ['TORCH_NCCL_ASYNC_ERROR_HANDLING'] = '1'
-        os.environ['NCCL_TIMEOUT'] = str(VERY_LONG_TIMEOUT * 1000)
-        print("before first custom barrier retrieval")
-        custom_barrier(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
-        print("after first custom barrier retrieval")
-        # Aggregate Fisher Information across all GPUs
-        for name in fisher_info:
-            dist.all_reduce(fisher_info[name])
-
-        # Normalize the Fisher Information
-        world_size = dist.get_world_size()
-        for name in fisher_info:
-            fisher_info[name] /= (len(dataloader) * world_size)
-
-        self.fisher_info = fisher_info
         return self.fisher_info
 
     def ewc_loss(self):
@@ -622,12 +567,7 @@ class PremiseRetriever(pl.LightningModule):
             #         f.write(f"R1: {r1}, R10: {r10}, MRR: {mrr}\n")
 
         self.predict_step_outputs.clear()
-        VERY_LONG_TIMEOUT = 7 * 24 * 60 * 60  # 1 week
-        os.environ['TORCH_NCCL_ASYNC_ERROR_HANDLING'] = '1'
-        os.environ['NCCL_TIMEOUT'] = str(VERY_LONG_TIMEOUT * 1000)
-        print("before second custom barrier retrieval")
-        custom_barrier(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
-        print("after second custom barrier retrieval")
+        barrier()
 
         if self.trainer.is_global_zero:
             logger.info("All GPUs have completed their predictions and saved the data.")
