@@ -1,3 +1,5 @@
+import math
+from typing import Union
 import unittest
 import datetime
 from pathlib import Path
@@ -18,7 +20,7 @@ from typing import Tuple
 import os
 from unittest.mock import patch, MagicMock
 
-RAID_DIR = "/raid/adarsh"
+RAID_DIR = "/data/yingzi_ma/lean_project"
 DATA_DIR = "datasets_new"
 MERGED_DATA_DIR = "datasets_merged"
 PROOF_LOG_FILE_NAME = "proof_logs_test/proof_log_unit_tests.log"
@@ -862,6 +864,125 @@ class TestDynamicDatabaseCore(unittest.TestCase):
         self.assertEqual(added_repo.lean_dojo_version, "1.0.0")
         self.assertIsInstance(added_repo.metadata["date_processed"], datetime.datetime)
         self.assertEqual(added_repo.pr_url, None)
+    
+    def test_update_theorem_difficulty(self):
+        theorem = Theorem(
+            full_name="test_theorem",
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123",
+            difficulty_rating=None
+        )
+        self.repo.proven_theorems.append(theorem)
+        self.db.add_repository(self.repo)
+
+        # Calculate and update difficulty
+        difficulty = 10
+        theorem.difficulty_rating = difficulty
+
+        # Verify the difficulty has been updated
+        updated_theorem = self.repo.get_theorem("test_theorem", "test.lean")
+        self.assertIsNotNone(updated_theorem.difficulty_rating)
+        self.assertEqual(updated_theorem.difficulty_rating, difficulty)
+
+        # Test updating difficulty of an existing theorem
+        new_difficulty = 0.8
+        theorem.difficulty_rating = new_difficulty
+        updated_theorem = self.repo.get_theorem("test_theorem", "test.lean")
+        self.assertEqual(updated_theorem.difficulty_rating, new_difficulty)
+
+        self.db.update_repository(self.repo)
+        json_file = "theorem_difficulty_test.json"
+        self.db.to_json(json_file)
+
+        # Read the JSON file and verify its contents
+        loaded_db = DynamicDatabase.from_json(json_file)
+        loaded_repo = loaded_db.get_repository("https://github.com/test/repo", "abc123")
+        self.assertIsNotNone(loaded_repo)
+        
+        loaded_theorem = loaded_repo.get_theorem("test_theorem", "test.lean")
+        self.assertIsNotNone(loaded_theorem)
+
+    def create_theorem(self, name, tactics):
+        return Theorem(
+            full_name=name,
+            file_path=Path("test.lean"),
+            start=Pos(1, 1),
+            end=Pos(2, 1),
+            url="https://github.com/test/repo",
+            commit="abc123",
+            traced_tactics=tactics
+        )
+    
+    def _calculate_difficulty(self, theorem: Theorem) -> Union[float, None]:
+        proof_steps = theorem.traced_tactics
+        if any('sorry' in step.tactic for step in proof_steps):
+            return float('inf')  # Hard (no proof)
+        if len(proof_steps) == 0:
+            return None  # To be distributed later
+        return math.exp(len(proof_steps))
+
+    def test_calculate_and_update_difficulty(self):
+        # Test case 1: Theorem with 'sorry'
+        sorry_theorem = self.create_theorem("sorry_theorem", [
+            AnnotatedTactic(tactic="sorry", annotated_tactic=("sorry", []), state_before="", state_after="")
+        ])
+        self.repo.sorry_theorems_unproved.append(sorry_theorem)
+
+        # Test case 2: Theorem with no tactics
+        empty_theorem = self.create_theorem("empty_theorem", [])
+        self.repo.proven_theorems.append(empty_theorem)
+
+        # Test case 3: Theorem with proven sorry
+        normal_theorem = self.create_theorem("proven_sorry_theorem", [
+            AnnotatedTactic(tactic="tactic1", annotated_tactic=("tactic1", []), state_before="", state_after=""),
+            AnnotatedTactic(tactic="tactic2", annotated_tactic=("tactic2", []), state_before="", state_after="")
+        ])
+        self.repo.proven_theorems.append(normal_theorem)
+
+        # Test case 4: Theorem with normal teactics
+        normal_theorem = self.create_theorem("normal_theorem", [
+            AnnotatedTactic(tactic="tactic1", annotated_tactic=("tactic1", []), state_before="before", state_after="no goals"),
+            AnnotatedTactic(tactic="tactic2", annotated_tactic=("tactic2", []), state_before="before2", state_after="no goals")
+        ])
+        self.repo.proven_theorems.append(normal_theorem)
+
+        self.db.add_repository(self.repo)
+        json_file = "theorem_difficulty_test.json"
+        self.db.to_json(json_file)
+
+        for theorem in self.repo.get_all_theorems:
+            difficulty = self._calculate_difficulty(theorem)
+            theorem.difficulty_rating = difficulty
+
+        self.db.update_repository(self.repo)
+
+        sorry_theorem = self.repo.get_theorem("sorry_theorem", "test.lean")
+        self.assertEqual(sorry_theorem.difficulty_rating, float('inf'))
+
+        empty_theorem = self.repo.get_theorem("empty_theorem", "test.lean")
+        self.assertIsNone(empty_theorem.difficulty_rating)
+
+        normal_theorem = self.repo.get_theorem("normal_theorem", "test.lean")
+        self.assertEqual(normal_theorem.difficulty_rating, math.exp(2))
+
+        # Test JSON serialization and deserialization
+        self.db.to_json(json_file)
+
+        loaded_db = DynamicDatabase.from_json(json_file)
+        loaded_repo = loaded_db.get_repository("https://github.com/test/repo", "abc123")
+        self.assertIsNotNone(loaded_repo)
+
+        loaded_sorry_theorem = loaded_repo.get_theorem("sorry_theorem", "test.lean")
+        self.assertEqual(loaded_sorry_theorem.difficulty_rating, float('inf'))
+
+        loaded_empty_theorem = loaded_repo.get_theorem("empty_theorem", "test.lean")
+        self.assertIsNone(loaded_empty_theorem.difficulty_rating)
+
+        loaded_normal_theorem = loaded_repo.get_theorem("normal_theorem", "test.lean")
+        self.assertEqual(loaded_normal_theorem.difficulty_rating, math.exp(2))
 
 class TestDynamicDatabaseSimpleLean(unittest.TestCase):
     def setUp(self):
