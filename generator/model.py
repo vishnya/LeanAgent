@@ -26,6 +26,21 @@ from retrieval.model import PremiseRetriever
 
 torch.set_float32_matmul_precision("medium")
 
+def safe_remove_dir(dir_path):
+    if os.path.exists(dir_path):
+        logger.warning(f"{dir_path} already exists. Removing it now.")
+        max_retries = 5
+        for attempt in range(max_retries):
+            try:
+                shutil.rmtree(dir_path)
+                break
+            except PermissionError as e:
+                if attempt < max_retries - 1:
+                    time.sleep(0.1)  # Wait a bit before retrying
+                else:
+                    logger.error(f"Failed to remove {dir_path} after {max_retries} attempts: {e}")
+                    raise
+
 
 class TopkAccuracy(Metric):
     is_differentiable: Optional[bool] = False
@@ -291,8 +306,7 @@ class RetrievalAugmentedGenerator(TacticGenerator, pl.LightningModule):
         self.log("Pass@1_val", acc, on_step=False, on_epoch=True, sync_dist=True)
         logger.info(f"Pass@1: {acc}")
 
-        if os.path.exists(ckpt_path):
-            shutil.rmtree(ckpt_path)
+        safe_remove_dir(ckpt_path)
 
     ##############
     # Prediction #
