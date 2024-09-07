@@ -46,6 +46,11 @@ import traceback
 import sys
 from tqdm import tqdm
 from dynamic_database import *
+import time
+from packaging import version
+import psutil
+import atexit
+from pytorch_lightning.strategies import DDPStrategy
 
 from common import set_logger
 from prover.proof_search import Status, DistributedProver, SearchResult
@@ -706,15 +711,20 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
     timed_checkpoint_callback = TimedCheckpoint(checkpoint_dir=mid_epoch_checkpoint_dir)
 
-    custom_log_dir = os.path.join(RAID_DIR, "lightning_logs", f"{dir_name}_{use_fisher}_lambda_{lambda_value}_2")
+    VERY_LONG_TIMEOUT = 7 * 24 * 60 * 60  # 1 week
+    os.environ['TORCH_NCCL_ASYNC_ERROR_HANDLING'] = '1'
+    os.environ['NCCL_TIMEOUT'] = str(VERY_LONG_TIMEOUT * 1000)
+
+    custom_log_dir = os.path.join(RAID_DIR, "lightning_logs", f"{dir_name}_{use_fisher}_lambda_{lambda_value}")
     os.makedirs(custom_log_dir, exist_ok=True)
 
+    ddp_strategy = DDPStrategy(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
     trainer = pl.Trainer(
         accelerator="gpu",
         gradient_clip_val=1.0,
         precision="bf16-mixed",
-        strategy="ddp",
-        devices=1, # TODO: change for GPU
+        strategy=ddp_strategy,
+        devices=4, # TODO: change for GPU
         accumulate_grad_batches=4,
         callbacks=[lr_monitor, checkpoint_callback, early_stop_callback, timed_checkpoint_callback],
         max_epochs=current_epoch + epochs_per_repo,
@@ -726,7 +736,13 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
 
     try:
+        # if "mathlib4" not in new_data_path:
+        #     trainer.strategy.barrier()
+        #     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+        #     trainer.strategy.barrier()
+        trainer.strategy.barrier()
         trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+        trainer.strategy.barrier()
     except Exception as e:
         print(f"An error occurred during training: {str(e)}")
         print(traceback.format_exc())
@@ -763,7 +779,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
             continue
         # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
         run_cli(best_model_path, data_path)
-        num_gpus = 1 # TODO: change for GPU
+        num_gpus = 4 # TODO: change for GPU
         preds_map = {}
         for gpu_id in range(num_gpus):
             with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
@@ -800,6 +816,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     
     ### FISHER INFORMATION MATRIX FOR NEXT EWC
 
+    # TODO: distributed later
     # Switch to one GPU for calculating the Fisher Information Matrix
     if use_fisher:
         try:
@@ -998,6 +1015,9 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     elif "SciLean" in url:
         sha = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
         v = "v4.7.0"
+    elif "pfr" in url:
+        sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+        v = "v4.8.0-rc1"
     else:
         sha, v = get_compatible_commit(url)
     if not sha:
@@ -1060,42 +1080,6 @@ def retrieve_proof(run_progressive_training, use_fisher, single_repo, curriculum
     3. Generate a corpus of the repo's premises.
     4. Search for proofs for theorems with `sorry` in them.
     """
-    # url1 = "https://github.com/teorth/pfr.git"
-    # url2 = "https://github.com/Adarsh321123/new-version-test.git"
-    # for url in [url1, url2]:
-    #     if ray.is_initialized():
-    #         ray.shutdown()
-
-    #     if not url.endswith('.git'):
-    #         url = url + '.git'
-
-    #     logger.info(f"Processing {url}")
-    #     sha, v = get_compatible_commit(url)
-    #     if not sha:
-    #         logger.info(f"Failed to find a compatible commit for {url}")
-    #         return None
-    #     logger.info(f"Found compatible commit {sha} for {url}")
-    #     logger.info(f"Lean version: {v}")
-    #     url = url.replace('.git', '')
-    #     repo = LeanGitRepo(url, sha)
-
-    #     dir_name = repo.url.split("/")[-1] + "_" + sha
-    #     # dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name
-    #     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name + "_updated"
-    #     logger.info(f"Generating benchmark at {dst_dir}")
-    #     traced_repo, num_premises, num_files_traced, total_theorems = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
-    #     if not traced_repo:
-    #         logger.info(f"Failed to trace {url}")
-    #         return None
-    #     if total_theorems < 3 * BATCH_SIZE:  # Should be enough theorems for train/val/test
-    #          logger.info(f"No theorems found in {url}")
-    #          return None
-    #     logger.info(f"Finished generating benchmark at {dst_dir}")
-
-    # logger.info("Merging datasets")
-    # merge_datasets()
-    # logger.info("Finished merging datasets")
-
     if single_repo:
         repos_for_merged_dataset = []
 
@@ -1287,70 +1271,6 @@ def load_sorted_repos(file_path: str) -> List[Tuple[str, str, str]]:
 def main():
     """The main function that drives the bot."""
     try:
-        # logger.info("Configuring LeanDojo...")
-        # generate_benchmark_lean4.configure_leandojo()
-        # logger.info("LeanDojo configured")
-        # use_vllm = False
-        # dst_dir = RAID_DIR + "/" + "datasets_PT_single_repo_no_ewc_pfr" + "/" + f"merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687"
-        # corpus_path = dst_dir + "/corpus.jsonl"
-        # tactic = None  # `None` since we are not using a fixed tactic generator
-        # module = None  # `None` since we are not using a fixed tactic generator
-        # num_workers = 4 # TODO: do everywhere if good
-        # num_gpus = 4 # TODO: change for GPU
-        # timeout = 10
-        # max_expansions = None
-        # num_sampled_tactics = 64
-        # debug = False
-        # ckpt_path = "/data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
-        # logger.info("Initializing DistributedProver")
-        # prover = DistributedProver(
-        #     use_vllm,
-        #     ckpt_path,
-        #     corpus_path,
-        #     tactic,
-        #     module,
-        #     num_workers,
-        #     num_gpus=num_gpus,
-        #     timeout=timeout,
-        #     max_expansions=max_expansions,
-        #     num_sampled_tactics=num_sampled_tactics,
-        #     raid_dir=RAID_DIR,
-        #     checkpoint_dir=CHECKPOINT_DIR,
-        #     debug=debug,
-        #     run_progressive_training=False,
-        # )
-        # repo_url =  "https://github.com/teorth/pfr"
-        # repo_commit = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
-        # lean_dojo_theorem1 = LeanDojoTheorem(
-        #     repo=LeanGitRepo(repo_url, repo_commit),
-        #     file_path="PFR/MoreRuzsaDist.lean",
-        #     full_name="multiDist_indep"
-        # )
-        # pos1 = Pos(760, 1)
-        # lean_dojo_theorem2 = LeanDojoTheorem(
-        #     repo=LeanGitRepo(repo_url, repo_commit),
-        #     file_path="PFR/MoreRuzsaDist.lean",
-        #     full_name="iter_multiDist_chainRule"
-        # )
-        # pos2 = Pos(973, 1)
-        # lean_dojo_theorem3 = LeanDojoTheorem(
-        #     repo=LeanGitRepo(repo_url, repo_commit),
-        #     file_path="PFR/RhoFunctional.lean",
-        #     full_name="condRho_minus_le"
-        # )
-        # pos3 = Pos(95, 1)
-        # lean_dojo_theorem4 = LeanDojoTheorem(
-        #     repo=LeanGitRepo(repo_url, repo_commit),
-        #     file_path="PFR/RhoFunctional.lean",
-        #     full_name="phi_min_exists"
-        # )
-        # pos4 = Pos(128, 1)
-        # logger.info("Proving test theorem")
-        # theorems = [lean_dojo_theorem1, lean_dojo_theorem2, lean_dojo_theorem3, lean_dojo_theorem4]
-        # positions = [pos1, pos2, pos3, pos4]
-        # results = prover.search_unordered(LeanGitRepo(repo_url, repo_commit), theorems, positions)
-        # return
-
         # Configure these parameters!
         current_epoch = 0
         epochs_per_repo = 1
