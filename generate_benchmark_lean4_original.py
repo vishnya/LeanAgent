@@ -281,7 +281,7 @@ def main(url, commit, dst_dir):
     if not is_supported_version(v):
         logger.info("Unsupported version")
     v = v[1:] # ignore "v" at beginning
-    lean_dir = "/home/adarsh/.elan/toolchains/leanprover--lean4---" + v
+    lean_dir = "/data/yingzi_ma/.elan/toolchains/leanprover--lean4---" + v
     logger.info(f"lean path {lean_dir}")
     if not os.path.exists(lean_dir):
         logger.info(f"Lean toolchain path does not exist: {lean_dir}")
