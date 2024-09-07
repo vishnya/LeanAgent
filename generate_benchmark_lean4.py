@@ -275,6 +275,37 @@ def export_metadata(traced_repo: TracedRepo, dst_path: Path, **kwargs) -> None:
     json.dump(metadata, (dst_path / "metadata.json").open("wt"))
 
 
+def safe_remove_dir(dir_path):
+    if os.path.exists(dir_path):
+        logger.warning(f"{dir_path} already exists. Removing it now.")
+        max_retries = 5
+        for attempt in range(max_retries):
+            try:
+                shutil.rmtree(dir_path)
+                break
+            except PermissionError as e:
+                if attempt < max_retries - 1:
+                    time.sleep(0.1)  # Wait a bit before retrying
+                else:
+                    logger.error(f"Failed to remove {dir_path} after {max_retries} attempts: {e}")
+                    raise
+
+
+def safe_remove_dir_path(dir_path):
+    if dir_path.exists():
+        logger.warning(f"{dir_path} already exists. Removing it now.")
+        max_retries = 5
+        for attempt in range(max_retries):
+            try:
+                shutil.rmtree(dir_path)
+                break
+            except PermissionError as e:
+                if attempt < max_retries - 1:
+                    time.sleep(0.1)  # Wait a bit before retrying
+                else:
+                    logger.error(f"Failed to remove {dir_path} after {max_retries} attempts: {e}")
+                    raise
+
 def export_data(
     traced_repo: TracedRepo,
     splits: Dict[SPLIT_STRATEGY, SPLIT],
@@ -284,9 +315,7 @@ def export_data(
     """Export a traced repo whose theorems have been splitted to ``dst_path``."""
     if isinstance(dst_path, str):
         dst_path = Path(dst_path)
-    if dst_path.exists():
-        logger.warning(f"{dst_path} already exists. Removing it now.")
-        shutil.rmtree(dst_path)
+    safe_remove_dir_path(dst_path)
 
     # Export the proofs.
     total_theorems = export_proofs(splits, dst_path, traced_repo)
@@ -368,9 +397,7 @@ def main(url, commit, dst_dir):
     except Exception as e:
         logger.info(f"Failed to trace repo {repo} because of {e}")
         return None, 0, 0, 10
-    if os.path.exists(dst_dir):
-        logger.warning(f"{dst_dir} already exists. Removing it now.")
-        shutil.rmtree(dst_dir)
+    safe_remove_dir(dst_dir)
     splits = split_data(traced_repo)
     logger.info("Successfully split the data")
     num_premises, num_files_traced, total_theorems = export_data(traced_repo, splits, dst_dir)
