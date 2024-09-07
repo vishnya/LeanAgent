@@ -134,6 +134,6 @@ def main(hf_model_path, ct2_model_path):
     # print("Feature extracted successfully!")
 
 if __name__ == "__main__":
-    hf_model_path = "/home/adarsh/ReProver/leandojo-lean4-retriever-byt5-small"
+    hf_model_path = "/data/yingzi_ma/lean_project/ReProver/leandojo-lean4-retriever-byt5-small"
     ct2_model_path = "ct2-leandojo-lean4-retriever-byt5-small"
     main(hf_model_path, ct2_model_path)
