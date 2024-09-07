@@ -34,4 +34,4 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 
-# python scripts/convert_checkpoint.py --src /raid/adarsh/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt --dst /home/adarsh/ReProver/leandojo-lean4-retriever-byt5-small
+# python scripts/convert_checkpoint.py --src /data/yingzi_ma/lean_project/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt --dst /data/yingzi_ma/lean_project/ReProver/leandojo-lean4-retriever-byt5-small
