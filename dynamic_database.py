@@ -406,8 +406,11 @@ class DynamicDatabase:
         for repo in repos_to_process:
             for theorem in repo.get_all_theorems:
                 key = (theorem.file_path, theorem.full_name, list(theorem.start)[0], list(theorem.start)[1], list(theorem.end)[0], list(theorem.end)[1])
-                if key not in all_theorems or repo.metadata["date_processed"] > all_theorems[key][1]:
-                    all_theorems[key] = (theorem, repo.metadata["date_processed"])
+                date_processed = repo.metadata["date_processed"]
+                if isinstance(date_processed, str):
+                    date_processed = datetime.datetime.fromisoformat(date_processed)
+                if key not in all_theorems or date_processed > all_theorems[key][1]:
+                    all_theorems[key] = (theorem, date_processed)
 
             all_traced_files.update(repo.files_traced)
 
