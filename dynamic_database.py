@@ -371,6 +371,22 @@ class Repository:
         else:
             raise ValueError("The theorem is not in the list of unproved sorry theorems.")
 
+# TODO: we do need these safe removes anymore if we don't have any race conditions?
+def safe_remove_dir_path(dir_path):
+    if dir_path.exists():
+        logger.warning(f"{dir_path} already exists. Removing it now.")
+        max_retries = 5
+        for attempt in range(max_retries):
+            try:
+                shutil.rmtree(dir_path)
+                break
+            except PermissionError as e:
+                if attempt < max_retries - 1:
+                    time.sleep(0.1)  # Wait a bit before retrying
+                else:
+                    logger.error(f"Failed to remove {dir_path} after {max_retries} attempts: {e}")
+                    raise
+
 @dataclass
 class DynamicDatabase:
     repositories: List[Repository] = field(default_factory=list)
@@ -417,9 +433,7 @@ class DynamicDatabase:
         theorems = [t for t, _ in all_theorems.values()]
         splits = self._split_data(theorems)
 
-        if output_path.exists():
-            logger.warning(f"{output_path} already exists. Removing it now.")
-            shutil.rmtree(output_path)
+        safe_remove_dir_path(output_path)
 
         self._export_proofs(splits, output_path)
         logger.info(f"Exported proofs to {output_path}")
