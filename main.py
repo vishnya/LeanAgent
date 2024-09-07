@@ -7,6 +7,8 @@ This is the driver for LeanBot. It will do the following things:
 5. Open a pull request.
 """
 
+import math
+from collections import defaultdict
 import os
 import urllib
 import requests
@@ -64,26 +66,42 @@ from pytorch_lightning import seed_everything
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: constant?
 # TODO: do we still need repo_dir
+BATCH_SIZE=4
 repo_dir = "/data/yingzi_ma/lean_project/repos_new" # TODO: for release change these back to <DIR>
 RAID_DIR = "/data/yingzi_ma/lean_project"
 
-DATA_DIR = "datasets_PT_single_repo_ewc"
-MERGED_DATA_DIR = "datasets_merged_PT_single_repo_ewc"
-CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc"
-FISHER_DIR = "fisher_PT_single_repo_ewc"
-EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_ewc.txt"
-DB_FILE_NAME = "dynamic_database_PT_single_repo_ewc.json"
-PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_ewc.log"
-ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc.pkl"
+# DATA_DIR = "datasets_PT_merge_all_no_ewc"
+# MERGED_DATA_DIR = "datasets_merged_PT_merge_all_no_ewc"
+# CHECKPOINT_DIR = "checkpoints_PT_merge_all_no_ewc"
+# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_merge_all_no_ewc.txt"
+# DB_FILE_NAME = "dynamic_database_PT_merge_all_no_ewc.json"
+# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_merge_all_no_ewc.log"
+# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_no_ewc.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_no_ewc"
 # MERGED_DATA_DIR = "datasets_merged_PT_single_repo_no_ewc"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc"
-# FISHER_DIR = "fisher_PT_single_repo_no_ewc"
 # EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_no_ewc.txt"
 # DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
+
+DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum"
+MERGED_DATA_DIR = "datasets_merged_PT_single_repo_no_ewc_curriculum"
+CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum"
+EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum.txt"
+DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_curriculum.json"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum.log"
+ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curriculum.pkl"
+
+# DATA_DIR = "datasets_PT_single_repo_ewc"
+# MERGED_DATA_DIR = "datasets_merged_PT_single_repo_ewc"
+# CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc"
+# FISHER_DIR = "fisher_PT_single_repo_ewc"
+# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_ewc.txt"
+# DB_FILE_NAME = "dynamic_database_PT_single_repo_ewc.json"
+# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_ewc.log"
+# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc.pkl"
 
 # DATA_DIR = "datasets_retrieval_single_repo_no_ewc"
 # MERGED_DATA_DIR = "datasets_merged_retrieval_single_repo_no_ewc"
@@ -126,14 +144,6 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc.pkl"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_merge_all_no_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_merge_all_no_ewc.pkl"
 
-# DATA_DIR = "datasets_PT_merge_all_no_ewc"
-# MERGED_DATA_DIR = "datasets_merged_PT_merge_all_no_ewc"
-# CHECKPOINT_DIR = "checkpoints_PT_merge_all_no_ewc"
-# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_merge_all_no_ewc.txt"
-# DB_FILE_NAME = "dynamic_database_PT_merge_all_no_ewc.json"
-# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_merge_all_no_ewc.log"
-# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_no_ewc.pkl"
-
 # TODO: do we still need this?
 load_dotenv()
 
@@ -161,31 +171,31 @@ known_repositories = [
     # newly tested:
     "leanprover-community/lean4-metaprogramming-book",
     # "ImperialCollegeLondon/FLT",
-    # "kmill/lean4-raytracer",
-    # "argumentcomputer/yatima",
-    # "ImperialCollegeLondon/formalising-mathematics-2024",
-    # "leanprover-community/ProofWidgets4",
-    # "leanprover/verso",
-    # "leanprover-community/NNG4",
-    # "ufmg-smite/lean-smt",
+    "kmill/lean4-raytracer",  # no theorems
+    "argumentcomputer/yatima",  # trace problems
+    "ImperialCollegeLondon/formalising-mathematics-2024",  # trace problems
+    "leanprover-community/ProofWidgets4",  # trace problems
+    "leanprover/verso",  # trace problems
+    "leanprover-community/NNG4", # TODO: comment out for cloud
+    "ufmg-smite/lean-smt",  # fails to trace due to windows-style line endings
     # "google-deepmind/debate",
-    # "teorth/symmetric_project",
-    # "cmu-l3/llmlean",
-    # "PatrickMassot/GlimpseOfLean",
-    # "avigad/lamr",
-    # "leanprover-community/quote4",
+    "teorth/symmetric_project",  # no compatible commit
+    "cmu-l3/llmlean",  # irrelevant + only 4 theorems
+    "PatrickMassot/GlimpseOfLean",   # strange trace problems with _parse_deps
+    "avigad/lamr",  # trace problems
+    "leanprover-community/quote4",  # no theorems
     # "yuma-mizuno/lean-math-workshop",
-    # "leanprover-community/iris-lean",
+    "leanprover-community/iris-lean",  # trace problems
     # "aripiprazole/rinha",
     # "loganrjmurphy/LeanEuclid",
-    # "leanprover/lean4-cli",
-    # "leanprover/LeanInk",
+    "leanprover/lean4-cli",  # no theorems
+    "leanprover/LeanInk",  # no theorems
     # "leanprover-community/lean-auto",
-    # "leanprover-community/repl",
-    # "leanprover/doc-gen4",
+    "leanprover-community/repl",  # no theorems
+    "leanprover/doc-gen4",  # no theorems
     # "leanprover-community/con-nf",
     # "FormalizedFormalLogic/Foundation",
-    # "leanprover/SampCert",
+    "leanprover/SampCert",  # trace problems
     # "nomeata/loogle",
     # "risc0/risc0-lean4",
     # "siddhartha-gadgil/Saturn",
@@ -206,6 +216,7 @@ known_repositories = [
 
 repos = []  # stores the names of all the repos
 lean_git_repos = []  # stores the LeanGitRepo objects
+attempted_repos = set()
 
 personal_access_token = os.environ.get("GITHUB_ACCESS_TOKEN")
 
@@ -372,6 +383,7 @@ def get_compatible_commit(url):
         return None, None
 
 def search_github_repositories(language="Lean", num_repos=10):
+    global attempted_repos
     """Search for the given number of repositories on GitHub that have the given language."""
     headers = {'Authorization': personal_access_token}
     query_params = {
@@ -390,7 +402,7 @@ def search_github_repositories(language="Lean", num_repos=10):
                 break
             repo_full_name = repo['full_name']
             logger.info(f"Processing {repo_full_name}")
-            if repo_full_name not in known_repositories:
+            if repo_full_name not in known_repositories and repo_full_name not in attempted_repos:
                 name = None
                 try:
                     clone_url = repo['clone_url']
@@ -657,7 +669,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
         num_negatives=3,
         num_in_file_negatives=1,
         model_name="google/byt5-small",
-        batch_size=4,
+        batch_size=BATCH_SIZE,
         eval_batch_size=64,
         max_seq_len=1024,
         num_workers=4
@@ -835,7 +847,7 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     #         num_negatives=3,
     #         num_in_file_negatives=1,
     #         model_name="google/byt5-small",
-    #         batch_size=4,
+    #         batch_size=BATCH_SIZE,
     #         eval_batch_size=64,
     #         max_seq_len=1024,
     #         num_workers=4
@@ -970,7 +982,75 @@ class TimedCheckpoint(Callback):
             self.last_checkpoint_time = now
             logger.info(f"Mid-epoch checkpoint saved at {checkpoint_path}")
 
-def retrieve_proof(run_progressive_training, use_fisher, single_repo, dynamic_database_json_path, repo, repo_no_dir, sha, lambda_value, current_epoch, epochs_per_repo):
+def add_repo_to_database(dynamic_database_json_path, repo, db):
+    # Prepare the data necessary to add this repo to the dynamic database
+    url = repo.url
+    if not url.endswith('.git'):
+        url = url + '.git'
+    logger.info(f"Processing {url}")
+    # TODO: remove later
+    # sha, v = get_compatible_commit(url)
+    sha = None
+    v = None
+    if "mathlib4" in url:
+        sha = "2b29e73438e240a427bcecc7c0fe19306beb1310"
+        v = "v4.8.0"
+    elif "SciLean" in url:
+        sha = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
+        v = "v4.7.0"
+    else:
+        sha, v = get_compatible_commit(url)
+    if not sha:
+        logger.info(f"Failed to find a compatible commit for {url}")
+        return None
+    logger.info(f"Found compatible commit {sha} for {url}")
+    logger.info(f"Lean version: {v}")
+    url = url.replace('.git', '')
+    repo = LeanGitRepo(url, sha)
+    dir_name = repo.url.split("/")[-1] + "_" + sha
+    dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name
+    logger.info(f"Generating benchmark at {dst_dir}")
+    traced_repo, _, _, total_theorems = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
+    if not traced_repo:
+        logger.info(f"Failed to trace {url}")
+        return None
+    if total_theorems < 3 * BATCH_SIZE:  # Should be enough theorems for train/val/test
+        logger.info(f"No theorems found in {url}")
+        return None
+    logger.info(f"Finished generating benchmark at {dst_dir}")
+
+    # Add the new repo to the dynamic database
+    config = repo.get_config("lean-toolchain")
+    v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
+    theorems_folder = dst_dir + "/random"
+    premise_files_corpus = dst_dir + "/corpus.jsonl"
+    files_traced = dst_dir + "/traced_files.jsonl"
+    pr_url = None
+    data = {
+        "url": repo.url,
+        "name": "/".join(repo.url.split("/")[-2:]),
+        "commit": repo.commit,
+        "lean_version": v,
+        "lean_dojo_version": lean_dojo.__version__,
+        "metadata": {
+            "date_processed": datetime.datetime.now(),
+        },
+        "theorems_folder": theorems_folder,
+        "premise_files_corpus": premise_files_corpus,
+        "files_traced": files_traced,
+        "pr_url": pr_url
+    }
+    
+    repo = Repository.from_dict(data)
+    logger.info("Before adding new repo:")
+    db.print_database_contents()
+    db.add_repository(repo)
+    logger.info("After adding new repo:")
+    db.print_database_contents()
+    db.to_json(dynamic_database_json_path)
+    return "Done"
+
+def retrieve_proof(run_progressive_training, use_fisher, single_repo, curriculum_learning, dynamic_database_json_path, repo, sha, lambda_value, current_epoch, epochs_per_repo, db):
     global repos_for_merged_dataset
     # TODO: update comments throughout
     """
@@ -1007,7 +1087,7 @@ def retrieve_proof(run_progressive_training, use_fisher, single_repo, dynamic_da
     #     if not traced_repo:
     #         logger.info(f"Failed to trace {url}")
     #         return None
-    #     if total_theorems == 0:
+    #     if total_theorems < 3 * BATCH_SIZE:  # Should be enough theorems for train/val/test
     #          logger.info(f"No theorems found in {url}")
     #          return None
     #     logger.info(f"Finished generating benchmark at {dst_dir}")
@@ -1019,84 +1099,10 @@ def retrieve_proof(run_progressive_training, use_fisher, single_repo, dynamic_da
     if single_repo:
         repos_for_merged_dataset = []
 
-    # Prepare the data necessary to add this repo to the dynamic database
-    url = repo.url
-    if not url.endswith('.git'):
-        url = url + '.git'
-    logger.info(f"Processing {url}")
-    # TODO: remove later
-    # sha, v = get_compatible_commit(url)
-    sha = None
-    v = None
-    if "mathlib4" in url:
-        sha = "2b29e73438e240a427bcecc7c0fe19306beb1310"
-        v = "v4.8.0"
-    elif "SciLean" in url:
-        sha = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
-        v = "v4.7.0"
-    else:
-        sha, v = get_compatible_commit(url)
-    if not sha:
-        logger.info(f"Failed to find a compatible commit for {url}")
-        return None
-    logger.info(f"Found compatible commit {sha} for {url}")
-    logger.info(f"Lean version: {v}")
-    url = url.replace('.git', '')
-    repo = LeanGitRepo(url, sha)
-    dir_name = repo.url.split("/")[-1] + "_" + sha
-    dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name
-    logger.info(f"Generating benchmark at {dst_dir}")
-    traced_repo, _, _, total_theorems = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
-    if not traced_repo:
-        logger.info(f"Failed to trace {url}")
-        return None
-    if total_theorems == 0:
-        logger.info(f"No theorems found in {url}")
-        return None
-    logger.info(f"Finished generating benchmark at {dst_dir}")
-
-    # Add the new repo to the dynamic database
-    config = repo.get_config("lean-toolchain")
-    v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
-    theorems_folder = dst_dir + "/random"
-    premise_files_corpus = dst_dir + "/corpus.jsonl"
-    files_traced = dst_dir + "/traced_files.jsonl"
-    pr_url = None
-    data = {
-        "url": repo.url,
-        "name": "/".join(repo.url.split("/")[-2:]),
-        "commit": repo.commit,
-        "lean_version": v,
-        "lean_dojo_version": lean_dojo.__version__,
-        "metadata": {
-            "date_processed": datetime.datetime.now(),
-        },
-        "theorems_folder": theorems_folder,
-        "premise_files_corpus": premise_files_corpus,
-        "files_traced": files_traced,
-        "pr_url": pr_url
-    }
-
-    if not os.path.exists(dynamic_database_json_path) or os.path.getsize(dynamic_database_json_path) == 0:
-        # File doesn't exist or is empty, initialize it
-        db = DynamicDatabase()
-        db.to_json(dynamic_database_json_path)
-    else:
-        try:
-            db = DynamicDatabase.from_json(dynamic_database_json_path)
-        except json.JSONDecodeError:
-            # If there's an error decoding the JSON, initialize a new database
-            logger.warning(f"Error decoding JSON from {dynamic_database_json_path}. Initializing new database.")
-            db = DynamicDatabase()
-            db.to_json(dynamic_database_json_path)
-    
-    repo = Repository.from_dict(data)
-    logger.info("Before adding new repo:")
-    db.print_database_contents()
-    db.add_repository(repo)
-    logger.info("After adding new repo:")
-    db.print_database_contents()
-    db.to_json(dynamic_database_json_path)
+    if not curriculum_learning:
+        result = add_repo_to_database(dynamic_database_json_path, repo, db)
+        if result is None:
+            return None
 
     # Generate a new dataset from the dynamic database.
     # The user can choose to generate a dataset from the entire dynamic database or a subset of it.
@@ -1127,16 +1133,19 @@ def retrieve_proof(run_progressive_training, use_fisher, single_repo, dynamic_da
         model_checkpoint_path = "/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
 
     # Set up the prover
+    use_vllm = False
     corpus_path = dst_dir + "/corpus.jsonl"
     tactic = None  # `None` since we are not using a fixed tactic generator
     module = None  # `None` since we are not using a fixed tactic generator
-    num_workers = 1 # TODO: do everywhere if good
+    num_workers = 4 # TODO: do everywhere if good
     num_gpus = 4 # TODO: change for GPU
     timeout = 600
+    max_expansions = None
     num_sampled_tactics = 64
     debug = False
     ckpt_path = "/data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     prover = DistributedProver(
+        use_vllm,
         ckpt_path,
         corpus_path,
         tactic,
@@ -1144,6 +1153,7 @@ def retrieve_proof(run_progressive_training, use_fisher, single_repo, dynamic_da
         num_workers,
         num_gpus=num_gpus,
         timeout=timeout,
+        max_expansions=max_expansions,
         num_sampled_tactics=num_sampled_tactics,
         raid_dir=RAID_DIR,
         checkpoint_dir=CHECKPOINT_DIR,
@@ -1191,10 +1201,156 @@ def replace_sorry_with_proof(proofs):
 
     logger.info("Finished replacing sorries with proofs!")
 
+def calculate_difficulty(theorem: Theorem) -> Union[float, None]:
+    proof_steps = theorem.traced_tactics
+    if any('sorry' in step.tactic for step in proof_steps):
+        return float('inf')  # Hard (no proof)
+    if len(proof_steps) == 0:
+        return None  # To be distributed later
+    return math.exp(len(proof_steps))
+
+def categorize_difficulty(difficulty: Union[float, None], percentiles: List[float]) -> str:
+    if difficulty is None:
+        return "To_Distribute"
+    if difficulty == float('inf'):
+        return "Hard (No proof)"
+    elif difficulty <= percentiles[0]:
+        return "Easy"
+    elif difficulty <= percentiles[1]:
+        return "Medium"
+    else:
+        return "Hard"
+
+def sort_repositories_by_difficulty(db: DynamicDatabase) -> List[Repository]:
+    difficulties_by_repo = defaultdict(list)
+    all_difficulties = []
+
+    print("Ready to calculate difficulties of all theorems")
+    for repo in db.repositories:
+        print(f"Starting {repo.name}")
+        for theorem in repo.get_all_theorems:
+            difficulty = calculate_difficulty(theorem)
+            theorem.difficulty_rating = difficulty
+            difficulties_by_repo[repo].append((theorem.full_name, str(theorem.file_path), tuple(theorem.start), tuple(theorem.end), difficulty))
+            if difficulty is not None:
+                all_difficulties.append(difficulty)
+            
+        db.update_repository(repo)
+        print(f"Finished {repo.name}")
+
+    percentiles = np.percentile(all_difficulties, [33, 67])
+
+    categorized_theorems = defaultdict(lambda: defaultdict(list))
+
+    print("Ready to categorize theorems")
+    for repo, theorems in difficulties_by_repo.items():
+        print(f"Starting {repo.name}")
+        for theorem_name, file_path, start, end, difficulty in theorems:
+            category = categorize_difficulty(difficulty, percentiles)
+            categorized_theorems[repo][category].append((theorem_name, file_path, start, end, difficulty))
+        print(f"Finished {repo.name}")
+
+    print("Distributed theorems with no proofs")
+    for repo in categorized_theorems:
+        print(f"Starting {repo.name}")
+        to_distribute = categorized_theorems[repo]["To_Distribute"]
+        chunk_size = len(to_distribute) // 3
+        for i, category in enumerate(["Easy", "Medium", "Hard"]):
+            start = i * chunk_size
+            end = start + chunk_size if i < 2 else None
+            categorized_theorems[repo][category].extend(to_distribute[start:end])
+        del categorized_theorems[repo]["To_Distribute"]
+        print(f"Finished {repo.name}")
+
+    # Sort repositories based on the number of easy theorems
+    sorted_repos = sorted(categorized_theorems.keys(), key=lambda r: len(categorized_theorems[r]["Easy"]), reverse=True)
+
+    return sorted_repos, categorized_theorems, percentiles
+
+def save_sorted_repos(sorted_repos: List[Repository], file_path: str):
+    sorted_repo_data = [
+        {
+            "url": repo.url,
+            "commit": repo.commit,
+            "name": repo.name
+        } for repo in sorted_repos
+    ]
+    with open(file_path, 'w') as f:
+        json.dump(sorted_repo_data, f, indent=2)
+
+def load_sorted_repos(file_path: str) -> List[Tuple[str, str, str]]:
+    with open(file_path, 'r') as f:
+        sorted_repo_data = json.load(f)
+    return [(repo["url"], repo["commit"], repo["name"]) for repo in sorted_repo_data]
+
 # TODO: incorporate latest changes from ReProver repo
 def main():
     """The main function that drives the bot."""
     try:
+        # logger.info("Configuring LeanDojo...")
+        # generate_benchmark_lean4.configure_leandojo()
+        # logger.info("LeanDojo configured")
+        # use_vllm = False
+        # dst_dir = RAID_DIR + "/" + "datasets_PT_single_repo_no_ewc_pfr" + "/" + f"merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687"
+        # corpus_path = dst_dir + "/corpus.jsonl"
+        # tactic = None  # `None` since we are not using a fixed tactic generator
+        # module = None  # `None` since we are not using a fixed tactic generator
+        # num_workers = 4 # TODO: do everywhere if good
+        # num_gpus = 4 # TODO: change for GPU
+        # timeout = 10
+        # max_expansions = None
+        # num_sampled_tactics = 64
+        # debug = False
+        # ckpt_path = "/data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+        # logger.info("Initializing DistributedProver")
+        # prover = DistributedProver(
+        #     use_vllm,
+        #     ckpt_path,
+        #     corpus_path,
+        #     tactic,
+        #     module,
+        #     num_workers,
+        #     num_gpus=num_gpus,
+        #     timeout=timeout,
+        #     max_expansions=max_expansions,
+        #     num_sampled_tactics=num_sampled_tactics,
+        #     raid_dir=RAID_DIR,
+        #     checkpoint_dir=CHECKPOINT_DIR,
+        #     debug=debug,
+        #     run_progressive_training=False,
+        # )
+        # repo_url =  "https://github.com/teorth/pfr"
+        # repo_commit = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+        # lean_dojo_theorem1 = LeanDojoTheorem(
+        #     repo=LeanGitRepo(repo_url, repo_commit),
+        #     file_path="PFR/MoreRuzsaDist.lean",
+        #     full_name="multiDist_indep"
+        # )
+        # pos1 = Pos(760, 1)
+        # lean_dojo_theorem2 = LeanDojoTheorem(
+        #     repo=LeanGitRepo(repo_url, repo_commit),
+        #     file_path="PFR/MoreRuzsaDist.lean",
+        #     full_name="iter_multiDist_chainRule"
+        # )
+        # pos2 = Pos(973, 1)
+        # lean_dojo_theorem3 = LeanDojoTheorem(
+        #     repo=LeanGitRepo(repo_url, repo_commit),
+        #     file_path="PFR/RhoFunctional.lean",
+        #     full_name="condRho_minus_le"
+        # )
+        # pos3 = Pos(95, 1)
+        # lean_dojo_theorem4 = LeanDojoTheorem(
+        #     repo=LeanGitRepo(repo_url, repo_commit),
+        #     file_path="PFR/RhoFunctional.lean",
+        #     full_name="phi_min_exists"
+        # )
+        # pos4 = Pos(128, 1)
+        # logger.info("Proving test theorem")
+        # theorems = [lean_dojo_theorem1, lean_dojo_theorem2, lean_dojo_theorem3, lean_dojo_theorem4]
+        # positions = [pos1, pos2, pos3, pos4]
+        # results = prover.search_unordered(LeanGitRepo(repo_url, repo_commit), theorems, positions)
+        # return
+
         # Configure these parameters!
         current_epoch = 0
         epochs_per_repo = 1
@@ -1206,7 +1362,9 @@ def main():
         # single_repo = False
         start_with_pfr = False
         # start_with_pfr = True
-        num_repos = 2
+        # curriculum_learning = False
+        curriculum_learning = True
+        num_repos = 15
         dynamic_database_json_path = RAID_DIR + "/" + DB_FILE_NAME
         
         lambdas = None
@@ -1221,56 +1379,182 @@ def main():
         generate_benchmark_lean4.configure_leandojo()
         logger.info("LeanDojo configured")
 
-        # search_github_repositories("Lean", num_repos)
-
-        clone_url = "https://github.com/leanprover-community/mathlib4.git"
-        sha = "2b29e73438e240a427bcecc7c0fe19306beb1310"
-        url = clone_url.replace('.git', '')
-        lean_git_repo = LeanGitRepo(url, sha)
-        lean_git_repos.append(lean_git_repo)
-        repos.append("leanprover-community/mathlib4")
-
-        clone_url = "https://github.com/lecopivo/SciLean.git"
-        sha = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
-        url = clone_url.replace('.git', '')
-        lean_git_repo = LeanGitRepo(url, sha)
-        lean_git_repos.append(lean_git_repo)
-        repos.append("lecopivo/SciLean")
+        if not os.path.exists(dynamic_database_json_path) or os.path.getsize(dynamic_database_json_path) == 0:
+            # File doesn't exist or is empty, initialize it
+            db = DynamicDatabase()
+            db.to_json(dynamic_database_json_path)
+        else:
+            try:
+                db = DynamicDatabase.from_json(dynamic_database_json_path)
+            except json.JSONDecodeError:
+                # If there's an error decoding the JSON, initialize a new database
+                logger.warning(f"Error decoding JSON from {dynamic_database_json_path}. Initializing new database.")
+                db = DynamicDatabase()
+                db.to_json(dynamic_database_json_path)
 
         print(f"Found {num_repos} repositories")
 
-        for i in range(num_repos):
-            for lambda_value in lambdas:
-                print(f"Using lambda = {lambda_value}")
-                repo = repos[i]
-                repo_no_dir = repo
-                repo = repo_dir + "/" + repo
-                lean_git_repo = lean_git_repos[i]
-                if start_with_pfr:
-                    if "pfr" not in lean_git_repo.url:
+        if curriculum_learning:
+            repos_added = 0
+            attempted_repos.add("dwrensha/compfiles")
+            attempted_repos.add("leanprover-community/mathlib4")
+            attempted_repos.add("AlexKontorovich/PrimeNumberTheoremAnd")
+            attempted_repos.add("ImperialCollegeLondon/FLT")
+            attempted_repos.add("teorth/pfr")
+            attempted_repos.add("lecopivo/SciLean")
+            attempted_repos.add("google-deepmind/debate")
+            attempted_repos.add("avigad/mathematics_in_lean_source")
+            attempted_repos.add("digama0/lean4lean")
+            attempted_repos.add("yuma-mizuno/lean-math-workshop")
+            attempted_repos.add("loganrjmurphy/LeanEuclid")
+            while repos_added < num_repos:
+                search_github_repositories("Lean", num_repos - repos_added)
+                for i in range(len(repos)):
+                    if repos_added >= num_repos:
+                        break
+                    repo = repos[i]
+                    repo_no_dir = repo
+                    repo = repo_dir + "/" + repo
+                    lean_git_repo = lean_git_repos[i]
+                    print(f"Processing {repo}")
+                    if add_repo_to_database(dynamic_database_json_path, lean_git_repo, db) is not None:
+                        repos_added += 1
+                        logger.info(f"Successfully added repo {lean_git_repo.url}. Total repos: {repos_added}")
+                        attempted_repos.add(repo)
+                
+                if repos_added < num_repos:
+                    logger.info(f"Not enough repos added ({repos_added}/{num_repos}). Searching for more...")
+            
+            logger.info(f"Successfully added {num_repos} repositories to the database")
+            
+            sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
+            print("Sorted repositories. Saving now...")
+            db.to_json(dynamic_database_json_path)
+            save_sorted_repos(sorted_repos, "sorted_repos.json")
+            print("Summary of theorem difficulties by URL:")
+            for repo in sorted_repos:
+                print(f"\nURL: {repo.url}")
+                for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+                    theorems = categorized_theorems[repo][category]
+                    print(f"  {category}: {len(theorems)} theorems")
+                    if theorems:
+                        sorted_theorems = sorted(theorems, key=lambda x: x[2] if x[2] is not None else -float('inf'), reverse=True)[:3]
+                        for name, path, start, end, diff in sorted_theorems:
+                            diff_str = f"{diff:.2f}" if diff is not None else "N/A"
+                            print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
+
+            print("\nOverall Statistics:")
+            total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
+            for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+                count = sum(len(categories[category]) for categories in categorized_theorems.values())
+                percentage = (count / total_theorems) * 100
+                print(f"{category}: {count} theorems ({percentage:.2f}%)")
+
+            print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
+
+            # print("\nTheorems without proofs (Hard (No proof)), sorted by file path:")
+            # for repo in sorted_repos:
+            #     no_proof_theorems = categorized_theorems[repo]["Hard (No proof)"]
+            #     if no_proof_theorems:
+            #         print(f"\nURL: {repo.url}")
+            #         print(f"  Hard (No proof): {len(no_proof_theorems)} theorems")
+            #         sorted_theorems = sorted(no_proof_theorems, key=lambda x: x[1])  # Sort by file path
+            #         for name, path, start, end, diff in sorted_theorems:
+            #             print(f"  - {name} (File: {path})")
+            
+            for repo in sorted_repos:
+                for lambda_value in lambdas:
+                    print(f"Using lambda = {lambda_value}")
+                    if start_with_pfr:
+                        if "pfr" not in repo.name:
+                            continue
+                        else:
+                            start_with_pfr = False
+                    print(f"Processing {repo.name}")
+                    lean_git_repo = LeanGitRepo(repo.url, repo.commit)
+                    proofs = retrieve_proof(run_progressive_training, use_fisher, single_repo, curriculum_learning, dynamic_database_json_path, lean_git_repo, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo, db)
+                    current_epoch += epochs_per_repo
+                    if proofs is None:
+                        logger.info("Skipping repository due to configuration or error.")
                         continue
-                    else:
-                        start_with_pfr = False
-                print(f"Processing {repo}")
-                proofs = retrieve_proof(run_progressive_training, use_fisher, single_repo, dynamic_database_json_path, lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo)
-                current_epoch += epochs_per_repo
-                if proofs is None:
-                    logger.info("Skipping repository due to configuration or error.")
-                    continue
-                # Uncomment if you would like to contribute back to the repos!
-                # else:
-                #     base_branch = get_default_branch(repo_no_dir)
-                #     subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
-                #     subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
-                #     subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
-                #     create_or_switch_branch(repo, TMP_BRANCH, base_branch)
-                #     replace_sorry_with_proof(proofs)
-                #     committed = commit_changes(repo, COMMIT_MESSAGE)
-                #     if committed:
-                #         push_changes(repo, TMP_BRANCH)
-                #         url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
-                #         # TODO: add the PR URL to the database
-                #     shutil.rmtree(repo)
+
+        else:
+            # search_github_repositories("Lean", num_repos)
+
+            # clone_url = "https://github.com/leanprover-community/mathlib4.git"
+            # sha = "2b29e73438e240a427bcecc7c0fe19306beb1310"
+            # url = clone_url.replace('.git', '')
+            # lean_git_repo = LeanGitRepo(url, sha)
+            # lean_git_repos.append(lean_git_repo)
+            # repos.append("leanprover-community/mathlib4")
+
+            # clone_url = "https://github.com/lecopivo/SciLean.git"
+            # sha = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
+            # url = clone_url.replace('.git', '')
+            # lean_git_repo = LeanGitRepo(url, sha)
+            # lean_git_repos.append(lean_git_repo)
+            # repos.append("lecopivo/SciLean")
+
+            # clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
+            # sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
+            # url = clone_url.replace('.git', '')
+            # lean_git_repo = LeanGitRepo(url, sha)
+            # lean_git_repos.append(lean_git_repo)
+            # repos.append("AlexKontorovich/PrimeNumberTheoremAnd")
+
+            # clone_url = "https://github.com/avigad/mathematics_in_lean_source.git"
+            # sha = "cfe61bc71b5ea501f89df36c945949a1febf5e75"
+            # url = clone_url.replace('.git', '')
+            # lean_git_repo = LeanGitRepo(url, sha)
+            # lean_git_repos.append(lean_git_repo)
+            # repos.append("avigad/mathematics_in_lean_source")
+
+            clone_url = "https://github.com/teorth/pfr.git"
+            sha = "8c01cbdc177f408d64abd494a50678008df1d961"
+            url = clone_url.replace('.git', '')
+            lean_git_repo = LeanGitRepo(url, sha)
+            lean_git_repos.append(lean_git_repo)
+            repos.append("teorth/pfr")
+
+            # clone_url = "https://github.com/dwrensha/compfiles.git"
+            # sha = "6cd50c4002244ff6e905e493789b309cdc8a615d"
+            # url = clone_url.replace('.git', '')
+            # lean_git_repo = LeanGitRepo(url, sha)
+            # lean_git_repos.append(lean_git_repo)
+            # repos.append("dwrensha/compfiles")
+
+            for i in range(num_repos):
+                for lambda_value in lambdas:
+                    print(f"Using lambda = {lambda_value}")
+                    repo = repos[i]
+                    repo_no_dir = repo
+                    repo = repo_dir + "/" + repo
+                    lean_git_repo = lean_git_repos[i]
+                    if start_with_pfr:
+                        if "pfr" not in lean_git_repo.url:
+                            continue
+                        else:
+                            start_with_pfr = False
+                    print(f"Processing {repos[i]}")
+                    proofs = retrieve_proof(run_progressive_training, use_fisher, single_repo, curriculum_learning, dynamic_database_json_path, lean_git_repo, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo, db)
+                    current_epoch += epochs_per_repo
+                    if proofs is None:
+                        logger.info("Skipping repository due to configuration or error.")
+                        continue
+                    # Uncomment if you would like to contribute back to the repos!
+                    # else:
+                    #     base_branch = get_default_branch(repo_no_dir)
+                    #     subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
+                    #     subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
+                    #     subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
+                    #     create_or_switch_branch(repo, TMP_BRANCH, base_branch)
+                    #     replace_sorry_with_proof(proofs)
+                    #     committed = commit_changes(repo, COMMIT_MESSAGE)
+                    #     if committed:
+                    #         push_changes(repo, TMP_BRANCH)
+                    #         url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
+                    #         # TODO: add the PR URL to the database
+                    #     shutil.rmtree(repo)
     except Exception as e:
         logger.info(f"An error occurred: {e}", file=sys.stderr)
         traceback.print_exc()
