@@ -45,5 +45,5 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 
-# python retrieval/index.py --ckpt_path leandojo-lean4-retriever-byt5-small --corpus-path /raid/adarsh/datasets/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5/corpus.jsonl --output-path indexed_corpus.pkl
+# python retrieval/index.py --ckpt_path leandojo-lean4-retriever-byt5-small --corpus-path /data/yingzi_ma/lean_project/datasets/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5/corpus.jsonl --output-path indexed_corpus.pkl
 # python retrieval/index.py --ckpt_path leandojo-lean4-retriever-byt5-small --corpus-path mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5/corpus.jsonl --output-path indexed_corpus.pkl

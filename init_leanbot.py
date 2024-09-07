@@ -16,7 +16,7 @@ import pickle
 
 URL = "https://github.com/leanprover-community/mathlib4"
 COMMIT = "29dcec074de168ac2bf835a77ef68bbe069194c5"
-RAID_DIR = "/raid/adarsh"
+RAID_DIR = "/data/yingzi_ma/lean_project"
 DATA_DIR = "datasets"
 CHECKPOINTS_DIR = "checkpoints"
 

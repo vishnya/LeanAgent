@@ -74,7 +74,7 @@ class PremiseRetriever(pl.LightningModule):
         # Code to compute the Fisher Information Matrix after training on the first task
         self.eval()
         last_checkpoint_time = datetime.now()
-        checkpoint_interval = timedelta(hours=4)
+        checkpoint_interval = timedelta(hours=0.5)
         checkpoint_dir = checkpoint_dir_original + "_mid_computation"
         os.makedirs(checkpoint_dir, exist_ok=True)
 
