@@ -337,7 +337,7 @@ def main(url, commit, dst_dir):
     v = v[1:] # ignore "v" at beginning
     
     # TODO: set this in main.py so we don't need to do so here
-    ROOT_DIR = os.environ.get('ROOT_DIR', '/home/adarsh')
+    ROOT_DIR = os.environ.get('ROOT_DIR', '/data/yingzi_ma')
     lean_dir1 = f"{ROOT_DIR}/.elan/toolchains/leanprover--lean4---{v}"
     lean_dir2 = f"/.elan/toolchains/leanprover--lean4---{v}"
     lean_dir3 = f"~/.elan/toolchains/leanprover--lean4---{v}"
@@ -369,8 +369,8 @@ def main(url, commit, dst_dir):
         logger.info(f"Failed to trace repo {repo} because of {e}")
         return None, 0, 0, 10
     if os.path.exists(dst_dir):
-        logger.warning(f"{dst_dir} already exists. Using it instead.")
-        return traced_repo, 0, 0, 10
+        logger.warning(f"{dst_dir} already exists. Removing it now.")
+        shutil.rmtree(dst_dir)
     splits = split_data(traced_repo)
     logger.info("Successfully split the data")
     num_premises, num_files_traced, total_theorems = export_data(traced_repo, splits, dst_dir)
