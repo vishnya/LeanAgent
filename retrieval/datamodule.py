@@ -54,8 +54,12 @@ class RetrievalDataset(Dataset):
             data = list(itertools.chain.from_iterable(self._load_data(path) for path in data_paths))
             # Cache the data
             # create file if it does not already exist
-            if not os.path.exists(os.path.dirname(cache_file)):
-                os.makedirs(os.path.dirname(cache_file))
+            try:
+                os.makedirs(os.path.dirname(cache_file), exist_ok=True)
+            except OSError as exc:
+                if exc.errno != errno.EEXIST:
+                    raise
+                pass
             with open(cache_file, 'wb') as file:
                 pickle.dump(data, file)
             logger.info(f"Saved loaded data to cache {cache_file}")
