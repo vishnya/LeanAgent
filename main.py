@@ -72,26 +72,26 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: constant?
 # TODO: do we still need repo_dir
 BATCH_SIZE=4
-repo_dir = "/data/yingzi_ma/lean_project/repos_new" # TODO: for release change these back to <DIR>
-RAID_DIR = "/data/yingzi_ma/lean_project"
+RAID_DIR = os.environ.get('RAID_DIR')
+repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
 # CHECKPOINT_DIR = "checkpoints_PT_merge_all_no_ewc"
-# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_merge_all_no_ewc.txt"
+# EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_merge_all_no_ewc.txt"
 # DB_FILE_NAME = "dynamic_database_PT_merge_all_no_ewc.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_merge_all_no_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_no_ewc.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_no_ewc"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc"
-# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_no_ewc.txt"
+# EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc.txt"
 # DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum"
-# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum.txt"
+# EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum.txt"
 # DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_curriculum.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curriculum.pkl"
@@ -99,14 +99,14 @@ RAID_DIR = "/data/yingzi_ma/lean_project"
 # DATA_DIR = "datasets_PT_single_repo_ewc"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc"
 # FISHER_DIR = "fisher_PT_single_repo_ewc"
-# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_ewc.txt"
+# EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_ewc.txt"
 # DB_FILE_NAME = "dynamic_database_PT_single_repo_ewc.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc.pkl"
 
 # DATA_DIR = "datasets_retrieval_single_repo_no_ewc"
 # CHECKPOINT_DIR = "checkpoints_retrieval_single_repo_no_ewc"
-# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_retrieval_single_repo_no_ewc.txt"
+# EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_retrieval_single_repo_no_ewc.txt"
 # DB_FILE_NAME = "dynamic_database_retrieval_single_repo_no_ewc.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_single_repo_no_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_single_repo_no_ewc.pkl"
@@ -114,28 +114,28 @@ RAID_DIR = "/data/yingzi_ma/lean_project"
 # DATA_DIR = "datasets_PT_single_repo_ewc_pfr"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc_pfr"
 # FISHER_DIR = "fisher_PT_single_repo_ewc_pfr"
-# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_ewc_pfr.txt"
+# EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_ewc_pfr.txt"
 # DB_FILE_NAME = "dynamic_database_PT_single_repo_ewc_pfr.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_ewc_pfr.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc_pfr.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_no_ewc_pfr"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_pfr"
-# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_no_ewc_pfr.txt"
+# EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc_pfr.txt"
 # DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_pfr.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_pfr.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_pfr.pkl"
 
 DATA_DIR = "datasets_retrieval_single_repo_no_ewc_pfr"
 CHECKPOINT_DIR = "checkpoints_retrieval_single_repo_no_ewc_pfr"
-EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_retrieval_single_repo_no_ewc_pfr.txt"
+EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_retrieval_single_repo_no_ewc_pfr.txt"
 DB_FILE_NAME = "dynamic_database_retrieval_single_repo_no_ewc_pfr.json"
 PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_single_repo_no_ewc_pfr.log"
 ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_single_repo_no_ewc_pfr.pkl"
 
 # DATA_DIR = "datasets_retrieval_merge_all_no_ewc"
 # CHECKPOINT_DIR = "checkpoints_retrieval_merge_all_no_ewc"
-# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_retrieval_merge_all_no_ewc.txt"
+# EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_retrieval_merge_all_no_ewc.txt"
 # DB_FILE_NAME = "dynamic_database_retrieval_merge_all_no_ewc.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_merge_all_no_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_merge_all_no_ewc.pkl"
@@ -932,7 +932,7 @@ def retrieve_proof(run_progressive_training, use_fisher, single_repo, curriculum
         # Train the model on the new dataset that we generated from the dynamic database.
         train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, use_fisher, epochs_per_repo)
     else:
-        model_checkpoint_path = "/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+        model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
 
     # Set up the prover
     use_vllm = False
@@ -945,7 +945,7 @@ def retrieve_proof(run_progressive_training, use_fisher, single_repo, curriculum
     max_expansions = None
     num_sampled_tactics = 64
     debug = False
-    ckpt_path = "/data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+    ckpt_path = f"{RAID_DIR}/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
     prover = DistributedProver(
         use_vllm,
         ckpt_path,
@@ -1140,85 +1140,87 @@ def main():
 
         logger.info(f"Found {num_repos} repositories")
 
-        # TODO: come back to this
         if curriculum_learning:
             logger.info("Starting curriculum learning")
-            repos_added = 0
-            attempted_repos.add("dwrensha/compfiles")
-            attempted_repos.add("leanprover-community/mathlib4")
-            attempted_repos.add("AlexKontorovich/PrimeNumberTheoremAnd")
-            attempted_repos.add("ImperialCollegeLondon/FLT")
-            attempted_repos.add("teorth/pfr")
-            attempted_repos.add("lecopivo/SciLean")
-            attempted_repos.add("google-deepmind/debate")
-            attempted_repos.add("avigad/mathematics_in_lean_source")
-            attempted_repos.add("digama0/lean4lean")
-            attempted_repos.add("yuma-mizuno/lean-math-workshop")
-            attempted_repos.add("loganrjmurphy/LeanEuclid")
-            while repos_added < num_repos:
-                search_github_repositories("Lean", num_repos - repos_added)
-                for i in range(len(repos)):
-                    if repos_added >= num_repos:
-                        break
-                    repo = repos[i]
-                    repo_no_dir = repo
-                    repo = repo_dir + "/" + repo
-                    lean_git_repo = lean_git_repos[i]
-                    print(f"Processing {repo}")
-                    if add_repo_to_database(dynamic_database_json_path, lean_git_repo, db) is not None:
-                        repos_added += 1
-                        logger.info(f"Successfully added repo {lean_git_repo.url}. Total repos: {repos_added}")
-                        attempted_repos.add(repo)
+            if is_main_process:
+                repos_added = 0
+                # TODO: remove later
+                attempted_repos.add("dwrensha/compfiles")
+                attempted_repos.add("leanprover-community/mathlib4")
+                attempted_repos.add("AlexKontorovich/PrimeNumberTheoremAnd")
+                attempted_repos.add("ImperialCollegeLondon/FLT")
+                attempted_repos.add("teorth/pfr")
+                attempted_repos.add("lecopivo/SciLean")
+                attempted_repos.add("google-deepmind/debate")
+                attempted_repos.add("avigad/mathematics_in_lean_source")
+                attempted_repos.add("digama0/lean4lean")
+                attempted_repos.add("yuma-mizuno/lean-math-workshop")
+                attempted_repos.add("loganrjmurphy/LeanEuclid")
+                while repos_added < num_repos:
+                    search_github_repositories("Lean", num_repos - repos_added)
+                    for i in range(len(repos)):
+                        if repos_added >= num_repos:
+                            break
+                        repo = repos[i]
+                        repo_no_dir = repo
+                        repo = repo_dir + "/" + repo
+                        lean_git_repo = lean_git_repos[i]
+                        print(f"Processing {repo}")
+                        if add_repo_to_database(dynamic_database_json_path, lean_git_repo, db) is not None:
+                            repos_added += 1
+                            logger.info(f"Successfully added repo {lean_git_repo.url}. Total repos: {repos_added}")
+                            attempted_repos.add(repo)
+                    
+                    if repos_added < num_repos:
+                        logger.info(f"Not enough repos added ({repos_added}/{num_repos}). Searching for more...")
                 
-                if repos_added < num_repos:
-                    logger.info(f"Not enough repos added ({repos_added}/{num_repos}). Searching for more...")
-            
-            logger.info(f"Successfully added {num_repos} repositories to the database")
-            
-            sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
-            print("Sorted repositories. Saving now...")
-            db.to_json(dynamic_database_json_path)
-            save_sorted_repos(sorted_repos, "sorted_repos.json")
-            print("Summary of theorem difficulties by URL:")
-            for repo in sorted_repos:
-                print(f"\nURL: {repo.url}")
+                logger.info(f"Successfully added {num_repos} repositories to the database")
+                
+                sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
+                print("Sorted repositories. Saving now...")
+                db.to_json(dynamic_database_json_path)
+                save_sorted_repos(sorted_repos, "sorted_repos.json")
+                print("Summary of theorem difficulties by URL:")
+                for repo in sorted_repos:
+                    print(f"\nURL: {repo.url}")
+                    for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+                        theorems = categorized_theorems[repo][category]
+                        print(f"  {category}: {len(theorems)} theorems")
+                        if theorems:
+                            sorted_theorems = sorted(theorems, key=lambda x: x[2] if x[2] is not None else -float('inf'), reverse=True)[:3]
+                            for name, path, start, end, diff in sorted_theorems:
+                                diff_str = f"{diff:.2f}" if diff is not None else "N/A"
+                                print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
+
+                print("\nOverall Statistics:")
+                total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
                 for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-                    theorems = categorized_theorems[repo][category]
-                    print(f"  {category}: {len(theorems)} theorems")
-                    if theorems:
-                        sorted_theorems = sorted(theorems, key=lambda x: x[2] if x[2] is not None else -float('inf'), reverse=True)[:3]
-                        for name, path, start, end, diff in sorted_theorems:
-                            diff_str = f"{diff:.2f}" if diff is not None else "N/A"
-                            print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
+                    count = sum(len(categories[category]) for categories in categorized_theorems.values())
+                    percentage = (count / total_theorems) * 100
+                    print(f"{category}: {count} theorems ({percentage:.2f}%)")
 
-            print("\nOverall Statistics:")
-            total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
-            for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-                count = sum(len(categories[category]) for categories in categorized_theorems.values())
-                percentage = (count / total_theorems) * 100
-                print(f"{category}: {count} theorems ({percentage:.2f}%)")
+                print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
 
-            print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
-
-            # print("\nTheorems without proofs (Hard (No proof)), sorted by file path:")
-            # for repo in sorted_repos:
-            #     no_proof_theorems = categorized_theorems[repo]["Hard (No proof)"]
-            #     if no_proof_theorems:
-            #         print(f"\nURL: {repo.url}")
-            #         print(f"  Hard (No proof): {len(no_proof_theorems)} theorems")
-            #         sorted_theorems = sorted(no_proof_theorems, key=lambda x: x[1])  # Sort by file path
-            #         for name, path, start, end, diff in sorted_theorems:
-            #             print(f"  - {name} (File: {path})")
+                # print("\nTheorems without proofs (Hard (No proof)), sorted by file path:")
+                # for repo in sorted_repos:
+                #     no_proof_theorems = categorized_theorems[repo]["Hard (No proof)"]
+                #     if no_proof_theorems:
+                #         print(f"\nURL: {repo.url}")
+                #         print(f"  Hard (No proof): {len(no_proof_theorems)} theorems")
+                #         sorted_theorems = sorted(no_proof_theorems, key=lambda x: x[1])  # Sort by file path
+                #         for name, path, start, end, diff in sorted_theorems:
+                #             print(f"  - {name} (File: {path})")
             
+            # TODO: same as below
             for repo in sorted_repos:
                 for lambda_value in lambdas:
-                    print(f"Using lambda = {lambda_value}")
+                    logger.info(f"Using lambda = {lambda_value}")
                     if start_with_pfr:
                         if "pfr" not in repo.name:
                             continue
                         else:
                             start_with_pfr = False
-                    print(f"Processing {repo.name}")
+                    logger.info(f"Processing {repo.name}")
                     lean_git_repo = LeanGitRepo(repo.url, repo.commit)
                     proofs = retrieve_proof(run_progressive_training, use_fisher, single_repo, curriculum_learning, dynamic_database_json_path, lean_git_repo, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo, db)
                     current_epoch += epochs_per_repo
@@ -1228,21 +1230,20 @@ def main():
 
         else:
             logger.info("Starting without curriculum learning")
-            # search_github_repositories("Lean", num_repos)
+            if is_main_process:
+                # search_github_repositories("Lean", num_repos)
 
-            clone_url = "https://github.com/teorth/pfr.git"
-            sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
-            url = clone_url.replace('.git', '')
-            lean_git_repo = LeanGitRepo(url, sha)
-            lean_git_repos.append(lean_git_repo)
-            repos.append("teorth/pfr")
+                clone_url = "https://github.com/teorth/pfr.git"
+                commit = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+                url = clone_url.replace('.git', '')
+                lean_git_repo = LeanGitRepo(url, commit)
+                lean_git_repos.append(lean_git_repo)
 
-            clone_url = "https://github.com/teorth/pfr.git"
-            sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
-            url = clone_url.replace('.git', '')
-            lean_git_repo = LeanGitRepo(url, sha)
-            lean_git_repos.append(lean_git_repo)
-            repos.append("teorth/pfr")
+                clone_url = "https://github.com/teorth/pfr.git"
+                commit = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+                url = clone_url.replace('.git', '')
+                lean_git_repo = LeanGitRepo(url, commit)
+                lean_git_repos.append(lean_git_repo)
 
             for i in range(num_repos):
                 for lambda_value in lambdas:
@@ -1442,9 +1443,10 @@ def main():
                         total_R1, total_R10, total_MRR = [], [], []
                         dataset_path = RAID_DIR + "/" + DATA_DIR
                         testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
-                        with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-                            f.write("\n\n\n")
-                            f.write(f"Results for {dir_name} with lambda = {lambda_value}")
+                        if is_main_process:
+                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                f.write("\n\n\n")
+                                f.write(f"Results for {dir_name} with lambda = {lambda_value}")
                         for data_path in testing_paths:
                             # TODO: remove this for tests that do not use merged dataset
                             if "merged" not in data_path:
@@ -1467,9 +1469,10 @@ def main():
                             total_R1.append(R1)
                             total_R10.append(R10)
                             total_MRR.append(MRR)
-                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-                                f.write(f"Intermediate results for {data_path}")
-                                f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+                            if is_main_process:
+                                with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                    f.write(f"Intermediate results for {data_path}")
+                                    f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
 
                         avg_R1 = np.mean(total_R1)
                         avg_R10 = np.mean(total_R10)
@@ -1481,11 +1484,12 @@ def main():
                         if not os.path.exists(EVAL_RESULTS_FILE_PATH):
                             open(EVAL_RESULTS_FILE_PATH, 'w').close()
 
-                        with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-                            f.write("\n\n\n")
-                            f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+                        if is_main_process:
+                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                f.write("\n\n\n")
+                                f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                     else:
-                        model_checkpoint_path = "/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                        model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
 
                     if is_main_process and run_progressive_training and use_fisher:
                         logger.info("Calculating Fisher Information Matrix for EWC")
@@ -1521,7 +1525,7 @@ def main():
                         max_expansions = None
                         num_sampled_tactics = 64
                         debug = False
-                        ckpt_path = "/data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+                        ckpt_path = f"{RAID_DIR}/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
                         prover = DistributedProver(
                             use_vllm,
                             ckpt_path,
