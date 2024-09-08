@@ -61,7 +61,6 @@ def run_cli(model_path, data_path):
     # Mimic command line argument passing
     sys.argv = ['main.py', 'predict', '--config', 'retrieval/confs/cli_lean4_random.yaml', '--ckpt_path', model_path, '--data-path', data_path]
     cli = CLI(PremiseRetriever, RetrievalDataModule)
-    logger.info("Configuration: \n", cli.config)
 
 def main() -> None:
     # parser = argparse.ArgumentParser(

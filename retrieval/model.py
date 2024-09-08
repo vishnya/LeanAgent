@@ -323,7 +323,6 @@ class PremiseRetriever(pl.LightningModule):
     def validation_step(self, batch: Dict[str, Any], batch_idx: int) -> None:
         """Retrieve premises and calculate metrics such as Recall@K and MRR."""
         logger.info("Inside validation_step")
-        logger.info("All training loss for epoch", self.train_loss)
         # Retrieval.
         context_emb = self._encode(batch["context_ids"], batch["context_mask"])
         assert not self.embeddings_staled
