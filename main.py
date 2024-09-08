@@ -789,7 +789,7 @@ def load_encountered_theorems(file_path):
     
     return all_encountered_theorems
 
-def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic_database_json_path, repos_to_include: Optional[List[Tuple[str, str]]] = None, batch_size: int = 10):
+def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic_database_json_path, repos_to_include: Optional[List[Tuple[str, str]]] = None, batch_size: int = 12):
     repos_to_process = db.repositories if repos_to_include is None else [
         repo for repo in db.repositories if (repo.url, repo.commit) in repos_to_include
     ]
@@ -1177,8 +1177,8 @@ def main():
         use_fisher = False
         single_repo = True
         # single_repo = False
-        # start_with_pfr = False
-        start_with_pfr = True
+        start_with_pfr = False
+        # start_with_pfr = True
         curriculum_learning = False
         # curriculum_learning = True
         num_repos = 15
@@ -1318,14 +1318,14 @@ def main():
                 # lean_git_repo = LeanGitRepo(url, commit)
                 # lean_git_repos.append(lean_git_repo)
 
-                clone_url = "https://github.com/avigad/mathematics_in_lean_source.git"
-                commit = "cfe61bc71b5ea501f89df36c945949a1febf5e75"
+                clone_url = "https://github.com/teorth/pfr.git"
+                commit = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
                 url = clone_url.replace('.git', '')
                 lean_git_repo = LeanGitRepo(url, commit)
                 lean_git_repos.append(lean_git_repo)
 
-                clone_url = "https://github.com/teorth/pfr.git"
-                commit = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+                clone_url = "https://github.com/avigad/mathematics_in_lean_source.git"
+                commit = "cfe61bc71b5ea501f89df36c945949a1febf5e75"
                 url = clone_url.replace('.git', '')
                 lean_git_repo = LeanGitRepo(url, commit)
                 lean_git_repos.append(lean_git_repo)
@@ -1370,8 +1370,6 @@ def main():
                         if single_repo:
                             repos_for_merged_dataset = []
                         
-                        # TODO: undo later
-                        # TODO: ensure all returns are taken care of
                         if not curriculum_learning:
                             result = add_repo_to_database(dynamic_database_json_path, repo, db)
                             if result is None:
@@ -1506,7 +1504,7 @@ def main():
                         model.set_lambda(lambda_value)
                         corpus_path = new_data_path + "/corpus.jsonl"
                         data_path = new_data_path + "/random"
-                        print(f"Data path: {data_path}")
+                        logger.info(f"Data path: {data_path}")
                         data_module = RetrievalDataModule(
                             data_path=data_path,
                             corpus_path=corpus_path,
@@ -1569,38 +1567,39 @@ def main():
                                 continue
                             # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
                             run_cli(best_model_path, data_path)
-                            num_gpus = 4 # TODO: change for GPU
-                            preds_map = {}
-                            for gpu_id in range(num_gpus):
-                                with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
-                                    preds = pickle.load(f)
-                                    preds_map.update(preds)
-
-                            logger.info("Loaded the predictions pickle files")
-                            data_path = os.path.join(data_path, "random", "test.json")
-                            data = json.load(open(data_path))
-                            logger.info(f"Evaluating on {data_path}")
-                            R1, R10, MRR = _eval(data, preds_map)
-                            logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-                            total_R1.append(R1)
-                            total_R10.append(R10)
-                            total_MRR.append(MRR)
                             if is_main_process:
+                                num_gpus = 4 # TODO: change for GPU
+                                preds_map = {}
+                                for gpu_id in range(num_gpus):
+                                    with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
+                                        preds = pickle.load(f)
+                                        preds_map.update(preds)
+
+                                logger.info("Loaded the predictions pickle files")
+                                data_path = os.path.join(data_path, "random", "test.json")
+                                data = json.load(open(data_path))
+                                logger.info(f"Evaluating on {data_path}")
+                                R1, R10, MRR = _eval(data, preds_map)
+                                logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+                                total_R1.append(R1)
+                                total_R10.append(R10)
+                                total_MRR.append(MRR)
                                 with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                    f.write("\n\n\n")
                                     f.write(f"Intermediate results for {data_path}")
+                                    f.write("\n\n\n")
                                     f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
 
-                        avg_R1 = np.mean(total_R1)
-                        avg_R10 = np.mean(total_R10)
-                        avg_MRR = np.mean(total_MRR)
-
-                        logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
-
-                        # Save average accuracies to a file
-                        if not os.path.exists(EVAL_RESULTS_FILE_PATH):
-                            open(EVAL_RESULTS_FILE_PATH, 'w').close()
-
                         if is_main_process:
+                            avg_R1 = np.mean(total_R1)
+                            avg_R10 = np.mean(total_R10)
+                            avg_MRR = np.mean(total_MRR)
+
+                            logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+
+                            if not os.path.exists(EVAL_RESULTS_FILE_PATH):
+                                open(EVAL_RESULTS_FILE_PATH, 'w').close()
+
                             with open(EVAL_RESULTS_FILE_PATH, "a") as f:
                                 f.write("\n\n\n")
                                 f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
