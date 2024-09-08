@@ -705,7 +705,39 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
 def theorem_identifier(theorem: Theorem) -> Tuple[str, str, Tuple[int, int], Tuple[int, int]]:
     return (theorem.full_name, str(theorem.file_path), tuple(theorem.start), tuple(theorem.end))
 
-def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic_database_json_path, repos_to_include: Optional[List[Tuple[str, str]]] = None):
+def process_theorem_batch(theorem_batch, positions_batch, repo, db, prover, dynamic_database_json_path):
+    lean_dojo_theorems = [t[1] for t in theorem_batch]
+    results = prover.search_unordered(LeanGitRepo(repo.url, repo.commit), lean_dojo_theorems, positions_batch)
+    
+    # Create a mapping from LeanDojoTheorem to our Theorem
+    theorem_map = {ldj_thm: thm for thm, ldj_thm in theorem_batch}
+    
+    for result in results:
+        theorem = theorem_map[result.theorem]
+        if isinstance(result, SearchResult) and result.status == Status.PROVED:
+            logger.info(f"Proof found for {theorem.full_name}")
+            traced_tactics = [
+                AnnotatedTactic(
+                    tactic=tactic,
+                    annotated_tactic=(tactic, []),
+                    state_before="",
+                    state_after=""
+                ) for tactic in result.proof
+            ]
+            theorem.traced_tactics = traced_tactics
+            repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
+            db.update_repository(repo)
+            db.to_json(dynamic_database_json_path)
+            logger.info(f"Updated theorem {theorem.full_name} in the database")
+        else:
+            logger.info(f"No proof found for {theorem.full_name}")
+
+def save_progress(all_encountered_theorems):
+    logger.info("Saving encountered theorems...")
+    with open(ENCOUNTERED_THEOREMS_FILE, 'wb') as f:
+        pickle.dump(all_encountered_theorems, f)
+
+def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic_database_json_path, repos_to_include: Optional[List[Tuple[str, str]]] = None, batch_size: int = 10):
     repos_to_process = db.repositories if repos_to_include is None else [
         repo for repo in db.repositories if (repo.url, repo.commit) in repos_to_include
     ]
@@ -730,6 +762,9 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic
         repo_commit = repo.commit
 
         logger.info(f"Found {len(sorry_theorems)} sorry theorems to prove")
+
+        theorem_batch = []
+        positions_batch = []
     
         for theorem in tqdm(sorry_theorems, desc=f"Processing theorems from {repo.name}", unit="theorem"):
             # Ignore sorry theorems from the repo's dependencies
@@ -759,46 +794,24 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic
                 full_name=theorem.full_name
             )
 
-            results = prover.search_unordered(LeanGitRepo(repo_url, repo_commit), [lean_dojo_theorem], [Pos(*theorem.start)])
-            result = results[0] if results else None
+            theorem_batch.append((theorem, lean_dojo_theorem))
+            positions_batch.append(Pos(*theorem.start))
 
-            if isinstance(result, SearchResult) and result.status == Status.PROVED:
-                logger.info(f"Proof found for {theorem.full_name}")
+            if len(theorem_batch) == batch_size:
+                process_theorem_batch(theorem_batch, positions_batch, repo, db, prover, dynamic_database_json_path)
+                theorem_batch = []
+                positions_batch = []
 
-                # Convert the proof to AnnotatedTactic objects
-                # We have to simplify some of the fields since LeanDojo does not
-                # prvoide all the necessary information
-                traced_tactics = []
-                for tactic in result.proof:
-                    traced_tactics.append(
-                        AnnotatedTactic(
-                            tactic=tactic,
-                            annotated_tactic=(tactic, []),
-                            state_before="",
-                            state_after=""
-                        )
-                    )
-                
-                theorem.traced_tactics = traced_tactics
-                repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
-                db.update_repository(repo)
-                db.to_json(dynamic_database_json_path)
-
-                logger.info(f"Updated theorem {theorem.full_name} in the database")
-            else:
-                logger.info(f"No proof found for {theorem.full_name}")
-            
             current_time = datetime.datetime.now()
             if current_time - last_save_time >= save_interval:
-                logger.info("Saving encountered theorems...")
-                with open(ENCOUNTERED_THEOREMS_FILE, 'wb') as f:
-                    pickle.dump(all_encountered_theorems, f)
+                save_progress(all_encountered_theorems)
                 last_save_time = current_time
+        
+        # Process any remaining theorems in the last batch
+        if theorem_batch:
+            process_theorem_batch(theorem_batch, positions_batch, repo, db, prover, dynamic_database_json_path)
 
-    logger.info("Final save to JSON file...")
-    with open(ENCOUNTERED_THEOREMS_FILE, 'wb') as f:
-        pickle.dump(all_encountered_theorems, f)
-
+    save_progress(all_encountered_theorems, dynamic_database_json_path, db)
     logger.info("Finished attempting to prove sorry theorems")
 
 class TimedCheckpoint(Callback):
@@ -1089,6 +1102,7 @@ def load_sorted_repos(file_path: str) -> List[Tuple[str, str, str]]:
 def main():
     """The main function that drives the bot."""
     global repos_for_merged_dataset
+    global lean_git_repos
     try:
         # Configure these parameters!
         current_epoch = 0
@@ -1230,6 +1244,7 @@ def main():
 
         else:
             logger.info("Starting without curriculum learning")
+            repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info.json"  # TODO: make constnat?
             if is_main_process:
                 # search_github_repositories("Lean", num_repos)
 
@@ -1245,8 +1260,27 @@ def main():
                 lean_git_repo = LeanGitRepo(url, commit)
                 lean_git_repos.append(lean_git_repo)
 
+                repo_info = [{"url": repo.url, "commit": repo.commit} for repo in lean_git_repos]
+                with open(repo_info_file, 'w') as f:
+                    json.dump(repo_info, f)
+            else:
+                max_attempts = 30
+                for attempt in range(max_attempts):
+                    try:
+                        with open(repo_info_file, 'r') as f:
+                            repo_info = json.load(f)
+                        break
+                    except (json.JSONDecodeError, FileNotFoundError):
+                        if attempt == max_attempts - 1:
+                            raise Exception("Failed to read repository information after multiple attempts")
+                        time.sleep(1)
+                
+                lean_git_repos = [LeanGitRepo(info['url'], info['commit']) for info in repo_info]
+
             for i in range(num_repos):
                 for lambda_value in lambdas:
+                    logger.info(f"length of lean_git_repos: {len(lean_git_repos)}")
+                    logger.info(f"i: {i}")
                     repo = lean_git_repos[i]
                     sha = repo.commit
                     dir_name = repo.url.split("/")[-1] + "_" + sha
