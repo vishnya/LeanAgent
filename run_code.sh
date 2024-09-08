@@ -7,5 +7,9 @@ conda activate ReProver
 export PYTHONPATH="${PYTHONPATH}:${RAID_DIR}/ReProver"
 export GITHUB_ACCESS_TOKEN="<>"
 export CACHE_DIR="${RAID_DIR}/.cache/lean_dojo"
+echo "Removing old cache files"
+rm -rf /tmp/ray
+echo "Stopping ray"
 ray stop --force
+echo "Running main.py"
 python main.py
