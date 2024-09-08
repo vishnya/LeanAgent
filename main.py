@@ -76,7 +76,6 @@ repo_dir = "/data/yingzi_ma/lean_project/repos_new" # TODO: for release change t
 RAID_DIR = "/data/yingzi_ma/lean_project"
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
-# MERGED_DATA_DIR = "datasets_merged_PT_merge_all_no_ewc"
 # CHECKPOINT_DIR = "checkpoints_PT_merge_all_no_ewc"
 # EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_merge_all_no_ewc.txt"
 # DB_FILE_NAME = "dynamic_database_PT_merge_all_no_ewc.json"
@@ -84,23 +83,20 @@ RAID_DIR = "/data/yingzi_ma/lean_project"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_no_ewc.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_no_ewc"
-# MERGED_DATA_DIR = "datasets_merged_PT_single_repo_no_ewc"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc"
 # EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_no_ewc.txt"
 # DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
 
-DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum"
-MERGED_DATA_DIR = "datasets_merged_PT_single_repo_no_ewc_curriculum"
-CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum"
-EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum.txt"
-DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_curriculum.json"
-PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum.log"
-ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curriculum.pkl"
+# DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum"
+# CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum"
+# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum.txt"
+# DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_curriculum.json"
+# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum.log"
+# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curriculum.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_ewc"
-# MERGED_DATA_DIR = "datasets_merged_PT_single_repo_ewc"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc"
 # FISHER_DIR = "fisher_PT_single_repo_ewc"
 # EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_ewc.txt"
@@ -109,7 +105,6 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curricul
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc.pkl"
 
 # DATA_DIR = "datasets_retrieval_single_repo_no_ewc"
-# MERGED_DATA_DIR = "datasets_merged_retrieval_single_repo_no_ewc"
 # CHECKPOINT_DIR = "checkpoints_retrieval_single_repo_no_ewc"
 # EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_retrieval_single_repo_no_ewc.txt"
 # DB_FILE_NAME = "dynamic_database_retrieval_single_repo_no_ewc.json"
@@ -117,7 +112,6 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curricul
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_single_repo_no_ewc.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_ewc_pfr"
-# MERGED_DATA_DIR = "datasets_merged_PT_single_repo_ewc_pfr"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc_pfr"
 # FISHER_DIR = "fisher_PT_single_repo_ewc_pfr"
 # EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_ewc_pfr.txt"
@@ -126,23 +120,20 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curricul
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc_pfr.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_no_ewc_pfr"
-# MERGED_DATA_DIR = "datasets_merged_PT_single_repo_no_ewc_pfr"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_pfr"
 # EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_PT_single_repo_no_ewc_pfr.txt"
 # DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_pfr.json"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_pfr.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_pfr.pkl"
 
-# DATA_DIR = "datasets_retrieval_single_repo_no_ewc_pfr"
-# MERGED_DATA_DIR = "datasets_merged_retrieval_single_repo_no_ewc_pfr"
-# CHECKPOINT_DIR = "checkpoints_retrieval_single_repo_no_ewc_pfr"
-# EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_retrieval_single_repo_no_ewc_pfr.txt"
-# DB_FILE_NAME = "dynamic_database_retrieval_single_repo_no_ewc_pfr.json"
-# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_single_repo_no_ewc_pfr.log"
-# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_single_repo_no_ewc_pfr.pkl"
+DATA_DIR = "datasets_retrieval_single_repo_no_ewc_pfr"
+CHECKPOINT_DIR = "checkpoints_retrieval_single_repo_no_ewc_pfr"
+EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_retrieval_single_repo_no_ewc_pfr.txt"
+DB_FILE_NAME = "dynamic_database_retrieval_single_repo_no_ewc_pfr.json"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_single_repo_no_ewc_pfr.log"
+ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_single_repo_no_ewc_pfr.pkl"
 
 # DATA_DIR = "datasets_retrieval_merge_all_no_ewc"
-# MERGED_DATA_DIR = "datasets_merged_retrieval_merge_all_no_ewc"
 # CHECKPOINT_DIR = "checkpoints_retrieval_merge_all_no_ewc"
 # EVAL_RESULTS_FILE_PATH = "/data/yingzi_ma/lean_project/ReProver/total_evaluation_results_retrieval_merge_all_no_ewc.txt"
 # DB_FILE_NAME = "dynamic_database_retrieval_merge_all_no_ewc.json"
@@ -502,132 +493,6 @@ def find_latest_fisher():
     logger.info(f"Using the latest Fisher Information Matrix: {latest_fisher}")
     return latest_fisher
 
-def merge_datasets():
-    data_dir = RAID_DIR + "/" + MERGED_DATA_DIR
-    # TODO: dynamicaly update name
-    merged_dir = data_dir + "/" + "merged_pfr_6a5082ee465f9e44cea479c7b741b3163162bb7e_new-version-test_f465306be03ced999caa157a85558a6c41b3e3f5_updated"
-    if not os.path.exists(merged_dir):
-        os.makedirs(merged_dir)
-    split_strategies = ['random', 'novel_premises']
-    split_types = ['train', 'val', 'test']
-    datasets = os.listdir(data_dir) # TODO: remove
-    datasets = sorted(datasets) # TODO: remove
-
-    for strategy in split_strategies:
-        logger.info(f"Merging datasets for {strategy}")
-        strategy_dir = merged_dir + "/" + strategy
-        if not os.path.exists(strategy_dir):
-            os.makedirs(strategy_dir)
-
-        for split in split_types:
-            logger.info(f"Processing {split} split")
-            merged_data = {}
-            
-            # for dataset in os.listdir(data_dir): # TODO: put back
-            for dataset in datasets:
-                if "merged" in dataset:
-                    continue
-                logger.info(f"Processing {dataset}")
-                dataset_path = os.path.join(data_dir, dataset)
-                if os.path.isdir(dataset_path):
-                    json_file = os.path.join(dataset_path, strategy, f"{split}.json")
-                    if os.path.exists(json_file):
-                        with open(json_file, 'r') as f:
-                            data = json.load(f)
-                            for item in data:
-                                key = (item['file_path'], item['full_name'], list(item['start'])[0], list(item['start'])[1], list(item['end'])[0], list(item['end'])[1])
-                                if key not in merged_data:
-                                    merged_data[key] = item
-                        # os.remove(json_file)
-                        # logger.info(f"Deleted processed file: {json_file}")
-            
-            output_file = os.path.join(strategy_dir, f"{split}.json")
-            with open(output_file, 'w') as f:
-                json.dump(list(merged_data.values()), f)
-            
-            logger.info(f"Finished processing {split} split")
-        logger.info(f"Finished merging datasets for {strategy}")
-    
-    logger.info("Merging corpus")
-    merged_corpus = {}
-    for dataset in os.listdir(data_dir):
-        if "merged" in dataset:
-            continue
-        logger.info(f"Processing {dataset}")
-        dataset_path = os.path.join(data_dir, dataset)
-        if os.path.isdir(dataset_path):
-            corpus_file = os.path.join(dataset_path, "corpus.jsonl")
-            if os.path.exists(corpus_file):
-                with open(corpus_file, 'r') as f:
-                    for line in f:
-                        file_data = json.loads(line.strip())
-                        path = file_data['path']
-                        if path not in merged_corpus:
-                            merged_corpus[path] = line.strip()
-                # os.remove(corpus_file)
-                # logger.info(f"Deleted processed corpus file: {corpus_file}")
-
-    with open(os.path.join(merged_dir, "corpus.jsonl"), 'w') as f:
-        for line in merged_corpus.values():
-            f.write(line + "\n")
-
-    logger.info("Finished merging corpus")
-
-    logger.info("Merging traced files")
-    traced_files = set()
-    for dataset in os.listdir(data_dir):
-        if "merged" in dataset:
-            continue
-        logger.info(f"Processing {dataset}")
-        dataset_path = os.path.join(data_dir, dataset)
-        if os.path.isdir(dataset_path):
-            traced_paths_file = os.path.join(dataset_path, "traced_files.jsonl")
-            if os.path.exists(traced_paths_file):
-                with open(traced_paths_file, 'r') as f:
-                    for line in f:
-                        file_data = json.loads(line.strip())
-                        traced_file_path = file_data['traced_file_path']
-                        traced_files.add(traced_file_path)
-                # os.remove(traced_paths_file)
-                # logger.info(f"Deleted processed traced paths file: {traced_paths_file}")
-
-    with open(os.path.join(merged_dir, "traced_files.jsonl"), 'w') as f:
-        for file in traced_files:
-            f.write(json.dumps({
-                    "traced_file_path": str(file)
-                }) + "\n")
-
-    logger.info("Finished merging traced files")
-
-    logger.info("Adding metadata")
-    metadata_added = False
-    for dataset in os.listdir(data_dir):
-        if "merged" in dataset:
-            continue
-        logger.info(f"Checking for metadata in {dataset}")
-        dataset_path = os.path.join(data_dir, dataset)
-        if os.path.isdir(dataset_path):
-            metadata_file = os.path.join(dataset_path, "metadata.json")
-            if os.path.exists(metadata_file):
-                with open(os.path.join(merged_dir, "metadata.json"), 'w') as f:
-                    json.dump(json.load(open(metadata_file)), f)
-                # os.remove(metadata_file)
-                # logger.info(f"Deleted processed metadata file: {metadata_file}")
-                metadata_added = True
-                break
-    
-    if metadata_added:
-        logger.info("Finished adding metadata")
-    else:
-        logger.warning("No metadata file found")
-
-    # logger.info("Deleting individual datasets")
-    # for dataset in os.listdir(data_dir):
-    #     dataset_path = os.path.join(data_dir, dataset)
-    #     if os.path.isdir(dataset_path) and "merged" not in dataset:
-    #         logger.info(f"Deleting dataset: {dataset}")
-    #         shutil.rmtree(dataset_path)
-
 def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, current_epoch, use_fisher, epochs_per_repo=1):
     logger.info("Inside train_test_fisher")
     logger.info(f"Starting training at epoch {current_epoch}")
@@ -836,53 +701,6 @@ def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, curren
     # TODO: add anything else from yaml conf if needed
 
     return model
-    # else:
-    #     logger.info("Inside scilean fisher info")
-    #      ### FISHER INFORMATION MATRIX FOR NEXT EWC
-
-    #     # Switch to one GPU for calculating the Fisher Information Matrix
-    #     if not torch.cuda.is_available():
-    #         logger.warning("Indexing the corpus using CPU can be very slow.")
-    #         device = torch.device("cpu")
-    #     else:
-    #         device = torch.device("cuda")
-    #     config = {
-    #         "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
-    #         "lr": 1e-3,
-    #         "warmup_steps": 1000,
-    #         "max_seq_len": 512,
-    #         "num_retrieved": 100,
-    #     }
-    #     best_model = PremiseRetriever.load("/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744_lambda_0.1_epoch=1-Recall@10_val=57.05.ckpt", device, freeze=False, config=config)
-    #     best_model.set_lambda(lambda_value)
-    #     corpus_path = new_data_path + "/corpus.jsonl"
-    #     data_path = new_data_path + "/random"
-    #     print(f"Data path: {data_path}")
-    #     data_module = RetrievalDataModule(
-    #         data_path=data_path,
-    #         corpus_path=corpus_path,
-    #         num_negatives=3,
-    #         num_in_file_negatives=1,
-    #         model_name="google/byt5-small",
-    #         batch_size=BATCH_SIZE,
-    #         eval_batch_size=64,
-    #         max_seq_len=1024,
-    #         num_workers=4
-    #     )
-    #     data_module.setup(stage='fit')
-    #     best_model.eval()
-    #     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    #     best_model.to(device)
-    #     train_dataloader = data_module.train_dataloader()
-    #     fisher_info = best_model.compute_fisher_information(train_dataloader)
-    #     dir_path = RAID_DIR + "/" + FISHER_DIR
-    #     dir_name = new_data_path.split("/")[-1]
-    #     fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
-    #     with open(fisher_name, "wb") as f:
-    #         pickle.dump(fisher_info, f)
-    #     logger.info(f"Fisher info saved to {fisher_name}")
-
-    #     return model
 
 def theorem_identifier(theorem: Theorem) -> Tuple[str, str, Tuple[int, int], Tuple[int, int]]:
     return (theorem.full_name, str(theorem.file_path), tuple(theorem.start), tuple(theorem.end))
@@ -1270,6 +1088,7 @@ def load_sorted_repos(file_path: str) -> List[Tuple[str, str, str]]:
 # TODO: incorporate latest changes from ReProver repo
 def main():
     """The main function that drives the bot."""
+    global repos_for_merged_dataset
     try:
         # Configure these parameters!
         current_epoch = 0
@@ -1280,10 +1099,10 @@ def main():
         use_fisher = False
         single_repo = True
         # single_repo = False
-        start_with_pfr = False
-        # start_with_pfr = True
-        # curriculum_learning = False
-        curriculum_learning = True
+        # start_with_pfr = False
+        start_with_pfr = True
+        curriculum_learning = False
+        # curriculum_learning = True
         num_repos = 15
         dynamic_database_json_path = RAID_DIR + "/" + DB_FILE_NAME
         
@@ -1299,22 +1118,31 @@ def main():
         generate_benchmark_lean4.configure_leandojo()
         logger.info("LeanDojo configured")
 
-        if not os.path.exists(dynamic_database_json_path) or os.path.getsize(dynamic_database_json_path) == 0:
-            # File doesn't exist or is empty, initialize it
-            db = DynamicDatabase()
-            db.to_json(dynamic_database_json_path)
-        else:
-            try:
-                db = DynamicDatabase.from_json(dynamic_database_json_path)
-            except json.JSONDecodeError:
-                # If there's an error decoding the JSON, initialize a new database
-                logger.warning(f"Error decoding JSON from {dynamic_database_json_path}. Initializing new database.")
+        is_main_process = int(os.environ.get('LOCAL_RANK', '0')) == 0
+
+        if is_main_process:
+            logger.info("Starting the main process")
+            if not os.path.exists(dynamic_database_json_path) or os.path.getsize(dynamic_database_json_path) == 0:
+                # File doesn't exist or is empty, initialize it
+                logger.info(f"Initializing new database at {dynamic_database_json_path}")
                 db = DynamicDatabase()
                 db.to_json(dynamic_database_json_path)
+            else:
+                try:
+                    logger.info(f"Loading database from {dynamic_database_json_path}")
+                    db = DynamicDatabase.from_json(dynamic_database_json_path)
+                    logger.info(f"Loaded database from {dynamic_database_json_path}")
+                except json.JSONDecodeError:
+                    # If there's an error decoding the JSON, initialize a new database
+                    logger.warning(f"Error decoding JSON from {dynamic_database_json_path}. Initializing new database.")
+                    db = DynamicDatabase()
+                    db.to_json(dynamic_database_json_path)
 
-        print(f"Found {num_repos} repositories")
+        logger.info(f"Found {num_repos} repositories")
 
+        # TODO: come back to this
         if curriculum_learning:
+            logger.info("Starting curriculum learning")
             repos_added = 0
             attempted_repos.add("dwrensha/compfiles")
             attempted_repos.add("leanprover-community/mathlib4")
@@ -1399,82 +1227,349 @@ def main():
                         continue
 
         else:
+            logger.info("Starting without curriculum learning")
             # search_github_repositories("Lean", num_repos)
 
-            # clone_url = "https://github.com/leanprover-community/mathlib4.git"
-            # sha = "2b29e73438e240a427bcecc7c0fe19306beb1310"
-            # url = clone_url.replace('.git', '')
-            # lean_git_repo = LeanGitRepo(url, sha)
-            # lean_git_repos.append(lean_git_repo)
-            # repos.append("leanprover-community/mathlib4")
-
-            # clone_url = "https://github.com/lecopivo/SciLean.git"
-            # sha = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
-            # url = clone_url.replace('.git', '')
-            # lean_git_repo = LeanGitRepo(url, sha)
-            # lean_git_repos.append(lean_git_repo)
-            # repos.append("lecopivo/SciLean")
-
-            # clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
-            # sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
-            # url = clone_url.replace('.git', '')
-            # lean_git_repo = LeanGitRepo(url, sha)
-            # lean_git_repos.append(lean_git_repo)
-            # repos.append("AlexKontorovich/PrimeNumberTheoremAnd")
-
-            # clone_url = "https://github.com/avigad/mathematics_in_lean_source.git"
-            # sha = "cfe61bc71b5ea501f89df36c945949a1febf5e75"
-            # url = clone_url.replace('.git', '')
-            # lean_git_repo = LeanGitRepo(url, sha)
-            # lean_git_repos.append(lean_git_repo)
-            # repos.append("avigad/mathematics_in_lean_source")
-
             clone_url = "https://github.com/teorth/pfr.git"
-            sha = "8c01cbdc177f408d64abd494a50678008df1d961"
+            sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
             url = clone_url.replace('.git', '')
             lean_git_repo = LeanGitRepo(url, sha)
             lean_git_repos.append(lean_git_repo)
             repos.append("teorth/pfr")
 
-            # clone_url = "https://github.com/dwrensha/compfiles.git"
-            # sha = "6cd50c4002244ff6e905e493789b309cdc8a615d"
-            # url = clone_url.replace('.git', '')
-            # lean_git_repo = LeanGitRepo(url, sha)
-            # lean_git_repos.append(lean_git_repo)
-            # repos.append("dwrensha/compfiles")
+            clone_url = "https://github.com/teorth/pfr.git"
+            sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+            url = clone_url.replace('.git', '')
+            lean_git_repo = LeanGitRepo(url, sha)
+            lean_git_repos.append(lean_git_repo)
+            repos.append("teorth/pfr")
 
             for i in range(num_repos):
                 for lambda_value in lambdas:
-                    print(f"Using lambda = {lambda_value}")
-                    repo = repos[i]
-                    repo_no_dir = repo
-                    repo = repo_dir + "/" + repo
-                    lean_git_repo = lean_git_repos[i]
-                    if start_with_pfr:
-                        if "pfr" not in lean_git_repo.url:
-                            continue
+                    repo = lean_git_repos[i]
+                    sha = repo.commit
+                    dir_name = repo.url.split("/")[-1] + "_" + sha
+                    if is_main_process:
+                        logger.info("Main process")
+                        logger.info(f"Using lambda = {lambda_value}")
+                        logger.info(f"Processing {repo.url}")
+                        if start_with_pfr:
+                            if "pfr" not in repo.url:
+                                continue
+                            else:
+                                start_with_pfr = False
+        
+                        if single_repo:
+                            repos_for_merged_dataset = []
+                        
+                        # TODO: undo later
+                        # TODO: ensure all returns are taken care of
+                        if not curriculum_learning:
+                            result = add_repo_to_database(dynamic_database_json_path, repo, db)
+                            if result is None:
+                                return None
+
+                        # Generate a new dataset from the dynamic database.
+                        # The user can choose to generate a dataset from the entire dynamic database or a subset of it.
+                        # TODO: don't always do merged_, if we change this then change the if condition in average test accordingly
+                        dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_with_new_{dir_name}"
+                        if (repo.url, repo.commit) not in repos_for_merged_dataset:
+                            logger.info("Adding repo to repos_for_merged_dataset")
+                            repos_for_merged_dataset.append((repo.url, repo.commit))
                         else:
-                            start_with_pfr = False
-                    print(f"Processing {repos[i]}")
-                    proofs = retrieve_proof(run_progressive_training, use_fisher, single_repo, curriculum_learning, dynamic_database_json_path, lean_git_repo, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo, db)
+                            logger.info("Repo already in repos_for_merged_dataset")
+                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+
+                    # TODO: reduce repition later with all path
+                    dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
+                    new_data_path = dst_dir
+
+                    # All GPUs
+                    logger.info("All GPUs")
+                    model_checkpoint_path = None
+                    best_model = None
+                    data_module = None
+                    if run_progressive_training:
+                        try:
+                            model_checkpoint_path = find_latest_checkpoint()
+                            logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
+                        except FileNotFoundError as e:
+                            logger.error(str(e))
+                            return None
+                        
+                        # Train the model on the new dataset that we generated from the dynamic database.
+                        logger.info("Inside train_test_fisher")
+                        logger.info(f"Starting training at epoch {current_epoch}")
+                        seed_everything(3407)
+
+                        ### PROGRESSIVE TRAINING
+                        
+                        if not torch.cuda.is_available():
+                            logger.warning("Indexing the corpus using CPU can be very slow.")
+                            device = torch.device("cpu")
+                        else:
+                            device = torch.device("cuda")
+
+                        # TODO: reduce repetition in code like this
+                        config = {
+                            "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
+                            "lr": 1e-3,
+                            "warmup_steps": 1000,
+                            "max_seq_len": 512,
+                            "num_retrieved": 100,
+                        }
+
+                        model = PremiseRetriever.load(
+                            model_checkpoint_path, device, freeze=False, config=config
+                        )
+                        model.train()
+                        logger.info(f"Loaded premise retriever at {model_checkpoint_path} and reset epoch count")
+
+                        # load previous Fisher Information Matrix for current EWC
+                        if use_fisher:
+                            latest_fisher = find_latest_fisher()
+                            fisher_info = load_fisher_information(latest_fisher)
+                            model.set_fisher_info(fisher_info)
+                            logger.info("Fisher Information Matrix loaded.")
+
+                        # TODO: use the yaml file instead of repeating here, same throughout
+                        model.set_lambda(lambda_value)
+                        corpus_path = new_data_path + "/corpus.jsonl"
+                        data_path = new_data_path + "/random"
+                        print(f"Data path: {data_path}")
+                        data_module = RetrievalDataModule(
+                            data_path=data_path,
+                            corpus_path=corpus_path,
+                            num_negatives=3,
+                            num_in_file_negatives=1,
+                            model_name="google/byt5-small",
+                            batch_size=BATCH_SIZE,
+                            eval_batch_size=64,
+                            max_seq_len=1024,
+                            num_workers=4
+                        )
+                        data_module.setup(stage='fit')
+
+                        dir_name = new_data_path.split("/")[-1]
+                        filename_suffix = f"_lambda_{lambda_value}"
+                        checkpoint_callback = ModelCheckpoint(
+                            dirpath=RAID_DIR + "/" + CHECKPOINT_DIR,
+                            filename=dir_name + filename_suffix + "_{epoch}-{Recall@10_val:.2f}",
+                            verbose=True,
+                            save_top_k=1,
+                            save_last=False,
+                            monitor="Recall@10_val",
+                            mode="max"
+                        )
+                        
+                        early_stop_callback = EarlyStopping(
+                            monitor="Recall@10_val",
+                            patience=5,
+                            mode="max",
+                            verbose=True
+                        )
+
+                        lr_monitor = LearningRateMonitor(logging_interval='step')
+
+                        logger.info(f"Training dataset size after load: {len(data_module.ds_train)}")
+                        logger.info(f"Validation dataset size after load: {len(data_module.ds_val)}")
+                        logger.info(f"Testing dataset size after load: {len(data_module.ds_pred)}")
+
+                        mid_epoch_checkpoint_dir = os.path.join(RAID_DIR, f"mid_epoch_checkpoints_{current_epoch}_{dir_name}_{use_fisher}_lambda_{lambda_value}")
+                        os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
+                        timed_checkpoint_callback = TimedCheckpoint(checkpoint_dir=mid_epoch_checkpoint_dir)
+
+                        VERY_LONG_TIMEOUT = 7 * 24 * 60 * 60 * 52  # 1 year
+                        os.environ['TORCH_NCCL_ASYNC_ERROR_HANDLING'] = '1'
+                        os.environ['NCCL_TIMEOUT'] = str(VERY_LONG_TIMEOUT * 1000)
+
+                        custom_log_dir = os.path.join(RAID_DIR, "lightning_logs", f"{dir_name}_{use_fisher}_lambda_{lambda_value}")
+                        os.makedirs(custom_log_dir, exist_ok=True)
+
+                        ddp_strategy = DDPStrategy(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
+                        trainer = pl.Trainer(
+                            accelerator="gpu",
+                            gradient_clip_val=1.0,
+                            precision="bf16-mixed",
+                            strategy=ddp_strategy,
+                            devices=4, # TODO: change for GPU
+                            accumulate_grad_batches=4,
+                            callbacks=[lr_monitor, checkpoint_callback, early_stop_callback, timed_checkpoint_callback],
+                            max_epochs=current_epoch + epochs_per_repo,
+                            log_every_n_steps=1,
+                            num_sanity_val_steps=0,
+                            default_root_dir=custom_log_dir,
+                            limit_train_batches=2,  # TODO: remove
+                            limit_val_batches=1,  # TODO: remove
+                        )
+
+                        logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
+
+                        try:
+                            # if "mathlib4" not in new_data_path:
+                            #     trainer.strategy.barrier()
+                            #     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+                            #     trainer.strategy.barrier()
+                            logger.info("hit the barrier before training")
+                            trainer.strategy.barrier()
+                            trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+                            logger.info("hit the barrier after training")
+                            trainer.strategy.barrier()
+                        except Exception as e:
+                            print(f"An error occurred during training: {str(e)}")
+                            print(traceback.format_exc())
+
+                        logger.info(f"Finished progressive training at epoch {trainer.current_epoch}")
+
+                        ### TESTING FOR AVERAGE RECALL
+
+                        # TODO: don't load corpus and reindex for every repo we use for average recall
+                        # Load the best model checkpoint
+                        best_model_path = checkpoint_callback.best_model_path
+                        if best_model_path:
+                            best_model = PremiseRetriever.load(best_model_path, device, freeze=False, config=config)
+                        else:
+                            logger.warning("No best model found. Using the last trained model.")
+                            best_model = model
+                            # TODO: change this to the last model trained later
+                            if use_fisher:
+                                best_model_path = RAID_DIR + "/" + CHECKPOINT_DIR + "/" + "merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310_lambda_0.1_epoch=0-Recall@10_val=58.95.ckpt"
+                            else:
+                                best_model_path = RAID_DIR + "/" + CHECKPOINT_DIR + "/" + "merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310_lambda_0.1_epoch=0-Recall@10_val=60.65.ckpt"
+                        best_model.eval()
+
+                        logger.info("Testing...")
+                        total_R1, total_R10, total_MRR = [], [], []
+                        dataset_path = RAID_DIR + "/" + DATA_DIR
+                        testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
+                        with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                            f.write("\n\n\n")
+                            f.write(f"Results for {dir_name} with lambda = {lambda_value}")
+                        for data_path in testing_paths:
+                            # TODO: remove this for tests that do not use merged dataset
+                            if "merged" not in data_path:
+                                continue
+                            # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
+                            run_cli(best_model_path, data_path)
+                            num_gpus = 4 # TODO: change for GPU
+                            preds_map = {}
+                            for gpu_id in range(num_gpus):
+                                with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
+                                    preds = pickle.load(f)
+                                    preds_map.update(preds)
+
+                            logger.info("Loaded the predictions pickle files")
+                            data_path = os.path.join(data_path, "random", "test.json")
+                            data = json.load(open(data_path))
+                            logger.info(f"Evaluating on {data_path}")
+                            R1, R10, MRR = _eval(data, preds_map)
+                            logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+                            total_R1.append(R1)
+                            total_R10.append(R10)
+                            total_MRR.append(MRR)
+                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                f.write(f"Intermediate results for {data_path}")
+                                f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+
+                        avg_R1 = np.mean(total_R1)
+                        avg_R10 = np.mean(total_R10)
+                        avg_MRR = np.mean(total_MRR)
+
+                        logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+
+                        # Save average accuracies to a file
+                        if not os.path.exists(EVAL_RESULTS_FILE_PATH):
+                            open(EVAL_RESULTS_FILE_PATH, 'w').close()
+
+                        with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                            f.write("\n\n\n")
+                            f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+                    else:
+                        model_checkpoint_path = "/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+
+                    if is_main_process and run_progressive_training and use_fisher:
+                        logger.info("Calculating Fisher Information Matrix for EWC")
+                        ### FISHER INFORMATION MATRIX FOR NEXT EWC
+
+                        # Switch to one GPU for calculating the Fisher Information Matrix
+                        # TODO: barrier here
+                        try:
+                            # TODO: have separate intermediate checkpoints and save the epoch and data point, same for fisher
+                            device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+                            best_model.to(device)
+                            train_dataloader = data_module.train_dataloader()
+                            fisher_info = best_model.compute_fisher_information(train_dataloader, RAID_DIR + "/" + FISHER_DIR)
+                            dir_path = RAID_DIR + "/" + FISHER_DIR
+                            fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
+                            with open(fisher_name, "wb") as f:
+                                pickle.dump(fisher_info, f)
+                            logger.info(f"Fisher info saved to {fisher_name}")
+                        except Exception as e:
+                            print(f"An error occurred during fisher: {str(e)}")
+                            print(traceback.format_exc())
+
+                    if is_main_process:
+                        logger.info("Starting the prover")
+                        # Set up the prover
+                        use_vllm = False
+                        corpus_path = dst_dir + "/corpus.jsonl"
+                        tactic = None  # `None` since we are not using a fixed tactic generator
+                        module = None  # `None` since we are not using a fixed tactic generator
+                        num_workers = 4 # TODO: do everywhere if good
+                        num_gpus = 4 # TODO: change for GPU
+                        timeout = 10  # TODO: change to 600
+                        max_expansions = None
+                        num_sampled_tactics = 64
+                        debug = False
+                        ckpt_path = "/data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+                        prover = DistributedProver(
+                            use_vllm,
+                            ckpt_path,
+                            corpus_path,
+                            tactic,
+                            module,
+                            num_workers,
+                            num_gpus=num_gpus,
+                            timeout=timeout,
+                            max_expansions=max_expansions,
+                            num_sampled_tactics=num_sampled_tactics,
+                            raid_dir=RAID_DIR,
+                            checkpoint_dir=CHECKPOINT_DIR,
+                            debug=debug,
+                            run_progressive_training=run_progressive_training
+                        )
+
+                        # Prove sorry theorems
+                        prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_merged_dataset)
+                        db.to_json(dynamic_database_json_path)
+
+                        logger.info("Finished searching for proofs of sorry theorems")
+
+                        # TODO: need to return proofs
+                        proofs = []
+
+                        # TODO: figure out how to handle this since there may be many None returns
+                        # TODO: all GPUs should see this
+                        if proofs is None:
+                            logger.info("Skipping repository due to configuration or error.")
+                            continue
+                        # Uncomment if you would like to contribute back to the repos!
+                        # else:
+                        #     base_branch = get_default_branch(repo_no_dir)
+                        #     subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
+                        #     subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
+                        #     subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
+                        #     create_or_switch_branch(repo, TMP_BRANCH, base_branch)
+                        #     replace_sorry_with_proof(proofs)
+                        #     committed = commit_changes(repo, COMMIT_MESSAGE)
+                        #     if committed:
+                        #         push_changes(repo, TMP_BRANCH)
+                        #         url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
+                        #         # TODO: add the PR URL to the database
+                        #     shutil.rmtree(repo)
+                    
                     current_epoch += epochs_per_repo
-                    if proofs is None:
-                        logger.info("Skipping repository due to configuration or error.")
-                        continue
-                    # Uncomment if you would like to contribute back to the repos!
-                    # else:
-                    #     base_branch = get_default_branch(repo_no_dir)
-                    #     subprocess.run(["git", "-C", repo, "fetch", "origin", base_branch], check=True)
-                    #     subprocess.run(["git", "-C", repo, "checkout", base_branch], check=True)
-                    #     subprocess.run(["git", "-C", repo, "pull", "origin", base_branch], check=True)
-                    #     create_or_switch_branch(repo, TMP_BRANCH, base_branch)
-                    #     replace_sorry_with_proof(proofs)
-                    #     committed = commit_changes(repo, COMMIT_MESSAGE)
-                    #     if committed:
-                    #         push_changes(repo, TMP_BRANCH)
-                    #         url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
-                    #         # TODO: add the PR URL to the database
-                    #     shutil.rmtree(repo)
+                    logger.info(f"current epoch: {current_epoch}")
     except Exception as e:
         logger.info(f"An error occurred: {e}", file=sys.stderr)
         traceback.print_exc()
