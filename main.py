@@ -493,214 +493,214 @@ def find_latest_fisher():
     logger.info(f"Using the latest Fisher Information Matrix: {latest_fisher}")
     return latest_fisher
 
-def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, current_epoch, use_fisher, epochs_per_repo=1):
-    logger.info("Inside train_test_fisher")
-    logger.info(f"Starting training at epoch {current_epoch}")
-    seed_everything(3407)
+# def train_test_fisher(model_checkpoint_path, new_data_path, lambda_value, current_epoch, use_fisher, epochs_per_repo=1):
+#     logger.info("Inside train_test_fisher")
+#     logger.info(f"Starting training at epoch {current_epoch}")
+#     seed_everything(3407)
 
-    ### PROGRESSIVE TRAINING
+#     ### PROGRESSIVE TRAINING
     
-    if not torch.cuda.is_available():
-        logger.warning("Indexing the corpus using CPU can be very slow.")
-        device = torch.device("cpu")
-    else:
-        device = torch.device("cuda")
+#     if not torch.cuda.is_available():
+#         logger.warning("Indexing the corpus using CPU can be very slow.")
+#         device = torch.device("cpu")
+#     else:
+#         device = torch.device("cuda")
 
-    # TODO: reduce repetition in code like this
-    config = {
-        "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
-        "lr": 1e-3,
-        "warmup_steps": 1000,
-        "max_seq_len": 512,
-        "num_retrieved": 100,
-    }
+#     # TODO: reduce repetition in code like this
+#     config = {
+#         "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
+#         "lr": 1e-3,
+#         "warmup_steps": 1000,
+#         "max_seq_len": 512,
+#         "num_retrieved": 100,
+#     }
 
-    model = PremiseRetriever.load(
-        model_checkpoint_path, device, freeze=False, config=config
-    )
-    model.train()
-    logger.info(f"Loaded premise retriever at {model_checkpoint_path} and reset epoch count")
+#     model = PremiseRetriever.load(
+#         model_checkpoint_path, device, freeze=False, config=config
+#     )
+#     model.train()
+#     logger.info(f"Loaded premise retriever at {model_checkpoint_path} and reset epoch count")
 
-    # load previous Fisher Information Matrix for current EWC
-    if use_fisher:
-        latest_fisher = find_latest_fisher()
-        fisher_info = load_fisher_information(latest_fisher)
-        model.set_fisher_info(fisher_info)
-        logger.info("Fisher Information Matrix loaded.")
+#     # load previous Fisher Information Matrix for current EWC
+#     if use_fisher:
+#         latest_fisher = find_latest_fisher()
+#         fisher_info = load_fisher_information(latest_fisher)
+#         model.set_fisher_info(fisher_info)
+#         logger.info("Fisher Information Matrix loaded.")
 
-    # TODO: use the yaml file instead of repeating here, same throughout
-    model.set_lambda(lambda_value)
-    corpus_path = new_data_path + "/corpus.jsonl"
-    data_path = new_data_path + "/random"
-    print(f"Data path: {data_path}")
-    data_module = RetrievalDataModule(
-        data_path=data_path,
-        corpus_path=corpus_path,
-        num_negatives=3,
-        num_in_file_negatives=1,
-        model_name="google/byt5-small",
-        batch_size=BATCH_SIZE,
-        eval_batch_size=64,
-        max_seq_len=1024,
-        num_workers=4
-    )
-    data_module.setup(stage='fit')
+#     # TODO: use the yaml file instead of repeating here, same throughout
+#     model.set_lambda(lambda_value)
+#     corpus_path = new_data_path + "/corpus.jsonl"
+#     data_path = new_data_path + "/random"
+#     print(f"Data path: {data_path}")
+#     data_module = RetrievalDataModule(
+#         data_path=data_path,
+#         corpus_path=corpus_path,
+#         num_negatives=3,
+#         num_in_file_negatives=1,
+#         model_name="google/byt5-small",
+#         batch_size=BATCH_SIZE,
+#         eval_batch_size=64,
+#         max_seq_len=1024,
+#         num_workers=4
+#     )
+#     data_module.setup(stage='fit')
 
-    dir_name = new_data_path.split("/")[-1]
-    filename_suffix = f"_lambda_{lambda_value}"
-    checkpoint_callback = ModelCheckpoint(
-        dirpath=RAID_DIR + "/" + CHECKPOINT_DIR,
-        filename=dir_name + filename_suffix + "_{epoch}-{Recall@10_val:.2f}",
-        verbose=True,
-        save_top_k=1,
-        save_last=False,
-        monitor="Recall@10_val",
-        mode="max"
-    )
+#     dir_name = new_data_path.split("/")[-1]
+#     filename_suffix = f"_lambda_{lambda_value}"
+#     checkpoint_callback = ModelCheckpoint(
+#         dirpath=RAID_DIR + "/" + CHECKPOINT_DIR,
+#         filename=dir_name + filename_suffix + "_{epoch}-{Recall@10_val:.2f}",
+#         verbose=True,
+#         save_top_k=1,
+#         save_last=False,
+#         monitor="Recall@10_val",
+#         mode="max"
+#     )
     
-    early_stop_callback = EarlyStopping(
-        monitor="Recall@10_val",
-        patience=5,
-        mode="max",
-        verbose=True
-    )
+#     early_stop_callback = EarlyStopping(
+#         monitor="Recall@10_val",
+#         patience=5,
+#         mode="max",
+#         verbose=True
+#     )
 
-    lr_monitor = LearningRateMonitor(logging_interval='step')
+#     lr_monitor = LearningRateMonitor(logging_interval='step')
 
-    print(f"Training dataset size after load: {len(data_module.ds_train)}")
-    print(f"Validation dataset size after load: {len(data_module.ds_val)}")
-    print(f"Testing dataset size after load: {len(data_module.ds_pred)}")
+#     print(f"Training dataset size after load: {len(data_module.ds_train)}")
+#     print(f"Validation dataset size after load: {len(data_module.ds_val)}")
+#     print(f"Testing dataset size after load: {len(data_module.ds_pred)}")
 
-    # TODO: have separate ones and save the epoch and data point, same for fisher
-    mid_epoch_checkpoint_dir = os.path.join(RAID_DIR, "mid_epoch_checkpoints")
-    os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
-    timed_checkpoint_callback = TimedCheckpoint(checkpoint_dir=mid_epoch_checkpoint_dir)
+#     # TODO: have separate ones and save the epoch and data point, same for fisher
+#     mid_epoch_checkpoint_dir = os.path.join(RAID_DIR, "mid_epoch_checkpoints")
+#     os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
+#     timed_checkpoint_callback = TimedCheckpoint(checkpoint_dir=mid_epoch_checkpoint_dir)
 
-    VERY_LONG_TIMEOUT = 7 * 24 * 60 * 60  # 1 week
-    os.environ['TORCH_NCCL_ASYNC_ERROR_HANDLING'] = '1'
-    os.environ['NCCL_TIMEOUT'] = str(VERY_LONG_TIMEOUT * 1000)
+#     VERY_LONG_TIMEOUT = 7 * 24 * 60 * 60  # 1 week
+#     os.environ['TORCH_NCCL_ASYNC_ERROR_HANDLING'] = '1'
+#     os.environ['NCCL_TIMEOUT'] = str(VERY_LONG_TIMEOUT * 1000)
 
-    custom_log_dir = os.path.join(RAID_DIR, "lightning_logs", f"{dir_name}_{use_fisher}_lambda_{lambda_value}")
-    os.makedirs(custom_log_dir, exist_ok=True)
+#     custom_log_dir = os.path.join(RAID_DIR, "lightning_logs", f"{dir_name}_{use_fisher}_lambda_{lambda_value}")
+#     os.makedirs(custom_log_dir, exist_ok=True)
 
-    ddp_strategy = DDPStrategy(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
-    trainer = pl.Trainer(
-        accelerator="gpu",
-        gradient_clip_val=1.0,
-        precision="bf16-mixed",
-        strategy=ddp_strategy,
-        devices=4, # TODO: change for GPU
-        accumulate_grad_batches=4,
-        callbacks=[lr_monitor, checkpoint_callback, early_stop_callback, timed_checkpoint_callback],
-        max_epochs=current_epoch + epochs_per_repo,
-        log_every_n_steps=1,
-        num_sanity_val_steps=0,
-        default_root_dir=custom_log_dir,
-    )
+#     ddp_strategy = DDPStrategy(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
+#     trainer = pl.Trainer(
+#         accelerator="gpu",
+#         gradient_clip_val=1.0,
+#         precision="bf16-mixed",
+#         strategy=ddp_strategy,
+#         devices=4, # TODO: change for GPU
+#         accumulate_grad_batches=4,
+#         callbacks=[lr_monitor, checkpoint_callback, early_stop_callback, timed_checkpoint_callback],
+#         max_epochs=current_epoch + epochs_per_repo,
+#         log_every_n_steps=1,
+#         num_sanity_val_steps=0,
+#         default_root_dir=custom_log_dir,
+#     )
 
-    logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
+#     logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
 
-    try:
-        # if "mathlib4" not in new_data_path:
-        #     trainer.strategy.barrier()
-        #     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
-        #     trainer.strategy.barrier()
-        trainer.strategy.barrier()
-        trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
-        trainer.strategy.barrier()
-    except Exception as e:
-        print(f"An error occurred during training: {str(e)}")
-        print(traceback.format_exc())
+#     try:
+#         # if "mathlib4" not in new_data_path:
+#         #     trainer.strategy.barrier()
+#         #     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+#         #     trainer.strategy.barrier()
+#         trainer.strategy.barrier()
+#         trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
+#         trainer.strategy.barrier()
+#     except Exception as e:
+#         print(f"An error occurred during training: {str(e)}")
+#         print(traceback.format_exc())
 
-    logger.info(f"Finished progressive training at epoch {trainer.current_epoch}")
+#     logger.info(f"Finished progressive training at epoch {trainer.current_epoch}")
 
-    ### TESTING FOR AVERAGE RECALL
+#     ### TESTING FOR AVERAGE RECALL
 
-    # TODO: don't load corpus and reindex for every repo we use for average recall
-    # Load the best model checkpoint
-    best_model_path = checkpoint_callback.best_model_path
-    if best_model_path:
-        best_model = PremiseRetriever.load(best_model_path, device, freeze=False, config=config)
-    else:
-        logger.warning("No best model found. Using the last trained model.")
-        best_model = model
-        # TODO: change this to the last model trained later
-        if use_fisher:
-            best_model_path = RAID_DIR + "/" + CHECKPOINT_DIR + "/" + "merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310_lambda_0.1_epoch=0-Recall@10_val=58.95.ckpt"
-        else:
-            best_model_path = RAID_DIR + "/" + CHECKPOINT_DIR + "/" + "merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310_lambda_0.1_epoch=0-Recall@10_val=60.65.ckpt"
-    best_model.eval()
+#     # TODO: don't load corpus and reindex for every repo we use for average recall
+#     # Load the best model checkpoint
+#     best_model_path = checkpoint_callback.best_model_path
+#     if best_model_path:
+#         best_model = PremiseRetriever.load(best_model_path, device, freeze=False, config=config)
+#     else:
+#         logger.warning("No best model found. Using the last trained model.")
+#         best_model = model
+#         # TODO: change this to the last model trained later
+#         if use_fisher:
+#             best_model_path = RAID_DIR + "/" + CHECKPOINT_DIR + "/" + "merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310_lambda_0.1_epoch=0-Recall@10_val=58.95.ckpt"
+#         else:
+#             best_model_path = RAID_DIR + "/" + CHECKPOINT_DIR + "/" + "merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310_lambda_0.1_epoch=0-Recall@10_val=60.65.ckpt"
+#     best_model.eval()
 
-    logger.info("Testing...")
-    total_R1, total_R10, total_MRR = [], [], []
-    dataset_path = RAID_DIR + "/" + DATA_DIR
-    testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
-    with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-        f.write("\n\n\n")
-        f.write(f"Results for {dir_name} with lambda = {lambda_value}")
-    for data_path in testing_paths:
-        # TODO: remove this for tests that do not use merged dataset
-        if "merged" not in data_path:
-            continue
-        # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
-        run_cli(best_model_path, data_path)
-        num_gpus = 4 # TODO: change for GPU
-        preds_map = {}
-        for gpu_id in range(num_gpus):
-            with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
-                preds = pickle.load(f)
-                preds_map.update(preds)
+#     logger.info("Testing...")
+#     total_R1, total_R10, total_MRR = [], [], []
+#     dataset_path = RAID_DIR + "/" + DATA_DIR
+#     testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
+#     with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+#         f.write("\n\n\n")
+#         f.write(f"Results for {dir_name} with lambda = {lambda_value}")
+#     for data_path in testing_paths:
+#         # TODO: remove this for tests that do not use merged dataset
+#         if "merged" not in data_path:
+#             continue
+#         # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
+#         run_cli(best_model_path, data_path)
+#         num_gpus = 4 # TODO: change for GPU
+#         preds_map = {}
+#         for gpu_id in range(num_gpus):
+#             with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
+#                 preds = pickle.load(f)
+#                 preds_map.update(preds)
 
-        logger.info("Loaded the predictions pickle files")
-        data_path = os.path.join(data_path, "random", "test.json")
-        data = json.load(open(data_path))
-        logger.info(f"Evaluating on {data_path}")
-        R1, R10, MRR = _eval(data, preds_map)
-        logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-        total_R1.append(R1)
-        total_R10.append(R10)
-        total_MRR.append(MRR)
-        with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-            f.write(f"Intermediate results for {data_path}")
-            f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+#         logger.info("Loaded the predictions pickle files")
+#         data_path = os.path.join(data_path, "random", "test.json")
+#         data = json.load(open(data_path))
+#         logger.info(f"Evaluating on {data_path}")
+#         R1, R10, MRR = _eval(data, preds_map)
+#         logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+#         total_R1.append(R1)
+#         total_R10.append(R10)
+#         total_MRR.append(MRR)
+#         with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+#             f.write(f"Intermediate results for {data_path}")
+#             f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
 
-    avg_R1 = np.mean(total_R1)
-    avg_R10 = np.mean(total_R10)
-    avg_MRR = np.mean(total_MRR)
+#     avg_R1 = np.mean(total_R1)
+#     avg_R10 = np.mean(total_R10)
+#     avg_MRR = np.mean(total_MRR)
 
-    logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+#     logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
 
-    # Save average accuracies to a file
-    if not os.path.exists(EVAL_RESULTS_FILE_PATH):
-        open(EVAL_RESULTS_FILE_PATH, 'w').close()
+#     # Save average accuracies to a file
+#     if not os.path.exists(EVAL_RESULTS_FILE_PATH):
+#         open(EVAL_RESULTS_FILE_PATH, 'w').close()
 
-    with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-        f.write("\n\n\n")
-        f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+#     with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+#         f.write("\n\n\n")
+#         f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
 
     
-    ### FISHER INFORMATION MATRIX FOR NEXT EWC
+#     ### FISHER INFORMATION MATRIX FOR NEXT EWC
 
-    # TODO: distributed later
-    # Switch to one GPU for calculating the Fisher Information Matrix
-    if use_fisher:
-        try:
-            device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-            best_model.to(device)
-            train_dataloader = data_module.train_dataloader()
-            fisher_info = best_model.compute_fisher_information(train_dataloader, RAID_DIR + "/" + FISHER_DIR)
-            dir_path = RAID_DIR + "/" + FISHER_DIR
-            fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
-            with open(fisher_name, "wb") as f:
-                pickle.dump(fisher_info, f)
-            logger.info(f"Fisher info saved to {fisher_name}")
-        except Exception as e:
-            print(f"An error occurred during fisher: {str(e)}")
-            print(traceback.format_exc())
+#     # TODO: distributed later
+#     # Switch to one GPU for calculating the Fisher Information Matrix
+#     if use_fisher:
+#         try:
+#             device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+#             best_model.to(device)
+#             train_dataloader = data_module.train_dataloader()
+#             fisher_info = best_model.compute_fisher_information(train_dataloader, RAID_DIR + "/" + FISHER_DIR)
+#             dir_path = RAID_DIR + "/" + FISHER_DIR
+#             fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
+#             with open(fisher_name, "wb") as f:
+#                 pickle.dump(fisher_info, f)
+#             logger.info(f"Fisher info saved to {fisher_name}")
+#         except Exception as e:
+#             print(f"An error occurred during fisher: {str(e)}")
+#             print(traceback.format_exc())
 
-    # TODO: add anything else from yaml conf if needed
+#     # TODO: add anything else from yaml conf if needed
 
-    return model
+#     return model
 
 def theorem_identifier(theorem: Theorem) -> Tuple[str, str, Tuple[int, int], Tuple[int, int]]:
     return (theorem.full_name, str(theorem.file_path), tuple(theorem.start), tuple(theorem.end))
@@ -737,6 +737,25 @@ def save_progress(all_encountered_theorems):
     with open(ENCOUNTERED_THEOREMS_FILE, 'wb') as f:
         pickle.dump(all_encountered_theorems, f)
 
+def load_encountered_theorems(file_path):
+    all_encountered_theorems = set()
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, 'rb') as f:
+                file_content = f.read()
+                if file_content:  # Check if the file is not empty
+                    all_encountered_theorems = pickle.loads(file_content)
+                else:
+                    logger.warning(f"The file {file_path} is empty. Starting with an empty set.")
+        except (EOFError, pickle.UnpicklingError) as e:
+            logger.warning(f"Error reading {file_path}: {e}. Starting with an empty set.")
+        except Exception as e:
+            logger.error(f"Unexpected error when reading {file_path}: {e}. Starting with an empty set.")
+    else:
+        logger.info(f"The file {file_path} does not exist. Starting with an empty set.")
+    
+    return all_encountered_theorems
+
 def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic_database_json_path, repos_to_include: Optional[List[Tuple[str, str]]] = None, batch_size: int = 10):
     repos_to_process = db.repositories if repos_to_include is None else [
         repo for repo in db.repositories if (repo.url, repo.commit) in repos_to_include
@@ -752,9 +771,7 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic
     save_interval = timedelta(minutes=30)
 
     # Load previously encountered theorems
-    if os.path.exists(ENCOUNTERED_THEOREMS_FILE):
-        with open(ENCOUNTERED_THEOREMS_FILE, 'rb') as f:
-            all_encountered_theorems = pickle.load(f)
+    all_encountered_theorems = load_encountered_theorems(ENCOUNTERED_THEOREMS_FILE)
 
     for repo in repos_to_process:
         sorry_theorems = repo.sorry_theorems_unproved
@@ -811,7 +828,7 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic
         if theorem_batch:
             process_theorem_batch(theorem_batch, positions_batch, repo, db, prover, dynamic_database_json_path)
 
-    save_progress(all_encountered_theorems, dynamic_database_json_path, db)
+    save_progress(all_encountered_theorems)
     logger.info("Finished attempting to prove sorry theorems")
 
 class TimedCheckpoint(Callback):
@@ -901,90 +918,90 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     db.to_json(dynamic_database_json_path)
     return "Done"
 
-def retrieve_proof(run_progressive_training, use_fisher, single_repo, curriculum_learning, dynamic_database_json_path, repo, sha, lambda_value, current_epoch, epochs_per_repo, db):
-    global repos_for_merged_dataset
-    # TODO: update comments throughout
-    """
-    This method does the following:
-    1. Check if the given repo is supported.
-    2. Trace the repo.
-    3. Generate a corpus of the repo's premises.
-    4. Search for proofs for theorems with `sorry` in them.
-    """
-    if single_repo:
-        repos_for_merged_dataset = []
+# def retrieve_proof(run_progressive_training, use_fisher, single_repo, curriculum_learning, dynamic_database_json_path, repo, sha, lambda_value, current_epoch, epochs_per_repo, db):
+#     global repos_for_merged_dataset
+#     # TODO: update comments throughout
+#     """
+#     This method does the following:
+#     1. Check if the given repo is supported.
+#     2. Trace the repo.
+#     3. Generate a corpus of the repo's premises.
+#     4. Search for proofs for theorems with `sorry` in them.
+#     """
+#     if single_repo:
+#         repos_for_merged_dataset = []
 
-    if not curriculum_learning:
-        result = add_repo_to_database(dynamic_database_json_path, repo, db)
-        if result is None:
-            return None
+#     if not curriculum_learning:
+#         result = add_repo_to_database(dynamic_database_json_path, repo, db)
+#         if result is None:
+#             return None
 
-    # Generate a new dataset from the dynamic database.
-    # The user can choose to generate a dataset from the entire dynamic database or a subset of it.
-    dir_name = repo.url.split("/")[-1] + "_" + sha
-    # TODO: don't always do merged_, if we change this then change the if condition in average test accordingly
-    dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_with_new_{dir_name}"
-    if (repo.url, repo.commit) not in repos_for_merged_dataset:
-        logger.info("Adding repo to repos_for_merged_dataset")
-        repos_for_merged_dataset.append((repo.url, repo.commit))
-    else:
-        logger.info("Repo already in repos_for_merged_dataset")
-    db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
-    # TODO: reduce repition later with all path
-    dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
+#     # Generate a new dataset from the dynamic database.
+#     # The user can choose to generate a dataset from the entire dynamic database or a subset of it.
+#     dir_name = repo.url.split("/")[-1] + "_" + sha
+#     # TODO: don't always do merged_, if we change this then change the if condition in average test accordingly
+#     dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_with_new_{dir_name}"
+#     if (repo.url, repo.commit) not in repos_for_merged_dataset:
+#         logger.info("Adding repo to repos_for_merged_dataset")
+#         repos_for_merged_dataset.append((repo.url, repo.commit))
+#     else:
+#         logger.info("Repo already in repos_for_merged_dataset")
+#     db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+#     # TODO: reduce repition later with all path
+#     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
 
-    model_checkpoint_path = None
-    if run_progressive_training:
-        try:
-            model_checkpoint_path = find_latest_checkpoint()
-            logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
-        except FileNotFoundError as e:
-            logger.error(str(e))
-            return None
+#     model_checkpoint_path = None
+#     if run_progressive_training:
+#         try:
+#             model_checkpoint_path = find_latest_checkpoint()
+#             logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
+#         except FileNotFoundError as e:
+#             logger.error(str(e))
+#             return None
         
-        # Train the model on the new dataset that we generated from the dynamic database.
-        train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, use_fisher, epochs_per_repo)
-    else:
-        model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+#         # Train the model on the new dataset that we generated from the dynamic database.
+#         train_test_fisher(model_checkpoint_path, dst_dir, lambda_value, current_epoch, use_fisher, epochs_per_repo)
+#     else:
+#         model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
 
-    # Set up the prover
-    use_vllm = False
-    corpus_path = dst_dir + "/corpus.jsonl"
-    tactic = None  # `None` since we are not using a fixed tactic generator
-    module = None  # `None` since we are not using a fixed tactic generator
-    num_workers = 4 # TODO: do everywhere if good
-    num_gpus = 4 # TODO: change for GPU
-    timeout = 600
-    max_expansions = None
-    num_sampled_tactics = 64
-    debug = False
-    ckpt_path = f"{RAID_DIR}/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
-    prover = DistributedProver(
-        use_vllm,
-        ckpt_path,
-        corpus_path,
-        tactic,
-        module,
-        num_workers,
-        num_gpus=num_gpus,
-        timeout=timeout,
-        max_expansions=max_expansions,
-        num_sampled_tactics=num_sampled_tactics,
-        raid_dir=RAID_DIR,
-        checkpoint_dir=CHECKPOINT_DIR,
-        debug=debug,
-        run_progressive_training=run_progressive_training
-    )
+#     # Set up the prover
+#     use_vllm = False
+#     corpus_path = dst_dir + "/corpus.jsonl"
+#     tactic = None  # `None` since we are not using a fixed tactic generator
+#     module = None  # `None` since we are not using a fixed tactic generator
+#     num_workers = 4 # TODO: do everywhere if good
+#     num_gpus = 4 # TODO: change for GPU
+#     timeout = 600
+#     max_expansions = None
+#     num_sampled_tactics = 64
+#     debug = False
+#     ckpt_path = f"{RAID_DIR}/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+#     prover = DistributedProver(
+#         use_vllm,
+#         ckpt_path,
+#         corpus_path,
+#         tactic,
+#         module,
+#         num_workers,
+#         num_gpus=num_gpus,
+#         timeout=timeout,
+#         max_expansions=max_expansions,
+#         num_sampled_tactics=num_sampled_tactics,
+#         raid_dir=RAID_DIR,
+#         checkpoint_dir=CHECKPOINT_DIR,
+#         debug=debug,
+#         run_progressive_training=run_progressive_training
+#     )
 
-    # Prove sorry theorems
-    prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_merged_dataset)
-    db.to_json(dynamic_database_json_path)
+#     # Prove sorry theorems
+#     prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_merged_dataset)
+#     db.to_json(dynamic_database_json_path)
 
-    logger.info("Finished searching for proofs of sorry theorems")
+#     logger.info("Finished searching for proofs of sorry theorems")
 
-    # TODO: need to return proofs
-    proofs = []
-    return proofs
+#     # TODO: need to return proofs
+#     proofs = []
+#     return proofs
 
 def replace_sorry_with_proof(proofs):
     """Replace the `sorry` with the proof text in the Lean files."""
@@ -1358,7 +1375,7 @@ def main():
                             model_checkpoint_path, device, freeze=False, config=config
                         )
                         model.train()
-                        logger.info(f"Loaded premise retriever at {model_checkpoint_path} and reset epoch count")
+                        logger.info(f"Loaded premise retriever at {model_checkpoint_path}")
 
                         # load previous Fisher Information Matrix for current EWC
                         if use_fisher:
@@ -1368,23 +1385,6 @@ def main():
                             logger.info("Fisher Information Matrix loaded.")
 
                         # TODO: use the yaml file instead of repeating here, same throughout
-                        model.set_lambda(lambda_value)
-                        corpus_path = new_data_path + "/corpus.jsonl"
-                        data_path = new_data_path + "/random"
-                        print(f"Data path: {data_path}")
-                        data_module = RetrievalDataModule(
-                            data_path=data_path,
-                            corpus_path=corpus_path,
-                            num_negatives=3,
-                            num_in_file_negatives=1,
-                            model_name="google/byt5-small",
-                            batch_size=BATCH_SIZE,
-                            eval_batch_size=64,
-                            max_seq_len=1024,
-                            num_workers=4
-                        )
-                        data_module.setup(stage='fit')
-
                         dir_name = new_data_path.split("/")[-1]
                         filename_suffix = f"_lambda_{lambda_value}"
                         checkpoint_callback = ModelCheckpoint(
@@ -1405,10 +1405,6 @@ def main():
                         )
 
                         lr_monitor = LearningRateMonitor(logging_interval='step')
-
-                        logger.info(f"Training dataset size after load: {len(data_module.ds_train)}")
-                        logger.info(f"Validation dataset size after load: {len(data_module.ds_val)}")
-                        logger.info(f"Testing dataset size after load: {len(data_module.ds_pred)}")
 
                         mid_epoch_checkpoint_dir = os.path.join(RAID_DIR, f"mid_epoch_checkpoints_{current_epoch}_{dir_name}_{use_fisher}_lambda_{lambda_value}")
                         os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
@@ -1437,6 +1433,29 @@ def main():
                             limit_train_batches=2,  # TODO: remove
                             limit_val_batches=1,  # TODO: remove
                         )
+
+                        logger.info("right before barrier for data module")
+                        trainer.strategy.barrier()
+                        model.set_lambda(lambda_value)
+                        corpus_path = new_data_path + "/corpus.jsonl"
+                        data_path = new_data_path + "/random"
+                        print(f"Data path: {data_path}")
+                        data_module = RetrievalDataModule(
+                            data_path=data_path,
+                            corpus_path=corpus_path,
+                            num_negatives=3,
+                            num_in_file_negatives=1,
+                            model_name="google/byt5-small",
+                            batch_size=BATCH_SIZE,
+                            eval_batch_size=64,
+                            max_seq_len=1024,
+                            num_workers=4
+                        )
+                        data_module.setup(stage='fit')
+
+                        logger.info(f"Training dataset size after load: {len(data_module.ds_train)}")
+                        logger.info(f"Validation dataset size after load: {len(data_module.ds_val)}")
+                        logger.info(f"Testing dataset size after load: {len(data_module.ds_pred)}")
 
                         logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
 
