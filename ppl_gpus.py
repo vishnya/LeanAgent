@@ -1,6 +1,7 @@
 import subprocess
 import psutil
 from tabulate import tabulate
+import os
 
 def get_gpu_processes():
     gpu_processes = []
@@ -47,6 +48,17 @@ def get_gpu_info():
 
     return gpu_info
 
+def kill_processes(processes):
+    for process in processes:
+        pid = process['PID']
+        try:
+            os.kill(pid, 9)  # 9 is the signal for SIGKILL
+            print(f"Killed process {pid}")
+        except ProcessLookupError:
+            print(f"Process {pid} not found")
+        except PermissionError:
+            print(f"Permission denied to kill process {pid}")
+
 def main():
     gpu_processes = get_gpu_processes()
     gpu_info = get_gpu_info()
@@ -57,6 +69,7 @@ def main():
         process['GPU Name'] = gpu_details['name']
     if gpu_processes:
         print(tabulate(gpu_processes, headers="keys"))
+        kill_processes(gpu_processes)
     else:
         print("No GPU processes found.")
 
