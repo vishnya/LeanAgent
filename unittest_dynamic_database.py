@@ -20,7 +20,7 @@ from typing import Tuple
 import os
 from unittest.mock import patch, MagicMock
 
-RAID_DIR = "/data/yingzi_ma/lean_project"
+RAID_DIR = os.environ.get('RAID_DIR')
 DATA_DIR = "datasets_new"
 MERGED_DATA_DIR = "datasets_merged"
 PROOF_LOG_FILE_NAME = "proof_logs_test/proof_log_unit_tests.log"
@@ -785,7 +785,7 @@ class TestDynamicDatabaseCore(unittest.TestCase):
         mock_repo.commit = "abcdef123456"
         mock_repo.get_config.return_value = {"content": "mock_content"}
 
-        dst_dir = "/data/yingzi_ma/lean_project/datasets_retrieval_full_merge_each_time/merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310"
+        dst_dir = f"{RAID_DIR}/datasets_retrieval_full_merge_each_time/merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310"
         
         data = {
             "url": mock_repo.url,
@@ -830,7 +830,7 @@ class TestDynamicDatabaseCore(unittest.TestCase):
         mock_repo.commit = "abcdef123456"
         mock_repo.get_config.return_value = {"content": "mock_content"}
 
-        dst_dir = "/data/yingzi_ma/lean_project/datasets_retrieval_full_merge_each_time/merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310"
+        dst_dir = f"{RAID_DIR}/datasets_retrieval_full_merge_each_time/merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310"
         
         data = {
             "url": mock_repo.url,

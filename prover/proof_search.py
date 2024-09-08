@@ -35,6 +35,7 @@ from prover.search_tree import *
 from generator.model import RetrievalAugmentedGenerator, FixedTacticGenerator
 
 tolerance = 1 # second
+RAID_DIR = os.environ.get('RAID_DIR')
 
 @dataclass(frozen=True)
 class SearchResult:
@@ -429,7 +430,7 @@ class DistributedProver:
             if run_progressive_training:
                 model_checkpoint_path = find_latest_checkpoint(raid_dir, checkpoint_dir)
             else:
-                model_checkpoint_path = "/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
             
             config = {
                 "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",

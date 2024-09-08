@@ -10,6 +10,7 @@ from ctranslate2.converters.transformers import (
 from ctranslate2.specs import transformer_spec, common_spec
 import ctranslate2.converters.utils as utils
 
+RAID_DIR = os.environ.get('RAID_DIR')
 
 class T5EncoderLoader(ModelLoader):
     @property
@@ -134,6 +135,6 @@ def main(hf_model_path, ct2_model_path):
     # print("Feature extracted successfully!")
 
 if __name__ == "__main__":
-    hf_model_path = "/data/yingzi_ma/lean_project/ReProver/leandojo-lean4-retriever-byt5-small"
+    hf_model_path = f"{RAID_DIR}/ReProver/leandojo-lean4-retriever-byt5-small"
     ct2_model_path = "ct2-leandojo-lean4-retriever-byt5-small"
     main(hf_model_path, ct2_model_path)

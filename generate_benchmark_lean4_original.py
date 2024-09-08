@@ -17,6 +17,7 @@ import subprocess
 
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 
+RAID_DIR = os.environ.get('RAID_DIR')
 NUM_VAL = NUM_TEST = 2000
 SPLIT_NAME = str  # train/val/test
 SPLIT = Dict[SPLIT_NAME, List[TracedTheorem]]
@@ -281,7 +282,7 @@ def main(url, commit, dst_dir):
     if not is_supported_version(v):
         logger.info("Unsupported version")
     v = v[1:] # ignore "v" at beginning
-    lean_dir = "/data/yingzi_ma/.elan/toolchains/leanprover--lean4---" + v
+    lean_dir = f"{RAID_DIR}/.elan/toolchains/leanprover--lean4---{v}"
     logger.info(f"lean path {lean_dir}")
     if not os.path.exists(lean_dir):
         logger.info(f"Lean toolchain path does not exist: {lean_dir}")
