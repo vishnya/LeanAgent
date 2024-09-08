@@ -378,6 +378,37 @@ def get_compatible_commit(url):
         logger.info(f"Error in get_compatible_commit: {str(e)}")
         return None, None
 
+def find_and_save_compatible_commits(repo_info_file, lean_git_repos):
+    updated_repos = []
+    for repo in lean_git_repos:
+        url = repo.url
+        if not url.endswith('.git'):
+            url = url + '.git'
+        
+        sha = None
+        v = None
+        if "mathlib4" in url:
+            sha = "2b29e73438e240a427bcecc7c0fe19306beb1310"
+            v = "v4.8.0"
+        elif "SciLean" in url:
+            sha = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
+            v = "v4.7.0"
+        elif "pfr" in url:
+            sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+            v = "v4.8.0-rc1"
+        else:
+            sha, v = get_compatible_commit(url)
+        if not sha:
+            logger.info(f"Failed to find a compatible commit for {url}")
+            continue
+        
+        updated_repos.append({"url": url.replace('.git', ''), "commit": sha, "version": v})
+    
+    with open(repo_info_file, 'w') as f:
+        json.dump(updated_repos, f)
+    
+    return updated_repos
+
 def search_github_repositories(language="Lean", num_repos=10):
     global attempted_repos
     """Search for the given number of repositories on GitHub that have the given language."""
@@ -471,6 +502,7 @@ def load_fisher_information(file_path):
         return fisher_info
     except FileNotFoundError:
         logger.error(f"No Fisher Information file found at {file_path}.")
+        # TODO: return mathlib fisher
         return None
 
 def find_latest_checkpoint():
@@ -727,10 +759,11 @@ def process_theorem_batch(theorem_batch, positions_batch, repo, db, prover, dyna
             theorem.traced_tactics = traced_tactics
             repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
             db.update_repository(repo)
-            db.to_json(dynamic_database_json_path)
             logger.info(f"Updated theorem {theorem.full_name} in the database")
         else:
             logger.info(f"No proof found for {theorem.full_name}")
+    
+    db.to_json(dynamic_database_json_path)
 
 def save_progress(all_encountered_theorems):
     logger.info("Saving encountered theorems...")
@@ -854,6 +887,7 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
         url = url + '.git'
     logger.info(f"Processing {url}")
     # TODO: remove later
+    # TODO: duplicate work of the main function
     # sha, v = get_compatible_commit(url)
     sha = None
     v = None
@@ -1115,6 +1149,19 @@ def load_sorted_repos(file_path: str) -> List[Tuple[str, str, str]]:
         sorted_repo_data = json.load(f)
     return [(repo["url"], repo["commit"], repo["name"]) for repo in sorted_repo_data]
 
+def write_skip_file(repo_url):
+    skip_file_path = os.path.join(RAID_DIR, DATA_DIR, "skip_repo.txt")
+    with open(skip_file_path, 'w') as f:
+        f.write(repo_url)
+
+def should_skip_repo():
+    skip_file_path = os.path.join(RAID_DIR, DATA_DIR, "skip_repo.txt")
+    if os.path.exists(skip_file_path):
+        with open(skip_file_path, 'r') as f:
+            repo_url = f.read().strip()
+        return True, repo_url
+    return False, None
+
 # TODO: incorporate latest changes from ReProver repo
 def main():
     """The main function that drives the bot."""
@@ -1261,12 +1308,18 @@ def main():
 
         else:
             logger.info("Starting without curriculum learning")
-            repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info.json"  # TODO: make constnat?
+            repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
             if is_main_process:
                 # search_github_repositories("Lean", num_repos)
 
-                clone_url = "https://github.com/teorth/pfr.git"
-                commit = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+                # clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
+                # commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
+                clone_url = "https://github.com/avigad/mathematics_in_lean_source.git"
+                commit = "cfe61bc71b5ea501f89df36c945949a1febf5e75"
                 url = clone_url.replace('.git', '')
                 lean_git_repo = LeanGitRepo(url, commit)
                 lean_git_repos.append(lean_git_repo)
@@ -1277,22 +1330,24 @@ def main():
                 lean_git_repo = LeanGitRepo(url, commit)
                 lean_git_repos.append(lean_git_repo)
 
-                repo_info = [{"url": repo.url, "commit": repo.commit} for repo in lean_git_repos]
-                with open(repo_info_file, 'w') as f:
-                    json.dump(repo_info, f)
-            else:
-                max_attempts = 30
-                for attempt in range(max_attempts):
-                    try:
-                        with open(repo_info_file, 'r') as f:
-                            repo_info = json.load(f)
-                        break
-                    except (json.JSONDecodeError, FileNotFoundError):
-                        if attempt == max_attempts - 1:
-                            raise Exception("Failed to read repository information after multiple attempts")
-                        time.sleep(1)
+                logger.info("Finding compatible repositories...")
+                updated_repos = find_and_save_compatible_commits(repo_info_file, lean_git_repos)
+                lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
+                logger.info("Finished finding compatible repositories")
+
+            # All processes wait for the file to be created and then read from it
+            max_attempts = 30
+            for attempt in range(max_attempts):
+                try:
+                    with open(repo_info_file, 'r') as f:
+                        repo_info = json.load(f)
+                    break
+                except (json.JSONDecodeError, FileNotFoundError):
+                    if attempt == max_attempts - 1:
+                        raise Exception("Failed to read repository information after multiple attempts")
+                    time.sleep(1)
                 
-                lean_git_repos = [LeanGitRepo(info['url'], info['commit']) for info in repo_info]
+            lean_git_repos = [LeanGitRepo(info['url'].replace('.git', ''), info['commit']) for info in repo_info]
 
             for i in range(num_repos):
                 for lambda_value in lambdas:
@@ -1301,6 +1356,7 @@ def main():
                     repo = lean_git_repos[i]
                     sha = repo.commit
                     dir_name = repo.url.split("/")[-1] + "_" + sha
+                    result = True
                     if is_main_process:
                         logger.info("Main process")
                         logger.info(f"Using lambda = {lambda_value}")
@@ -1319,7 +1375,8 @@ def main():
                         if not curriculum_learning:
                             result = add_repo_to_database(dynamic_database_json_path, repo, db)
                             if result is None:
-                                return None
+                                write_skip_file(repo.url)
+                                logger.info(f"Writing skip file for {repo.url}")
 
                         # Generate a new dataset from the dynamic database.
                         # The user can choose to generate a dataset from the entire dynamic database or a subset of it.
@@ -1347,7 +1404,7 @@ def main():
                             logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
                         except FileNotFoundError as e:
                             logger.error(str(e))
-                            return None
+                            model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
                         
                         # Train the model on the new dataset that we generated from the dynamic database.
                         logger.info("Inside train_test_fisher")
@@ -1436,6 +1493,16 @@ def main():
 
                         logger.info("right before barrier for data module")
                         trainer.strategy.barrier()
+                        should_skip, skip_repo_url = should_skip_repo()
+                        if should_skip:
+                            logger.info(f"Skipping repository {skip_repo_url} due to preprocessing issues")
+                            trainer.strategy.barrier()
+                            if is_main_process:
+                                logger.info("Removing skip file")
+                                skip_file_path = os.path.join(RAID_DIR, DATA_DIR, "skip_repo.txt")
+                                os.remove(skip_file_path)
+                            continue
+
                         model.set_lambda(lambda_value)
                         corpus_path = new_data_path + "/corpus.jsonl"
                         data_path = new_data_path + "/random"
@@ -1460,10 +1527,6 @@ def main():
                         logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
 
                         try:
-                            # if "mathlib4" not in new_data_path:
-                            #     trainer.strategy.barrier()
-                            #     trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
-                            #     trainer.strategy.barrier()
                             logger.info("hit the barrier before training")
                             trainer.strategy.barrier()
                             trainer.fit(model, datamodule=data_module, ckpt_path=model_checkpoint_path)
@@ -1542,7 +1605,10 @@ def main():
                                 f.write("\n\n\n")
                                 f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                     else:
-                        model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                        model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                        if result is None:
+                            logger.info(f"Skipping repository {repo.url} due to preprocessing issues")
+                            continue
 
                     if is_main_process and run_progressive_training and use_fisher:
                         logger.info("Calculating Fisher Information Matrix for EWC")
@@ -1603,13 +1669,7 @@ def main():
                         logger.info("Finished searching for proofs of sorry theorems")
 
                         # TODO: need to return proofs
-                        proofs = []
-
-                        # TODO: figure out how to handle this since there may be many None returns
-                        # TODO: all GPUs should see this
-                        if proofs is None:
-                            logger.info("Skipping repository due to configuration or error.")
-                            continue
+                        # proofs = []
                         # Uncomment if you would like to contribute back to the repos!
                         # else:
                         #     base_branch = get_default_branch(repo_no_dir)
@@ -1625,6 +1685,7 @@ def main():
                         #         # TODO: add the PR URL to the database
                         #     shutil.rmtree(repo)
                     
+                    logger.info("Finished processing the repository")
                     current_epoch += epochs_per_repo
                     logger.info(f"current epoch: {current_epoch}")
     except Exception as e:

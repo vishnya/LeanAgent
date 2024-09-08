@@ -7,4 +7,5 @@ conda activate ReProver
 export PYTHONPATH="${PYTHONPATH}:${RAID_DIR}/ReProver"
 export GITHUB_ACCESS_TOKEN="<>"
 export CACHE_DIR="${RAID_DIR}/.cache/lean_dojo"
+ray stop --force
 python main.py
