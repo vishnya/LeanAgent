@@ -1643,7 +1643,7 @@ def main():
                         max_expansions = None
                         num_sampled_tactics = 64
                         debug = False
-                        ckpt_path = f"{RAID_DIR}/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt"
+                        ckpt_path = f"{RAID_DIR}/model_lightning.ckpt"
                         prover = DistributedProver(
                             use_vllm,
                             ckpt_path,
