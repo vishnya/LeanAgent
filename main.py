@@ -746,23 +746,29 @@ def process_theorem_batch(theorem_batch, positions_batch, repo, db, prover, dyna
     theorem_map = {ldj_thm: thm for thm, ldj_thm in theorem_batch}
     
     for result in results:
-        theorem = theorem_map[result.theorem]
-        if isinstance(result, SearchResult) and result.status == Status.PROVED:
-            logger.info(f"Proof found for {theorem.full_name}")
-            traced_tactics = [
-                AnnotatedTactic(
-                    tactic=tactic,
-                    annotated_tactic=(tactic, []),
-                    state_before="",
-                    state_after=""
-                ) for tactic in result.proof
-            ]
-            theorem.traced_tactics = traced_tactics
-            repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
-            db.update_repository(repo)
-            logger.info(f"Updated theorem {theorem.full_name} in the database")
+        if isinstance(result, SearchResult):
+            if result.theorem in theorem_map:
+                theorem = theorem_map[result.theorem]
+                if result.status == Status.PROVED:
+                    logger.info(f"Proof found for {theorem.full_name}")
+                    traced_tactics = [
+                        AnnotatedTactic(
+                            tactic=tactic,
+                            annotated_tactic=(tactic, []),
+                            state_before="",
+                            state_after=""
+                        ) for tactic in result.proof
+                    ]
+                    theorem.traced_tactics = traced_tactics
+                    repo.change_sorry_to_proven(theorem, PROOF_LOG_FILE_NAME)
+                    db.update_repository(repo)
+                    logger.info(f"Updated theorem {theorem.full_name} in the database")
+                else:
+                    logger.info(f"No proof found for {theorem.full_name}")
+            else:
+                logger.warning(f"Theorem not found in theorem_map: {result.theorem}")
         else:
-            logger.info(f"No proof found for {theorem.full_name}")
+            logger.warning(f"Unexpected result type")
     
     db.to_json(dynamic_database_json_path)
 
