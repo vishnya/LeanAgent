@@ -183,7 +183,7 @@ known_repositories = [
     "leanprover-community/quote4",  # no theorems
     # "yuma-mizuno/lean-math-workshop",
     "leanprover-community/iris-lean",  # trace problems
-    # "aripiprazole/rinha",
+    "aripiprazole/rinha",  # incompatible commit
     # "loganrjmurphy/LeanEuclid",
     "leanprover/lean4-cli",  # no theorems
     "leanprover/LeanInk",  # no theorems
