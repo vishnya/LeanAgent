@@ -148,7 +148,7 @@ repos_for_merged_dataset = []
 # TODO: automate this
 # Feel free to remove any repos from this list if you would like to test on them
 known_repositories = [
-    # "leanprover-community/mathlib4",  # ReProver is trained on this + LeanDojo already tests on it
+    "leanprover-community/mathlib4",  # ReProver is trained on this
     "leanprover-community/batteries", # functional programming instead of math
     "leanprover-community/aesop",
     "leanprover/lean4",
