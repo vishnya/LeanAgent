@@ -455,9 +455,8 @@ class DistributedProver:
                     logger.info(f"Loading indexed corpus from {indexed_corpus_path}")
                     tac_gen.retriever.load_corpus(indexed_corpus_path)
                     logger.info(f"Loaded indexed corpus from {indexed_corpus_path}")
-                # TODO: put back
-                # tac_gen.retriever.reindex_corpus(batch_size=32)
-                # logger.info("Finished reindexing!")
+                tac_gen.retriever.reindex_corpus(batch_size=32)
+                logger.info("Finished reindexing!")
     
         self.distributed = num_workers > 1
         if not self.distributed:

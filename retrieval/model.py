@@ -310,14 +310,7 @@ class PremiseRetriever(pl.LightningModule):
 
     def on_validation_start(self) -> None:
         # logger.info("Inside on_validation_start")
-        # self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
-        self.corpus_embeddings = torch.zeros(
-            len(self.corpus.all_premises),
-            self.embedding_size,
-            dtype=self.encoder.dtype,
-            device=self.device,
-        )
-        self.embeddings_staled = False
+        self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
         # logger.info("End of on_validation_start")
 
     def validation_step(self, batch: Dict[str, Any], batch_idx: int) -> None:
@@ -405,14 +398,7 @@ class PremiseRetriever(pl.LightningModule):
         self.corpus_embeddings = None
         self.embeddings_staled = True
         logger.info(f"Embeddings staled on predict start: {self.embeddings_staled}")
-        # self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
-        self.corpus_embeddings = torch.zeros(
-            len(self.corpus.all_premises),
-            self.embedding_size,
-            dtype=self.encoder.dtype,
-            device=self.device,
-        )
-        self.embeddings_staled = False
+        self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
         self.predict_step_outputs = []
         # logger.info("End of on_predict_start")
 
@@ -590,14 +576,7 @@ class PremiseRetriever(pl.LightningModule):
     ) -> Tuple[List[Premise], List[float]]:
         """Retrieve ``k`` premises from ``corpus`` using ``state`` and ``tactic_prefix`` as context."""
         # logger.info("Inside retrieve")
-        # self.reindex_corpus(batch_size=32)
-        self.corpus_embeddings = torch.zeros(
-            len(self.corpus.all_premises),
-            self.embedding_size,
-            dtype=self.encoder.dtype,
-            device=self.device,
-        )
-        self.embeddings_staled = False
+        self.reindex_corpus(batch_size=32)
 
         ctx = [
             Context(*_)

@@ -1485,8 +1485,6 @@ def main():
                             log_every_n_steps=1,
                             num_sanity_val_steps=0,
                             default_root_dir=custom_log_dir,
-                            limit_train_batches=2,  # TODO: remove
-                            limit_val_batches=1,  # TODO: remove
                         )
 
                         logger.info("right before barrier for data module")
@@ -1637,9 +1635,9 @@ def main():
                         corpus_path = dst_dir + "/corpus.jsonl"
                         tactic = None  # `None` since we are not using a fixed tactic generator
                         module = None  # `None` since we are not using a fixed tactic generator
-                        num_workers = 4 # TODO: do everywhere if good
+                        num_workers = 4
                         num_gpus = 4 # TODO: change for GPU
-                        timeout = 10  # TODO: change to 600
+                        timeout = 600
                         max_expansions = None
                         num_sampled_tactics = 64
                         debug = False
