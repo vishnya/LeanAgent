@@ -153,6 +153,7 @@ known_repositories = [
     "leanprover-community/aesop",
     "leanprover/lean4",
     "leanprover-community/mathlib", # Mathlib3 version
+    "leanprover-community/mathlib3",
     "leanprover/std4",  # moved to batteries
     # "leanprover-community/duper",  # functional programming instead of math
     "leanprover/lake",
