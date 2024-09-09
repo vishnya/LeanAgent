@@ -1310,7 +1310,7 @@ def main():
             logger.info("Starting without curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
             if is_main_process:
-                # search_github_repositories("Lean", num_repos)
+                search_github_repositories("Lean", num_repos)
 
                 # clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
                 # commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
@@ -1318,17 +1318,17 @@ def main():
                 # lean_git_repo = LeanGitRepo(url, commit)
                 # lean_git_repos.append(lean_git_repo)
 
-                clone_url = "https://github.com/teorth/pfr.git"
-                commit = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
-                url = clone_url.replace('.git', '')
-                lean_git_repo = LeanGitRepo(url, commit)
-                lean_git_repos.append(lean_git_repo)
+                # clone_url = "https://github.com/teorth/pfr.git"
+                # commit = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
 
-                clone_url = "https://github.com/avigad/mathematics_in_lean_source.git"
-                commit = "cfe61bc71b5ea501f89df36c945949a1febf5e75"
-                url = clone_url.replace('.git', '')
-                lean_git_repo = LeanGitRepo(url, commit)
-                lean_git_repos.append(lean_git_repo)
+                # clone_url = "https://github.com/avigad/mathematics_in_lean_source.git"
+                # commit = "cfe61bc71b5ea501f89df36c945949a1febf5e75"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
 
                 logger.info("Finding compatible repositories...")
                 updated_repos = find_and_save_compatible_commits(repo_info_file, lean_git_repos)
