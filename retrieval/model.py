@@ -278,10 +278,10 @@ class PremiseRetriever(pl.LightningModule):
 
     @torch.no_grad()
     def reindex_corpus(self, batch_size: int) -> None:
-        logger.info("Inside reindex_corpus")
+        # logger.info("Inside reindex_corpus")
         """Re-index the retrieval corpus using the up-to-date encoder."""
         if not self.embeddings_staled:
-            logger.info(f"Embeddings staled about to return reindex corpus: {self.embeddings_staled}")
+            # logger.info(f"Embeddings staled about to return reindex corpus: {self.embeddings_staled}")
             return
         logger.info("Re-indexing the retrieval corpus")
 
@@ -305,8 +305,8 @@ class PremiseRetriever(pl.LightningModule):
                 tokenized_premises.input_ids, tokenized_premises.attention_mask
             )
         self.embeddings_staled = False
-        logger.info("End of reindex_corpus")
-        logger.info(f"Embeddings staled end of reindex corpus: {self.embeddings_staled}")
+        # logger.info("End of reindex_corpus")
+        # logger.info(f"Embeddings staled end of reindex corpus: {self.embeddings_staled}")
 
     def on_validation_start(self) -> None:
         # logger.info("Inside on_validation_start")
