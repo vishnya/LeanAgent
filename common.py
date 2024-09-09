@@ -63,6 +63,8 @@ class Context:
             return ""
         return self.state
 
+def escape_regex_special_chars(text):
+    return re.escape(text)
 
 @dataclass(unsafe_hash=True)
 class Premise:
@@ -106,7 +108,9 @@ class Premise:
 
         for i in range(len(fields)):
             prefix = ".".join(fields[i:])
-            new_code = re.sub(f"(?<=\s)«?{prefix}»?", annot_full_name, code)
+            escaped_prefix = escape_regex_special_chars(prefix)
+            pattern = f"(?<=\\s)«?{escaped_prefix}»?"
+            new_code = re.sub(pattern, annot_full_name, code)
             if new_code != code:
                 code = new_code
                 break
