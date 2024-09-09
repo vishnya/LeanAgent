@@ -30,7 +30,6 @@ def test_scilean_premise_serialization():
                     path=premise_data['path'],
                     start=p['start'],
                     end=p['end'],
-                    kind=p['kind']
                 )
                 try:
                     # Extract the prefix (assuming it's the part before the first dot)
