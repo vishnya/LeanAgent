@@ -1378,6 +1378,7 @@ def main():
                             repos_for_merged_dataset = []
                         
                         if not curriculum_learning:
+                            db = None
                             result = add_repo_to_database(dynamic_database_json_path, repo, db)
                             if result is None:
                                 write_skip_file(repo.url)
