@@ -173,7 +173,7 @@ known_repositories = [
     "ImperialCollegeLondon/formalising-mathematics-2024",  # trace problems
     "leanprover-community/ProofWidgets4",  # trace problems
     "leanprover/verso",  # trace problems
-    # "leanprover-community/NNG4",
+    "leanprover-community/NNG4", # trace problems
     "ufmg-smite/lean-smt",  # fails to trace due to windows-style line endings
     # "google-deepmind/debate",
     "teorth/symmetric_project",  # no compatible commit
