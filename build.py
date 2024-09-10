@@ -74,21 +74,20 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
-# test
 
-DATA_DIR = "datasets_PT_merge_all_no_ewc"
+# DATA_DIR = "datasets_PT_merge_all_no_ewc"
+# CHECKPOINT_DIR = "checkpoints_PT_merge_all_no_ewc"
+# EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_merge_all_no_ewc.txt"
+# DB_FILE_NAME = "dynamic_database_PT_merge_all_no_ewc.json"
+# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_merge_all_no_ewc.log"
+# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_no_ewc.pkl"
+
+DATA_DIR = "datasets_PT_single_repo_no_ewc"
 CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc"
-EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_merge_all_no_ewc.txt"
-DB_FILE_NAME = "dynamic_database_PT_merge_all_no_ewc.json"
-PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_merge_all_no_ewc.log"
-ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_no_ewc.pkl"
-
-# DATA_DIR = "datasets_PT_single_repo_no_ewc"
-# CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc"
-# EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc.txt"
-# DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc.json"
-# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc.log"
-# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
+EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc.txt"
+DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc.json"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc.log"
+ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum"
@@ -144,8 +143,7 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_no_ewc.pkl"
 # TODO: do we still need this?
 load_dotenv()
 
-repos_for_merged_dataset = [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744")]
-repos_for_proving = []
+repos_for_merged_dataset = []
 
 # TODO: automate this
 # Feel free to remove any repos from this list if you would like to test on them
@@ -1175,7 +1173,6 @@ def should_skip_repo():
 def main():
     """The main function that drives the bot."""
     global repos_for_merged_dataset
-    global repos_for_proving
     global lean_git_repos
     try:
         # Configure these parameters!
@@ -1185,8 +1182,8 @@ def main():
         # run_progressive_training = False
         # use_fisher = True
         use_fisher = False
-        # single_repo = True
-        single_repo = False
+        single_repo = True
+        # single_repo = False
         start_with_pfr = False
         # start_with_pfr = True
         curriculum_learning = False
@@ -1320,7 +1317,7 @@ def main():
             logger.info("Starting without curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
             if is_main_process:
-                #  search_github_repositories("Lean", num_repos)
+                # search_github_repositories("Lean", num_repos)
 
                 clone_url = "https://github.com/leanprover-community/NNG4.git"
                 commit = "66b27f382aa68b1651cc41a855447079a952d678"
@@ -1346,18 +1343,18 @@ def main():
                 # logger.info("Finished finding compatible repositories")
 
             # All processes wait for the file to be created and then read from it
-            max_attempts = 30
-            for attempt in range(max_attempts):
-                try:
-                    with open(repo_info_file, 'r') as f:
-                        repo_info = json.load(f)
-                    break
-                except (json.JSONDecodeError, FileNotFoundError):
-                    if attempt == max_attempts - 1:
-                        raise Exception("Failed to read repository information after multiple attempts")
-                    time.sleep(1)
+            # max_attempts = 30
+            # for attempt in range(max_attempts):
+            #     try:
+            #         with open(repo_info_file, 'r') as f:
+            #             repo_info = json.load(f)
+            #         break
+            #     except (json.JSONDecodeError, FileNotFoundError):
+            #         if attempt == max_attempts - 1:
+            #             raise Exception("Failed to read repository information after multiple attempts")
+            #         time.sleep(1)
                 
-            lean_git_repos = [LeanGitRepo(info['url'].replace('.git', ''), info['commit']) for info in repo_info]
+            # lean_git_repos = [LeanGitRepo(info['url'].replace('.git', ''), info['commit']) for info in repo_info]
 
             for i in range(num_repos):
                 for lambda_value in lambdas:
@@ -1379,14 +1376,12 @@ def main():
         
                         if single_repo:
                             repos_for_merged_dataset = []
-                        repos_for_proving = []
                         
                         if not curriculum_learning:
                             result = add_repo_to_database(dynamic_database_json_path, repo, db)
                             if result is None:
                                 write_skip_file(repo.url)
                                 logger.info(f"Writing skip file for {repo.url}")
-                        return
 
                         # Generate a new dataset from the dynamic database.
                         # The user can choose to generate a dataset from the entire dynamic database or a subset of it.
@@ -1395,7 +1390,6 @@ def main():
                         if (repo.url, repo.commit) not in repos_for_merged_dataset:
                             logger.info("Adding repo to repos_for_merged_dataset")
                             repos_for_merged_dataset.append((repo.url, repo.commit))
-                            repos_for_proving.append((repo.url, repo.commit))
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
                         db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
@@ -1671,7 +1665,7 @@ def main():
                         )
 
                         # Prove sorry theorems
-                        prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_proving)
+                        prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_merged_dataset)
                         db.to_json(dynamic_database_json_path)
 
                         logger.info("Finished searching for proofs of sorry theorems")
