@@ -74,6 +74,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
+# test
 
 DATA_DIR = "datasets_PT_merge_all_no_ewc"
 CHECKPOINT_DIR = "checkpoints_PT_merge_all_no_ewc"
