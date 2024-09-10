@@ -1468,8 +1468,8 @@ def main():
 
                         lr_monitor = LearningRateMonitor(logging_interval='step')
 
-                        mid_epoch_checkpoint_dir = os.path.join(RAID_DIR, f"mid_epoch_checkpoints_{current_epoch}_{dir_name}_{use_fisher}_lambda_{lambda_value}")
-                        os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
+                        # mid_epoch_checkpoint_dir = os.path.join(RAID_DIR, f"mid_epoch_checkpoints_{current_epoch}_{dir_name}_{use_fisher}_lambda_{lambda_value}")
+                        # os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
                         # timed_checkpoint_callback = TimedCheckpoint(checkpoint_dir=mid_epoch_checkpoint_dir)
 
                         VERY_LONG_TIMEOUT = 7 * 24 * 60 * 60 * 52  # 1 year
@@ -1545,18 +1545,15 @@ def main():
                         ### TESTING FOR AVERAGE RECALL
 
                         # TODO: don't load corpus and reindex for every repo we use for average recall
-                        # Load the best model checkpoint
-                        best_model_path = checkpoint_callback.best_model_path
-                        if best_model_path:
+                        try:
+                            best_model_path = find_latest_checkpoint()
+                            logger.info(f"Found latest checkpoint: {best_model_path}")
                             best_model = PremiseRetriever.load(best_model_path, device, freeze=False, config=config)
-                        else:
-                            logger.warning("No best model found. Using the last trained model.")
+                        except FileNotFoundError as e:
+                            logger.error(f"No checkpoint found: {str(e)}")
+                            logger.warning("Using the current model state.")
                             best_model = model
-                            # TODO: change this to the last model trained later
-                            if use_fisher:
-                                best_model_path = RAID_DIR + "/" + CHECKPOINT_DIR + "/" + "merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310_lambda_0.1_epoch=0-Recall@10_val=58.95.ckpt"
-                            else:
-                                best_model_path = RAID_DIR + "/" + CHECKPOINT_DIR + "/" + "merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310_lambda_0.1_epoch=0-Recall@10_val=60.65.ckpt"
+
                         best_model.eval()
 
                         logger.info("Testing...")
