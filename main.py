@@ -1453,8 +1453,8 @@ def main():
                             dirpath=RAID_DIR + "/" + CHECKPOINT_DIR,
                             filename=dir_name + filename_suffix + "_{epoch}-{Recall@10_val:.2f}",
                             verbose=True,
-                            save_top_k=1,
-                            save_last=False,
+                            save_top_k=-1,  # Save all checkpoints
+                            every_n_epochs=1,  # Save every epoch (which is just once in this case)
                             monitor="Recall@10_val",
                             mode="max"
                         )
