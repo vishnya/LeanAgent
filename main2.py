@@ -873,21 +873,21 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic
     save_progress(all_encountered_theorems)
     logger.info("Finished attempting to prove sorry theorems")
 
-class TimedCheckpoint(Callback):
-    def __init__(self, checkpoint_dir, interval=timedelta(hours=4)):
-        self.checkpoint_dir = checkpoint_dir
-        self.interval = interval
-        self.last_checkpoint_time = datetime.datetime.now()
+# class TimedCheckpoint(Callback):
+#     def __init__(self, checkpoint_dir, interval=timedelta(hours=4)):
+#         self.checkpoint_dir = checkpoint_dir
+#         self.interval = interval
+#         self.last_checkpoint_time = datetime.datetime.now()
 
-    def on_train_batch_end(self, trainer, pl_module, outputs, batch, batch_idx):
-        now = datetime.datetime.now()
-        if now - self.last_checkpoint_time >= self.interval:
-            epoch = trainer.current_epoch
-            global_step = trainer.global_step
-            checkpoint_path = os.path.join(self.checkpoint_dir, f'mid_epoch_checkpoint_epoch_{epoch}_step_{global_step}.ckpt')
-            trainer.save_checkpoint(checkpoint_path)
-            self.last_checkpoint_time = now
-            logger.info(f"Mid-epoch checkpoint saved at {checkpoint_path}")
+#     def on_train_batch_end(self, trainer, pl_module, outputs, batch, batch_idx):
+#         now = datetime.datetime.now()
+#         if now - self.last_checkpoint_time >= self.interval:
+#             epoch = trainer.current_epoch
+#             global_step = trainer.global_step
+#             checkpoint_path = os.path.join(self.checkpoint_dir, f'mid_epoch_checkpoint_epoch_{epoch}_step_{global_step}.ckpt')
+#             trainer.save_checkpoint(checkpoint_path)
+#             self.last_checkpoint_time = now
+#             logger.info(f"Mid-epoch checkpoint saved at {checkpoint_path}")
 
 def add_repo_to_database(dynamic_database_json_path, repo, db):
     # Prepare the data necessary to add this repo to the dynamic database
@@ -1475,7 +1475,7 @@ def main():
 
                         mid_epoch_checkpoint_dir = os.path.join(RAID_DIR, f"mid_epoch_checkpoints_{current_epoch}_{dir_name}_{use_fisher}_lambda_{lambda_value}")
                         os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
-                        timed_checkpoint_callback = TimedCheckpoint(checkpoint_dir=mid_epoch_checkpoint_dir)
+                        # timed_checkpoint_callback = TimedCheckpoint(checkpoint_dir=mid_epoch_checkpoint_dir)
 
                         VERY_LONG_TIMEOUT = 7 * 24 * 60 * 60 * 52  # 1 year
                         os.environ['TORCH_NCCL_ASYNC_ERROR_HANDLING'] = '1'
@@ -1492,7 +1492,8 @@ def main():
                             strategy=ddp_strategy,
                             devices=4, # TODO: change for GPU
                             accumulate_grad_batches=4,
-                            callbacks=[lr_monitor, checkpoint_callback, early_stop_callback, timed_checkpoint_callback],
+                            # callbacks=[lr_monitor, checkpoint_callback, early_stop_callback, timed_checkpoint_callback],
+                            callbacks=[lr_monitor, checkpoint_callback, early_stop_callback],
                             max_epochs=current_epoch + epochs_per_repo,
                             log_every_n_steps=1,
                             num_sanity_val_steps=0,
