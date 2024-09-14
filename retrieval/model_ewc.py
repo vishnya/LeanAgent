@@ -133,7 +133,7 @@ class PremiseRetriever(pl.LightningModule):
             else:
                 logger.warning(f"Parameter {name} not found in previous params.")
         total_loss = self.lamda * ewc_loss
-        logger.info(f"Total EWC loss: {total_loss.item()}, lambda: {self.lamda}")
+        # logger.info(f"Total EWC loss: {total_loss.item()}, lambda: {self.lamda}")
         return total_loss
 
     @classmethod
