@@ -92,8 +92,8 @@ repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR
 DATA_DIR = "datasets_no_retrieval"
 CHECKPOINT_DIR = "checkpoints"
 DB_FILE_NAME = "dynamic_database_no_retrieval.json"
-PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval.log"
-ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval.pkl"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_no_retrieval.log"
+ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_no_retrieval.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum"
