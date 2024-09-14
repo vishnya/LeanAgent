@@ -6,15 +6,15 @@ ENV ROOT_DIR="/workspace"
 ENV DATA_DIR="datasets"
 ENV CHECKPOINT_DIR="checkpoints"
 ENV HUGGINGFACE_API_URL="https://huggingface.co/api/models"
-ENV HUGGINGFACE_USER="AK123321"
-ENV HUGGINGFACE_TOKEN="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"
+ENV HUGGINGFACE_USER="<>"
+ENV HUGGINGFACE_TOKEN="<>"
 ENV PYTHONPATH="${PYTHONPATH}:/workspace/ReProver"
-ENV GITHUB_ACCESS_TOKEN="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"
+ENV GITHUB_ACCESS_TOKEN="<>"
 ENV CACHE_DIR="/workspace/.cache/lean_dojo"
 ENV ELAN_HOME="/.elan"
 ENV PATH="${ELAN_HOME}/bin:${PATH}"
-ENV MEGA_EMAIL="adarshk1234567@gmail.com"
-ENV MEGA_PASSWORD="0879197abc"
+ENV MEGA_EMAIL="<>"
+ENV MEGA_PASSWORD="<>"
 
 WORKDIR /workspace
 
@@ -25,6 +25,33 @@ RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -
     elan toolchain install leanprover/lean4:4.7.0 && \
     elan toolchain install leanprover/lean4:4.7.0-rc2 && \
     elan toolchain install leanprover/lean4:4.7.0-rc1 && \
+    elan toolchain install leanprover/lean4:4.6.1 && \
+    elan toolchain install leanprover/lean4:4.6.0 && \
+    elan toolchain install leanprover/lean4:4.6.0-rc1 && \
+    elan toolchain install leanprover/lean4:4.5.0 && \
+    elan toolchain install leanprover/lean4:4.5.0-rc1 && \
+    elan toolchain install leanprover/lean4:4.4.0 && \
+    elan toolchain install leanprover/lean4:4.4.0-rc1 && \
+    elan toolchain install leanprover/lean4:4.3.0 && \
+    elan toolchain install leanprover/lean4:4.3.0-rc2 && \
+    elan toolchain install leanprover/lean4:4.3.0-rc1 && \
+    
+    elan toolchain install leanprover/lean4:v4.8.0 && \
+    elan toolchain install leanprover/lean4:v4.8.0-rc2 && \
+    elan toolchain install leanprover/lean4:v4.8.0-rc1 && \
+    elan toolchain install leanprover/lean4:v4.7.0 && \
+    elan toolchain install leanprover/lean4:v4.7.0-rc2 && \
+    elan toolchain install leanprover/lean4:v4.7.0-rc1 && \
+    elan toolchain install leanprover/lean4:v4.6.1 && \
+    elan toolchain install leanprover/lean4:v4.6.0 && \
+    elan toolchain install leanprover/lean4:v4.6.0-rc1 && \
+    elan toolchain install leanprover/lean4:v4.5.0 && \
+    elan toolchain install leanprover/lean4:v4.5.0-rc1 && \
+    elan toolchain install leanprover/lean4:v4.4.0 && \
+    elan toolchain install leanprover/lean4:v4.4.0-rc1 && \
+    elan toolchain install leanprover/lean4:v4.3.0 && \
+    elan toolchain install leanprover/lean4:v4.3.0-rc2 && \
+    elan toolchain install leanprover/lean4:v4.3.0-rc1 && \
     git clone https://github.com/Adarsh321123/LeanBot.git ReProver && \
     cd ReProver && \
     git checkout backup_branch && \
@@ -47,6 +74,26 @@ RUN python -c "import pytorch_lightning as pl; print(pl.__file__)" > pl_path.txt
     sudo cp /workspace/ReProver/custom_progress.py $PROGRESS_PY_PATH && \
     echo "Contents after replacement:" && \
     sudo cat $PROGRESS_PY_PATH
+
+RUN python -c "import lean_dojo; print(lean_dojo.__file__)" > ld_path.txt && \
+    LD_PATH=$(sudo cat ld_path.txt) && \
+    TRACED_DATA_PY_PATH=$(dirname $LD_PATH)/data_extraction/traced_data.py && \
+    echo "Contents before replacement:" && \
+    sudo cat $TRACED_DATA_PY_PATH && \
+    echo "Replacing $TRACED_DATA_PY_PATH" && \
+    sudo cp /workspace/ReProver/custom_traced_data.py $TRACED_DATA_PY_PATH && \
+    echo "Contents after replacement:" && \
+    sudo cat $TRACED_DATA_PY_PATH
+
+RUN python -c "import lean_dojo; print(lean_dojo.__file__)" > ld_path.txt && \
+    LD_PATH=$(sudo cat ld_path.txt) && \
+    UTILS_PY_PATH=$(dirname $LD_PATH)/utils.py && \
+    echo "Contents before replacement:" && \
+    sudo cat $UTILS_PY_PATH && \
+    echo "Replacing $UTILS_PY_PATH" && \
+    sudo cp /workspace/ReProver/custom_utils.py $UTILS_PY_PATH && \
+    echo "Contents after replacement:" && \
+    sudo cat $UTILS_PY_PATH
 
 CMD ["python", "/workspace/ReProver/compute_server.py"]
 
