@@ -90,6 +90,7 @@ repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
 
 DATA_DIR = "datasets_retrieval"
+CHECKPOINT_DIR = "checkpoints"
 DB_FILE_NAME = "dynamic_database_retrieval.json"
 PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval.log"
 ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval.pkl"
