@@ -11,5 +11,5 @@ echo "Removing old cache files"
 rm -rf /tmp/ray
 echo "Stopping ray"
 ray stop --force
-echo "Running main5retrieval.py"
-python main5retrieval.py
+echo "Running main7ewc.py"
+python main7ewc.py

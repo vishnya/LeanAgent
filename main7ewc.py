@@ -60,7 +60,7 @@ from lean_dojo import *
 from lean_dojo.constants import LEAN4_PACKAGES_DIR
 
 import pytorch_lightning as pl
-from retrieval.model import PremiseRetriever
+from retrieval.model_ewc import PremiseRetriever
 from retrieval.datamodule import RetrievalDataModule
 from retrieval.main import run_cli
 import torch
@@ -89,11 +89,6 @@ repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
 
-DATA_DIR = "datasets_retrieval"
-DB_FILE_NAME = "dynamic_database_retrieval.json"
-PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval.log"
-ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval.pkl"
-
 # DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum"
 # EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum.txt"
@@ -101,13 +96,13 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval.pkl"
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curriculum.pkl"
 
-# DATA_DIR = "datasets_PT_single_repo_ewc"
-# CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc"
-# FISHER_DIR = "fisher_PT_single_repo_ewc"
-# EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_ewc.txt"
-# DB_FILE_NAME = "dynamic_database_PT_single_repo_ewc.json"
-# PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_ewc.log"
-# ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc.pkl"
+DATA_DIR = "datasets_PT_single_repo_ewc"
+CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc"
+FISHER_DIR = "fisher_PT_single_repo_ewc"
+EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_ewc.txt"
+DB_FILE_NAME = "dynamic_database_PT_single_repo_ewc.json"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_ewc.log"
+ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc.pkl"
 
 # DATA_DIR = "datasets_retrieval_single_repo_no_ewc"
 # CHECKPOINT_DIR = "checkpoints_retrieval_single_repo_no_ewc"
@@ -198,8 +193,8 @@ known_repositories = [
     # "leanprover-community/con-nf",
     # "FormalizedFormalLogic/Foundation",
     "leanprover/SampCert",  # trace problems
-    "nomeata/loogle", # irrelevant
-    "risc0/risc0-lean4", # irrelevant
+    "nomeata/loogle",  # irrelevant
+    "risc0/risc0-lean4",  # irrelevant
     # "siddhartha-gadgil/Saturn",
     # "leanprover-community/flt-regular",
     # "eric-wieser/lean-matrix-cookbook",
@@ -538,11 +533,11 @@ def find_latest_fisher():
 
 #     ### PROGRESSIVE TRAINING
     
-#     if not torch.cuda.is_available():
-#         logger.warning("Indexing the corpus using CPU can be very slow.")
-#         device = torch.device("cpu")
-#     else:
-#         device = torch.device("cuda")
+    # if not torch.cuda.is_available():
+    #     logger.warning("Indexing the corpus using CPU can be very slow.")
+    #     device = torch.device("cpu")
+    # else:
+    #     device = torch.device("cuda")
 
 #     # TODO: reduce repetition in code like this
 #     config = {
@@ -1183,10 +1178,10 @@ def main():
         # Configure these parameters!
         current_epoch = 0
         epochs_per_repo = 1
-        # run_progressive_training = True
-        run_progressive_training = False
-        # use_fisher = True
-        use_fisher = False
+        run_progressive_training = True
+        # run_progressive_training = False
+        use_fisher = True
+        # use_fisher = False
         single_repo = True
         # single_repo = False
         start_with_pfr = False
@@ -1199,7 +1194,7 @@ def main():
         lambdas = None
         if run_progressive_training:
             logger.info("Running progressive training")
-            lambdas = [0.1]
+            lambdas = [1]
         else:
             logger.info("Running retrieval baseline")
             lambdas = [0.0]
@@ -1338,6 +1333,12 @@ def main():
 
                 # clone_url = "https://github.com/avigad/mathematics_in_lean_source.git"
                 # commit = "cfe61bc71b5ea501f89df36c945949a1febf5e75"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
+                # clone_url = "https://github.com/lecopivo/SciLean.git"
+                # commit = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
                 # url = clone_url.replace('.git', '')
                 # lean_git_repo = LeanGitRepo(url, commit)
                 # lean_git_repos.append(lean_git_repo)
@@ -1617,27 +1618,6 @@ def main():
                             logger.info(f"Skipping repository {repo.url} due to preprocessing issues")
                             continue
 
-                    if is_main_process and run_progressive_training and use_fisher:
-                        logger.info("Calculating Fisher Information Matrix for EWC")
-                        ### FISHER INFORMATION MATRIX FOR NEXT EWC
-
-                        # Switch to one GPU for calculating the Fisher Information Matrix
-                        # TODO: barrier here
-                        try:
-                            # TODO: have separate intermediate checkpoints and save the epoch and data point, same for fisher
-                            device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-                            best_model.to(device)
-                            train_dataloader = data_module.train_dataloader()
-                            fisher_info = best_model.compute_fisher_information(train_dataloader, RAID_DIR + "/" + FISHER_DIR)
-                            dir_path = RAID_DIR + "/" + FISHER_DIR
-                            fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
-                            with open(fisher_name, "wb") as f:
-                                pickle.dump(fisher_info, f)
-                            logger.info(f"Fisher info saved to {fisher_name}")
-                        except Exception as e:
-                            print(f"An error occurred during fisher: {str(e)}")
-                            print(traceback.format_exc())
-
                     if is_main_process:
                         logger.info("Starting the prover")
                         # Set up the prover
@@ -1695,6 +1675,7 @@ def main():
                     logger.info("Finished processing the repository")
                     current_epoch += epochs_per_repo
                     logger.info(f"current epoch: {current_epoch}")
+                    return
     except Exception as e:
         logger.info(f"An error occurred: {e}", file=sys.stderr)
         traceback.print_exc()

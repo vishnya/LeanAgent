@@ -53,7 +53,7 @@ import atexit
 from pytorch_lightning.strategies import DDPStrategy
 
 from common import set_logger
-from prover.proof_search import Status, DistributedProver, SearchResult
+from prover.prover_search_no_retrieval import Status, DistributedProver, SearchResult
 import re
 import lean_dojo
 from lean_dojo import *
@@ -89,8 +89,9 @@ repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
 
-DATA_DIR = "datasets_retrieval"
-DB_FILE_NAME = "dynamic_database_retrieval.json"
+DATA_DIR = "datasets_no_retrieval"
+CHECKPOINT_DIR = "checkpoints"
+DB_FILE_NAME = "dynamic_database_no_retrieval.json"
 PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval.log"
 ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval.pkl"
 
@@ -1321,8 +1322,8 @@ def main():
         else:
             logger.info("Starting without curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-            if is_main_process:
-                search_github_repositories("Lean", num_repos)
+            # if is_main_process:
+                # search_github_repositories("Lean", num_repos)
 
                 # clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
                 # commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
@@ -1342,10 +1343,10 @@ def main():
                 # lean_git_repo = LeanGitRepo(url, commit)
                 # lean_git_repos.append(lean_git_repo)
 
-                logger.info("Finding compatible repositories...")
-                updated_repos = find_and_save_compatible_commits(repo_info_file, lean_git_repos)
-                lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
-                logger.info("Finished finding compatible repositories")
+                # logger.info("Finding compatible repositories...")
+                # updated_repos = find_and_save_compatible_commits(repo_info_file, lean_git_repos)
+                # lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
+                # logger.info("Finished finding compatible repositories")
 
             # All processes wait for the file to be created and then read from it
             max_attempts = 30
