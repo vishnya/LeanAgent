@@ -1178,7 +1178,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 5
+        current_epoch = 0
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False
@@ -1315,8 +1315,7 @@ def main():
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
 
-                        if "FLT" not in repo.url:
-                            db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
                     
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
@@ -1480,57 +1479,56 @@ def main():
 
                         best_model.eval()
 
-                        if "FLT" not in repo.url:
-                            logger.info("Testing...")
-                            total_R1, total_R10, total_MRR = [], [], []
-                            dataset_path = RAID_DIR + "/" + DATA_DIR
-                            testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
+                        logger.info("Testing...")
+                        total_R1, total_R10, total_MRR = [], [], []
+                        dataset_path = RAID_DIR + "/" + DATA_DIR
+                        testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
+                        if is_main_process:
+                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                f.write("\n\n\n")
+                                f.write(f"Results for {dir_name} with lambda = {lambda_value}")
+                        for data_path in testing_paths:
+                            # TODO: remove this for tests that do not use merged dataset
+                            if "merged" not in data_path:
+                                continue
+                            # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
+                            run_cli(best_model_path, data_path)
                             if is_main_process:
+                                num_gpus = 4 # TODO: change for GPU
+                                preds_map = {}
+                                for gpu_id in range(num_gpus):
+                                    with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
+                                        preds = pickle.load(f)
+                                        preds_map.update(preds)
+
+                                logger.info("Loaded the predictions pickle files")
+                                data_path = os.path.join(data_path, "random", "test.json")
+                                data = json.load(open(data_path))
+                                logger.info(f"Evaluating on {data_path}")
+                                R1, R10, MRR = _eval(data, preds_map)
+                                logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+                                total_R1.append(R1)
+                                total_R10.append(R10)
+                                total_MRR.append(MRR)
                                 with open(EVAL_RESULTS_FILE_PATH, "a") as f:
                                     f.write("\n\n\n")
-                                    f.write(f"Results for {dir_name} with lambda = {lambda_value}")
-                            for data_path in testing_paths:
-                                # TODO: remove this for tests that do not use merged dataset
-                                if "merged" not in data_path:
-                                    continue
-                                # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
-                                run_cli(best_model_path, data_path)
-                                if is_main_process:
-                                    num_gpus = 4 # TODO: change for GPU
-                                    preds_map = {}
-                                    for gpu_id in range(num_gpus):
-                                        with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
-                                            preds = pickle.load(f)
-                                            preds_map.update(preds)
-
-                                    logger.info("Loaded the predictions pickle files")
-                                    data_path = os.path.join(data_path, "random", "test.json")
-                                    data = json.load(open(data_path))
-                                    logger.info(f"Evaluating on {data_path}")
-                                    R1, R10, MRR = _eval(data, preds_map)
-                                    logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-                                    total_R1.append(R1)
-                                    total_R10.append(R10)
-                                    total_MRR.append(MRR)
-                                    with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-                                        f.write("\n\n\n")
-                                        f.write(f"Intermediate results for {data_path}")
-                                        f.write("\n\n\n")
-                                        f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-
-                            if is_main_process:
-                                avg_R1 = np.mean(total_R1)
-                                avg_R10 = np.mean(total_R10)
-                                avg_MRR = np.mean(total_MRR)
-
-                                logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
-
-                                if not os.path.exists(EVAL_RESULTS_FILE_PATH):
-                                    open(EVAL_RESULTS_FILE_PATH, 'w').close()
-
-                                with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                    f.write(f"Intermediate results for {data_path}")
                                     f.write("\n\n\n")
-                                    f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+                                    f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+
+                        if is_main_process:
+                            avg_R1 = np.mean(total_R1)
+                            avg_R10 = np.mean(total_R10)
+                            avg_MRR = np.mean(total_MRR)
+
+                            logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+
+                            if not os.path.exists(EVAL_RESULTS_FILE_PATH):
+                                open(EVAL_RESULTS_FILE_PATH, 'w').close()
+
+                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                f.write("\n\n\n")
+                                f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                     else:
                         model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
                         if result is None:
