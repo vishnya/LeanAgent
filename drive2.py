@@ -1,23 +1,33 @@
+import argparse
 from googleapiclient.http import MediaFileUpload
 from Google import create_service
 
-CLIENT_SECRET_FILE = 'client_secret.json'
-API_NAME = 'drive'
-API_VERSION = 'v3'
-SCOPES = ['https://www.googleapis.com/auth/drive']
+def main():
+    parser = argparse.ArgumentParser(description="Upload a file to Google Drive")
+    parser.add_argument("file_path", help="Path to the file you want to upload")
+    parser.add_argument("file_name", help="Name for the file in Google Drive")
+    args = parser.parse_args()
 
-service = create_service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
+    CLIENT_SECRET_FILE = 'client_secret.json'
+    API_NAME = 'drive'
+    API_VERSION = 'v3'
+    SCOPES = ['https://www.googleapis.com/auth/drive']
 
-file_metadata = {
-    'name': 'lecopivo-SciLean-22d53b2f4e3db2a172e71da6eb9c916e62655744.7z',
-    'parents': ['1FWcM-J5xfZ5Vg6xsr7IquVJbOXDo39SR']
-}
+    service = create_service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-media_content = MediaFileUpload('lecopivo-SciLean-22d53b2f4e3db2a172e71da6eb9c916e62655744.7z', mimetype='application/zip')
+    file_metadata = {
+        'name': args.file_name,
+        'parents': ['1FWcM-J5xfZ5Vg6xsr7IquVJbOXDo39SR']
+    }
 
-file = service.files().create(
-    body=file_metadata,
-    media_body=media_content
-).execute()
+    media_content = MediaFileUpload(args.file_path, resumable=True)
 
-print(file)
+    file = service.files().create(
+        body=file_metadata,
+        media_body=media_content
+    ).execute()
+
+    print(f"File ID: {file.get('id')}")
+
+if __name__ == "__main__":
+    main()
