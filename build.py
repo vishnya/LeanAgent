@@ -1319,8 +1319,8 @@ def main():
             if is_main_process:
                 # search_github_repositories("Lean", num_repos)
 
-                clone_url = "https://github.com/leanprover-community/NNG4.git"
-                commit = "66b27f382aa68b1651cc41a855447079a952d678"
+                clone_url = "https://github.com/leanprover-community/con-nf.git"
+                commit = "c82d6e73a8fcf4bb4eb4775535b6aa522a05e910"
                 url = clone_url.replace('.git', '')
                 lean_git_repo = LeanGitRepo(url, commit)
                 lean_git_repos.append(lean_git_repo)
