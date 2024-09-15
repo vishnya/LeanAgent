@@ -54,7 +54,7 @@ import atexit
 from pytorch_lightning.strategies import DDPStrategy
 
 from common import set_logger
-from prover.proof_search import Status, DistributedProver, SearchResult
+from prover.proof_search_all_sorries import Status, DistributedProver, SearchResult
 import re
 import lean_dojo
 from lean_dojo import *
