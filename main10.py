@@ -190,7 +190,7 @@ known_repositories = [
     # "loganrjmurphy/LeanEuclid",
     "leanprover/lean4-cli",  # no theorems
     "leanprover/LeanInk",  # no theorems
-    # "leanprover-community/lean-auto",
+    "leanprover-community/lean-auto",
     "leanprover-community/repl",  # no theorems
     "leanprover/doc-gen4",  # no theorems
     # "leanprover-community/con-nf",
@@ -1179,7 +1179,7 @@ def should_skip_repo():
 def main():
     """The main function that drives the bot."""
     global repos_for_merged_dataset
-    repos_for_proving = []
+    global repos_for_proving
     global lean_git_repos
     try:
         # Configure these parameters!
@@ -1195,7 +1195,7 @@ def main():
         # start_with_pfr = True
         # curriculum_learning = False
         curriculum_learning = True
-        num_repos = 15
+        num_repos = 14
         dynamic_database_json_path = RAID_DIR + "/" + DB_FILE_NAME
         
         lambdas = None
