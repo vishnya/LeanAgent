@@ -237,7 +237,7 @@ known_repositories = [
     "alexkeizer/QpfTypes",
     # "fpvandoorn/LeanCourse23",
     "marcusrossel/lean-egg",
-    "reilabs/proven-zk"
+    "reilabs/proven-zk",
     "algebraic-dev/soda",
     "leanprover-community/llm",
     "dignissimus/Untangle",
@@ -298,8 +298,8 @@ known_repositories = [
     "ammkrn/timelib",
     "kmill/LeanTeX",
     "leanprover/lean4export",
-    "leanprover-community/mathlib3port" # too different
-    "brown-cs22/CS22-Lean-2024" # same as other tutorials but has lots of sorries
+    "leanprover-community/mathlib3port", # too different
+    "brown-cs22/CS22-Lean-2024", # same as other tutorials but has lots of sorries
     "T-Brick/lean-wasm",
     "crabbo-rave/Soup",
     "argumentcomputer/RustFFI.lean",
