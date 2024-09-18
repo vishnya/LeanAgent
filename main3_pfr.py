@@ -1428,8 +1428,8 @@ def main():
             logger.info("Starting curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
             if is_main_process:
-                
-                clone_url ="https://github.com/teorth/pfr""
+
+                clone_url ="https://github.com/teorth/pfr"
                 commit = "861715b9bf9482d2442760169cb2a3ff54091f75"
                 url = clone_url.replace('.git', '')
                 lean_git_repo = LeanGitRepo(url, commit)
