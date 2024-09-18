@@ -568,7 +568,7 @@ def find_and_save_compatible_commits(repo_info_file, lean_git_repos):
             sha = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
             v = "v4.7.0"
         elif "pfr" in url:
-            sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+            sha = "861715b9bf9482d2442760169cb2a3ff54091f75"
             v = "v4.8.0-rc1"
         else:
             sha, v = get_compatible_commit(url)
@@ -1092,7 +1092,7 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
         sha = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
         v = "v4.7.0"
     elif "pfr" in url:
-        sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+        sha = "861715b9bf9482d2442760169cb2a3ff54091f75"
         v = "v4.8.0-rc1"
     else:
         sha, v = get_compatible_commit(url)
