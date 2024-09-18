@@ -143,7 +143,7 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_ewc.pkl"
 # TODO: do we still need this?
 load_dotenv()
 
-repos_for_merged_dataset = []
+repos_for_merged_dataset = [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"), ("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd", "89bf7b5e3a226525e8580bae21ef543604f99b21"), ("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091")]
 repos_for_proving = []
 
 # TODO: automate this
@@ -1181,7 +1181,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 1
+        current_epoch = 5
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False
@@ -1199,7 +1199,7 @@ def main():
         lambdas = None
         if run_progressive_training:
             logger.info("Running progressive training")
-            lambdas = [1]
+            lambdas = [0.1]
         else:
             logger.info("Running retrieval baseline")
             lambdas = [0.0]
@@ -1321,8 +1321,8 @@ def main():
         else:
             logger.info("Starting without curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-            if is_main_process:
-                search_github_repositories("Lean", num_repos)
+            # if is_main_process:
+                # search_github_repositories("Lean", num_repos)
 
                 # clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
                 # commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
@@ -1348,10 +1348,10 @@ def main():
                 # lean_git_repo = LeanGitRepo(url, commit)
                 # lean_git_repos.append(lean_git_repo)
 
-                logger.info("Finding compatible repositories...")
-                updated_repos = find_and_save_compatible_commits(repo_info_file, lean_git_repos)
-                lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
-                logger.info("Finished finding compatible repositories")
+                # logger.info("Finding compatible repositories...")
+                # updated_repos = find_and_save_compatible_commits(repo_info_file, lean_git_repos)
+                # lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
+                # logger.info("Finished finding compatible repositories")
 
             # All processes wait for the file to be created and then read from it
             max_attempts = 30
