@@ -222,7 +222,7 @@ known_repositories = [
     # looking for sorries:
     "leanprover/LNSym",
     "leanprover-community/flt-regular",
-    # "opencompl/lean-mlir-old",
+    "opencompl/lean-mlir-old",  # failed to build
     "rami3l/plfl",
     "HEPLean/HepLean",
     "forked-from-1kasper/ground_zero",
@@ -230,12 +230,12 @@ known_repositories = [
     "verified-optimization/CvxLean",
     "leanprover-community/sphere-eversion",
     "optsuite/optlib",
-    # "YaelDillies/LeanCamCombi",
+    "YaelDillies/LeanCamCombi", # build problems
     "JamesGallicchio/LeanColls",
     "T-Brick/c0deine",
-    # "jjdishere/EG",
+    "jjdishere/EG", # build problems
     "alexkeizer/QpfTypes",
-    # "fpvandoorn/LeanCourse23",
+    "fpvandoorn/LeanCourse23", # build problems
     "marcusrossel/lean-egg",
     "reilabs/proven-zk",
     "algebraic-dev/soda",
@@ -250,10 +250,10 @@ known_repositories = [
     # "fpvandoorn/carleson",
     "Anderssorby/SDL.lean",
     "pandaman64/lean-regex",
-    # "brown-cs22/CS22-Lean-2023",
-    # "hhu-adam/GameSkeleton",
-    # "FR-vdash-bot/Algorithm",
-    # "PeterKementzey/graph-library-for-lean4",
+    "brown-cs22/CS22-Lean-2023",  # no compatible commit
+    "hhu-adam/GameSkeleton", # trace problems
+    "FR-vdash-bot/Algorithm",  # build problems
+    "PeterKementzey/graph-library-for-lean4",  # no compatible commit
     "arthurpaulino/LeanMySQL",
     "arthurpaulino/NumLean",
     "FormalSAT/trestle",
@@ -308,7 +308,7 @@ known_repositories = [
     "arthurpaulino/FxyLang",
     "SchrodingerZhu/LeanGccBackend",
     "lecopivo/lean4-karray",
-    # "ImperialCollegeLondon/M1F-explained",
+    "ImperialCollegeLondon/M1F-explained",  # no compatible commit
     "proost-assistant/ProostLean",
     "DavePearce/LeanEVM",
     "algebraic-dev/ash",
@@ -338,7 +338,7 @@ known_repositories = [
     "fgdorais/lean4-unicode-basic",
     "mhuisi/Uniq",
     "Kha/macro-supplement",
-    # "chenjulang/rubikcubegroup",
+    "chenjulang/rubikcubegroup", # build issues
     "arthurpaulino/LeanMusic",
     "argumentcomputer/Ipld.lean",
     "Odomontois/advent2022-lean",
@@ -361,7 +361,7 @@ known_repositories = [
     "Human-Oriented-ATP/lean-tactics", # more about tactics than premises
     "paulcadman/lean4-leetcode",
     "argumentcomputer/Lurk.lean",
-    # "AlexDuchnowski/rubiks-cube",
+    "AlexDuchnowski/rubiks-cube",  # build problems
     "SchrodingerZhu/lean-gccjit",
     "JamesGallicchio/http",
     "jtristan/UnicodeSkipListTableExample",
@@ -373,16 +373,210 @@ known_repositories = [
     "AviCraimer/relational-calculus-library-lean4",
     "JLimperg/regensburg-itp-school-2023",
     "jaalonso/Calculemus2",
-    # "mseri/BET",
+    "mseri/BET", # build issues
     "xubaiw/Reservoir.lean",
     "hargoniX/nest-core",
     "siddhartha-gadgil/Polylean",
     "MichaelStollBayreuth/Weights",
     "sanchace/FRACTRAN",
     "argumentcomputer/Poseidon.lean",
-    # "madvorak/chomsky",
+    "madvorak/chomsky",  # no compatible commit
     "T-Brick/ControlFlow",
     "pa-ba/guarded-lean",
+    # looking for stars in recent repos
+    "imbrem/debruijn-ssa",
+    "ewittlich/Unitization_Test",
+    "cymcymcymcym/Unique_Factorization_Lean4",
+    "AntoineChambert-Loir/DividedPowers4", # trace problems
+    "mbkybky/InfiniteGaloisTheory",
+    "alja123/hyperstabilityES",
+    "take1byte/LeanGames",
+    "gaetanserre/SBS-Proofs",
+    "cadake/LeanTQI", # no compatible commit
+    "Seasawher/ConcreteSemantics.lean",
+    "lean-ja/lean4-metaprogramming-book-ja",
+    # "m4lvin/lean4-pdl",
+    "codyroux/post-complete",
+    "anzenlang/cvc.lean",
+    "madvorak/read-lean",
+    "jaalonso/Calculemus2_es",
+    "jt496/UCLMATH0109",
+    "faenuccio-teaching/M2Lyon2425", # same as other tutorials but has lots of sorries
+    "leanprover-community/LeanSearchClient",
+    "chinawat/cpe-frap",  # no compatible commit
+    "goens/KalaNamak",
+    "mdnestor/MiscLean", # no compatible commit
+    "pthomas505/FOL", # trace failed
+    "mckoen/quasicategory", # no compatible commit
+    "mdnestor/SymbolicDynamics", # no compatible commit
+    "dodgez/lean-math",
+    "FM22/real_closed_field",
+    "Jun2M/Kura", # no compatible commit
+    "BrownCS1951x/fpv2024", # same as other tutorials but has lots of sorries
+    "RemyCiterin/LeanCoInd",
+    "JLimperg/aesop-script-evaluation",
+    "jpyamamoto/grelling-paradox-lean",
+    "MichaelStollBayreuth/JacobiSum",
+    "uedakazushi/cluster_sfuk_lean",
+    "PSchwahn/semileanear2024",  # no compatible commit
+    "andreadlm/master-thesis",
+    "iliayar/lean-workout",
+    "bolito2/DemazureOperatorsLean",
+    "Jiayinf/cmu-itp-24", # same as other tutorials but has lots of sorries
+    # "ahhwuhu/zeta_3_irrational",
+    "pointsgame/points-lean",
+    "goens/lost-pop-lean",
+    "austinletson/use-lean-standard-action-with-lake-test",
+    "madvorak/duality",
+    "chabulhwi/tpil-solutions",
+    "Whysoserioushah/BrauerGroup_new", # no compatible commit
+    "pimpale/llm.lean",
+    "functionally/crypto-lean4",
+    "cruhland/lean4-metaprog",
+    "mariainesdff/ostrowski2024",
+    "dtumad/VCV-io",
+    "imbrem/gtree-formalization",
+    "arademaker/csbook",
+    "Qiu233/regex",
+    "Seasawher/ZeroD.lean",
+    "jiakai0419/L42",
+    "abdoo8080/lean-cvc5",
+    "peabrainiac/lean-orbifolds",
+    "kevinsullivan/cs2120f24",
+    "mistarro/local-rings",
+    "FormalizedFormalLogic/Incompleteness",
+    # "corent1234/hairy-ball-theorem-lean",
+    "imbrem/discretion",
+    "Linyxus/capless-lean",
+    "joewatt95/leanplayground",
+    "nomeata/lean-reflection-bench",
+    "vihdzp/rubik-lean4",
+    "taeyool/lean-flag-algebras",
+    # "LizBonn/RamificationGroup",
+    "DennisTsar/spinpossible-lean",
+    "katzenpost/CryptWalker",
+    "emap-ed-20242/fad",
+    "quangvdao/ZKLib",
+    "emap-nlp-20242/cs",
+    "TheCob11/PaulinIntroToAbstractAlgebra",
+    "Seasawher/InterpreterBook",
+    "TwoFX/OrderedTree",
+    "benjaminfjones/mil-solutions",
+    "victorliu5296/lean4-proofs",
+    "rowechenzhong/lean_tests",
+    "jaredgreen2/polySat",
+    "peter5000/Theorem-Proving-In-Lean-Solutions",
+    "objectionary/proof",
+    "Equilibris/LeanScratch",
+    # "Louis-Le-Grand/Formalisation-of-constructable-numbers",
+    "damast93/markovlib",
+    "bracevac/path-dependent",
+    "Seasawher/SelectionSort.lean",
+    "Seasawher/lean-book",
+    "Nazgand/NazgandLean4",
+    "NawafGH/CS511HW",
+    "ajamias/CS511-code-exercises",
+    "mit-plv/spacetalk",
+    "CBirkbeck/power_residue_symbols",
+    "b-mehta/epfl-comb",
+    "lf-lang/reactor-model",
+    "csharpython/nat-game-ja",
+    "sgraf812/abs-den.lean",
+    "lunaticabs/graph-theorylesson",
+    "AviCraimer/lean-math-logic-exploration",
+    "Lean-zh/IMO_2024",
+    "amazake13/funaki_probability_in_lean",
+    "robertylewis/lean4-autograder-main",
+    "RemyDegenne/kolmogorov_extension4",
+    "VCA-EPFL/dataflow-rewriter",
+    "flitscha/Math-with-lean",
+    "JasonKYi/HolderSpace",
+    "cadake/LeanQ",  # no compatible commit
+    "Seasawher/NumericalAnalysis.lean",
+    "NethermindEth/Lean4UtilMemset",
+    "NethermindEth/lean4-alloy",
+    "NUS-Math-Formalization/CalculusSkeleton",
+    "mdnestor/Integrodifference",
+    "evanlohn/MiniCodePropsLeanSrc",
+    "GuiBrandt/lean4-polyhedral-combinatorics",
+    "Julian/generatingfunctionology.lean",
+    "marcusrossel/mwe",
+    "pauldavidrowe/CoplandPapers",
+    "pauldavidrowe/OrderTheory",
+    "opencompl/sail-lean",
+    "madvorak/trimmer",
+    "SDZZGNDRC/Lean-Meta-Programming",
+    "finegeometer/lean-circuits",
+    "drhodes/sqltoy",
+    "rzeta0/Lean-First-Steps",
+    "kezuo/TheStacksProject",
+    "Seasawher/mk-exercise",
+    "pimotte/TutteLean",
+    "TheCob11/lean-stuff",
+    "cybers1t/koans.lean",
+    "ayhon/segment-tree",
+    "fgdorais/extra4",
+    "Youjack/thermodynamics.lean",
+    "alok/lean-inf",
+    "ketilwright/htpi2001",
+    "d-xo/act.lean",
+    "AeneasVerif/icfp-tutorial",
+    "efessas/GameSkeleton",
+    "tautastic/real-analysis",  # no compatible commit
+    "siddhartha-gadgil/LeanAideTools",
+    "Blackfeather007/Jacobson_Noether_Thm",
+    "jtriley-eth/quantum-lean",
+    "kyleellefsen/lean_cryptopals",
+    "snowztail/learn-lean",
+    "monsterkrampe/proof-library",
+    "boisgera/lean-sandbox",
+    "siddhartha-gadgil/LeanLion",
+    "math-xmum/gametheory",
+    "hwatheod/galeshapley-lean",
+    "fgdorais/GMLAlgebra",
+    "USC-Fall-2024-Math-587/USCMath587",
+    "DawidLipin/Project_Tate_Thesis",
+    "fgdorais/logic4",
+    "rkthomps/weekly-lean",
+    "fgdorais/lean4-ascii",
+    "USC-Fall-2024-Math-587/homework1",
+    "fractalate/lean-munkres-topology",
+    "traiansf/semantics-in-lean",
+    "kyleellefsen/lean_aoc_2023",
+    "mdgeorge4153/cglean",
+    "agusakov/algebraic-graph-theory",
+    "cymcymcymcym/ring_axioms_lean4",
+    "f-ttanaka/tapl-lean",
+    "hcheval/LMAS",
+    "anzenlang/zen",
+    "chabulhwi/lean-notes",
+    "semorrison/lean-monadic-list",
+    "JanaGoeken/ICMS2024QuadraticFieldIntegers",
+    "chenjulang/zerosum", # same as one above
+    "adamtopaz/lean_pdist",
+    "Seasawher/LegacyZeroD.lean",
+    "Javernus/Quantum-Lean",
+    "tydeu/imperia",
+    "gleachkr/TermRewriting",
+    "pepamontero/Lean4-Buzzard-Exercises",
+    "mdnestor/LawvereFixedPoint",
+    "michelsol/lean4-bitstring",
+    "jjdishere/neukirch", # trace problems
+    "bjoernkjoshanssen/biocalculus",
+    "grhkm21/lean4",
+    "arademaker/delphin",
+    "vivek-rj/gauss_elim2",
+    "guralpa/fib_functor",
+    "alma-n/Polya-lean", # no compatible commit
+    "Antoine-dSG/frieze_patterns",
+    "laughinggas/mini-workshop",
+    "BrownCS1951x/fpv2024-test",
+    "PatrickMassot/checkdecls",
+    "Timeroot/Lean-QuantumInfo",  # trace problems
+    "yu-yama/GroupExtension",
+    "nomeata/lean-simplc",
+    "JesseCSlater/nondeterministic_rewrite",
+    "jkr11/CoR",
 ]
 
 repos = []  # stores the names of all the repos
@@ -590,13 +784,14 @@ def search_github_repositories(language="Lean", num_repos=10):
     headers = {'Authorization': personal_access_token}
     query_params = {
         'q': f'language:{language}',
-        'sort': 'stars',
+        'sort': 'updated',
         'order': 'desc',
         'per_page': 100,
     }
     
     cloned_count = 0
     page = 2
+    search_results = []
 
     while cloned_count < num_repos:
         query_params['page'] = page
@@ -621,6 +816,12 @@ def search_github_repositories(language="Lean", num_repos=10):
                         repos.append(repo_full_name)
                         cloned_count += 1 # TODO: only increase if compatible commit found
                         logger.info(f"Cloned {repo_full_name}")
+                        search_results.append({
+                            'full_name': repo_full_name,
+                            'clone_url': clone_url,
+                            'url': url,
+                            'sha': sha
+                        })
                     except Exception as e:
                         # shutil.rmtree(name)
                         # Note: some 404s happen since some repos don't have a lean-toolchain
@@ -638,6 +839,11 @@ def search_github_repositories(language="Lean", num_repos=10):
             break
     
     logger.info(f"Total repositories processed: {cloned_count}")
+
+    search_results_file = os.path.join(RAID_DIR, DATA_DIR, "github_search_results_updated.json")
+    with open(search_results_file, 'w') as f:
+        json.dump(search_results, f, indent=2)
+    logger.info(f"Search results saved to {search_results_file}")
 
 
 def _eval(data, preds_map) -> Tuple[float, float, float]:
@@ -1388,7 +1594,7 @@ def main():
         # start_with_pfr = True
         # curriculum_learning = False
         curriculum_learning = True
-        num_repos = 19
+        num_repos = 100
         dynamic_database_json_path = RAID_DIR + "/" + DB_FILE_NAME
         
         lambdas = None
@@ -1428,8 +1634,67 @@ def main():
         if curriculum_learning:
             logger.info("Starting curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-            if is_main_process:
-                search_github_repositories("Lean", num_repos)
+            # if is_main_process:
+                # search_github_repositories("Lean", num_repos)
+                # return
+                all_repos = []
+                repo_info_file = os.path.join(RAID_DIR, DATA_DIR, "github_search_results_updated_full.json")
+                with open(repo_info_file, 'r') as f:
+                    all_repos = json.load(f)
+                lean_git_repos = [LeanGitRepo(repo['url'], repo['sha']) for repo in all_repos]
+
+                # lean_git_repos = lean_git_repos[:3]
+                # lean_git_repos = lean_git_repos[3:6]
+                # lean_git_repos = lean_git_repos[6:9]
+                # lean_git_repos = lean_git_repos[9:12]
+                # lean_git_repos = lean_git_repos[12:15]
+
+                # lean_git_repos = lean_git_repos[:2]
+                # lean_git_repos = lean_git_repos[2:4]
+
+
+                # clone_url ="https://github.com/m4lvin/lean4-pdl"
+                # commit = "0820eb9fbc18bc8b88d15ac5c6611450264c7127"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
+                # clone_url ="https://github.com/ahhwuhu/zeta_3_irrational"
+                # commit = "3d68ddd90434a398c9a72f30d50c57f15a0118c7"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
+                # clone_url ="https://github.com/Whysoserioushah/BrauerGroup_new"
+                # commit = "f163cdc1edf477040ec97ea9fdbc008b5953ab72"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
+                # clone_url ="https://github.com/corent1234/hairy-ball-theorem-lean"
+                # commit ="a778826d19c8a7ddf1d26beeea628c45450612e6"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
+                # clone_url ="https://github.com/LizBonn/RamificationGroup"
+                # commit = "5ba8feef6602e61ffae1659f7e038b0933b7da64"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
+                # clone_url ="https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers"
+                # commit = "32da8597e08227d68b72faeeda053e44e5b4b04d"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
+                # clone_url ="https://github.com/jjdishere/neukirch"
+                # commit = "8fdb75f7ebab8a20eea902058956d7dece648959"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
                 for i in range(len(lean_git_repos)):
                     repo = lean_git_repos[i]
                     logger.info(f"Processing {repo.url}")
