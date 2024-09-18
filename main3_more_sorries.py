@@ -452,7 +452,7 @@ known_repositories = [
     "nomeata/lean-reflection-bench",
     "vihdzp/rubik-lean4",
     "taeyool/lean-flag-algebras",
-    # "LizBonn/RamificationGroup",
+    "LizBonn/RamificationGroup", # build problems
     "DennisTsar/spinpossible-lean",
     "katzenpost/CryptWalker",
     "emap-ed-20242/fad",
@@ -1634,7 +1634,7 @@ def main():
         if curriculum_learning:
             logger.info("Starting curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-            # if is_main_process:
+            if is_main_process:
                 # search_github_repositories("Lean", num_repos)
                 # return
                 all_repos = []
