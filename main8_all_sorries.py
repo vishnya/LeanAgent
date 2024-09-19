@@ -1584,7 +1584,6 @@ def main():
                         if ray.is_initialized():
                             logger.info("Shutting down Ray after proving")
                             ray.shutdown()
-                        return
 
                         # TODO: need to return proofs
                         # proofs = []
