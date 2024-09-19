@@ -430,7 +430,7 @@ class DistributedProver:
             if run_progressive_training:
                 model_checkpoint_path = find_latest_checkpoint(raid_dir, checkpoint_dir)
             else:
-                model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_epoch=15-Recall@10_val=74.85.ckpt"
+                model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum_sorries/merged_with_new_lean4-pdl_c7f649fe3c4891cf1a01c120e82ebc5f6199856e_lambda_0.1_epoch=7-Recall@10_val=72.15.ckpt"
             
             config = {
                 "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",
