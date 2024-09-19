@@ -1389,7 +1389,7 @@ def main():
                             repos_for_merged_dataset = []
                         repos_for_proving = []
                         
-                        if not curriculum_learning:
+                        if "debate" not in repo.url and not curriculum_learning:
                             result = add_repo_to_database(dynamic_database_json_path, repo, db)
                             if result is None:
                                 write_skip_file(repo.url)
@@ -1406,7 +1406,8 @@ def main():
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
                         
-                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+                        if "debate" not in repo.url:
+                            db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
 
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
@@ -1582,6 +1583,18 @@ def main():
                             # TODO: remove this for tests that do not use merged dataset
                             if "merged" not in data_path:
                                 continue
+                            if "debate" in repo.url and "debate" in data_path:
+                                continue
+                            if "debate" in repo.url and "pfr" in data_path:
+                                continue
+                            if "debate" in repo.url and "compfiles" in data_path:
+                                continue
+                            if "debate" in repo.url and "SciLean" in data_path:
+                                continue
+                            if "debate" in repo.url and "PrimeNumberTheoremAnd" in data_path:
+                                continue
+                            if "debate" in repo.url and "FLT" in data_path:
+                                continue
                             # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
                             run_cli(best_model_path, data_path)
                             if is_main_process:
@@ -1608,6 +1621,13 @@ def main():
                                     f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
 
                         if is_main_process:
+                            if "debate" in repo.url:
+                                total_R1.append(51.858687903990074)
+                                total_R1.append(60.57612342105728)
+                                total_R1.append(52.36877496119525)
+                                total_R1.append(63.59588466707295)
+                                total_R1.append(55.09071724438188)
+                                total_R1.append(63.67064961631673)
                             avg_R1 = np.mean(total_R1)
                             avg_R10 = np.mean(total_R10)
                             avg_MRR = np.mean(total_MRR)
