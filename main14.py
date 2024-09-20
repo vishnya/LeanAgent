@@ -195,8 +195,8 @@ known_repositories = [
     # "leanprover-community/con-nf",
     # "FormalizedFormalLogic/Foundation",
     "leanprover/SampCert",  # trace problems
-    # "nomeata/loogle",
-    # "risc0/risc0-lean4",
+    "nomeata/loogle",
+    "risc0/risc0-lean4",
     # "siddhartha-gadgil/Saturn",
     # "leanprover-community/flt-regular",
     # "eric-wieser/lean-matrix-cookbook",
