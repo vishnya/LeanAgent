@@ -1318,7 +1318,7 @@ def main():
         else:
             logger.info("Starting without curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-            if is_main_process:
+            # if is_main_process:
                 # search_github_repositories("Lean", num_repos)
 
                 # clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
@@ -1339,22 +1339,10 @@ def main():
                 # lean_git_repo = LeanGitRepo(url, commit)
                 # lean_git_repos.append(lean_git_repo)
 
-                logger.info("Finding compatible repositories...")
-                updated_repos = find_and_save_compatible_commits(repo_info_file, lean_git_repos)
-
-                random.shuffle(updated_repos)
-                
-                with open(repo_info_file, 'w') as f:
-                    json.dump(updated_repos, f, indent=2)
-                
-                logger.info(f"Shuffled repository order saved to {repo_info_file}")
-                
-                lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
-                logger.info("Finished finding and shuffling compatible repositories")
-                
-                logger.info(f"Processing repositories in the following order:")
-                for i, repo in enumerate(lean_git_repos[:min(num_repos, len(lean_git_repos))]):
-                    logger.info(f"{i+1}. {repo.url} (commit: {repo.commit})")
+                # logger.info("Finding compatible repositories...")
+                # updated_repos = find_and_save_compatible_commits(repo_info_file, lean_git_repos)
+                # lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
+                # logger.info("Finished finding compatible repositories")
 
             # All processes wait for the file to be created and then read from it
             max_attempts = 30
@@ -1369,6 +1357,28 @@ def main():
                     time.sleep(1)
                 
             lean_git_repos = [LeanGitRepo(info['url'].replace('.git', ''), info['commit']) for info in repo_info]
+
+            if is_main_process:
+                # Check if a shuffled order file exists
+                shuffled_order_file = os.path.join(RAID_DIR, DATA_DIR, "shuffled_repo_order.json")
+                if os.path.exists(shuffled_order_file):
+                    # Load the existing shuffled order
+                    with open(shuffled_order_file, 'r') as f:
+                        shuffled_order = json.load(f)
+                    # Reorder lean_git_repos based on the loaded order
+                    lean_git_repos = [repo for repo in lean_git_repos if f"{repo.url}_{repo.commit}" in shuffled_order]
+                    lean_git_repos.sort(key=lambda repo: shuffled_order.index(f"{repo.url}_{repo.commit}"))
+                else:
+                    # Shuffle the list of repositories
+                    random.shuffle(lean_git_repos)
+                    # Save the shuffled order
+                    shuffled_order = [f"{repo.url}_{repo.commit}" for repo in lean_git_repos]
+                    with open(shuffled_order_file, 'w') as f:
+                        json.dump(shuffled_order, f, indent=2)
+            
+            logger.info(f"Processing repositories in the following order:")
+            for i, repo in enumerate(lean_git_repos[:min(num_repos, len(lean_git_repos))]):
+                logger.info(f"{i+1}. {repo.url} (commit: {repo.commit})")
 
             for i in range(num_repos):
                 for lambda_value in lambdas:
