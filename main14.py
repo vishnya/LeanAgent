@@ -1358,23 +1358,23 @@ def main():
                 
             lean_git_repos = [LeanGitRepo(info['url'].replace('.git', ''), info['commit']) for info in repo_info]
 
-            if is_main_process:
-                # Check if a shuffled order file exists
-                shuffled_order_file = os.path.join(RAID_DIR, DATA_DIR, "shuffled_repo_order.json")
-                if os.path.exists(shuffled_order_file):
-                    # Load the existing shuffled order
-                    with open(shuffled_order_file, 'r') as f:
-                        shuffled_order = json.load(f)
-                    # Reorder lean_git_repos based on the loaded order
-                    lean_git_repos = [repo for repo in lean_git_repos if f"{repo.url}_{repo.commit}" in shuffled_order]
-                    lean_git_repos.sort(key=lambda repo: shuffled_order.index(f"{repo.url}_{repo.commit}"))
-                else:
-                    # Shuffle the list of repositories
-                    random.shuffle(lean_git_repos)
-                    # Save the shuffled order
-                    shuffled_order = [f"{repo.url}_{repo.commit}" for repo in lean_git_repos]
-                    with open(shuffled_order_file, 'w') as f:
-                        json.dump(shuffled_order, f, indent=2)
+            # if is_main_process:
+            # Check if a shuffled order file exists
+            shuffled_order_file = os.path.join(RAID_DIR, DATA_DIR, "shuffled_repo_order.json")
+            if os.path.exists(shuffled_order_file):
+                # Load the existing shuffled order
+                with open(shuffled_order_file, 'r') as f:
+                    shuffled_order = json.load(f)
+                # Reorder lean_git_repos based on the loaded order
+                lean_git_repos = [repo for repo in lean_git_repos if f"{repo.url}_{repo.commit}" in shuffled_order]
+                lean_git_repos.sort(key=lambda repo: shuffled_order.index(f"{repo.url}_{repo.commit}"))
+            # else:
+            #     # Shuffle the list of repositories
+            #     random.shuffle(lean_git_repos)
+            #     # Save the shuffled order
+            #     shuffled_order = [f"{repo.url}_{repo.commit}" for repo in lean_git_repos]
+            #     with open(shuffled_order_file, 'w') as f:
+            #         json.dump(shuffled_order, f, indent=2)
             
             logger.info(f"Processing repositories in the following order:")
             for i, repo in enumerate(lean_git_repos[:min(num_repos, len(lean_git_repos))]):
