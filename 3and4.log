@@ -1,0 +1,569 @@
+2024-09-20 05:08:36.325 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-20 05:08:36.325 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-20 05:08:43.317 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-20 05:08:43.317 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-20 05:08:51.404 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-20 05:08:51.404 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-20 05:09:00.467 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-20 05:09:00.467 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-20 05:09:12.103 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-20 05:09:12.103 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-20 05:09:13.767 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-20 05:09:13.768 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-20 05:09:25.116 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-20 05:09:25.116 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-20 05:09:25.270 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-20 05:09:25.270 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-20 05:09:26.886 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-20 05:09:26.887 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-20 05:09:28.805 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-20 05:09:28.805 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-20 05:09:29.184 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-20 05:09:29.184 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-20 05:09:40.596 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-20 05:09:40.596 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-20 05:09:40.743 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-20 05:09:40.743 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-20 05:09:40.833 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-20 05:09:40.833 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-20 05:09:41.635 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-20 05:09:41.635 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-20 05:09:41.980 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-20 05:09:41.981 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-20 05:10:35.482 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-20 05:10:35.482 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-20 05:10:37.377 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-20 05:10:37.377 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-20 05:10:39.347 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-20 05:10:39.347 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-20 05:10:55.474 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-20 05:10:55.474 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-20 05:10:59.164 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-20 05:10:59.164 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-20 05:11:00.848 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-20 05:11:00.849 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-20 05:11:19.450 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-20 05:11:19.451 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-20 05:11:19.600 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-20 05:11:19.600 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-20 05:11:21.273 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-20 05:11:21.273 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-20 05:11:23.200 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-20 05:11:23.201 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-20 05:11:23.569 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-20 05:11:23.569 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-20 05:11:24.280 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-20 05:11:24.280 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-20 05:11:24.427 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-20 05:11:24.427 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-20 05:11:24.517 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-20 05:11:24.518 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-20 05:11:25.256 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-20 05:11:25.257 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-20 05:11:25.559 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-20 05:11:25.559 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+================================================================================
+
+Proved sorry theorems only in first database: 1
+
+Theorem: Function.invFun.id_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem id_rule
+  : invFun (fun (x : X) => x)
+    =
+    fun x => x :=
+Proof:
+  apply Function.invFun_comp
+  exact Function.injective_id
+
+
+Proved sorry theorems only in second database: 4
+
+Theorem: Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple'
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.Bijective_rule_simple'
+  : Bijective (fun xy : X×Y => (xy.2, xy.1))
+  :=
+Proof:
+  constructor <;> intro h
+  all_goals aesop
+
+
+Theorem: SciLean.CDifferentiable.id_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiable.id_rule
+  : CDifferentiable K (fun x : X => x)
+  :=
+Proof:
+  intro x
+  rw [CDifferentiableAt]
+  intro c hc hcx
+  simpa using hcx
+
+
+Theorem: Function.Bijective.Equiv.invFun.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Equiv.invFun.arg_a0.Bijective_rule (f : Y ≃ Z) (g : X → Z) (hf : Bijective g)
+  : Bijective (fun x => f.invFun (g x)) :=
+Proof:
+  convert hf
+  simp [hf]
+  exact f.symm.bijective.comp hf
+
+
+Theorem: SciLean.ArrayType.ext
+File path: SciLean/Data/ArrayType/Basic.lean
+Theorem statement: theorem ext (x y : Cont) : (∀ i, x[i] = y[i]) → x = y :=
+Proof:
+  intro h
+  apply SciLean.ArrayType.get_injective
+  simp only [h]
+
+
+Common proved sorry theorems: 21
+
+Theorem: IsAffineMap.IsAffineMap_apply
+File path: SciLean/Core/FunctionPropositions/IsAffineMap.lean
+Theorem statement: theorem IsAffineMap_apply (i : ι) : IsAffineMap R (fun f : (i : ι) → E i ↦ f i) :=
+Proof:
+  constructor
+  constructor
+  simp
+  simp
+
+
+Theorem: SciLean.scalar_max_zero_one
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_max_zero_one  : max (0 : R) (1 : R) = 1 :=
+Proof:
+  rw [max_comm]
+  simp
+
+
+Theorem: SciLean.ContCDiffMap.zero_apply
+File path: SciLean/Core/FunctionSpaces/ContCDiffMap.lean
+Theorem statement: theorem ContCDiffMap.zero_apply : (0 : X ⟿[K,n] Y) x = 0 :=
+Proof:
+  rfl
+
+
+Theorem: SciLean.SmoothLinearMap.zero_apply
+File path: SciLean/Core/FunctionSpaces/SmoothLinearMap.lean
+Theorem statement: theorem SmoothLinearMap.zero_apply : (0 : X⊸[K]Y) x = 0 :=
+Proof:
+  rfl
+
+
+Theorem: SciLean.ite_pull_ennreal_toReal
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem ite_pull_ennreal_toReal (c : Prop) [Decidable c] (x y : ENNReal)  :
+    (if c then x else y).toReal
+    =
+    (if c then x.toReal else y.toReal) :=
+Proof:
+  split_ifs <;> rfl
+
+
+Theorem: SciLean.re_float
+File path: SciLean/Core/FloatAsReal.lean
+Theorem statement: theorem re_float  (a : Float)
+  : RCLike.re a = a :=
+Proof:
+  exact RCLike.re_eq_self_of_le le_rfl
+
+
+Theorem: SciLean.ContCDiffAt.comp_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem ContCDiffAt.comp_rule (x : X)
+    (f : Y → Z) (g : X → Y)
+    (hf : ContCDiffAt K n f (g x)) (hg : ContCDiffAt K n g x) :
+    ContCDiffAt K n (fun x => f (g x)) x :=
+Proof:
+  rw [ContCDiffAt] at *
+  aesop
+
+
+Theorem: Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.Bijective_rule_simple
+  : Bijective (fun xy : X×Y => (xy.1, xy.2))
+  :=
+Proof:
+  simp
+  exact Function.bijective_id
+
+
+Theorem: Function.Bijective.Equiv.toFun.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Equiv.toFun.arg_a0.Bijective_rule (f : Y ≃ Z) (g : X → Y) (hf : Bijective g)
+  : Bijective (fun x => f (g x)) :=
+Proof:
+  inhabit Z
+  exact f.bijective.comp hf
+
+
+Theorem: SciLean.scalar_div_one
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_div_one (x : R) : x / 1 = x :=
+Proof:
+  simp
+
+
+Theorem: SciLean.Measure.prod_volume
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem Measure.prod_volume {X Y} [MeasureSpace X] [MeasureSpace Y]  :
+    (Measure.prod (volume : Measure X) (volume : Measure Y)) = volume :=
+Proof:
+  rfl
+
+
+Theorem: SciLean.scalar_min_zero_one
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_min_zero_one  : min (0 : R) (1 : R) = 0 :=
+Proof:
+  rw [min_comm]
+  simp
+
+
+Theorem: SciLean.norm₂_scalar
+File path: SciLean/Core/Objects/SemiInnerProductSpace.lean
+Theorem statement: theorem norm₂_scalar {R} [RealScalar R] (x : R) :
+  ‖x‖₂[R] = Scalar.abs x :=
+Proof:
+  rw [SciLean.scalar_norm]
+
+
+Theorem: SciLean.Distribution.action_iteD
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.action_iteD (A : Set X) (t e : 𝒟'(X,Y)) (φ : 𝒟 X) :
+   iteD A t e φ =
+        t.extAction (fun x => if x ∈ A then φ x else 0) (fun y ⊸ fun r ⊸ r • y) +
+        e.extAction (fun x => if x ∉ A then φ x else 0) (fun y ⊸ fun r ⊸ r • y) :=
+Proof:
+  aesop
+
+
+Theorem: IsLinearMap.isLinearMap_apply
+File path: SciLean/Core/FunctionPropositions/IsLinearMap.lean
+Theorem statement: theorem isLinearMap_apply (i : ι) : IsLinearMap R (fun f : (i : ι) → E i ↦ f i) :=
+Proof:
+  constructor
+  all_goals aesop
+
+
+Theorem: IsLinearMap.isLinearMap_const_zero
+File path: SciLean/Core/FunctionPropositions/IsLinearMap.lean
+Theorem statement: theorem isLinearMap_const_zero
+  : IsLinearMap R (fun _ : X => (0 : Y))
+  :=
+Proof:
+  constructor
+  all_goals aesop
+
+
+Theorem: SciLean.CDifferentiableAt.comp_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiableAt.comp_rule
+  (f : Y → Z) (g : X → Y) (x : X)
+  (hf : CDifferentiableAt K f (g x)) (hg : CDifferentiableAt K g x)
+  : CDifferentiableAt K (fun x => f (g x)) x
+  :=
+Proof:
+  rw [CDifferentiableAt] at *
+  aesop
+
+
+Theorem: SciLean.ite_pull_measureOf
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem ite_pull_measureOf {X} [MeasurableSpace X] (c : Prop) [Decidable c] (μ ν : Measure X) (A : Set X) :
+    (if c then μ else ν) A
+    =
+    (if c then μ A else ν A) :=
+Proof:
+  split_ifs <;> rfl
+
+
+Theorem: SciLean.ContCDiffMapFD.zero_apply
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD.zero_apply : (0 : X ⟿FD[K,n] Y) x = 0 :=
+Proof:
+  rfl
+
+
+Theorem: SciLean.CDifferentiableAt.id_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiableAt.id_rule (x : X)
+  : CDifferentiableAt K (fun x : X => x) x
+  :=
+Proof:
+  unfold SciLean.CDifferentiableAt
+  tauto
+
+
+Theorem: SciLean.ContCDiffAt.id_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem ContCDiffAt.id_rule (x : X) :
+    ContCDiffAt K n (fun x : X => x) x :=
+Proof:
+  unfold SciLean.ContCDiffAt
+  tauto
+
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+================================================================================
+
+Proved sorry theorems only in first database: 1
+
+Theorem: condRho_of_translate
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma condRho_of_translate {Ω S : Type*} [MeasureSpace Ω] (X : Ω → G) (Y : Ω → S) (A : Finset G) (s:G) : condRho (fun ω ↦ X ω + s) Y A = condRho X Y A :=
+Proof:
+  simp only [condRho, rho_of_translate]
+
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 14
+
+Theorem: absorb1
+File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+Theorem statement: theorem absorb1 : x ⊓ (x ⊔ y) = x :=
+Proof:
+  simp
+
+
+Theorem: MyRing.neg_eq_of_add_eq_zero
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem neg_eq_of_add_eq_zero {a b : R} (h : a + b = 0) : -a = b :=
+Proof:
+  rw [add_eq_zero_iff_eq_neg] at h
+  simp [h]
+
+
+Theorem: MyGroup.mul_right_inv
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem mul_right_inv (a : G) : a * a⁻¹ = 1 :=
+Proof:
+  simp
+
+
+Theorem: C03S05.MyAbs.neg_le_abs_self
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem neg_le_abs_self (x : ℝ) : -x ≤ |x| :=
+Proof:
+  simpa using C03S05.MyAbs.le_abs_self (-x)
+
+
+Theorem: MyRing.add_neg_cancel_right
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem add_neg_cancel_right (a b : R) : a + b + -b = a :=
+Proof:
+  simp
+
+
+Theorem: MyRing.add_left_cancel
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem add_left_cancel {a b c : R} (h : a + b = a + c) : b = c :=
+Proof:
+  simpa using h
+
+
+Theorem: MyGroup.mul_one
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem mul_one (a : G) : a * 1 = a :=
+Proof:
+  simp
+
+
+Theorem: MyGroup.mul_inv_rev
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem mul_inv_rev (a b : G) : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+Proof:
+  simp
+
+
+Theorem: C03S05.MyAbs.abs_add
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_add (x y : ℝ) : |x + y| ≤ |x| + |y| :=
+Proof:
+  apply abs_add_le
+
+
+Theorem: absorb2
+File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+Theorem statement: theorem absorb2 : x ⊔ x ⊓ y = x :=
+Proof:
+  simp
+
+
+Theorem: MyRing.eq_neg_of_add_eq_zero
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem eq_neg_of_add_eq_zero {a b : R} (h : a + b = 0) : a = -b :=
+Proof:
+  rwa [eq_neg_iff_add_eq_zero]
+
+
+Theorem: MyRing.add_right_cancel
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem add_right_cancel {a b c : R} (h : a + b = c + b) : a = c :=
+Proof:
+  simpa using h
+
+
+Theorem: MyRing.zero_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem zero_mul (a : R) : 0 * a = 0 :=
+Proof:
+  rw [MulZeroClass.zero_mul]
+
+
+Theorem: MyRing.neg_neg
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem neg_neg (a : R) : - -a = a :=
+Proof:
+  simp
+
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
+
+================================================================================
+Comparing proved sorry theorems for repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common proved sorry theorems: 0
