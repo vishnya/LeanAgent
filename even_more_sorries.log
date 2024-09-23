@@ -1,0 +1,1608 @@
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+[31mCould not terminate `[1m/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py[22m[26m` due to (pid=2527733, name='python3')[39m
+Did not find any active Ray processes.
+Running main3_more_sorries.py
+[2024-09-17 19:06:34,946] [WARNING] [real_accelerator.py:162:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+[2024-09-17 19:06:34,948] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+WARNING 09-17 19:06:37 _custom_ops.py:18] Failed to import from vllm._C with ImportError('libcuda.so.1: cannot open shared object file: No such file or directory')
+2024-09-17 19:06:40.641 | INFO     | __main__:main:1408 - Running progressive training
+2024-09-17 19:06:40.641 | INFO     | __main__:main:1414 - Configuring LeanDojo...
+2024-09-17 19:06:40.645 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 19:06:40.645 | INFO     | __main__:main:1416 - LeanDojo configured
+2024-09-17 19:06:40.645 | INFO     | __main__:main:1421 - Starting the main process
+2024-09-17 19:06:40.646 | INFO     | __main__:main:1429 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 19:07:15.474 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 19:07:15.475 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 19:07:25.027 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 19:07:25.028 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 19:07:31.900 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 19:07:31.901 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 19:07:33.941 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 19:07:33.941 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 19:07:41.728 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 19:07:41.728 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 19:07:50.656 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 19:07:50.656 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 19:07:51.403 | INFO     | __main__:main:1431 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 19:07:51.404 | INFO     | __main__:main:1438 - Found 100 repositories
+2024-09-17 19:07:51.405 | INFO     | __main__:main:1441 - Starting curriculum learning
+2024-09-17 19:07:53.069 | INFO     | __main__:search_github_repositories:612 - Processing imbrem/debruijn-ssa
+2024-09-17 19:07:53.070 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/imbrem/debruijn-ssa.git
+2024-09-17 19:07:53.070 | INFO     | __main__:clone_repo:414 - Repo name: imbrem/debruijn-ssa
+2024-09-17 19:07:53.816 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-09-17 19:08:10.444 | INFO     | __main__:search_github_repositories:624 - Cloned imbrem/debruijn-ssa
+2024-09-17 19:08:10.445 | INFO     | __main__:search_github_repositories:612 - Processing leanprover-community/mathlib4
+2024-09-17 19:08:10.445 | INFO     | __main__:search_github_repositories:637 - Skipping leanprover-community/mathlib4 since it is a known repository
+2024-09-17 19:08:10.445 | INFO     | __main__:search_github_repositories:612 - Processing ewittlich/Unitization_Test
+2024-09-17 19:08:10.445 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/ewittlich/Unitization_Test.git
+2024-09-17 19:08:10.445 | INFO     | __main__:clone_repo:414 - Repo name: ewittlich/Unitization_Test
+2024-09-17 19:08:11.136 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc1
+2024-09-17 19:08:27.542 | INFO     | __main__:search_github_repositories:624 - Cloned ewittlich/Unitization_Test
+2024-09-17 19:08:27.542 | INFO     | __main__:search_github_repositories:612 - Processing bio-ontology-research-group/FunEq
+2024-09-17 19:08:27.542 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/bio-ontology-research-group/FunEq.git
+2024-09-17 19:08:27.543 | INFO     | __main__:clone_repo:414 - Repo name: bio-ontology-research-group/FunEq
+2024-09-17 19:08:28.244 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/bio-ontology-research-group/FunEq/a38d6dbe29ead48ed581ae75291ef1c31339ccee/lean-toolchain failed. Retrying...
+2024-09-17 19:08:29.282 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/bio-ontology-research-group/FunEq/a38d6dbe29ead48ed581ae75291ef1c31339ccee/lean-toolchain failed. Retrying...
+2024-09-17 19:08:31.324 | INFO     | __main__:search_github_repositories:635 - Failed to clone bio-ontology-research-group/FunEq because of HTTP Error 404: Not Found
+2024-09-17 19:08:31.327 | INFO     | __main__:search_github_repositories:612 - Processing leanprover/reservoir-index
+2024-09-17 19:08:31.330 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/leanprover/reservoir-index.git
+2024-09-17 19:08:31.331 | INFO     | __main__:clone_repo:414 - Repo name: leanprover/reservoir-index
+2024-09-17 19:08:32.052 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover/reservoir-index/09e4ab364e207a4110c456c6560659ad9088ca3d/lean-toolchain failed. Retrying...
+2024-09-17 19:08:33.099 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover/reservoir-index/09e4ab364e207a4110c456c6560659ad9088ca3d/lean-toolchain failed. Retrying...
+2024-09-17 19:08:35.160 | INFO     | __main__:search_github_repositories:635 - Failed to clone leanprover/reservoir-index because of HTTP Error 404: Not Found
+2024-09-17 19:08:35.164 | INFO     | __main__:search_github_repositories:612 - Processing cymcymcymcym/Unique_Factorization_Lean4
+2024-09-17 19:08:35.169 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/cymcymcymcym/Unique_Factorization_Lean4.git
+2024-09-17 19:08:35.169 | INFO     | __main__:clone_repo:414 - Repo name: cymcymcymcym/Unique_Factorization_Lean4
+2024-09-17 19:08:35.879 | INFO     | __main__:search_github_repositories:624 - Cloned cymcymcymcym/Unique_Factorization_Lean4
+2024-09-17 19:08:35.880 | INFO     | __main__:search_github_repositories:612 - Processing AntoineChambert-Loir/DividedPowers4
+2024-09-17 19:08:35.880 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/AntoineChambert-Loir/DividedPowers4.git
+2024-09-17 19:08:35.881 | INFO     | __main__:clone_repo:414 - Repo name: AntoineChambert-Loir/DividedPowers4
+2024-09-17 19:08:36.600 | INFO     | __main__:search_github_repositories:624 - Cloned AntoineChambert-Loir/DividedPowers4
+2024-09-17 19:08:36.601 | INFO     | __main__:search_github_repositories:612 - Processing mbkybky/InfiniteGaloisTheory
+2024-09-17 19:08:36.601 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mbkybky/InfiniteGaloisTheory.git
+2024-09-17 19:08:36.601 | INFO     | __main__:clone_repo:414 - Repo name: mbkybky/InfiniteGaloisTheory
+2024-09-17 19:08:37.317 | INFO     | __main__:search_github_repositories:624 - Cloned mbkybky/InfiniteGaloisTheory
+2024-09-17 19:08:37.318 | INFO     | __main__:search_github_repositories:612 - Processing Thanhson89/RigorousErrorLNS
+2024-09-17 19:08:37.318 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Thanhson89/RigorousErrorLNS.git
+2024-09-17 19:08:37.318 | INFO     | __main__:clone_repo:414 - Repo name: Thanhson89/RigorousErrorLNS
+2024-09-17 19:08:38.077 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Thanhson89/RigorousErrorLNS/b75b2a0e38ee8a31da2713617bbc4ec5ecad9692/lean-toolchain failed. Retrying...
+2024-09-17 19:08:39.117 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Thanhson89/RigorousErrorLNS/b75b2a0e38ee8a31da2713617bbc4ec5ecad9692/lean-toolchain failed. Retrying...
+2024-09-17 19:08:41.156 | INFO     | __main__:search_github_repositories:635 - Failed to clone Thanhson89/RigorousErrorLNS because of HTTP Error 404: Not Found
+2024-09-17 19:08:41.160 | INFO     | __main__:search_github_repositories:612 - Processing alja123/hyperstabilityES
+2024-09-17 19:08:41.163 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/alja123/hyperstabilityES.git
+2024-09-17 19:08:41.163 | INFO     | __main__:clone_repo:414 - Repo name: alja123/hyperstabilityES
+2024-09-17 19:08:41.826 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-17 19:08:58.002 | INFO     | __main__:search_github_repositories:624 - Cloned alja123/hyperstabilityES
+2024-09-17 19:08:58.002 | INFO     | __main__:search_github_repositories:612 - Processing take1byte/LeanGames
+2024-09-17 19:08:58.003 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/take1byte/LeanGames.git
+2024-09-17 19:08:58.003 | INFO     | __main__:clone_repo:414 - Repo name: take1byte/LeanGames
+2024-09-17 19:08:58.792 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc3
+2024-09-17 19:09:15.101 | INFO     | __main__:search_github_repositories:624 - Cloned take1byte/LeanGames
+2024-09-17 19:09:15.101 | INFO     | __main__:search_github_repositories:612 - Processing lean-ja/lean-by-example
+2024-09-17 19:09:15.101 | INFO     | __main__:search_github_repositories:637 - Skipping lean-ja/lean-by-example since it is a known repository
+2024-09-17 19:09:15.101 | INFO     | __main__:search_github_repositories:612 - Processing mtoohey31/lott
+2024-09-17 19:09:15.101 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mtoohey31/lott.git
+2024-09-17 19:09:15.101 | INFO     | __main__:clone_repo:414 - Repo name: mtoohey31/lott
+2024-09-17 19:09:15.847 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 4.9.0
+2024-09-17 19:09:32.631 | INFO     | __main__:search_github_repositories:635 - Failed to clone mtoohey31/lott because of Invalid tag or branch: `4.9.0` for Repository(full_name="leanprover/lean4")
+2024-09-17 19:09:32.632 | INFO     | __main__:search_github_repositories:612 - Processing HEPLean/HepLean
+2024-09-17 19:09:32.632 | INFO     | __main__:search_github_repositories:637 - Skipping HEPLean/HepLean since it is a known repository
+2024-09-17 19:09:32.632 | INFO     | __main__:search_github_repositories:612 - Processing gaetanserre/SBS-Proofs
+2024-09-17 19:09:32.632 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/gaetanserre/SBS-Proofs.git
+2024-09-17 19:09:32.632 | INFO     | __main__:clone_repo:414 - Repo name: gaetanserre/SBS-Proofs
+2024-09-17 19:09:33.363 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc1
+2024-09-17 19:09:49.692 | INFO     | __main__:search_github_repositories:624 - Cloned gaetanserre/SBS-Proofs
+2024-09-17 19:09:49.692 | INFO     | __main__:search_github_repositories:612 - Processing cadake/LeanTQI
+2024-09-17 19:09:49.693 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/cadake/LeanTQI.git
+2024-09-17 19:09:49.693 | INFO     | __main__:clone_repo:414 - Repo name: cadake/LeanTQI
+2024-09-17 19:09:50.463 | INFO     | __main__:search_github_repositories:624 - Cloned cadake/LeanTQI
+2024-09-17 19:09:50.464 | INFO     | __main__:search_github_repositories:612 - Processing Seasawher/ConcreteSemantics.lean
+2024-09-17 19:09:50.464 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Seasawher/ConcreteSemantics.lean.git
+2024-09-17 19:09:50.464 | INFO     | __main__:clone_repo:414 - Repo name: Seasawher/ConcreteSemantics.lean
+2024-09-17 19:09:51.156 | INFO     | __main__:search_github_repositories:624 - Cloned Seasawher/ConcreteSemantics.lean
+2024-09-17 19:09:51.156 | INFO     | __main__:search_github_repositories:612 - Processing lean-ja/lean4-metaprogramming-book-ja
+2024-09-17 19:09:51.157 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lean-ja/lean4-metaprogramming-book-ja.git
+2024-09-17 19:09:51.157 | INFO     | __main__:clone_repo:414 - Repo name: lean-ja/lean4-metaprogramming-book-ja
+2024-09-17 19:09:51.974 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-17 19:10:08.154 | INFO     | __main__:search_github_repositories:624 - Cloned lean-ja/lean4-metaprogramming-book-ja
+2024-09-17 19:10:08.154 | INFO     | __main__:search_github_repositories:612 - Processing m4lvin/lean4-pdl
+2024-09-17 19:10:08.155 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/m4lvin/lean4-pdl.git
+2024-09-17 19:10:08.155 | INFO     | __main__:clone_repo:414 - Repo name: m4lvin/lean4-pdl
+2024-09-17 19:10:08.874 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0
+2024-09-17 19:10:25.701 | INFO     | __main__:search_github_repositories:624 - Cloned m4lvin/lean4-pdl
+2024-09-17 19:10:25.701 | INFO     | __main__:search_github_repositories:612 - Processing codyroux/post-complete
+2024-09-17 19:10:25.702 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/codyroux/post-complete.git
+2024-09-17 19:10:25.702 | INFO     | __main__:clone_repo:414 - Repo name: codyroux/post-complete
+2024-09-17 19:10:26.486 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-17 19:10:43.051 | INFO     | __main__:search_github_repositories:624 - Cloned codyroux/post-complete
+2024-09-17 19:10:43.051 | INFO     | __main__:search_github_repositories:612 - Processing anzenlang/cvc.lean
+2024-09-17 19:10:43.051 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/anzenlang/cvc.lean.git
+2024-09-17 19:10:43.051 | INFO     | __main__:clone_repo:414 - Repo name: anzenlang/cvc.lean
+2024-09-17 19:10:43.900 | INFO     | __main__:search_github_repositories:624 - Cloned anzenlang/cvc.lean
+2024-09-17 19:10:43.900 | INFO     | __main__:search_github_repositories:612 - Processing mariainesdff/LocalClassFieldTheory
+2024-09-17 19:10:43.901 | INFO     | __main__:search_github_repositories:637 - Skipping mariainesdff/LocalClassFieldTheory since it is a known repository
+2024-09-17 19:10:43.901 | INFO     | __main__:search_github_repositories:612 - Processing leanprover/lean4
+2024-09-17 19:10:43.901 | INFO     | __main__:search_github_repositories:637 - Skipping leanprover/lean4 since it is a known repository
+2024-09-17 19:10:43.901 | INFO     | __main__:search_github_repositories:612 - Processing madvorak/read-lean
+2024-09-17 19:10:43.902 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/madvorak/read-lean.git
+2024-09-17 19:10:43.902 | INFO     | __main__:clone_repo:414 - Repo name: madvorak/read-lean
+2024-09-17 19:10:44.588 | INFO     | __main__:search_github_repositories:624 - Cloned madvorak/read-lean
+2024-09-17 19:10:44.588 | INFO     | __main__:search_github_repositories:612 - Processing leanprover/verso
+2024-09-17 19:10:44.589 | INFO     | __main__:search_github_repositories:637 - Skipping leanprover/verso since it is a known repository
+2024-09-17 19:10:44.589 | INFO     | __main__:search_github_repositories:612 - Processing jaalonso/Calculemus2_es
+2024-09-17 19:10:44.589 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/jaalonso/Calculemus2_es.git
+2024-09-17 19:10:44.589 | INFO     | __main__:clone_repo:414 - Repo name: jaalonso/Calculemus2_es
+2024-09-17 19:10:45.349 | INFO     | __main__:search_github_repositories:624 - Cloned jaalonso/Calculemus2_es
+2024-09-17 19:10:45.350 | INFO     | __main__:search_github_repositories:612 - Processing chenjulang/trylean
+2024-09-17 19:10:45.350 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/chenjulang/trylean.git
+2024-09-17 19:10:45.350 | INFO     | __main__:clone_repo:414 - Repo name: chenjulang/trylean
+2024-09-17 19:10:46.038 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/chenjulang/trylean/5f9cec618414b1b0ea14753d17f37f1af1fc15dc/lean-toolchain failed. Retrying...
+2024-09-17 19:10:47.080 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/chenjulang/trylean/5f9cec618414b1b0ea14753d17f37f1af1fc15dc/lean-toolchain failed. Retrying...
+2024-09-17 19:10:49.119 | INFO     | __main__:search_github_repositories:635 - Failed to clone chenjulang/trylean because of HTTP Error 404: Not Found
+2024-09-17 19:10:49.123 | INFO     | __main__:search_github_repositories:612 - Processing jaalonso/Calculemus2
+2024-09-17 19:10:49.128 | INFO     | __main__:search_github_repositories:637 - Skipping jaalonso/Calculemus2 since it is a known repository
+2024-09-17 19:10:49.128 | INFO     | __main__:search_github_repositories:612 - Processing jt496/UCLMATH0109
+2024-09-17 19:10:49.128 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/jt496/UCLMATH0109.git
+2024-09-17 19:10:49.129 | INFO     | __main__:clone_repo:414 - Repo name: jt496/UCLMATH0109
+2024-09-17 19:10:49.941 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-09-17 19:11:06.419 | INFO     | __main__:search_github_repositories:624 - Cloned jt496/UCLMATH0109
+2024-09-17 19:11:06.419 | INFO     | __main__:search_github_repositories:612 - Processing faenuccio-teaching/M2Lyon2425
+2024-09-17 19:11:06.420 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/faenuccio-teaching/M2Lyon2425.git
+2024-09-17 19:11:06.420 | INFO     | __main__:clone_repo:414 - Repo name: faenuccio-teaching/M2Lyon2425
+2024-09-17 19:11:07.271 | INFO     | __main__:search_github_repositories:624 - Cloned faenuccio-teaching/M2Lyon2425
+2024-09-17 19:11:07.272 | INFO     | __main__:search_github_repositories:612 - Processing dwrensha/compfiles
+2024-09-17 19:11:07.272 | INFO     | __main__:search_github_repositories:637 - Skipping dwrensha/compfiles since it is a known repository
+2024-09-17 19:11:07.272 | INFO     | __main__:search_github_repositories:612 - Processing leanprover-community/LeanSearchClient
+2024-09-17 19:11:07.272 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/leanprover-community/LeanSearchClient.git
+2024-09-17 19:11:07.272 | INFO     | __main__:clone_repo:414 - Repo name: leanprover-community/LeanSearchClient
+2024-09-17 19:11:08.037 | INFO     | __main__:search_github_repositories:624 - Cloned leanprover-community/LeanSearchClient
+2024-09-17 19:11:08.037 | INFO     | __main__:search_github_repositories:612 - Processing ImperialCollegeLondon/FLT
+2024-09-17 19:11:08.038 | INFO     | __main__:search_github_repositories:637 - Skipping ImperialCollegeLondon/FLT since it is a known repository
+2024-09-17 19:11:08.038 | INFO     | __main__:search_github_repositories:612 - Processing NethermindEth/EVMYulLean
+2024-09-17 19:11:08.038 | INFO     | __main__:search_github_repositories:637 - Skipping NethermindEth/EVMYulLean since it is a known repository
+2024-09-17 19:11:08.038 | INFO     | __main__:search_github_repositories:612 - Processing chinawat/cpe-frap
+2024-09-17 19:11:08.039 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/chinawat/cpe-frap.git
+2024-09-17 19:11:08.039 | INFO     | __main__:clone_repo:414 - Repo name: chinawat/cpe-frap
+2024-09-17 19:11:08.868 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc2
+2024-09-17 19:11:25.452 | INFO     | __main__:search_github_repositories:624 - Cloned chinawat/cpe-frap
+2024-09-17 19:11:25.453 | INFO     | __main__:search_github_repositories:612 - Processing leanprover-community/flt-regular
+2024-09-17 19:11:25.453 | INFO     | __main__:search_github_repositories:637 - Skipping leanprover-community/flt-regular since it is a known repository
+2024-09-17 19:11:25.453 | INFO     | __main__:search_github_repositories:612 - Processing goens/KalaNamak
+2024-09-17 19:11:25.453 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/goens/KalaNamak.git
+2024-09-17 19:11:25.454 | INFO     | __main__:clone_repo:414 - Repo name: goens/KalaNamak
+2024-09-17 19:11:26.256 | INFO     | __main__:search_github_repositories:624 - Cloned goens/KalaNamak
+2024-09-17 19:11:26.256 | INFO     | __main__:search_github_repositories:612 - Processing mdnestor/MiscLean
+2024-09-17 19:11:26.257 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mdnestor/MiscLean.git
+2024-09-17 19:11:26.257 | INFO     | __main__:clone_repo:414 - Repo name: mdnestor/MiscLean
+2024-09-17 19:11:27.019 | INFO     | __main__:search_github_repositories:624 - Cloned mdnestor/MiscLean
+2024-09-17 19:11:27.020 | INFO     | __main__:search_github_repositories:612 - Processing pthomas505/FOL
+2024-09-17 19:11:27.020 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/pthomas505/FOL.git
+2024-09-17 19:11:27.020 | INFO     | __main__:clone_repo:414 - Repo name: pthomas505/FOL
+2024-09-17 19:11:27.766 | INFO     | __main__:search_github_repositories:624 - Cloned pthomas505/FOL
+2024-09-17 19:11:27.767 | INFO     | __main__:search_github_repositories:612 - Processing mckoen/quasicategory
+2024-09-17 19:11:27.767 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mckoen/quasicategory.git
+2024-09-17 19:11:27.767 | INFO     | __main__:clone_repo:414 - Repo name: mckoen/quasicategory
+2024-09-17 19:11:28.538 | INFO     | __main__:search_github_repositories:624 - Cloned mckoen/quasicategory
+2024-09-17 19:11:28.538 | INFO     | __main__:search_github_repositories:612 - Processing digama0/lean4lean
+2024-09-17 19:11:28.538 | INFO     | __main__:search_github_repositories:637 - Skipping digama0/lean4lean since it is a known repository
+2024-09-17 19:11:28.538 | INFO     | __main__:search_github_repositories:612 - Processing chanind/mathlib-changelog
+2024-09-17 19:11:28.539 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/chanind/mathlib-changelog.git
+2024-09-17 19:11:28.539 | INFO     | __main__:clone_repo:414 - Repo name: chanind/mathlib-changelog
+2024-09-17 19:11:29.334 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/chanind/mathlib-changelog/f4a5d6be49d864984820f3c0520a87cda8328265/lean-toolchain failed. Retrying...
+2024-09-17 19:11:30.372 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/chanind/mathlib-changelog/f4a5d6be49d864984820f3c0520a87cda8328265/lean-toolchain failed. Retrying...
+2024-09-17 19:11:32.413 | INFO     | __main__:search_github_repositories:635 - Failed to clone chanind/mathlib-changelog because of HTTP Error 404: Not Found
+2024-09-17 19:11:32.417 | INFO     | __main__:search_github_repositories:612 - Processing shnarazk/learn
+2024-09-17 19:11:32.420 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/shnarazk/learn.git
+2024-09-17 19:11:32.421 | INFO     | __main__:clone_repo:414 - Repo name: shnarazk/learn
+2024-09-17 19:11:33.110 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/shnarazk/learn/d0c2ee146c2e830a8013d69b2e928a46e36cd73f/lean-toolchain failed. Retrying...
+2024-09-17 19:11:34.162 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/shnarazk/learn/d0c2ee146c2e830a8013d69b2e928a46e36cd73f/lean-toolchain failed. Retrying...
+2024-09-17 19:11:36.201 | INFO     | __main__:search_github_repositories:635 - Failed to clone shnarazk/learn because of HTTP Error 404: Not Found
+2024-09-17 19:11:36.204 | INFO     | __main__:search_github_repositories:612 - Processing lopezrodolfo/FM-Lean-6
+2024-09-17 19:11:36.207 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lopezrodolfo/FM-Lean-6.git
+2024-09-17 19:11:36.207 | INFO     | __main__:clone_repo:414 - Repo name: lopezrodolfo/FM-Lean-6
+2024-09-17 19:11:36.934 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-6/f65498835ca28d2ce246c49067b53de12d4e7633/lean-toolchain failed. Retrying...
+2024-09-17 19:11:37.985 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-6/f65498835ca28d2ce246c49067b53de12d4e7633/lean-toolchain failed. Retrying...
+2024-09-17 19:11:40.040 | INFO     | __main__:search_github_repositories:635 - Failed to clone lopezrodolfo/FM-Lean-6 because of HTTP Error 404: Not Found
+2024-09-17 19:11:40.043 | INFO     | __main__:search_github_repositories:612 - Processing lopezrodolfo/FM-Lean-5
+2024-09-17 19:11:40.047 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lopezrodolfo/FM-Lean-5.git
+2024-09-17 19:11:40.047 | INFO     | __main__:clone_repo:414 - Repo name: lopezrodolfo/FM-Lean-5
+2024-09-17 19:11:40.807 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-5/994d0b99019553778f9098e1b462e24583927831/lean-toolchain failed. Retrying...
+2024-09-17 19:11:41.860 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-5/994d0b99019553778f9098e1b462e24583927831/lean-toolchain failed. Retrying...
+2024-09-17 19:11:43.898 | INFO     | __main__:search_github_repositories:635 - Failed to clone lopezrodolfo/FM-Lean-5 because of HTTP Error 404: Not Found
+2024-09-17 19:11:43.902 | INFO     | __main__:search_github_repositories:612 - Processing lopezrodolfo/FM-Lean-4
+2024-09-17 19:11:43.906 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lopezrodolfo/FM-Lean-4.git
+2024-09-17 19:11:43.906 | INFO     | __main__:clone_repo:414 - Repo name: lopezrodolfo/FM-Lean-4
+2024-09-17 19:11:44.662 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-4/b4f60dc554cc49d06b6d68466e2007c0c012aa09/lean-toolchain failed. Retrying...
+2024-09-17 19:11:45.716 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-4/b4f60dc554cc49d06b6d68466e2007c0c012aa09/lean-toolchain failed. Retrying...
+2024-09-17 19:11:47.770 | INFO     | __main__:search_github_repositories:635 - Failed to clone lopezrodolfo/FM-Lean-4 because of HTTP Error 404: Not Found
+2024-09-17 19:11:47.773 | INFO     | __main__:search_github_repositories:612 - Processing lopezrodolfo/FM-Lean-3
+2024-09-17 19:11:47.777 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lopezrodolfo/FM-Lean-3.git
+2024-09-17 19:11:47.777 | INFO     | __main__:clone_repo:414 - Repo name: lopezrodolfo/FM-Lean-3
+2024-09-17 19:11:48.548 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-3/48e89ec91d245a35f5f4a821dcbd53fe667c6ff4/lean-toolchain failed. Retrying...
+2024-09-17 19:11:49.601 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-3/48e89ec91d245a35f5f4a821dcbd53fe667c6ff4/lean-toolchain failed. Retrying...
+2024-09-17 19:11:51.640 | INFO     | __main__:search_github_repositories:635 - Failed to clone lopezrodolfo/FM-Lean-3 because of HTTP Error 404: Not Found
+2024-09-17 19:11:51.643 | INFO     | __main__:search_github_repositories:612 - Processing lopezrodolfo/FM-Lean-2
+2024-09-17 19:11:51.645 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lopezrodolfo/FM-Lean-2.git
+2024-09-17 19:11:51.645 | INFO     | __main__:clone_repo:414 - Repo name: lopezrodolfo/FM-Lean-2
+2024-09-17 19:11:52.381 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-2/57f390e32a72a902b9dd479955618852321cb039/lean-toolchain failed. Retrying...
+2024-09-17 19:11:53.422 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-2/57f390e32a72a902b9dd479955618852321cb039/lean-toolchain failed. Retrying...
+2024-09-17 19:11:55.461 | INFO     | __main__:search_github_repositories:635 - Failed to clone lopezrodolfo/FM-Lean-2 because of HTTP Error 404: Not Found
+2024-09-17 19:11:55.465 | INFO     | __main__:search_github_repositories:612 - Processing lopezrodolfo/FM-Lean-1
+2024-09-17 19:11:55.468 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lopezrodolfo/FM-Lean-1.git
+2024-09-17 19:11:55.468 | INFO     | __main__:clone_repo:414 - Repo name: lopezrodolfo/FM-Lean-1
+2024-09-17 19:11:56.229 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-1/9a3963421f9d9c08150010a0e76337ed10213c3a/lean-toolchain failed. Retrying...
+2024-09-17 19:11:57.283 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lopezrodolfo/FM-Lean-1/9a3963421f9d9c08150010a0e76337ed10213c3a/lean-toolchain failed. Retrying...
+2024-09-17 19:11:59.334 | INFO     | __main__:search_github_repositories:635 - Failed to clone lopezrodolfo/FM-Lean-1 because of HTTP Error 404: Not Found
+2024-09-17 19:11:59.338 | INFO     | __main__:search_github_repositories:612 - Processing mdnestor/SymbolicDynamics
+2024-09-17 19:11:59.341 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mdnestor/SymbolicDynamics.git
+2024-09-17 19:11:59.342 | INFO     | __main__:clone_repo:414 - Repo name: mdnestor/SymbolicDynamics
+2024-09-17 19:12:00.084 | INFO     | __main__:search_github_repositories:624 - Cloned mdnestor/SymbolicDynamics
+2024-09-17 19:12:00.084 | INFO     | __main__:search_github_repositories:612 - Processing dodgez/lean-math
+2024-09-17 19:12:00.085 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/dodgez/lean-math.git
+2024-09-17 19:12:00.085 | INFO     | __main__:clone_repo:414 - Repo name: dodgez/lean-math
+2024-09-17 19:12:00.878 | INFO     | __main__:search_github_repositories:624 - Cloned dodgez/lean-math
+2024-09-17 19:12:00.878 | INFO     | __main__:search_github_repositories:612 - Processing FM22/real_closed_field
+2024-09-17 19:12:00.879 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/FM22/real_closed_field.git
+2024-09-17 19:12:00.879 | INFO     | __main__:clone_repo:414 - Repo name: FM22/real_closed_field
+2024-09-17 19:12:01.607 | INFO     | __main__:search_github_repositories:624 - Cloned FM22/real_closed_field
+2024-09-17 19:12:01.608 | INFO     | __main__:search_github_repositories:612 - Processing Jun2M/Kura
+2024-09-17 19:12:01.608 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Jun2M/Kura.git
+2024-09-17 19:12:01.609 | INFO     | __main__:clone_repo:414 - Repo name: Jun2M/Kura
+2024-09-17 19:12:02.439 | INFO     | __main__:search_github_repositories:624 - Cloned Jun2M/Kura
+2024-09-17 19:12:02.440 | INFO     | __main__:search_github_repositories:612 - Processing BrownCS1951x/fpv2024
+2024-09-17 19:12:02.440 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/BrownCS1951x/fpv2024.git
+2024-09-17 19:12:02.441 | INFO     | __main__:clone_repo:414 - Repo name: BrownCS1951x/fpv2024
+2024-09-17 19:12:03.226 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0
+2024-09-17 19:12:19.820 | INFO     | __main__:search_github_repositories:624 - Cloned BrownCS1951x/fpv2024
+2024-09-17 19:12:19.821 | INFO     | __main__:search_github_repositories:612 - Processing RemyCiterin/LeanCoInd
+2024-09-17 19:12:19.821 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/RemyCiterin/LeanCoInd.git
+2024-09-17 19:12:19.821 | INFO     | __main__:clone_repo:414 - Repo name: RemyCiterin/LeanCoInd
+2024-09-17 19:12:20.517 | INFO     | __main__:search_github_repositories:624 - Cloned RemyCiterin/LeanCoInd
+2024-09-17 19:12:20.518 | INFO     | __main__:search_github_repositories:612 - Processing JLimperg/aesop-script-evaluation
+2024-09-17 19:12:20.518 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/JLimperg/aesop-script-evaluation.git
+2024-09-17 19:12:20.519 | INFO     | __main__:clone_repo:414 - Repo name: JLimperg/aesop-script-evaluation
+2024-09-17 19:12:21.271 | INFO     | __main__:search_github_repositories:624 - Cloned JLimperg/aesop-script-evaluation
+2024-09-17 19:12:21.272 | INFO     | __main__:search_github_repositories:612 - Processing cedar-policy/cedar-spec
+2024-09-17 19:12:21.272 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/cedar-policy/cedar-spec.git
+2024-09-17 19:12:21.272 | INFO     | __main__:clone_repo:414 - Repo name: cedar-policy/cedar-spec
+2024-09-17 19:12:22.166 | INFO     | __main__:search_github_repositories:635 - Failed to clone cedar-policy/cedar-spec because of Invalid Lean 4 version: cedar-lean/lean-toolchain
+2024-09-17 19:12:22.170 | INFO     | __main__:search_github_repositories:612 - Processing jpyamamoto/grelling-paradox-lean
+2024-09-17 19:12:22.170 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/jpyamamoto/grelling-paradox-lean.git
+2024-09-17 19:12:22.170 | INFO     | __main__:clone_repo:414 - Repo name: jpyamamoto/grelling-paradox-lean
+2024-09-17 19:12:22.893 | INFO     | __main__:search_github_repositories:624 - Cloned jpyamamoto/grelling-paradox-lean
+2024-09-17 19:12:22.894 | INFO     | __main__:search_github_repositories:612 - Processing MichaelStollBayreuth/JacobiSum
+2024-09-17 19:12:22.894 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/MichaelStollBayreuth/JacobiSum.git
+2024-09-17 19:12:22.894 | INFO     | __main__:clone_repo:414 - Repo name: MichaelStollBayreuth/JacobiSum
+2024-09-17 19:12:23.614 | INFO     | __main__:search_github_repositories:624 - Cloned MichaelStollBayreuth/JacobiSum
+2024-09-17 19:12:23.614 | INFO     | __main__:search_github_repositories:612 - Processing AviCraimer/relational-calculus-library-lean4
+2024-09-17 19:12:23.614 | INFO     | __main__:search_github_repositories:637 - Skipping AviCraimer/relational-calculus-library-lean4 since it is a known repository
+2024-09-17 19:12:23.614 | INFO     | __main__:search_github_repositories:612 - Processing leanprover-community/con-nf
+2024-09-17 19:12:23.614 | INFO     | __main__:search_github_repositories:637 - Skipping leanprover-community/con-nf since it is a known repository
+2024-09-17 19:12:23.615 | INFO     | __main__:search_github_repositories:612 - Processing uedakazushi/cluster_sfuk_lean
+2024-09-17 19:12:23.615 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/uedakazushi/cluster_sfuk_lean.git
+2024-09-17 19:12:23.615 | INFO     | __main__:clone_repo:414 - Repo name: uedakazushi/cluster_sfuk_lean
+2024-09-17 19:12:24.333 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc2
+2024-09-17 19:12:40.627 | INFO     | __main__:search_github_repositories:624 - Cloned uedakazushi/cluster_sfuk_lean
+2024-09-17 19:12:40.627 | INFO     | __main__:search_github_repositories:612 - Processing PSchwahn/semileanear2024
+2024-09-17 19:12:40.627 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/PSchwahn/semileanear2024.git
+2024-09-17 19:12:40.627 | INFO     | __main__:clone_repo:414 - Repo name: PSchwahn/semileanear2024
+2024-09-17 19:12:41.409 | INFO     | __main__:search_github_repositories:624 - Cloned PSchwahn/semileanear2024
+2024-09-17 19:12:41.410 | INFO     | __main__:search_github_repositories:612 - Processing andreadlm/master-thesis
+2024-09-17 19:12:41.410 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/andreadlm/master-thesis.git
+2024-09-17 19:12:41.411 | INFO     | __main__:clone_repo:414 - Repo name: andreadlm/master-thesis
+2024-09-17 19:12:42.123 | INFO     | __main__:search_github_repositories:624 - Cloned andreadlm/master-thesis
+2024-09-17 19:12:42.124 | INFO     | __main__:search_github_repositories:612 - Processing iliayar/lean-workout
+2024-09-17 19:12:42.124 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/iliayar/lean-workout.git
+2024-09-17 19:12:42.124 | INFO     | __main__:clone_repo:414 - Repo name: iliayar/lean-workout
+2024-09-17 19:12:42.815 | INFO     | __main__:search_github_repositories:624 - Cloned iliayar/lean-workout
+2024-09-17 19:12:42.816 | INFO     | __main__:search_github_repositories:612 - Processing bolito2/DemazureOperatorsLean
+2024-09-17 19:12:42.816 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/bolito2/DemazureOperatorsLean.git
+2024-09-17 19:12:42.816 | INFO     | __main__:clone_repo:414 - Repo name: bolito2/DemazureOperatorsLean
+2024-09-17 19:12:43.618 | INFO     | __main__:search_github_repositories:624 - Cloned bolito2/DemazureOperatorsLean
+2024-09-17 19:12:43.619 | INFO     | __main__:search_github_repositories:612 - Processing leanprover/LNSym
+2024-09-17 19:12:43.619 | INFO     | __main__:search_github_repositories:637 - Skipping leanprover/LNSym since it is a known repository
+2024-09-17 19:12:43.619 | INFO     | __main__:search_github_repositories:612 - Processing Jiayinf/cmu-itp-24
+2024-09-17 19:12:43.619 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Jiayinf/cmu-itp-24.git
+2024-09-17 19:12:43.619 | INFO     | __main__:clone_repo:414 - Repo name: Jiayinf/cmu-itp-24
+2024-09-17 19:12:44.383 | INFO     | __main__:search_github_repositories:624 - Cloned Jiayinf/cmu-itp-24
+2024-09-17 19:12:44.384 | INFO     | __main__:search_github_repositories:612 - Processing Godalin/ideas-lean
+2024-09-17 19:12:44.385 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Godalin/ideas-lean.git
+2024-09-17 19:12:44.385 | INFO     | __main__:clone_repo:414 - Repo name: Godalin/ideas-lean
+2024-09-17 19:12:45.089 | INFO     | __main__:search_github_repositories:635 - Failed to clone Godalin/ideas-lean because of Invalid Lean 4 version: stable
+2024-09-17 19:12:45.094 | INFO     | __main__:search_github_repositories:612 - Processing soulsource/aoc-2023
+2024-09-17 19:12:45.094 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/soulsource/aoc-2023.git
+2024-09-17 19:12:45.094 | INFO     | __main__:clone_repo:414 - Repo name: soulsource/aoc-2023
+2024-09-17 19:12:45.893 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 4.11.0
+2024-09-17 19:13:02.781 | INFO     | __main__:search_github_repositories:635 - Failed to clone soulsource/aoc-2023 because of Invalid tag or branch: `4.11.0` for Repository(full_name="leanprover/lean4")
+2024-09-17 19:13:02.781 | INFO     | __main__:search_github_repositories:612 - Processing ahhwuhu/zeta_3_irrational
+2024-09-17 19:13:02.781 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/ahhwuhu/zeta_3_irrational.git
+2024-09-17 19:13:02.782 | INFO     | __main__:clone_repo:414 - Repo name: ahhwuhu/zeta_3_irrational
+2024-09-17 19:13:03.529 | INFO     | __main__:search_github_repositories:624 - Cloned ahhwuhu/zeta_3_irrational
+2024-09-17 19:13:03.529 | INFO     | __main__:search_github_repositories:612 - Processing pointsgame/points-lean
+2024-09-17 19:13:03.530 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/pointsgame/points-lean.git
+2024-09-17 19:13:03.530 | INFO     | __main__:clone_repo:414 - Repo name: pointsgame/points-lean
+2024-09-17 19:13:04.351 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.1
+2024-09-17 19:13:20.815 | INFO     | __main__:search_github_repositories:624 - Cloned pointsgame/points-lean
+2024-09-17 19:13:20.815 | INFO     | __main__:search_github_repositories:612 - Processing nomeata/loogle
+2024-09-17 19:13:20.815 | INFO     | __main__:search_github_repositories:637 - Skipping nomeata/loogle since it is a known repository
+2024-09-17 19:13:20.815 | INFO     | __main__:search_github_repositories:612 - Processing goens/lost-pop-lean
+2024-09-17 19:13:20.815 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/goens/lost-pop-lean.git
+2024-09-17 19:13:20.816 | INFO     | __main__:clone_repo:414 - Repo name: goens/lost-pop-lean
+2024-09-17 19:13:21.584 | INFO     | __main__:search_github_repositories:624 - Cloned goens/lost-pop-lean
+2024-09-17 19:13:21.584 | INFO     | __main__:search_github_repositories:612 - Processing austinletson/use-lean-standard-action-with-lake-test
+2024-09-17 19:13:21.585 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/austinletson/use-lean-standard-action-with-lake-test.git
+2024-09-17 19:13:21.585 | INFO     | __main__:clone_repo:414 - Repo name: austinletson/use-lean-standard-action-with-lake-test
+2024-09-17 19:13:22.368 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0
+2024-09-17 19:13:38.764 | INFO     | __main__:search_github_repositories:624 - Cloned austinletson/use-lean-standard-action-with-lake-test
+2024-09-17 19:13:38.765 | INFO     | __main__:search_github_repositories:612 - Processing madvorak/duality
+2024-09-17 19:13:38.765 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/madvorak/duality.git
+2024-09-17 19:13:38.765 | INFO     | __main__:clone_repo:414 - Repo name: madvorak/duality
+2024-09-17 19:13:39.563 | INFO     | __main__:search_github_repositories:624 - Cloned madvorak/duality
+2024-09-17 19:13:39.564 | INFO     | __main__:search_github_repositories:612 - Processing knowsys/CertifyingDatalog
+2024-09-17 19:13:39.564 | INFO     | __main__:search_github_repositories:637 - Skipping knowsys/CertifyingDatalog since it is a known repository
+2024-09-17 19:13:39.565 | INFO     | __main__:search_github_repositories:612 - Processing knowsys/Formale-Systeme-in-LEAN
+2024-09-17 19:13:39.565 | INFO     | __main__:search_github_repositories:637 - Skipping knowsys/Formale-Systeme-in-LEAN since it is a known repository
+2024-09-17 19:13:39.565 | INFO     | __main__:search_github_repositories:612 - Processing leanprover-community/batteries
+2024-09-17 19:13:39.565 | INFO     | __main__:search_github_repositories:637 - Skipping leanprover-community/batteries since it is a known repository
+2024-09-17 19:13:39.565 | INFO     | __main__:search_github_repositories:612 - Processing chabulhwi/tpil-solutions
+2024-09-17 19:13:39.566 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/chabulhwi/tpil-solutions.git
+2024-09-17 19:13:39.566 | INFO     | __main__:clone_repo:414 - Repo name: chabulhwi/tpil-solutions
+2024-09-17 19:13:40.276 | INFO     | __main__:search_github_repositories:624 - Cloned chabulhwi/tpil-solutions
+2024-09-17 19:13:40.276 | INFO     | __main__:search_github_repositories:612 - Processing Whysoserioushah/BrauerGroup_new
+2024-09-17 19:13:40.277 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Whysoserioushah/BrauerGroup_new.git
+2024-09-17 19:13:40.277 | INFO     | __main__:clone_repo:414 - Repo name: Whysoserioushah/BrauerGroup_new
+2024-09-17 19:13:41.145 | INFO     | __main__:search_github_repositories:624 - Cloned Whysoserioushah/BrauerGroup_new
+2024-09-17 19:13:41.146 | INFO     | __main__:search_github_repositories:612 - Processing pimpale/llm.lean
+2024-09-17 19:13:41.146 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/pimpale/llm.lean.git
+2024-09-17 19:13:41.146 | INFO     | __main__:clone_repo:414 - Repo name: pimpale/llm.lean
+2024-09-17 19:13:41.999 | INFO     | __main__:search_github_repositories:624 - Cloned pimpale/llm.lean
+2024-09-17 19:13:42.000 | INFO     | __main__:search_github_repositories:612 - Processing functionally/crypto-lean4
+2024-09-17 19:13:42.000 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/functionally/crypto-lean4.git
+2024-09-17 19:13:42.000 | INFO     | __main__:clone_repo:414 - Repo name: functionally/crypto-lean4
+2024-09-17 19:13:42.895 | INFO     | __main__:search_github_repositories:624 - Cloned functionally/crypto-lean4
+2024-09-17 19:13:42.896 | INFO     | __main__:search_github_repositories:612 - Processing lacker/kata
+2024-09-17 19:13:42.896 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lacker/kata.git
+2024-09-17 19:13:42.897 | INFO     | __main__:clone_repo:414 - Repo name: lacker/kata
+2024-09-17 19:13:43.612 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lacker/kata/8bc1c2854613949a75797fb17e162e22d1b0d590/lean-toolchain failed. Retrying...
+2024-09-17 19:13:44.654 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lacker/kata/8bc1c2854613949a75797fb17e162e22d1b0d590/lean-toolchain failed. Retrying...
+2024-09-17 19:13:46.701 | INFO     | __main__:search_github_repositories:635 - Failed to clone lacker/kata because of HTTP Error 404: Not Found
+2024-09-17 19:13:46.705 | INFO     | __main__:search_github_repositories:612 - Processing HenriqueBorges6/CS2
+2024-09-17 19:13:46.711 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/HenriqueBorges6/CS2.git
+2024-09-17 19:13:46.712 | INFO     | __main__:clone_repo:414 - Repo name: HenriqueBorges6/CS2
+2024-09-17 19:13:47.481 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 19:14:04.105 | INFO     | __main__:search_github_repositories:635 - Failed to clone HenriqueBorges6/CS2 because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 19:14:04.105 | INFO     | __main__:search_github_repositories:612 - Processing cruhland/lean4-metaprog
+2024-09-17 19:14:04.105 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/cruhland/lean4-metaprog.git
+2024-09-17 19:14:04.105 | INFO     | __main__:clone_repo:414 - Repo name: cruhland/lean4-metaprog
+2024-09-17 19:14:04.948 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-08-17
+2024-09-17 19:14:05.530 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/cruhland/lean4-metaprog', commit='c86e682cb05da5480d826c590af58c10b81879b8') relies on an unsupported Lean version: 38288ae07a24f469a85fd10e93cbbb130f0e9f6c
+2024-09-17 19:14:05.530 | INFO     | __main__:search_github_repositories:624 - Cloned cruhland/lean4-metaprog
+2024-09-17 19:14:05.530 | INFO     | __main__:search_github_repositories:612 - Processing emilyriehl/infinity-cosmos
+2024-09-17 19:14:05.531 | INFO     | __main__:search_github_repositories:637 - Skipping emilyriehl/infinity-cosmos since it is a known repository
+2024-09-17 19:14:05.531 | INFO     | __main__:search_github_repositories:612 - Processing curenosm/lean-journey
+2024-09-17 19:14:05.531 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/curenosm/lean-journey.git
+2024-09-17 19:14:05.532 | INFO     | __main__:clone_repo:414 - Repo name: curenosm/lean-journey
+2024-09-17 19:14:06.271 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/curenosm/lean-journey/67119bfd42899634512072bc9084b435ac9dc905/lean-toolchain failed. Retrying...
+2024-09-17 19:14:07.316 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/curenosm/lean-journey/67119bfd42899634512072bc9084b435ac9dc905/lean-toolchain failed. Retrying...
+2024-09-17 19:14:09.363 | INFO     | __main__:search_github_repositories:635 - Failed to clone curenosm/lean-journey because of HTTP Error 404: Not Found
+2024-09-17 19:14:09.367 | INFO     | __main__:search_github_repositories:612 - Processing fpvandoorn/carleson
+2024-09-17 19:14:09.369 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/fpvandoorn/carleson.git
+2024-09-17 19:14:09.369 | INFO     | __main__:clone_repo:414 - Repo name: fpvandoorn/carleson
+2024-09-17 19:14:10.189 | INFO     | __main__:search_github_repositories:624 - Cloned fpvandoorn/carleson
+2024-09-17 19:14:10.189 | INFO     | __main__:search_github_repositories:612 - Processing YaelDillies/LeanCamCombi
+2024-09-17 19:14:10.189 | INFO     | __main__:search_github_repositories:637 - Skipping YaelDillies/LeanCamCombi since it is a known repository
+2024-09-17 19:14:10.190 | INFO     | __main__:search_github_repositories:612 - Processing leanprover-community/aesop
+2024-09-17 19:14:10.190 | INFO     | __main__:search_github_repositories:637 - Skipping leanprover-community/aesop since it is a known repository
+2024-09-17 19:14:10.190 | INFO     | __main__:search_github_repositories:612 - Processing mariainesdff/ostrowski2024
+2024-09-17 19:14:10.190 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mariainesdff/ostrowski2024.git
+2024-09-17 19:14:10.190 | INFO     | __main__:clone_repo:414 - Repo name: mariainesdff/ostrowski2024
+2024-09-17 19:14:10.995 | INFO     | __main__:search_github_repositories:624 - Cloned mariainesdff/ostrowski2024
+2024-09-17 19:14:10.996 | INFO     | __main__:search_github_repositories:612 - Processing cpehle/bn
+2024-09-17 19:14:10.996 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/cpehle/bn.git
+2024-09-17 19:14:10.997 | INFO     | __main__:clone_repo:414 - Repo name: cpehle/bn
+2024-09-17 19:14:11.838 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/cpehle/bn/2decf3f05332d3d381fcd2cec1664f914ffad6cf/lean-toolchain failed. Retrying...
+2024-09-17 19:14:12.889 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/cpehle/bn/2decf3f05332d3d381fcd2cec1664f914ffad6cf/lean-toolchain failed. Retrying...
+2024-09-17 19:14:14.933 | INFO     | __main__:search_github_repositories:635 - Failed to clone cpehle/bn because of HTTP Error 404: Not Found
+2024-09-17 19:14:14.937 | INFO     | __main__:search_github_repositories:612 - Processing dtumad/VCV-io
+2024-09-17 19:14:14.943 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/dtumad/VCV-io.git
+2024-09-17 19:14:14.943 | INFO     | __main__:clone_repo:414 - Repo name: dtumad/VCV-io
+2024-09-17 19:14:15.669 | INFO     | __main__:search_github_repositories:624 - Cloned dtumad/VCV-io
+2024-09-17 19:14:15.670 | INFO     | __main__:search_github_repositories:612 - Processing imbrem/gtree-formalization
+2024-09-17 19:14:15.670 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/imbrem/gtree-formalization.git
+2024-09-17 19:14:15.670 | INFO     | __main__:clone_repo:414 - Repo name: imbrem/gtree-formalization
+2024-09-17 19:14:16.426 | INFO     | __main__:search_github_repositories:624 - Cloned imbrem/gtree-formalization
+2024-09-17 19:14:16.426 | INFO     | __main__:search_github_repositories:612 - Processing arademaker/csbook
+2024-09-17 19:14:16.426 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/arademaker/csbook.git
+2024-09-17 19:14:16.427 | INFO     | __main__:clone_repo:414 - Repo name: arademaker/csbook
+2024-09-17 19:14:17.171 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-09-03
+2024-09-17 19:14:17.834 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/arademaker/csbook', commit='39cd608702a9f9c9f9f7f18751ec0b9415109e86') relies on an unsupported Lean version: 66688e10ceef553f48b935a74d9bbd096edf96f5
+2024-09-17 19:14:17.835 | INFO     | __main__:search_github_repositories:624 - Cloned arademaker/csbook
+2024-09-17 19:14:17.835 | INFO     | __main__:search_github_repositories:612 - Processing Qiu233/regex
+2024-09-17 19:14:17.835 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Qiu233/regex.git
+2024-09-17 19:14:17.836 | INFO     | __main__:clone_repo:414 - Repo name: Qiu233/regex
+2024-09-17 19:14:18.566 | INFO     | __main__:search_github_repositories:624 - Cloned Qiu233/regex
+2024-09-17 19:14:18.567 | INFO     | __main__:search_github_repositories:612 - Processing FormalizedFormalLogic/Foundation
+2024-09-17 19:14:18.567 | INFO     | __main__:search_github_repositories:637 - Skipping FormalizedFormalLogic/Foundation since it is a known repository
+2024-09-17 19:14:18.567 | INFO     | __main__:search_github_repositories:612 - Processing avigad/mathematics_in_lean_source
+2024-09-17 19:14:18.567 | INFO     | __main__:search_github_repositories:637 - Skipping avigad/mathematics_in_lean_source since it is a known repository
+2024-09-17 19:14:18.567 | INFO     | __main__:search_github_repositories:612 - Processing RemyDegenne/testing-lower-bounds
+2024-09-17 19:14:18.567 | INFO     | __main__:search_github_repositories:637 - Skipping RemyDegenne/testing-lower-bounds since it is a known repository
+2024-09-17 19:14:21.208 | INFO     | __main__:search_github_repositories:612 - Processing Seasawher/ZeroD.lean
+2024-09-17 19:14:21.208 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Seasawher/ZeroD.lean.git
+2024-09-17 19:14:21.208 | INFO     | __main__:clone_repo:414 - Repo name: Seasawher/ZeroD.lean
+2024-09-17 19:14:21.953 | INFO     | __main__:search_github_repositories:624 - Cloned Seasawher/ZeroD.lean
+2024-09-17 19:14:21.954 | INFO     | __main__:search_github_repositories:612 - Processing jiakai0419/L42
+2024-09-17 19:14:21.955 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/jiakai0419/L42.git
+2024-09-17 19:14:21.955 | INFO     | __main__:clone_repo:414 - Repo name: jiakai0419/L42
+2024-09-17 19:14:22.746 | INFO     | __main__:search_github_repositories:624 - Cloned jiakai0419/L42
+2024-09-17 19:14:22.750 | INFO     | __main__:search_github_repositories:612 - Processing BurnieBoi/LEAN-Projects-Local
+2024-09-17 19:14:22.750 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/BurnieBoi/LEAN-Projects-Local.git
+2024-09-17 19:14:22.750 | INFO     | __main__:clone_repo:414 - Repo name: BurnieBoi/LEAN-Projects-Local
+2024-09-17 19:14:23.510 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/BurnieBoi/LEAN-Projects-Local/ff4c8c5f1d61c69423a7f5e77514ef9475939e97/lean-toolchain failed. Retrying...
+2024-09-17 19:14:24.555 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/BurnieBoi/LEAN-Projects-Local/ff4c8c5f1d61c69423a7f5e77514ef9475939e97/lean-toolchain failed. Retrying...
+2024-09-17 19:14:26.600 | INFO     | __main__:search_github_repositories:635 - Failed to clone BurnieBoi/LEAN-Projects-Local because of HTTP Error 404: Not Found
+2024-09-17 19:14:26.604 | INFO     | __main__:search_github_repositories:612 - Processing abdoo8080/lean-cvc5
+2024-09-17 19:14:26.610 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/abdoo8080/lean-cvc5.git
+2024-09-17 19:14:26.610 | INFO     | __main__:clone_repo:414 - Repo name: abdoo8080/lean-cvc5
+2024-09-17 19:14:27.310 | INFO     | __main__:search_github_repositories:624 - Cloned abdoo8080/lean-cvc5
+2024-09-17 19:14:27.310 | INFO     | __main__:search_github_repositories:612 - Processing peabrainiac/lean-orbifolds
+2024-09-17 19:14:27.311 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/peabrainiac/lean-orbifolds.git
+2024-09-17 19:14:27.311 | INFO     | __main__:clone_repo:414 - Repo name: peabrainiac/lean-orbifolds
+2024-09-17 19:14:28.024 | INFO     | __main__:search_github_repositories:624 - Cloned peabrainiac/lean-orbifolds
+2024-09-17 19:14:28.024 | INFO     | __main__:search_github_repositories:612 - Processing vbeffara/Curvint
+2024-09-17 19:14:28.025 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/vbeffara/Curvint.git
+2024-09-17 19:14:28.025 | INFO     | __main__:clone_repo:414 - Repo name: vbeffara/Curvint
+2024-09-17 19:14:28.720 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/vbeffara/Curvint/4d3de2a6d306f04d4b8a4306b8195e46c138a3a8/lean-toolchain failed. Retrying...
+2024-09-17 19:14:29.765 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/vbeffara/Curvint/4d3de2a6d306f04d4b8a4306b8195e46c138a3a8/lean-toolchain failed. Retrying...
+2024-09-17 19:14:31.805 | INFO     | __main__:search_github_repositories:635 - Failed to clone vbeffara/Curvint because of HTTP Error 404: Not Found
+2024-09-17 19:14:31.808 | INFO     | __main__:search_github_repositories:612 - Processing soulsource/BinaryHeap
+2024-09-17 19:14:31.811 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/soulsource/BinaryHeap.git
+2024-09-17 19:14:31.811 | INFO     | __main__:clone_repo:414 - Repo name: soulsource/BinaryHeap
+2024-09-17 19:14:32.638 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 4.11
+2024-09-17 19:14:49.440 | INFO     | __main__:search_github_repositories:635 - Failed to clone soulsource/BinaryHeap because of Invalid tag or branch: `4.11` for Repository(full_name="leanprover/lean4")
+2024-09-17 19:14:49.441 | INFO     | __main__:search_github_repositories:612 - Processing AlexKontorovich/PrimeNumberTheoremAnd
+2024-09-17 19:14:49.441 | INFO     | __main__:search_github_repositories:637 - Skipping AlexKontorovich/PrimeNumberTheoremAnd since it is a known repository
+2024-09-17 19:14:49.441 | INFO     | __main__:search_github_repositories:612 - Processing girving/interval
+2024-09-17 19:14:49.441 | INFO     | __main__:search_github_repositories:637 - Skipping girving/interval since it is a known repository
+2024-09-17 19:14:49.441 | INFO     | __main__:search_github_repositories:612 - Processing paivan1999/Formalising-mathematics-in-Lean-theorem-prover
+2024-09-17 19:14:49.441 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/paivan1999/Formalising-mathematics-in-Lean-theorem-prover.git
+2024-09-17 19:14:49.441 | INFO     | __main__:clone_repo:414 - Repo name: paivan1999/Formalising-mathematics-in-Lean-theorem-prover
+2024-09-17 19:14:50.205 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/paivan1999/Formalising-mathematics-in-Lean-theorem-prover/43a368231a34b3c620bd58e3223c8f87f8554327/lean-toolchain failed. Retrying...
+2024-09-17 19:14:51.248 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/paivan1999/Formalising-mathematics-in-Lean-theorem-prover/43a368231a34b3c620bd58e3223c8f87f8554327/lean-toolchain failed. Retrying...
+2024-09-17 19:14:53.294 | INFO     | __main__:search_github_repositories:635 - Failed to clone paivan1999/Formalising-mathematics-in-Lean-theorem-prover because of HTTP Error 404: Not Found
+2024-09-17 19:14:53.298 | INFO     | __main__:search_github_repositories:612 - Processing kevinsullivan/cs2120f24
+2024-09-17 19:14:53.302 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/kevinsullivan/cs2120f24.git
+2024-09-17 19:14:53.302 | INFO     | __main__:clone_repo:414 - Repo name: kevinsullivan/cs2120f24
+2024-09-17 19:14:54.008 | INFO     | __main__:search_github_repositories:624 - Cloned kevinsullivan/cs2120f24
+2024-09-17 19:14:54.008 | INFO     | __main__:search_github_repositories:612 - Processing cspr-rad/cspr-consensus-formal
+2024-09-17 19:14:54.009 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/cspr-rad/cspr-consensus-formal.git
+2024-09-17 19:14:54.009 | INFO     | __main__:clone_repo:414 - Repo name: cspr-rad/cspr-consensus-formal
+2024-09-17 19:14:54.792 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/cspr-rad/cspr-consensus-formal/4320424a7c9272232a3cabdb581be9d5c57af116/lean-toolchain failed. Retrying...
+2024-09-17 19:14:55.836 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/cspr-rad/cspr-consensus-formal/4320424a7c9272232a3cabdb581be9d5c57af116/lean-toolchain failed. Retrying...
+2024-09-17 19:14:57.879 | INFO     | __main__:search_github_repositories:635 - Failed to clone cspr-rad/cspr-consensus-formal because of HTTP Error 404: Not Found
+2024-09-17 19:14:57.883 | INFO     | __main__:search_github_repositories:612 - Processing ttwag/p13_lean4_natural_number_game_solution
+2024-09-17 19:14:57.886 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/ttwag/p13_lean4_natural_number_game_solution.git
+2024-09-17 19:14:57.886 | INFO     | __main__:clone_repo:414 - Repo name: ttwag/p13_lean4_natural_number_game_solution
+2024-09-17 19:14:58.620 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ttwag/p13_lean4_natural_number_game_solution/7116698f1951079dc4adaf54312bfe9861541ef3/lean-toolchain failed. Retrying...
+2024-09-17 19:14:59.666 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ttwag/p13_lean4_natural_number_game_solution/7116698f1951079dc4adaf54312bfe9861541ef3/lean-toolchain failed. Retrying...
+2024-09-17 19:15:01.709 | INFO     | __main__:search_github_repositories:635 - Failed to clone ttwag/p13_lean4_natural_number_game_solution because of HTTP Error 404: Not Found
+2024-09-17 19:15:01.712 | INFO     | __main__:search_github_repositories:612 - Processing mistarro/local-rings
+2024-09-17 19:15:01.717 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mistarro/local-rings.git
+2024-09-17 19:15:01.717 | INFO     | __main__:clone_repo:414 - Repo name: mistarro/local-rings
+2024-09-17 19:15:02.480 | INFO     | __main__:search_github_repositories:624 - Cloned mistarro/local-rings
+2024-09-17 19:15:02.481 | INFO     | __main__:search_github_repositories:612 - Processing PatrickMassot/GlimpseOfLean
+2024-09-17 19:15:02.481 | INFO     | __main__:search_github_repositories:637 - Skipping PatrickMassot/GlimpseOfLean since it is a known repository
+2024-09-17 19:15:02.482 | INFO     | __main__:search_github_repositories:612 - Processing FormalizedFormalLogic/Incompleteness
+2024-09-17 19:15:02.482 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/FormalizedFormalLogic/Incompleteness.git
+2024-09-17 19:15:02.482 | INFO     | __main__:clone_repo:414 - Repo name: FormalizedFormalLogic/Incompleteness
+2024-09-17 19:15:03.224 | INFO     | __main__:search_github_repositories:624 - Cloned FormalizedFormalLogic/Incompleteness
+2024-09-17 19:15:03.224 | INFO     | __main__:search_github_repositories:612 - Processing girving/ray
+2024-09-17 19:15:03.224 | INFO     | __main__:search_github_repositories:637 - Skipping girving/ray since it is a known repository
+2024-09-17 19:15:03.225 | INFO     | __main__:search_github_repositories:612 - Processing corent1234/hairy-ball-theorem-lean
+2024-09-17 19:15:03.225 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/corent1234/hairy-ball-theorem-lean.git
+2024-09-17 19:15:03.225 | INFO     | __main__:clone_repo:414 - Repo name: corent1234/hairy-ball-theorem-lean
+2024-09-17 19:15:04.074 | INFO     | __main__:search_github_repositories:624 - Cloned corent1234/hairy-ball-theorem-lean
+2024-09-17 19:15:04.074 | INFO     | __main__:search_github_repositories:612 - Processing imbrem/discretion
+2024-09-17 19:15:04.075 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/imbrem/discretion.git
+2024-09-17 19:15:04.075 | INFO     | __main__:clone_repo:414 - Repo name: imbrem/discretion
+2024-09-17 19:15:04.928 | INFO     | __main__:search_github_repositories:624 - Cloned imbrem/discretion
+2024-09-17 19:15:04.929 | INFO     | __main__:search_github_repositories:612 - Processing FormalizedFormalLogic/Arithmetization
+2024-09-17 19:15:04.929 | INFO     | __main__:search_github_repositories:637 - Skipping FormalizedFormalLogic/Arithmetization since it is a known repository
+2024-09-17 19:15:04.929 | INFO     | __main__:search_github_repositories:612 - Processing lean-ja/fp-lean-ja
+2024-09-17 19:15:04.929 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lean-ja/fp-lean-ja.git
+2024-09-17 19:15:04.929 | INFO     | __main__:clone_repo:414 - Repo name: lean-ja/fp-lean-ja
+2024-09-17 19:15:05.834 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lean-ja/fp-lean-ja/7ae261d54902e09f163837a9498fd13bace54bec/lean-toolchain failed. Retrying...
+2024-09-17 19:15:06.877 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lean-ja/fp-lean-ja/7ae261d54902e09f163837a9498fd13bace54bec/lean-toolchain failed. Retrying...
+2024-09-17 19:15:08.926 | INFO     | __main__:search_github_repositories:635 - Failed to clone lean-ja/fp-lean-ja because of HTTP Error 404: Not Found
+2024-09-17 19:15:08.930 | INFO     | __main__:search_github_repositories:612 - Processing siddhartha-gadgil/MetaExamples
+2024-09-17 19:15:08.936 | INFO     | __main__:search_github_repositories:637 - Skipping siddhartha-gadgil/MetaExamples since it is a known repository
+2024-09-17 19:15:08.936 | INFO     | __main__:search_github_repositories:612 - Processing Linyxus/capless-lean
+2024-09-17 19:15:08.936 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Linyxus/capless-lean.git
+2024-09-17 19:15:08.936 | INFO     | __main__:clone_repo:414 - Repo name: Linyxus/capless-lean
+2024-09-17 19:15:09.711 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-17 19:15:26.039 | INFO     | __main__:search_github_repositories:624 - Cloned Linyxus/capless-lean
+2024-09-17 19:15:26.039 | INFO     | __main__:search_github_repositories:612 - Processing joewatt95/leanplayground
+2024-09-17 19:15:26.039 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/joewatt95/leanplayground.git
+2024-09-17 19:15:26.039 | INFO     | __main__:clone_repo:414 - Repo name: joewatt95/leanplayground
+2024-09-17 19:15:26.798 | INFO     | __main__:search_github_repositories:624 - Cloned joewatt95/leanplayground
+2024-09-17 19:15:26.799 | INFO     | __main__:search_github_repositories:612 - Processing nomeata/lean-reflection-bench
+2024-09-17 19:15:26.799 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/nomeata/lean-reflection-bench.git
+2024-09-17 19:15:26.799 | INFO     | __main__:clone_repo:414 - Repo name: nomeata/lean-reflection-bench
+2024-09-17 19:15:27.534 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-09-02
+2024-09-17 19:15:28.106 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/nomeata/lean-reflection-bench', commit='420168e4365a10e8877443c48cb5b672729a8674') relies on an unsupported Lean version: 4f04112446a10ef996fdfed10e3991f2cafadc4a
+2024-09-17 19:15:28.107 | INFO     | __main__:search_github_repositories:624 - Cloned nomeata/lean-reflection-bench
+2024-09-17 19:15:28.107 | INFO     | __main__:search_github_repositories:612 - Processing vihdzp/rubik-lean4
+2024-09-17 19:15:28.107 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/vihdzp/rubik-lean4.git
+2024-09-17 19:15:28.107 | INFO     | __main__:clone_repo:414 - Repo name: vihdzp/rubik-lean4
+2024-09-17 19:15:28.847 | INFO     | __main__:search_github_repositories:624 - Cloned vihdzp/rubik-lean4
+2024-09-17 19:15:28.848 | INFO     | __main__:search_github_repositories:612 - Processing taeyool/lean-flag-algebras
+2024-09-17 19:15:28.848 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/taeyool/lean-flag-algebras.git
+2024-09-17 19:15:28.848 | INFO     | __main__:clone_repo:414 - Repo name: taeyool/lean-flag-algebras
+2024-09-17 19:15:29.564 | INFO     | __main__:search_github_repositories:624 - Cloned taeyool/lean-flag-algebras
+2024-09-17 19:15:29.564 | INFO     | __main__:search_github_repositories:612 - Processing LizBonn/RamificationGroup
+2024-09-17 19:15:29.565 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/LizBonn/RamificationGroup.git
+2024-09-17 19:15:29.565 | INFO     | __main__:clone_repo:414 - Repo name: LizBonn/RamificationGroup
+2024-09-17 19:15:30.332 | INFO     | __main__:search_github_repositories:624 - Cloned LizBonn/RamificationGroup
+2024-09-17 19:15:30.333 | INFO     | __main__:search_github_repositories:612 - Processing broughjt/barb
+2024-09-17 19:15:30.333 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/broughjt/barb.git
+2024-09-17 19:15:30.333 | INFO     | __main__:clone_repo:414 - Repo name: broughjt/barb
+2024-09-17 19:15:31.083 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 4.3.0
+2024-09-17 19:15:48.149 | INFO     | __main__:search_github_repositories:635 - Failed to clone broughjt/barb because of Invalid tag or branch: `4.3.0` for Repository(full_name="leanprover/lean4")
+2024-09-17 19:15:48.149 | INFO     | __main__:search_github_repositories:612 - Processing DennisTsar/spinpossible-lean
+2024-09-17 19:15:48.149 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/DennisTsar/spinpossible-lean.git
+2024-09-17 19:15:48.149 | INFO     | __main__:clone_repo:414 - Repo name: DennisTsar/spinpossible-lean
+2024-09-17 19:15:48.895 | INFO     | __main__:search_github_repositories:624 - Cloned DennisTsar/spinpossible-lean
+2024-09-17 19:15:48.896 | INFO     | __main__:search_github_repositories:612 - Processing katzenpost/CryptWalker
+2024-09-17 19:15:48.896 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/katzenpost/CryptWalker.git
+2024-09-17 19:15:48.896 | INFO     | __main__:clone_repo:414 - Repo name: katzenpost/CryptWalker
+2024-09-17 19:15:49.712 | INFO     | __main__:search_github_repositories:624 - Cloned katzenpost/CryptWalker
+2024-09-17 19:15:49.712 | INFO     | __main__:search_github_repositories:612 - Processing david415/bench
+2024-09-17 19:15:49.713 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/david415/bench.git
+2024-09-17 19:15:49.713 | INFO     | __main__:clone_repo:414 - Repo name: david415/bench
+2024-09-17 19:15:50.493 | INFO     | __main__:search_github_repositories:635 - Failed to clone david415/bench because of Invalid Lean 4 version: stable
+2024-09-17 19:15:50.499 | INFO     | __main__:search_github_repositories:612 - Processing leanprover/SHerLOC
+2024-09-17 19:15:50.499 | INFO     | __main__:search_github_repositories:637 - Skipping leanprover/SHerLOC since it is a known repository
+2024-09-17 19:15:50.499 | INFO     | __main__:search_github_repositories:612 - Processing emap-ed-20242/fad
+2024-09-17 19:15:50.499 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/emap-ed-20242/fad.git
+2024-09-17 19:15:50.500 | INFO     | __main__:clone_repo:414 - Repo name: emap-ed-20242/fad
+2024-09-17 19:15:51.245 | INFO     | __main__:search_github_repositories:624 - Cloned emap-ed-20242/fad
+2024-09-17 19:15:51.246 | INFO     | __main__:search_github_repositories:612 - Processing quangvdao/ZKLib
+2024-09-17 19:15:51.246 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/quangvdao/ZKLib.git
+2024-09-17 19:15:51.246 | INFO     | __main__:clone_repo:414 - Repo name: quangvdao/ZKLib
+2024-09-17 19:15:51.966 | INFO     | __main__:search_github_repositories:624 - Cloned quangvdao/ZKLib
+2024-09-17 19:15:51.967 | INFO     | __main__:search_github_repositories:612 - Processing mseri/BET
+2024-09-17 19:15:51.967 | INFO     | __main__:search_github_repositories:637 - Skipping mseri/BET since it is a known repository
+2024-09-17 19:15:51.967 | INFO     | __main__:search_github_repositories:612 - Processing lean-chs/charleston-lean-meetup
+2024-09-17 19:15:51.968 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lean-chs/charleston-lean-meetup.git
+2024-09-17 19:15:51.968 | INFO     | __main__:clone_repo:414 - Repo name: lean-chs/charleston-lean-meetup
+2024-09-17 19:15:52.831 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 19:16:09.613 | INFO     | __main__:search_github_repositories:635 - Failed to clone lean-chs/charleston-lean-meetup because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 19:16:09.613 | INFO     | __main__:search_github_repositories:612 - Processing draperlaboratory/ELFSage
+2024-09-17 19:16:09.614 | INFO     | __main__:search_github_repositories:637 - Skipping draperlaboratory/ELFSage since it is a known repository
+2024-09-17 19:16:09.614 | INFO     | __main__:search_github_repositories:612 - Processing emap-nlp-20242/cs
+2024-09-17 19:16:09.614 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/emap-nlp-20242/cs.git
+2024-09-17 19:16:09.614 | INFO     | __main__:clone_repo:414 - Repo name: emap-nlp-20242/cs
+2024-09-17 19:16:10.386 | INFO     | __main__:search_github_repositories:624 - Cloned emap-nlp-20242/cs
+2024-09-17 19:16:10.387 | INFO     | __main__:search_github_repositories:612 - Processing TheCob11/PaulinIntroToAbstractAlgebra
+2024-09-17 19:16:10.387 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/TheCob11/PaulinIntroToAbstractAlgebra.git
+2024-09-17 19:16:10.387 | INFO     | __main__:clone_repo:414 - Repo name: TheCob11/PaulinIntroToAbstractAlgebra
+2024-09-17 19:16:11.189 | INFO     | __main__:search_github_repositories:624 - Cloned TheCob11/PaulinIntroToAbstractAlgebra
+2024-09-17 19:16:11.190 | INFO     | __main__:search_github_repositories:612 - Processing reaslab/jixia
+2024-09-17 19:16:11.190 | INFO     | __main__:search_github_repositories:637 - Skipping reaslab/jixia since it is a known repository
+2024-09-17 19:16:11.190 | INFO     | __main__:search_github_repositories:612 - Processing HenriqueBorges6/LeanStudy
+2024-09-17 19:16:11.190 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/HenriqueBorges6/LeanStudy.git
+2024-09-17 19:16:11.190 | INFO     | __main__:clone_repo:414 - Repo name: HenriqueBorges6/LeanStudy
+2024-09-17 19:16:11.985 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 19:16:28.820 | INFO     | __main__:search_github_repositories:635 - Failed to clone HenriqueBorges6/LeanStudy because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 19:16:28.821 | INFO     | __main__:search_github_repositories:612 - Processing Seasawher/InterpreterBook
+2024-09-17 19:16:28.821 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Seasawher/InterpreterBook.git
+2024-09-17 19:16:28.821 | INFO     | __main__:clone_repo:414 - Repo name: Seasawher/InterpreterBook
+2024-09-17 19:16:29.599 | INFO     | __main__:search_github_repositories:624 - Cloned Seasawher/InterpreterBook
+2024-09-17 19:16:29.599 | INFO     | __main__:search_github_repositories:612 - Processing madvorak/vcsp
+2024-09-17 19:16:29.599 | INFO     | __main__:search_github_repositories:637 - Skipping madvorak/vcsp since it is a known repository
+2024-09-17 19:16:29.600 | INFO     | __main__:search_github_repositories:612 - Processing TwoFX/OrderedTree
+2024-09-17 19:16:29.600 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/TwoFX/OrderedTree.git
+2024-09-17 19:16:29.600 | INFO     | __main__:clone_repo:414 - Repo name: TwoFX/OrderedTree
+2024-09-17 19:16:30.386 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-09-12
+2024-09-17 19:16:30.955 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/TwoFX/OrderedTree', commit='e4e676708fba353c1dfbe30aecb77cb167135514') relies on an unsupported Lean version: adfd6c090ef7d6bdcc8f69c5dd6f919b1b71cab3
+2024-09-17 19:16:30.956 | INFO     | __main__:search_github_repositories:624 - Cloned TwoFX/OrderedTree
+2024-09-17 19:16:30.956 | INFO     | __main__:search_github_repositories:612 - Processing theckl/HoTT-Case-Study
+2024-09-17 19:16:30.956 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/theckl/HoTT-Case-Study.git
+2024-09-17 19:16:30.957 | INFO     | __main__:clone_repo:414 - Repo name: theckl/HoTT-Case-Study
+2024-09-17 19:16:31.710 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/theckl/HoTT-Case-Study/03f91909b159ae8fa32ec7af1255ab09dded8bc0/lean-toolchain failed. Retrying...
+2024-09-17 19:16:32.768 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/theckl/HoTT-Case-Study/03f91909b159ae8fa32ec7af1255ab09dded8bc0/lean-toolchain failed. Retrying...
+2024-09-17 19:16:34.810 | INFO     | __main__:search_github_repositories:635 - Failed to clone theckl/HoTT-Case-Study because of HTTP Error 404: Not Found
+2024-09-17 19:16:34.815 | INFO     | __main__:search_github_repositories:612 - Processing benjaminfjones/mil-solutions
+2024-09-17 19:16:34.820 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/benjaminfjones/mil-solutions.git
+2024-09-17 19:16:34.820 | INFO     | __main__:clone_repo:414 - Repo name: benjaminfjones/mil-solutions
+2024-09-17 19:16:35.673 | INFO     | __main__:search_github_repositories:624 - Cloned benjaminfjones/mil-solutions
+2024-09-17 19:16:35.674 | INFO     | __main__:search_github_repositories:612 - Processing victorliu5296/lean4-proofs
+2024-09-17 19:16:35.674 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/victorliu5296/lean4-proofs.git
+2024-09-17 19:16:35.674 | INFO     | __main__:clone_repo:414 - Repo name: victorliu5296/lean4-proofs
+2024-09-17 19:16:36.512 | INFO     | __main__:search_github_repositories:624 - Cloned victorliu5296/lean4-proofs
+2024-09-17 19:16:36.513 | INFO     | __main__:search_github_repositories:612 - Processing kmn5409/cs_511
+2024-09-17 19:16:36.513 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/kmn5409/cs_511.git
+2024-09-17 19:16:36.514 | INFO     | __main__:clone_repo:414 - Repo name: kmn5409/cs_511
+2024-09-17 19:16:37.343 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kmn5409/cs_511/36f3d016e0a3ae4f152b7713dd35302473d7ffd6/lean-toolchain failed. Retrying...
+2024-09-17 19:16:38.384 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kmn5409/cs_511/36f3d016e0a3ae4f152b7713dd35302473d7ffd6/lean-toolchain failed. Retrying...
+2024-09-17 19:16:40.428 | INFO     | __main__:search_github_repositories:635 - Failed to clone kmn5409/cs_511 because of HTTP Error 404: Not Found
+2024-09-17 19:16:40.431 | INFO     | __main__:search_github_repositories:612 - Processing arademaker/puzzles
+2024-09-17 19:16:40.435 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/arademaker/puzzles.git
+2024-09-17 19:16:40.436 | INFO     | __main__:clone_repo:414 - Repo name: arademaker/puzzles
+2024-09-17 19:16:41.146 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 19:16:57.985 | INFO     | __main__:search_github_repositories:635 - Failed to clone arademaker/puzzles because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 19:16:57.985 | INFO     | __main__:search_github_repositories:612 - Processing rowechenzhong/lean_tests
+2024-09-17 19:16:57.985 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/rowechenzhong/lean_tests.git
+2024-09-17 19:16:57.985 | INFO     | __main__:clone_repo:414 - Repo name: rowechenzhong/lean_tests
+2024-09-17 19:16:58.999 | INFO     | __main__:search_github_repositories:624 - Cloned rowechenzhong/lean_tests
+2024-09-17 19:16:58.999 | INFO     | __main__:search_github_repositories:612 - Processing jaredgreen2/polySat
+2024-09-17 19:16:58.999 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/jaredgreen2/polySat.git
+2024-09-17 19:16:59.000 | INFO     | __main__:clone_repo:414 - Repo name: jaredgreen2/polySat
+2024-09-17 19:16:59.831 | INFO     | __main__:search_github_repositories:624 - Cloned jaredgreen2/polySat
+2024-09-17 19:16:59.831 | INFO     | __main__:search_github_repositories:612 - Processing peter5000/Theorem-Proving-In-Lean-Solutions
+2024-09-17 19:16:59.832 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/peter5000/Theorem-Proving-In-Lean-Solutions.git
+2024-09-17 19:16:59.832 | INFO     | __main__:clone_repo:414 - Repo name: peter5000/Theorem-Proving-In-Lean-Solutions
+2024-09-17 19:17:00.590 | INFO     | __main__:search_github_repositories:624 - Cloned peter5000/Theorem-Proving-In-Lean-Solutions
+2024-09-17 19:17:00.591 | INFO     | __main__:search_github_repositories:612 - Processing objectionary/proof
+2024-09-17 19:17:00.591 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/objectionary/proof.git
+2024-09-17 19:17:00.591 | INFO     | __main__:clone_repo:414 - Repo name: objectionary/proof
+2024-09-17 19:17:01.393 | INFO     | __main__:search_github_repositories:624 - Cloned objectionary/proof
+2024-09-17 19:17:01.393 | INFO     | __main__:search_github_repositories:612 - Processing Equilibris/LeanScratch
+2024-09-17 19:17:01.393 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Equilibris/LeanScratch.git
+2024-09-17 19:17:01.394 | INFO     | __main__:clone_repo:414 - Repo name: Equilibris/LeanScratch
+2024-09-17 19:17:02.142 | INFO     | __main__:search_github_repositories:624 - Cloned Equilibris/LeanScratch
+2024-09-17 19:17:02.143 | INFO     | __main__:search_github_repositories:612 - Processing marcusrossel/lean-egg
+2024-09-17 19:17:02.143 | INFO     | __main__:search_github_repositories:637 - Skipping marcusrossel/lean-egg since it is a known repository
+2024-09-17 19:17:02.144 | INFO     | __main__:search_github_repositories:612 - Processing Louis-Le-Grand/Formalisation-of-constructable-numbers
+2024-09-17 19:17:02.144 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers.git
+2024-09-17 19:17:02.144 | INFO     | __main__:clone_repo:414 - Repo name: Louis-Le-Grand/Formalisation-of-constructable-numbers
+2024-09-17 19:17:02.933 | INFO     | __main__:search_github_repositories:624 - Cloned Louis-Le-Grand/Formalisation-of-constructable-numbers
+2024-09-17 19:17:02.933 | INFO     | __main__:search_github_repositories:612 - Processing damast93/markovlib
+2024-09-17 19:17:02.933 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/damast93/markovlib.git
+2024-09-17 19:17:02.933 | INFO     | __main__:clone_repo:414 - Repo name: damast93/markovlib
+2024-09-17 19:17:03.620 | INFO     | __main__:search_github_repositories:624 - Cloned damast93/markovlib
+2024-09-17 19:17:03.620 | INFO     | __main__:search_github_repositories:612 - Processing bracevac/path-dependent
+2024-09-17 19:17:03.620 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/bracevac/path-dependent.git
+2024-09-17 19:17:03.621 | INFO     | __main__:clone_repo:414 - Repo name: bracevac/path-dependent
+2024-09-17 19:17:04.435 | INFO     | __main__:search_github_repositories:624 - Cloned bracevac/path-dependent
+2024-09-17 19:17:04.435 | INFO     | __main__:search_github_repositories:612 - Processing MichaelStollBayreuth/EulerProducts
+2024-09-17 19:17:04.436 | INFO     | __main__:search_github_repositories:637 - Skipping MichaelStollBayreuth/EulerProducts since it is a known repository
+2024-09-17 19:17:04.436 | INFO     | __main__:search_github_repositories:612 - Processing hhu-adam/lean-i18n
+2024-09-17 19:17:04.436 | INFO     | __main__:search_github_repositories:637 - Skipping hhu-adam/lean-i18n since it is a known repository
+2024-09-17 19:17:04.436 | INFO     | __main__:search_github_repositories:612 - Processing lean-ja/lean99
+2024-09-17 19:17:04.437 | INFO     | __main__:search_github_repositories:637 - Skipping lean-ja/lean99 since it is a known repository
+2024-09-17 19:17:04.437 | INFO     | __main__:search_github_repositories:612 - Processing Seasawher/SelectionSort.lean
+2024-09-17 19:17:04.437 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Seasawher/SelectionSort.lean.git
+2024-09-17 19:17:04.437 | INFO     | __main__:clone_repo:414 - Repo name: Seasawher/SelectionSort.lean
+2024-09-17 19:17:05.196 | INFO     | __main__:search_github_repositories:624 - Cloned Seasawher/SelectionSort.lean
+2024-09-17 19:17:05.197 | INFO     | __main__:search_github_repositories:612 - Processing Seasawher/lean-book
+2024-09-17 19:17:05.197 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Seasawher/lean-book.git
+2024-09-17 19:17:05.197 | INFO     | __main__:clone_repo:414 - Repo name: Seasawher/lean-book
+2024-09-17 19:17:06.054 | INFO     | __main__:search_github_repositories:624 - Cloned Seasawher/lean-book
+2024-09-17 19:17:06.055 | INFO     | __main__:search_github_repositories:612 - Processing JhonaKakadi/compveri
+2024-09-17 19:17:06.055 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/JhonaKakadi/compveri.git
+2024-09-17 19:17:06.055 | INFO     | __main__:clone_repo:414 - Repo name: JhonaKakadi/compveri
+2024-09-17 19:17:06.863 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/JhonaKakadi/compveri/b54cd9da6a1e171e421e6b15ceebde70122829f9/lean-toolchain failed. Retrying...
+2024-09-17 19:17:07.905 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/JhonaKakadi/compveri/b54cd9da6a1e171e421e6b15ceebde70122829f9/lean-toolchain failed. Retrying...
+2024-09-17 19:17:09.943 | INFO     | __main__:search_github_repositories:635 - Failed to clone JhonaKakadi/compveri because of HTTP Error 404: Not Found
+2024-09-17 19:17:09.946 | INFO     | __main__:search_github_repositories:612 - Processing Nazgand/NazgandLean4
+2024-09-17 19:17:09.948 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Nazgand/NazgandLean4.git
+2024-09-17 19:17:09.948 | INFO     | __main__:clone_repo:414 - Repo name: Nazgand/NazgandLean4
+2024-09-17 19:17:10.689 | INFO     | __main__:search_github_repositories:624 - Cloned Nazgand/NazgandLean4
+2024-09-17 19:17:10.689 | INFO     | __main__:search_github_repositories:612 - Processing whaatt/learning-lean
+2024-09-17 19:17:10.690 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/whaatt/learning-lean.git
+2024-09-17 19:17:10.690 | INFO     | __main__:clone_repo:414 - Repo name: whaatt/learning-lean
+2024-09-17 19:17:11.481 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 19:17:28.233 | INFO     | __main__:search_github_repositories:635 - Failed to clone whaatt/learning-lean because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 19:17:28.233 | INFO     | __main__:search_github_repositories:612 - Processing rebryant/cpog
+2024-09-17 19:17:28.233 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/rebryant/cpog.git
+2024-09-17 19:17:28.233 | INFO     | __main__:clone_repo:414 - Repo name: rebryant/cpog
+2024-09-17 19:17:29.034 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/rebryant/cpog/99ea280a75e1acce0e6b8445d1cb6e621d24f9e7/lean-toolchain failed. Retrying...
+2024-09-17 19:17:30.078 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/rebryant/cpog/99ea280a75e1acce0e6b8445d1cb6e621d24f9e7/lean-toolchain failed. Retrying...
+2024-09-17 19:17:32.128 | INFO     | __main__:search_github_repositories:635 - Failed to clone rebryant/cpog because of HTTP Error 404: Not Found
+2024-09-17 19:17:32.133 | INFO     | __main__:search_github_repositories:612 - Processing jsm28/AperiodicMonotilesLean
+2024-09-17 19:17:32.141 | INFO     | __main__:search_github_repositories:637 - Skipping jsm28/AperiodicMonotilesLean since it is a known repository
+2024-09-17 19:17:32.141 | INFO     | __main__:search_github_repositories:612 - Processing NawafGH/CS511HW
+2024-09-17 19:17:32.141 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/NawafGH/CS511HW.git
+2024-09-17 19:17:32.142 | INFO     | __main__:clone_repo:414 - Repo name: NawafGH/CS511HW
+2024-09-17 19:17:32.930 | INFO     | __main__:search_github_repositories:624 - Cloned NawafGH/CS511HW
+2024-09-17 19:17:32.931 | INFO     | __main__:search_github_repositories:612 - Processing ajamias/CS511-code-exercises
+2024-09-17 19:17:32.931 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/ajamias/CS511-code-exercises.git
+2024-09-17 19:17:32.932 | INFO     | __main__:clone_repo:414 - Repo name: ajamias/CS511-code-exercises
+2024-09-17 19:17:33.657 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.3.0
+2024-09-17 19:17:50.046 | INFO     | __main__:search_github_repositories:624 - Cloned ajamias/CS511-code-exercises
+2024-09-17 19:17:50.046 | INFO     | __main__:search_github_repositories:612 - Processing mit-plv/spacetalk
+2024-09-17 19:17:50.046 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mit-plv/spacetalk.git
+2024-09-17 19:17:50.046 | INFO     | __main__:clone_repo:414 - Repo name: mit-plv/spacetalk
+2024-09-17 19:17:50.848 | INFO     | __main__:search_github_repositories:624 - Cloned mit-plv/spacetalk
+2024-09-17 19:17:50.848 | INFO     | __main__:search_github_repositories:612 - Processing CBirkbeck/power_residue_symbols
+2024-09-17 19:17:50.848 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/CBirkbeck/power_residue_symbols.git
+2024-09-17 19:17:50.848 | INFO     | __main__:clone_repo:414 - Repo name: CBirkbeck/power_residue_symbols
+2024-09-17 19:17:51.595 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0-rc2
+2024-09-17 19:18:07.997 | INFO     | __main__:search_github_repositories:624 - Cloned CBirkbeck/power_residue_symbols
+2024-09-17 19:18:07.998 | INFO     | __main__:search_github_repositories:612 - Processing b-mehta/epfl-comb
+2024-09-17 19:18:07.998 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/b-mehta/epfl-comb.git
+2024-09-17 19:18:07.999 | INFO     | __main__:clone_repo:414 - Repo name: b-mehta/epfl-comb
+2024-09-17 19:18:08.858 | INFO     | __main__:search_github_repositories:624 - Cloned b-mehta/epfl-comb
+2024-09-17 19:18:08.859 | INFO     | __main__:search_github_repositories:612 - Processing lf-lang/reactor-model
+2024-09-17 19:18:08.859 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lf-lang/reactor-model.git
+2024-09-17 19:18:08.859 | INFO     | __main__:clone_repo:414 - Repo name: lf-lang/reactor-model
+2024-09-17 19:18:09.826 | INFO     | __main__:search_github_repositories:624 - Cloned lf-lang/reactor-model
+2024-09-17 19:18:09.827 | INFO     | __main__:search_github_repositories:612 - Processing zpm-bu/cs511-formal-methods
+2024-09-17 19:18:09.827 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/zpm-bu/cs511-formal-methods.git
+2024-09-17 19:18:09.827 | INFO     | __main__:clone_repo:414 - Repo name: zpm-bu/cs511-formal-methods
+2024-09-17 19:18:10.579 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/zpm-bu/cs511-formal-methods/207e96c0ea8c8c6d5cb051d0d0388d397c43b8c8/lean-toolchain failed. Retrying...
+2024-09-17 19:18:11.624 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/zpm-bu/cs511-formal-methods/207e96c0ea8c8c6d5cb051d0d0388d397c43b8c8/lean-toolchain failed. Retrying...
+2024-09-17 19:18:13.670 | INFO     | __main__:search_github_repositories:635 - Failed to clone zpm-bu/cs511-formal-methods because of HTTP Error 404: Not Found
+2024-09-17 19:18:13.674 | INFO     | __main__:search_github_repositories:612 - Processing csharpython/nat-game-ja
+2024-09-17 19:18:13.678 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/csharpython/nat-game-ja.git
+2024-09-17 19:18:13.679 | INFO     | __main__:clone_repo:414 - Repo name: csharpython/nat-game-ja
+2024-09-17 19:18:14.567 | INFO     | __main__:search_github_repositories:624 - Cloned csharpython/nat-game-ja
+2024-09-17 19:18:14.567 | INFO     | __main__:search_github_repositories:612 - Processing DanielSimonCarpenter/Olympiad-Problems-Lean-4
+2024-09-17 19:18:14.567 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/DanielSimonCarpenter/Olympiad-Problems-Lean-4.git
+2024-09-17 19:18:14.568 | INFO     | __main__:clone_repo:414 - Repo name: DanielSimonCarpenter/Olympiad-Problems-Lean-4
+2024-09-17 19:18:15.247 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/DanielSimonCarpenter/Olympiad-Problems-Lean-4/cd2111392579131f5ca4c43d55889d32c7bad937/lean-toolchain failed. Retrying...
+2024-09-17 19:18:16.300 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/DanielSimonCarpenter/Olympiad-Problems-Lean-4/cd2111392579131f5ca4c43d55889d32c7bad937/lean-toolchain failed. Retrying...
+2024-09-17 19:18:18.346 | INFO     | __main__:search_github_repositories:635 - Failed to clone DanielSimonCarpenter/Olympiad-Problems-Lean-4 because of HTTP Error 404: Not Found
+2024-09-17 19:18:18.350 | INFO     | __main__:search_github_repositories:612 - Processing sgraf812/abs-den.lean
+2024-09-17 19:18:18.356 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/sgraf812/abs-den.lean.git
+2024-09-17 19:18:18.356 | INFO     | __main__:clone_repo:414 - Repo name: sgraf812/abs-den.lean
+2024-09-17 19:18:19.213 | INFO     | __main__:search_github_repositories:624 - Cloned sgraf812/abs-den.lean
+2024-09-17 19:18:19.214 | INFO     | __main__:search_github_repositories:612 - Processing mortarsanjaya/IMOSLLean4
+2024-09-17 19:18:19.214 | INFO     | __main__:search_github_repositories:637 - Skipping mortarsanjaya/IMOSLLean4 since it is a known repository
+2024-09-17 19:18:19.214 | INFO     | __main__:search_github_repositories:612 - Processing leanprover-community/lean-auto
+2024-09-17 19:18:19.214 | INFO     | __main__:search_github_repositories:637 - Skipping leanprover-community/lean-auto since it is a known repository
+2024-09-17 19:18:19.215 | INFO     | __main__:search_github_repositories:612 - Processing YaelDillies/LeanAPAP
+2024-09-17 19:18:19.215 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/YaelDillies/LeanAPAP.git
+2024-09-17 19:18:19.215 | INFO     | __main__:clone_repo:414 - Repo name: YaelDillies/LeanAPAP
+2024-09-17 19:18:19.893 | INFO     | __main__:search_github_repositories:624 - Cloned YaelDillies/LeanAPAP
+2024-09-17 19:18:19.893 | INFO     | __main__:search_github_repositories:647 - Total repositories processed: 100
+2024-09-17 19:18:19.897 | INFO     | __main__:search_github_repositories:652 - Search results saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/github_search_results_updated.json
+2024-09-17 19:18:19.899 | INFO     | __main__:main:1527 - Processing https://github.com/imbrem/debruijn-ssa
+2024-09-17 19:18:19.899 | INFO     | __main__:add_repo_to_database:1095 - Processing https://github.com/imbrem/debruijn-ssa.git
+2024-09-17 19:18:20.219 | INFO     | __main__:get_compatible_commit:497 - Latest commit: befae727df27d1aed001ade859167613013e8164
+2024-09-17 19:18:20.220 | INFO     | __main__:get_compatible_commit:500 - Creating LeanGitRepo for https://github.com/imbrem/debruijn-ssa
+2024-09-17 19:18:20.220 | INFO     | __main__:get_compatible_commit:502 - Getting config for https://github.com/imbrem/debruijn-ssa.git
+2024-09-17 19:18:20.220 | INFO     | __main__:get_compatible_commit:509 - Searching for compatible commit for https://github.com/imbrem/debruijn-ssa.git
+2024-09-17 19:18:20.225 | INFO     | __main__:get_compatible_commit:515 - Already in a Git repository
+2024-09-17 19:18:20.228 | INFO     | __main__:get_compatible_commit:525 - Fetching commits for https://github.com/imbrem/debruijn-ssa.git
+2024-09-17 19:18:22.740 | INFO     | __main__:get_compatible_commit:529 - Fetched commits for https://github.com/imbrem/debruijn-ssa.git
+2024-09-17 19:18:22.751 | INFO     | __main__:get_compatible_commit:535 - Getting list of commits for https://github.com/imbrem/debruijn-ssa.git
+2024-09-17 19:18:22.782 | INFO     | __main__:get_compatible_commit:540 - Found 300 commits for https://github.com/imbrem/debruijn-ssa.git
+2024-09-17 19:18:53.091 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc3
+2024-09-17 19:19:20.859 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc1
+2024-09-17 19:19:38.690 | INFO     | __main__:get_compatible_commit:547 - Found compatible commit e28fa7e3c24fcfe0c001d9a6bea1f9d0064090bb for https://github.com/imbrem/debruijn-ssa.git
+2024-09-17 19:19:38.691 | INFO     | __main__:add_repo_to_database:1115 - Found compatible commit e28fa7e3c24fcfe0c001d9a6bea1f9d0064090bb for https://github.com/imbrem/debruijn-ssa.git
+2024-09-17 19:19:38.691 | INFO     | __main__:add_repo_to_database:1116 - Lean version: v4.8.0-rc2
+2024-09-17 19:19:38.691 | INFO     | __main__:add_repo_to_database:1121 - Generating benchmark at /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/debruijn-ssa_e28fa7e3c24fcfe0c001d9a6bea1f9d0064090bb
+2024-09-17 19:19:38.691 | INFO     | generate_benchmark_lean4:main:354 - Generating dataset to go into /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/debruijn-ssa_e28fa7e3c24fcfe0c001d9a6bea1f9d0064090bb
+2024-09-17 19:19:38.692 | INFO     | generate_benchmark_lean4:main:361 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0-rc2\n'}
+2024-09-17 19:19:38.692 | INFO     | generate_benchmark_lean4:main:363 - lean version v: v4.8.0-rc2
+2024-09-17 19:19:38.692 | INFO     | generate_benchmark_lean4:main:364 - is supported: True
+2024-09-17 19:19:38.692 | INFO     | generate_benchmark_lean4:main:373 - lean path1 /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:19:38.692 | INFO     | generate_benchmark_lean4:main:374 - lean path2 /.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:19:38.692 | INFO     | generate_benchmark_lean4:main:375 - lean path3 ~/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:19:38.693 | INFO     | generate_benchmark_lean4:main:379 - Lean toolchain path 2 does not exist: /.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:19:38.694 | INFO     | generate_benchmark_lean4:main:381 - Lean toolchain path 3 does not exist: ~/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:19:38.694 | INFO     | generate_benchmark_lean4:main:384 - Switched to Lean toolchain at: /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:19:38.800 | INFO     | generate_benchmark_lean4:main:386 - lean --version: Lean (version 4.8.0-rc2, x86_64-unknown-linux-gnu, commit 873ef2d894af, Release)
+
+2024-09-17 19:19:38.801 | INFO     | generate_benchmark_lean4:main:387 - repo: LeanGitRepo(url='https://github.com/imbrem/debruijn-ssa', commit='e28fa7e3c24fcfe0c001d9a6bea1f9d0064090bb')
+2024-09-17 19:19:38.801 | INFO     | generate_benchmark_lean4:main:389 - Configuring LeanDojo again...
+2024-09-17 19:19:38.813 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 19:19:38.814 | INFO     | generate_benchmark_lean4:main:391 - LeanDojo configured
+2024-09-17 19:19:38.814 | INFO     | generate_benchmark_lean4:main:394 - Tracing the repo...
+2024-09-17 19:19:39.072 | INFO     | lean_dojo.data_extraction.trace:get_traced_repo_path:79 - Tracing LeanGitRepo(url='https://github.com/imbrem/debruijn-ssa', commit='e28fa7e3c24fcfe0c001d9a6bea1f9d0064090bb')
+2024-09-17 19:19:39.078 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:81 - Working in the temporary directory /tmp/tmp2vp_k0h_
+2024-09-17 19:19:39.758 | DEBUG    | lean_dojo.data_extraction.lean:clone_and_checkout:479 - Cloning LeanGitRepo(url='https://github.com/imbrem/debruijn-ssa', commit='e28fa7e3c24fcfe0c001d9a6bea1f9d0064090bb')
+2024-09-17 19:19:40.466 | DEBUG    | lean_dojo.data_extraction.trace:_trace:33 - Tracing LeanGitRepo(url='https://github.com/imbrem/debruijn-ssa', commit='e28fa7e3c24fcfe0c001d9a6bea1f9d0064090bb')
+2024-09-17 19:19:40.476 | DEBUG    | lean_dojo.container:run:184 - NUM_PROCS=32 python build_lean4_repo.py debruijn-ssa
+2024-09-17 19:19:40.712 | INFO     | __main__:main:165 - Building debruijn-ssa
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git to '././.lake/packages/mathlib'
+info: discretion: cloning https://github.com/imbrem/discretion.git to '././.lake/packages/discretion'
+info: batteries: cloning https://github.com/leanprover-community/batteries to '././.lake/packages/batteries'
+info: Qq: cloning https://github.com/leanprover-community/quote4 to '././.lake/packages/Qq'
+info: aesop: cloning https://github.com/leanprover-community/aesop to '././.lake/packages/aesop'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4 to '././.lake/packages/proofwidgets'
+info: Cli: cloning https://github.com/leanprover/lean4-cli to '././.lake/packages/Cli'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph.git to '././.lake/packages/importGraph'
+✔ [1/777] Fetched proofwidgets:optRelease
+✔ [2/777] Built Batteries.Data.List.Init.Lemmas
+✔ [3/777] Built Batteries.CodeAction.Attr
+✔ [4/777] Built Batteries.Lean.Position
+✔ [5/777] Built Batteries.Data.Array.Match
+✔ [6/777] Built Batteries.Tactic.OpenPrivate
+✔ [7/777] Built Batteries.Lean.NameMapAttribute
+✔ [8/777] Built Batteries.Tactic.Lint.Basic
+✔ [9/777] Built Batteries.Util.LibraryNote
+✔ [10/777] Built Batteries.Lean.Meta.Basic
+✔ [11/777] Built Batteries.Lean.Expr
+✔ [12/777] Built Batteries.Lean.Name
+✔ [13/777] Built Batteries.Data.Nat.Gcd
+✔ [14/777] Built Batteries.Lean.Float
+✔ [15/777] Built Batteries.Classes.BEq
+✔ [16/777] Built Batteries.Classes.Cast
+✔ [17/777] Built Batteries.Tactic.SeqFocus
+✔ [18/777] Built Batteries.Classes.SatisfiesM
+✔ [19/777] Built Batteries.Control.ForInStep.Basic
+✔ [20/777] Built Batteries.Control.ForInStep.Lemmas
+✔ [21/777] Built Batteries.Control.Lemmas
+✔ [22/777] Built Batteries.Data.List.Init.Attach
+✔ [23/777] Built Batteries.Data.Array.Init.Lemmas
+✔ [24/777] Built Batteries.Util.ProofWanted
+✔ [25/777] Built Batteries.Data.DList
+✔ [26/777] Built Batteries.Data.Fin.Basic
+✔ [27/777] Built Batteries.Data.Nat.Basic
+✔ [28/777] Built Batteries.Data.LazyList
+✔ [29/777] Built Batteries.Data.Sum.Basic
+✔ [30/777] Built Batteries.Lean.TagAttribute
+✔ [31/777] Built Batteries.Lean.Delaborator
+✔ [32/777] Built Batteries.Lean.Except
+✔ [33/777] Built Batteries.Lean.HashMap
+✔ [34/777] Built Batteries.Lean.HashSet
+✔ [35/777] Built Batteries.Lean.IO.Process
+✔ [36/777] Built Batteries.Lean.Json
+✔ [37/777] Built Batteries.Lean.Meta.Expr
+✔ [38/777] Built Batteries.Lean.PersistentHashMap
+✔ [39/777] Built Batteries.Lean.Meta.Inaccessible
+✔ [40/777] Built Batteries.Lean.MonadBacktrack
+✔ [41/777] Built Batteries.Lean.NameMap
+✔ [42/777] Built Batteries.Lean.PersistentHashSet
+✔ [43/777] Built Batteries.Lean.SMap
+✔ [44/777] Built Batteries.Lean.Syntax
+✔ [45/777] Built Batteries.Lean.Util.Path
+✔ [46/777] Built Batteries.Tactic.Unreachable
+✔ [47/777] Built Batteries.Tactic.Classical
+✔ [48/777] Built Batteries.Tactic.Exact
+✔ [49/777] Built Batteries.Tactic.Where
+✔ [50/777] Built Batteries.Test.Internal.DummyLabelAttr
+✔ [51/777] Built Batteries.Util.Pickle
+✔ [52/777] Built Batteries.WF
+✔ [53/777] Built Aesop.Nanos
+✔ [54/777] Built Aesop.Percent
+✔ [55/777] Built Batteries.Data.String.Basic
+✔ [56/777] Built Batteries.Lean.Meta.Clear
+✔ [57/777] Built Aesop.Check
+✔ [58/777] Built Aesop.RuleTac.Forward.Basic
+✔ [59/777] Built Qq.SortLocalDecls
+✔ [60/777] Built Batteries.Data.Array.Basic
+✔ [61/777] Built Batteries.Lean.AttributeExtra
+✔ [62/777] Built Aesop.Options.Public
+✔ [63/777] Built Batteries.Lean.Meta.InstantiateMVars
+✔ [64/777] Built Batteries.Tactic.Instances
+✔ [65/777] Built Batteries.Tactic.NoMatch
+✔ [66/777] Built Aesop.Constants
+✔ [67/777] Built Batteries.Tactic.Lint.TypeClass
+✔ [68/777] Built Batteries.Lean.Meta.AssertHypotheses
+✔ [69/777] Built Batteries.Lean.Meta.SavedState
+✔ [70/777] Built Batteries.Util.ExtendedBinder
+✔ [71/777] Built Batteries.Data.Fin.Lemmas
+✔ [72/777] Built Batteries.Tactic.Congr
+✔ [73/777] Built Batteries.Util.CheckTactic
+✔ [74/777] Built ProofWidgets.Compat
+✔ [75/777] Built Aesop.Script.UnstructuredScriptBuilder
+✔ [76/777] Built Mathlib.Tactic.Monotonicity.Attr
+✔ [77/777] Built Mathlib.Tactic.HaveI
+✔ [78/777] Built Batteries.Data.MLList.Basic
+✔ [79/777] Built Batteries.Tactic.PrintDependents
+✔ [80/777] Built Batteries.Tactic.ShowUnused
+✔ [81/777] Built Batteries.Tactic.SqueezeScope
+✔ [82/777] Built ProofWidgets.Util
+✔ [83/777] Built Mathlib.Tactic.UnsetOption
+✔ [84/777] Built Batteries.Lean.Meta.Simp
+✔ [85/777] Built Mathlib.Tactic.Trace
+✔ [86/777] Built Mathlib.Tactic.Widget.SelectInsertParamsClass
+✔ [87/777] Built Batteries.Linter.UnreachableTactic
+✔ [88/777] Built Aesop.RuleSet.Name
+✔ [89/777] Built Aesop.Frontend.Basic
+✔ [90/777] Built Mathlib.Util.AddRelatedDecl
+✔ [91/777] Built Qq.Typ
+✔ [92/777] Built ImportGraph.RequiredModules
+✔ [93/777] Built Mathlib.Tactic.GuardHypNums
+✔ [94/777] Built Mathlib.Tactic.Relation.Rfl
+✔ [95/777] Built Mathlib.Tactic.SudoSetOption
+✔ [96/777] Built Batteries.Tactic.Init
+✔ [97/777] Built Aesop.Exception
+✔ [98/777] Built Mathlib.Tactic.GuardGoalNums
+✔ [99/777] Built Aesop.ElabM
+✔ [100/777] Built Qq.ForLean.Do
+✔ [101/777] Built Mathlib.Tactic.InferParam
+✔ [102/777] Built Mathlib.Tactic.NthRewrite
+✔ [103/777] Built Batteries.Classes.Order
+✔ [104/777] Built Mathlib.Tactic.Existsi
+✔ [105/777] Built Mathlib.Tactic.Linter.HashCommandLinter
+✔ [106/777] Built Mathlib.Util.Tactic
+✔ [107/777] Built Qq.ForLean.ReduceEval
+✔ [108/777] Built Qq.ForLean.ToExpr
+✔ [109/777] Built Mathlib.Tactic.Constructor
+✔ [110/777] Built Mathlib.Tactic.ApplyWith
+✔ [111/777] Built Mathlib.Tactic.Linter.GlobalAttributeIn
+✔ [112/777] Built Mathlib.Tactic.Rename
+✔ [113/777] Built Aesop.Util.UnionFind
+✔ [114/777] Built Mathlib.Mathport.Attributes
+✔ [115/777] Built Mathlib.Tactic.ClearExclamation
+✔ [116/777] Built Mathlib.Tactic.SuccessIfFailWithMsg
+✔ [117/777] Built Mathlib.Init.Data.Sigma.Basic
+✔ [118/777] Built Mathlib.Lean.Meta.Basic
+✔ [119/777] Built Mathlib.Tactic.ClearExcept
+✔ [120/777] Built Mathlib.Tactic.Clear_
+✔ [121/777] Built Mathlib.Lean.PrettyPrinter.Delaborator
+✔ [122/777] Built Mathlib.Lean.Elab.Term
+✔ [123/777] Built Mathlib.Tactic.TypeStar
+✔ [124/777] Built Mathlib.Tactic.Coe
+✔ [125/777] Built Mathlib.Util.CountHeartbeats
+✔ [126/777] Built Mathlib.Tactic.Attr.Register
+✔ [127/777] Built Mathlib.Tactic.Check
+✔ [128/777] Built Mathlib.Tactic.Observe
+✔ [129/777] Built Mathlib.Tactic.Set
+✔ [130/777] Built Batteries.CodeAction.Basic
+✔ [131/777] Built Mathlib.Data.Array.Defs
+✔ [132/777] Built Mathlib.Util.MemoFix
+✔ [133/777] Built Mathlib.Lean.EnvExtension
+✔ [134/777] Built Batteries.Tactic.Lint.Misc
+✔ [135/777] Built Batteries.Tactic.Lint.Simp
+✔ [136/777] Built Mathlib.Util.WithWeakNamespace
+✔ [137/777] Built Mathlib.Tactic.ExtractGoal
+✔ [138/777] Built Mathlib.Tactic.Recover
+✔ [139/777] Built Mathlib.Tactic.SimpIntro
+✔ [140/777] Built Batteries.Control.ForInStep
+✔ [141/777] Built Mathlib.Tactic.Lemma
+✔ [142/777] Built Batteries.Tactic.Case
+✔ [143/777] Built Mathlib.Tactic.Spread
+✔ [144/777] Built Mathlib.Tactic.Eqns
+✔ [145/777] Built Mathlib.Util.AssertExists
+✔ [146/777] Built Aesop.Options.Internal
+✔ [147/777] Built Mathlib.Tactic.FailIfNoProgress
+✔ [148/777] Built Mathlib.Tactic.TypeCheck
+✔ [149/777] Built Mathlib.Init.Data.Nat.Notation
+✔ [150/777] Built Mathlib.Tactic.ExtendDoc
+✔ [151/777] Built Batteries.Data.Fin
+✔ [152/777] Built Batteries.Lean.Meta.UnusedNames
+✔ [153/777] Built Mathlib.Tactic.AdaptationNote
+✔ [154/777] Built Mathlib.Tactic.PPWithUniv
+✔ [155/777] Built Mathlib.Tactic.ProjectionNotation
+✔ [156/777] Built Batteries.Data.MLList.Heartbeats
+✔ [157/777] Built Mathlib.Tactic.SimpRw
+✔ [158/777] Built Aesop.Options
+✔ [159/777] Built Mathlib.Tactic.Substs
+✔ [160/777] Built Mathlib.Tactic.CasesM
+✔ [161/777] Built Mathlib.Init.Data.Fin.Basic
+✔ [162/777] Built Mathlib.Lean.Expr.ReplaceRec
+✔ [163/777] Built Batteries.Tactic.Lint.Frontend
+✔ [164/777] Built Batteries.Data.Array.Monadic
+✔ [165/777] Built Batteries.Data.UInt
+✔ [166/777] Built Aesop.Script.StructuredScriptBuilder
+✔ [167/777] Built Mathlib.Tactic.SwapVar
+✔ [168/777] Built Batteries.Lean.Util.EnvSearch
+✔ [169/777] Built ProofWidgets.Component.Basic
+✔ [170/777] Built Batteries.Linter.UnnecessarySeqFocus
+✔ [171/777] Built Mathlib.Util.WhatsNew
+✔ [172/777] Built ProofWidgets.Cancellable
+✔ [173/777] Built Mathlib.Tactic.ApplyAt
+✔ [174/777] Built Mathlib.Tactic.Conv
+✔ [175/777] Built Mathlib.Mathport.Rename
+✔ [176/777] Built Mathlib.Tactic.Inhabit
+✔ [177/777] Built Batteries.Tactic.Lint
+✔ [178/777] Built Batteries.CodeAction.Misc
+✔ [179/777] Built Batteries.Data.Char
+✔ [180/777] Built Batteries.Linter
+✔ [181/777] Built Aesop.RuleTac.ElabRuleTerm
+✔ [182/777] Built Batteries.Control.Nondet.Basic
+✔ [183/777] Built Mathlib.Tactic.HigherOrder
+✔ [184/777] Built Mathlib.Lean.Meta.Simp
+✔ [185/777] Built ProofWidgets.Component.MakeEditLink
+✔ [186/777] Built Mathlib.Tactic.Variable
+✔ [187/777] Built Batteries.CodeAction.Deprecated
+✔ [188/777] Built Mathlib.Init.Data.Ordering.Basic
+✔ [189/777] Built ImportGraph.Imports
+✔ [190/777] Built Mathlib.Init.Quot
+✔ [191/777] Built Batteries.CodeAction
+✔ [192/777] Built ProofWidgets.Component.Panel.Basic
+✔ [193/777] Built Mathlib.Tactic.ApplyCongr
+✔ [194/777] Built Batteries.Data.PairingHeap
+✔ [195/777] Built Batteries.Tactic.Basic
+✔ [196/777] Built Batteries.Tactic.PrintPrefix
+✔ [197/777] Built Mathlib.Init.Control.Combinators
+✔ [198/777] Built Mathlib.Util.CompileInductive
+✔ [199/777] Built ProofWidgets.Component.Recharts
+✔ [200/777] Built Mathlib.Control.ULift
+✔ [201/777] Built Mathlib.Data.Bracket
+✔ [202/777] Built Mathlib.Data.Option.Defs
+✔ [203/777] Built Mathlib.Tactic.ToLevel
+✔ [204/777] Built Mathlib.Tactic.Simps.NotationClass
+✔ [205/777] Built ProofWidgets.Component.Panel.GoalTypePanel
+✔ [206/777] Built Mathlib.Tactic.GCongr.ForwardAttr
+✔ [207/777] Built Mathlib.Tactic.Linter.Lint
+✔ [208/777] Built Mathlib.Tactic.Hint
+✔ [209/777] Built Mathlib.Init.Set
+✔ [210/777] Built Mathlib.Tactic.ScopedNS
+✔ [211/777] Built Mathlib.Tactic.Linter
+✔ [212/777] Built Aesop.Util.EqualUpToIds
+✔ [213/777] Built Batteries.Tactic.Alias
+✔ [214/777] Built Mathlib.Util.Delaborators
+✔ [215/777] Built Batteries.Data.Int.Order
+✔ [216/777] Built Batteries.Data.BitVec.Lemmas
+✔ [217/777] Built Batteries.Data.Bool
+✔ [218/777] Built Batteries.Data.Option.Lemmas
+✔ [219/777] Built Mathlib.Tactic.HelpCmd
+✔ [220/777] Built Batteries.Logic
+✔ [221/777] Built Batteries.Data.Nat.Lemmas
+✔ [222/777] Built Batteries.Data.Int.DivMod
+✔ [223/777] Built Batteries.Data.BitVec
+✔ [224/777] Built Batteries.Data.Option
+✔ [225/777] Built Mathlib.Init.Data.Int.Basic
+✔ [226/777] Built Batteries.Data.Nat
+✔ [227/777] Built Mathlib.Tactic.Attr.Core
+✔ [228/777] Built Mathlib.Init.Data.Quot
+✔ [229/777] Built Batteries.Data.Int.Lemmas
+✔ [230/777] Built Batteries.Data.Sum.Lemmas
+✔ [231/777] Built Batteries.Data.Int
+✔ [232/777] Built Mathlib.Tactic.DeriveToExpr
+✔ [233/777] Built Batteries.Data.Array.Merge
+✔ [234/777] Built Batteries.Data.Sum
+✔ [235/777] Built Batteries.Data.Rat.Basic
+✔ [236/777] Built ProofWidgets.Data.Html
+✔ [237/777] Built Batteries.Classes.RatCast
+✔ [238/777] Built Batteries.Lean.Meta.DiscrTree
+✔ [239/777] Built Aesop.Util.UnorderedArraySet
+✔ [240/777] Built ProofWidgets.Component.FilterDetails
+✔ [241/777] Built ProofWidgets.Component.HtmlDisplay
+✔ [242/777] Built Mathlib.Tactic.Use
+✔ [243/777] Built ProofWidgets.Component.PenroseDiagram
+✔ [244/777] Built Mathlib.Tactic.ToExpr
+✔ [245/777] Built ProofWidgets.Component.OfRpcMethod
+✔ [246/777] Built Mathlib.Data.Rat.Init
+✔ [247/777] Built Batteries.Util.Cache
+✔ [248/777] Built ProofWidgets.Presentation.Expr
+✔ [249/777] Built Batteries.Data.BinomialHeap.Basic
+✔ [250/777] Built ProofWidgets.Data.Svg
+✔ [251/777] Built Batteries.Data.RBMap.Basic
+✔ [252/777] Built Mathlib.Tactic.Widget.SelectPanelUtils
+✔ [253/777] Built Batteries.Data.BinomialHeap.Lemmas
+✔ [254/777] Built Mathlib.Tactic.Find
+✔ [255/777] Built Batteries.Data.BinomialHeap
+✔ [256/777] Built Batteries.Data.Rat.Lemmas
+✔ [257/777] Built ProofWidgets.Component.Panel.SelectionPanel
+✔ [258/777] Built ProofWidgets.Component.InteractiveSvg
+✔ [259/777] Built Mathlib.Tactic.FBinop
+✔ [260/777] Built Batteries.Data.Rat
+✔ [261/777] Built ProofWidgets
+✔ [262/777] Built Mathlib.Data.SProd
+✔ [263/777] Built Qq.Macro
+✔ [264/777] Built Batteries.Data.List.Basic
+✔ [265/777] Built Mathlib.Data.String.Defs
+✔ [266/777] Built Mathlib.Init.Data.List.Basic
+✔ [267/777] Built Batteries.Tactic.PermuteGoals
+✔ [268/777] Built Mathlib.Lean.Meta
+✔ [269/777] Built Batteries.Data.AssocList
+✔ [270/777] Built Mathlib.Mathport.Notation
+✔ [271/777] Built Qq.Delab
+✔ [272/777] Built Mathlib.Lean.Elab.Tactic.Basic
+✔ [273/777] Built Mathlib.Tactic.Widget.Conv
+✔ [274/777] Built Mathlib.Tactic.Widget.Calc
+✔ [275/777] Built Mathlib.Lean.Expr.Basic
+✔ [276/777] Built Qq.MetaM
+✔ [277/777] Built Batteries.Data.HashMap.Basic
+✔ [278/777] Built Mathlib.Tactic.RenameBVar
+✔ [279/777] Built Mathlib.Lean.Name
+✔ [280/777] Built Qq.AssertInstancesCommute
+✔ [281/777] Built Mathlib.Tactic.Cases
+✔ [282/777] Built Mathlib.Tactic.Core
+✔ [283/777] Built Mathlib.Tactic.Relation.Trans
+✔ [284/777] Built Mathlib.Tactic.WLOG
+✔ [285/777] Built Batteries.Data.RBMap.WF
+✔ [286/777] Built Mathlib.Tactic.MkIffOfInductiveProp
+✔ [287/777] Built Mathlib.Tactic.Propose
+✔ [288/777] Built Batteries.Data.RBMap.Depth
+✔ [289/777] Built Mathlib.Init.Logic
+✔ [290/777] Built Mathlib.Tactic.GeneralizeProofs
+✔ [291/777] Built Mathlib.Init.Data.Bool.Lemmas
+✔ [292/777] Built Mathlib.Init.Algebra.Classes
+✔ [293/777] Built Batteries.Data.RBMap.Alter
+✔ [294/777] Built Mathlib.Tactic.Simps.Basic
+✔ [295/777] Built Mathlib.Tactic.SplitIfs
+✔ [296/777] Built Qq.Match
+✔ [297/777] Built Qq
+✔ [298/777] Built Mathlib.Init.Order.Defs
+✔ [299/777] Built Mathlib.Util.Qq
+✔ [300/777] Built Mathlib.Tactic.Says
+✔ [301/777] Built Mathlib.Init.Order.LinearOrder
+✔ [302/777] Built Mathlib.Init.Data.Int.Order
+✔ [303/777] Built Batteries.Data.List.Lemmas
+✔ [304/777] Built Mathlib.Tactic.GCongr.Core
+✔ [305/777] Built Batteries.Lean.System.IO
+✔ [306/777] Built Mathlib.Init.Data.List.Instances
+✔ [307/777] Built Mathlib.Init.Data.List.Lemmas
+✔ [308/777] Built Batteries.Data.List.EraseIdx
+✔ [309/777] Built Batteries.Data.MLList.IO
+✔ [310/777] Built Mathlib.Tactic.ToAdditive
+✔ [311/777] Built Batteries.Data.MLList
+✔ [312/777] Built Batteries.Data.List.Count
+✔ [313/777] Built Mathlib.Init.ZeroOne
+✔ [314/777] Built Batteries.Data.Range.Lemmas
+✔ [315/777] Built Batteries.Data.Range
+✔ [316/777] Built Mathlib.Init.Data.Nat.Basic
+✔ [317/777] Built Mathlib.Init.Data.Nat.Lemmas
+✔ [318/777] Built Batteries.Data.List.Pairwise
+✔ [319/777] Built Mathlib.Algebra.Group.Defs
+✔ [320/777] Built Mathlib.Algebra.Group.Semiconj.Defs
+✔ [321/777] Built Mathlib.Algebra.Group.Invertible.Defs
+✔ [322/777] Built Mathlib.Data.Nat.Cast.Defs
+✔ [323/777] Built Batteries.Data.List.Perm
+✔ [324/777] Built Batteries.Data.String.Lemmas
+✔ [325/777] Built Batteries.Data.List
+✔ [326/777] Built Batteries.Data.String
+✔ [327/777] Built Mathlib.Data.Int.Cast.Defs
+✔ [328/777] Built Mathlib.Algebra.Group.Commute.Defs
+✔ [329/777] Built Batteries.Data.Array.Lemmas
+✔ [330/777] Built Batteries.Data.Array
+✔ [331/777] Built Batteries.Data.HashMap.Lemmas
+✔ [332/777] Built Aesop.Util.Basic
+✔ [333/777] Built Batteries.Data.RBMap.Lemmas
+✔ [334/777] Built Batteries.Data.RBMap
+✔ [335/777] Built Batteries.Data.ByteArray
+✔ [336/777] Built Aesop.Rule.Name
+✔ [337/777] Built Aesop.Tracing
+✔ [338/777] Built Aesop.Util.Tactic
+✔ [339/777] Built Aesop.Script.ScriptBuilder
+✔ [340/777] Built Aesop.Stats.Basic
+✔ [341/777] Built Aesop.Script.TacticState
+✔ [342/777] Built Aesop.RulePattern
+✔ [343/777] Built Aesop.Script.SpecificTactics
+✔ [344/777] Built Aesop.Stats.Extension
+✔ [345/777] Built Batteries.Data.HashMap.WF
+✔ [346/777] Built Batteries.Data.UnionFind.Basic
+✔ [347/777] Built Batteries.Data.HashMap
+✔ [348/777] Built Aesop.Index.Basic
+✔ [349/777] Built Aesop.Stats.Report
+✔ [350/777] Built Aesop.RuleTac.Basic
+✔ [351/777] Built Aesop.RuleTac.Preprocess
+✔ [352/777] Built Aesop.Rule.Basic
+✔ [353/777] Built Aesop.Script
+✔ [354/777] Built Batteries.Data.UnionFind.Lemmas
+✔ [355/777] Built Aesop.RuleTac.Apply
+✔ [356/777] Built Aesop.RuleTac.Tactic
+✔ [357/777] Built Aesop.RuleTac.Cases
+✔ [358/777] Built Batteries.Data.UnionFind
+✔ [359/777] Built Aesop.RuleTac.Forward
+✔ [360/777] Built Aesop.Search.Expansion.Basic
+✔ [361/777] Built Batteries.StdDeprecations
+✔ [362/777] Built Batteries
+✔ [363/777] Built Aesop.RuleTac
+✔ [364/777] Built Aesop.Index
+✔ [365/777] Built Mathlib.Tactic.Basic
+✔ [366/777] Built Aesop.Rule
+✔ [367/777] Built Aesop.RuleSet.Member
+✔ [368/777] Built Aesop.Tree.UnsafeQueue
+✔ [369/777] Built Mathlib.Tactic.RSuffices
+✔ [370/777] Built Mathlib.Init.Function
+✔ [371/777] Built Mathlib.Order.Notation
+✔ [372/777] Built Mathlib.Tactic.ExtractLets
+✔ [373/777] Built Aesop.RuleSet.Filter
+✔ [374/777] Built Aesop.Builder.Basic
+✔ [375/777] Built Mathlib.Logic.Nontrivial.Defs
+✔ [376/777] Built Mathlib.Data.Prod.PProd
+✔ [377/777] Built Mathlib.Tactic.DefEqTransformations
+✔ [378/777] Built Mathlib.Logic.Nonempty
+✔ [379/777] Built Mathlib.Logic.Relator
+✔ [380/777] Built Aesop.Builder.Apply
+✔ [381/777] Built Aesop.Builder.Cases
+✔ [382/777] Built Mathlib.Tactic.Lift
+✔ [383/777] Built Aesop.Builder.NormSimp
+✔ [384/777] Built Aesop.Builder.Tactic
+✔ [385/777] Built Aesop.Builder.Unfold
+✔ [386/777] Built Mathlib.Data.Bool.Basic
+✔ [387/777] Built Mathlib.Data.Option.NAry
+✔ [388/777] Built Aesop.Tree.Data
+✔ [389/777] Built Mathlib.Control.Basic
+✔ [390/777] Built Aesop.Builder.Forward
+✔ [391/777] Built Aesop.Builder.Constructors
+✔ [392/777] Built Aesop.Tree.RunMetaM
+✔ [393/777] Built Aesop.Tree.Traversal
+✔ [394/777] Built Mathlib.Control.Functor
+✔ [395/777] Built Mathlib.Logic.Basic
+✔ [396/777] Built Aesop.Builder.Default
+✔ [397/777] Built Aesop.RuleSet
+✔ [398/777] Built Aesop.Builder
+✔ [399/777] Built Aesop.Tree.TreeM
+✔ [400/777] Built Aesop.Tree.State
+✔ [401/777] Built Mathlib.Control.Traversable.Basic
+✔ [402/777] Built Aesop.Frontend.Extension.Init
+✔ [403/777] Built Mathlib.Algebra.NeZero
+✔ [404/777] Built Aesop.Tree.Tracing
+✔ [405/777] Built Mathlib.Data.List.Defs
+✔ [406/777] Built Aesop.Search.Expansion.Simp
+✔ [407/777] Built Aesop.Tree.Free
+✔ [408/777] Built Mathlib.Control.Applicative
+✔ [409/777] Built Aesop.Frontend.Extension
+✔ [410/777] Built Mathlib.Data.Nat.Cast.NeZero
+✔ [411/777] Built Aesop.Tree.ExtractScript
+✔ [412/777] Built Mathlib.Logic.Function.Basic
+✔ [413/777] Built Aesop.Tree.AddRapp
+✔ [414/777] Built Aesop.Tree.ExtractProof
+✔ [415/777] Built Mathlib.Tactic.Tauto
+✔ [416/777] Built Aesop.Tree.Check
+✔ [417/777] Built Aesop.Tree
+✔ [418/777] Built Mathlib.Data.FunLike.Basic
+✔ [419/777] Built Mathlib.Logic.Function.Conjugate
+✔ [420/777] Built Mathlib.Logic.IsEmpty
+✔ [421/777] Built Aesop.Search.Queue.Class
+✔ [422/777] Built Mathlib.Algebra.CharZero.Defs
+✔ [423/777] Built Aesop.Frontend.RuleExpr
+✔ [424/777] Built Mathlib.Data.Sigma.Basic
+✔ [425/777] Built Mathlib.Data.Subtype
+✔ [426/777] Built Mathlib.Data.Sum.Basic
+✔ [427/777] Built Mathlib.Tactic.PushNeg
+✔ [428/777] Built Mathlib.Algebra.GroupWithZero.Defs
+✔ [429/777] Built Mathlib.Data.Prod.Basic
+✔ [430/777] Built Aesop.Search.Queue
+✔ [431/777] Built Mathlib.Data.FunLike.Embedding
+✔ [432/777] Built Mathlib.Logic.Unique
+✔ [433/777] Built Mathlib.Tactic.Choose
+✔ [434/777] Built Mathlib.Logic.Function.Iterate
+✔ [435/777] Built Mathlib.Logic.Relation
+✔ [436/777] Built Mathlib.Tactic.Contrapose
+✔ [437/777] Built Aesop.Search.SearchM
+✔ [438/777] Built Mathlib.Tactic.ByContra
+✔ [439/777] Built Aesop.Frontend.Attribute
+✔ [440/777] Built Mathlib.Algebra.GroupWithZero.NeZero
+✔ [441/777] Built Mathlib.Data.Set.Defs
+✔ [442/777] Built Mathlib.Data.FunLike.Equiv
+✔ [443/777] Built Mathlib.Logic.Nontrivial.Basic
+✔ [444/777] Built Aesop.Search.RuleSelection
+✔ [445/777] Built Aesop.BuiltinRules.Ext
+✔ [446/777] Built Aesop.BuiltinRules.ApplyHyps
+✔ [447/777] Built Aesop.BuiltinRules.Intros
+✔ [448/777] Built Aesop.BuiltinRules.Assumption
+✔ [449/777] Built Aesop.BuiltinRules.Split
+✔ [450/777] Built Aesop.BuiltinRules.DestructProducts
+✔ [451/777] Built Mathlib.Tactic.IrreducibleDef
+✔ [452/777] Built Aesop.BuiltinRules.Subst
+✔ [453/777] Built Mathlib.Lean.Meta.CongrTheorems
+✔ [454/777] Built Mathlib.Lean.Expr.ExtraRecognizers
+✔ [455/777] Built Aesop.Frontend.Tactic
+✔ [456/777] Built Aesop.Frontend.Command
+✔ [457/777] Built Mathlib.Init.Classical
+✔ [458/777] Built Mathlib.Data.Quot
+✔ [459/777] Built Mathlib.Tactic.Nontriviality.Core
+✔ [460/777] Built Mathlib.Algebra.Ring.Defs
+✔ [461/777] Built Mathlib.Algebra.Group.Pi.Basic
+✔ [462/777] Built Aesop.Frontend
+✔ [463/777] Built Mathlib.Tactic.Nontriviality
+✔ [464/777] Built Aesop.BuiltinRules
+✔ [465/777] Built Mathlib.Algebra.Ring.Semiconj
+✔ [466/777] Built Mathlib.Algebra.Field.Defs
+✔ [467/777] Built Aesop.Search.Expansion.Norm
+✔ [468/777] Built Mathlib.Tactic.Congr!
+✔ [469/777] Built Mathlib.Logic.Equiv.Defs
+✔ [470/777] Built Mathlib.Order.SetNotation
+✔ [471/777] Built Mathlib.Tactic.Convert
+✔ [472/777] Built Mathlib.Data.Finite.Defs
+✔ [473/777] Built Mathlib.Data.Opposite
+✔ [474/777] Built Mathlib.Logic.Lemmas
+✔ [475/777] Built Mathlib.Control.EquivFunctor
+✔ [476/777] Built Mathlib.Algebra.Opposites
+✔ [477/777] Built Aesop.Search.Expansion
+✔ [478/777] Built Mathlib.Combinatorics.Quiver.Basic
+✔ [479/777] Built Mathlib.Data.Nat.Defs
+✔ [480/777] Built Mathlib.Algebra.Group.Hom.Defs
+✔ [481/777] Built Mathlib.Combinatorics.Quiver.Push
+✔ [482/777] Built Mathlib.Tactic.TermCongr
+✔ [483/777] Built Aesop.Search.ExpandSafePrefix
+✔ [484/777] Built Mathlib.Combinatorics.Quiver.Path
+✔ [485/777] Built Mathlib.Tactic.Congrm
+✔ [486/777] Built Mathlib.Data.Int.Defs
+✔ [487/777] Built Mathlib.Algebra.Group.TypeTags
+✔ [488/777] Built Mathlib.Combinatorics.Quiver.Symmetric
+✔ [489/777] Built Mathlib.Order.Basic
+✔ [490/777] Built Mathlib.Tactic.Widget.Congrm
+✔ [491/777] Built Mathlib.Order.ULift
+✔ [492/777] Built Mathlib.Algebra.Order.ZeroLEOne
+✔ [493/777] Built Mathlib.Order.Synonym
+✔ [494/777] Built Mathlib.Logic.Equiv.Basic
+✔ [495/777] Built Mathlib.Order.RelClasses
+✔ [496/777] Built Mathlib.Order.Compare
+✔ [497/777] Built Mathlib.Order.Max
+✔ [498/777] Built Mathlib.Algebra.Order.Group.Synonym
+✔ [499/777] Built Mathlib.Data.ULift
+✔ [500/777] Built Mathlib.Data.Sigma.Lex
+✔ [501/777] Built Mathlib.Algebra.Order.GroupWithZero.Synonym
+✔ [502/777] Built Mathlib.Order.Monotone.Basic
+✔ [503/777] Built Discretion.Wk.Order
+✔ [504/777] Built Mathlib.Order.Iterate
+✔ [505/777] Built Aesop.Search.Main
+✔ [506/777] Built Mathlib.Order.Lattice
+✔ [507/777] Built Aesop.Main
+✔ [508/777] Built Aesop
+✔ [509/777] Built Mathlib.Order.MinMax
+✔ [510/777] Built Mathlib.Data.Finset.Attr
+✔ [511/777] Built Mathlib.CategoryTheory.Category.Init
+✔ [512/777] Built Mathlib.Tactic.Common
+✔ [513/777] Built Mathlib.Order.BoundedOrder
+✔ [514/777] Built Mathlib.Data.Option.Basic
+✔ [515/777] Built Mathlib.Logic.Pairwise
+✔ [516/777] Built Mathlib.Data.Int.Sqrt
+✔ [517/777] Built Mathlib.Order.Nat
+✔ [518/777] Built Mathlib.Algebra.Group.WithOne.Defs
+✔ [519/777] Built Mathlib.Data.Vector.Defs
+✔ [520/777] Built Mathlib.Data.List.GetD
+✔ [521/777] Built Mathlib.Data.Sigma.Order
+✔ [522/777] Built Mathlib.Logic.Embedding.Basic
+✔ [523/777] Built Discretion.WithDefault
+✔ [524/777] Built Mathlib.Data.Nat.Factorial.Basic
+✔ [525/777] Built Mathlib.Order.Disjoint
+✔ [526/777] Built Mathlib.Logic.Equiv.Option
+✔ [527/777] Built Mathlib.CategoryTheory.Category.Basic
+✔ [528/777] Built Mathlib.Order.PropInstances
+✔ [529/777] Built Mathlib.CategoryTheory.Functor.Basic
+✔ [530/777] Built Mathlib.Tactic.CategoryTheory.Slice
+✔ [531/777] Built Mathlib.Data.Nat.Choose.Basic
+✔ [532/777] Built Mathlib.Tactic.CategoryTheory.Reassoc
+✔ [533/777] Built Mathlib.Order.WithBot
+✔ [534/777] Built Mathlib.Order.RelIso.Basic
+✔ [535/777] Built Mathlib.Algebra.Group.Action.Defs
+✔ [536/777] Built Mathlib.Algebra.Group.Basic
+✔ [537/777] Built Mathlib.CategoryTheory.NatTrans
+✔ [538/777] Built Mathlib.Algebra.Group.Embedding
+✔ [539/777] Built Mathlib.Algebra.Divisibility.Basic
+✔ [540/777] Built Mathlib.Data.Int.Cast.Basic
+✔ [541/777] Built Mathlib.Algebra.Order.Monoid.Unbundled.Defs
+✔ [542/777] Built Mathlib.CategoryTheory.Iso
+✔ [543/777] Built Mathlib.Algebra.Ring.Basic
+✔ [544/777] Built Mathlib.GroupTheory.GroupAction.Defs
+✔ [545/777] Built Mathlib.Algebra.Group.Hom.Basic
+✔ [546/777] Built Mathlib.Algebra.GroupWithZero.Basic
+✔ [547/777] Built Mathlib.Order.Heyting.Basic
+✔ [548/777] Built Mathlib.Algebra.Group.Units
+✔ [549/777] Built Mathlib.Algebra.Group.InjSurj
+✔ [550/777] Built Mathlib.CategoryTheory.Functor.Category
+✔ [551/777] Built Mathlib.Order.Hom.Basic
+✔ [552/777] Built Mathlib.Data.List.Basic
+✔ [553/777] Built Mathlib.Algebra.Order.GroupWithZero.Unbundled
+✔ [554/777] Built Mathlib.Algebra.Group.Semiconj.Units
+✔ [555/777] Built Mathlib.Algebra.Order.Monoid.Units
+✔ [556/777] Built Mathlib.Algebra.Order.Monoid.Unbundled.Basic
+✔ [557/777] Built Mathlib.Algebra.Group.Units.Hom
+✔ [558/777] Built Mathlib.Order.Antisymmetrization
+✔ [559/777] Built Mathlib.Data.List.ProdSigma
+✔ [560/777] Built Mathlib.GroupTheory.GroupAction.Units
+✔ [561/777] Built Mathlib.Data.List.Enum
+✔ [562/777] Built Mathlib.Data.List.Pairwise
+✔ [563/777] Built Mathlib.Algebra.Group.Hom.Instances
+✔ [564/777] Built Mathlib.Data.List.Count
+✔ [565/777] Built Mathlib.Algebra.GroupWithZero.InjSurj
+✔ [566/777] Built Mathlib.Data.List.InsertNth
+✔ [567/777] Built Mathlib.Data.List.Join
+✔ [568/777] Built Mathlib.Algebra.Group.Equiv.Basic
+✔ [569/777] Built Mathlib.Data.List.Lattice
+✔ [570/777] Built Mathlib.Data.List.Lex
+✔ [571/777] Built Mathlib.Algebra.Group.Commute.Units
+✔ [572/777] Built Mathlib.Tactic.ApplyFun
+✔ [573/777] Built Mathlib.CategoryTheory.NatIso
+✔ [574/777] Built Mathlib.Algebra.GroupWithZero.Units.Basic
+✔ [575/777] Built Mathlib.Algebra.Order.Monoid.NatCast
+✔ [576/777] Built Mathlib.Data.List.Infix
+✔ [577/777] Built Mathlib.Algebra.Order.Monoid.Unbundled.MinMax
+✔ [578/777] Built Mathlib.Algebra.Order.Monoid.Defs
+✔ [579/777] Built Mathlib.Algebra.GroupWithZero.Hom
+✔ [580/777] Built Mathlib.Algebra.Group.Units.Equiv
+✔ [581/777] Built Mathlib.Algebra.GroupWithZero.Semiconj
+✔ [582/777] Built Mathlib.Order.Hom.Bounded
+✔ [583/777] Built Mathlib.Algebra.Group.Invertible.Basic
+✔ [584/777] Built Mathlib.Algebra.Order.Sub.Defs
+✔ [585/777] Built Mathlib.Data.List.Forall2
+✔ [586/777] Built Mathlib.Data.List.Permutation
+✔ [587/777] Built Mathlib.Algebra.Ring.Divisibility.Basic
+✔ [588/777] Built Mathlib.Algebra.Order.Monoid.OrderDual
+✔ [589/777] Built Mathlib.Algebra.Order.Monoid.Basic
+✔ [590/777] Built Mathlib.Algebra.GroupWithZero.Units.Equiv
+✔ [591/777] Built Mathlib.Algebra.GroupWithZero.Commute
+✔ [592/777] Built Mathlib.Data.Sum.Order
+✔ [593/777] Built Mathlib.Algebra.GroupWithZero.Invertible
+✔ [594/777] Built Mathlib.Algebra.Ring.InjSurj
+✔ [595/777] Built Mathlib.Algebra.Ring.Invertible
+✔ [596/777] Built Mathlib.Algebra.Order.Monoid.Canonical.Defs
+✔ [597/777] Built Mathlib.Algebra.GroupWithZero.Units.Lemmas
+✔ [598/777] Built Mathlib.Data.List.Zip
+✔ [599/777] Built Mathlib.CategoryTheory.Functor.FullyFaithful
+✔ [600/777] Built Mathlib.Algebra.GroupWithZero.WithZero
+✔ [601/777] Built Mathlib.Order.BooleanAlgebra
+✔ [602/777] Built Mathlib.Algebra.Group.Opposite
+✔ [603/777] Built Mathlib.Algebra.Order.Monoid.Unbundled.Pow
+✔ [604/777] Built Mathlib.Algebra.Order.Monoid.TypeTags
+✔ [605/777] Built Mathlib.Data.List.Chain
+✔ [606/777] Built Mathlib.Algebra.Ring.Hom.Defs
+✔ [607/777] Built Mathlib.CategoryTheory.FullSubcategory
+✔ [608/777] Built Mathlib.Algebra.Group.Even
+✔ [609/777] Built Mathlib.CategoryTheory.EssentialImage
+✔ [610/777] Built Mathlib.Algebra.Group.Nat
+✔ [611/777] Built Mathlib.Algebra.Ring.Units
+✔ [612/777] Built Mathlib.Algebra.Order.Monoid.WithTop
+✔ [613/777] Built Mathlib.Algebra.Order.Group.Nat
+✔ [614/777] Built Mathlib.Algebra.Ring.Nat
+✔ [615/777] Built Mathlib.Algebra.Order.Sub.Canonical
+✔ [616/777] Built Mathlib.Algebra.Order.Sub.WithTop
+✔ [617/777] Built Mathlib.Algebra.Group.Int
+✔ [618/777] Built Mathlib.Order.SymmDiff
+✔ [619/777] Built Mathlib.Algebra.Group.Prod
+✔ [620/777] Built Mathlib.Algebra.Order.Group.Defs
+✔ [621/777] Built Mathlib.Algebra.Ring.Commute
+✔ [622/777] Built Mathlib.Algebra.Order.Group.Units
+✔ [623/777] Built Mathlib.Data.Nat.Cast.Commute
+✔ [624/777] Built Mathlib.Algebra.Order.Group.OrderIso
+✔ [625/777] Built Mathlib.Data.Nat.Cast.Basic
+✔ [626/777] Built Mathlib.Tactic.NormNum.Result
+✔ [627/777] Built Mathlib.CategoryTheory.Whiskering
+✔ [628/777] Built Mathlib.Algebra.Order.Group.Lattice
+✔ [629/777] Built Mathlib.Algebra.Order.GroupWithZero.Canonical
+✔ [630/777] Built Mathlib.Algebra.Ring.Parity
+✔ [631/777] Built Mathlib.Tactic.NormNum.Core
+✔ [632/777] Built Mathlib.Algebra.Ring.Int
+✔ [633/777] Built Mathlib.Order.Hom.Lattice
+✔ [634/777] Built Mathlib.Algebra.Field.Basic
+✔ [635/777] Built Mathlib.Algebra.Order.Group.Abs
+✔ [636/777] Built Mathlib.Algebra.Order.Group.Int
+✔ [637/777] Built Mathlib.Data.Set.Basic
+✔ [638/777] Built Mathlib.Order.WellFounded
+✔ [639/777] Built Mathlib.Data.Set.Subsingleton
+✔ [640/777] Built DeBruijnSSA.InstSet
+✔ [641/777] Built Mathlib.Algebra.Order.Ring.Defs
+✔ [642/777] Built Mathlib.Order.PiLex
+✔ [643/777] Built Mathlib.Algebra.Order.Ring.CharZero
+✔ [644/777] Built Mathlib.Algebra.Order.Ring.Int
+✔ [645/777] Built Mathlib.Algebra.Order.Ring.Canonical
+✔ [646/777] Built Mathlib.CategoryTheory.Equivalence
+✔ [647/777] Built Mathlib.Algebra.Order.Ring.Nat
+✔ [648/777] Built Mathlib.Data.Set.Image
+✔ [649/777] Built Mathlib.Data.Nat.Set
+✔ [650/777] Built Mathlib.Data.Bool.Set
+✔ [651/777] Built Mathlib.Data.Set.List
+✔ [652/777] Built Mathlib.Order.Directed
+✔ [653/777] Built Mathlib.Logic.Embedding.Set
+✔ [654/777] Built Mathlib.Order.Interval.Set.Basic
+✔ [655/777] Built Mathlib.Data.Nat.Cast.Order
+✔ [656/777] Built Mathlib.Algebra.Order.Field.Defs
+✔ [657/777] Built Mathlib.Algebra.Order.Ring.WithTop
+✔ [658/777] Built Mathlib.Algebra.Order.Invertible
+✔ [659/777] Built Mathlib.Algebra.GroupPower.Order
+✔ [660/777] Built Mathlib.Algebra.Order.Ring.Cast
+✔ [661/777] Built Mathlib.CategoryTheory.Opposites
+✔ [662/777] Built Mathlib.Data.Set.Prod
+✔ [663/777] Built Mathlib.CategoryTheory.EqToHom
+✔ [664/777] Built Mathlib.Data.Set.NAry
+✔ [665/777] Built Mathlib.Algebra.Order.Ring.Abs
+✔ [666/777] Built Mathlib.Tactic.Positivity.Core
+✔ [667/777] Built Mathlib.CategoryTheory.Quotient
+✔ [668/777] Built Mathlib.Data.Set.Function
+✔ [669/777] Built Mathlib.Order.Bounds.Basic
+✔ [670/777] Built Mathlib.CategoryTheory.PathCategory
+✔ [671/777] Built Mathlib.Order.Interval.Set.Image
+✔ [672/777] Built Mathlib.Data.Set.Pairwise.Basic
+✔ [673/777] Built Mathlib.Algebra.Group.Pi.Lemmas
+✔ [674/777] Built Mathlib.Logic.Equiv.Set
+✔ [675/777] Built Mathlib.Data.List.Nodup
+✔ [676/777] Built Mathlib.Order.Hom.Set
+✔ [677/777] Built Mathlib.Order.Bounds.OrderIso
+✔ [678/777] Built Mathlib.Data.List.Dedup
+✔ [679/777] Built Mathlib.Data.List.Duplicate
+✔ [680/777] Built Mathlib.Data.List.Range
+✔ [681/777] Built Mathlib.Order.Antichain
+✔ [682/777] Built Mathlib.Order.Interval.Set.UnorderedInterval
+✔ [683/777] Built Mathlib.Data.List.Rotate
+✔ [684/777] Built Mathlib.Order.Interval.Set.OrderEmbedding
+✔ [685/777] Built Mathlib.Data.List.Perm
+✔ [686/777] Built Mathlib.Data.Fin.Basic
+✔ [687/777] Built Mathlib.Order.Interval.Set.OrdConnected
+✔ [688/777] Built Mathlib.Order.Fin
+✔ [689/777] Built Mathlib.Data.List.Sublists
+✔ [690/777] Built Mathlib.Order.CompleteLattice
+✔ [691/777] Built Mathlib.Order.Cover
+✔ [692/777] Built Mathlib.Algebra.BigOperators.Group.List
+✔ [693/777] Built Mathlib.Algebra.Group.Support
+✔ [694/777] Built Mathlib.Order.GaloisConnection
+✔ [695/777] Built Mathlib.Data.Fin.Tuple.Basic
+✔ [696/777] Built Mathlib.Order.SuccPred.Basic
+✔ [697/777] Built Mathlib.Algebra.Order.Field.Basic
+✔ [698/777] Built Mathlib.Order.CompleteBooleanAlgebra
+✔ [699/777] Built Mathlib.Data.Setoid.Basic
+✔ [700/777] Built Mathlib.Algebra.Group.Indicator
+✔ [701/777] Built Mathlib.Data.Nat.SuccPred
+✔ [702/777] Built Mathlib.Data.Nat.Cast.Field
+✔ [703/777] Built Mathlib.Data.List.OfFn
+✔ [704/777] Built Mathlib.Data.List.FinRange
+✔ [705/777] Built Mathlib.Algebra.CharZero.Lemmas
+✔ [706/777] Built Mathlib.Data.List.Sort
+✔ [707/777] Built Mathlib.Data.Vector.Basic
+✔ [708/777] Built Mathlib.Data.Multiset.Basic
+✔ [709/777] Built Mathlib.Data.ENat.Basic
+✔ [710/777] Built Mathlib.Data.Multiset.Range
+✔ [711/777] Built Mathlib.Data.List.NodupEquivFin
+✔ [712/777] Built Mathlib.Algebra.BigOperators.Group.Multiset
+✔ [713/777] Built Mathlib.Data.Sym.Basic
+✔ [714/777] Built Mathlib.Data.Multiset.Nodup
+✔ [715/777] Built Mathlib.Data.Set.Lattice
+✔ [716/777] Built Mathlib.Data.Multiset.Sum
+✔ [717/777] Built Mathlib.Data.Multiset.Dedup
+✔ [718/777] Built Mathlib.Data.Set.Functor
+✔ [719/777] Built Mathlib.Data.Multiset.FinsetOps
+✔ [720/777] Built Mathlib.Data.Set.Sigma
+✔ [721/777] Built Mathlib.Data.Multiset.Bind
+✔ [722/777] Built Mathlib.Data.Multiset.Fold
+✔ [723/777] Built Mathlib.Data.Multiset.Pi
+✔ [724/777] Built Mathlib.Data.Multiset.Powerset
+✔ [725/777] Built Mathlib.Data.Multiset.Lattice
+✔ [726/777] Built Mathlib.Data.Finset.Basic
+✔ [727/777] Built Mathlib.Data.Finset.Union
+✔ [728/777] Built Mathlib.Data.Finset.Image
+✔ [729/777] Built Mathlib.Data.Finset.Pi
+✔ [730/777] Built Mathlib.Data.Finset.Fold
+✔ [731/777] Built Mathlib.Data.Finset.Card
+✔ [732/777] Built Mathlib.Data.Finset.Sum
+✔ [733/777] Built Mathlib.Data.Finset.Option
+✔ [734/777] Built Mathlib.Data.Fintype.Basic
+✔ [735/777] Built Discretion.Discrete
+✔ [736/777] Built Mathlib.Data.Finset.Prod
+✔ [737/777] Built Mathlib.Data.Finset.Piecewise
+✔ [738/777] Built Mathlib.Data.Fintype.Pi
+✔ [739/777] Built Mathlib.Data.Fintype.Vector
+✔ [740/777] Built Mathlib.Data.Fintype.Card
+✔ [741/777] Built Mathlib.Data.Fintype.Prod
+✔ [742/777] Built Mathlib.Data.Fintype.Sum
+✔ [743/777] Built Discretion.Basic
+✔ [744/777] Built Mathlib.Data.Finset.Lattice
+✔ [745/777] Built Mathlib.Data.Finset.Sigma
+✔ [746/777] Built Mathlib.Data.Finset.Powerset
+✔ [747/777] Built Mathlib.Data.Fintype.Powerset
+✔ [748/777] Built Mathlib.Data.Fintype.Sigma
+✔ [749/777] Built Mathlib.Data.Finite.Basic
+✔ [750/777] Built Mathlib.Data.Set.Finite
+✔ [751/777] Built Mathlib.Data.Finset.Preimage
+✔ [752/777] Built Mathlib.Algebra.BigOperators.Group.Finset
+✔ [753/777] Built Discretion.Utils
+✔ [754/777] Built Discretion.Wk.Fun
+✔ [755/777] Built Discretion.Wk.List
+✔ [756/777] Built Discretion.Wk.Set
+✔ [757/777] Built Discretion.Wk.Multiset
+✔ [758/777] Built DeBruijnSSA.BinSyntax.Syntax.Definitions
+✔ [759/777] Built DeBruijnSSA.BinSyntax.Syntax.Compose.CFG
+✔ [760/777] Built DeBruijnSSA.BinSyntax.Effect
+✔ [761/777] Built DeBruijnSSA.BinSyntax.Syntax.Fv.Basic
+✔ [762/777] Built DeBruijnSSA.BinSyntax.Syntax.Compose.Body
+✔ [763/777] Built DeBruijnSSA.BinSyntax.Syntax.Subst
+✔ [764/777] Built DeBruijnSSA.BinSyntax.Syntax.Fv.Subst
+✔ [765/777] Built DeBruijnSSA.BinSyntax.Syntax.Fv
+✔ [766/777] Built DeBruijnSSA.BinSyntax.Typing
+✔ [767/777] Built DeBruijnSSA.BinSyntax.Syntax.Rewrite
+✔ [768/777] Built DeBruijnSSA.BinSyntax.Acyclic
+✔ [769/777] Built DeBruijnSSA.BinSyntax.SimpleTyping
+✔ [770/777] Built DeBruijnSSA.BinSyntax.Syntax.Compose.Region
+✔ [771/777] Built DeBruijnSSA.BinSyntax.Syntax.Compose
+✔ [772/777] Built DeBruijnSSA.BinSyntax.Compose
+✔ [773/777] Built DeBruijnSSA.BinSyntax.Subst
+✔ [774/777] Built DeBruijnSSA.BinSyntax.Syntax
+✔ [775/777] Built DeBruijnSSA.BinSyntax.Rewrite
+✔ [776/777] Built DeBruijnSSA
+Build completed successfully.
+2024-09-17 19:24:44.080 | INFO     | __main__:main:188 - Tracing debruijn-ssa
+2024-09-17 19:24:44.143 | DEBUG    | __main__:main:193 - lake env lean --threads 32 --run ExtractData.lean
+  0%|          | 0/1678 [00:00<?, ?it/s]  0%|          | 0/1678 [00:05<?, ?it/s]  0%|          | 0/1678 [00:10<?, ?it/s]  0%|          | 0/1678 [00:15<?, ?it/s]  1%|          | 16/1678 [00:20<08:39,  3.20it/s]  1%|▏         | 21/1678 [00:25<14:30,  1.90it/s]  3%|▎         | 45/1678 [00:30<08:26,  3.22it/s]  3%|▎         | 55/1678 [00:35<09:52,  2.74it/s]  5%|▍         | 77/1678 [00:40<07:59,  3.34it/s]  5%|▌         | 87/1678 [00:45<09:12,  2.88it/s]  6%|▋         | 106/1678 [00:50<08:14,  3.18it/s]  7%|▋         | 118/1678 [00:55<08:52,  2.93it/s]  8%|▊         | 133/1678 [01:00<08:43,  2.95it/s]  9%|▊         | 146/1678 [01:05<08:58,  2.84it/s] 10%|▉         | 162/1678 [01:10<08:33,  2.95it/s] 10%|█         | 173/1678 [01:15<09:12,  2.72it/s] 11%|█▏        | 192/1678 [01:20<08:07,  3.05it/s] 12%|█▏        | 207/1678 [01:25<08:05,  3.03it/s] 13%|█▎        | 218/1678 [01:30<08:45,  2.78it/s] 14%|█▍        | 233/1678 [01:35<08:27,  2.85it/s] 15%|█▍        | 248/1678 [01:40<08:14,  2.89it/s] 16%|█▌        | 262/1678 [01:45<08:14,  2.86it/s] 17%|█▋        | 284/1678 [01:50<06:59,  3.32it/s] 18%|█▊        | 299/1678 [01:55<07:07,  3.23it/s] 19%|█▉        | 317/1678 [02:00<06:47,  3.34it/s] 20%|██        | 336/1678 [02:05<06:26,  3.48it/s] 21%|██        | 355/1678 [02:10<06:10,  3.57it/s] 22%|██▏       | 373/1678 [02:15<06:04,  3.58it/s] 23%|██▎       | 393/1678 [02:20<05:46,  3.70it/s] 24%|██▍       | 404/1678 [02:25<06:31,  3.25it/s] 25%|██▌       | 423/1678 [02:30<06:07,  3.42it/s] 26%|██▋       | 441/1678 [02:35<05:56,  3.47it/s] 28%|██▊       | 462/1678 [02:40<05:29,  3.69it/s] 29%|██▊       | 479/1678 [02:45<05:32,  3.60it/s] 30%|██▉       | 496/1678 [02:50<05:33,  3.54it/s] 31%|███       | 516/1678 [02:55<05:16,  3.68it/s] 32%|███▏      | 530/1678 [03:00<05:36,  3.41it/s] 33%|███▎      | 547/1678 [03:05<05:31,  3.41it/s] 34%|███▍      | 567/1678 [03:10<05:09,  3.58it/s] 35%|███▍      | 579/1678 [03:15<05:40,  3.23it/s] 36%|███▌      | 601/1678 [03:20<05:00,  3.58it/s] 37%|███▋      | 616/1678 [03:25<05:11,  3.40it/s] 38%|███▊      | 636/1678 [03:30<04:50,  3.58it/s] 39%|███▉      | 657/1678 [03:35<04:31,  3.77it/s] 40%|████      | 673/1678 [03:40<04:39,  3.60it/s] 41%|████▏     | 696/1678 [03:45<04:12,  3.90it/s] 43%|████▎     | 715/1678 [03:50<04:09,  3.87it/s] 44%|████▎     | 730/1678 [03:55<04:22,  3.61it/s] 45%|████▌     | 756/1678 [04:00<03:45,  4.08it/s] 47%|████▋     | 782/1678 [04:05<03:22,  4.42it/s] 47%|████▋     | 794/1678 [04:10<03:51,  3.81it/s] 49%|████▊     | 816/1678 [04:15<03:36,  3.99it/s] 50%|████▉     | 832/1678 [04:20<03:45,  3.75it/s] 51%|█████     | 852/1678 [04:25<03:35,  3.82it/s] 52%|█████▏    | 867/1678 [04:30<03:46,  3.58it/s] 53%|█████▎    | 886/1678 [04:35<03:37,  3.64it/s] 54%|█████▍    | 906/1678 [04:40<03:26,  3.75it/s] 55%|█████▍    | 922/1678 [04:45<03:31,  3.58it/s] 56%|█████▋    | 945/1678 [04:50<03:08,  3.89it/s] 57%|█████▋    | 959/1678 [04:55<03:21,  3.56it/s] 58%|█████▊    | 974/1678 [05:00<03:27,  3.39it/s] 59%|█████▉    | 990/1678 [05:05<03:26,  3.33it/s] 60%|█████▉    | 1006/1678 [05:10<03:24,  3.29it/s] 61%|██████    | 1023/1678 [05:15<03:17,  3.32it/s] 62%|██████▏   | 1041/1678 [05:20<03:07,  3.40it/s] 63%|██████▎   | 1057/1678 [05:25<03:05,  3.34it/s] 64%|██████▍   | 1070/1678 [05:30<03:14,  3.12it/s] 64%|██████▍   | 1081/1678 [05:35<03:30,  2.84it/s] 65%|██████▍   | 1087/1678 [05:40<04:11,  2.35it/s] 65%|██████▌   | 1099/1678 [05:45<04:04,  2.36it/s] 66%|██████▌   | 1110/1678 [05:50<04:05,  2.31it/s] 67%|██████▋   | 1120/1678 [05:55<04:11,  2.22it/s] 67%|██████▋   | 1130/1678 [06:00<04:14,  2.15it/s] 68%|██████▊   | 1139/1678 [06:05<04:23,  2.05it/s] 69%|██████▊   | 1153/1678 [06:10<03:51,  2.27it/s] 69%|██████▉   | 1162/1678 [06:15<04:02,  2.13it/s] 70%|██████▉   | 1171/1678 [06:20<04:09,  2.03it/s] 70%|███████   | 1179/1678 [06:25<04:22,  1.90it/s] 71%|███████   | 1191/1678 [06:30<03:57,  2.05it/s] 72%|███████▏  | 1200/1678 [06:35<04:02,  1.97it/s] 72%|███████▏  | 1214/1678 [06:40<03:28,  2.22it/s] 73%|███████▎  | 1223/1678 [06:45<03:37,  2.09it/s] 74%|███████▍  | 1246/1678 [06:50<02:31,  2.85it/s] 75%|███████▌  | 1262/1678 [06:55<02:20,  2.95it/s] 76%|███████▌  | 1270/1678 [07:00<02:40,  2.55it/s] 76%|███████▋  | 1281/1678 [07:05<02:42,  2.44it/s] 77%|███████▋  | 1293/1678 [07:10<02:38,  2.43it/s] 77%|███████▋  | 1299/1678 [07:15<03:04,  2.06it/s] 78%|███████▊  | 1310/1678 [07:20<02:55,  2.10it/s] 78%|███████▊  | 1315/1678 [07:25<03:25,  1.77it/s] 79%|███████▉  | 1326/1678 [07:30<03:05,  1.90it/s] 79%|███████▉  | 1334/1678 [07:35<03:10,  1.81it/s] 80%|████████  | 1346/1678 [07:40<02:47,  1.99it/s] 81%|████████  | 1355/1678 [07:45<02:47,  1.93it/s] 81%|████████  | 1363/1678 [07:50<02:52,  1.83it/s] 82%|████████▏ | 1374/1678 [07:55<02:36,  1.94it/s] 83%|████████▎ | 1386/1678 [08:00<02:20,  2.08it/s] 83%|████████▎ | 1392/1678 [08:05<02:37,  1.81it/s] 84%|████████▍ | 1408/1678 [08:10<02:01,  2.23it/s] 84%|████████▍ | 1417/1678 [08:15<02:04,  2.10it/s] 85%|████████▌ | 1434/1678 [08:20<01:38,  2.49it/s] 86%|████████▌ | 1442/1678 [08:25<01:46,  2.22it/s] 87%|████████▋ | 1461/1678 [08:30<01:20,  2.69it/s] 88%|████████▊ | 1470/1678 [08:35<01:25,  2.43it/s] 89%|████████▊ | 1489/1678 [08:40<01:06,  2.84it/s] 89%|████████▉ | 1501/1678 [08:45<01:05,  2.71it/s] 91%|█████████ | 1520/1678 [08:50<00:52,  3.03it/s] 92%|█████████▏| 1546/1678 [08:55<00:35,  3.68it/s] 93%|█████████▎| 1560/1678 [09:00<00:34,  3.42it/s] 94%|█████████▍| 1578/1678 [09:05<00:28,  3.47it/s] 95%|█████████▌| 1597/1678 [09:10<00:22,  3.57it/s] 96%|█████████▌| 1609/1678 [09:15<00:21,  3.22it/s] 97%|█████████▋| 1621/1678 [09:20<00:19,  2.97it/s] 97%|█████████▋| 1628/1678 [09:25<00:20,  2.50it/s] 98%|█████████▊| 1643/1678 [09:30<00:13,  2.65it/s] 99%|█████████▊| 1654/1678 [09:35<00:09,  2.51it/s] 99%|█████████▉| 1665/1678 [09:40<00:05,  2.42it/s] 99%|█████████▉| 1666/1678 [09:50<00:08,  1.35it/s] 99%|█████████▉| 1668/1678 [09:55<00:08,  1.11it/s]100%|█████████▉| 1670/1678 [10:00<00:08,  1.08s/it]100%|█████████▉| 1671/1678 [10:05<00:09,  1.37s/it]2024-09-17 19:35:07.075 | DEBUG    | lean_dojo.data_extraction.traced_data:from_traced_files:1074 - Parsing 1672 *.ast.json files in /tmp/tmp2vp_k0h_/debruijn-ssa with 31 workers
+  0%|          | 0/1672 [00:00<?, ?it/s]  0%|          | 3/1672 [00:01<09:22,  2.96it/s]  0%|          | 6/1672 [00:01<04:26,  6.26it/s]  1%|          | 11/1672 [00:01<02:13, 12.47it/s]  1%|          | 14/1672 [00:01<01:50, 14.96it/s]  1%|          | 18/1672 [00:01<01:36, 17.17it/s]  1%|▏         | 21/1672 [00:02<02:47,  9.86it/s]  2%|▏         | 26/1672 [00:05<09:57,  2.76it/s]  2%|▏         | 29/1672 [00:05<07:37,  3.59it/s]  2%|▏         | 32/1672 [00:06<06:02,  4.53it/s]  2%|▏         | 36/1672 [00:06<04:20,  6.28it/s]  2%|▏         | 39/1672 [00:06<03:38,  7.47it/s]  3%|▎         | 42/1672 [00:06<03:07,  8.68it/s]  3%|▎         | 44/1672 [00:07<04:10,  6.50it/s]  3%|▎         | 46/1672 [00:08<08:03,  3.36it/s]  3%|▎         | 50/1672 [00:09<05:17,  5.11it/s]  3%|▎         | 52/1672 [00:09<04:26,  6.09it/s]  3%|▎         | 54/1672 [00:09<03:56,  6.83it/s]  3%|▎         | 58/1672 [00:09<02:41, 10.00it/s]  4%|▎         | 60/1672 [00:09<02:32, 10.55it/s]  4%|▍         | 65/1672 [00:09<01:51, 14.40it/s]  4%|▍         | 69/1672 [00:10<01:53, 14.18it/s]  5%|▍         | 76/1672 [00:10<01:42, 15.51it/s]  5%|▍         | 82/1672 [00:10<01:16, 20.80it/s]  5%|▌         | 85/1672 [00:10<01:38, 16.05it/s]  5%|▌         | 88/1672 [00:11<01:29, 17.77it/s]  5%|▌         | 91/1672 [00:16<13:23,  1.97it/s]  6%|▌         | 96/1672 [00:16<08:39,  3.04it/s]  6%|▌         | 99/1672 [00:16<06:48,  3.85it/s]  6%|▋         | 106/1672 [00:17<03:56,  6.62it/s]  7%|▋         | 112/1672 [00:17<02:47,  9.33it/s]  7%|▋         | 116/1672 [00:17<02:56,  8.80it/s]  7%|▋         | 119/1672 [00:17<02:36,  9.90it/s]  7%|▋         | 123/1672 [00:18<02:03, 12.54it/s]  8%|▊         | 126/1672 [00:18<02:07, 12.13it/s]  8%|▊         | 129/1672 [00:18<01:57, 13.11it/s]  8%|▊         | 136/1672 [00:18<01:15, 20.46it/s]  9%|▊         | 143/1672 [00:18<00:54, 28.14it/s]  9%|▉         | 148/1672 [00:20<02:39,  9.56it/s]  9%|▉         | 152/1672 [00:20<02:15, 11.20it/s]  9%|▉         | 155/1672 [00:20<01:58, 12.80it/s]  9%|▉         | 158/1672 [00:20<01:53, 13.35it/s] 10%|▉         | 164/1672 [00:20<01:19, 18.87it/s] 10%|█         | 168/1672 [00:22<03:20,  7.49it/s] 10%|█         | 171/1672 [00:22<03:32,  7.05it/s] 10%|█         | 175/1672 [00:23<03:34,  6.99it/s] 11%|█         | 177/1672 [00:23<03:29,  7.14it/s] 11%|█         | 179/1672 [00:23<04:08,  6.02it/s] 11%|█         | 184/1672 [00:24<03:38,  6.80it/s] 11%|█         | 188/1672 [00:24<02:51,  8.66it/s] 11%|█▏        | 190/1672 [00:24<02:37,  9.40it/s] 11%|█▏        | 192/1672 [00:27<09:23,  2.63it/s] 12%|█▏        | 196/1672 [00:28<06:51,  3.59it/s] 12%|█▏        | 197/1672 [00:30<12:01,  2.05it/s] 12%|█▏        | 207/1672 [00:31<06:08,  3.97it/s] 13%|█▎        | 213/1672 [00:31<04:09,  5.84it/s] 13%|█▎        | 215/1672 [00:32<04:43,  5.14it/s] 13%|█▎        | 217/1672 [00:32<05:06,  4.74it/s] 13%|█▎        | 219/1672 [00:32<04:26,  5.45it/s] 13%|█▎        | 224/1672 [00:32<02:54,  8.29it/s] 14%|█▎        | 228/1672 [00:33<02:20, 10.28it/s] 14%|█▍        | 230/1672 [00:33<02:24, 10.00it/s] 14%|█▍        | 233/1672 [00:34<03:08,  7.64it/s] 14%|█▍        | 238/1672 [00:40<15:11,  1.57it/s] 14%|█▍        | 241/1672 [00:41<11:38,  2.05it/s] 15%|█▍        | 243/1672 [00:41<09:34,  2.49it/s] 15%|█▍        | 246/1672 [00:41<06:59,  3.40it/s] 15%|█▍        | 248/1672 [00:41<06:15,  3.79it/s] 15%|█▌        | 251/1672 [00:41<04:49,  4.91it/s] 15%|█▌        | 253/1672 [00:41<03:58,  5.95it/s] 15%|█▌        | 256/1672 [00:42<03:09,  7.46it/s] 15%|█▌        | 258/1672 [00:44<09:17,  2.54it/s] 16%|█▌        | 260/1672 [00:44<07:47,  3.02it/s] 16%|█▌        | 262/1672 [00:45<07:18,  3.21it/s] 16%|█▌        | 267/1672 [00:45<04:23,  5.34it/s] 16%|█▋        | 274/1672 [00:46<02:51,  8.15it/s] 17%|█▋        | 279/1672 [00:46<02:44,  8.45it/s] 17%|█▋        | 283/1672 [00:46<02:13, 10.43it/s] 17%|█▋        | 285/1672 [00:47<02:33,  9.05it/s] 17%|█▋        | 289/1672 [00:47<02:00, 11.45it/s] 18%|█▊        | 294/1672 [00:47<01:26, 15.88it/s] 18%|█▊        | 297/1672 [00:47<01:17, 17.83it/s] 18%|█▊        | 301/1672 [00:47<01:20, 17.07it/s] 18%|█▊        | 304/1672 [00:48<01:47, 12.78it/s] 18%|█▊        | 306/1672 [00:48<01:40, 13.59it/s] 18%|█▊        | 308/1672 [00:48<01:37, 14.02it/s] 19%|█▊        | 310/1672 [00:49<03:57,  5.73it/s] 19%|█▉        | 319/1672 [00:49<02:02, 11.08it/s] 19%|█▉        | 325/1672 [00:49<01:28, 15.18it/s] 20%|█▉        | 328/1672 [00:50<01:50, 12.14it/s] 20%|█▉        | 331/1672 [00:50<01:46, 12.61it/s] 20%|█▉        | 333/1672 [00:57<15:26,  1.45it/s] 20%|██        | 335/1672 [00:57<12:31,  1.78it/s] 20%|██        | 337/1672 [01:00<16:23,  1.36it/s] 20%|██        | 340/1672 [01:01<13:20,  1.66it/s] 21%|██        | 343/1672 [01:01<09:20,  2.37it/s] 21%|██        | 345/1672 [01:01<08:30,  2.60it/s] 21%|██        | 347/1672 [01:03<11:34,  1.91it/s] 21%|██        | 351/1672 [01:03<07:07,  3.09it/s] 21%|██        | 353/1672 [01:04<06:08,  3.58it/s] 21%|██▏       | 356/1672 [01:04<04:22,  5.01it/s] 22%|██▏       | 361/1672 [01:04<02:47,  7.84it/s] 22%|██▏       | 363/1672 [01:05<04:29,  4.86it/s] 22%|██▏       | 367/1672 [01:14<19:56,  1.09it/s] 22%|██▏       | 371/1672 [01:14<13:24,  1.62it/s] 22%|██▏       | 373/1672 [01:14<11:26,  1.89it/s] 22%|██▏       | 375/1672 [01:14<09:27,  2.29it/s] 23%|██▎       | 377/1672 [01:15<07:33,  2.85it/s] 23%|██▎       | 379/1672 [01:15<06:02,  3.57it/s] 23%|██▎       | 382/1672 [01:16<07:40,  2.80it/s] 23%|██▎       | 385/1672 [01:16<05:44,  3.74it/s] 23%|██▎       | 387/1672 [01:17<05:18,  4.03it/s] 23%|██▎       | 391/1672 [01:17<03:33,  5.99it/s] 24%|██▎       | 393/1672 [01:17<03:29,  6.09it/s] 24%|██▎       | 395/1672 [01:19<05:44,  3.70it/s] 24%|██▎       | 397/1672 [01:19<04:32,  4.67it/s] 24%|██▍       | 400/1672 [01:19<03:11,  6.63it/s] 24%|██▍       | 407/1672 [01:19<01:58, 10.65it/s] 25%|██▍       | 411/1672 [01:20<03:29,  6.01it/s] 25%|██▍       | 415/1672 [01:21<02:48,  7.47it/s] 25%|██▌       | 420/1672 [01:21<01:58, 10.60it/s] 25%|██▌       | 423/1672 [01:21<01:46, 11.74it/s] 25%|██▌       | 426/1672 [01:21<01:54, 10.90it/s] 26%|██▌       | 431/1672 [01:22<01:38, 12.65it/s] 26%|██▌       | 433/1672 [01:23<03:22,  6.13it/s] 26%|██▌       | 438/1672 [01:23<02:14,  9.15it/s] 26%|██▋       | 441/1672 [01:23<01:56, 10.59it/s] 27%|██▋       | 444/1672 [01:23<01:37, 12.65it/s] 27%|██▋       | 448/1672 [01:24<01:51, 10.97it/s] 27%|██▋       | 455/1672 [01:24<01:08, 17.64it/s] 28%|██▊       | 461/1672 [01:24<00:51, 23.49it/s] 28%|██▊       | 466/1672 [01:24<01:01, 19.57it/s] 28%|██▊       | 470/1672 [01:25<02:07,  9.41it/s] 28%|██▊       | 473/1672 [01:25<02:02,  9.82it/s] 29%|██▊       | 477/1672 [01:26<01:35, 12.52it/s] 29%|██▊       | 480/1672 [01:26<01:31, 12.98it/s] 29%|██▉       | 483/1672 [01:26<01:20, 14.70it/s] 29%|██▉       | 486/1672 [01:26<01:23, 14.17it/s] 29%|██▉       | 488/1672 [01:26<01:25, 13.79it/s] 29%|██▉       | 490/1672 [01:27<01:55, 10.22it/s] 29%|██▉       | 492/1672 [01:27<01:53, 10.36it/s] 30%|██▉       | 494/1672 [01:28<03:37,  5.43it/s] 30%|██▉       | 497/1672 [01:28<02:42,  7.23it/s] 30%|██▉       | 501/1672 [01:28<01:48, 10.76it/s] 30%|███       | 504/1672 [01:29<03:28,  5.60it/s] 30%|███       | 506/1672 [01:32<08:00,  2.43it/s] 31%|███       | 510/1672 [01:32<05:18,  3.64it/s] 31%|███       | 512/1672 [01:32<04:51,  3.98it/s] 31%|███       | 518/1672 [01:32<02:40,  7.21it/s] 31%|███       | 522/1672 [01:33<02:38,  7.23it/s] 31%|███▏      | 525/1672 [01:33<02:15,  8.47it/s] 32%|███▏      | 528/1672 [01:33<02:10,  8.75it/s] 32%|███▏      | 532/1672 [01:33<01:41, 11.26it/s] 32%|███▏      | 540/1672 [01:34<01:00, 18.57it/s] 33%|███▎      | 545/1672 [01:34<00:58, 19.25it/s] 33%|███▎      | 548/1672 [01:45<14:44,  1.27it/s] 33%|███▎      | 551/1672 [01:45<11:29,  1.63it/s] 33%|███▎      | 554/1672 [01:45<08:50,  2.11it/s] 33%|███▎      | 557/1672 [01:45<06:46,  2.74it/s] 34%|███▎      | 562/1672 [01:45<04:18,  4.29it/s] 34%|███▍      | 566/1672 [01:45<03:24,  5.42it/s] 34%|███▍      | 569/1672 [01:46<02:55,  6.27it/s] 34%|███▍      | 572/1672 [01:46<02:40,  6.84it/s] 34%|███▍      | 574/1672 [01:46<02:25,  7.53it/s] 35%|███▍      | 578/1672 [01:46<01:42, 10.64it/s] 35%|███▍      | 581/1672 [01:46<01:26, 12.63it/s] 35%|███▍      | 584/1672 [01:46<01:16, 14.19it/s] 35%|███▌      | 587/1672 [01:47<01:16, 14.12it/s] 35%|███▌      | 592/1672 [01:49<04:27,  4.04it/s] 36%|███▌      | 594/1672 [01:50<04:19,  4.16it/s] 36%|███▌      | 596/1672 [01:54<11:55,  1.50it/s] 36%|███▌      | 599/1672 [01:54<08:25,  2.12it/s] 36%|███▌      | 603/1672 [01:54<05:30,  3.23it/s] 36%|███▌      | 605/1672 [01:56<07:11,  2.47it/s] 36%|███▋      | 608/1672 [01:56<05:07,  3.46it/s] 37%|███▋      | 611/1672 [01:57<05:02,  3.50it/s] 37%|███▋      | 614/1672 [01:57<03:41,  4.77it/s] 37%|███▋      | 617/1672 [01:57<02:54,  6.03it/s] 37%|███▋      | 622/1672 [01:57<01:56,  9.01it/s] 37%|███▋      | 626/1672 [01:58<01:34, 11.11it/s] 38%|███▊      | 629/1672 [01:58<01:28, 11.75it/s] 38%|███▊      | 631/1672 [01:58<01:25, 12.22it/s] 38%|███▊      | 634/1672 [01:58<01:19, 13.11it/s] 38%|███▊      | 636/1672 [01:58<01:32, 11.25it/s] 38%|███▊      | 638/1672 [02:04<13:40,  1.26it/s] 38%|███▊      | 640/1672 [02:05<12:20,  1.39it/s] 38%|███▊      | 642/1672 [02:06<09:36,  1.79it/s] 39%|███▉      | 649/1672 [02:06<04:13,  4.03it/s] 39%|███▉      | 653/1672 [02:06<03:01,  5.63it/s] 39%|███▉      | 657/1672 [02:06<02:12,  7.66it/s] 40%|███▉      | 661/1672 [02:06<01:57,  8.58it/s] 40%|███▉      | 667/1672 [02:06<01:18, 12.88it/s] 40%|████      | 672/1672 [02:06<00:59, 16.82it/s] 40%|████      | 676/1672 [02:07<01:24, 11.74it/s] 41%|████      | 680/1672 [02:07<01:08, 14.41it/s] 41%|████      | 684/1672 [02:08<01:12, 13.67it/s] 41%|████▏     | 690/1672 [02:08<00:55, 17.67it/s] 42%|████▏     | 694/1672 [02:08<00:56, 17.18it/s] 42%|████▏     | 697/1672 [02:08<01:05, 14.95it/s] 42%|████▏     | 700/1672 [02:08<00:59, 16.38it/s] 42%|████▏     | 703/1672 [02:09<00:53, 18.22it/s] 42%|████▏     | 706/1672 [02:09<01:16, 12.70it/s] 42%|████▏     | 709/1672 [02:09<01:08, 14.04it/s] 43%|████▎     | 711/1672 [02:09<01:16, 12.55it/s] 43%|████▎     | 714/1672 [02:09<01:05, 14.70it/s] 43%|████▎     | 718/1672 [02:10<02:05,  7.61it/s] 43%|████▎     | 720/1672 [02:12<04:36,  3.44it/s] 43%|████▎     | 722/1672 [02:12<03:43,  4.24it/s] 43%|████▎     | 727/1672 [02:12<02:11,  7.20it/s] 44%|████▎     | 731/1672 [02:13<01:43,  9.07it/s] 44%|████▍     | 737/1672 [02:13<01:06, 14.10it/s] 44%|████▍     | 737/1672 [02:24<01:06, 14.10it/s] 44%|████▍     | 739/1672 [02:24<15:31,  1.00it/s] 44%|████▍     | 742/1672 [02:24<11:32,  1.34it/s] 45%|████▍     | 746/1672 [02:25<09:00,  1.71it/s] 45%|████▍     | 750/1672 [02:25<06:12,  2.48it/s] 45%|████▌     | 753/1672 [02:25<04:45,  3.22it/s] 45%|████▌     | 756/1672 [02:26<03:49,  3.99it/s] 45%|████▌     | 759/1672 [02:26<03:00,  5.06it/s] 46%|████▌     | 762/1672 [02:26<02:28,  6.12it/s] 46%|████▌     | 766/1672 [02:26<01:45,  8.55it/s] 46%|████▌     | 769/1672 [02:27<01:55,  7.85it/s] 46%|████▌     | 771/1672 [02:27<01:41,  8.88it/s] 46%|████▌     | 773/1672 [02:27<02:32,  5.90it/s] 47%|████▋     | 779/1672 [02:28<01:24, 10.58it/s] 47%|████▋     | 782/1672 [02:28<01:33,  9.56it/s] 47%|████▋     | 785/1672 [02:28<01:49,  8.09it/s] 47%|████▋     | 788/1672 [02:29<01:50,  7.97it/s] 47%|████▋     | 790/1672 [02:35<11:08,  1.32it/s] 47%|████▋     | 792/1672 [02:37<11:06,  1.32it/s] 48%|████▊     | 796/1672 [02:37<06:49,  2.14it/s] 48%|████▊     | 801/1672 [02:37<04:06,  3.53it/s] 48%|████▊     | 805/1672 [02:37<02:54,  4.96it/s] 48%|████▊     | 808/1672 [02:37<02:18,  6.23it/s] 49%|████▊     | 811/1672 [02:37<01:50,  7.79it/s] 49%|████▊     | 814/1672 [02:38<01:39,  8.61it/s] 49%|████▉     | 817/1672 [02:38<01:21, 10.45it/s] 49%|████▉     | 821/1672 [02:38<01:10, 12.09it/s] 49%|████▉     | 824/1672 [02:40<03:11,  4.42it/s] 49%|████▉     | 827/1672 [02:40<02:36,  5.39it/s] 50%|████▉     | 830/1672 [02:40<02:10,  6.44it/s] 50%|████▉     | 833/1672 [02:40<01:50,  7.60it/s] 50%|████▉     | 835/1672 [02:41<01:44,  7.98it/s] 50%|█████     | 839/1672 [02:41<01:19, 10.46it/s] 50%|█████     | 843/1672 [02:41<01:02, 13.22it/s] 51%|█████     | 848/1672 [02:41<00:46, 17.73it/s] 51%|█████     | 854/1672 [02:41<00:33, 24.30it/s] 51%|█████▏    | 858/1672 [02:42<01:05, 12.42it/s] 52%|█████▏    | 862/1672 [02:42<00:58, 13.80it/s] 52%|█████▏    | 865/1672 [02:42<00:54, 14.75it/s] 52%|█████▏    | 868/1672 [02:43<01:22,  9.76it/s] 52%|█████▏    | 870/1672 [02:43<01:35,  8.36it/s] 52%|█████▏    | 873/1672 [02:44<01:54,  6.98it/s] 52%|█████▏    | 876/1672 [02:45<03:11,  4.16it/s] 52%|█████▏    | 877/1672 [02:45<02:57,  4.47it/s] 53%|█████▎    | 880/1672 [02:46<02:06,  6.25it/s] 53%|█████▎    | 883/1672 [02:46<01:37,  8.13it/s] 53%|█████▎    | 888/1672 [02:46<01:14, 10.53it/s] 53%|█████▎    | 894/1672 [02:46<00:47, 16.23it/s] 54%|█████▎    | 897/1672 [02:46<00:46, 16.75it/s] 54%|█████▍    | 900/1672 [02:47<00:57, 13.47it/s] 54%|█████▍    | 903/1672 [02:47<01:41,  7.60it/s] 54%|█████▍    | 905/1672 [02:48<01:40,  7.65it/s] 54%|█████▍    | 908/1672 [02:48<01:18,  9.68it/s] 54%|█████▍    | 910/1672 [02:48<01:13, 10.38it/s] 55%|█████▌    | 920/1672 [02:48<00:33, 22.55it/s] 55%|█████▌    | 924/1672 [02:48<00:31, 23.82it/s] 56%|█████▌    | 928/1672 [02:50<01:50,  6.75it/s] 56%|█████▌    | 934/1672 [02:50<01:14,  9.96it/s] 56%|█████▌    | 938/1672 [02:50<01:02, 11.79it/s] 56%|█████▋    | 943/1672 [02:51<01:10, 10.39it/s] 57%|█████▋    | 946/1672 [02:52<02:00,  6.04it/s] 57%|█████▋    | 948/1672 [02:53<02:15,  5.36it/s] 57%|█████▋    | 950/1672 [02:53<02:37,  4.58it/s] 57%|█████▋    | 952/1672 [02:54<02:19,  5.16it/s] 57%|█████▋    | 954/1672 [02:54<02:00,  5.94it/s] 57%|█████▋    | 956/1672 [02:54<01:47,  6.69it/s] 57%|█████▋    | 956/1672 [03:07<01:47,  6.69it/s] 57%|█████▋    | 957/1672 [03:07<25:50,  2.17s/it] 57%|█████▋    | 958/1672 [03:07<21:29,  1.81s/it] 57%|█████▋    | 959/1672 [03:08<17:28,  1.47s/it] 57%|█████▋    | 960/1672 [03:08<14:24,  1.21s/it] 58%|█████▊    | 966/1672 [03:08<05:04,  2.32it/s] 58%|█████▊    | 968/1672 [03:08<04:01,  2.91it/s] 58%|█████▊    | 972/1672 [03:09<03:01,  3.86it/s] 58%|█████▊    | 975/1672 [03:09<02:14,  5.20it/s] 58%|█████▊    | 978/1672 [03:09<01:43,  6.71it/s] 59%|█████▊    | 980/1672 [03:10<03:02,  3.78it/s] 59%|█████▉    | 987/1672 [03:11<01:50,  6.18it/s] 59%|█████▉    | 989/1672 [03:11<01:43,  6.59it/s] 59%|█████▉    | 991/1672 [03:11<01:35,  7.16it/s] 59%|█████▉    | 993/1672 [03:12<01:37,  6.98it/s] 60%|█████▉    | 996/1672 [03:12<01:14,  9.07it/s] 60%|█████▉    | 998/1672 [03:12<01:31,  7.36it/s] 60%|█████▉    | 1000/1672 [03:12<01:34,  7.09it/s] 60%|█████▉    | 1002/1672 [03:13<01:20,  8.28it/s] 60%|██████    | 1006/1672 [03:13<00:53, 12.49it/s] 60%|██████    | 1009/1672 [03:13<00:50, 13.23it/s] 60%|██████    | 1011/1672 [03:13<01:01, 10.76it/s] 61%|██████    | 1013/1672 [03:13<00:56, 11.58it/s] 61%|██████    | 1015/1672 [03:13<00:51, 12.76it/s] 61%|██████    | 1020/1672 [03:14<00:33, 19.51it/s] 61%|██████    | 1023/1672 [03:14<00:47, 13.66it/s] 61%|██████▏   | 1028/1672 [03:14<00:33, 19.10it/s] 62%|██████▏   | 1031/1672 [03:14<00:36, 17.78it/s] 62%|██████▏   | 1034/1672 [03:14<00:32, 19.54it/s] 62%|██████▏   | 1042/1672 [03:15<00:31, 19.85it/s] 62%|██████▎   | 1045/1672 [03:16<01:21,  7.66it/s] 63%|██████▎   | 1050/1672 [03:16<00:58, 10.55it/s] 63%|██████▎   | 1053/1672 [03:17<01:06,  9.29it/s] 63%|██████▎   | 1055/1672 [03:17<01:06,  9.33it/s] 63%|██████▎   | 1057/1672 [03:17<01:11,  8.58it/s] 63%|██████▎   | 1059/1672 [03:17<01:12,  8.49it/s] 63%|██████▎   | 1061/1672 [03:17<01:02,  9.82it/s] 64%|██████▎   | 1064/1672 [03:18<00:53, 11.32it/s] 64%|██████▍   | 1066/1672 [03:18<01:11,  8.44it/s] 64%|██████▍   | 1073/1672 [03:18<00:37, 16.04it/s] 64%|██████▍   | 1076/1672 [03:18<00:34, 17.38it/s] 65%|██████▍   | 1079/1672 [03:19<00:39, 15.02it/s] 65%|██████▍   | 1082/1672 [03:19<00:39, 15.09it/s] 65%|██████▍   | 1084/1672 [03:19<00:44, 13.23it/s] 65%|██████▍   | 1086/1672 [03:19<00:45, 13.02it/s] 65%|██████▌   | 1094/1672 [03:19<00:25, 23.06it/s] 66%|██████▌   | 1097/1672 [03:19<00:23, 24.18it/s] 66%|██████▌   | 1102/1672 [03:20<00:19, 28.96it/s] 66%|██████▌   | 1106/1672 [03:20<00:18, 30.29it/s] 66%|██████▋   | 1110/1672 [03:20<00:20, 26.85it/s] 67%|██████▋   | 1113/1672 [03:21<00:53, 10.50it/s] 67%|██████▋   | 1116/1672 [03:21<00:53, 10.45it/s] 67%|██████▋   | 1118/1672 [03:21<00:52, 10.58it/s] 67%|██████▋   | 1121/1672 [03:25<03:41,  2.49it/s] 67%|██████▋   | 1125/1672 [03:25<02:26,  3.73it/s] 67%|██████▋   | 1127/1672 [03:25<02:03,  4.42it/s] 68%|██████▊   | 1129/1672 [03:25<02:09,  4.18it/s] 68%|██████▊   | 1134/1672 [03:26<01:18,  6.87it/s] 68%|██████▊   | 1138/1672 [03:26<00:56,  9.37it/s] 68%|██████▊   | 1145/1672 [03:26<00:33, 15.53it/s] 69%|██████▊   | 1149/1672 [03:27<00:52,  9.91it/s] 69%|██████▉   | 1154/1672 [03:27<01:07,  7.66it/s] 69%|██████▉   | 1157/1672 [03:28<01:01,  8.40it/s] 69%|██████▉   | 1160/1672 [03:28<00:50, 10.09it/s] 70%|██████▉   | 1163/1672 [03:28<00:49, 10.31it/s] 70%|██████▉   | 1165/1672 [03:29<01:07,  7.56it/s] 70%|██████▉   | 1167/1672 [03:29<01:14,  6.78it/s] 70%|███████   | 1171/1672 [03:31<02:38,  3.16it/s] 70%|███████   | 1173/1672 [03:32<02:38,  3.15it/s] 70%|███████   | 1175/1672 [03:32<02:09,  3.85it/s] 70%|███████   | 1177/1672 [03:32<01:46,  4.65it/s] 70%|███████   | 1178/1672 [03:33<01:40,  4.92it/s] 71%|███████   | 1180/1672 [03:33<01:18,  6.27it/s] 71%|███████   | 1183/1672 [03:33<01:13,  6.62it/s] 71%|███████   | 1185/1672 [03:34<01:46,  4.59it/s] 71%|███████   | 1188/1672 [03:34<01:14,  6.47it/s] 71%|███████   | 1191/1672 [03:34<00:55,  8.71it/s] 71%|███████▏  | 1193/1672 [03:34<00:48,  9.95it/s] 72%|███████▏  | 1196/1672 [03:35<01:06,  7.12it/s] 72%|███████▏  | 1201/1672 [03:35<00:43, 10.94it/s] 72%|███████▏  | 1204/1672 [03:37<01:48,  4.31it/s] 72%|███████▏  | 1204/1672 [03:52<01:48,  4.31it/s] 72%|███████▏  | 1205/1672 [03:52<15:37,  2.01s/it] 72%|███████▏  | 1208/1672 [03:52<10:31,  1.36s/it] 72%|███████▏  | 1210/1672 [03:54<09:20,  1.21s/it] 73%|███████▎  | 1213/1672 [03:54<06:18,  1.21it/s] 73%|███████▎  | 1217/1672 [03:54<03:52,  1.95it/s] 73%|███████▎  | 1220/1672 [03:54<02:51,  2.64it/s] 73%|███████▎  | 1224/1672 [03:55<02:00,  3.71it/s] 73%|███████▎  | 1226/1672 [03:55<01:41,  4.38it/s] 73%|███████▎  | 1228/1672 [03:55<01:23,  5.31it/s] 74%|███████▎  | 1233/1672 [03:55<00:51,  8.56it/s] 74%|███████▍  | 1236/1672 [03:56<00:55,  7.84it/s] 74%|███████▍  | 1238/1672 [03:56<00:57,  7.57it/s] 74%|███████▍  | 1240/1672 [03:56<01:02,  6.92it/s] 74%|███████▍  | 1244/1672 [03:56<00:42, 10.06it/s] 75%|███████▍  | 1251/1672 [03:57<00:25, 16.22it/s] 75%|███████▌  | 1254/1672 [03:57<00:32, 12.83it/s] 75%|███████▌  | 1256/1672 [03:57<00:37, 11.16it/s] 75%|███████▌  | 1260/1672 [03:57<00:32, 12.75it/s] 75%|███████▌  | 1262/1672 [03:58<00:34, 11.87it/s] 76%|███████▌  | 1266/1672 [03:58<00:36, 11.12it/s] 76%|███████▌  | 1268/1672 [03:59<01:19,  5.05it/s] 76%|███████▌  | 1272/1672 [03:59<00:54,  7.28it/s] 76%|███████▌  | 1274/1672 [04:00<00:49,  7.96it/s] 77%|███████▋  | 1281/1672 [04:00<00:29, 13.39it/s] 77%|███████▋  | 1284/1672 [04:00<00:36, 10.71it/s] 77%|███████▋  | 1287/1672 [04:00<00:32, 11.97it/s] 77%|███████▋  | 1289/1672 [04:01<00:33, 11.51it/s] 77%|███████▋  | 1291/1672 [04:01<00:41,  9.13it/s] 78%|███████▊  | 1296/1672 [04:01<00:32, 11.71it/s] 78%|███████▊  | 1298/1672 [04:02<00:48,  7.78it/s] 78%|███████▊  | 1306/1672 [04:02<00:24, 14.77it/s] 78%|███████▊  | 1310/1672 [04:02<00:23, 15.57it/s] 79%|███████▊  | 1313/1672 [04:06<01:49,  3.28it/s] 79%|███████▉  | 1319/1672 [04:12<03:45,  1.56it/s] 79%|███████▉  | 1321/1672 [04:13<03:12,  1.83it/s] 79%|███████▉  | 1326/1672 [04:13<02:04,  2.77it/s] 80%|███████▉  | 1330/1672 [04:13<01:31,  3.75it/s] 80%|███████▉  | 1336/1672 [04:13<01:01,  5.48it/s] 80%|████████  | 1340/1672 [04:16<01:49,  3.02it/s] 80%|████████  | 1344/1672 [04:16<01:23,  3.91it/s] 81%|████████  | 1348/1672 [04:16<01:02,  5.19it/s] 81%|████████  | 1352/1672 [04:17<00:55,  5.81it/s] 81%|████████  | 1354/1672 [04:17<00:48,  6.58it/s] 81%|████████▏ | 1360/1672 [04:17<00:35,  8.77it/s] 81%|████████▏ | 1362/1672 [04:18<00:35,  8.63it/s] 82%|████████▏ | 1364/1672 [04:18<00:46,  6.58it/s] 82%|████████▏ | 1368/1672 [04:19<00:38,  7.86it/s] 82%|████████▏ | 1374/1672 [04:19<00:23, 12.50it/s] 82%|████████▏ | 1378/1672 [04:19<00:20, 14.59it/s] 83%|████████▎ | 1381/1672 [04:19<00:17, 16.58it/s] 83%|████████▎ | 1386/1672 [04:25<02:21,  2.03it/s] 83%|████████▎ | 1392/1672 [04:26<01:32,  3.04it/s] 83%|████████▎ | 1394/1672 [04:26<01:22,  3.37it/s] 84%|████████▎ | 1399/1672 [04:26<00:54,  4.97it/s] 84%|████████▍ | 1402/1672 [04:26<00:46,  5.77it/s] 84%|████████▍ | 1404/1672 [04:27<00:44,  6.07it/s] 84%|████████▍ | 1406/1672 [04:27<00:43,  6.13it/s] 84%|████████▍ | 1408/1672 [04:27<00:38,  6.83it/s] 85%|████████▍ | 1413/1672 [04:27<00:28,  9.18it/s] 85%|████████▍ | 1415/1672 [04:27<00:25, 10.07it/s] 85%|████████▍ | 1417/1672 [04:28<00:29,  8.73it/s] 85%|████████▍ | 1419/1672 [04:28<00:35,  7.18it/s] 85%|████████▌ | 1423/1672 [04:29<00:51,  4.86it/s] 85%|████████▌ | 1428/1672 [04:30<00:32,  7.56it/s] 86%|████████▌ | 1430/1672 [04:30<00:40,  5.99it/s] 86%|████████▌ | 1432/1672 [04:31<00:42,  5.64it/s] 86%|████████▌ | 1437/1672 [04:31<00:25,  9.21it/s] 86%|████████▌ | 1440/1672 [04:31<00:22, 10.18it/s] 86%|████████▋ | 1443/1672 [04:31<00:21, 10.78it/s] 87%|████████▋ | 1447/1672 [04:32<00:24,  9.28it/s] 87%|████████▋ | 1449/1672 [04:32<00:22, 10.03it/s] 87%|████████▋ | 1452/1672 [04:32<00:20, 10.78it/s] 87%|████████▋ | 1457/1672 [04:32<00:13, 15.57it/s] 88%|████████▊ | 1464/1672 [04:34<00:24,  8.59it/s] 88%|████████▊ | 1466/1672 [04:34<00:22,  9.11it/s] 88%|████████▊ | 1468/1672 [04:34<00:23,  8.68it/s] 88%|████████▊ | 1470/1672 [04:34<00:22,  8.90it/s] 88%|████████▊ | 1473/1672 [04:34<00:22,  8.73it/s] 88%|████████▊ | 1475/1672 [04:35<00:21,  8.96it/s] 89%|████████▊ | 1483/1672 [04:35<00:10, 17.24it/s] 89%|████████▉ | 1486/1672 [04:36<00:18, 10.21it/s] 89%|████████▉ | 1486/1672 [04:54<00:18, 10.21it/s] 89%|████████▉ | 1488/1672 [04:54<05:30,  1.80s/it] 89%|████████▉ | 1494/1672 [04:55<03:02,  1.03s/it] 90%|████████▉ | 1500/1672 [04:55<01:51,  1.54it/s] 90%|████████▉ | 1503/1672 [04:55<01:27,  1.93it/s] 90%|█████████ | 1506/1672 [04:56<01:15,  2.21it/s] 90%|█████████ | 1508/1672 [04:56<01:04,  2.52it/s] 90%|█████████ | 1510/1672 [04:57<00:59,  2.74it/s] 91%|█████████ | 1515/1672 [04:57<00:38,  4.12it/s] 91%|█████████ | 1517/1672 [04:58<00:50,  3.07it/s] 91%|█████████ | 1518/1672 [04:59<00:55,  2.80it/s] 91%|█████████ | 1522/1672 [04:59<00:33,  4.47it/s] 91%|█████████ | 1524/1672 [04:59<00:28,  5.25it/s] 91%|█████████▏| 1526/1672 [04:59<00:26,  5.42it/s] 92%|█████████▏| 1531/1672 [05:00<00:15,  8.99it/s] 92%|█████████▏| 1533/1672 [05:00<00:13,  9.94it/s] 92%|█████████▏| 1541/1672 [05:00<00:11, 11.56it/s] 92%|█████████▏| 1544/1672 [05:00<00:09, 13.28it/s] 93%|█████████▎| 1548/1672 [05:02<00:16,  7.41it/s] 93%|█████████▎| 1552/1672 [05:02<00:16,  7.08it/s] 93%|█████████▎| 1554/1672 [05:03<00:17,  6.92it/s] 93%|█████████▎| 1556/1672 [05:03<00:15,  7.72it/s] 93%|█████████▎| 1559/1672 [05:03<00:19,  5.82it/s] 93%|█████████▎| 1560/1672 [05:04<00:30,  3.65it/s] 93%|█████████▎| 1562/1672 [05:05<00:26,  4.19it/s] 94%|█████████▍| 1570/1672 [05:05<00:12,  8.40it/s] 94%|█████████▍| 1573/1672 [05:05<00:10,  9.33it/s] 94%|█████████▍| 1575/1672 [05:05<00:10,  9.39it/s] 94%|█████████▍| 1577/1672 [05:06<00:09, 10.42it/s] 94%|█████████▍| 1580/1672 [05:06<00:07, 13.07it/s] 95%|█████████▍| 1584/1672 [05:06<00:05, 17.38it/s] 95%|█████████▌| 1590/1672 [05:06<00:03, 24.29it/s] 95%|█████████▌| 1594/1672 [05:06<00:03, 25.77it/s] 96%|█████████▌| 1598/1672 [05:06<00:02, 28.03it/s] 96%|█████████▌| 1602/1672 [05:06<00:02, 27.66it/s] 96%|█████████▌| 1606/1672 [05:06<00:02, 25.92it/s] 96%|█████████▌| 1609/1672 [05:07<00:04, 13.04it/s] 97%|█████████▋| 1614/1672 [05:07<00:03, 17.65it/s] 97%|█████████▋| 1617/1672 [05:07<00:03, 18.03it/s] 97%|█████████▋| 1621/1672 [05:08<00:05,  9.61it/s] 97%|█████████▋| 1623/1672 [05:09<00:07,  6.50it/s] 97%|█████████▋| 1626/1672 [05:09<00:05,  8.33it/s] 97%|█████████▋| 1628/1672 [05:09<00:04,  9.25it/s] 97%|█████████▋| 1630/1672 [05:09<00:04,  9.92it/s] 98%|█████████▊| 1633/1672 [05:11<00:09,  4.15it/s] 98%|█████████▊| 1636/1672 [05:11<00:06,  5.37it/s] 98%|█████████▊| 1638/1672 [05:11<00:05,  5.87it/s] 98%|█████████▊| 1640/1672 [05:13<00:10,  2.99it/s] 98%|█████████▊| 1643/1672 [05:14<00:11,  2.57it/s] 98%|█████████▊| 1644/1672 [05:18<00:23,  1.21it/s] 98%|█████████▊| 1646/1672 [05:18<00:15,  1.66it/s] 99%|█████████▊| 1649/1672 [05:19<00:12,  1.88it/s] 99%|█████████▉| 1653/1672 [05:20<00:06,  2.92it/s] 99%|█████████▉| 1656/1672 [05:20<00:04,  3.96it/s] 99%|█████████▉| 1658/1672 [05:20<00:02,  4.82it/s] 99%|█████████▉| 1663/1672 [05:20<00:01,  7.93it/s]100%|█████████▉| 1667/1672 [05:20<00:00, 10.71it/s]100%|█████████▉| 1670/1672 [05:21<00:00,  9.32it/s]100%|██████████| 1672/1672 [05:21<00:00,  5.21it/s]
+2024-09-17 19:40:28.131 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/imbrem/debruijn-ssa', commit='e28fa7e3c24fcfe0c001d9a6bea1f9d0064090bb')
+2024-09-17 19:40:29.595 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.6.0-rc1
+2024-09-17 19:40:48.485 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-17 19:40:49.614 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-17 19:40:52.894 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for discretion main
+2024-09-17 19:40:53.673 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for doc-gen4 main
+2024-09-17 19:40:54.312 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe83e8016208890f087a0b4c4f009c88cbb650ab')
+2024-09-17 19:40:56.102 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/imbrem/discretion', commit='64879d94466c15f3832a5eb1e85efbdc7956d2da')
+2024-09-17 19:40:56.695 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/siddhartha-gadgil/LeanSearchClient.git") failed. Retrying...
+2024-09-17 19:40:57.825 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/siddhartha-gadgil/LeanSearchClient.git") failed. Retrying...
+2024-09-17 19:41:00.182 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe83e8016208890f087a0b4c4f009c88cbb650ab')
+2024-09-17 19:41:00.182 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='1b0072fea2aa6a0ef8ef8b506ec5223b184cb4d0')
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-09-17 19:41:02.356 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-06-05
+2024-09-17 19:41:03.848 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an unsupported Lean version: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-09-17 19:41:08.781 | DEBUG    | lean_dojo.data_extraction.traced_data:save_to_disk:1106 - Saving 1672 traced XML files to /tmp/tmp2vp_k0h_/debruijn-ssa with 31 workers
+  0%|          | 0/1672 [00:00<?, ?it/s]  0%|          | 3/1672 [00:00<03:21,  8.28it/s]  0%|          | 6/1672 [00:00<02:04, 13.37it/s]  1%|          | 12/1672 [00:00<01:11, 23.16it/s]  1%|          | 18/1672 [00:00<00:59, 27.66it/s]  1%|▏         | 22/1672 [00:01<01:27, 18.85it/s]  2%|▏         | 26/1672 [00:01<02:16, 12.09it/s]  2%|▏         | 28/1672 [00:01<02:07, 12.90it/s]  2%|▏         | 32/1672 [00:02<01:48, 15.16it/s]  2%|▏         | 36/1672 [00:02<01:31, 17.79it/s]  2%|▏         | 39/1672 [00:02<01:27, 18.70it/s]  3%|▎         | 42/1672 [00:02<01:25, 19.04it/s]  3%|▎         | 45/1672 [00:03<02:58,  9.13it/s]  3%|▎         | 50/1672 [00:03<02:08, 12.63it/s]  3%|▎         | 53/1672 [00:03<02:04, 13.02it/s]  3%|▎         | 58/1672 [00:03<01:33, 17.35it/s]  4%|▎         | 61/1672 [00:03<01:28, 18.23it/s]  4%|▍         | 65/1672 [00:04<01:17, 20.63it/s]  4%|▍         | 69/1672 [00:04<01:20, 19.87it/s]  5%|▍         | 76/1672 [00:04<01:11, 22.24it/s]  5%|▍         | 81/1672 [00:04<00:59, 26.57it/s]  5%|▌         | 85/1672 [00:04<01:15, 21.08it/s]  5%|▌         | 89/1672 [00:05<01:26, 18.22it/s]  6%|▌         | 94/1672 [00:05<01:10, 22.42it/s]  6%|▌         | 97/1672 [00:05<01:07, 23.28it/s]  6%|▋         | 107/1672 [00:05<00:41, 37.48it/s]  7%|▋         | 112/1672 [00:05<00:40, 38.31it/s]  7%|▋         | 117/1672 [00:06<00:56, 27.43it/s]  7%|▋         | 121/1672 [00:06<00:58, 26.58it/s]  7%|▋         | 125/1672 [00:06<01:03, 24.49it/s]  8%|▊         | 128/1672 [00:06<01:03, 24.33it/s]  8%|▊         | 135/1672 [00:06<00:46, 32.86it/s]  9%|▊         | 143/1672 [00:06<00:36, 42.40it/s]  9%|▉         | 148/1672 [00:07<01:10, 21.72it/s]  9%|▉         | 152/1672 [00:07<01:06, 22.81it/s]  9%|▉         | 156/1672 [00:07<01:01, 24.47it/s] 10%|▉         | 160/1672 [00:07<00:56, 26.62it/s] 10%|▉         | 165/1672 [00:07<01:02, 24.09it/s] 10%|█         | 168/1672 [00:08<01:45, 14.29it/s] 10%|█         | 171/1672 [00:08<01:50, 13.53it/s] 10%|█         | 175/1672 [00:08<01:50, 13.55it/s] 11%|█         | 177/1672 [00:09<01:58, 12.67it/s] 11%|█         | 179/1672 [00:09<02:25, 10.25it/s] 11%|█         | 184/1672 [00:09<02:06, 11.80it/s] 11%|█         | 188/1672 [00:10<01:43, 14.39it/s] 11%|█▏        | 190/1672 [00:10<01:39, 14.92it/s] 11%|█▏        | 192/1672 [00:10<02:46,  8.89it/s] 12%|█▏        | 194/1672 [00:10<02:25, 10.13it/s] 12%|█▏        | 196/1672 [00:10<02:27, 10.04it/s] 12%|█▏        | 198/1672 [00:11<03:19,  7.40it/s] 12%|█▏        | 207/1672 [00:11<02:03, 11.83it/s] 13%|█▎        | 212/1672 [00:12<01:32, 15.73it/s] 13%|█▎        | 215/1672 [00:12<01:50, 13.23it/s] 13%|█▎        | 217/1672 [00:12<02:07, 11.45it/s] 13%|█▎        | 219/1672 [00:12<02:00, 12.09it/s] 13%|█▎        | 224/1672 [00:12<01:22, 17.58it/s] 14%|█▎        | 228/1672 [00:13<01:11, 20.17it/s] 14%|█▍        | 231/1672 [00:13<01:14, 19.34it/s] 14%|█▍        | 234/1672 [00:13<01:38, 14.64it/s] 14%|█▍        | 239/1672 [00:13<01:13, 19.45it/s] 14%|█▍        | 242/1672 [00:13<01:09, 20.58it/s] 15%|█▍        | 245/1672 [00:13<01:05, 21.67it/s] 15%|█▍        | 248/1672 [00:14<01:20, 17.68it/s] 15%|█▌        | 251/1672 [00:14<01:19, 17.82it/s] 15%|█▌        | 254/1672 [00:14<01:13, 19.19it/s] 15%|█▌        | 257/1672 [00:14<01:14, 18.90it/s] 16%|█▌        | 260/1672 [00:15<02:38,  8.89it/s] 16%|█▌        | 262/1672 [00:15<02:45,  8.51it/s] 16%|█▌        | 266/1672 [00:15<01:55, 12.18it/s] 16%|█▌        | 269/1672 [00:15<01:45, 13.24it/s] 16%|█▋        | 274/1672 [00:16<01:23, 16.66it/s] 17%|█▋        | 279/1672 [00:16<01:21, 17.01it/s] 17%|█▋        | 282/1672 [00:16<01:14, 18.59it/s] 17%|█▋        | 285/1672 [00:16<01:29, 15.58it/s] 17%|█▋        | 289/1672 [00:16<01:14, 18.67it/s] 18%|█▊        | 295/1672 [00:17<00:58, 23.59it/s] 18%|█▊        | 300/1672 [00:17<00:48, 28.47it/s] 18%|█▊        | 304/1672 [00:17<01:15, 18.16it/s] 18%|█▊        | 307/1672 [00:17<01:11, 19.01it/s] 19%|█▊        | 310/1672 [00:18<01:49, 12.41it/s] 19%|█▉        | 316/1672 [00:18<01:14, 18.16it/s] 19%|█▉        | 319/1672 [00:18<01:13, 18.48it/s] 19%|█▉        | 325/1672 [00:18<00:56, 23.65it/s] 20%|█▉        | 329/1672 [00:19<01:12, 18.52it/s] 20%|█▉        | 332/1672 [00:19<01:24, 15.80it/s] 20%|██        | 335/1672 [00:20<03:01,  7.35it/s] 20%|██        | 337/1672 [00:21<04:00,  5.54it/s] 20%|██        | 340/1672 [00:21<03:47,  5.85it/s] 20%|██        | 342/1672 [00:21<03:14,  6.83it/s] 21%|██        | 345/1672 [00:21<02:49,  7.84it/s] 21%|██        | 347/1672 [00:22<03:35,  6.16it/s] 21%|██        | 351/1672 [00:22<02:25,  9.05it/s] 21%|██        | 353/1672 [00:22<02:15,  9.73it/s] 21%|██▏       | 358/1672 [00:22<01:28, 14.92it/s] 22%|██▏       | 361/1672 [00:23<01:18, 16.75it/s] 22%|██▏       | 364/1672 [00:23<01:48, 12.03it/s] 22%|██▏       | 367/1672 [00:23<01:44, 12.53it/s] 22%|██▏       | 371/1672 [00:23<01:25, 15.14it/s] 22%|██▏       | 373/1672 [00:24<01:34, 13.72it/s] 22%|██▏       | 375/1672 [00:24<01:38, 13.14it/s] 23%|██▎       | 377/1672 [00:24<01:35, 13.53it/s] 23%|██▎       | 379/1672 [00:24<01:29, 14.40it/s] 23%|██▎       | 382/1672 [00:24<02:10,  9.87it/s] 23%|██▎       | 385/1672 [00:25<02:03, 10.41it/s] 23%|██▎       | 387/1672 [00:25<02:12,  9.68it/s] 23%|██▎       | 391/1672 [00:25<01:38, 12.96it/s] 24%|██▎       | 393/1672 [00:25<01:44, 12.28it/s] 24%|██▎       | 395/1672 [00:26<02:11,  9.72it/s] 24%|██▎       | 397/1672 [00:26<01:55, 10.99it/s] 24%|██▍       | 401/1672 [00:26<01:21, 15.64it/s] 24%|██▍       | 407/1672 [00:26<01:04, 19.66it/s] 25%|██▍       | 411/1672 [00:27<01:33, 13.49it/s] 25%|██▍       | 413/1672 [00:27<01:28, 14.21it/s] 25%|██▍       | 415/1672 [00:27<01:26, 14.56it/s] 25%|██▌       | 420/1672 [00:27<01:02, 19.91it/s] 25%|██▌       | 423/1672 [00:27<01:03, 19.72it/s] 25%|██▌       | 426/1672 [00:27<01:18, 15.97it/s] 26%|██▌       | 431/1672 [00:28<01:07, 18.52it/s] 26%|██▌       | 434/1672 [00:28<01:39, 12.39it/s] 26%|██▋       | 439/1672 [00:28<01:16, 16.11it/s] 26%|██▋       | 442/1672 [00:28<01:12, 16.87it/s] 27%|██▋       | 447/1672 [00:28<00:55, 22.17it/s] 27%|██▋       | 450/1672 [00:29<01:10, 17.31it/s] 27%|██▋       | 457/1672 [00:29<00:47, 25.70it/s] 28%|██▊       | 463/1672 [00:29<00:40, 29.68it/s] 28%|██▊       | 467/1672 [00:29<00:48, 24.71it/s] 28%|██▊       | 471/1672 [00:30<01:22, 14.56it/s] 28%|██▊       | 474/1672 [00:30<01:14, 16.07it/s] 29%|██▊       | 480/1672 [00:30<01:00, 19.82it/s] 29%|██▉       | 483/1672 [00:30<00:57, 20.75it/s] 29%|██▉       | 486/1672 [00:30<01:00, 19.48it/s] 29%|██▉       | 489/1672 [00:31<00:59, 19.99it/s] 29%|██▉       | 492/1672 [00:31<01:21, 14.52it/s] 30%|██▉       | 494/1672 [00:31<01:47, 10.92it/s] 30%|██▉       | 497/1672 [00:31<01:34, 12.40it/s] 30%|██▉       | 500/1672 [00:32<01:18, 14.94it/s] 30%|███       | 502/1672 [00:32<01:46, 11.02it/s] 30%|███       | 505/1672 [00:33<02:22,  8.20it/s] 30%|███       | 507/1672 [00:33<02:47,  6.95it/s] 31%|███       | 510/1672 [00:33<02:14,  8.65it/s] 31%|███       | 512/1672 [00:33<02:05,  9.22it/s] 31%|███       | 518/1672 [00:33<01:12, 15.87it/s] 31%|███       | 522/1672 [00:34<01:17, 14.78it/s] 31%|███▏      | 525/1672 [00:34<01:19, 14.51it/s] 32%|███▏      | 528/1672 [00:34<01:20, 14.20it/s] 32%|███▏      | 532/1672 [00:34<01:06, 17.08it/s] 32%|███▏      | 540/1672 [00:34<00:42, 26.39it/s] 33%|███▎      | 545/1672 [00:35<00:43, 26.20it/s] 33%|███▎      | 549/1672 [00:35<01:20, 13.87it/s] 33%|███▎      | 552/1672 [00:35<01:12, 15.47it/s] 33%|███▎      | 555/1672 [00:36<01:11, 15.70it/s] 33%|███▎      | 559/1672 [00:36<00:58, 19.05it/s] 34%|███▎      | 563/1672 [00:36<00:50, 21.85it/s] 34%|███▍      | 566/1672 [00:36<00:53, 20.53it/s] 34%|███▍      | 569/1672 [00:36<00:57, 19.20it/s] 34%|███▍      | 572/1672 [00:36<01:08, 16.02it/s] 34%|███▍      | 574/1672 [00:37<01:10, 15.56it/s] 35%|███▍      | 579/1672 [00:37<00:52, 20.93it/s] 35%|███▍      | 582/1672 [00:37<00:55, 19.49it/s] 35%|███▍      | 585/1672 [00:37<00:51, 21.09it/s] 35%|███▌      | 588/1672 [00:37<00:48, 22.43it/s] 35%|███▌      | 592/1672 [00:38<01:29, 12.01it/s] 36%|███▌      | 594/1672 [00:38<01:45, 10.26it/s] 36%|███▌      | 596/1672 [00:39<02:58,  6.02it/s] 36%|███▌      | 599/1672 [00:39<02:16,  7.87it/s] 36%|███▌      | 603/1672 [00:39<01:39, 10.79it/s] 36%|███▌      | 605/1672 [00:40<02:15,  7.86it/s] 36%|███▋      | 609/1672 [00:40<01:36, 11.06it/s] 37%|███▋      | 611/1672 [00:40<01:53,  9.39it/s] 37%|███▋      | 613/1672 [00:40<01:39, 10.61it/s] 37%|███▋      | 616/1672 [00:40<01:19, 13.31it/s] 37%|███▋      | 619/1672 [00:40<01:05, 16.10it/s] 37%|███▋      | 622/1672 [00:41<00:59, 17.76it/s] 37%|███▋      | 625/1672 [00:41<00:51, 20.32it/s] 38%|███▊      | 628/1672 [00:41<00:57, 18.03it/s] 38%|███▊      | 631/1672 [00:41<01:01, 16.97it/s] 38%|███▊      | 634/1672 [00:41<00:59, 17.53it/s] 38%|███▊      | 636/1672 [00:41<01:04, 16.10it/s] 38%|███▊      | 638/1672 [00:42<02:42,  6.35it/s] 38%|███▊      | 640/1672 [00:43<02:57,  5.82it/s] 38%|███▊      | 642/1672 [00:43<02:38,  6.48it/s] 39%|███▉      | 649/1672 [00:43<01:17, 13.21it/s] 39%|███▉      | 653/1672 [00:43<01:01, 16.64it/s] 39%|███▉      | 657/1672 [00:43<00:50, 20.14it/s] 40%|███▉      | 661/1672 [00:44<00:58, 17.34it/s] 40%|███▉      | 667/1672 [00:44<00:41, 23.98it/s] 40%|████      | 673/1672 [00:44<00:36, 27.25it/s] 40%|████      | 677/1672 [00:44<00:50, 19.82it/s] 41%|████      | 681/1672 [00:44<00:45, 21.75it/s] 41%|████      | 684/1672 [00:45<00:51, 19.24it/s] 41%|████▏     | 690/1672 [00:45<00:40, 24.13it/s] 42%|████▏     | 694/1672 [00:45<00:43, 22.64it/s] 42%|████▏     | 697/1672 [00:45<00:52, 18.61it/s] 42%|████▏     | 700/1672 [00:45<00:49, 19.65it/s] 42%|████▏     | 703/1672 [00:45<00:45, 21.39it/s] 42%|████▏     | 706/1672 [00:46<00:56, 17.06it/s] 42%|████▏     | 709/1672 [00:46<00:52, 18.33it/s] 43%|████▎     | 712/1672 [00:46<00:59, 16.23it/s] 43%|████▎     | 716/1672 [00:46<00:47, 20.13it/s] 43%|████▎     | 719/1672 [00:47<01:14, 12.75it/s] 43%|████▎     | 721/1672 [00:47<01:57,  8.10it/s] 43%|████▎     | 724/1672 [00:47<01:30, 10.44it/s] 44%|████▎     | 731/1672 [00:48<00:57, 16.43it/s] 44%|████▍     | 735/1672 [00:48<00:47, 19.55it/s] 44%|████▍     | 739/1672 [00:48<00:40, 22.98it/s] 44%|████▍     | 743/1672 [00:48<00:36, 25.30it/s] 45%|████▍     | 747/1672 [00:48<01:00, 15.20it/s] 45%|████▍     | 752/1672 [00:49<00:49, 18.66it/s] 45%|████▌     | 755/1672 [00:49<00:53, 17.22it/s] 45%|████▌     | 758/1672 [00:49<00:49, 18.40it/s] 46%|████▌     | 761/1672 [00:49<00:50, 18.21it/s] 46%|████▌     | 765/1672 [00:49<00:42, 21.18it/s] 46%|████▌     | 768/1672 [00:49<00:57, 15.74it/s] 46%|████▌     | 771/1672 [00:50<00:52, 17.21it/s] 46%|████▋     | 774/1672 [00:50<01:08, 13.13it/s] 47%|████▋     | 779/1672 [00:50<00:48, 18.54it/s] 47%|████▋     | 782/1672 [00:50<00:50, 17.51it/s] 47%|████▋     | 785/1672 [00:51<01:12, 12.26it/s] 47%|████▋     | 788/1672 [00:51<01:12, 12.22it/s] 47%|████▋     | 790/1672 [00:52<02:06,  6.99it/s] 47%|████▋     | 792/1672 [00:52<02:30,  5.85it/s] 47%|████▋     | 793/1672 [00:52<02:21,  6.21it/s] 48%|████▊     | 799/1672 [00:52<01:13, 11.95it/s] 48%|████▊     | 804/1672 [00:53<00:53, 16.34it/s] 48%|████▊     | 807/1672 [00:53<00:49, 17.57it/s] 49%|████▊     | 811/1672 [00:53<00:42, 20.38it/s] 49%|████▊     | 814/1672 [00:53<00:46, 18.63it/s] 49%|████▉     | 817/1672 [00:53<00:42, 19.96it/s] 49%|████▉     | 821/1672 [00:53<00:39, 21.33it/s] 49%|████▉     | 824/1672 [00:54<01:14, 11.33it/s] 49%|████▉     | 827/1672 [00:54<01:11, 11.89it/s] 50%|████▉     | 830/1672 [00:54<01:06, 12.66it/s] 50%|████▉     | 832/1672 [00:54<01:01, 13.61it/s] 50%|████▉     | 834/1672 [00:55<00:58, 14.29it/s] 50%|█████     | 836/1672 [00:55<01:01, 13.63it/s] 50%|█████     | 839/1672 [00:55<00:55, 15.07it/s] 50%|█████     | 843/1672 [00:55<00:45, 18.04it/s] 51%|█████     | 848/1672 [00:55<00:34, 23.93it/s] 51%|█████     | 854/1672 [00:55<00:26, 31.29it/s] 51%|█████▏    | 858/1672 [00:56<00:45, 17.77it/s] 52%|█████▏    | 862/1672 [00:56<00:42, 18.86it/s] 52%|█████▏    | 865/1672 [00:56<00:42, 18.80it/s] 52%|█████▏    | 868/1672 [00:56<00:52, 15.17it/s] 52%|█████▏    | 870/1672 [00:57<00:59, 13.45it/s] 52%|█████▏    | 873/1672 [00:57<01:04, 12.34it/s] 52%|█████▏    | 876/1672 [00:57<01:23,  9.58it/s] 53%|█████▎    | 878/1672 [00:58<01:17, 10.25it/s] 53%|█████▎    | 881/1672 [00:58<01:02, 12.73it/s] 53%|█████▎    | 883/1672 [00:58<00:57, 13.82it/s] 53%|█████▎    | 888/1672 [00:58<00:45, 17.38it/s] 53%|█████▎    | 893/1672 [00:58<00:33, 23.32it/s] 54%|█████▎    | 896/1672 [00:58<00:35, 21.69it/s] 54%|█████▍    | 899/1672 [00:58<00:38, 20.20it/s] 54%|█████▍    | 902/1672 [00:59<00:58, 13.20it/s] 54%|█████▍    | 905/1672 [00:59<00:56, 13.58it/s] 54%|█████▍    | 908/1672 [00:59<00:49, 15.48it/s] 54%|█████▍    | 910/1672 [00:59<00:47, 16.03it/s] 55%|█████▍    | 918/1672 [00:59<00:27, 27.78it/s] 55%|█████▌    | 924/1672 [01:00<00:24, 30.61it/s] 56%|█████▌    | 928/1672 [01:00<00:54, 13.57it/s] 56%|█████▌    | 933/1672 [01:00<00:42, 17.43it/s] 56%|█████▌    | 937/1672 [01:01<00:37, 19.44it/s] 56%|█████▋    | 943/1672 [01:01<00:36, 19.88it/s] 57%|█████▋    | 946/1672 [01:01<00:51, 14.05it/s] 57%|█████▋    | 949/1672 [01:02<01:06, 10.87it/s] 57%|█████▋    | 951/1672 [01:02<01:15,  9.49it/s] 57%|█████▋    | 953/1672 [01:02<01:12,  9.89it/s] 57%|█████▋    | 955/1672 [01:02<01:09, 10.32it/s] 57%|█████▋    | 957/1672 [01:03<01:27,  8.13it/s] 57%|█████▋    | 959/1672 [01:03<01:29,  7.95it/s] 57%|█████▋    | 960/1672 [01:03<01:37,  7.28it/s] 58%|█████▊    | 966/1672 [01:04<00:52, 13.39it/s] 58%|█████▊    | 968/1672 [01:04<00:49, 14.13it/s] 58%|█████▊    | 972/1672 [01:04<00:51, 13.66it/s] 58%|█████▊    | 974/1672 [01:04<00:50, 13.88it/s] 58%|█████▊    | 978/1672 [01:04<00:40, 17.18it/s] 59%|█████▊    | 980/1672 [01:05<01:10,  9.80it/s] 59%|█████▉    | 985/1672 [01:05<00:46, 14.81it/s] 59%|█████▉    | 988/1672 [01:05<00:58, 11.72it/s] 59%|█████▉    | 991/1672 [01:05<00:53, 12.63it/s] 59%|█████▉    | 993/1672 [01:06<00:57, 11.89it/s] 60%|█████▉    | 996/1672 [01:06<00:48, 13.83it/s] 60%|█████▉    | 998/1672 [01:06<01:00, 11.22it/s] 60%|█████▉    | 1000/1672 [01:06<01:07, 10.00it/s] 60%|█████▉    | 1002/1672 [01:06<01:00, 11.08it/s] 60%|██████    | 1008/1672 [01:07<00:35, 18.52it/s] 60%|██████    | 1011/1672 [01:07<00:48, 13.53it/s] 61%|██████    | 1013/1672 [01:07<00:46, 14.27it/s] 61%|██████    | 1016/1672 [01:07<00:39, 16.71it/s] 61%|██████    | 1021/1672 [01:07<00:29, 22.23it/s] 61%|██████    | 1024/1672 [01:08<00:35, 18.03it/s] 62%|██████▏   | 1029/1672 [01:08<00:31, 20.59it/s] 62%|██████▏   | 1034/1672 [01:08<00:24, 25.68it/s] 62%|██████▏   | 1042/1672 [01:08<00:22, 28.60it/s] 63%|██████▎   | 1046/1672 [01:09<00:37, 16.90it/s] 63%|██████▎   | 1051/1672 [01:09<00:30, 20.69it/s] 63%|██████▎   | 1054/1672 [01:09<00:35, 17.48it/s] 63%|██████▎   | 1057/1672 [01:09<00:43, 14.22it/s] 63%|██████▎   | 1059/1672 [01:10<00:43, 13.97it/s] 64%|██████▎   | 1062/1672 [01:10<00:38, 15.93it/s] 64%|██████▎   | 1064/1672 [01:10<00:36, 16.57it/s] 64%|██████▍   | 1066/1672 [01:10<00:38, 15.93it/s] 64%|██████▍   | 1073/1672 [01:10<00:22, 26.71it/s] 64%|██████▍   | 1077/1672 [01:10<00:20, 28.67it/s] 65%|██████▍   | 1081/1672 [01:10<00:27, 21.22it/s] 65%|██████▍   | 1084/1672 [01:11<00:27, 21.12it/s] 65%|██████▌   | 1087/1672 [01:11<00:28, 20.76it/s] 65%|██████▌   | 1094/1672 [01:11<00:18, 30.65it/s] 66%|██████▌   | 1098/1672 [01:11<00:18, 31.05it/s] 66%|██████▌   | 1102/1672 [01:11<00:17, 32.40it/s] 66%|██████▌   | 1106/1672 [01:11<00:17, 32.30it/s] 66%|██████▋   | 1110/1672 [01:11<00:20, 27.88it/s] 67%|██████▋   | 1114/1672 [01:12<00:31, 17.75it/s] 67%|██████▋   | 1117/1672 [01:12<00:40, 13.76it/s] 67%|██████▋   | 1121/1672 [01:13<00:57,  9.50it/s] 67%|██████▋   | 1123/1672 [01:13<00:52, 10.38it/s] 67%|██████▋   | 1127/1672 [01:13<00:42, 12.92it/s] 68%|██████▊   | 1129/1672 [01:13<00:49, 11.08it/s] 68%|██████▊   | 1134/1672 [01:14<00:34, 15.72it/s] 68%|██████▊   | 1138/1672 [01:14<00:27, 19.31it/s] 68%|██████▊   | 1145/1672 [01:14<00:18, 28.47it/s] 69%|██████▊   | 1149/1672 [01:14<00:30, 17.19it/s] 69%|██████▉   | 1154/1672 [01:15<00:34, 14.93it/s] 69%|██████▉   | 1157/1672 [01:15<00:35, 14.36it/s] 69%|██████▉   | 1160/1672 [01:15<00:32, 15.95it/s] 70%|██████▉   | 1163/1672 [01:15<00:33, 15.18it/s] 70%|██████▉   | 1165/1672 [01:16<00:42, 12.07it/s] 70%|██████▉   | 1167/1672 [01:16<00:46, 10.82it/s] 70%|███████   | 1171/1672 [01:16<00:55,  8.97it/s] 70%|███████   | 1173/1672 [01:17<01:01,  8.16it/s] 70%|███████   | 1175/1672 [01:17<00:55,  8.95it/s] 70%|███████   | 1177/1672 [01:17<00:51,  9.58it/s] 71%|███████   | 1179/1672 [01:17<00:46, 10.60it/s] 71%|███████   | 1181/1672 [01:17<00:41, 11.95it/s] 71%|███████   | 1183/1672 [01:18<00:43, 11.14it/s] 71%|███████   | 1185/1672 [01:18<00:56,  8.66it/s] 71%|███████   | 1188/1672 [01:18<00:45, 10.66it/s] 71%|███████   | 1191/1672 [01:18<00:35, 13.43it/s] 71%|███████▏  | 1193/1672 [01:18<00:33, 14.28it/s] 72%|███████▏  | 1196/1672 [01:19<00:39, 11.91it/s] 72%|███████▏  | 1199/1672 [01:19<00:31, 14.85it/s] 72%|███████▏  | 1201/1672 [01:19<00:30, 15.53it/s] 72%|███████▏  | 1204/1672 [01:19<00:45, 10.32it/s] 72%|███████▏  | 1206/1672 [01:19<00:41, 11.16it/s] 72%|███████▏  | 1208/1672 [01:20<00:39, 11.67it/s] 72%|███████▏  | 1210/1672 [01:20<01:04,  7.13it/s] 73%|███████▎  | 1213/1672 [01:20<00:49,  9.29it/s] 73%|███████▎  | 1217/1672 [01:20<00:34, 13.16it/s] 73%|███████▎  | 1220/1672 [01:21<00:30, 14.74it/s] 73%|███████▎  | 1224/1672 [01:21<00:28, 15.87it/s] 73%|███████▎  | 1226/1672 [01:21<00:29, 15.29it/s] 74%|███████▎  | 1229/1672 [01:21<00:25, 17.47it/s] 74%|███████▎  | 1233/1672 [01:21<00:20, 21.85it/s] 74%|███████▍  | 1236/1672 [01:21<00:25, 17.23it/s] 74%|███████▍  | 1239/1672 [01:22<00:28, 15.21it/s] 74%|███████▍  | 1241/1672 [01:22<00:33, 12.73it/s] 75%|███████▍  | 1249/1672 [01:22<00:18, 22.98it/s] 75%|███████▍  | 1253/1672 [01:22<00:17, 24.12it/s] 75%|███████▌  | 1256/1672 [01:23<00:27, 15.30it/s] 75%|███████▌  | 1260/1672 [01:23<00:24, 16.53it/s] 76%|███████▌  | 1263/1672 [01:23<00:24, 16.48it/s] 76%|███████▌  | 1266/1672 [01:23<00:27, 15.01it/s] 76%|███████▌  | 1268/1672 [01:24<00:38, 10.43it/s] 76%|███████▌  | 1271/1672 [01:24<00:31, 12.88it/s] 76%|███████▌  | 1273/1672 [01:24<00:29, 13.33it/s] 76%|███████▋  | 1275/1672 [01:24<00:28, 13.95it/s] 77%|███████▋  | 1281/1672 [01:24<00:18, 21.24it/s] 77%|███████▋  | 1284/1672 [01:25<00:25, 15.24it/s] 77%|███████▋  | 1287/1672 [01:25<00:24, 15.80it/s] 77%|███████▋  | 1289/1672 [01:25<00:25, 15.12it/s] 77%|███████▋  | 1291/1672 [01:25<00:29, 12.90it/s] 78%|███████▊  | 1296/1672 [01:25<00:22, 16.63it/s] 78%|███████▊  | 1298/1672 [01:26<00:30, 12.19it/s] 78%|███████▊  | 1305/1672 [01:26<00:17, 20.92it/s] 78%|███████▊  | 1310/1672 [01:26<00:16, 21.76it/s] 79%|███████▊  | 1313/1672 [01:27<00:38,  9.30it/s] 79%|███████▊  | 1316/1672 [01:27<00:32, 11.08it/s] 79%|███████▉  | 1319/1672 [01:28<00:45,  7.84it/s] 79%|███████▉  | 1321/1672 [01:28<00:41,  8.47it/s] 79%|███████▉  | 1326/1672 [01:28<00:27, 12.48it/s] 80%|███████▉  | 1330/1672 [01:28<00:23, 14.58it/s] 80%|███████▉  | 1335/1672 [01:28<00:17, 19.60it/s] 80%|████████  | 1339/1672 [01:28<00:16, 20.24it/s] 80%|████████  | 1342/1672 [01:29<00:32, 10.13it/s] 80%|████████  | 1345/1672 [01:29<00:28, 11.39it/s] 81%|████████  | 1348/1672 [01:30<00:25, 12.90it/s] 81%|████████  | 1352/1672 [01:30<00:23, 13.86it/s] 81%|████████  | 1354/1672 [01:30<00:22, 14.29it/s] 81%|████████▏ | 1360/1672 [01:30<00:16, 18.58it/s] 82%|████████▏ | 1363/1672 [01:30<00:16, 18.26it/s] 82%|████████▏ | 1366/1672 [01:31<00:22, 13.90it/s] 82%|████████▏ | 1368/1672 [01:31<00:21, 14.11it/s] 82%|████████▏ | 1374/1672 [01:31<00:13, 21.50it/s] 82%|████████▏ | 1378/1672 [01:31<00:12, 23.98it/s] 83%|████████▎ | 1384/1672 [01:31<00:09, 31.31it/s] 83%|████████▎ | 1388/1672 [01:32<00:24, 11.54it/s] 83%|████████▎ | 1392/1672 [01:32<00:21, 13.10it/s] 83%|████████▎ | 1395/1672 [01:32<00:20, 13.58it/s] 84%|████████▎ | 1399/1672 [01:33<00:16, 16.23it/s] 84%|████████▍ | 1402/1672 [01:33<00:16, 16.73it/s] 84%|████████▍ | 1405/1672 [01:33<00:21, 12.53it/s] 84%|████████▍ | 1407/1672 [01:33<00:20, 12.69it/s] 84%|████████▍ | 1412/1672 [01:33<00:14, 18.34it/s] 85%|████████▍ | 1415/1672 [01:34<00:16, 15.41it/s] 85%|████████▍ | 1418/1672 [01:34<00:18, 13.94it/s] 85%|████████▍ | 1420/1672 [01:34<00:20, 12.21it/s] 85%|████████▌ | 1423/1672 [01:35<00:25,  9.83it/s] 85%|████████▌ | 1428/1672 [01:35<00:18, 12.96it/s] 86%|████████▌ | 1430/1672 [01:35<00:23, 10.15it/s] 86%|████████▌ | 1432/1672 [01:35<00:24,  9.97it/s] 86%|████████▌ | 1438/1672 [01:36<00:14, 16.62it/s] 86%|████████▌ | 1441/1672 [01:36<00:12, 17.81it/s] 86%|████████▋ | 1444/1672 [01:36<00:11, 19.08it/s] 87%|████████▋ | 1447/1672 [01:36<00:13, 16.80it/s] 87%|████████▋ | 1450/1672 [01:36<00:12, 18.40it/s] 87%|████████▋ | 1453/1672 [01:36<00:11, 18.79it/s] 87%|████████▋ | 1461/1672 [01:36<00:07, 30.02it/s] 88%|████████▊ | 1465/1672 [01:37<00:12, 16.34it/s] 88%|████████▊ | 1468/1672 [01:37<00:12, 15.83it/s] 88%|████████▊ | 1471/1672 [01:37<00:12, 16.15it/s] 88%|████████▊ | 1474/1672 [01:38<00:14, 13.62it/s] 88%|████████▊ | 1476/1672 [01:38<00:13, 14.39it/s] 89%|████████▊ | 1483/1672 [01:38<00:08, 23.26it/s] 89%|████████▉ | 1487/1672 [01:38<00:11, 15.84it/s] 89%|████████▉ | 1490/1672 [01:39<00:13, 13.57it/s] 89%|████████▉ | 1494/1672 [01:39<00:10, 16.99it/s] 90%|████████▉ | 1500/1672 [01:39<00:07, 21.55it/s] 90%|████████▉ | 1503/1672 [01:39<00:07, 22.40it/s] 90%|█████████ | 1506/1672 [01:39<00:10, 15.74it/s] 90%|█████████ | 1509/1672 [01:40<00:10, 14.90it/s] 90%|█████████ | 1511/1672 [01:40<00:13, 12.34it/s] 91%|█████████ | 1515/1672 [01:40<00:11, 13.99it/s] 91%|█████████ | 1517/1672 [01:41<00:14, 10.34it/s] 91%|█████████ | 1519/1672 [01:41<00:17,  8.86it/s] 91%|█████████ | 1522/1672 [01:41<00:13, 11.43it/s] 91%|█████████ | 1524/1672 [01:41<00:12, 11.97it/s] 91%|█████████▏| 1526/1672 [01:41<00:12, 11.60it/s] 92%|█████████▏| 1530/1672 [01:41<00:08, 16.31it/s] 92%|█████████▏| 1533/1672 [01:42<00:08, 17.15it/s] 92%|█████████▏| 1541/1672 [01:42<00:06, 21.37it/s] 92%|█████████▏| 1544/1672 [01:42<00:05, 21.68it/s] 93%|█████████▎| 1548/1672 [01:42<00:07, 15.85it/s] 93%|█████████▎| 1552/1672 [01:43<00:08, 13.91it/s] 93%|█████████▎| 1554/1672 [01:43<00:09, 12.48it/s] 93%|█████████▎| 1556/1672 [01:43<00:08, 12.95it/s] 93%|█████████▎| 1559/1672 [01:44<00:10, 10.53it/s] 93%|█████████▎| 1561/1672 [01:44<00:12,  8.54it/s] 93%|█████████▎| 1563/1672 [01:44<00:12,  8.78it/s] 94%|█████████▍| 1570/1672 [01:44<00:06, 15.28it/s] 94%|█████████▍| 1573/1672 [01:45<00:06, 15.97it/s] 94%|█████████▍| 1575/1672 [01:45<00:06, 15.50it/s] 94%|█████████▍| 1578/1672 [01:45<00:05, 17.39it/s] 95%|█████████▍| 1583/1672 [01:45<00:03, 23.48it/s] 95%|█████████▌| 1590/1672 [01:45<00:02, 31.66it/s] 95%|█████████▌| 1594/1672 [01:45<00:02, 33.15it/s] 96%|█████████▌| 1599/1672 [01:45<00:02, 33.03it/s] 96%|█████████▌| 1604/1672 [01:45<00:01, 36.57it/s] 96%|█████████▌| 1608/1672 [01:46<00:02, 21.68it/s] 96%|█████████▋| 1613/1672 [01:46<00:02, 26.42it/s] 97%|█████████▋| 1617/1672 [01:46<00:02, 27.48it/s] 97%|█████████▋| 1621/1672 [01:46<00:02, 20.46it/s] 97%|█████████▋| 1624/1672 [01:47<00:03, 14.89it/s] 97%|█████████▋| 1628/1672 [01:47<00:02, 18.31it/s] 98%|█████████▊| 1631/1672 [01:47<00:02, 18.74it/s] 98%|█████████▊| 1634/1672 [01:47<00:03, 12.20it/s] 98%|█████████▊| 1636/1672 [01:48<00:02, 12.57it/s] 98%|█████████▊| 1638/1672 [01:48<00:02, 12.56it/s] 98%|█████████▊| 1640/1672 [01:48<00:03,  8.90it/s] 98%|█████████▊| 1643/1672 [01:49<00:03,  8.25it/s] 98%|█████████▊| 1645/1672 [01:49<00:04,  5.49it/s] 99%|█████████▊| 1649/1672 [01:50<00:03,  6.64it/s] 99%|█████████▉| 1652/1672 [01:50<00:02,  8.68it/s] 99%|█████████▉| 1654/1672 [01:50<00:01,  9.24it/s] 99%|█████████▉| 1656/1672 [01:50<00:01, 10.55it/s] 99%|█████████▉| 1660/1672 [01:50<00:00, 15.06it/s]100%|█████████▉| 1664/1672 [01:50<00:00, 19.52it/s]100%|█████████▉| 1668/1672 [01:50<00:00, 23.29it/s]100%|██████████| 1672/1672 [01:51<00:00, 20.51it/s]100%|██████████| 1672/1672 [01:51<00:00, 15.03it/s]
