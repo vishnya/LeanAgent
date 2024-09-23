@@ -1,0 +1,122 @@
+{
+  "repositories": [
+    {
+      "url": "https://github.com/test/repo",
+      "name": "Test Repo",
+      "commit": "abc123",
+      "lean_version": "3.50.3",
+      "lean_dojo_version": "1.8.4",
+      "metadata": {
+        "date_processed": "2024-09-05T00:11:47.578909"
+      },
+      "total_theorems": 4,
+      "num_proven_theorems": 3,
+      "num_sorry_theorems": 1,
+      "num_sorry_theorems_proved": 0,
+      "num_sorry_theorems_unproved": 1,
+      "num_premise_files": 0,
+      "num_premises": 0,
+      "num_files_traced": 0,
+      "proven_theorems": [
+        {
+          "full_name": "empty_theorem",
+          "theorem_statement": null,
+          "file_path": "test.lean",
+          "start": "(1, 1)",
+          "end": "(2, 1)",
+          "url": "https://github.com/test/repo",
+          "commit": "abc123",
+          "traced_tactics": [],
+          "difficulty_rating": null
+        },
+        {
+          "full_name": "proven_sorry_theorem",
+          "theorem_statement": null,
+          "file_path": "test.lean",
+          "start": "(1, 1)",
+          "end": "(2, 1)",
+          "url": "https://github.com/test/repo",
+          "commit": "abc123",
+          "traced_tactics": [
+            {
+              "tactic": "tactic1",
+              "annotated_tactic": [
+                "tactic1",
+                []
+              ],
+              "state_before": "",
+              "state_after": ""
+            },
+            {
+              "tactic": "tactic2",
+              "annotated_tactic": [
+                "tactic2",
+                []
+              ],
+              "state_before": "",
+              "state_after": ""
+            }
+          ],
+          "difficulty_rating": 7.38905609893065
+        },
+        {
+          "full_name": "normal_theorem",
+          "theorem_statement": null,
+          "file_path": "test.lean",
+          "start": "(1, 1)",
+          "end": "(2, 1)",
+          "url": "https://github.com/test/repo",
+          "commit": "abc123",
+          "traced_tactics": [
+            {
+              "tactic": "tactic1",
+              "annotated_tactic": [
+                "tactic1",
+                []
+              ],
+              "state_before": "before",
+              "state_after": "no goals"
+            },
+            {
+              "tactic": "tactic2",
+              "annotated_tactic": [
+                "tactic2",
+                []
+              ],
+              "state_before": "before2",
+              "state_after": "no goals"
+            }
+          ],
+          "difficulty_rating": 7.38905609893065
+        }
+      ],
+      "sorry_theorems_proved": [],
+      "sorry_theorems_unproved": [
+        {
+          "full_name": "sorry_theorem",
+          "theorem_statement": null,
+          "file_path": "test.lean",
+          "start": "(1, 1)",
+          "end": "(2, 1)",
+          "url": "https://github.com/test/repo",
+          "commit": "abc123",
+          "traced_tactics": [
+            {
+              "tactic": "sorry",
+              "annotated_tactic": [
+                "sorry",
+                []
+              ],
+              "state_before": "",
+              "state_after": ""
+            }
+          ],
+          "difficulty_rating": Infinity
+        }
+      ],
+      "premise_files": [],
+      "files_traced": [],
+      "pr_url": null
+    }
+  ]
+}
