@@ -538,7 +538,7 @@ Intermediate results for /data/yingzi_ma/lean_project/datasets_PT_single_repo_no
 R@1 = 29.346526624443335 %, R@10 = 68.11073852391672 %, MRR = 0.5883430561814929
 
 
-Average R@1 = nan %, R@10 = nan %, MRR = nan
+Average R@1 = nan %, R@10 = 68.7539407133 %, MRR = nan
 
 
 Results for merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f with lambda = 0.1
@@ -565,7 +565,7 @@ R@1 = 31.221239697802194 %, R@10 = 71.41297504578755 %, MRR = 0.6419682853291457
 Intermediate results for /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/random/test.json
 
 
-R@1 = nan %, R@10 = nan %, MRR = nan
+R@1 = nan %, R@10 = 70.12 %, MRR = nan
 
 
 Intermediate results for /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a/random/test.json
@@ -595,7 +595,7 @@ R@1 = 28.066713237862384 %, R@10 = 67.88333915473281 %, MRR = 0.5845301077042466
 Intermediate results for /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_debate_7fb39251b705797ee54e08c96177fabd29a5b5a3/random/test.json
 
 
-R@1 = nan %, R@10 = nan %, MRR = nan
+R@1 = nan %, R@10 = 68.54 %, MRR = nan
 
 
 Intermediate results for /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/test.json
@@ -614,3 +614,12 @@ Intermediate results for /data/yingzi_ma/lean_project/datasets_PT_single_repo_no
 
 
 R@1 = 26.852517157923394 %, R@10 = 68.12338877981026 %, MRR = 0.5707034717237056
+
+
+Intermediate results for /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d/random/test.json
+
+
+R@1 = 28.841387209876935 %, R@10 = 67.92131771554409 %, MRR = 0.5851147883341764
+
+
+Average R@1 = nan %, R@10 = 69.5098362612 %, MRR = nan
