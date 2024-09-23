@@ -1174,7 +1174,7 @@ def should_skip_repo():
 # TODO: incorporate latest changes from ReProver repo
 def main():
     """The main function that drives the bot."""
-    new_data_path = "/data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc_curriculum/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687"
+    new_data_path = "/data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc_curriculum/merged_with_new_hairy-ball-theorem-lean_a778826d19c8a7ddf1d26beeea628c45450612e6"
     try:
         logger.info("Calculating Fisher Information Matrix for EWC")
         ### FISHER INFORMATION MATRIX FOR NEXT EWC
