@@ -1,0 +1,867 @@
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+[31mCould not terminate `[1m/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py[22m[26m` due to (pid=2527733, name='python3')[39m
+Did not find any active Ray processes.
+Running main3_more_sorries.py
+[2024-09-17 20:08:47,801] [WARNING] [real_accelerator.py:162:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+[2024-09-17 20:08:47,802] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+WARNING 09-17 20:08:49 _custom_ops.py:18] Failed to import from vllm._C with ImportError('libcuda.so.1: cannot open shared object file: No such file or directory')
+2024-09-17 20:08:52.778 | INFO     | __main__:main:1507 - Running progressive training
+2024-09-17 20:08:52.779 | INFO     | __main__:main:1513 - Configuring LeanDojo...
+2024-09-17 20:08:52.782 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 20:08:52.782 | INFO     | __main__:main:1515 - LeanDojo configured
+2024-09-17 20:08:52.782 | INFO     | __main__:main:1520 - Starting the main process
+2024-09-17 20:08:52.783 | INFO     | __main__:main:1528 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 20:09:26.202 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 20:09:26.202 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 20:09:34.989 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 20:09:34.989 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 20:09:41.422 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 20:09:41.423 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 20:09:43.364 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 20:09:43.365 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 20:09:50.560 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 20:09:50.560 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 20:09:58.635 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 20:09:58.635 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 20:09:59.308 | INFO     | __main__:main:1530 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 20:09:59.309 | INFO     | __main__:main:1537 - Found 100 repositories
+2024-09-17 20:09:59.309 | INFO     | __main__:main:1540 - Starting curriculum learning
+2024-09-17 20:10:01.123 | INFO     | __main__:search_github_repositories:711 - Processing RemyDegenne/testing-lower-bounds
+2024-09-17 20:10:01.123 | INFO     | __main__:search_github_repositories:736 - Skipping RemyDegenne/testing-lower-bounds since it is a known repository
+2024-09-17 20:10:01.123 | INFO     | __main__:search_github_repositories:711 - Processing Seasawher/ZeroD.lean
+2024-09-17 20:10:01.123 | INFO     | __main__:search_github_repositories:736 - Skipping Seasawher/ZeroD.lean since it is a known repository
+2024-09-17 20:10:01.123 | INFO     | __main__:search_github_repositories:711 - Processing jiakai0419/L42
+2024-09-17 20:10:01.124 | INFO     | __main__:search_github_repositories:736 - Skipping jiakai0419/L42 since it is a known repository
+2024-09-17 20:10:01.124 | INFO     | __main__:search_github_repositories:711 - Processing BurnieBoi/LEAN-Projects-Local
+2024-09-17 20:10:01.124 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/BurnieBoi/LEAN-Projects-Local.git
+2024-09-17 20:10:01.124 | INFO     | __main__:clone_repo:513 - Repo name: BurnieBoi/LEAN-Projects-Local
+2024-09-17 20:10:01.860 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/BurnieBoi/LEAN-Projects-Local/ff4c8c5f1d61c69423a7f5e77514ef9475939e97/lean-toolchain failed. Retrying...
+2024-09-17 20:10:02.895 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/BurnieBoi/LEAN-Projects-Local/ff4c8c5f1d61c69423a7f5e77514ef9475939e97/lean-toolchain failed. Retrying...
+2024-09-17 20:10:04.927 | INFO     | __main__:search_github_repositories:734 - Failed to clone BurnieBoi/LEAN-Projects-Local because of HTTP Error 404: Not Found
+2024-09-17 20:10:04.929 | INFO     | __main__:search_github_repositories:711 - Processing abdoo8080/lean-cvc5
+2024-09-17 20:10:04.930 | INFO     | __main__:search_github_repositories:736 - Skipping abdoo8080/lean-cvc5 since it is a known repository
+2024-09-17 20:10:04.930 | INFO     | __main__:search_github_repositories:711 - Processing peabrainiac/lean-orbifolds
+2024-09-17 20:10:04.930 | INFO     | __main__:search_github_repositories:736 - Skipping peabrainiac/lean-orbifolds since it is a known repository
+2024-09-17 20:10:04.930 | INFO     | __main__:search_github_repositories:711 - Processing vbeffara/Curvint
+2024-09-17 20:10:04.930 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/vbeffara/Curvint.git
+2024-09-17 20:10:04.930 | INFO     | __main__:clone_repo:513 - Repo name: vbeffara/Curvint
+2024-09-17 20:10:05.593 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/vbeffara/Curvint/4d3de2a6d306f04d4b8a4306b8195e46c138a3a8/lean-toolchain failed. Retrying...
+2024-09-17 20:10:06.633 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/vbeffara/Curvint/4d3de2a6d306f04d4b8a4306b8195e46c138a3a8/lean-toolchain failed. Retrying...
+2024-09-17 20:10:08.668 | INFO     | __main__:search_github_repositories:734 - Failed to clone vbeffara/Curvint because of HTTP Error 404: Not Found
+2024-09-17 20:10:08.670 | INFO     | __main__:search_github_repositories:711 - Processing soulsource/BinaryHeap
+2024-09-17 20:10:08.672 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/soulsource/BinaryHeap.git
+2024-09-17 20:10:08.672 | INFO     | __main__:clone_repo:513 - Repo name: soulsource/BinaryHeap
+2024-09-17 20:10:09.325 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 4.11
+2024-09-17 20:10:26.499 | INFO     | __main__:search_github_repositories:734 - Failed to clone soulsource/BinaryHeap because of Invalid tag or branch: `4.11` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:10:26.500 | INFO     | __main__:search_github_repositories:711 - Processing AlexKontorovich/PrimeNumberTheoremAnd
+2024-09-17 20:10:26.500 | INFO     | __main__:search_github_repositories:736 - Skipping AlexKontorovich/PrimeNumberTheoremAnd since it is a known repository
+2024-09-17 20:10:26.500 | INFO     | __main__:search_github_repositories:711 - Processing girving/interval
+2024-09-17 20:10:26.500 | INFO     | __main__:search_github_repositories:736 - Skipping girving/interval since it is a known repository
+2024-09-17 20:10:26.500 | INFO     | __main__:search_github_repositories:711 - Processing paivan1999/Formalising-mathematics-in-Lean-theorem-prover
+2024-09-17 20:10:26.500 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/paivan1999/Formalising-mathematics-in-Lean-theorem-prover.git
+2024-09-17 20:10:26.500 | INFO     | __main__:clone_repo:513 - Repo name: paivan1999/Formalising-mathematics-in-Lean-theorem-prover
+2024-09-17 20:10:27.187 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/paivan1999/Formalising-mathematics-in-Lean-theorem-prover/43a368231a34b3c620bd58e3223c8f87f8554327/lean-toolchain failed. Retrying...
+2024-09-17 20:10:28.223 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/paivan1999/Formalising-mathematics-in-Lean-theorem-prover/43a368231a34b3c620bd58e3223c8f87f8554327/lean-toolchain failed. Retrying...
+2024-09-17 20:10:30.260 | INFO     | __main__:search_github_repositories:734 - Failed to clone paivan1999/Formalising-mathematics-in-Lean-theorem-prover because of HTTP Error 404: Not Found
+2024-09-17 20:10:30.263 | INFO     | __main__:search_github_repositories:711 - Processing kevinsullivan/cs2120f24
+2024-09-17 20:10:30.264 | INFO     | __main__:search_github_repositories:736 - Skipping kevinsullivan/cs2120f24 since it is a known repository
+2024-09-17 20:10:30.264 | INFO     | __main__:search_github_repositories:711 - Processing cspr-rad/cspr-consensus-formal
+2024-09-17 20:10:30.264 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/cspr-rad/cspr-consensus-formal.git
+2024-09-17 20:10:30.264 | INFO     | __main__:clone_repo:513 - Repo name: cspr-rad/cspr-consensus-formal
+2024-09-17 20:10:31.035 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/cspr-rad/cspr-consensus-formal/4320424a7c9272232a3cabdb581be9d5c57af116/lean-toolchain failed. Retrying...
+2024-09-17 20:10:32.073 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/cspr-rad/cspr-consensus-formal/4320424a7c9272232a3cabdb581be9d5c57af116/lean-toolchain failed. Retrying...
+2024-09-17 20:10:34.109 | INFO     | __main__:search_github_repositories:734 - Failed to clone cspr-rad/cspr-consensus-formal because of HTTP Error 404: Not Found
+2024-09-17 20:10:34.110 | INFO     | __main__:search_github_repositories:711 - Processing ttwag/p13_lean4_natural_number_game_solution
+2024-09-17 20:10:34.112 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/ttwag/p13_lean4_natural_number_game_solution.git
+2024-09-17 20:10:34.112 | INFO     | __main__:clone_repo:513 - Repo name: ttwag/p13_lean4_natural_number_game_solution
+2024-09-17 20:10:34.792 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ttwag/p13_lean4_natural_number_game_solution/7116698f1951079dc4adaf54312bfe9861541ef3/lean-toolchain failed. Retrying...
+2024-09-17 20:10:35.843 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ttwag/p13_lean4_natural_number_game_solution/7116698f1951079dc4adaf54312bfe9861541ef3/lean-toolchain failed. Retrying...
+2024-09-17 20:10:37.895 | INFO     | __main__:search_github_repositories:734 - Failed to clone ttwag/p13_lean4_natural_number_game_solution because of HTTP Error 404: Not Found
+2024-09-17 20:10:37.898 | INFO     | __main__:search_github_repositories:711 - Processing PatrickMassot/GlimpseOfLean
+2024-09-17 20:10:37.901 | INFO     | __main__:search_github_repositories:736 - Skipping PatrickMassot/GlimpseOfLean since it is a known repository
+2024-09-17 20:10:37.901 | INFO     | __main__:search_github_repositories:711 - Processing FormalizedFormalLogic/Incompleteness
+2024-09-17 20:10:37.901 | INFO     | __main__:search_github_repositories:736 - Skipping FormalizedFormalLogic/Incompleteness since it is a known repository
+2024-09-17 20:10:37.901 | INFO     | __main__:search_github_repositories:711 - Processing girving/ray
+2024-09-17 20:10:37.901 | INFO     | __main__:search_github_repositories:736 - Skipping girving/ray since it is a known repository
+2024-09-17 20:10:37.901 | INFO     | __main__:search_github_repositories:711 - Processing corent1234/hairy-ball-theorem-lean
+2024-09-17 20:10:37.901 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/corent1234/hairy-ball-theorem-lean.git
+2024-09-17 20:10:37.901 | INFO     | __main__:clone_repo:513 - Repo name: corent1234/hairy-ball-theorem-lean
+2024-09-17 20:10:38.544 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-17 20:10:55.192 | INFO     | __main__:search_github_repositories:723 - Cloned corent1234/hairy-ball-theorem-lean
+2024-09-17 20:10:55.193 | INFO     | __main__:search_github_repositories:711 - Processing imbrem/discretion
+2024-09-17 20:10:55.193 | INFO     | __main__:search_github_repositories:736 - Skipping imbrem/discretion since it is a known repository
+2024-09-17 20:10:55.193 | INFO     | __main__:search_github_repositories:711 - Processing FormalizedFormalLogic/Arithmetization
+2024-09-17 20:10:55.193 | INFO     | __main__:search_github_repositories:736 - Skipping FormalizedFormalLogic/Arithmetization since it is a known repository
+2024-09-17 20:10:55.193 | INFO     | __main__:search_github_repositories:711 - Processing lean-ja/fp-lean-ja
+2024-09-17 20:10:55.193 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/lean-ja/fp-lean-ja.git
+2024-09-17 20:10:55.193 | INFO     | __main__:clone_repo:513 - Repo name: lean-ja/fp-lean-ja
+2024-09-17 20:10:56.102 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lean-ja/fp-lean-ja/7ae261d54902e09f163837a9498fd13bace54bec/lean-toolchain failed. Retrying...
+2024-09-17 20:10:57.138 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lean-ja/fp-lean-ja/7ae261d54902e09f163837a9498fd13bace54bec/lean-toolchain failed. Retrying...
+2024-09-17 20:10:59.171 | INFO     | __main__:search_github_repositories:734 - Failed to clone lean-ja/fp-lean-ja because of HTTP Error 404: Not Found
+2024-09-17 20:10:59.174 | INFO     | __main__:search_github_repositories:711 - Processing siddhartha-gadgil/MetaExamples
+2024-09-17 20:10:59.175 | INFO     | __main__:search_github_repositories:736 - Skipping siddhartha-gadgil/MetaExamples since it is a known repository
+2024-09-17 20:10:59.175 | INFO     | __main__:search_github_repositories:711 - Processing Linyxus/capless-lean
+2024-09-17 20:10:59.175 | INFO     | __main__:search_github_repositories:736 - Skipping Linyxus/capless-lean since it is a known repository
+2024-09-17 20:10:59.175 | INFO     | __main__:search_github_repositories:711 - Processing joewatt95/leanplayground
+2024-09-17 20:10:59.176 | INFO     | __main__:search_github_repositories:736 - Skipping joewatt95/leanplayground since it is a known repository
+2024-09-17 20:10:59.176 | INFO     | __main__:search_github_repositories:711 - Processing nomeata/lean-reflection-bench
+2024-09-17 20:10:59.176 | INFO     | __main__:search_github_repositories:736 - Skipping nomeata/lean-reflection-bench since it is a known repository
+2024-09-17 20:10:59.176 | INFO     | __main__:search_github_repositories:711 - Processing vihdzp/rubik-lean4
+2024-09-17 20:10:59.176 | INFO     | __main__:search_github_repositories:736 - Skipping vihdzp/rubik-lean4 since it is a known repository
+2024-09-17 20:10:59.176 | INFO     | __main__:search_github_repositories:711 - Processing taeyool/lean-flag-algebras
+2024-09-17 20:10:59.176 | INFO     | __main__:search_github_repositories:736 - Skipping taeyool/lean-flag-algebras since it is a known repository
+2024-09-17 20:10:59.176 | INFO     | __main__:search_github_repositories:711 - Processing LizBonn/RamificationGroup
+2024-09-17 20:10:59.177 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/LizBonn/RamificationGroup.git
+2024-09-17 20:10:59.177 | INFO     | __main__:clone_repo:513 - Repo name: LizBonn/RamificationGroup
+2024-09-17 20:10:59.828 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc1
+2024-09-17 20:11:16.066 | INFO     | __main__:search_github_repositories:723 - Cloned LizBonn/RamificationGroup
+2024-09-17 20:11:16.066 | INFO     | __main__:search_github_repositories:711 - Processing broughjt/barb
+2024-09-17 20:11:16.067 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/broughjt/barb.git
+2024-09-17 20:11:16.067 | INFO     | __main__:clone_repo:513 - Repo name: broughjt/barb
+2024-09-17 20:11:16.817 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 4.3.0
+2024-09-17 20:11:33.473 | INFO     | __main__:search_github_repositories:734 - Failed to clone broughjt/barb because of Invalid tag or branch: `4.3.0` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:11:33.474 | INFO     | __main__:search_github_repositories:711 - Processing DennisTsar/spinpossible-lean
+2024-09-17 20:11:33.474 | INFO     | __main__:search_github_repositories:736 - Skipping DennisTsar/spinpossible-lean since it is a known repository
+2024-09-17 20:11:33.474 | INFO     | __main__:search_github_repositories:711 - Processing katzenpost/CryptWalker
+2024-09-17 20:11:33.474 | INFO     | __main__:search_github_repositories:736 - Skipping katzenpost/CryptWalker since it is a known repository
+2024-09-17 20:11:33.474 | INFO     | __main__:search_github_repositories:711 - Processing david415/bench
+2024-09-17 20:11:33.474 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/david415/bench.git
+2024-09-17 20:11:33.474 | INFO     | __main__:clone_repo:513 - Repo name: david415/bench
+2024-09-17 20:11:34.194 | INFO     | __main__:search_github_repositories:734 - Failed to clone david415/bench because of Invalid Lean 4 version: stable
+2024-09-17 20:11:34.197 | INFO     | __main__:search_github_repositories:711 - Processing leanprover/SHerLOC
+2024-09-17 20:11:34.197 | INFO     | __main__:search_github_repositories:736 - Skipping leanprover/SHerLOC since it is a known repository
+2024-09-17 20:11:34.197 | INFO     | __main__:search_github_repositories:711 - Processing emap-ed-20242/fad
+2024-09-17 20:11:34.198 | INFO     | __main__:search_github_repositories:736 - Skipping emap-ed-20242/fad since it is a known repository
+2024-09-17 20:11:34.198 | INFO     | __main__:search_github_repositories:711 - Processing quangvdao/ZKLib
+2024-09-17 20:11:34.198 | INFO     | __main__:search_github_repositories:736 - Skipping quangvdao/ZKLib since it is a known repository
+2024-09-17 20:11:34.198 | INFO     | __main__:search_github_repositories:711 - Processing mseri/BET
+2024-09-17 20:11:34.198 | INFO     | __main__:search_github_repositories:736 - Skipping mseri/BET since it is a known repository
+2024-09-17 20:11:34.198 | INFO     | __main__:search_github_repositories:711 - Processing lean-chs/charleston-lean-meetup
+2024-09-17 20:11:34.198 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/lean-chs/charleston-lean-meetup.git
+2024-09-17 20:11:34.198 | INFO     | __main__:clone_repo:513 - Repo name: lean-chs/charleston-lean-meetup
+2024-09-17 20:11:35.019 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 20:11:51.777 | INFO     | __main__:search_github_repositories:734 - Failed to clone lean-chs/charleston-lean-meetup because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:11:51.777 | INFO     | __main__:search_github_repositories:711 - Processing draperlaboratory/ELFSage
+2024-09-17 20:11:51.777 | INFO     | __main__:search_github_repositories:736 - Skipping draperlaboratory/ELFSage since it is a known repository
+2024-09-17 20:11:51.778 | INFO     | __main__:search_github_repositories:711 - Processing emap-nlp-20242/cs
+2024-09-17 20:11:51.778 | INFO     | __main__:search_github_repositories:736 - Skipping emap-nlp-20242/cs since it is a known repository
+2024-09-17 20:11:51.778 | INFO     | __main__:search_github_repositories:711 - Processing TheCob11/PaulinIntroToAbstractAlgebra
+2024-09-17 20:11:51.778 | INFO     | __main__:search_github_repositories:736 - Skipping TheCob11/PaulinIntroToAbstractAlgebra since it is a known repository
+2024-09-17 20:11:51.778 | INFO     | __main__:search_github_repositories:711 - Processing reaslab/jixia
+2024-09-17 20:11:51.778 | INFO     | __main__:search_github_repositories:736 - Skipping reaslab/jixia since it is a known repository
+2024-09-17 20:11:51.778 | INFO     | __main__:search_github_repositories:711 - Processing HenriqueBorges6/LeanStudy
+2024-09-17 20:11:51.778 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/HenriqueBorges6/LeanStudy.git
+2024-09-17 20:11:51.778 | INFO     | __main__:clone_repo:513 - Repo name: HenriqueBorges6/LeanStudy
+2024-09-17 20:11:52.504 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 20:12:09.301 | INFO     | __main__:search_github_repositories:734 - Failed to clone HenriqueBorges6/LeanStudy because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:12:09.302 | INFO     | __main__:search_github_repositories:711 - Processing Seasawher/InterpreterBook
+2024-09-17 20:12:09.302 | INFO     | __main__:search_github_repositories:736 - Skipping Seasawher/InterpreterBook since it is a known repository
+2024-09-17 20:12:09.302 | INFO     | __main__:search_github_repositories:711 - Processing madvorak/vcsp
+2024-09-17 20:12:09.302 | INFO     | __main__:search_github_repositories:736 - Skipping madvorak/vcsp since it is a known repository
+2024-09-17 20:12:09.302 | INFO     | __main__:search_github_repositories:711 - Processing TwoFX/OrderedTree
+2024-09-17 20:12:09.302 | INFO     | __main__:search_github_repositories:736 - Skipping TwoFX/OrderedTree since it is a known repository
+2024-09-17 20:12:09.302 | INFO     | __main__:search_github_repositories:711 - Processing theckl/HoTT-Case-Study
+2024-09-17 20:12:09.303 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/theckl/HoTT-Case-Study.git
+2024-09-17 20:12:09.303 | INFO     | __main__:clone_repo:513 - Repo name: theckl/HoTT-Case-Study
+2024-09-17 20:12:10.000 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/theckl/HoTT-Case-Study/03f91909b159ae8fa32ec7af1255ab09dded8bc0/lean-toolchain failed. Retrying...
+2024-09-17 20:12:11.052 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/theckl/HoTT-Case-Study/03f91909b159ae8fa32ec7af1255ab09dded8bc0/lean-toolchain failed. Retrying...
+2024-09-17 20:12:13.105 | INFO     | __main__:search_github_repositories:734 - Failed to clone theckl/HoTT-Case-Study because of HTTP Error 404: Not Found
+2024-09-17 20:12:13.107 | INFO     | __main__:search_github_repositories:711 - Processing benjaminfjones/mil-solutions
+2024-09-17 20:12:13.110 | INFO     | __main__:search_github_repositories:736 - Skipping benjaminfjones/mil-solutions since it is a known repository
+2024-09-17 20:12:13.110 | INFO     | __main__:search_github_repositories:711 - Processing victorliu5296/lean4-proofs
+2024-09-17 20:12:13.110 | INFO     | __main__:search_github_repositories:736 - Skipping victorliu5296/lean4-proofs since it is a known repository
+2024-09-17 20:12:13.110 | INFO     | __main__:search_github_repositories:711 - Processing kmn5409/cs_511
+2024-09-17 20:12:13.110 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/kmn5409/cs_511.git
+2024-09-17 20:12:13.111 | INFO     | __main__:clone_repo:513 - Repo name: kmn5409/cs_511
+2024-09-17 20:12:13.821 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kmn5409/cs_511/36f3d016e0a3ae4f152b7713dd35302473d7ffd6/lean-toolchain failed. Retrying...
+2024-09-17 20:12:14.856 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kmn5409/cs_511/36f3d016e0a3ae4f152b7713dd35302473d7ffd6/lean-toolchain failed. Retrying...
+2024-09-17 20:12:16.910 | INFO     | __main__:search_github_repositories:734 - Failed to clone kmn5409/cs_511 because of HTTP Error 404: Not Found
+2024-09-17 20:12:16.914 | INFO     | __main__:search_github_repositories:711 - Processing arademaker/puzzles
+2024-09-17 20:12:16.918 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/arademaker/puzzles.git
+2024-09-17 20:12:16.918 | INFO     | __main__:clone_repo:513 - Repo name: arademaker/puzzles
+2024-09-17 20:12:17.659 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 20:12:34.833 | INFO     | __main__:search_github_repositories:734 - Failed to clone arademaker/puzzles because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:12:34.833 | INFO     | __main__:search_github_repositories:711 - Processing rowechenzhong/lean_tests
+2024-09-17 20:12:34.833 | INFO     | __main__:search_github_repositories:736 - Skipping rowechenzhong/lean_tests since it is a known repository
+2024-09-17 20:12:34.833 | INFO     | __main__:search_github_repositories:711 - Processing jaredgreen2/polySat
+2024-09-17 20:12:34.833 | INFO     | __main__:search_github_repositories:736 - Skipping jaredgreen2/polySat since it is a known repository
+2024-09-17 20:12:34.834 | INFO     | __main__:search_github_repositories:711 - Processing peter5000/Theorem-Proving-In-Lean-Solutions
+2024-09-17 20:12:34.834 | INFO     | __main__:search_github_repositories:736 - Skipping peter5000/Theorem-Proving-In-Lean-Solutions since it is a known repository
+2024-09-17 20:12:34.834 | INFO     | __main__:search_github_repositories:711 - Processing objectionary/proof
+2024-09-17 20:12:34.834 | INFO     | __main__:search_github_repositories:736 - Skipping objectionary/proof since it is a known repository
+2024-09-17 20:12:34.834 | INFO     | __main__:search_github_repositories:711 - Processing Equilibris/LeanScratch
+2024-09-17 20:12:34.834 | INFO     | __main__:search_github_repositories:736 - Skipping Equilibris/LeanScratch since it is a known repository
+2024-09-17 20:12:34.834 | INFO     | __main__:search_github_repositories:711 - Processing marcusrossel/lean-egg
+2024-09-17 20:12:34.834 | INFO     | __main__:search_github_repositories:736 - Skipping marcusrossel/lean-egg since it is a known repository
+2024-09-17 20:12:34.834 | INFO     | __main__:search_github_repositories:711 - Processing Louis-Le-Grand/Formalisation-of-constructable-numbers
+2024-09-17 20:12:34.834 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers.git
+2024-09-17 20:12:34.834 | INFO     | __main__:clone_repo:513 - Repo name: Louis-Le-Grand/Formalisation-of-constructable-numbers
+2024-09-17 20:12:35.590 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-17 20:12:52.523 | INFO     | __main__:search_github_repositories:723 - Cloned Louis-Le-Grand/Formalisation-of-constructable-numbers
+2024-09-17 20:12:52.523 | INFO     | __main__:search_github_repositories:711 - Processing damast93/markovlib
+2024-09-17 20:12:52.524 | INFO     | __main__:search_github_repositories:736 - Skipping damast93/markovlib since it is a known repository
+2024-09-17 20:12:52.524 | INFO     | __main__:search_github_repositories:711 - Processing bracevac/path-dependent
+2024-09-17 20:12:52.524 | INFO     | __main__:search_github_repositories:736 - Skipping bracevac/path-dependent since it is a known repository
+2024-09-17 20:12:52.524 | INFO     | __main__:search_github_repositories:711 - Processing MichaelStollBayreuth/EulerProducts
+2024-09-17 20:12:52.524 | INFO     | __main__:search_github_repositories:736 - Skipping MichaelStollBayreuth/EulerProducts since it is a known repository
+2024-09-17 20:12:52.524 | INFO     | __main__:search_github_repositories:711 - Processing hhu-adam/lean-i18n
+2024-09-17 20:12:52.524 | INFO     | __main__:search_github_repositories:736 - Skipping hhu-adam/lean-i18n since it is a known repository
+2024-09-17 20:12:52.524 | INFO     | __main__:search_github_repositories:711 - Processing lean-ja/lean99
+2024-09-17 20:12:52.524 | INFO     | __main__:search_github_repositories:736 - Skipping lean-ja/lean99 since it is a known repository
+2024-09-17 20:12:52.525 | INFO     | __main__:search_github_repositories:711 - Processing Seasawher/SelectionSort.lean
+2024-09-17 20:12:52.525 | INFO     | __main__:search_github_repositories:736 - Skipping Seasawher/SelectionSort.lean since it is a known repository
+2024-09-17 20:12:52.525 | INFO     | __main__:search_github_repositories:711 - Processing Seasawher/lean-book
+2024-09-17 20:12:52.525 | INFO     | __main__:search_github_repositories:736 - Skipping Seasawher/lean-book since it is a known repository
+2024-09-17 20:12:52.525 | INFO     | __main__:search_github_repositories:711 - Processing JhonaKakadi/compveri
+2024-09-17 20:12:52.525 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/JhonaKakadi/compveri.git
+2024-09-17 20:12:52.525 | INFO     | __main__:clone_repo:513 - Repo name: JhonaKakadi/compveri
+2024-09-17 20:12:53.241 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/JhonaKakadi/compveri/b54cd9da6a1e171e421e6b15ceebde70122829f9/lean-toolchain failed. Retrying...
+2024-09-17 20:12:54.293 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/JhonaKakadi/compveri/b54cd9da6a1e171e421e6b15ceebde70122829f9/lean-toolchain failed. Retrying...
+2024-09-17 20:12:56.346 | INFO     | __main__:search_github_repositories:734 - Failed to clone JhonaKakadi/compveri because of HTTP Error 404: Not Found
+2024-09-17 20:12:56.349 | INFO     | __main__:search_github_repositories:711 - Processing Nazgand/NazgandLean4
+2024-09-17 20:12:56.352 | INFO     | __main__:search_github_repositories:736 - Skipping Nazgand/NazgandLean4 since it is a known repository
+2024-09-17 20:12:56.352 | INFO     | __main__:search_github_repositories:711 - Processing whaatt/learning-lean
+2024-09-17 20:12:56.352 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/whaatt/learning-lean.git
+2024-09-17 20:12:56.353 | INFO     | __main__:clone_repo:513 - Repo name: whaatt/learning-lean
+2024-09-17 20:12:57.106 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 20:13:13.861 | INFO     | __main__:search_github_repositories:734 - Failed to clone whaatt/learning-lean because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:13:13.861 | INFO     | __main__:search_github_repositories:711 - Processing rebryant/cpog
+2024-09-17 20:13:13.861 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/rebryant/cpog.git
+2024-09-17 20:13:13.861 | INFO     | __main__:clone_repo:513 - Repo name: rebryant/cpog
+2024-09-17 20:13:14.608 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/rebryant/cpog/99ea280a75e1acce0e6b8445d1cb6e621d24f9e7/lean-toolchain failed. Retrying...
+2024-09-17 20:13:15.657 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/rebryant/cpog/99ea280a75e1acce0e6b8445d1cb6e621d24f9e7/lean-toolchain failed. Retrying...
+2024-09-17 20:13:17.711 | INFO     | __main__:search_github_repositories:734 - Failed to clone rebryant/cpog because of HTTP Error 404: Not Found
+2024-09-17 20:13:17.714 | INFO     | __main__:search_github_repositories:711 - Processing jsm28/AperiodicMonotilesLean
+2024-09-17 20:13:17.718 | INFO     | __main__:search_github_repositories:736 - Skipping jsm28/AperiodicMonotilesLean since it is a known repository
+2024-09-17 20:13:17.718 | INFO     | __main__:search_github_repositories:711 - Processing NawafGH/CS511HW
+2024-09-17 20:13:17.718 | INFO     | __main__:search_github_repositories:736 - Skipping NawafGH/CS511HW since it is a known repository
+2024-09-17 20:13:17.718 | INFO     | __main__:search_github_repositories:711 - Processing ajamias/CS511-code-exercises
+2024-09-17 20:13:17.718 | INFO     | __main__:search_github_repositories:736 - Skipping ajamias/CS511-code-exercises since it is a known repository
+2024-09-17 20:13:17.719 | INFO     | __main__:search_github_repositories:711 - Processing mit-plv/spacetalk
+2024-09-17 20:13:17.719 | INFO     | __main__:search_github_repositories:736 - Skipping mit-plv/spacetalk since it is a known repository
+2024-09-17 20:13:17.719 | INFO     | __main__:search_github_repositories:711 - Processing CBirkbeck/power_residue_symbols
+2024-09-17 20:13:17.719 | INFO     | __main__:search_github_repositories:736 - Skipping CBirkbeck/power_residue_symbols since it is a known repository
+2024-09-17 20:13:17.719 | INFO     | __main__:search_github_repositories:711 - Processing b-mehta/epfl-comb
+2024-09-17 20:13:17.719 | INFO     | __main__:search_github_repositories:736 - Skipping b-mehta/epfl-comb since it is a known repository
+2024-09-17 20:13:17.719 | INFO     | __main__:search_github_repositories:711 - Processing lf-lang/reactor-model
+2024-09-17 20:13:17.719 | INFO     | __main__:search_github_repositories:736 - Skipping lf-lang/reactor-model since it is a known repository
+2024-09-17 20:13:17.719 | INFO     | __main__:search_github_repositories:711 - Processing zpm-bu/cs511-formal-methods
+2024-09-17 20:13:17.719 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/zpm-bu/cs511-formal-methods.git
+2024-09-17 20:13:17.720 | INFO     | __main__:clone_repo:513 - Repo name: zpm-bu/cs511-formal-methods
+2024-09-17 20:13:18.475 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/zpm-bu/cs511-formal-methods/207e96c0ea8c8c6d5cb051d0d0388d397c43b8c8/lean-toolchain failed. Retrying...
+2024-09-17 20:13:19.529 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/zpm-bu/cs511-formal-methods/207e96c0ea8c8c6d5cb051d0d0388d397c43b8c8/lean-toolchain failed. Retrying...
+2024-09-17 20:13:21.582 | INFO     | __main__:search_github_repositories:734 - Failed to clone zpm-bu/cs511-formal-methods because of HTTP Error 404: Not Found
+2024-09-17 20:13:21.585 | INFO     | __main__:search_github_repositories:711 - Processing csharpython/nat-game-ja
+2024-09-17 20:13:21.588 | INFO     | __main__:search_github_repositories:736 - Skipping csharpython/nat-game-ja since it is a known repository
+2024-09-17 20:13:21.588 | INFO     | __main__:search_github_repositories:711 - Processing DanielSimonCarpenter/Olympiad-Problems-Lean-4
+2024-09-17 20:13:21.589 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/DanielSimonCarpenter/Olympiad-Problems-Lean-4.git
+2024-09-17 20:13:21.589 | INFO     | __main__:clone_repo:513 - Repo name: DanielSimonCarpenter/Olympiad-Problems-Lean-4
+2024-09-17 20:13:22.258 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/DanielSimonCarpenter/Olympiad-Problems-Lean-4/cd2111392579131f5ca4c43d55889d32c7bad937/lean-toolchain failed. Retrying...
+2024-09-17 20:13:23.292 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/DanielSimonCarpenter/Olympiad-Problems-Lean-4/cd2111392579131f5ca4c43d55889d32c7bad937/lean-toolchain failed. Retrying...
+2024-09-17 20:13:25.336 | INFO     | __main__:search_github_repositories:734 - Failed to clone DanielSimonCarpenter/Olympiad-Problems-Lean-4 because of HTTP Error 404: Not Found
+2024-09-17 20:13:25.338 | INFO     | __main__:search_github_repositories:711 - Processing sgraf812/abs-den.lean
+2024-09-17 20:13:25.340 | INFO     | __main__:search_github_repositories:736 - Skipping sgraf812/abs-den.lean since it is a known repository
+2024-09-17 20:13:25.340 | INFO     | __main__:search_github_repositories:711 - Processing mortarsanjaya/IMOSLLean4
+2024-09-17 20:13:25.340 | INFO     | __main__:search_github_repositories:736 - Skipping mortarsanjaya/IMOSLLean4 since it is a known repository
+2024-09-17 20:13:25.340 | INFO     | __main__:search_github_repositories:711 - Processing leanprover-community/lean-auto
+2024-09-17 20:13:25.340 | INFO     | __main__:search_github_repositories:736 - Skipping leanprover-community/lean-auto since it is a known repository
+2024-09-17 20:13:25.340 | INFO     | __main__:search_github_repositories:711 - Processing YaelDillies/LeanAPAP
+2024-09-17 20:13:25.341 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/YaelDillies/LeanAPAP.git
+2024-09-17 20:13:25.341 | INFO     | __main__:clone_repo:513 - Repo name: YaelDillies/LeanAPAP
+2024-09-17 20:13:26.047 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-09-17 20:13:42.315 | INFO     | __main__:search_github_repositories:723 - Cloned YaelDillies/LeanAPAP
+2024-09-17 20:13:42.315 | INFO     | __main__:search_github_repositories:711 - Processing lunaticabs/graph-theorylesson
+2024-09-17 20:13:42.315 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/lunaticabs/graph-theorylesson.git
+2024-09-17 20:13:42.315 | INFO     | __main__:clone_repo:513 - Repo name: lunaticabs/graph-theorylesson
+2024-09-17 20:13:43.142 | INFO     | __main__:search_github_repositories:723 - Cloned lunaticabs/graph-theorylesson
+2024-09-17 20:13:43.142 | INFO     | __main__:search_github_repositories:711 - Processing AviCraimer/lean-math-logic-exploration
+2024-09-17 20:13:43.142 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/AviCraimer/lean-math-logic-exploration.git
+2024-09-17 20:13:43.143 | INFO     | __main__:clone_repo:513 - Repo name: AviCraimer/lean-math-logic-exploration
+2024-09-17 20:13:43.910 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.5.0-rc1
+2024-09-17 20:14:00.279 | INFO     | __main__:search_github_repositories:723 - Cloned AviCraimer/lean-math-logic-exploration
+2024-09-17 20:14:00.280 | INFO     | __main__:search_github_repositories:711 - Processing Lean-zh/IMO_2024
+2024-09-17 20:14:00.280 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Lean-zh/IMO_2024.git
+2024-09-17 20:14:00.280 | INFO     | __main__:clone_repo:513 - Repo name: Lean-zh/IMO_2024
+2024-09-17 20:14:01.106 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc2
+2024-09-17 20:14:17.419 | INFO     | __main__:search_github_repositories:723 - Cloned Lean-zh/IMO_2024
+2024-09-17 20:14:17.419 | INFO     | __main__:search_github_repositories:711 - Processing amazake13/funaki_probability_in_lean
+2024-09-17 20:14:17.419 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/amazake13/funaki_probability_in_lean.git
+2024-09-17 20:14:17.419 | INFO     | __main__:clone_repo:513 - Repo name: amazake13/funaki_probability_in_lean
+2024-09-17 20:14:18.235 | INFO     | __main__:search_github_repositories:723 - Cloned amazake13/funaki_probability_in_lean
+2024-09-17 20:14:18.235 | INFO     | __main__:search_github_repositories:711 - Processing bsubercaseaux/EmptyHexagonLean
+2024-09-17 20:14:18.236 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/bsubercaseaux/EmptyHexagonLean.git
+2024-09-17 20:14:18.236 | INFO     | __main__:clone_repo:513 - Repo name: bsubercaseaux/EmptyHexagonLean
+2024-09-17 20:14:18.968 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/bsubercaseaux/EmptyHexagonLean/3399900b0d2dea2e3ec790249dacab9f5331da98/lean-toolchain failed. Retrying...
+2024-09-17 20:14:20.021 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/bsubercaseaux/EmptyHexagonLean/3399900b0d2dea2e3ec790249dacab9f5331da98/lean-toolchain failed. Retrying...
+2024-09-17 20:14:22.075 | INFO     | __main__:search_github_repositories:734 - Failed to clone bsubercaseaux/EmptyHexagonLean because of HTTP Error 404: Not Found
+2024-09-17 20:14:22.078 | INFO     | __main__:search_github_repositories:711 - Processing robertylewis/lean4-autograder-main
+2024-09-17 20:14:22.081 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/robertylewis/lean4-autograder-main.git
+2024-09-17 20:14:22.081 | INFO     | __main__:clone_repo:513 - Repo name: robertylewis/lean4-autograder-main
+2024-09-17 20:14:22.850 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0
+2024-09-17 20:14:39.016 | INFO     | __main__:search_github_repositories:723 - Cloned robertylewis/lean4-autograder-main
+2024-09-17 20:14:39.016 | INFO     | __main__:search_github_repositories:711 - Processing RemyDegenne/kolmogorov_extension4
+2024-09-17 20:14:39.016 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/RemyDegenne/kolmogorov_extension4.git
+2024-09-17 20:14:39.016 | INFO     | __main__:clone_repo:513 - Repo name: RemyDegenne/kolmogorov_extension4
+2024-09-17 20:14:39.742 | INFO     | __main__:search_github_repositories:723 - Cloned RemyDegenne/kolmogorov_extension4
+2024-09-17 20:14:39.742 | INFO     | __main__:search_github_repositories:711 - Processing leanprover/subverso
+2024-09-17 20:14:39.743 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/leanprover/subverso.git
+2024-09-17 20:14:39.743 | INFO     | __main__:clone_repo:513 - Repo name: leanprover/subverso
+2024-09-17 20:14:40.584 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 4.6.0
+2024-09-17 20:14:57.232 | INFO     | __main__:search_github_repositories:734 - Failed to clone leanprover/subverso because of Invalid tag or branch: `4.6.0` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:14:57.233 | INFO     | __main__:search_github_repositories:711 - Processing VCA-EPFL/dataflow-rewriter
+2024-09-17 20:14:57.233 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/VCA-EPFL/dataflow-rewriter.git
+2024-09-17 20:14:57.233 | INFO     | __main__:clone_repo:513 - Repo name: VCA-EPFL/dataflow-rewriter
+2024-09-17 20:14:58.101 | INFO     | __main__:search_github_repositories:723 - Cloned VCA-EPFL/dataflow-rewriter
+2024-09-17 20:14:58.101 | INFO     | __main__:search_github_repositories:711 - Processing flitscha/Math-with-lean
+2024-09-17 20:14:58.102 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/flitscha/Math-with-lean.git
+2024-09-17 20:14:58.102 | INFO     | __main__:clone_repo:513 - Repo name: flitscha/Math-with-lean
+2024-09-17 20:14:58.840 | INFO     | __main__:search_github_repositories:723 - Cloned flitscha/Math-with-lean
+2024-09-17 20:14:58.841 | INFO     | __main__:search_github_repositories:711 - Processing apnelson1/Matroid
+2024-09-17 20:14:58.841 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/apnelson1/Matroid.git
+2024-09-17 20:14:58.841 | INFO     | __main__:clone_repo:513 - Repo name: apnelson1/Matroid
+2024-09-17 20:14:59.612 | INFO     | __main__:search_github_repositories:723 - Cloned apnelson1/Matroid
+2024-09-17 20:14:59.612 | INFO     | __main__:search_github_repositories:711 - Processing JasonKYi/HolderSpace
+2024-09-17 20:14:59.612 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/JasonKYi/HolderSpace.git
+2024-09-17 20:14:59.613 | INFO     | __main__:clone_repo:513 - Repo name: JasonKYi/HolderSpace
+2024-09-17 20:15:00.419 | INFO     | __main__:search_github_repositories:723 - Cloned JasonKYi/HolderSpace
+2024-09-17 20:15:00.419 | INFO     | __main__:search_github_repositories:711 - Processing cadake/LeanQ
+2024-09-17 20:15:00.419 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/cadake/LeanQ.git
+2024-09-17 20:15:00.419 | INFO     | __main__:clone_repo:513 - Repo name: cadake/LeanQ
+2024-09-17 20:15:01.203 | INFO     | __main__:search_github_repositories:723 - Cloned cadake/LeanQ
+2024-09-17 20:15:01.204 | INFO     | __main__:search_github_repositories:711 - Processing Seasawher/NumericalAnalysis.lean
+2024-09-17 20:15:01.204 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Seasawher/NumericalAnalysis.lean.git
+2024-09-17 20:15:01.204 | INFO     | __main__:clone_repo:513 - Repo name: Seasawher/NumericalAnalysis.lean
+2024-09-17 20:15:01.952 | INFO     | __main__:search_github_repositories:723 - Cloned Seasawher/NumericalAnalysis.lean
+2024-09-17 20:15:01.953 | INFO     | __main__:search_github_repositories:711 - Processing NethermindEth/Clear
+2024-09-17 20:15:01.953 | INFO     | __main__:search_github_repositories:736 - Skipping NethermindEth/Clear since it is a known repository
+2024-09-17 20:15:01.953 | INFO     | __main__:search_github_repositories:711 - Processing NethermindEth/Lean4UtilMemset
+2024-09-17 20:15:01.953 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/NethermindEth/Lean4UtilMemset.git
+2024-09-17 20:15:01.953 | INFO     | __main__:clone_repo:513 - Repo name: NethermindEth/Lean4UtilMemset
+2024-09-17 20:15:02.863 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0
+2024-09-17 20:15:19.247 | INFO     | __main__:search_github_repositories:723 - Cloned NethermindEth/Lean4UtilMemset
+2024-09-17 20:15:19.247 | INFO     | __main__:search_github_repositories:711 - Processing NethermindEth/lean4-alloy
+2024-09-17 20:15:19.248 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/NethermindEth/lean4-alloy.git
+2024-09-17 20:15:19.248 | INFO     | __main__:clone_repo:513 - Repo name: NethermindEth/lean4-alloy
+2024-09-17 20:15:20.038 | INFO     | __main__:search_github_repositories:723 - Cloned NethermindEth/lean4-alloy
+2024-09-17 20:15:20.038 | INFO     | __main__:search_github_repositories:711 - Processing NUS-Math-Formalization/CalculusSkeleton
+2024-09-17 20:15:20.039 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/NUS-Math-Formalization/CalculusSkeleton.git
+2024-09-17 20:15:20.039 | INFO     | __main__:clone_repo:513 - Repo name: NUS-Math-Formalization/CalculusSkeleton
+2024-09-17 20:15:20.938 | INFO     | __main__:search_github_repositories:723 - Cloned NUS-Math-Formalization/CalculusSkeleton
+2024-09-17 20:15:23.752 | INFO     | __main__:search_github_repositories:711 - Processing mdnestor/Integrodifference
+2024-09-17 20:15:23.752 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/mdnestor/Integrodifference.git
+2024-09-17 20:15:23.752 | INFO     | __main__:clone_repo:513 - Repo name: mdnestor/Integrodifference
+2024-09-17 20:15:24.529 | INFO     | __main__:search_github_repositories:723 - Cloned mdnestor/Integrodifference
+2024-09-17 20:15:24.530 | INFO     | __main__:search_github_repositories:711 - Processing evanlohn/MiniCodePropsLeanSrc
+2024-09-17 20:15:24.531 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/evanlohn/MiniCodePropsLeanSrc.git
+2024-09-17 20:15:24.531 | INFO     | __main__:clone_repo:513 - Repo name: evanlohn/MiniCodePropsLeanSrc
+2024-09-17 20:15:25.263 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-17 20:15:41.607 | INFO     | __main__:search_github_repositories:723 - Cloned evanlohn/MiniCodePropsLeanSrc
+2024-09-17 20:15:41.608 | INFO     | __main__:search_github_repositories:711 - Processing lecopivo/SciLean
+2024-09-17 20:15:41.608 | INFO     | __main__:search_github_repositories:736 - Skipping lecopivo/SciLean since it is a known repository
+2024-09-17 20:15:41.608 | INFO     | __main__:search_github_repositories:711 - Processing GuiBrandt/lean4-polyhedral-combinatorics
+2024-09-17 20:15:41.608 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/GuiBrandt/lean4-polyhedral-combinatorics.git
+2024-09-17 20:15:41.608 | INFO     | __main__:clone_repo:513 - Repo name: GuiBrandt/lean4-polyhedral-combinatorics
+2024-09-17 20:15:42.426 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc3
+2024-09-17 20:15:58.318 | INFO     | __main__:search_github_repositories:723 - Cloned GuiBrandt/lean4-polyhedral-combinatorics
+2024-09-17 20:15:58.318 | INFO     | __main__:search_github_repositories:711 - Processing Julian/generatingfunctionology.lean
+2024-09-17 20:15:58.319 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Julian/generatingfunctionology.lean.git
+2024-09-17 20:15:58.319 | INFO     | __main__:clone_repo:513 - Repo name: Julian/generatingfunctionology.lean
+2024-09-17 20:15:59.066 | INFO     | __main__:search_github_repositories:723 - Cloned Julian/generatingfunctionology.lean
+2024-09-17 20:15:59.066 | INFO     | __main__:search_github_repositories:711 - Processing marcusrossel/mwe
+2024-09-17 20:15:59.066 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/marcusrossel/mwe.git
+2024-09-17 20:15:59.066 | INFO     | __main__:clone_repo:513 - Repo name: marcusrossel/mwe
+2024-09-17 20:15:59.936 | INFO     | __main__:search_github_repositories:723 - Cloned marcusrossel/mwe
+2024-09-17 20:15:59.937 | INFO     | __main__:search_github_repositories:711 - Processing 2winyear/lean-playground
+2024-09-17 20:15:59.937 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/2winyear/lean-playground.git
+2024-09-17 20:15:59.937 | INFO     | __main__:clone_repo:513 - Repo name: 2winyear/lean-playground
+2024-09-17 20:16:00.716 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/2winyear/lean-playground/e627df01a680285ad7e424579bdd402a326f105c/lean-toolchain failed. Retrying...
+2024-09-17 20:16:01.770 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/2winyear/lean-playground/e627df01a680285ad7e424579bdd402a326f105c/lean-toolchain failed. Retrying...
+2024-09-17 20:16:03.825 | INFO     | __main__:search_github_repositories:734 - Failed to clone 2winyear/lean-playground because of HTTP Error 404: Not Found
+2024-09-17 20:16:03.828 | INFO     | __main__:search_github_repositories:711 - Processing pauldavidrowe/CoplandPapers
+2024-09-17 20:16:03.831 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/pauldavidrowe/CoplandPapers.git
+2024-09-17 20:16:03.831 | INFO     | __main__:clone_repo:513 - Repo name: pauldavidrowe/CoplandPapers
+2024-09-17 20:16:04.611 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0-rc2
+2024-09-17 20:16:20.843 | INFO     | __main__:search_github_repositories:723 - Cloned pauldavidrowe/CoplandPapers
+2024-09-17 20:16:20.844 | INFO     | __main__:search_github_repositories:711 - Processing pauldavidrowe/OrderTheory
+2024-09-17 20:16:20.844 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/pauldavidrowe/OrderTheory.git
+2024-09-17 20:16:20.844 | INFO     | __main__:clone_repo:513 - Repo name: pauldavidrowe/OrderTheory
+2024-09-17 20:16:21.827 | INFO     | __main__:search_github_repositories:723 - Cloned pauldavidrowe/OrderTheory
+2024-09-17 20:16:21.828 | INFO     | __main__:search_github_repositories:711 - Processing nomeata/lean-calcify
+2024-09-17 20:16:21.828 | INFO     | __main__:search_github_repositories:736 - Skipping nomeata/lean-calcify since it is a known repository
+2024-09-17 20:16:21.828 | INFO     | __main__:search_github_repositories:711 - Processing opencompl/sail-lean
+2024-09-17 20:16:21.828 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/opencompl/sail-lean.git
+2024-09-17 20:16:21.828 | INFO     | __main__:clone_repo:513 - Repo name: opencompl/sail-lean
+2024-09-17 20:16:22.570 | INFO     | __main__:search_github_repositories:723 - Cloned opencompl/sail-lean
+2024-09-17 20:16:22.570 | INFO     | __main__:search_github_repositories:711 - Processing dwrensha/animate-lean-proofs
+2024-09-17 20:16:22.570 | INFO     | __main__:search_github_repositories:736 - Skipping dwrensha/animate-lean-proofs since it is a known repository
+2024-09-17 20:16:22.570 | INFO     | __main__:search_github_repositories:711 - Processing bergmannjg/leanCurl
+2024-09-17 20:16:22.570 | INFO     | __main__:search_github_repositories:736 - Skipping bergmannjg/leanCurl since it is a known repository
+2024-09-17 20:16:22.571 | INFO     | __main__:search_github_repositories:711 - Processing madvorak/trimmer
+2024-09-17 20:16:22.571 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/madvorak/trimmer.git
+2024-09-17 20:16:22.571 | INFO     | __main__:clone_repo:513 - Repo name: madvorak/trimmer
+2024-09-17 20:16:23.292 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0
+2024-09-17 20:16:40.002 | INFO     | __main__:search_github_repositories:723 - Cloned madvorak/trimmer
+2024-09-17 20:16:40.002 | INFO     | __main__:search_github_repositories:711 - Processing SDZZGNDRC/Lean-Meta-Programming
+2024-09-17 20:16:40.002 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/SDZZGNDRC/Lean-Meta-Programming.git
+2024-09-17 20:16:40.002 | INFO     | __main__:clone_repo:513 - Repo name: SDZZGNDRC/Lean-Meta-Programming
+2024-09-17 20:16:40.699 | INFO     | __main__:search_github_repositories:723 - Cloned SDZZGNDRC/Lean-Meta-Programming
+2024-09-17 20:16:40.699 | INFO     | __main__:search_github_repositories:711 - Processing finegeometer/lean-circuits
+2024-09-17 20:16:40.699 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/finegeometer/lean-circuits.git
+2024-09-17 20:16:40.699 | INFO     | __main__:clone_repo:513 - Repo name: finegeometer/lean-circuits
+2024-09-17 20:16:41.403 | INFO     | __main__:search_github_repositories:723 - Cloned finegeometer/lean-circuits
+2024-09-17 20:16:41.403 | INFO     | __main__:search_github_repositories:711 - Processing drhodes/sqltoy
+2024-09-17 20:16:41.403 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/drhodes/sqltoy.git
+2024-09-17 20:16:41.404 | INFO     | __main__:clone_repo:513 - Repo name: drhodes/sqltoy
+2024-09-17 20:16:42.197 | INFO     | __main__:search_github_repositories:723 - Cloned drhodes/sqltoy
+2024-09-17 20:16:42.197 | INFO     | __main__:search_github_repositories:711 - Processing rzeta0/Lean-First-Steps
+2024-09-17 20:16:42.198 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/rzeta0/Lean-First-Steps.git
+2024-09-17 20:16:42.198 | INFO     | __main__:clone_repo:513 - Repo name: rzeta0/Lean-First-Steps
+2024-09-17 20:16:42.926 | INFO     | __main__:search_github_repositories:723 - Cloned rzeta0/Lean-First-Steps
+2024-09-17 20:16:42.927 | INFO     | __main__:search_github_repositories:711 - Processing pandaman64/lean-regex
+2024-09-17 20:16:42.927 | INFO     | __main__:search_github_repositories:736 - Skipping pandaman64/lean-regex since it is a known repository
+2024-09-17 20:16:42.927 | INFO     | __main__:search_github_repositories:711 - Processing kezuo/TheStacksProject
+2024-09-17 20:16:42.927 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/kezuo/TheStacksProject.git
+2024-09-17 20:16:42.927 | INFO     | __main__:clone_repo:513 - Repo name: kezuo/TheStacksProject
+2024-09-17 20:16:43.694 | INFO     | __main__:search_github_repositories:723 - Cloned kezuo/TheStacksProject
+2024-09-17 20:16:43.694 | INFO     | __main__:search_github_repositories:711 - Processing Seasawher/mk-exercise
+2024-09-17 20:16:43.694 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Seasawher/mk-exercise.git
+2024-09-17 20:16:43.694 | INFO     | __main__:clone_repo:513 - Repo name: Seasawher/mk-exercise
+2024-09-17 20:16:44.448 | INFO     | __main__:search_github_repositories:723 - Cloned Seasawher/mk-exercise
+2024-09-17 20:16:44.448 | INFO     | __main__:search_github_repositories:711 - Processing pimotte/TutteLean
+2024-09-17 20:16:44.448 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/pimotte/TutteLean.git
+2024-09-17 20:16:44.448 | INFO     | __main__:clone_repo:513 - Repo name: pimotte/TutteLean
+2024-09-17 20:16:45.199 | INFO     | __main__:search_github_repositories:723 - Cloned pimotte/TutteLean
+2024-09-17 20:16:45.200 | INFO     | __main__:search_github_repositories:711 - Processing Seasawher/mdgen
+2024-09-17 20:16:45.200 | INFO     | __main__:search_github_repositories:736 - Skipping Seasawher/mdgen since it is a known repository
+2024-09-17 20:16:45.200 | INFO     | __main__:search_github_repositories:711 - Processing TheCob11/lean-stuff
+2024-09-17 20:16:45.200 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/TheCob11/lean-stuff.git
+2024-09-17 20:16:45.200 | INFO     | __main__:clone_repo:513 - Repo name: TheCob11/lean-stuff
+2024-09-17 20:16:45.918 | INFO     | __main__:search_github_repositories:723 - Cloned TheCob11/lean-stuff
+2024-09-17 20:16:45.918 | INFO     | __main__:search_github_repositories:711 - Processing cybers1t/koans.lean
+2024-09-17 20:16:45.918 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/cybers1t/koans.lean.git
+2024-09-17 20:16:45.919 | INFO     | __main__:clone_repo:513 - Repo name: cybers1t/koans.lean
+2024-09-17 20:16:46.843 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/cybers1t/koans.lean', commit='333fa2d28ad0ff38224cbe36253bec26d128cce9') relies on an unsupported Lean version: 445c8f2ee02ec75cdd8b2811bd56f4fb16adb655
+2024-09-17 20:16:46.844 | INFO     | __main__:search_github_repositories:723 - Cloned cybers1t/koans.lean
+2024-09-17 20:16:46.844 | INFO     | __main__:search_github_repositories:711 - Processing ayhon/segment-tree
+2024-09-17 20:16:46.844 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/ayhon/segment-tree.git
+2024-09-17 20:16:46.844 | INFO     | __main__:clone_repo:513 - Repo name: ayhon/segment-tree
+2024-09-17 20:16:47.538 | INFO     | __main__:search_github_repositories:723 - Cloned ayhon/segment-tree
+2024-09-17 20:16:47.539 | INFO     | __main__:search_github_repositories:711 - Processing fgdorais/extra4
+2024-09-17 20:16:47.539 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/fgdorais/extra4.git
+2024-09-17 20:16:47.539 | INFO     | __main__:clone_repo:513 - Repo name: fgdorais/extra4
+2024-09-17 20:16:48.267 | INFO     | __main__:search_github_repositories:723 - Cloned fgdorais/extra4
+2024-09-17 20:16:48.268 | INFO     | __main__:search_github_repositories:711 - Processing optsuite/optlib
+2024-09-17 20:16:48.268 | INFO     | __main__:search_github_repositories:736 - Skipping optsuite/optlib since it is a known repository
+2024-09-17 20:16:48.268 | INFO     | __main__:search_github_repositories:711 - Processing Youjack/thermodynamics.lean
+2024-09-17 20:16:48.268 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Youjack/thermodynamics.lean.git
+2024-09-17 20:16:48.268 | INFO     | __main__:clone_repo:513 - Repo name: Youjack/thermodynamics.lean
+2024-09-17 20:16:49.012 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.5.0
+2024-09-17 20:17:05.286 | INFO     | __main__:search_github_repositories:723 - Cloned Youjack/thermodynamics.lean
+2024-09-17 20:17:05.286 | INFO     | __main__:search_github_repositories:711 - Processing alok/lean-inf
+2024-09-17 20:17:05.287 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/alok/lean-inf.git
+2024-09-17 20:17:05.287 | INFO     | __main__:clone_repo:513 - Repo name: alok/lean-inf
+2024-09-17 20:17:06.113 | INFO     | __main__:search_github_repositories:723 - Cloned alok/lean-inf
+2024-09-17 20:17:06.114 | INFO     | __main__:search_github_repositories:711 - Processing ketilwright/htpi2001
+2024-09-17 20:17:06.114 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/ketilwright/htpi2001.git
+2024-09-17 20:17:06.114 | INFO     | __main__:clone_repo:513 - Repo name: ketilwright/htpi2001
+2024-09-17 20:17:06.962 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.3.0
+2024-09-17 20:17:23.441 | INFO     | __main__:search_github_repositories:723 - Cloned ketilwright/htpi2001
+2024-09-17 20:17:23.441 | INFO     | __main__:search_github_repositories:711 - Processing imaqtkatt/batata
+2024-09-17 20:17:23.441 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/imaqtkatt/batata.git
+2024-09-17 20:17:23.441 | INFO     | __main__:clone_repo:513 - Repo name: imaqtkatt/batata
+2024-09-17 20:17:24.184 | INFO     | __main__:search_github_repositories:734 - Failed to clone imaqtkatt/batata because of Invalid Lean 4 version: 4.10.0
+2024-09-17 20:17:24.187 | INFO     | __main__:search_github_repositories:711 - Processing d-xo/act.lean
+2024-09-17 20:17:24.187 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/d-xo/act.lean.git
+2024-09-17 20:17:24.188 | INFO     | __main__:clone_repo:513 - Repo name: d-xo/act.lean
+2024-09-17 20:17:24.940 | INFO     | __main__:search_github_repositories:723 - Cloned d-xo/act.lean
+2024-09-17 20:17:24.940 | INFO     | __main__:search_github_repositories:711 - Processing leanprover-community/import-graph
+2024-09-17 20:17:24.940 | INFO     | __main__:search_github_repositories:736 - Skipping leanprover-community/import-graph since it is a known repository
+2024-09-17 20:17:24.940 | INFO     | __main__:search_github_repositories:711 - Processing AeneasVerif/icfp-tutorial
+2024-09-17 20:17:24.940 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/AeneasVerif/icfp-tutorial.git
+2024-09-17 20:17:24.940 | INFO     | __main__:clone_repo:513 - Repo name: AeneasVerif/icfp-tutorial
+2024-09-17 20:17:25.720 | INFO     | __main__:search_github_repositories:723 - Cloned AeneasVerif/icfp-tutorial
+2024-09-17 20:17:25.721 | INFO     | __main__:search_github_repositories:711 - Processing hhu-adam/Robo
+2024-09-17 20:17:25.721 | INFO     | __main__:search_github_repositories:736 - Skipping hhu-adam/Robo since it is a known repository
+2024-09-17 20:17:25.721 | INFO     | __main__:search_github_repositories:711 - Processing efessas/GameSkeleton
+2024-09-17 20:17:25.721 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/efessas/GameSkeleton.git
+2024-09-17 20:17:25.721 | INFO     | __main__:clone_repo:513 - Repo name: efessas/GameSkeleton
+2024-09-17 20:17:26.517 | INFO     | __main__:search_github_repositories:723 - Cloned efessas/GameSkeleton
+2024-09-17 20:17:26.517 | INFO     | __main__:search_github_repositories:711 - Processing lambdair/computational-type-theory-lean4
+2024-09-17 20:17:26.517 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/lambdair/computational-type-theory-lean4.git
+2024-09-17 20:17:26.517 | INFO     | __main__:clone_repo:513 - Repo name: lambdair/computational-type-theory-lean4
+2024-09-17 20:17:27.271 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 20:17:43.884 | INFO     | __main__:search_github_repositories:734 - Failed to clone lambdair/computational-type-theory-lean4 because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:17:43.884 | INFO     | __main__:search_github_repositories:711 - Processing tautastic/real-analysis
+2024-09-17 20:17:43.884 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/tautastic/real-analysis.git
+2024-09-17 20:17:43.884 | INFO     | __main__:clone_repo:513 - Repo name: tautastic/real-analysis
+2024-09-17 20:17:45.202 | INFO     | __main__:search_github_repositories:723 - Cloned tautastic/real-analysis
+2024-09-17 20:17:45.203 | INFO     | __main__:search_github_repositories:711 - Processing FWuermse/lean-postgres
+2024-09-17 20:17:45.203 | INFO     | __main__:search_github_repositories:736 - Skipping FWuermse/lean-postgres since it is a known repository
+2024-09-17 20:17:45.203 | INFO     | __main__:search_github_repositories:711 - Processing siddhartha-gadgil/LeanAideTools
+2024-09-17 20:17:45.203 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/siddhartha-gadgil/LeanAideTools.git
+2024-09-17 20:17:45.203 | INFO     | __main__:clone_repo:513 - Repo name: siddhartha-gadgil/LeanAideTools
+2024-09-17 20:17:46.010 | INFO     | __main__:search_github_repositories:723 - Cloned siddhartha-gadgil/LeanAideTools
+2024-09-17 20:17:46.010 | INFO     | __main__:search_github_repositories:711 - Processing Blackfeather007/Jacobson_Noether_Thm
+2024-09-17 20:17:46.011 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Blackfeather007/Jacobson_Noether_Thm.git
+2024-09-17 20:17:46.011 | INFO     | __main__:clone_repo:513 - Repo name: Blackfeather007/Jacobson_Noether_Thm
+2024-09-17 20:17:46.807 | INFO     | __main__:search_github_repositories:723 - Cloned Blackfeather007/Jacobson_Noether_Thm
+2024-09-17 20:17:46.808 | INFO     | __main__:search_github_repositories:711 - Processing jtriley-eth/quantum-lean
+2024-09-17 20:17:46.808 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/jtriley-eth/quantum-lean.git
+2024-09-17 20:17:46.808 | INFO     | __main__:clone_repo:513 - Repo name: jtriley-eth/quantum-lean
+2024-09-17 20:17:47.546 | INFO     | __main__:search_github_repositories:723 - Cloned jtriley-eth/quantum-lean
+2024-09-17 20:17:47.546 | INFO     | __main__:search_github_repositories:711 - Processing oneofvalts/desargues
+2024-09-17 20:17:47.547 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/oneofvalts/desargues.git
+2024-09-17 20:17:47.547 | INFO     | __main__:clone_repo:513 - Repo name: oneofvalts/desargues
+2024-09-17 20:17:48.277 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/oneofvalts/desargues/9b8f713c36fd3b290e2d0415723e5a1b52c004ba/lean-toolchain failed. Retrying...
+2024-09-17 20:17:49.325 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/oneofvalts/desargues/9b8f713c36fd3b290e2d0415723e5a1b52c004ba/lean-toolchain failed. Retrying...
+2024-09-17 20:17:51.362 | INFO     | __main__:search_github_repositories:734 - Failed to clone oneofvalts/desargues because of HTTP Error 404: Not Found
+2024-09-17 20:17:51.364 | INFO     | __main__:search_github_repositories:711 - Processing djvelleman/HTPILeanPackage
+2024-09-17 20:17:51.365 | INFO     | __main__:search_github_repositories:736 - Skipping djvelleman/HTPILeanPackage since it is a known repository
+2024-09-17 20:17:51.365 | INFO     | __main__:search_github_repositories:711 - Processing javathunderman/ssft-labs
+2024-09-17 20:17:51.365 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/javathunderman/ssft-labs.git
+2024-09-17 20:17:51.366 | INFO     | __main__:clone_repo:513 - Repo name: javathunderman/ssft-labs
+2024-09-17 20:17:52.105 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/javathunderman/ssft-labs/173acc84a9e3b3b48b5d50fe5841dab0d3c9ea3a/lean-toolchain failed. Retrying...
+2024-09-17 20:17:53.146 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/javathunderman/ssft-labs/173acc84a9e3b3b48b5d50fe5841dab0d3c9ea3a/lean-toolchain failed. Retrying...
+2024-09-17 20:17:55.184 | INFO     | __main__:search_github_repositories:734 - Failed to clone javathunderman/ssft-labs because of HTTP Error 404: Not Found
+2024-09-17 20:17:55.187 | INFO     | __main__:search_github_repositories:711 - Processing kyleellefsen/lean_cryptopals
+2024-09-17 20:17:55.189 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/kyleellefsen/lean_cryptopals.git
+2024-09-17 20:17:55.189 | INFO     | __main__:clone_repo:513 - Repo name: kyleellefsen/lean_cryptopals
+2024-09-17 20:17:55.979 | INFO     | __main__:search_github_repositories:723 - Cloned kyleellefsen/lean_cryptopals
+2024-09-17 20:17:55.979 | INFO     | __main__:search_github_repositories:711 - Processing snowztail/learn-lean
+2024-09-17 20:17:55.979 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/snowztail/learn-lean.git
+2024-09-17 20:17:55.980 | INFO     | __main__:clone_repo:513 - Repo name: snowztail/learn-lean
+2024-09-17 20:17:56.752 | INFO     | __main__:search_github_repositories:723 - Cloned snowztail/learn-lean
+2024-09-17 20:17:56.752 | INFO     | __main__:search_github_repositories:711 - Processing teorth/pfr
+2024-09-17 20:17:56.752 | INFO     | __main__:search_github_repositories:736 - Skipping teorth/pfr since it is a known repository
+2024-09-17 20:17:56.752 | INFO     | __main__:search_github_repositories:711 - Processing monsterkrampe/proof-library
+2024-09-17 20:17:56.752 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/monsterkrampe/proof-library.git
+2024-09-17 20:17:56.753 | INFO     | __main__:clone_repo:513 - Repo name: monsterkrampe/proof-library
+2024-09-17 20:17:57.450 | INFO     | __main__:search_github_repositories:723 - Cloned monsterkrampe/proof-library
+2024-09-17 20:17:57.451 | INFO     | __main__:search_github_repositories:711 - Processing alize2e/subset-generation
+2024-09-17 20:17:57.451 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/alize2e/subset-generation.git
+2024-09-17 20:17:57.451 | INFO     | __main__:clone_repo:513 - Repo name: alize2e/subset-generation
+2024-09-17 20:17:58.240 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/alize2e/subset-generation/faaf215013bf2b9591d6247ecebb54bd7671d26e/lean-toolchain failed. Retrying...
+2024-09-17 20:17:59.277 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/alize2e/subset-generation/faaf215013bf2b9591d6247ecebb54bd7671d26e/lean-toolchain failed. Retrying...
+2024-09-17 20:18:01.315 | INFO     | __main__:search_github_repositories:734 - Failed to clone alize2e/subset-generation because of HTTP Error 404: Not Found
+2024-09-17 20:18:01.318 | INFO     | __main__:search_github_repositories:711 - Processing dupuisf/BibtexQuery
+2024-09-17 20:18:01.320 | INFO     | __main__:search_github_repositories:736 - Skipping dupuisf/BibtexQuery since it is a known repository
+2024-09-17 20:18:01.320 | INFO     | __main__:search_github_repositories:711 - Processing boisgera/lean-sandbox
+2024-09-17 20:18:01.320 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/boisgera/lean-sandbox.git
+2024-09-17 20:18:01.321 | INFO     | __main__:clone_repo:513 - Repo name: boisgera/lean-sandbox
+2024-09-17 20:18:02.055 | INFO     | __main__:search_github_repositories:723 - Cloned boisgera/lean-sandbox
+2024-09-17 20:18:02.055 | INFO     | __main__:search_github_repositories:711 - Processing leanprover/doc-gen4
+2024-09-17 20:18:02.055 | INFO     | __main__:search_github_repositories:736 - Skipping leanprover/doc-gen4 since it is a known repository
+2024-09-17 20:18:02.055 | INFO     | __main__:search_github_repositories:711 - Processing siddhartha-gadgil/LeanLion
+2024-09-17 20:18:02.055 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/siddhartha-gadgil/LeanLion.git
+2024-09-17 20:18:02.056 | INFO     | __main__:clone_repo:513 - Repo name: siddhartha-gadgil/LeanLion
+2024-09-17 20:18:02.836 | INFO     | __main__:search_github_repositories:723 - Cloned siddhartha-gadgil/LeanLion
+2024-09-17 20:18:02.837 | INFO     | __main__:search_github_repositories:711 - Processing math-xmum/gametheory
+2024-09-17 20:18:02.837 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/math-xmum/gametheory.git
+2024-09-17 20:18:02.837 | INFO     | __main__:clone_repo:513 - Repo name: math-xmum/gametheory
+2024-09-17 20:18:03.669 | INFO     | __main__:search_github_repositories:723 - Cloned math-xmum/gametheory
+2024-09-17 20:18:03.669 | INFO     | __main__:search_github_repositories:711 - Processing model-checking/rust-lean-models
+2024-09-17 20:18:03.669 | INFO     | __main__:search_github_repositories:736 - Skipping model-checking/rust-lean-models since it is a known repository
+2024-09-17 20:18:03.670 | INFO     | __main__:search_github_repositories:711 - Processing hwatheod/galeshapley-lean
+2024-09-17 20:18:03.670 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/hwatheod/galeshapley-lean.git
+2024-09-17 20:18:03.670 | INFO     | __main__:clone_repo:513 - Repo name: hwatheod/galeshapley-lean
+2024-09-17 20:18:04.453 | INFO     | __main__:search_github_repositories:723 - Cloned hwatheod/galeshapley-lean
+2024-09-17 20:18:04.454 | INFO     | __main__:search_github_repositories:711 - Processing fgdorais/lean4-parser
+2024-09-17 20:18:04.454 | INFO     | __main__:search_github_repositories:736 - Skipping fgdorais/lean4-parser since it is a known repository
+2024-09-17 20:18:04.454 | INFO     | __main__:search_github_repositories:711 - Processing pawelsberg/lean-directory-browser
+2024-09-17 20:18:04.454 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/pawelsberg/lean-directory-browser.git
+2024-09-17 20:18:04.454 | INFO     | __main__:clone_repo:513 - Repo name: pawelsberg/lean-directory-browser
+2024-09-17 20:18:05.215 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 20:18:22.024 | INFO     | __main__:search_github_repositories:734 - Failed to clone pawelsberg/lean-directory-browser because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:18:22.024 | INFO     | __main__:search_github_repositories:711 - Processing fgdorais/GMLAlgebra
+2024-09-17 20:18:22.025 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/fgdorais/GMLAlgebra.git
+2024-09-17 20:18:22.025 | INFO     | __main__:clone_repo:513 - Repo name: fgdorais/GMLAlgebra
+2024-09-17 20:18:22.925 | INFO     | __main__:search_github_repositories:723 - Cloned fgdorais/GMLAlgebra
+2024-09-17 20:18:22.925 | INFO     | __main__:search_github_repositories:711 - Processing USC-Fall-2024-Math-587/USCMath587
+2024-09-17 20:18:22.925 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/USC-Fall-2024-Math-587/USCMath587.git
+2024-09-17 20:18:22.925 | INFO     | __main__:clone_repo:513 - Repo name: USC-Fall-2024-Math-587/USCMath587
+2024-09-17 20:18:23.753 | INFO     | __main__:search_github_repositories:723 - Cloned USC-Fall-2024-Math-587/USCMath587
+2024-09-17 20:18:23.754 | INFO     | __main__:search_github_repositories:711 - Processing DawidLipin/Project_Tate_Thesis
+2024-09-17 20:18:23.754 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/DawidLipin/Project_Tate_Thesis.git
+2024-09-17 20:18:23.754 | INFO     | __main__:clone_repo:513 - Repo name: DawidLipin/Project_Tate_Thesis
+2024-09-17 20:18:24.573 | INFO     | __main__:search_github_repositories:723 - Cloned DawidLipin/Project_Tate_Thesis
+2024-09-17 20:18:24.573 | INFO     | __main__:search_github_repositories:711 - Processing fgdorais/logic4
+2024-09-17 20:18:24.574 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/fgdorais/logic4.git
+2024-09-17 20:18:24.574 | INFO     | __main__:clone_repo:513 - Repo name: fgdorais/logic4
+2024-09-17 20:18:25.284 | INFO     | __main__:search_github_repositories:723 - Cloned fgdorais/logic4
+2024-09-17 20:18:25.284 | INFO     | __main__:search_github_repositories:711 - Processing rkthomps/weekly-lean
+2024-09-17 20:18:25.285 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/rkthomps/weekly-lean.git
+2024-09-17 20:18:25.285 | INFO     | __main__:clone_repo:513 - Repo name: rkthomps/weekly-lean
+2024-09-17 20:18:26.081 | INFO     | __main__:search_github_repositories:723 - Cloned rkthomps/weekly-lean
+2024-09-17 20:18:26.081 | INFO     | __main__:search_github_repositories:711 - Processing fgdorais/lean4-ascii
+2024-09-17 20:18:26.081 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/fgdorais/lean4-ascii.git
+2024-09-17 20:18:26.081 | INFO     | __main__:clone_repo:513 - Repo name: fgdorais/lean4-ascii
+2024-09-17 20:18:26.761 | INFO     | __main__:search_github_repositories:723 - Cloned fgdorais/lean4-ascii
+2024-09-17 20:18:26.762 | INFO     | __main__:search_github_repositories:711 - Processing fgdorais/lean4-unicode-basic
+2024-09-17 20:18:26.762 | INFO     | __main__:search_github_repositories:736 - Skipping fgdorais/lean4-unicode-basic since it is a known repository
+2024-09-17 20:18:26.762 | INFO     | __main__:search_github_repositories:711 - Processing katydid/proofs
+2024-09-17 20:18:26.762 | INFO     | __main__:search_github_repositories:736 - Skipping katydid/proofs since it is a known repository
+2024-09-17 20:18:26.762 | INFO     | __main__:search_github_repositories:711 - Processing katydid/symbolic-automatic-derivatives
+2024-09-17 20:18:26.762 | INFO     | __main__:search_github_repositories:736 - Skipping katydid/symbolic-automatic-derivatives since it is a known repository
+2024-09-17 20:18:26.762 | INFO     | __main__:search_github_repositories:711 - Processing USC-Fall-2024-Math-587/homework1
+2024-09-17 20:18:26.762 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/USC-Fall-2024-Math-587/homework1.git
+2024-09-17 20:18:26.763 | INFO     | __main__:clone_repo:513 - Repo name: USC-Fall-2024-Math-587/homework1
+2024-09-17 20:18:27.524 | INFO     | __main__:search_github_repositories:723 - Cloned USC-Fall-2024-Math-587/homework1
+2024-09-17 20:18:27.524 | INFO     | __main__:search_github_repositories:711 - Processing dwrensha/tryAtEachStep
+2024-09-17 20:18:27.524 | INFO     | __main__:search_github_repositories:736 - Skipping dwrensha/tryAtEachStep since it is a known repository
+2024-09-17 20:18:27.524 | INFO     | __main__:search_github_repositories:711 - Processing fractalate/lean-munkres-topology
+2024-09-17 20:18:27.525 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/fractalate/lean-munkres-topology.git
+2024-09-17 20:18:27.525 | INFO     | __main__:clone_repo:513 - Repo name: fractalate/lean-munkres-topology
+2024-09-17 20:18:29.812 | INFO     | __main__:search_github_repositories:723 - Cloned fractalate/lean-munkres-topology
+2024-09-17 20:18:29.813 | INFO     | __main__:search_github_repositories:711 - Processing siddhartha-gadgil/Polylean
+2024-09-17 20:18:29.813 | INFO     | __main__:search_github_repositories:736 - Skipping siddhartha-gadgil/Polylean since it is a known repository
+2024-09-17 20:18:29.813 | INFO     | __main__:search_github_repositories:711 - Processing traiansf/semantics-in-lean
+2024-09-17 20:18:29.813 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/traiansf/semantics-in-lean.git
+2024-09-17 20:18:29.813 | INFO     | __main__:clone_repo:513 - Repo name: traiansf/semantics-in-lean
+2024-09-17 20:18:30.597 | INFO     | __main__:search_github_repositories:723 - Cloned traiansf/semantics-in-lean
+2024-09-17 20:18:30.597 | INFO     | __main__:search_github_repositories:711 - Processing leanprover-community/repl
+2024-09-17 20:18:30.598 | INFO     | __main__:search_github_repositories:736 - Skipping leanprover-community/repl since it is a known repository
+2024-09-17 20:18:30.598 | INFO     | __main__:search_github_repositories:711 - Processing leanprover-community/ProofWidgets4
+2024-09-17 20:18:30.598 | INFO     | __main__:search_github_repositories:736 - Skipping leanprover-community/ProofWidgets4 since it is a known repository
+2024-09-17 20:18:30.598 | INFO     | __main__:search_github_repositories:711 - Processing leanprover/lean4checker
+2024-09-17 20:18:30.598 | INFO     | __main__:search_github_repositories:736 - Skipping leanprover/lean4checker since it is a known repository
+2024-09-17 20:18:30.598 | INFO     | __main__:search_github_repositories:711 - Processing kyleellefsen/lean_aoc_2023
+2024-09-17 20:18:30.598 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/kyleellefsen/lean_aoc_2023.git
+2024-09-17 20:18:30.598 | INFO     | __main__:clone_repo:513 - Repo name: kyleellefsen/lean_aoc_2023
+2024-09-17 20:18:31.388 | INFO     | __main__:search_github_repositories:723 - Cloned kyleellefsen/lean_aoc_2023
+2024-09-17 20:18:31.389 | INFO     | __main__:search_github_repositories:711 - Processing leanprover-community/quote4
+2024-09-17 20:18:31.389 | INFO     | __main__:search_github_repositories:736 - Skipping leanprover-community/quote4 since it is a known repository
+2024-09-17 20:18:31.389 | INFO     | __main__:search_github_repositories:711 - Processing suhr/tmath
+2024-09-17 20:18:31.389 | INFO     | __main__:search_github_repositories:736 - Skipping suhr/tmath since it is a known repository
+2024-09-17 20:18:31.389 | INFO     | __main__:search_github_repositories:711 - Processing mdgeorge4153/cglean
+2024-09-17 20:18:31.389 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/mdgeorge4153/cglean.git
+2024-09-17 20:18:31.389 | INFO     | __main__:clone_repo:513 - Repo name: mdgeorge4153/cglean
+2024-09-17 20:18:32.109 | INFO     | __main__:search_github_repositories:723 - Cloned mdgeorge4153/cglean
+2024-09-17 20:18:32.110 | INFO     | __main__:search_github_repositories:711 - Processing agusakov/algebraic-graph-theory
+2024-09-17 20:18:32.110 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/agusakov/algebraic-graph-theory.git
+2024-09-17 20:18:32.110 | INFO     | __main__:clone_repo:513 - Repo name: agusakov/algebraic-graph-theory
+2024-09-17 20:18:32.887 | INFO     | __main__:search_github_repositories:723 - Cloned agusakov/algebraic-graph-theory
+2024-09-17 20:18:32.888 | INFO     | __main__:search_github_repositories:711 - Processing cymcymcymcym/ring_axioms_lean4
+2024-09-17 20:18:32.888 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/cymcymcymcym/ring_axioms_lean4.git
+2024-09-17 20:18:32.888 | INFO     | __main__:clone_repo:513 - Repo name: cymcymcymcym/ring_axioms_lean4
+2024-09-17 20:18:33.625 | INFO     | __main__:search_github_repositories:723 - Cloned cymcymcymcym/ring_axioms_lean4
+2024-09-17 20:18:33.625 | INFO     | __main__:search_github_repositories:711 - Processing Ericson2314/lean-tic-tac-toe
+2024-09-17 20:18:33.625 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Ericson2314/lean-tic-tac-toe.git
+2024-09-17 20:18:33.626 | INFO     | __main__:clone_repo:513 - Repo name: Ericson2314/lean-tic-tac-toe
+2024-09-17 20:18:34.367 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 4.10.0
+2024-09-17 20:18:50.783 | INFO     | __main__:search_github_repositories:734 - Failed to clone Ericson2314/lean-tic-tac-toe because of Invalid tag or branch: `4.10.0` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:18:50.784 | INFO     | __main__:search_github_repositories:711 - Processing f-ttanaka/tapl-lean
+2024-09-17 20:18:50.784 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/f-ttanaka/tapl-lean.git
+2024-09-17 20:18:50.784 | INFO     | __main__:clone_repo:513 - Repo name: f-ttanaka/tapl-lean
+2024-09-17 20:18:51.645 | INFO     | __main__:search_github_repositories:723 - Cloned f-ttanaka/tapl-lean
+2024-09-17 20:18:51.646 | INFO     | __main__:search_github_repositories:711 - Processing dwrensha/lean4-maze
+2024-09-17 20:18:51.646 | INFO     | __main__:search_github_repositories:736 - Skipping dwrensha/lean4-maze since it is a known repository
+2024-09-17 20:18:51.646 | INFO     | __main__:search_github_repositories:711 - Processing hcheval/LMAS
+2024-09-17 20:18:51.646 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/hcheval/LMAS.git
+2024-09-17 20:18:51.646 | INFO     | __main__:clone_repo:513 - Repo name: hcheval/LMAS
+2024-09-17 20:18:52.411 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.1.0-rc1
+2024-09-17 20:19:09.137 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/hcheval/LMAS', commit='0285ff24726d8f0a261aff73c17ad1288ac0ee09') relies on an unsupported Lean version: 339615042d9053f184393f73ef955fbdc3cd12bd
+2024-09-17 20:19:09.137 | INFO     | __main__:search_github_repositories:723 - Cloned hcheval/LMAS
+2024-09-17 20:19:09.138 | INFO     | __main__:search_github_repositories:711 - Processing yangky11/lean4-example
+2024-09-17 20:19:09.138 | INFO     | __main__:search_github_repositories:736 - Skipping yangky11/lean4-example since it is a known repository
+2024-09-17 20:19:09.138 | INFO     | __main__:search_github_repositories:711 - Processing sacerdot/matita-lean
+2024-09-17 20:19:09.138 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/sacerdot/matita-lean.git
+2024-09-17 20:19:09.138 | INFO     | __main__:clone_repo:513 - Repo name: sacerdot/matita-lean
+2024-09-17 20:19:10.045 | INFO     | __main__:search_github_repositories:734 - Failed to clone sacerdot/matita-lean because of Invalid Lean 4 version: v4.11.0
+2024-09-17 20:19:10.048 | INFO     | __main__:search_github_repositories:711 - Processing anzenlang/zen
+2024-09-17 20:19:10.048 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/anzenlang/zen.git
+2024-09-17 20:19:10.049 | INFO     | __main__:clone_repo:513 - Repo name: anzenlang/zen
+2024-09-17 20:19:10.893 | INFO     | __main__:search_github_repositories:723 - Cloned anzenlang/zen
+2024-09-17 20:19:10.893 | INFO     | __main__:search_github_repositories:711 - Processing FR-vdash-bot/Algorithm
+2024-09-17 20:19:10.893 | INFO     | __main__:search_github_repositories:736 - Skipping FR-vdash-bot/Algorithm since it is a known repository
+2024-09-17 20:19:10.893 | INFO     | __main__:search_github_repositories:711 - Processing tautastic/gauss-lean
+2024-09-17 20:19:10.893 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/tautastic/gauss-lean.git
+2024-09-17 20:19:10.894 | INFO     | __main__:clone_repo:513 - Repo name: tautastic/gauss-lean
+2024-09-17 20:19:11.649 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 20:19:28.313 | INFO     | __main__:search_github_repositories:734 - Failed to clone tautastic/gauss-lean because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:19:28.313 | INFO     | __main__:search_github_repositories:711 - Processing vasnesterov/HadwigerNelson
+2024-09-17 20:19:28.313 | INFO     | __main__:search_github_repositories:736 - Skipping vasnesterov/HadwigerNelson since it is a known repository
+2024-09-17 20:19:28.313 | INFO     | __main__:search_github_repositories:711 - Processing chabulhwi/lean-notes
+2024-09-17 20:19:28.313 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/chabulhwi/lean-notes.git
+2024-09-17 20:19:28.313 | INFO     | __main__:clone_repo:513 - Repo name: chabulhwi/lean-notes
+2024-09-17 20:19:29.104 | INFO     | __main__:search_github_repositories:723 - Cloned chabulhwi/lean-notes
+2024-09-17 20:19:29.104 | INFO     | __main__:search_github_repositories:711 - Processing jtriley-eth/naturals-lean
+2024-09-17 20:19:29.104 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/jtriley-eth/naturals-lean.git
+2024-09-17 20:19:29.104 | INFO     | __main__:clone_repo:513 - Repo name: jtriley-eth/naturals-lean
+2024-09-17 20:19:29.801 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 20:19:46.886 | INFO     | __main__:search_github_repositories:734 - Failed to clone jtriley-eth/naturals-lean because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:19:46.887 | INFO     | __main__:search_github_repositories:711 - Processing dannypsnl/parsec-extra
+2024-09-17 20:19:46.887 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/dannypsnl/parsec-extra.git
+2024-09-17 20:19:46.887 | INFO     | __main__:clone_repo:513 - Repo name: dannypsnl/parsec-extra
+2024-09-17 20:19:47.668 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 20:20:04.289 | INFO     | __main__:search_github_repositories:734 - Failed to clone dannypsnl/parsec-extra because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:20:04.289 | INFO     | __main__:search_github_repositories:711 - Processing semorrison/lean-monadic-list
+2024-09-17 20:20:04.290 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/semorrison/lean-monadic-list.git
+2024-09-17 20:20:04.290 | INFO     | __main__:clone_repo:513 - Repo name: semorrison/lean-monadic-list
+2024-09-17 20:20:05.097 | INFO     | __main__:search_github_repositories:723 - Cloned semorrison/lean-monadic-list
+2024-09-17 20:20:05.097 | INFO     | __main__:search_github_repositories:711 - Processing JanaGoeken/ICMS2024QuadraticFieldIntegers
+2024-09-17 20:20:05.098 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/JanaGoeken/ICMS2024QuadraticFieldIntegers.git
+2024-09-17 20:20:05.098 | INFO     | __main__:clone_repo:513 - Repo name: JanaGoeken/ICMS2024QuadraticFieldIntegers
+2024-09-17 20:20:05.886 | INFO     | __main__:search_github_repositories:723 - Cloned JanaGoeken/ICMS2024QuadraticFieldIntegers
+2024-09-17 20:20:05.887 | INFO     | __main__:search_github_repositories:711 - Processing chenjulang/zerosum
+2024-09-17 20:20:05.887 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/chenjulang/zerosum.git
+2024-09-17 20:20:05.887 | INFO     | __main__:clone_repo:513 - Repo name: chenjulang/zerosum
+2024-09-17 20:20:06.656 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.6.0-rc1
+2024-09-17 20:20:23.152 | INFO     | __main__:search_github_repositories:723 - Cloned chenjulang/zerosum
+2024-09-17 20:20:23.152 | INFO     | __main__:search_github_repositories:711 - Processing adamtopaz/lean_pdist
+2024-09-17 20:20:23.153 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/adamtopaz/lean_pdist.git
+2024-09-17 20:20:23.153 | INFO     | __main__:clone_repo:513 - Repo name: adamtopaz/lean_pdist
+2024-09-17 20:20:23.837 | INFO     | __main__:search_github_repositories:723 - Cloned adamtopaz/lean_pdist
+2024-09-17 20:20:25.998 | INFO     | __main__:search_github_repositories:711 - Processing Seasawher/LegacyZeroD.lean
+2024-09-17 20:20:25.998 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Seasawher/LegacyZeroD.lean.git
+2024-09-17 20:20:25.998 | INFO     | __main__:clone_repo:513 - Repo name: Seasawher/LegacyZeroD.lean
+2024-09-17 20:20:26.838 | INFO     | __main__:search_github_repositories:723 - Cloned Seasawher/LegacyZeroD.lean
+2024-09-17 20:20:26.839 | INFO     | __main__:search_github_repositories:711 - Processing fadoss/maude2lean
+2024-09-17 20:20:26.839 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/fadoss/maude2lean.git
+2024-09-17 20:20:26.839 | INFO     | __main__:clone_repo:513 - Repo name: fadoss/maude2lean
+2024-09-17 20:20:27.649 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/fadoss/maude2lean/20ca7e505c7b873a21a7b4ccbaaf9e1188f18d67/lean-toolchain failed. Retrying...
+2024-09-17 20:20:28.685 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/fadoss/maude2lean/20ca7e505c7b873a21a7b4ccbaaf9e1188f18d67/lean-toolchain failed. Retrying...
+2024-09-17 20:20:30.736 | INFO     | __main__:search_github_repositories:734 - Failed to clone fadoss/maude2lean because of HTTP Error 404: Not Found
+2024-09-17 20:20:30.739 | INFO     | __main__:search_github_repositories:711 - Processing Javernus/Quantum-Lean
+2024-09-17 20:20:30.740 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Javernus/Quantum-Lean.git
+2024-09-17 20:20:30.741 | INFO     | __main__:clone_repo:513 - Repo name: Javernus/Quantum-Lean
+2024-09-17 20:20:31.545 | INFO     | __main__:search_github_repositories:723 - Cloned Javernus/Quantum-Lean
+2024-09-17 20:20:31.546 | INFO     | __main__:search_github_repositories:711 - Processing sangjun7/test_proofnet
+2024-09-17 20:20:31.546 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/sangjun7/test_proofnet.git
+2024-09-17 20:20:31.546 | INFO     | __main__:clone_repo:513 - Repo name: sangjun7/test_proofnet
+2024-09-17 20:20:32.343 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/sangjun7/test_proofnet/e7b87ef153f09ad3f329a312e33ddee579265c95/lean-toolchain failed. Retrying...
+2024-09-17 20:20:33.386 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/sangjun7/test_proofnet/e7b87ef153f09ad3f329a312e33ddee579265c95/lean-toolchain failed. Retrying...
+2024-09-17 20:20:35.423 | INFO     | __main__:search_github_repositories:734 - Failed to clone sangjun7/test_proofnet because of HTTP Error 404: Not Found
+2024-09-17 20:20:35.425 | INFO     | __main__:search_github_repositories:711 - Processing tydeu/imperia
+2024-09-17 20:20:35.427 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/tydeu/imperia.git
+2024-09-17 20:20:35.427 | INFO     | __main__:clone_repo:513 - Repo name: tydeu/imperia
+2024-09-17 20:20:36.192 | INFO     | __main__:search_github_repositories:723 - Cloned tydeu/imperia
+2024-09-17 20:20:36.192 | INFO     | __main__:search_github_repositories:711 - Processing gleachkr/TermRewriting
+2024-09-17 20:20:36.192 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/gleachkr/TermRewriting.git
+2024-09-17 20:20:36.193 | INFO     | __main__:clone_repo:513 - Repo name: gleachkr/TermRewriting
+2024-09-17 20:20:37.105 | INFO     | __main__:search_github_repositories:723 - Cloned gleachkr/TermRewriting
+2024-09-17 20:20:37.105 | INFO     | __main__:search_github_repositories:711 - Processing pepamontero/Lean4-Buzzard-Exercises
+2024-09-17 20:20:37.105 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/pepamontero/Lean4-Buzzard-Exercises.git
+2024-09-17 20:20:37.105 | INFO     | __main__:clone_repo:513 - Repo name: pepamontero/Lean4-Buzzard-Exercises
+2024-09-17 20:20:37.859 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc1
+2024-09-17 20:20:54.162 | INFO     | __main__:search_github_repositories:723 - Cloned pepamontero/Lean4-Buzzard-Exercises
+2024-09-17 20:20:54.162 | INFO     | __main__:search_github_repositories:711 - Processing mdnestor/LawvereFixedPoint
+2024-09-17 20:20:54.162 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/mdnestor/LawvereFixedPoint.git
+2024-09-17 20:20:54.162 | INFO     | __main__:clone_repo:513 - Repo name: mdnestor/LawvereFixedPoint
+2024-09-17 20:20:55.009 | INFO     | __main__:search_github_repositories:723 - Cloned mdnestor/LawvereFixedPoint
+2024-09-17 20:20:55.009 | INFO     | __main__:search_github_repositories:711 - Processing michelsol/lean4-bitstring
+2024-09-17 20:20:55.010 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/michelsol/lean4-bitstring.git
+2024-09-17 20:20:55.010 | INFO     | __main__:clone_repo:513 - Repo name: michelsol/lean4-bitstring
+2024-09-17 20:20:55.719 | INFO     | __main__:search_github_repositories:723 - Cloned michelsol/lean4-bitstring
+2024-09-17 20:20:55.720 | INFO     | __main__:search_github_repositories:711 - Processing jjdishere/neukirch
+2024-09-17 20:20:55.720 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/jjdishere/neukirch.git
+2024-09-17 20:20:55.720 | INFO     | __main__:clone_repo:513 - Repo name: jjdishere/neukirch
+2024-09-17 20:20:56.470 | INFO     | __main__:search_github_repositories:723 - Cloned jjdishere/neukirch
+2024-09-17 20:20:56.470 | INFO     | __main__:search_github_repositories:711 - Processing alexjbest/leaff
+2024-09-17 20:20:56.470 | INFO     | __main__:search_github_repositories:736 - Skipping alexjbest/leaff since it is a known repository
+2024-09-17 20:20:56.470 | INFO     | __main__:search_github_repositories:711 - Processing bjoernkjoshanssen/biocalculus
+2024-09-17 20:20:56.470 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/bjoernkjoshanssen/biocalculus.git
+2024-09-17 20:20:56.470 | INFO     | __main__:clone_repo:513 - Repo name: bjoernkjoshanssen/biocalculus
+2024-09-17 20:20:57.201 | INFO     | __main__:search_github_repositories:723 - Cloned bjoernkjoshanssen/biocalculus
+2024-09-17 20:20:57.201 | INFO     | __main__:search_github_repositories:711 - Processing Kamil-Orzechowski/Lean-first-steps
+2024-09-17 20:20:57.201 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Kamil-Orzechowski/Lean-first-steps.git
+2024-09-17 20:20:57.201 | INFO     | __main__:clone_repo:513 - Repo name: Kamil-Orzechowski/Lean-first-steps
+2024-09-17 20:20:57.914 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 20:21:14.624 | INFO     | __main__:search_github_repositories:734 - Failed to clone Kamil-Orzechowski/Lean-first-steps because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:21:14.625 | INFO     | __main__:search_github_repositories:711 - Processing grhkm21/lean4
+2024-09-17 20:21:14.625 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/grhkm21/lean4.git
+2024-09-17 20:21:14.625 | INFO     | __main__:clone_repo:513 - Repo name: grhkm21/lean4
+2024-09-17 20:21:15.381 | INFO     | __main__:search_github_repositories:723 - Cloned grhkm21/lean4
+2024-09-17 20:21:15.382 | INFO     | __main__:search_github_repositories:711 - Processing arademaker/delphin
+2024-09-17 20:21:15.382 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/arademaker/delphin.git
+2024-09-17 20:21:15.382 | INFO     | __main__:clone_repo:513 - Repo name: arademaker/delphin
+2024-09-17 20:21:16.099 | INFO     | __main__:search_github_repositories:723 - Cloned arademaker/delphin
+2024-09-17 20:21:16.100 | INFO     | __main__:search_github_repositories:711 - Processing vivek-rj/gauss_elim2
+2024-09-17 20:21:16.100 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/vivek-rj/gauss_elim2.git
+2024-09-17 20:21:16.100 | INFO     | __main__:clone_repo:513 - Repo name: vivek-rj/gauss_elim2
+2024-09-17 20:21:16.996 | INFO     | __main__:search_github_repositories:723 - Cloned vivek-rj/gauss_elim2
+2024-09-17 20:21:16.997 | INFO     | __main__:search_github_repositories:711 - Processing guralpa/fib_functor
+2024-09-17 20:21:16.997 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/guralpa/fib_functor.git
+2024-09-17 20:21:16.997 | INFO     | __main__:clone_repo:513 - Repo name: guralpa/fib_functor
+2024-09-17 20:21:17.810 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc1
+2024-09-17 20:21:34.027 | INFO     | __main__:search_github_repositories:723 - Cloned guralpa/fib_functor
+2024-09-17 20:21:34.027 | INFO     | __main__:search_github_repositories:711 - Processing alma-n/Polya-lean
+2024-09-17 20:21:34.028 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/alma-n/Polya-lean.git
+2024-09-17 20:21:34.028 | INFO     | __main__:clone_repo:513 - Repo name: alma-n/Polya-lean
+2024-09-17 20:21:34.785 | INFO     | __main__:search_github_repositories:723 - Cloned alma-n/Polya-lean
+2024-09-17 20:21:34.786 | INFO     | __main__:search_github_repositories:711 - Processing ilangdev/FCrypt
+2024-09-17 20:21:34.786 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/ilangdev/FCrypt.git
+2024-09-17 20:21:34.786 | INFO     | __main__:clone_repo:513 - Repo name: ilangdev/FCrypt
+2024-09-17 20:21:35.637 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ilangdev/FCrypt/9991f7a7681da621c533a2a2a706d424e1159fca/lean-toolchain failed. Retrying...
+2024-09-17 20:21:36.674 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ilangdev/FCrypt/9991f7a7681da621c533a2a2a706d424e1159fca/lean-toolchain failed. Retrying...
+2024-09-17 20:21:38.713 | INFO     | __main__:search_github_repositories:734 - Failed to clone ilangdev/FCrypt because of HTTP Error 404: Not Found
+2024-09-17 20:21:38.715 | INFO     | __main__:search_github_repositories:711 - Processing leanprover-community/lean4-metaprogramming-book
+2024-09-17 20:21:38.716 | INFO     | __main__:search_github_repositories:736 - Skipping leanprover-community/lean4-metaprogramming-book since it is a known repository
+2024-09-17 20:21:38.716 | INFO     | __main__:search_github_repositories:711 - Processing Antoine-dSG/frieze_patterns
+2024-09-17 20:21:38.716 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Antoine-dSG/frieze_patterns.git
+2024-09-17 20:21:38.717 | INFO     | __main__:clone_repo:513 - Repo name: Antoine-dSG/frieze_patterns
+2024-09-17 20:21:39.470 | INFO     | __main__:search_github_repositories:723 - Cloned Antoine-dSG/frieze_patterns
+2024-09-17 20:21:39.470 | INFO     | __main__:search_github_repositories:711 - Processing laughinggas/mini-workshop
+2024-09-17 20:21:39.470 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/laughinggas/mini-workshop.git
+2024-09-17 20:21:39.470 | INFO     | __main__:clone_repo:513 - Repo name: laughinggas/mini-workshop
+2024-09-17 20:21:40.179 | INFO     | __main__:search_github_repositories:723 - Cloned laughinggas/mini-workshop
+2024-09-17 20:21:40.179 | INFO     | __main__:search_github_repositories:711 - Processing leanprover/leansat
+2024-09-17 20:21:40.179 | INFO     | __main__:search_github_repositories:736 - Skipping leanprover/leansat since it is a known repository
+2024-09-17 20:21:40.179 | INFO     | __main__:search_github_repositories:711 - Processing BrownCS1951x/fpv2024-test
+2024-09-17 20:21:40.179 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/BrownCS1951x/fpv2024-test.git
+2024-09-17 20:21:40.179 | INFO     | __main__:clone_repo:513 - Repo name: BrownCS1951x/fpv2024-test
+2024-09-17 20:21:40.922 | INFO     | __main__:search_github_repositories:723 - Cloned BrownCS1951x/fpv2024-test
+2024-09-17 20:21:40.922 | INFO     | __main__:search_github_repositories:711 - Processing cspr-rad/mtl-actus
+2024-09-17 20:21:40.922 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/cspr-rad/mtl-actus.git
+2024-09-17 20:21:40.923 | INFO     | __main__:clone_repo:513 - Repo name: cspr-rad/mtl-actus
+2024-09-17 20:21:41.754 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/cspr-rad/mtl-actus/3272977559c5b8773a375e85762d72f64ce0c99b/lean-toolchain failed. Retrying...
+2024-09-17 20:21:42.791 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/cspr-rad/mtl-actus/3272977559c5b8773a375e85762d72f64ce0c99b/lean-toolchain failed. Retrying...
+2024-09-17 20:21:44.830 | INFO     | __main__:search_github_repositories:734 - Failed to clone cspr-rad/mtl-actus because of HTTP Error 404: Not Found
+2024-09-17 20:21:44.832 | INFO     | __main__:search_github_repositories:711 - Processing leanprover-community/NNG4
+2024-09-17 20:21:44.833 | INFO     | __main__:search_github_repositories:736 - Skipping leanprover-community/NNG4 since it is a known repository
+2024-09-17 20:21:44.833 | INFO     | __main__:search_github_repositories:711 - Processing PatrickMassot/checkdecls
+2024-09-17 20:21:44.834 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/PatrickMassot/checkdecls.git
+2024-09-17 20:21:44.834 | INFO     | __main__:clone_repo:513 - Repo name: PatrickMassot/checkdecls
+2024-09-17 20:21:45.565 | INFO     | __main__:search_github_repositories:723 - Cloned PatrickMassot/checkdecls
+2024-09-17 20:21:45.566 | INFO     | __main__:search_github_repositories:711 - Processing Timeroot/Lean-QuantumInfo
+2024-09-17 20:21:45.566 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/Timeroot/Lean-QuantumInfo.git
+2024-09-17 20:21:45.566 | INFO     | __main__:clone_repo:513 - Repo name: Timeroot/Lean-QuantumInfo
+2024-09-17 20:21:46.246 | INFO     | __main__:search_github_repositories:723 - Cloned Timeroot/Lean-QuantumInfo
+2024-09-17 20:21:46.246 | INFO     | __main__:search_github_repositories:711 - Processing dipeshkaphle/cpdt_lean
+2024-09-17 20:21:46.247 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/dipeshkaphle/cpdt_lean.git
+2024-09-17 20:21:46.247 | INFO     | __main__:clone_repo:513 - Repo name: dipeshkaphle/cpdt_lean
+2024-09-17 20:21:46.997 | INFO     | __main__:search_github_repositories:734 - Failed to clone dipeshkaphle/cpdt_lean because of Invalid Lean 4 version: stable
+2024-09-17 20:21:46.999 | INFO     | __main__:search_github_repositories:711 - Processing yu-yama/GroupExtension
+2024-09-17 20:21:46.999 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/yu-yama/GroupExtension.git
+2024-09-17 20:21:46.999 | INFO     | __main__:clone_repo:513 - Repo name: yu-yama/GroupExtension
+2024-09-17 20:21:47.734 | INFO     | __main__:search_github_repositories:723 - Cloned yu-yama/GroupExtension
+2024-09-17 20:21:47.734 | INFO     | __main__:search_github_repositories:711 - Processing pa-ba/guarded-lean
+2024-09-17 20:21:47.734 | INFO     | __main__:search_github_repositories:736 - Skipping pa-ba/guarded-lean since it is a known repository
+2024-09-17 20:21:47.734 | INFO     | __main__:search_github_repositories:711 - Processing nomeata/lean-simplc
+2024-09-17 20:21:47.734 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/nomeata/lean-simplc.git
+2024-09-17 20:21:47.734 | INFO     | __main__:clone_repo:513 - Repo name: nomeata/lean-simplc
+2024-09-17 20:21:48.522 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-08-25
+2024-09-17 20:21:49.095 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/nomeata/lean-simplc', commit='396e0a8ed6f7f2fc3582f813861359a396ca047f') relies on an unsupported Lean version: cee84286e6a6c2716aac8ddcdb552e830f760033
+2024-09-17 20:21:49.095 | INFO     | __main__:search_github_repositories:723 - Cloned nomeata/lean-simplc
+2024-09-17 20:21:49.095 | INFO     | __main__:search_github_repositories:711 - Processing JesseCSlater/nondeterministic_rewrite
+2024-09-17 20:21:49.096 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/JesseCSlater/nondeterministic_rewrite.git
+2024-09-17 20:21:49.096 | INFO     | __main__:clone_repo:513 - Repo name: JesseCSlater/nondeterministic_rewrite
+2024-09-17 20:21:49.941 | INFO     | __main__:search_github_repositories:723 - Cloned JesseCSlater/nondeterministic_rewrite
+2024-09-17 20:21:49.941 | INFO     | __main__:search_github_repositories:711 - Processing ydewit/compiler-tinkering
+2024-09-17 20:21:49.941 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/ydewit/compiler-tinkering.git
+2024-09-17 20:21:49.941 | INFO     | __main__:clone_repo:513 - Repo name: ydewit/compiler-tinkering
+2024-09-17 20:21:50.654 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ydewit/compiler-tinkering/095843f71edcf05452c3b14bbf84b6e01f835eb1/lean-toolchain failed. Retrying...
+2024-09-17 20:21:51.694 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ydewit/compiler-tinkering/095843f71edcf05452c3b14bbf84b6e01f835eb1/lean-toolchain failed. Retrying...
+2024-09-17 20:21:53.731 | INFO     | __main__:search_github_repositories:734 - Failed to clone ydewit/compiler-tinkering because of HTTP Error 404: Not Found
+2024-09-17 20:21:53.734 | INFO     | __main__:search_github_repositories:711 - Processing USC-Fall-2024-Math-587/introduction-to-cryptography-classroom-3689a9-caesarian-ciphers-homework1
+2024-09-17 20:21:53.736 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/USC-Fall-2024-Math-587/introduction-to-cryptography-classroom-3689a9-caesarian-ciphers-homework1.git
+2024-09-17 20:21:53.737 | INFO     | __main__:clone_repo:513 - Repo name: USC-Fall-2024-Math-587/introduction-to-cryptography-classroom-3689a9-caesarian-ciphers-homework1
+2024-09-17 20:21:54.550 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 stable
+2024-09-17 20:22:11.536 | INFO     | __main__:search_github_repositories:734 - Failed to clone USC-Fall-2024-Math-587/introduction-to-cryptography-classroom-3689a9-caesarian-ciphers-homework1 because of Invalid tag or branch: `stable` for Repository(full_name="leanprover/lean4")
+2024-09-17 20:22:11.536 | INFO     | __main__:search_github_repositories:711 - Processing jkr11/CoR
+2024-09-17 20:22:11.536 | INFO     | __main__:clone_repo:512 - Cloning https://github.com/jkr11/CoR.git
+2024-09-17 20:22:11.536 | INFO     | __main__:clone_repo:513 - Repo name: jkr11/CoR
+2024-09-17 20:22:12.533 | INFO     | __main__:search_github_repositories:723 - Cloned jkr11/CoR
+2024-09-17 20:22:12.534 | INFO     | __main__:search_github_repositories:746 - Total repositories processed: 100
+2024-09-17 20:22:12.538 | INFO     | __main__:search_github_repositories:751 - Search results saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/github_search_results_updated.json
