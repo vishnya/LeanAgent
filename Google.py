@@ -23,13 +23,17 @@ def create_service(client_secret_file, api_name, api_version, *scopes, prefix=''
 
     if os.path.exists(os.path.join(working_dir, token_dir, token_file)):
         creds = Credentials.from_authorized_user_file(os.path.join(working_dir, token_dir, token_file), SCOPES)
-        # with open(os.path.join(working_dir, token_dir, token_file), 'rb') as token:
-        #   cred = pickle.load(token)
 
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
+            try:
+                creds.refresh(Request())
+            except Exception as e:
+                print(f"Error refreshing credentials: {e}")
+                os.remove(os.path.join(working_dir, token_dir, token_file))
+                creds = None
+        
+        if not creds:
             flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRET_FILE, SCOPES)
             creds = flow.run_local_server(port=0)
 
@@ -41,8 +45,8 @@ def create_service(client_secret_file, api_name, api_version, *scopes, prefix=''
         print(API_SERVICE_NAME, API_VERSION, 'service created successfully')
         return service
     except Exception as e:
-        print(e)
-        print(f'Failed to create service instance for {API_SERVICE_NAME}')
+        print(f"Failed to create service instance for {API_SERVICE_NAME}")
+        print(f"Error details: {str(e)}")
         os.remove(os.path.join(working_dir, token_dir, token_file))
         return None
 

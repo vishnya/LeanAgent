@@ -52,7 +52,7 @@ RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -
     elan toolchain install leanprover/lean4:v4.3.0 && \
     elan toolchain install leanprover/lean4:v4.3.0-rc2 && \
     elan toolchain install leanprover/lean4:v4.3.0-rc1 && \
-    git clone https://github.com/Adarsh321123/LeanBot.git ReProver && \
+    git clone X ReProver && \
     cd ReProver && \
     git checkout backup_branch && \
     rm -rf .git
@@ -63,7 +63,7 @@ RUN ls -la /workspace/ReProver
 RUN pip install --no-cache-dir -r requirements.txt
 
 RUN apt-get update && \
-    apt-get -y install sudo
+    apt-get -y install sudo vim tmux p7zip-full
 
 RUN python -c "import pytorch_lightning as pl; print(pl.__file__)" > pl_path.txt && \
     PL_PATH=$(sudo cat pl_path.txt) && \
