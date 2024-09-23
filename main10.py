@@ -1323,7 +1323,7 @@ def main():
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
 
-                        if "cookbook" not in repo.url:
+                        if "Foundation" not in repo.url:
                             db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
                     
                     # TODO: reduce repition later with all path
@@ -1507,6 +1507,8 @@ def main():
                                     continue
                                 if "workshop" in repo.url and "PrimeNumberTheoremAnd" in data_path:
                                     continue
+                                if "Foundation" in repo.url and "con-nf" not in data_path:
+                                    continue
                                 # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
                                 run_cli(best_model_path, data_path)
                                 if is_main_process:
@@ -1537,6 +1539,17 @@ def main():
                                     total_R10.append(57.63214261347874)
                                     total_R10.append(56.96295649643409)
                                     total_R10.append(56.96295649643409)
+                                if "Foundation" in repo.url:
+                                    total_R1.append(53.53053661085197)
+                                    total_R1.append(53.200608321796395)
+                                    total_R1.append(57.8959603829842)
+                                    total_R1.append(57.77677349240486)
+                                    total_R1.append(58.905380825481814)
+                                    total_R1.append(58.80580067539732)
+                                    total_R1.append(53.69253622680924)
+                                    total_R1.append(53.76316501589448)
+                                    total_R1.append(57.77677349240486)
+                                    total_R1.append(57.77677349240486)
                                 avg_R1 = np.mean(total_R1)
                                 avg_R10 = np.mean(total_R10)
                                 avg_MRR = np.mean(total_MRR)
