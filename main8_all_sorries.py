@@ -74,6 +74,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
+os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
@@ -910,8 +911,8 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
         sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
         v = "v4.8.0-rc1"
     elif "PrimeNumberTheoremAnd" in url:
-        sha = "89bf7b5e3a226525e8580bae21ef543604f99b21"
-        v = "v4.8.0"
+        sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
+        v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
     if not sha:
@@ -924,14 +925,14 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     dir_name = repo.url.split("/")[-1] + "_" + sha
     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name
     logger.info(f"Generating benchmark at {dst_dir}")
-    # traced_repo, _, _, total_theorems = generate_benchmark_lean48.main(repo.url, sha, dst_dir)
-    # if not traced_repo:
-    #     logger.info(f"Failed to trace {url}")
-    #     return None
-    # if total_theorems < 3 * BATCH_SIZE:  # Should be enough theorems for train/val/test
-    #     logger.info(f"No theorems found in {url}")
-    #     return None
-    # logger.info(f"Finished generating benchmark at {dst_dir}")
+    traced_repo, _, _, total_theorems = generate_benchmark_lean48.main(repo.url, sha, dst_dir)
+    if not traced_repo:
+        logger.info(f"Failed to trace {url}")
+        return None
+    if total_theorems < 3 * BATCH_SIZE:  # Should be enough theorems for train/val/test
+        logger.info(f"No theorems found in {url}")
+        return None
+    logger.info(f"Finished generating benchmark at {dst_dir}")
 
     # Add the new repo to the dynamic database
     config = repo.get_config("lean-toolchain")
@@ -1236,8 +1237,8 @@ def main():
             # if is_main_process:
             #     search_github_repositories("Lean", num_repos)
 
-                # clone_url = "https://github.com/siddhartha-gadgil/Saturn"
-                # commit = "3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"
+                # clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd"
+                # commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
                 # url = clone_url.replace('.git', '')
                 # lean_git_repo = LeanGitRepo(url, commit)
                 # lean_git_repos.append(lean_git_repo)

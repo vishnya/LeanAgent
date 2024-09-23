@@ -74,6 +74,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
+os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
@@ -95,7 +96,7 @@ CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum_start"
 EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum.txt"
 DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_curriculum_full_start.json"
 PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum_minif2f_start.log"
-ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curriculum_full_minif2f.pkl"
+ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curriculum_full_minif2f_start.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_ewc"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc"
@@ -938,6 +939,9 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     elif "pfr" in url:
         sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
         v = "v4.8.0-rc1"
+    elif "PrimeNumberTheoremAnd" in url:
+        sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
+        v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
     if not sha:

@@ -28,7 +28,6 @@ from loguru import logger
 from dataclasses import dataclass
 from typing import List, Optional, Tuple
 from ray.util.actor_pool import ActorPool
-from vllm import AsyncLLMEngine, AsyncEngineArgs, SamplingParams, RequestOutput
 
 from common import zip_strict
 from prover.search_tree import *
@@ -324,41 +323,6 @@ class ProverActor:
     ) -> Optional[SearchResult]:
         return self.prover.search(repo, thm, pos)
 
-
-@ray.remote
-class VllmActor:
-    """Ray actor for running an instance of `vllm.AsyncLLMEngine`, which is shared by all `ProverActor` instances."""
-
-    def __init__(self, model_path: str) -> None:
-        self.num_gpus = len(ray.get_gpu_ids())
-        self.model_path = model_path
-
-    def initialize(self) -> None:
-        # TODO: Try other options in https://docs.vllm.ai/en/stable/models/engine_args.html#engine-args.
-        engine_args = AsyncEngineArgs(
-            model=self.model_path,
-            tensor_parallel_size=self.num_gpus,
-            max_num_batched_tokens=8192,
-            # max_num_batched_tokens=2048,
-            # enable_chunked_prefill=True,
-        )
-        self.engine = AsyncLLMEngine.from_engine_args(engine_args)
-
-    async def generate(self, prompt: str, num_samples: int) -> RequestOutput:
-        sampling_params = SamplingParams(
-            n=num_samples,
-            temperature=0,
-            length_penalty=0,
-            use_beam_search=True,
-            early_stopping=False,
-            logprobs=0,
-        )
-
-        async for oup in self.engine.generate(
-            prompt, sampling_params, request_id=str(uuid.uuid4().hex)
-        ):
-            final_output = oup
-        return final_output
 
 class DistributedProver:
     """A distributed prover that uses Ray to parallelize the proof search.

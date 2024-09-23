@@ -147,7 +147,6 @@ class PremiseRetriever(pl.LightningModule):
             self.corpus = path_or_corpus
             self.corpus_embeddings = None
             self.embeddings_staled = True
-            logger.info(f"Embeddings staled load corpus: {self.embeddings_staled}")
             # logger.info("End of load_corpus inside if")
             return
 
@@ -156,7 +155,6 @@ class PremiseRetriever(pl.LightningModule):
             self.corpus = Corpus(path)
             self.corpus_embeddings = None
             self.embeddings_staled = True
-            logger.info(f"Embeddings staled load corpus jsonl: {self.embeddings_staled}")
         else:  # A corpus with pre-computed embeddings.
             indexed_corpus = pickle.load(open(path, "rb"))
             self.corpus = indexed_corpus.corpus

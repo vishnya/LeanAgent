@@ -74,6 +74,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
+os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
@@ -90,7 +91,7 @@ repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
 
-DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum"
+DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum_percent"
 CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum_percent"
 EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum_percent.txt"
 DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_curriculum_percent.json"
@@ -908,6 +909,9 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     elif "pfr" in url:
         sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
         v = "v4.8.0-rc1"
+    elif "PrimeNumberTheoremAnd" in url:
+        sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
+        v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
     if not sha:
@@ -1190,7 +1194,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 0
+        current_epoch = 11
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False
@@ -1244,43 +1248,53 @@ def main():
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible_percent.json"  # TODO: make constnat?
             if is_main_process:
         #         search_github_repositories("Lean", num_repos)
-        #         for i in range(len(repos)):
-        #             repo = lean_git_repos[i]
-        #             logger.info(f"Processing {repo.url}")
-        #             result = add_repo_to_database(dynamic_database_json_path, repo, db)
-        #             if result is not None:
-        #                 logger.info(f"Successfully added repo {repo.url}")                    
-        #         logger.info(f"Successfully added {num_repos} repositories to the database")
-                
-                sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
-                print("Sorted repositories. Saving now...")
-                db.to_json(dynamic_database_json_path)
-                save_sorted_repos(sorted_repos, "sorted_repos.json")
-                print("Summary of theorem difficulties by URL:")
-                for repo in sorted_repos:
-                    print(f"\nURL: {repo.url}")
-                    for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-                        theorems = categorized_theorems[repo][category]
-                        print(f"  {category}: {len(theorems)} theorems")
-                        if theorems:
-                            sorted_theorems = sorted(theorems, key=lambda x: x[2] if x[2] is not None else -float('inf'), reverse=True)[:3]
-                            for name, path, start, end, diff in sorted_theorems:
-                                diff_str = f"{diff:.2f}" if diff is not None else "N/A"
-                                print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
 
-                print("\nOverall Statistics:")
-                total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
-                for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-                    count = sum(len(categories[category]) for categories in categorized_theorems.values())
-                    percentage = (count / total_theorems) * 100
-                    print(f"{category}: {count} theorems ({percentage:.2f}%)")
+                clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd"
+                commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
+                url = clone_url.replace('.git', '')
+                lean_git_repo = LeanGitRepo(url, commit)
+                lean_git_repos.append(lean_git_repo)
 
-                print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
+                for i in range(len(lean_git_repos)):
+                    repo = lean_git_repos[i]
+                    logger.info(f"Processing {repo.url}")
+                    result = add_repo_to_database(dynamic_database_json_path, repo, db)
+                    if result is not None:
+                        logger.info(f"Successfully added repo {repo.url}")                    
+                logger.info(f"Successfully added {num_repos} repositories to the database")
+              
+                # sorted_repos, categorized_theorems, percentiles, repo_easy_percentages = sort_repositories_by_difficulty(db)
+                # print("Sorted repositories. Saving now...")
+                # db.to_json(dynamic_database_json_path)
+                # save_sorted_repos(sorted_repos, "sorted_repos.json")
+                # print("Summary of theorem difficulties by URL:")
+                # for repo in sorted_repos:
+                #     print(f"\nURL: {repo.url}")
+                #     total_theorems = sum(len(theorems) for theorems in categorized_theorems[repo].values())
+                #     for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+                #         theorems = categorized_theorems[repo][category]
+                #         percentage = (len(theorems) / total_theorems) * 100 if total_theorems > 0 else 0
+                #         print(f"  {category}: {len(theorems)} theorems ({percentage:.2f}%)")
+                #         if theorems:
+                #             sorted_theorems = sorted(theorems, key=lambda x: x[4] if x[4] is not None else -float('inf'), reverse=True)[:3]
+                #             for name, path, start, end, diff in sorted_theorems:
+                #                 diff_str = f"{diff:.2f}" if diff is not None else "N/A"
+                #                 print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
+                #     print(f"  Easy Theorem Percentage: {repo_easy_percentages[repo]:.2f}%")
+
+                # print("\nOverall Statistics:")
+                # total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
+                # for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+                #     count = sum(len(categories[category]) for categories in categorized_theorems.values())
+                #     percentage = (count / total_theorems) * 100
+                #     print(f"{category}: {count} theorems ({percentage:.2f}%)")
+
+                # print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
             
-                logger.info("Finding compatible repositories...")
-                updated_repos = find_and_save_compatible_commits(repo_info_file, sorted_repos)
-                lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
-                logger.info("Finished finding compatible repositories")
+                # logger.info("Finding compatible repositories...")
+                # updated_repos = find_and_save_compatible_commits(repo_info_file, sorted_repos)
+                # lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
+                # logger.info("Finished finding compatible repositories")
 
             # All processes wait for the file to be created and then read from it
             max_attempts = 30
@@ -1319,7 +1333,8 @@ def main():
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
 
-                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+                        if "SciLean" not in repo.url:
+                            db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
                     
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
@@ -1483,56 +1498,57 @@ def main():
 
                         best_model.eval()
 
-                        logger.info("Testing...")
-                        total_R1, total_R10, total_MRR = [], [], []
-                        dataset_path = RAID_DIR + "/" + DATA_DIR
-                        testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
-                        if is_main_process:
-                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-                                f.write("\n\n\n")
-                                f.write(f"Results for {dir_name} with lambda = {lambda_value}")
-                        for data_path in testing_paths:
-                            # TODO: remove this for tests that do not use merged dataset
-                            if "merged" not in data_path:
-                                continue
-                            # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
-                            run_cli(best_model_path, data_path)
+                        if "PrimeNumberTheoremAnd" not in repo.url:
+                            logger.info("Testing...")
+                            total_R1, total_R10, total_MRR = [], [], []
+                            dataset_path = RAID_DIR + "/" + DATA_DIR
+                            testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
                             if is_main_process:
-                                num_gpus = 4 # TODO: change for GPU
-                                preds_map = {}
-                                for gpu_id in range(num_gpus):
-                                    with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
-                                        preds = pickle.load(f)
-                                        preds_map.update(preds)
-
-                                logger.info("Loaded the predictions pickle files")
-                                data_path = os.path.join(data_path, "random", "test.json")
-                                data = json.load(open(data_path))
-                                logger.info(f"Evaluating on {data_path}")
-                                R1, R10, MRR = _eval(data, preds_map)
-                                logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-                                total_R1.append(R1)
-                                total_R10.append(R10)
-                                total_MRR.append(MRR)
                                 with open(EVAL_RESULTS_FILE_PATH, "a") as f:
                                     f.write("\n\n\n")
-                                    f.write(f"Intermediate results for {data_path}")
+                                    f.write(f"Results for {dir_name} with lambda = {lambda_value}")
+                            for data_path in testing_paths:
+                                # TODO: remove this for tests that do not use merged dataset
+                                if "merged" not in data_path:
+                                    continue
+                                # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
+                                run_cli(best_model_path, data_path)
+                                if is_main_process:
+                                    num_gpus = 4 # TODO: change for GPU
+                                    preds_map = {}
+                                    for gpu_id in range(num_gpus):
+                                        with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
+                                            preds = pickle.load(f)
+                                            preds_map.update(preds)
+
+                                    logger.info("Loaded the predictions pickle files")
+                                    data_path = os.path.join(data_path, "random", "test.json")
+                                    data = json.load(open(data_path))
+                                    logger.info(f"Evaluating on {data_path}")
+                                    R1, R10, MRR = _eval(data, preds_map)
+                                    logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+                                    total_R1.append(R1)
+                                    total_R10.append(R10)
+                                    total_MRR.append(MRR)
+                                    with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                        f.write("\n\n\n")
+                                        f.write(f"Intermediate results for {data_path}")
+                                        f.write("\n\n\n")
+                                        f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+
+                            if is_main_process:
+                                avg_R1 = np.mean(total_R1)
+                                avg_R10 = np.mean(total_R10)
+                                avg_MRR = np.mean(total_MRR)
+
+                                logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+
+                                if not os.path.exists(EVAL_RESULTS_FILE_PATH):
+                                    open(EVAL_RESULTS_FILE_PATH, 'w').close()
+
+                                with open(EVAL_RESULTS_FILE_PATH, "a") as f:
                                     f.write("\n\n\n")
-                                    f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-
-                        if is_main_process:
-                            avg_R1 = np.mean(total_R1)
-                            avg_R10 = np.mean(total_R10)
-                            avg_MRR = np.mean(total_MRR)
-
-                            logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
-
-                            if not os.path.exists(EVAL_RESULTS_FILE_PATH):
-                                open(EVAL_RESULTS_FILE_PATH, 'w').close()
-
-                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-                                f.write("\n\n\n")
-                                f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+                                    f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                     else:
                         model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
                         if result is None:

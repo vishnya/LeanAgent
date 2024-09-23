@@ -42,7 +42,7 @@ from loguru import logger
 from datetime import datetime, timedelta
 from collections import defaultdict
 from typing import Dict, List, Union
-import generate_benchmark_lean4
+import generate_benchmark_lean48
 import traceback
 import sys
 from tqdm import tqdm
@@ -61,7 +61,7 @@ from lean_dojo import *
 from lean_dojo.constants import LEAN4_PACKAGES_DIR
 
 import pytorch_lightning as pl
-from retrieval.model_ewc import PremiseRetriever
+from retrieval.model_ewc8 import PremiseRetriever
 from retrieval.datamodule import RetrievalDataModule
 from retrieval.main import run_cli
 import torch
@@ -74,6 +74,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
+os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
@@ -329,8 +330,8 @@ def get_compatible_commit(url):
         repo = LeanGitRepo(new_url, latest_commit)
         logger.info(f"Getting config for {url}")
         config = repo.get_config("lean-toolchain")
-        v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
-        if generate_benchmark_lean4.is_supported_version(v):
+        v = generate_benchmark_lean48.get_lean4_version_from_config(config["content"])
+        if generate_benchmark_lean48.is_supported_version(v):
             logger.info(f"Latest commit compatible for url {url}")
             return latest_commit, v
 
@@ -370,8 +371,8 @@ def get_compatible_commit(url):
             new_url = url.replace('.git', '')
             repo = LeanGitRepo(new_url, commit)
             config = repo.get_config("lean-toolchain")
-            v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
-            if generate_benchmark_lean4.is_supported_version(v):
+            v = generate_benchmark_lean48.get_lean4_version_from_config(config["content"])
+            if generate_benchmark_lean48.is_supported_version(v):
                 logger.info(f"Found compatible commit {commit} for {url}")
                 return commit, v
 
@@ -909,6 +910,9 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     elif "pfr" in url:
         sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
         v = "v4.8.0-rc1"
+    elif "PrimeNumberTheoremAnd" in url:
+        sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
+        v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
     if not sha:
@@ -921,7 +925,7 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     dir_name = repo.url.split("/")[-1] + "_" + sha
     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + dir_name
     logger.info(f"Generating benchmark at {dst_dir}")
-    traced_repo, _, _, total_theorems = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
+    traced_repo, _, _, total_theorems = generate_benchmark_lean48.main(repo.url, sha, dst_dir)
     if not traced_repo:
         logger.info(f"Failed to trace {url}")
         return None
@@ -932,7 +936,7 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
 
     # Add the new repo to the dynamic database
     config = repo.get_config("lean-toolchain")
-    v = generate_benchmark_lean4.get_lean4_version_from_config(config["content"])
+    v = generate_benchmark_lean48.get_lean4_version_from_config(config["content"])
     theorems_folder = dst_dir + "/random"
     premise_files_corpus = dst_dir + "/corpus.jsonl"
     files_traced = dst_dir + "/traced_files.jsonl"
@@ -1202,7 +1206,7 @@ def main():
             lambdas = [0.0]
 
         logger.info("Configuring LeanDojo...")
-        generate_benchmark_lean4.configure_leandojo()
+        generate_benchmark_lean48.configure_leandojo()
         logger.info("LeanDojo configured")
 
         is_main_process = int(os.environ.get('LOCAL_RANK', '0')) == 0
@@ -1230,53 +1234,53 @@ def main():
         if curriculum_learning:
             logger.info("Starting curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-            if is_main_process:
-                # search_github_repositories("Lean", num_repos)
+            # if is_main_process:
+            #     search_github_repositories("Lean", num_repos)
 
-                clone_url = "https://github.com/siddhartha-gadgil/Saturn"
-                commit = "3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"
-                url = clone_url.replace('.git', '')
-                lean_git_repo = LeanGitRepo(url, commit)
-                lean_git_repos.append(lean_git_repo)
+                # clone_url = "https://github.com/siddhartha-gadgil/Saturn"
+                # commit = "3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
 
-                for i in range(len(repos)):
-                    repo = lean_git_repos[i]
-                    logger.info(f"Processing {repo.url}")
-                    result = add_repo_to_database(dynamic_database_json_path, repo, db)
-                    if result is not None:
-                        logger.info(f"Successfully added repo {repo.url}")                    
-                logger.info(f"Successfully added {num_repos} repositories to the database")
+                # for i in range(len(lean_git_repos)):
+                #     repo = lean_git_repos[i]
+                #     logger.info(f"Processing {repo.url}")
+                #     result = True
+                #     result = add_repo_to_database(dynamic_database_json_path, repo, db)
+                #     if result is not None:
+                #         logger.info(f"Successfully added repo {repo.url}")                    
+                # logger.info(f"Successfully added {num_repos} repositories to the database")
                 
-                sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
-                print("Sorted repositories. Saving now...")
-                db.to_json(dynamic_database_json_path)
-                save_sorted_repos(sorted_repos, "sorted_repos.json")
-                print("Summary of theorem difficulties by URL:")
-                for repo in sorted_repos:
-                    print(f"\nURL: {repo.url}")
-                    for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-                        theorems = categorized_theorems[repo][category]
-                        print(f"  {category}: {len(theorems)} theorems")
-                        if theorems:
-                            sorted_theorems = sorted(theorems, key=lambda x: x[2] if x[2] is not None else -float('inf'), reverse=True)[:3]
-                            for name, path, start, end, diff in sorted_theorems:
-                                diff_str = f"{diff:.2f}" if diff is not None else "N/A"
-                                print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
+            #     sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
+            #     print("Sorted repositories. Saving now...")
+            #     db.to_json(dynamic_database_json_path)
+            #     save_sorted_repos(sorted_repos, "sorted_repos.json")
+            #     print("Summary of theorem difficulties by URL:")
+            #     for repo in sorted_repos:
+            #         print(f"\nURL: {repo.url}")
+            #         for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+            #             theorems = categorized_theorems[repo][category]
+            #             print(f"  {category}: {len(theorems)} theorems")
+            #             if theorems:
+            #                 sorted_theorems = sorted(theorems, key=lambda x: x[2] if x[2] is not None else -float('inf'), reverse=True)[:3]
+            #                 for name, path, start, end, diff in sorted_theorems:
+            #                     diff_str = f"{diff:.2f}" if diff is not None else "N/A"
+            #                     print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
 
-                print("\nOverall Statistics:")
-                total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
-                for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-                    count = sum(len(categories[category]) for categories in categorized_theorems.values())
-                    percentage = (count / total_theorems) * 100
-                    print(f"{category}: {count} theorems ({percentage:.2f}%)")
+            #     print("\nOverall Statistics:")
+            #     total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
+            #     for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+            #         count = sum(len(categories[category]) for categories in categorized_theorems.values())
+            #         percentage = (count / total_theorems) * 100
+            #         print(f"{category}: {count} theorems ({percentage:.2f}%)")
 
-                print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
-                import ipdb; ipdb.set_trace()
+            #     print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
             
-        #         logger.info("Finding compatible repositories...")
-        #         updated_repos = find_and_save_compatible_commits(repo_info_file, sorted_repos)
-        #         lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
-        #         logger.info("Finished finding compatible repositories")
+            #     logger.info("Finding compatible repositories...")
+            #     updated_repos = find_and_save_compatible_commits(repo_info_file, sorted_repos)
+            #     lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
+            #     logger.info("Finished finding compatible repositories")
 
             # All processes wait for the file to be created and then read from it
             max_attempts = 30

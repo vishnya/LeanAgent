@@ -74,6 +74,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
+os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
@@ -1301,6 +1302,9 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     elif "pfr" in url:
         sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
         v = "v4.8.0-rc1"
+    elif "PrimeNumberTheoremAnd" in url:
+        sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
+        v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
     if not sha:
@@ -1633,124 +1637,124 @@ def main():
 
         if curriculum_learning:
             logger.info("Starting curriculum learning")
-            repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-            if is_main_process:
-                # search_github_repositories("Lean", num_repos)
-                # return
-                all_repos = []
-                repo_info_file = os.path.join(RAID_DIR, DATA_DIR, "github_search_results_updated_full.json")
-                with open(repo_info_file, 'r') as f:
-                    all_repos = json.load(f)
-                lean_git_repos = [LeanGitRepo(repo['url'], repo['sha']) for repo in all_repos]
+            repo_info_file = f"{RAID_DIR}/{DATA_DIR}/github_search_results_updated_full.json"  # TODO: make constnat?
+            # if is_main_process:
+            #     # search_github_repositories("Lean", num_repos)
+            #     # return
+            #     all_repos = []
+            #     repo_info_file = os.path.join(RAID_DIR, DATA_DIR, "github_search_results_updated_full.json")
+            #     with open(repo_info_file, 'r') as f:
+            #         all_repos = json.load(f)
+            #     lean_git_repos = [LeanGitRepo(repo['url'], repo['sha']) for repo in all_repos]
 
-                # lean_git_repos = lean_git_repos[:3]
-                # lean_git_repos = lean_git_repos[3:6]
-                # lean_git_repos = lean_git_repos[6:9]
-                # lean_git_repos = lean_git_repos[9:12]
-                # lean_git_repos = lean_git_repos[12:15]
+            #     # lean_git_repos = lean_git_repos[:3]
+            #     # lean_git_repos = lean_git_repos[3:6]
+            #     # lean_git_repos = lean_git_repos[6:9]
+            #     # lean_git_repos = lean_git_repos[9:12]
+            #     # lean_git_repos = lean_git_repos[12:15]
 
-                # lean_git_repos = lean_git_repos[:2]
-                # lean_git_repos = lean_git_repos[2:4]
+            #     # lean_git_repos = lean_git_repos[:2]
+            #     # lean_git_repos = lean_git_repos[2:4]
 
 
-                # clone_url ="https://github.com/m4lvin/lean4-pdl"
-                # commit = "0820eb9fbc18bc8b88d15ac5c6611450264c7127"
-                # url = clone_url.replace('.git', '')
-                # lean_git_repo = LeanGitRepo(url, commit)
-                # lean_git_repos.append(lean_git_repo)
+            #     # clone_url ="https://github.com/m4lvin/lean4-pdl"
+            #     # commit = "0820eb9fbc18bc8b88d15ac5c6611450264c7127"
+            #     # url = clone_url.replace('.git', '')
+            #     # lean_git_repo = LeanGitRepo(url, commit)
+            #     # lean_git_repos.append(lean_git_repo)
 
-                # clone_url ="https://github.com/ahhwuhu/zeta_3_irrational"
-                # commit = "3d68ddd90434a398c9a72f30d50c57f15a0118c7"
-                # url = clone_url.replace('.git', '')
-                # lean_git_repo = LeanGitRepo(url, commit)
-                # lean_git_repos.append(lean_git_repo)
+            #     # clone_url ="https://github.com/ahhwuhu/zeta_3_irrational"
+            #     # commit = "3d68ddd90434a398c9a72f30d50c57f15a0118c7"
+            #     # url = clone_url.replace('.git', '')
+            #     # lean_git_repo = LeanGitRepo(url, commit)
+            #     # lean_git_repos.append(lean_git_repo)
 
-                # clone_url ="https://github.com/Whysoserioushah/BrauerGroup_new"
-                # commit = "f163cdc1edf477040ec97ea9fdbc008b5953ab72"
-                # url = clone_url.replace('.git', '')
-                # lean_git_repo = LeanGitRepo(url, commit)
-                # lean_git_repos.append(lean_git_repo)
+            #     # clone_url ="https://github.com/Whysoserioushah/BrauerGroup_new"
+            #     # commit = "f163cdc1edf477040ec97ea9fdbc008b5953ab72"
+            #     # url = clone_url.replace('.git', '')
+            #     # lean_git_repo = LeanGitRepo(url, commit)
+            #     # lean_git_repos.append(lean_git_repo)
 
-                # clone_url ="https://github.com/corent1234/hairy-ball-theorem-lean"
-                # commit ="a778826d19c8a7ddf1d26beeea628c45450612e6"
-                # url = clone_url.replace('.git', '')
-                # lean_git_repo = LeanGitRepo(url, commit)
-                # lean_git_repos.append(lean_git_repo)
+            #     # clone_url ="https://github.com/corent1234/hairy-ball-theorem-lean"
+            #     # commit ="a778826d19c8a7ddf1d26beeea628c45450612e6"
+            #     # url = clone_url.replace('.git', '')
+            #     # lean_git_repo = LeanGitRepo(url, commit)
+            #     # lean_git_repos.append(lean_git_repo)
 
-                # clone_url ="https://github.com/LizBonn/RamificationGroup"
-                # commit = "5ba8feef6602e61ffae1659f7e038b0933b7da64"
-                # url = clone_url.replace('.git', '')
-                # lean_git_repo = LeanGitRepo(url, commit)
-                # lean_git_repos.append(lean_git_repo)
+            #     # clone_url ="https://github.com/LizBonn/RamificationGroup"
+            #     # commit = "5ba8feef6602e61ffae1659f7e038b0933b7da64"
+            #     # url = clone_url.replace('.git', '')
+            #     # lean_git_repo = LeanGitRepo(url, commit)
+            #     # lean_git_repos.append(lean_git_repo)
 
-                # clone_url ="https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers"
-                # commit = "32da8597e08227d68b72faeeda053e44e5b4b04d"
-                # url = clone_url.replace('.git', '')
-                # lean_git_repo = LeanGitRepo(url, commit)
-                # lean_git_repos.append(lean_git_repo)
+            #     # clone_url ="https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers"
+            #     # commit = "32da8597e08227d68b72faeeda053e44e5b4b04d"
+            #     # url = clone_url.replace('.git', '')
+            #     # lean_git_repo = LeanGitRepo(url, commit)
+            #     # lean_git_repos.append(lean_git_repo)
 
-                # clone_url ="https://github.com/jjdishere/neukirch"
-                # commit = "8fdb75f7ebab8a20eea902058956d7dece648959"
-                # url = clone_url.replace('.git', '')
-                # lean_git_repo = LeanGitRepo(url, commit)
-                # lean_git_repos.append(lean_git_repo)
+            #     # clone_url ="https://github.com/jjdishere/neukirch"
+            #     # commit = "8fdb75f7ebab8a20eea902058956d7dece648959"
+            #     # url = clone_url.replace('.git', '')
+            #     # lean_git_repo = LeanGitRepo(url, commit)
+            #     # lean_git_repos.append(lean_git_repo)
 
-                for i in range(len(lean_git_repos)):
-                    repo = lean_git_repos[i]
-                    logger.info(f"Processing {repo.url}")
-                    result = add_repo_to_database(dynamic_database_json_path, repo, db)
-                    if result is not None:
-                        logger.info(f"Successfully added repo {repo.url}")                    
-                logger.info(f"Successfully added {num_repos} repositories to the database")
+            #     for i in range(len(lean_git_repos)):
+            #         repo = lean_git_repos[i]
+            #         logger.info(f"Processing {repo.url}")
+            #         result = add_repo_to_database(dynamic_database_json_path, repo, db)
+            #         if result is not None:
+            #             logger.info(f"Successfully added repo {repo.url}")                    
+            #     logger.info(f"Successfully added {num_repos} repositories to the database")
                 
-                sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
-                print("Sorted repositories. Saving now...")
-                db.to_json(dynamic_database_json_path)
-                save_sorted_repos(sorted_repos, "sorted_repos.json")
-                print("Summary of theorem difficulties by URL:")
-                for repo in sorted_repos:
-                    print(f"\nURL: {repo.url}")
-                    for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-                        theorems = categorized_theorems[repo][category]
-                        print(f"  {category}: {len(theorems)} theorems")
-                        if theorems:
-                            sorted_theorems = sorted(theorems, key=lambda x: x[2] if x[2] is not None else -float('inf'), reverse=True)[:3]
-                            for name, path, start, end, diff in sorted_theorems:
-                                diff_str = f"{diff:.2f}" if diff is not None else "N/A"
-                                print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
+            #     sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
+            #     print("Sorted repositories. Saving now...")
+            #     db.to_json(dynamic_database_json_path)
+            #     save_sorted_repos(sorted_repos, "sorted_repos.json")
+            #     print("Summary of theorem difficulties by URL:")
+            #     for repo in sorted_repos:
+            #         print(f"\nURL: {repo.url}")
+            #         for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+            #             theorems = categorized_theorems[repo][category]
+            #             print(f"  {category}: {len(theorems)} theorems")
+            #             if theorems:
+            #                 sorted_theorems = sorted(theorems, key=lambda x: x[2] if x[2] is not None else -float('inf'), reverse=True)[:3]
+            #                 for name, path, start, end, diff in sorted_theorems:
+            #                     diff_str = f"{diff:.2f}" if diff is not None else "N/A"
+            #                     print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
 
-                # sorted_repos, categorized_theorems, percentiles, repo_easy_percentages = sort_repositories_by_difficulty(db)
-                # print("Sorted repositories. Saving now...")
-                # db.to_json(dynamic_database_json_path)
-                # save_sorted_repos(sorted_repos, "sorted_repos.json")
-                # print("Summary of theorem difficulties by URL:")
-                # for repo in sorted_repos:
-                #     print(f"\nURL: {repo.url}")
-                #     total_theorems = sum(len(theorems) for theorems in categorized_theorems[repo].values())
-                #     for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-                #         theorems = categorized_theorems[repo][category]
-                #         percentage = (len(theorems) / total_theorems) * 100 if total_theorems > 0 else 0
-                #         print(f"  {category}: {len(theorems)} theorems ({percentage:.2f}%)")
-                #         if theorems:
-                #             sorted_theorems = sorted(theorems, key=lambda x: x[4] if x[4] is not None else -float('inf'), reverse=True)[:3]
-                #             for name, path, start, end, diff in sorted_theorems:
-                #                 diff_str = f"{diff:.2f}" if diff is not None else "N/A"
-                #                 print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
-                #     print(f"  Easy Theorem Percentage: {repo_easy_percentages[repo]:.2f}%")
+            #     # sorted_repos, categorized_theorems, percentiles, repo_easy_percentages = sort_repositories_by_difficulty(db)
+            #     # print("Sorted repositories. Saving now...")
+            #     # db.to_json(dynamic_database_json_path)
+            #     # save_sorted_repos(sorted_repos, "sorted_repos.json")
+            #     # print("Summary of theorem difficulties by URL:")
+            #     # for repo in sorted_repos:
+            #     #     print(f"\nURL: {repo.url}")
+            #     #     total_theorems = sum(len(theorems) for theorems in categorized_theorems[repo].values())
+            #     #     for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+            #     #         theorems = categorized_theorems[repo][category]
+            #     #         percentage = (len(theorems) / total_theorems) * 100 if total_theorems > 0 else 0
+            #     #         print(f"  {category}: {len(theorems)} theorems ({percentage:.2f}%)")
+            #     #         if theorems:
+            #     #             sorted_theorems = sorted(theorems, key=lambda x: x[4] if x[4] is not None else -float('inf'), reverse=True)[:3]
+            #     #             for name, path, start, end, diff in sorted_theorems:
+            #     #                 diff_str = f"{diff:.2f}" if diff is not None else "N/A"
+            #     #                 print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
+            #     #     print(f"  Easy Theorem Percentage: {repo_easy_percentages[repo]:.2f}%")
 
-                print("\nOverall Statistics:")
-                total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
-                for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-                    count = sum(len(categories[category]) for categories in categorized_theorems.values())
-                    percentage = (count / total_theorems) * 100
-                    print(f"{category}: {count} theorems ({percentage:.2f}%)")
+            #     print("\nOverall Statistics:")
+            #     total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
+            #     for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+            #         count = sum(len(categories[category]) for categories in categorized_theorems.values())
+            #         percentage = (count / total_theorems) * 100
+            #         print(f"{category}: {count} theorems ({percentage:.2f}%)")
 
-                print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
+            #     print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
             
-                logger.info("Finding compatible repositories...")
-                updated_repos = find_and_save_compatible_commits(repo_info_file, sorted_repos)
-                lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
-                logger.info("Finished finding compatible repositories")
+            #     logger.info("Finding compatible repositories...")
+            #     updated_repos = find_and_save_compatible_commits(repo_info_file, sorted_repos)
+            #     lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
+            #     logger.info("Finished finding compatible repositories")
 
             # All processes wait for the file to be created and then read from it
             max_attempts = 30

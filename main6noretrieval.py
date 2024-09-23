@@ -73,6 +73,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
+os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
@@ -913,6 +914,9 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     elif "pfr" in url:
         sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
         v = "v4.8.0-rc1"
+    elif "PrimeNumberTheoremAnd" in url:
+        sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
+        v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
     if not sha:
@@ -1383,7 +1387,7 @@ def main():
                         if single_repo:
                             repos_for_merged_dataset = []
                         
-                        if not curriculum_learning:
+                        if "compfiles" not in repo.url and not curriculum_learning:
                             result = add_repo_to_database(dynamic_database_json_path, repo, db)
                             if result is None:
                                 write_skip_file(repo.url)
@@ -1398,7 +1402,8 @@ def main():
                             repos_for_merged_dataset.append((repo.url, repo.commit))
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
-                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+                        if "compfiles" not in repo.url:
+                            db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
 
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"

@@ -1380,7 +1380,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 2
+        current_epoch = 10
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False
@@ -1432,22 +1432,22 @@ def main():
         if curriculum_learning:
             logger.info("Starting curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-            if is_main_process:
+            # if is_main_process:
 
-                clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd"
-                commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
-                url = clone_url.replace('.git', '')
-                lean_git_repo = LeanGitRepo(url, commit)
-                lean_git_repos.append(lean_git_repo)
+                # clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd"
+                # commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
 
             #     search_github_repositories("Lean", num_repos)
-                for i in range(len(lean_git_repos)):
-                    repo = lean_git_repos[i]
-                    logger.info(f"Processing {repo.url}")
-                    result = add_repo_to_database(dynamic_database_json_path, repo, db)
-                    if result is not None:
-                        logger.info(f"Successfully added repo {repo.url}")                    
-                logger.info(f"Successfully added {num_repos} repositories to the database")
+                # for i in range(len(lean_git_repos)):
+                #     repo = lean_git_repos[i]
+                #     logger.info(f"Processing {repo.url}")
+                #     result = add_repo_to_database(dynamic_database_json_path, repo, db)
+                #     if result is not None:
+                #         logger.info(f"Successfully added repo {repo.url}")                    
+                # logger.info(f"Successfully added {num_repos} repositories to the database")
                 
             #     sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
             #     print("Sorted repositories. Saving now...")
@@ -1535,7 +1535,8 @@ def main():
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
 
-                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+                        if "Saturn" not in repo.url:
+                            db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
                     
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
@@ -1750,7 +1751,7 @@ def main():
                                 f.write("\n\n\n")
                                 f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                     else:
-                        model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                        model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum_abl4/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch=5-Recall@10_val=62.86.ckpt"
                         if result is None:
                             logger.info(f"Skipping repository {repo.url} due to preprocessing issues")
                             continue

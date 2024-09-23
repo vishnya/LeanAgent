@@ -73,6 +73,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
+os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
@@ -143,7 +144,7 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_ewc.pkl"
 # TODO: do we still need this?
 load_dotenv()
 
-repos_for_merged_dataset = [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"), ("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd", "89bf7b5e3a226525e8580bae21ef543604f99b21"), ("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091")]
+repos_for_merged_dataset = [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"), ("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd", "89bf7b5e3a226525e8580bae21ef543604f99b21"), ("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "7fb39251b705797ee54e08c96177fabd29a5b5a3"), ("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"), ("https://github.com/digama0/lean4lean", "05b1f4a68c5facea96a5ee51c6a56fef21276e0f"), ("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"), ("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d"), ("https://github.com/loganrjmurphy/LeanEuclid", "f1912c3090eb82820575758efc31e40b9db86bb8"), ("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21")]
 repos_for_proving = []
 
 # TODO: automate this
@@ -908,9 +909,9 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     elif "pfr" in url:
         sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
         v = "v4.8.0-rc1"
-    # elif "PrimeNumberTheoremAnd" in url:
-    #     sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
-    #     v = "v4.8.0-rc2"
+    elif "PrimeNumberTheoremAnd" in url:
+        sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
+        v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
     if not sha:

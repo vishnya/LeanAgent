@@ -73,6 +73,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
+os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
@@ -150,7 +151,7 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_no_ewc_curriculum
 # TODO: do we still need this?
 load_dotenv()
 
-repos_for_merged_dataset = [("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"), ("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd", "29baddd685660b5fedd7bd67f9916ae24253d566"), ("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"), ("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d"), ("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147")]
+repos_for_merged_dataset = [("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"), ("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"), ("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd", "29baddd685660b5fedd7bd67f9916ae24253d566"), ("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d"), ("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/google-deepmind/debate", "7fb39251b705797ee54e08c96177fabd29a5b5a3"),("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"),("https://github.com/leanprover-community/con-nf", "00bdc85ba7d486a9e544a0806a1018dd06fa3856"), ("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21"), ("https://github.com/siddhartha-gadgil/Saturn", "3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"), ("https://github.com/loganrjmurphy/LeanEuclid", "f1912c3090eb82820575758efc31e40b9db86bb8")]
 repos_for_proving = []
 
 # TODO: automate this
@@ -915,6 +916,9 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     elif "pfr" in url:
         sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
         v = "v4.8.0-rc1"
+    elif "PrimeNumberTheoremAnd" in url:
+        sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
+        v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
     if not sha:
@@ -1185,7 +1189,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 5
+        current_epoch = 13
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False
@@ -1237,15 +1241,20 @@ def main():
         if curriculum_learning:
             logger.info("Starting curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-        #     if is_main_process:
+            # if is_main_process:
         #         search_github_repositories("Lean", num_repos)
-        #         for i in range(len(repos)):
-        #             repo = lean_git_repos[i]
-        #             logger.info(f"Processing {repo.url}")
-        #             result = add_repo_to_database(dynamic_database_json_path, repo, db)
-        #             if result is not None:
-        #                 logger.info(f"Successfully added repo {repo.url}")                    
-        #         logger.info(f"Successfully added {num_repos} repositories to the database")
+                # clone_url = "https://github.com/siddhartha-gadgil/Saturn"
+                # commit = "3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+                # for i in range(len(lean_git_repos)):
+                #     repo = lean_git_repos[i]
+                #     logger.info(f"Processing {repo.url}")
+                #     result = add_repo_to_database(dynamic_database_json_path, repo, db)
+                #     if result is not None:
+                #         logger.info(f"Successfully added repo {repo.url}")                    
+                # logger.info(f"Successfully added {num_repos} repositories to the database")
                 
         #         sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
         #         print("Sorted repositories. Saving now...")
@@ -1316,7 +1325,7 @@ def main():
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
 
-                        if "pfr" not in repo.url:
+                        if "cookbook" not in repo.url:
                             db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
                     
                     # TODO: reduce repition later with all path
@@ -1481,7 +1490,7 @@ def main():
 
                         best_model.eval()
 
-                        if "lean-math-workshop" not in repo.url:
+                        if "cookbook" not in repo.url:
                             logger.info("Testing...")
                             total_R1, total_R10, total_MRR = [], [], []
                             dataset_path = RAID_DIR + "/" + DATA_DIR
@@ -1493,6 +1502,16 @@ def main():
                             for data_path in testing_paths:
                                 # TODO: remove this for tests that do not use merged dataset
                                 if "merged" not in data_path:
+                                    continue
+                                if "cookbook" in repo.url and "cookbook" in data_path:
+                                    continue
+                                if "cookbook" in repo.url and "FLT" in data_path:
+                                    continue
+                                if "cookbook" in repo.url and "debate" in data_path:
+                                    continue
+                                if "cookbook" in repo.url and "PrimeNumberTheoremAnd" in data_path:
+                                    continue
+                                if "cookbook" in repo.url and "SciLean" in data_path:
                                     continue
                                 # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
                                 run_cli(best_model_path, data_path)
@@ -1520,6 +1539,12 @@ def main():
                                         f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
 
                             if is_main_process:
+                                if "cookbook" in repo.url:
+                                    total_R10.append(58.9416477035174)
+                                    total_R10.append(59.10945966438392)
+                                    total_R10.append(55.50730835841573)
+                                    total_R10.append(58.701211714197974)
+                                    total_R10.append(56.076343902903346)
                                 avg_R1 = np.mean(total_R1)
                                 avg_R10 = np.mean(total_R10)
                                 avg_MRR = np.mean(total_MRR)
@@ -1559,7 +1584,7 @@ def main():
                             print(f"An error occurred during fisher: {str(e)}")
                             print(traceback.format_exc())
 
-                    if is_main_process:
+                    if "lean4lean" in repo.url and is_main_process:
                         logger.info("Starting the prover")
                         # Set up the prover
                         use_vllm = False

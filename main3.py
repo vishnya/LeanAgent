@@ -74,6 +74,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
+os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
@@ -156,19 +157,19 @@ known_repositories = [
     "leanprover-community/mathlib", # Mathlib3 version
     "leanprover-community/mathlib3",
     "leanprover/std4",  # moved to batteries
-    # "leanprover-community/duper",  # functional programming instead of math
+    "leanprover-community/duper",  # functional programming instead of math
     "leanprover/lake",
-    # "openai/lean-gym",
+    "openai/lean-gym",
     # already tested:
-    # "lecopivo/SciLean",
-    # "avigad/mathematics_in_lean_source",
-    # "teorth/pfr",
-    # "dwrensha/compfiles",
-    # "digama0/lean4lean",
-    # "AlexKontorovich/PrimeNumberTheoremAnd",
+    "lecopivo/SciLean",
+    "avigad/mathematics_in_lean_source",
+    "teorth/pfr",
+    "dwrensha/compfiles",
+    "digama0/lean4lean",
+    "AlexKontorovich/PrimeNumberTheoremAnd",
     # newly tested:
     "leanprover-community/lean4-metaprogramming-book",
-    # "ImperialCollegeLondon/FLT",
+    "ImperialCollegeLondon/FLT",
     "kmill/lean4-raytracer",  # no theorems
     "argumentcomputer/yatima",  # trace problems
     "ImperialCollegeLondon/formalising-mathematics-2024",  # trace problems
@@ -176,40 +177,213 @@ known_repositories = [
     "leanprover/verso",  # trace problems
     "leanprover-community/NNG4",  # trace problems
     "ufmg-smite/lean-smt",  # fails to trace due to windows-style line endings
-    # "google-deepmind/debate",
+    "google-deepmind/debate",
     "teorth/symmetric_project",  # no compatible commit
     "cmu-l3/llmlean",  # irrelevant + only 4 theorems
     "PatrickMassot/GlimpseOfLean",   # strange trace problems with _parse_deps
     "avigad/lamr",  # trace problems
     "leanprover-community/quote4",  # no theorems
-    # "yuma-mizuno/lean-math-workshop",
+    "yuma-mizuno/lean-math-workshop",
     "leanprover-community/iris-lean",  # trace problems
     "aripiprazole/rinha",  # incompatible commit
-    # "loganrjmurphy/LeanEuclid",
+    "loganrjmurphy/LeanEuclid",
     "leanprover/lean4-cli",  # no theorems
     "leanprover/LeanInk",  # no theorems
-    # "leanprover-community/lean-auto",
+    "leanprover-community/lean-auto",
     "leanprover-community/repl",  # no theorems
     "leanprover/doc-gen4",  # no theorems
-    # "leanprover-community/con-nf",
-    # "FormalizedFormalLogic/Foundation",
+    "leanprover-community/con-nf",
+    "FormalizedFormalLogic/Foundation",
     "leanprover/SampCert",  # trace problems
-    # "nomeata/loogle",
-    # "risc0/risc0-lean4",
-    # "siddhartha-gadgil/Saturn",
-    # "leanprover-community/flt-regular",
-    # "eric-wieser/lean-matrix-cookbook",
-    # "PatrickMassot/verbose-lean4",
-    # "tydeu/lean4-alloy",
+    "nomeata/loogle",
+    "risc0/risc0-lean4",
+    "siddhartha-gadgil/Saturn",
+    "eric-wieser/lean-matrix-cookbook",
+    "PatrickMassot/verbose-lean4",  # no theorems
+    "tydeu/lean4-alloy",  # no theorems
+    "leanprover/leansat", # deprecated
+    "BoltonBailey/formal-snarks-project", # two theorems
+    "dwrensha/lean4-maze", # two theorems
+    "leanprover-community/mathport", # irrelevant
+    "argumentcomputer/LSpec",  # one theorem
+    "reaslab/jixia", # no theorems
+    "riccardobrasca/flt3", # no theorems
+    "dwrensha/animate-lean-proofs", # irrelevant
+    "lean-ja/lean-by-example", # irrelevant
+    "NethermindEth/Clear", # no theorems
+    "fgdorais/lean4-parser", # irrelevant
+    "semorrison/lean-training-data", # irrelevant
+    "verse-lab/lean-ssr", # irrelevant
+    "GaloisInc/lean-llvm", # irrelevant
+    "argumentcomputer/Wasm.lean", # irrelevant
+    "NethermindEth/EVMYulLean", # irrelevant
+    "rwbarton/advent-of-lean-4", # irrelevant
+    "leanprover-community/tutorials4", # irrelevant
+    "haruhisa-enomoto/mathlib4-all-tactics", # irrelevant
+    # looking for sorries:
+    "leanprover/LNSym",
+    "leanprover-community/flt-regular",
     # "opencompl/lean-mlir-old",
-    # "leanprover/leansat",
-    # "BoltonBailey/formal-snarks-project",
-    # "dwrensha/lean4-maze",
-    # "leanprover/LNSym",
-    # "leanprover-community/mathport",
-    # "forked-from-1kasper/ground_zero",
+    "rami3l/plfl",
+    "HEPLean/HepLean",
+    "forked-from-1kasper/ground_zero",
     # "mo271/formal_book",
-    # "rami3l/plfl",
+    "verified-optimization/CvxLean",
+    "leanprover-community/sphere-eversion",
+    "optsuite/optlib",
+    # "YaelDillies/LeanCamCombi",
+    "JamesGallicchio/LeanColls",
+    "T-Brick/c0deine",
+    # "jjdishere/EG",
+    "alexkeizer/QpfTypes",
+    # "fpvandoorn/LeanCourse23",
+    "marcusrossel/lean-egg",
+    "reilabs/proven-zk",
+    "algebraic-dev/soda",
+    "leanprover-community/llm",
+    "dignissimus/Untangle",
+    "argumentcomputer/Megaparsec.lean",
+    "emilyriehl/infinity-cosmos",
+    "BartoszPiotrowski/lean-premise-selection",
+    # "yangky11/miniF2F-lean4",
+    "djvelleman/HTPILeanPackage",
+    "girving/ray",
+    # "fpvandoorn/carleson",
+    "Anderssorby/SDL.lean",
+    "pandaman64/lean-regex",
+    # "brown-cs22/CS22-Lean-2023",
+    # "hhu-adam/GameSkeleton",
+    # "FR-vdash-bot/Algorithm",
+    # "PeterKementzey/graph-library-for-lean4",
+    "arthurpaulino/LeanMySQL",
+    "arthurpaulino/NumLean",
+    "FormalSAT/trestle",
+    "nomeata/lean-wf-induct",
+    "leanprover/lean4checker",
+    "IPDSnelting/tba-2022",
+    "digama0/mm-lean4",
+    "KislyjKisel/Raylib.lean",
+    "algebraic-dev/melp",
+    "hhu-adam/Robo", # same as other tutorials but has lots of sorries
+    "hargoniX/socket.lean",
+    "kovach/etch",
+    "damek/gd-lean",
+    "0art0/lean-slides",
+    "forked-from-1kasper/lean4-categories",
+    "katydid/proofs",
+    "alexjbest/leaff",
+    "sinhp/Poly",
+    "lftcm2023/lftcm2023", # same as other tutorials but has lots of sorries
+    "lean-ja/lean99",
+    "leanprover/SHerLOC",
+    "Seasawher/mdgen",
+    "opencompl/egg-tactic-code",
+    "david-christiansen/ssft24",
+    "T-Brick/lean2wasm",
+    "hargoniX/cpdt-lean",
+    "jsm28/AperiodicMonotilesLean",
+    "draperlaboratory/ELFSage",
+    "rookie-joe/automatic-lean4-compilation",
+    "madvorak/fecssk",
+    "david-christiansen/bob24",
+    "awodey/joyal",
+    "BrownCS1951x/fpv2023", # same as other tutorials but has lots of sorries
+    "paulch42/lean-spec",
+    "siddhartha-gadgil/MetaExamples",
+    # "YaelDillies/LeanAPAP",
+    "dannypsnl/violet",
+    "arthurpaulino/LeanREPL",
+    "Kha/do-supplement",
+    # "NUS-Math-Formalization/coxeter",
+    "joehendrix/lean-sat-checker",
+    "ammkrn/timelib",
+    "kmill/LeanTeX",
+    "leanprover/lean4export",
+    "leanprover-community/mathlib3port", # too different
+    "brown-cs22/CS22-Lean-2024", # same as other tutorials but has lots of sorries
+    "T-Brick/lean-wasm",
+    "crabbo-rave/Soup",
+    "argumentcomputer/RustFFI.lean",
+    "suhr/tmath",
+    "leanprover/leanbv",
+    "arthurpaulino/FxyLang",
+    "SchrodingerZhu/LeanGccBackend",
+    "lecopivo/lean4-karray",
+    # "ImperialCollegeLondon/M1F-explained",
+    "proost-assistant/ProostLean",
+    "DavePearce/LeanEVM",
+    "algebraic-dev/ash",
+    "FormalizedFormalLogic/Arithmetization",
+    "cmu-l3/ntp-toolkit",
+    "dwrensha/tryAtEachStep",
+    "yangky11/lean4-example",
+    "T-Brick/DateTime",
+    "model-checking/rust-lean-models",
+    "MichaelStollBayreuth/EulerProducts",
+    "hargoniX/Flame",
+    "argumentcomputer/Http.lean",
+    "madvorak/vcsp",
+    "teorth/newton",
+    # "apnelson1/Matroid",
+    "smorel394/TS1",
+    "ianjauslin-rutgers/pythagoras4",
+    "mortarsanjaya/IMOSLLean4",
+    "dupuisf/BibtexQuery",
+    "nomeata/lean-calcify",
+    "argumentcomputer/FFaCiL.lean",
+    "javra/iit",
+    "arthurpaulino/viper",
+    "lindy-labs/aegis",
+    "PatrickMassot/NNG4",  # too similar to other one
+    "argumentcomputer/YatimaStdLib.lean",
+    "fgdorais/lean4-unicode-basic",
+    "mhuisi/Uniq",
+    "Kha/macro-supplement",
+    # "chenjulang/rubikcubegroup",
+    "arthurpaulino/LeanMusic",
+    "argumentcomputer/Ipld.lean",
+    "Odomontois/advent2022-lean",
+    "kbuzzard/IISc-experiments", # same as other tutorials but has lots of sorries
+    "ykonstant1/InfinitePrimes",
+    "alexkassil/natural_number_game_lean4",  # too similar to other one
+    "seewoo5/lean-poly-abc",
+    "rah4927/lean-dojo-mew",
+    "siddhartha-gadgil/proofs-and-programs-2023",
+    "PatrickMassot/lean4-game-server",
+    "knowsys/Formale-Systeme-in-LEAN", # same as other tutorials but has lots of sorries
+    "katydid/symbolic-automatic-derivatives",
+    "girving/interval",
+    "ImperialCollegeLondon/group-theory-experiments",
+    "knowsys/CertifyingDatalog",
+    "bergmannjg/leanCurl",
+    "vasnesterov/HadwigerNelson",
+    "FWuermse/lean-postgres",
+    "leanprover-community/import-graph",
+    "Human-Oriented-ATP/lean-tactics", # more about tactics than premises
+    "paulcadman/lean4-leetcode",
+    "argumentcomputer/Lurk.lean",
+    # "AlexDuchnowski/rubiks-cube",
+    "SchrodingerZhu/lean-gccjit",
+    "JamesGallicchio/http",
+    "jtristan/UnicodeSkipListTableExample",
+    "adomani/MA4N1_2023", # same as other tutorials but has lots of sorries
+    "remimimimimi/leansec",
+    "hhu-adam/lean-i18n",
+    "RemyDegenne/testing-lower-bounds",
+    "mariainesdff/LocalClassFieldTheory",
+    "AviCraimer/relational-calculus-library-lean4",
+    "JLimperg/regensburg-itp-school-2023",
+    "jaalonso/Calculemus2",
+    # "mseri/BET",
+    "xubaiw/Reservoir.lean",
+    "hargoniX/nest-core",
+    "siddhartha-gadgil/Polylean",
+    "MichaelStollBayreuth/Weights",
+    "sanchace/FRACTRAN",
+    "argumentcomputer/Poseidon.lean",
+    # "madvorak/chomsky",
+    "T-Brick/ControlFlow",
+    "pa-ba/guarded-lean",
 ]
 
 repos = []  # stores the names of all the repos
@@ -237,8 +411,8 @@ COMMIT_MESSAGE = "[LeanDojoBot] `sorry` Removed"
 def clone_repo(repo_url):
     """Clone a git repository and return the path to the repository and its sha."""
     repo_name = "/".join(repo_url.split('/')[-2:]).replace('.git', '')
-    print(f"Cloning {repo_url}")
-    print(f"Repo name: {repo_name}")
+    logger.info(f"Cloning {repo_url}")
+    logger.info(f"Repo name: {repo_name}")
     repo_name = repo_dir + "/" + repo_name
     # if os.path.exists(repo_name):
     #     print(f"Deleting existing repository directory: {repo_name}")
@@ -421,36 +595,50 @@ def search_github_repositories(language="Lean", num_repos=10):
         'order': 'desc',
         'per_page': 100,
     }
-    response = requests.get('https://api.github.com/search/repositories', headers=headers, params=query_params)
     
-    if response.status_code == 200:
-        repositories = response.json()['items']
-        cloned_count = 0
-        for repo in repositories:
-            if cloned_count >= num_repos:
-                break
-            repo_full_name = repo['full_name']
-            logger.info(f"Processing {repo_full_name}")
-            if repo_full_name not in known_repositories and repo_full_name not in attempted_repos:
-                name = None
-                try:
-                    clone_url = repo['clone_url']
-                    repo_name, sha = clone_repo(clone_url)
-                    name = repo_name
-                    url = clone_url.replace('.git', '')
-                    lean_git_repo = LeanGitRepo(url, sha)
-                    lean_git_repos.append(lean_git_repo)
-                    repos.append(repo_full_name)
-                    cloned_count += 1 # TODO: only increase if compatible commit found
-                except Exception as e:
-                    # shutil.rmtree(name)
-                    # Note: some 404s happen since some repos don't have a lean-toolchain
-                    # but still use Lean
-                    logger.info(f"Failed to clone {repo_full_name} because of {e}")
-            else:
-                logger.info(f"Skipping {repo_full_name} since it is a known repository")
-    else:
-        logger.info("Failed to search GitHub", response.status_code)
+    cloned_count = 0
+    page = 1
+
+    while cloned_count < num_repos:
+        query_params['page'] = page
+        response = requests.get('https://api.github.com/search/repositories', headers=headers, params=query_params)
+        
+        if response.status_code == 200:
+            repositories = response.json()['items']
+            for repo in repositories:
+                if cloned_count >= num_repos:
+                    break
+                repo_full_name = repo['full_name']
+                logger.info(f"Processing {repo_full_name}")
+                if repo_full_name not in known_repositories and repo_full_name not in attempted_repos:
+                    name = None
+                    try:
+                        clone_url = repo['clone_url']
+                        repo_name, sha = clone_repo(clone_url)
+                        name = repo_name
+                        url = clone_url.replace('.git', '')
+                        lean_git_repo = LeanGitRepo(url, sha)
+                        lean_git_repos.append(lean_git_repo)
+                        repos.append(repo_full_name)
+                        cloned_count += 1 # TODO: only increase if compatible commit found
+                        logger.info(f"Cloned {repo_full_name}")
+                    except Exception as e:
+                        # shutil.rmtree(name)
+                        # Note: some 404s happen since some repos don't have a lean-toolchain
+                        # but still use Lean
+                        logger.info(f"Failed to clone {repo_full_name} because of {e}")
+                else:
+                    logger.info(f"Skipping {repo_full_name} since it is a known repository")
+            page += 1
+        else:
+            logger.info("Failed to search GitHub", response.status_code)
+            break
+
+        # Check if we've reached the end of the search results
+        if len(repositories) < 100:
+            break
+    
+    logger.info(f"Total repositories processed: {cloned_count}")
 
 
 def _eval(data, preds_map) -> Tuple[float, float, float]:
@@ -908,6 +1096,9 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     elif "pfr" in url:
         sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
         v = "v4.8.0-rc1"
+    elif "PrimeNumberTheoremAnd" in url:
+        sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
+        v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
     if not sha:
@@ -1136,9 +1327,21 @@ def sort_repositories_by_difficulty(db: DynamicDatabase) -> List[Repository]:
         del categorized_theorems[repo]["To_Distribute"]
         print(f"Finished {repo.name}")
 
-    # Sort repositories based on the number of easy theorems
+    # # Sort repositories based on the number of easy theorems
     sorted_repos = sorted(categorized_theorems.keys(), key=lambda r: len(categorized_theorems[r]["Easy"]), reverse=True)
 
+    # Calculate percentage of easy theorems for each repository
+    # repo_easy_percentages = {}
+    # for repo in categorized_theorems:
+    #     total_theorems = sum(len(theorems) for theorems in categorized_theorems[repo].values())
+    #     easy_theorems = len(categorized_theorems[repo]["Easy"])
+    #     easy_percentage = (easy_theorems / total_theorems) * 100 if total_theorems > 0 else 0
+    #     repo_easy_percentages[repo] = easy_percentage
+
+    # # Sort repositories based on the percentage of easy theorems
+    # sorted_repos = sorted(categorized_theorems.keys(), key=lambda r: repo_easy_percentages[r], reverse=True)
+
+    # return sorted_repos, categorized_theorems, percentiles, repo_easy_percentages
     return sorted_repos, categorized_theorems, percentiles
 
 def save_sorted_repos(sorted_repos: List[Repository], file_path: str):
@@ -1177,7 +1380,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 5
+        current_epoch = 0
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False
@@ -1189,7 +1392,7 @@ def main():
         # start_with_pfr = True
         # curriculum_learning = False
         curriculum_learning = True
-        num_repos = 15
+        num_repos = 14
         dynamic_database_json_path = RAID_DIR + "/" + DB_FILE_NAME
         
         lambdas = None
@@ -1229,45 +1432,70 @@ def main():
         if curriculum_learning:
             logger.info("Starting curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-        #     if is_main_process:
-        #         search_github_repositories("Lean", num_repos)
-        #         for i in range(len(repos)):
-        #             repo = lean_git_repos[i]
-        #             logger.info(f"Processing {repo.url}")
-        #             result = add_repo_to_database(dynamic_database_json_path, repo, db)
-        #             if result is not None:
-        #                 logger.info(f"Successfully added repo {repo.url}")                    
-        #         logger.info(f"Successfully added {num_repos} repositories to the database")
+            # if is_main_process:
+            #     clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd"
+            #     commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
+            #     url = clone_url.replace('.git', '')
+            #     lean_git_repo = LeanGitRepo(url, commit)
+            #     lean_git_repos.append(lean_git_repo)
+
+            #     search_github_repositories("Lean", num_repos)
+                # for i in range(len(lean_git_repos)):
+                #     repo = lean_git_repos[i]
+                #     logger.info(f"Processing {repo.url}")
+                #     result = add_repo_to_database(dynamic_database_json_path, repo, db)
+                #     if result is not None:
+                #         logger.info(f"Successfully added repo {repo.url}")                    
+                # logger.info(f"Successfully added {num_repos} repositories to the database")
                 
-        #         sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
-        #         print("Sorted repositories. Saving now...")
-        #         db.to_json(dynamic_database_json_path)
-        #         save_sorted_repos(sorted_repos, "sorted_repos.json")
-        #         print("Summary of theorem difficulties by URL:")
-        #         for repo in sorted_repos:
-        #             print(f"\nURL: {repo.url}")
-        #             for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-        #                 theorems = categorized_theorems[repo][category]
-        #                 print(f"  {category}: {len(theorems)} theorems")
-        #                 if theorems:
-        #                     sorted_theorems = sorted(theorems, key=lambda x: x[2] if x[2] is not None else -float('inf'), reverse=True)[:3]
-        #                     for name, path, start, end, diff in sorted_theorems:
-        #                         diff_str = f"{diff:.2f}" if diff is not None else "N/A"
-        #                         print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
+            #     sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
+            #     print("Sorted repositories. Saving now...")
+            #     db.to_json(dynamic_database_json_path)
+            #     save_sorted_repos(sorted_repos, "sorted_repos.json")
+            #     print("Summary of theorem difficulties by URL:")
+            #     for repo in sorted_repos:
+            #         print(f"\nURL: {repo.url}")
+            #         for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+            #             theorems = categorized_theorems[repo][category]
+            #             print(f"  {category}: {len(theorems)} theorems")
+            #             if theorems:
+            #                 sorted_theorems = sorted(theorems, key=lambda x: x[2] if x[2] is not None else -float('inf'), reverse=True)[:3]
+            #                 for name, path, start, end, diff in sorted_theorems:
+            #                     diff_str = f"{diff:.2f}" if diff is not None else "N/A"
+            #                     print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
 
-        #         print("\nOverall Statistics:")
-        #         total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
-        #         for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-        #             count = sum(len(categories[category]) for categories in categorized_theorems.values())
-        #             percentage = (count / total_theorems) * 100
-        #             print(f"{category}: {count} theorems ({percentage:.2f}%)")
+            #     # sorted_repos, categorized_theorems, percentiles, repo_easy_percentages = sort_repositories_by_difficulty(db)
+            #     # print("Sorted repositories. Saving now...")
+            #     # db.to_json(dynamic_database_json_path)
+            #     # save_sorted_repos(sorted_repos, "sorted_repos.json")
+            #     # print("Summary of theorem difficulties by URL:")
+            #     # for repo in sorted_repos:
+            #     #     print(f"\nURL: {repo.url}")
+            #     #     total_theorems = sum(len(theorems) for theorems in categorized_theorems[repo].values())
+            #     #     for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+            #     #         theorems = categorized_theorems[repo][category]
+            #     #         percentage = (len(theorems) / total_theorems) * 100 if total_theorems > 0 else 0
+            #     #         print(f"  {category}: {len(theorems)} theorems ({percentage:.2f}%)")
+            #     #         if theorems:
+            #     #             sorted_theorems = sorted(theorems, key=lambda x: x[4] if x[4] is not None else -float('inf'), reverse=True)[:3]
+            #     #             for name, path, start, end, diff in sorted_theorems:
+            #     #                 diff_str = f"{diff:.2f}" if diff is not None else "N/A"
+            #     #                 print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
+            #     #     print(f"  Easy Theorem Percentage: {repo_easy_percentages[repo]:.2f}%")
 
-        #         print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
+            #     print("\nOverall Statistics:")
+            #     total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
+            #     for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+            #         count = sum(len(categories[category]) for categories in categorized_theorems.values())
+            #         percentage = (count / total_theorems) * 100
+            #         print(f"{category}: {count} theorems ({percentage:.2f}%)")
+
+            #     print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
             
-        #         logger.info("Finding compatible repositories...")
-        #         updated_repos = find_and_save_compatible_commits(repo_info_file, sorted_repos)
-        #         lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
-        #         logger.info("Finished finding compatible repositories")
+            #     logger.info("Finding compatible repositories...")
+            #     updated_repos = find_and_save_compatible_commits(repo_info_file, sorted_repos)
+            #     lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
+            #     logger.info("Finished finding compatible repositories")
 
             # All processes wait for the file to be created and then read from it
             max_attempts = 30
@@ -1306,8 +1534,7 @@ def main():
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
 
-                        if "FLT" not in repo.url:
-                            db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
                     
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
@@ -1471,57 +1698,56 @@ def main():
 
                         best_model.eval()
 
-                        if "FLT" not in repo.url:
-                            logger.info("Testing...")
-                            total_R1, total_R10, total_MRR = [], [], []
-                            dataset_path = RAID_DIR + "/" + DATA_DIR
-                            testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
+                        logger.info("Testing...")
+                        total_R1, total_R10, total_MRR = [], [], []
+                        dataset_path = RAID_DIR + "/" + DATA_DIR
+                        testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
+                        if is_main_process:
+                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                f.write("\n\n\n")
+                                f.write(f"Results for {dir_name} with lambda = {lambda_value}")
+                        for data_path in testing_paths:
+                            # TODO: remove this for tests that do not use merged dataset
+                            if "merged" not in data_path:
+                                continue
+                            # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
+                            run_cli(best_model_path, data_path)
                             if is_main_process:
+                                num_gpus = 4 # TODO: change for GPU
+                                preds_map = {}
+                                for gpu_id in range(num_gpus):
+                                    with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
+                                        preds = pickle.load(f)
+                                        preds_map.update(preds)
+
+                                logger.info("Loaded the predictions pickle files")
+                                data_path = os.path.join(data_path, "random", "test.json")
+                                data = json.load(open(data_path))
+                                logger.info(f"Evaluating on {data_path}")
+                                R1, R10, MRR = _eval(data, preds_map)
+                                logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+                                total_R1.append(R1)
+                                total_R10.append(R10)
+                                total_MRR.append(MRR)
                                 with open(EVAL_RESULTS_FILE_PATH, "a") as f:
                                     f.write("\n\n\n")
-                                    f.write(f"Results for {dir_name} with lambda = {lambda_value}")
-                            for data_path in testing_paths:
-                                # TODO: remove this for tests that do not use merged dataset
-                                if "merged" not in data_path:
-                                    continue
-                                # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
-                                run_cli(best_model_path, data_path)
-                                if is_main_process:
-                                    num_gpus = 4 # TODO: change for GPU
-                                    preds_map = {}
-                                    for gpu_id in range(num_gpus):
-                                        with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
-                                            preds = pickle.load(f)
-                                            preds_map.update(preds)
-
-                                    logger.info("Loaded the predictions pickle files")
-                                    data_path = os.path.join(data_path, "random", "test.json")
-                                    data = json.load(open(data_path))
-                                    logger.info(f"Evaluating on {data_path}")
-                                    R1, R10, MRR = _eval(data, preds_map)
-                                    logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-                                    total_R1.append(R1)
-                                    total_R10.append(R10)
-                                    total_MRR.append(MRR)
-                                    with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-                                        f.write("\n\n\n")
-                                        f.write(f"Intermediate results for {data_path}")
-                                        f.write("\n\n\n")
-                                        f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-
-                            if is_main_process:
-                                avg_R1 = np.mean(total_R1)
-                                avg_R10 = np.mean(total_R10)
-                                avg_MRR = np.mean(total_MRR)
-
-                                logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
-
-                                if not os.path.exists(EVAL_RESULTS_FILE_PATH):
-                                    open(EVAL_RESULTS_FILE_PATH, 'w').close()
-
-                                with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                    f.write(f"Intermediate results for {data_path}")
                                     f.write("\n\n\n")
-                                    f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+                                    f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+
+                        if is_main_process:
+                            avg_R1 = np.mean(total_R1)
+                            avg_R10 = np.mean(total_R10)
+                            avg_MRR = np.mean(total_MRR)
+
+                            logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+
+                            if not os.path.exists(EVAL_RESULTS_FILE_PATH):
+                                open(EVAL_RESULTS_FILE_PATH, 'w').close()
+
+                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                f.write("\n\n\n")
+                                f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                     else:
                         model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
                         if result is None:

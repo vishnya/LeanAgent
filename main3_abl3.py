@@ -1380,7 +1380,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 5
+        current_epoch = 7
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False
@@ -1788,7 +1788,7 @@ def main():
                             print(f"An error occurred during fisher: {str(e)}")
                             print(traceback.format_exc())
 
-                    if is_main_process:
+                    if "SciLean" in repo.url and is_main_process:
                         logger.info("Starting the prover")
 
                         if ray.is_initialized():

@@ -74,6 +74,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: do we still need repo_dir
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
+os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
@@ -1094,6 +1095,9 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     elif "pfr" in url:
         sha = "861715b9bf9482d2442760169cb2a3ff54091f75"
         v = "v4.8.0-rc1"
+    elif "PrimeNumberTheoremAnd" in url:
+        sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
+        v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
     if not sha:
@@ -1427,22 +1431,22 @@ def main():
         if curriculum_learning:
             logger.info("Starting curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-            if is_main_process:
+            # if is_main_process:
 
-                clone_url ="https://github.com/teorth/pfr"
-                commit = "861715b9bf9482d2442760169cb2a3ff54091f75"
-                url = clone_url.replace('.git', '')
-                lean_git_repo = LeanGitRepo(url, commit)
-                lean_git_repos.append(lean_git_repo)
+                # clone_url ="https://github.com/teorth/pfr"
+                # commit = "861715b9bf9482d2442760169cb2a3ff54091f75"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
 
-                # search_github_repositories("Lean", num_repos)
-                for i in range(len(lean_git_repos)):
-                    repo = lean_git_repos[i]
-                    logger.info(f"Processing {repo.url}")
-                    result = add_repo_to_database(dynamic_database_json_path, repo, db)
-                    if result is not None:
-                        logger.info(f"Successfully added repo {repo.url}")                    
-                logger.info(f"Successfully added {num_repos} repositories to the database")
+                # # search_github_repositories("Lean", num_repos)
+                # for i in range(len(lean_git_repos)):
+                #     repo = lean_git_repos[i]
+                #     logger.info(f"Processing {repo.url}")
+                #     result = add_repo_to_database(dynamic_database_json_path, repo, db)
+                #     if result is not None:
+                #         logger.info(f"Successfully added repo {repo.url}")                    
+                # logger.info(f"Successfully added {num_repos} repositories to the database")
                 
                 # sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
                 # print("Sorted repositories. Saving now...")
@@ -1530,7 +1534,8 @@ def main():
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
 
-                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+                        if "pfr" not in repo.url:
+                            db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
                     
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
