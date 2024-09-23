@@ -78,7 +78,6 @@ class BestFirstSearchProver:
     def search(
         self, repo: LeanGitRepo, thm: Theorem, pos: Pos
     ) -> Optional[SearchResult]:
-        logger.info(f"Proving {thm}")
 
         self.repo = repo
         self.theorem = thm
@@ -125,7 +124,6 @@ class BestFirstSearchProver:
                 num_total_nodes=len(self.nodes),
                 num_searched_nodes=self.num_expansions,
             )
-            logger.info(result)
             return result
 
         except DojoInitError as ex:
@@ -140,16 +138,11 @@ class BestFirstSearchProver:
 
         while True:
             if priority_queue.empty():
-                logger.info("Ran out of nodes to search.")
                 break
 
             try:
                 await self._step(priority_queue)
             except DojoHardTimeoutError:
-                logger.info(time.monotonic())
-                logger.info(time_start)
-                logger.info(time.monotonic() - time_start)
-                logger.info(self.timeout)
                 assert time.monotonic() - time_start + tolerance >= self.timeout
 
             self.total_time = time.monotonic() - time_start + tolerance
@@ -158,17 +151,17 @@ class BestFirstSearchProver:
                 and self.num_expansions > self.max_expansions
             ):
                 if self.root.status == Status.PROVED:
-                    logger.info("Found a proof!")
+                    print("")
                 self.root.status = Status.OPEN
-                logger.info("Hit the resource limit (timeout or max_expansions).")
+                print("")
                 break
 
             if self.root.status == Status.FAILED:
-                logger.info("Failed early!")
+                print("")
                 break
 
             if self.root.status == Status.PROVED:
-                logger.info("Found a proof!")
+                print("")
                 break
 
     async def _step(self, priority_queue):
@@ -341,7 +334,6 @@ class VllmActor:
         self.model_path = model_path
 
     def initialize(self) -> None:
-        logger.info("Initializing vLLM")
         # TODO: Try other options in https://docs.vllm.ai/en/stable/models/engine_args.html#engine-args.
         engine_args = AsyncEngineArgs(
             model=self.model_path,
@@ -368,18 +360,6 @@ class VllmActor:
             final_output = oup
         return final_output
 
-# TODO: reduce repetition with main
-
-def find_latest_checkpoint(raid_dir, checkpoint_dir):
-    """Finds the most recent checkpoint."""
-    checkpoint_dir = raid_dir + "/" + checkpoint_dir
-    all_checkpoints = [os.path.join(checkpoint_dir, f) for f in os.listdir(checkpoint_dir) if f.endswith(".ckpt")]
-    if not all_checkpoints:
-        raise FileNotFoundError("No checkpoints found.")
-    latest_checkpoint = max(all_checkpoints, key=os.path.getmtime)
-    logger.info(f"Using the latest checkpoint: {latest_checkpoint}")
-    return latest_checkpoint
-
 class DistributedProver:
     """A distributed prover that uses Ray to parallelize the proof search.
 
@@ -390,7 +370,7 @@ class DistributedProver:
     def __init__(
         self,
         use_vllm: bool,
-        ckpt_path: Optional[str],
+        tac_gen: RetrievalAugmentedGenerator,
         indexed_corpus_path: Optional[str],
         tactic: Optional[str],
         module: Optional[str],
@@ -399,57 +379,8 @@ class DistributedProver:
         timeout: int,
         max_expansions: Optional[int],
         num_sampled_tactics: int,
-        model_checkpoint_path: Optional[str],
         debug: Optional[bool] = False,
     ) -> None:
-        logger.info("Inside __init__")
-        if ckpt_path is None:
-            logger.info("ckpt_path is None")
-            assert tactic and not indexed_corpus_path
-        else:
-            logger.info("ckpt_path is not None")
-            assert not tactic and not module
-
-        tac_gen = None
-        if ckpt_path is None:
-            logger.info("Using FixedTacticGenerator")
-            tac_gen = FixedTacticGenerator(tactic, module)
-        elif use_vllm:
-            logger.info("Using vLLM")
-            assert indexed_corpus_path is None
-            vllm_actor = VllmActor.options(num_gpus=num_gpus).remote(ckpt_path)
-            ray.get(vllm_actor.initialize.remote())
-            # TODO: rebase
-            # tac_gen = VllmGenerator(vllm_actor)
-        else:
-            logger.info("Using RAG")
-            device = torch.device("cuda") if num_gpus > 0 else torch.device("cpu")
-            config = {
-                "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",
-                "lr": 1e-3,
-                "warmup_steps": 1000,
-                "num_beams": 5,
-                "eval_num_retrieved": 10,
-                "eval_num_workers": 1,
-                "eval_num_gpus": 4,  # TODO: change for GPU
-                "eval_num_theorems": 100,
-                "max_inp_seq_len": 512,
-                "max_oup_seq_len": 128,
-                "ret_ckpt_path": model_checkpoint_path,
-            }
-            tac_gen = RetrievalAugmentedGenerator.load(
-                ckpt_path, device=device, freeze=True, config=config
-            )
-            logger.info(f"Loaded model from {ckpt_path}")
-            # logger.info(f"Using retriever: {tac_gen.retriever}")
-            # if tac_gen.retriever is not None:
-            #     if indexed_corpus_path is not None:
-            #         logger.info(f"Loading indexed corpus from {indexed_corpus_path}")
-            #         tac_gen.retriever.load_corpus(indexed_corpus_path)
-            #         logger.info(f"Loaded indexed corpus from {indexed_corpus_path}")
-            #     tac_gen.retriever.reindex_corpus(batch_size=32)
-            #     logger.info("Finished reindexing!")
-    
         self.distributed = num_workers > 1
         if not self.distributed:
             assert num_gpus <= 1
@@ -459,7 +390,6 @@ class DistributedProver:
             return
 
         if num_gpus >= 1:
-            logger.info(f"Launching {num_workers} workers with {num_gpus} GPUs.")
             if use_vllm:
                 # GPUs are managed by `VllmActor`.
                 num_gpus_per_worker = 0
@@ -476,7 +406,6 @@ class DistributedProver:
                 for _ in range(num_workers)
             ]
         else:
-            logger.info(f"Launching {num_workers} CPU workers.")
             provers = [
                 ProverActor.remote(
                     tac_gen,
@@ -495,14 +424,12 @@ class DistributedProver:
     ) -> List[Optional[SearchResult]]:
         """Parallel proof search for `theorems`. The order of the results is not guaranteed to match the order of the input."""
         if not self.distributed:
-            logger.info("Not distributed")
             return [
                 self.prover.search(repo, thm, pos)
                 for thm, pos in zip_strict(theorems, positions)
             ]
 
         try:
-            logger.info("Distributed")
             results = list(
                 self.prover_pool.map_unordered(
                     lambda p, x: p.search.remote(repo, x[0], x[1]),
