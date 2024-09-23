@@ -9,7 +9,13 @@ export GITHUB_ACCESS_TOKEN="<>"
 export CACHE_DIR="${RAID_DIR}/.cache/lean_dojo"
 echo "Removing old cache files"
 rm -rf /tmp/ray
+export RAY_TMPDIR="${RAID_DIR}/tmp"
+rm -rf ${RAY_TMPDIR}
+mkdir "${RAY_TMPDIR}"
 echo "Stopping ray"
 ray stop --force
+ps aux | grep "python" | awk '{print $2}' | xargs -r kill -9
+sleep 5
+nvidia-smi
 echo "Running main3_minif2f_start.py"
 python main3_minif2f_start.py
