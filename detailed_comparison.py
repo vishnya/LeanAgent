@@ -26,18 +26,22 @@ def print_theorem_details(theorem: Theorem, include_proof: bool = True):
     print()
 
 def compare_theorems(db1: DynamicDatabase, db2: DynamicDatabase, get_theorems_func, theorem_type: str):
-    for repo1 in db1.repositories:
-        repo2 = db2.get_repository(repo1.url, repo1.commit)
-        if repo2 is None:
-            print(f"Repository {repo1.url} (commit: {repo1.commit}) not found in the second database.")
-            continue
+    all_repos = set([(repo.url, repo.commit) for repo in db1.repositories] + [(repo.url, repo.commit) for repo in db2.repositories])
+
+    for repo_url, repo_commit in all_repos:
+        repo1 = db1.get_repository(repo_url, repo_commit)
+        repo2 = db2.get_repository(repo_url, repo_commit)
 
         print(f"\n{'='*80}")
-        print(f"Comparing {theorem_type} for repository: {repo1.url} (commit: {repo1.commit})")
+        print(f"Comparing {theorem_type} for repository: {repo_url} (commit: {repo_commit})")
         print(f"{'='*80}")
 
-        theorems1 = get_theorems_func(repo1)
-        theorems2 = get_theorems_func(repo2)
+        if repo1 is None and repo2 is None:
+            print(f"Repository {repo_url} (commit: {repo_commit}) not found in either database.")
+            continue
+
+        theorems1 = get_theorems_func(repo1) if repo1 else []
+        theorems2 = get_theorems_func(repo2) if repo2 else []
 
         theorems1_dict = {theorem_key(t): t for t in theorems1}
         theorems2_dict = {theorem_key(t): t for t in theorems2}
