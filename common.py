@@ -209,7 +209,6 @@ class Corpus:
         dep_graph = nx.DiGraph()
         self.all_premises = []
 
-        logger.info(f"Building the corpus from {jsonl_path}")
 
         for line in open(jsonl_path):
             file_data = json.loads(line)
