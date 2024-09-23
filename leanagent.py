@@ -40,7 +40,10 @@ def load_model(ret_checkpoint_path, device):
 
 class LeanAgent:
     def __init__(self, use_baseline=False):
-        print("Initializing LeanAgent...")
+        if use_baseline:
+            print("Initializing baseline...")
+        else:
+            print("Initializing LeanAgent...")
         self.use_baseline = use_baseline
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         print("Loading the model...")
@@ -48,7 +51,10 @@ class LeanAgent:
         self.model = load_model(self.ret_checkpoint_path, self.device)
         print("Model loaded!")
         self.setup_prover()
-        print("LeanAgent is ready!")
+        if use_baseline:
+            print("Baseline is ready!")
+        else:
+            print("LeanAgent is ready!")
 
     def setup_prover(self):
         use_vllm = False
@@ -56,7 +62,8 @@ class LeanAgent:
         self.model.retriever.load_corpus(corpus_path)
 
         if os.path.exists(CORPUS_EMBEDDINGS_CACHE):
-            self.model.retriever.corpus_embeddings = torch.load(CORPUS_EMBEDDINGS_CACHE)
+            embeddings = torch.load(CORPUS_EMBEDDINGS_CACHE, map_location=self.device)
+            self.model.retriever.corpus_embeddings = embeddings.to(self.device)
             self.model.retriever.embeddings_staled = False
         else:
             self.model.retriever.reindex_corpus(batch_size=32)
@@ -64,7 +71,7 @@ class LeanAgent:
 
         num_workers = 1
         num_gpus = 1 if torch.cuda.is_available() else 0
-        timeout = 45
+        timeout = 10
         max_expansions = None
         num_sampled_tactics = 64
         debug = False
@@ -93,6 +100,7 @@ class LeanAgent:
     
     @staticmethod
     def get_repo_info(repo_url):
+        # TODO: chagen pos based on theorme
         if "miniF2F" in repo_url:
             return "9e445f5435407f014b88b44a98436d50dd7abd00", Pos(517, 1)
         elif "mathematics_in_lean_source" in repo_url:
@@ -122,7 +130,7 @@ def main():
     result = agent.prove_theorem(
         repo_url="https://github.com/yangky11/miniF2F-lean4",
         file_path="MiniF2F/Test.lean",
-        theorem_name="induction_12dvd4expnp1p20"
+        theorem_name="mathd_algebra_160"
     )
     print_proof_result(result)
 
@@ -132,6 +140,8 @@ def main():
     #     file_path="MiniF2F/Test.lean",
     #     theorem_name="induction_12dvd4expnp1p20"
     # )
+    # print_proof_result(result)
+    # # TODO: update
     # print(f"Baseline model succeeded: {baseline_result.status == Status.PROVED if baseline_result else False}")
     # print("LeanAgent succeeded, demonstrating significant performance improvement")
 
