@@ -423,47 +423,24 @@ def calculate_AIA(data, exp_name):
     AA_values = [np.mean(test_accuracies[:i+1]) for i in range(len(test_accuracies))]
     return np.mean(AA_values)
 
-# Helper function to calculate metrics
 def calculate_metrics(data, exp_name):
     metrics = {}
     
-    # # 1. Final Average Test R@10
-    # metrics['Final_Avg_Test_R@10'] = data[f'Average Test R@10 {exp_name}'][-1]
-    
     # 2. Area Under the Learning Curve (AULC)
-    aulc = np.trapz(data[f'Average Test R@10 {exp_name}']) / n_repos
+    aulc = np.trapz(data[f'Average Test R@10 {exp_name}']) / len(data['Repository'])
     metrics['AULC'] = aulc
     
-    # # 3. Forgetting Measure
-    # forgetting = []
-    # for i in range(2, n_repos + 1):
-    #     task_performance = [data[f'task{j} Test R@10: {repos[j-1]}'][i-j-1] for j in range(1, i)]
-    #     forgetting.append(np.max(task_performance) - data[f'task{i-1} Test R@10: {repos[i-2]}'][-1])
-    # metrics['Avg_Forgetting'] = np.mean(forgetting)
-    
-    # # 4. Forward Transfer
-    # forward_transfer = []
-    # for i in range(2, n_repos + 1):
-    #     forward_transfer.append(data[f'task{i} Test R@10: {repos[i-1]}'][0] - data[f'task1 Test R@10: {repos[0]}'][0])
-    # metrics['Avg_Forward_Transfer'] = np.mean(forward_transfer)
-    
-    # 5. Backward Transfer (A positive BWT indicates that learning new tasks improves performance on old ones, while a negative BWT suggests forgetting)
+    # 5. Backward Transfer
     backward_transfer = []
-    for i in range(1, n_repos):
-        backward_transfer.append(data[f'task{i} Test R@10: {repos[i-1]}'][-1] - data[f'task{i} Test R@10: {repos[i-1]}'][0])
+    for i in range(1, len(data['Repository'])):
+        task_key = f'task{i} Test R@10: {data["Repository"][i-1]}'
+        if task_key in data:
+            backward_transfer.append(data[task_key][-1] - data[task_key][0])
     metrics['Avg_Backward_Transfer'] = np.mean(backward_transfer)
     
-    # # 6. Stability (using Average Test R@10)
-    # stability = np.mean(np.diff(data[f'Average Test R@10 {exp_name}']))
-    # metrics['Stability'] = stability
-    
-    # # 7. Plasticity (using Validation R@10)
-    # plasticity = np.mean(np.diff(data[f'Validation R@10 {exp_name}']))
-    # metrics['Plasticity'] = plasticity
-
     # Extract the task-specific accuracies
     task_accuracies = {}
-    for i in range(1, 15):  # Assuming 14 tasks
+    for i in range(1, len(data['Repository']) + 1):
         key = f'task{i} Test R@10: {data["Repository"][i-1]}'
         if key in data:
             task_accuracies[i] = np.array(data[key])
@@ -503,93 +480,37 @@ def calculate_metrics(data, exp_name):
                 WF = max(WF, np.max(avg_test[i-w:i]) - avg_test[i])
         return WF
     
-    # metrics['WF2'] = calculate_WF(2)
     metrics['WF5'] = calculate_WF(5)
-    # metrics['WF7'] = calculate_WF(7)
-    # metrics['WF10'] = calculate_WF(10)
 
-    # # 7. Windowed Plasticity (WP)
-    # window_size = 2  # We can adjust this
-    # wp_values = [max(0, avg_test[i] - avg_test[max(0, i-window_size)]) for i in range(len(avg_test))]
-    # metrics['WP2'] = np.mean(wp_values)
-
-    window_size = 5  # We can adjust this
+    # 7. Windowed Plasticity (WP)
+    window_size = 5
     wp_values = [max(0, avg_test[i] - avg_test[max(0, i-window_size)]) for i in range(len(avg_test))]
     metrics['WP5'] = np.mean(wp_values)
 
-    # window_size = 7  # We can adjust this
-    # wp_values = [max(0, avg_test[i] - avg_test[max(0, i-window_size)]) for i in range(len(avg_test))]
-    # metrics['WP7'] = np.mean(wp_values)
-
-    # window_size = 10 # We can adjust this
-    # wp_values = [max(0, avg_test[i] - avg_test[max(0, i-window_size)]) for i in range(len(avg_test))]
-    # metrics['WP10'] = np.mean(wp_values)
-
     return metrics
-
 
 def calculate_additional_metrics(data, exp_name):
     metrics = {}
     
-    # # 1. Average validation R@10 performance
-    # metrics['Avg_Validation_R@10'] = np.mean(data[f'Validation R@10 {exp_name}'])
-    
-    # # 2. Average Accuracy (AA)
-    # metrics['AA'] = calculate_AA(data, exp_name)
-    
     # 3. Forgetting Measure (FM)
     fm_values = []
     for i in range(2, len(data['Repository']) + 1):
-        task_performances = [data[f'task{j} Test R@10: {data["Repository"][j-1]}'][i-j-1] for j in range(1, i)]
-        fm_values.append(np.max(task_performances) - data[f'task{i-1} Test R@10: {data["Repository"][i-2]}'][-1])
+        task_key = f'task{i-1} Test R@10: {data["Repository"][i-2]}'
+        if task_key in data:
+            task_performances = [data[f'task{j} Test R@10: {data["Repository"][j-1]}'][i-j-1] for j in range(1, i) if f'task{j} Test R@10: {data["Repository"][j-1]}' in data]
+            fm_values.append(np.max(task_performances) - data[task_key][-1])
     metrics['FM'] = np.mean(fm_values)
     
     # 4. Incremental Plasticity (IP)
     ip_values = np.diff(data[f'Validation R@10 {exp_name}'])
     metrics['IP'] = np.mean(ip_values)
     
-    # # 5. Stability to Plasticity Ratio (SPR)
-    # metrics['SPR'] = np.mean(data[f'Average Test R@10 {exp_name}']) / np.mean(data[f'Validation R@10 {exp_name}'])
-    
-    # # 6. Rate of Change in Test R@10 (RCT)
-    # rct_values = np.diff(data[f'Average Test R@10 {exp_name}'])
-    # metrics['RCT'] = np.mean(rct_values)
-    
-    # # 7. Cumulative Progress (CP)
-    # metrics['CP'] = np.sum(np.diff(data[f'Average Test R@10 {exp_name}']))
-    
-    # # 8. Average Incremental Accuracy (AIA)
-    # metrics['AIA'] = calculate_AIA(data, exp_name)
-    
-    # # 9. Remembering (REM) and Positive Backward Transfer (BWT+)
-    # bwt_values = []
-    # for i in range(1, len(data['Repository'])):
-    #     bwt_values.append(data[f'task{i} Test R@10: {data["Repository"][i-1]}'][-1] - data[f'task{i} Test R@10: {data["Repository"][i-1]}'][0])
-    # metrics['REM'] = 1 - abs(min(0, np.mean(bwt_values)))
-    # metrics['BWT+'] = max(0, np.mean(bwt_values))
-    
     # 10. Time-Weighted Cumulative Performance (TWCP)
-    # weights = np.arange(1, len(data['Repository']) + 1)
-    # weights = np.exp(np.arange(len(data['Repository'])))
-    # Inverted weights since earlier is more important to avoid CF
     weights = np.arange(len(data['Repository']), 0, -1)
-    # weights = np.ones(len(data['Repository']))
-    metrics['TWCP'] = np.sum(weights * data[f'Average Test R@10 {exp_name}']) / np.sum(weights)
-    
-    # # 11. Stability-Plasticity Score (SPS)
-    # stability = 1 - (np.std(data[f'Average Test R@10 {exp_name}']) / np.mean(data[f'Average Test R@10 {exp_name}']))
-    # plasticity = np.mean(np.diff(data[f'Validation R@10 {exp_name}']))
-    # metrics["SPS_stability"] = stability
-    # metrics["SPS_plasticity"] = plasticity
-    # beta = 0.7
-    # metrics['SPS'] = beta * stability + (1 - beta) * plasticity
+    metrics['TWCP'] = np.sum(weights * np.array(data[f'Average Test R@10 {exp_name}'])) / np.sum(weights)
     
     # 12. Catastrophic Forgetting Resilience (CFR)
     metrics['CFR'] = np.min(data[f'Average Test R@10 {exp_name}']) / np.max(data[f'Average Test R@10 {exp_name}'])
-    
-    # # 13. Progressive Learning Index (PLI)
-    # pli_values = np.maximum(0, np.diff(data[f'Average Test R@10 {exp_name}']))
-    # metrics['PLI'] = np.sum(pli_values) / len(pli_values)
     
     return metrics
 
