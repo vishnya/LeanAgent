@@ -511,16 +511,22 @@ def calculate_all_metrics(experiments):
         all_metrics[exp_name] = {**metrics, **additional_metrics}
     return all_metrics
 
+lower_is_better_metrics = {'WF5', 'FM'}
+
 def compare_metrics(all_metrics):
     comparison = {}
     for metric in all_metrics['Exp1'].keys():
         values = {exp: metrics[metric] for exp, metrics in all_metrics.items()}
-        sorted_exps = sorted(values, key=values.get, reverse=True)
+        reverse = metric not in lower_is_better_metrics
+        sorted_exps = sorted(values, key=values.get, reverse=reverse)
         sorted_values = [values[exp] for exp in sorted_exps]
         
-        # Calculate percentage improvement of best over second best
+        # Calculate percentage improvement
         if len(sorted_values) > 1:
-            percent_improvement = ((sorted_values[0] - sorted_values[1]) / sorted_values[1]) * 100
+            if metric in lower_is_better_metrics:
+                percent_improvement = ((sorted_values[1] - sorted_values[0]) / sorted_values[1]) * 100
+            else:
+                percent_improvement = ((sorted_values[0] - sorted_values[1]) / sorted_values[1]) * 100
         else:
             percent_improvement = 0
         
@@ -536,7 +542,10 @@ def format_comparison(comparison):
         formatted_output += f"{metric}:\n"
         for i, (exp, value) in enumerate(result['Ranking']):
             formatted_output += f"  {i+1}. {exp}: {value:.4f}\n"
-        formatted_output += f"  Best improvement: +{result['Improvement']:.2f}%\n\n"
+        if metric in lower_is_better_metrics:
+            formatted_output += f"  Best improvement: -{result['Improvement']:.2f}%\n\n"
+        else:
+            formatted_output += f"  Best improvement: +{result['Improvement']:.2f}%\n\n"
     return formatted_output
 
 # Calculate metrics for all experiments
