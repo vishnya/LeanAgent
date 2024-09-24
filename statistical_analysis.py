@@ -100,6 +100,15 @@ from scipy import stats
 repos = data_exp3['Repository']
 n_repos = len(repos)
 
+def calculate_AA(data, exp_name):
+    test_accuracies = data[f'Average Test R@10 {exp_name}']
+    return test_accuracies[-1]  # The last value represents AA_k
+
+def calculate_AIA(data, exp_name):
+    test_accuracies = data[f'Average Test R@10 {exp_name}']
+    AA_values = [np.mean(test_accuracies[:i+1]) for i in range(len(test_accuracies))]
+    return np.mean(AA_values)
+
 # Helper function to calculate metrics
 def calculate_metrics(data, exp_name):
     metrics = {}
@@ -183,7 +192,7 @@ def calculate_additional_metrics(data, exp_name):
     metrics['Avg_Validation_R@10'] = np.mean(data[f'Validation R@10 {exp_name}'])
     
     # 2. Average Accuracy (AA)
-    metrics['AA'] = np.mean(data[f'Average Test R@10 {exp_name}'])
+    metrics['AA'] = calculate_AA(data, exp_name)
     
     # 3. Forgetting Measure (FM)
     fm_values = []
@@ -207,8 +216,7 @@ def calculate_additional_metrics(data, exp_name):
     metrics['CP'] = np.sum(np.diff(data[f'Average Test R@10 {exp_name}']))
     
     # 8. Average Incremental Accuracy (AIA)
-    aia_values = [np.mean(data[f'Average Test R@10 {exp_name}'][:i+1]) for i in range(len(data['Repository']))]
-    metrics['AIA'] = np.mean(aia_values)
+    metrics['AIA'] = calculate_AIA(data, exp_name)
     
     # 9. Remembering (REM) and Positive Backward Transfer (BWT+)
     bwt_values = []
