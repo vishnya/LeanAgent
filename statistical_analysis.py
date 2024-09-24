@@ -400,17 +400,6 @@ from scipy import stats
 repos = data_exp3['Repository']
 n_repos = len(repos)
 
-
-def format_comparison(comparison):
-    formatted_output = ""
-    for metric, result in comparison.items():
-        formatted_output += f"{metric}:\n"
-        formatted_output += f"  Best: {result['Best']}\n"
-        formatted_output += f"  Value: {result['Value']:.4f}\n"
-        formatted_output += f"  Improvement: +{result['Improvement']:.2f}%\n\n"
-    return formatted_output
-
-
 def calculate_percent_change(exp3_value, exp8_value):
     return ((exp3_value - exp8_value) / exp8_value) * 100
 
@@ -526,21 +515,29 @@ def compare_metrics(all_metrics):
     comparison = {}
     for metric in all_metrics['Exp1'].keys():
         values = {exp: metrics[metric] for exp, metrics in all_metrics.items()}
-        best_exp = max(values, key=values.get)
-        best_value = values[best_exp]
+        sorted_exps = sorted(values, key=values.get, reverse=True)
+        sorted_values = [values[exp] for exp in sorted_exps]
         
-        # Find the second best value
-        second_best_value = max(v for k, v in values.items() if k != best_exp)
-        
-        # Calculate percentage improvement
-        percent_improvement = ((best_value - second_best_value) / second_best_value) * 100
+        # Calculate percentage improvement of best over second best
+        if len(sorted_values) > 1:
+            percent_improvement = ((sorted_values[0] - sorted_values[1]) / sorted_values[1]) * 100
+        else:
+            percent_improvement = 0
         
         comparison[metric] = {
-            'Best': best_exp,
-            'Value': best_value,
+            'Ranking': list(zip(sorted_exps, sorted_values)),
             'Improvement': percent_improvement
         }
     return comparison
+
+def format_comparison(comparison):
+    formatted_output = ""
+    for metric, result in comparison.items():
+        formatted_output += f"{metric}:\n"
+        for i, (exp, value) in enumerate(result['Ranking']):
+            formatted_output += f"  {i+1}. {exp}: {value:.4f}\n"
+        formatted_output += f"  Best improvement: +{result['Improvement']:.2f}%\n\n"
+    return formatted_output
 
 # Calculate metrics for all experiments
 all_metrics = calculate_all_metrics(experiments)
