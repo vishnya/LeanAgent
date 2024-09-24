@@ -1,5 +1,5 @@
-# Comparing 1, 3, 7, 8 since all single repo
-# Then 2, 4, 9, 10 since all merge all
+# # Comparing 1, 3, 7, 8 since all single repo
+# # Then 2, 4, 9, 10 since all merge all
 
 # Data for Experiment 1
 data_exp1 = {
@@ -845,9 +845,9 @@ def calculate_AIA(data, exp_name):
 def calculate_metrics(data, exp_name):
     metrics = {}
     
-    # 2. Area Under the Learning Curve (AULC)
-    aulc = np.trapz(data[f'Average Test R@10 {exp_name}']) / len(data['Repository'])
-    metrics['AULC'] = aulc
+    # # 2. Area Under the Learning Curve (AULC)
+    # aulc = np.trapz(data[f'Average Test R@10 {exp_name}']) / len(data['Repository'])
+    # metrics['AULC'] = aulc
     
     # 5. Backward Transfer
     backward_transfer = []
@@ -876,7 +876,7 @@ def calculate_metrics(data, exp_name):
         if count > 0:
             min_acc_values.append(min_acc_sum / count)
     
-    metrics['min-ACC'] = np.mean(min_acc_values) if min_acc_values else 0
+    # metrics['min-ACC'] = np.mean(min_acc_values) if min_acc_values else 0
 
     # Worst-case Accuracy (WC-ACC)
     avg_test = np.array(data[f'Average Test R@10 {exp_name}'])
@@ -889,7 +889,7 @@ def calculate_metrics(data, exp_name):
             wc_acc = (1/k) * avg_test[k-1] + (1 - 1/k) * min_acc_values[k-2]
             wc_acc_values.append(wc_acc)
     
-    metrics['WC-ACC'] = np.mean(wc_acc_values)
+    # metrics['WC-ACC'] = np.mean(wc_acc_values)
 
     # 3. Windowed Forgetting (WF)
     def calculate_WF(w):
@@ -924,9 +924,9 @@ def calculate_additional_metrics(data, exp_name):
     ip_values = np.diff(data[f'Validation R@10 {exp_name}'])
     metrics['IP'] = np.mean(ip_values)
     
-    # 10. Time-Weighted Cumulative Performance (TWCP)
-    weights = np.arange(len(data['Repository']), 0, -1)
-    metrics['TWCP'] = np.sum(weights * np.array(data[f'Average Test R@10 {exp_name}'])) / np.sum(weights)
+    # # 10. Time-Weighted Cumulative Performance (TWCP)
+    # weights = np.arange(len(data['Repository']), 0, -1)
+    # metrics['TWCP'] = np.sum(weights * np.array(data[f'Average Test R@10 {exp_name}'])) / np.sum(weights)
     
     # 12. Catastrophic Forgetting Resilience (CFR)
     metrics['CFR'] = np.min(data[f'Average Test R@10 {exp_name}']) / np.max(data[f'Average Test R@10 {exp_name}'])
@@ -997,37 +997,44 @@ print("Metrics Comparison:")
 print(format_comparison(comparison))
 
 
+def calculate_composite_score(metrics):
+    # Normalize the metrics
+    normalized_metrics = {}
+    for metric in ['WF5', 'FM', 'WP5', 'IP']:
+        values = [m[metric] for m in metrics.values()]
+        min_val, max_val = min(values), max(values)
+        if max_val - min_val == 0:
+            normalized_metrics[metric] = {exp: 1 for exp in metrics}
+        else:
+            normalized_metrics[metric] = {exp: (metrics[exp][metric] - min_val) / (max_val - min_val) for exp in metrics}
+
+    # Calculate composite score
+    composite_scores = {}
+    for exp in metrics:
+        score = (0.4 * (1 - normalized_metrics['WF5'][exp])) + \
+                (0.4 * (1 - normalized_metrics['FM'][exp])) + \
+                (0.1 * normalized_metrics['WP5'][exp]) + \
+                (0.1 * normalized_metrics['IP'][exp])
+        composite_scores[exp] = score
+
+    return composite_scores
+
+# After calculating all_metrics
+composite_scores = calculate_composite_score(all_metrics)
+print("\nComposite Scores:")
+for exp, score in sorted(composite_scores.items(), key=lambda x: x[1], reverse=True):
+    print(f"{exp}: {score:.4f}")
+
 # SINGLE REPO:
 
 
 # Metrics Comparison:
-# AULC:
-#   1. Exp1: 62.3568
-#   2. Exp7: 61.8582
-#   3. Exp8: 61.0111
-#   4. Exp3: 60.6561
-#   Best improvement: +0.81%
-
 # Avg_Backward_Transfer:
 #   1. Exp7: 1.3288
 #   2. Exp3: 1.1847
 #   3. Exp1: 1.0912
 #   4. Exp8: 0.7867
 #   Best improvement: +12.16%
-
-# min-ACC:
-#   1. Exp1: 67.7403
-#   2. Exp7: 66.3610
-#   3. Exp8: 63.5380
-#   4. Exp3: 63.4684
-#   Best improvement: +2.08%
-
-# WC-ACC:
-#   1. Exp1: 68.0632
-#   2. Exp7: 66.6878
-#   3. Exp8: 63.5638
-#   4. Exp3: 63.5513
-#   Best improvement: +2.06%
 
 # WF5:
 #   1. Exp3: 0.1800
@@ -1057,13 +1064,6 @@ print(format_comparison(comparison))
 #   4. Exp7: 0.2562
 #   Best improvement: +3.98%
 
-# TWCP:
-#   1. Exp1: 67.6543
-#   2. Exp7: 66.5161
-#   3. Exp8: 64.1637
-#   4. Exp3: 64.0976
-#   Best improvement: +1.71%
-
 # CFR:
 #   1. Exp7: 0.8805
 #   2. Exp3: 0.8767
@@ -1072,33 +1072,16 @@ print(format_comparison(comparison))
 #   Best improvement: +0.43%
 
 
-# MERGE ALL
+
+# MERGE ALL:
 
 
 # Metrics Comparison:
-# AULC:
-#   1. Exp2: 54.8279
-#   2. Exp9: 54.3600
-#   3. Exp4: 53.6532
-#   Best improvement: +0.86%
-
 # Avg_Backward_Transfer:
 #   1. Exp2: 0.8240
 #   2. Exp4: 0.5314
 #   3. Exp9: -1.0482
 #   Best improvement: +55.07%
-
-# min-ACC:
-#   1. Exp2: 61.7666
-#   2. Exp9: 60.5209
-#   3. Exp4: 57.6945
-#   Best improvement: +2.06%
-
-# WC-ACC:
-#   1. Exp2: 62.3245
-#   2. Exp9: 61.2913
-#   3. Exp4: 57.8997
-#   Best improvement: +1.69%
 
 # WF5:
 #   1. Exp4: 2.2300
@@ -1124,14 +1107,19 @@ print(format_comparison(comparison))
 #   3. Exp9: -1.7062
 #   Best improvement: +-57.19%
 
-# TWCP:
-#   1. Exp2: 61.4921
-#   2. Exp9: 61.4797
-#   3. Exp4: 58.2020
-#   Best improvement: +0.02%
-
 # CFR:
 #   1. Exp4: 0.9365
 #   2. Exp2: 0.7618
 #   3. Exp9: 0.7545
 #   Best improvement: +22.93%
+
+# Composite Scores:
+# Exp4: 1.0000
+# Exp9: 0.0732
+# Exp2: 0.0707
+
+# Composite Scores:
+# Exp3: 0.9575
+# Exp8: 0.8813
+# Exp7: 0.2213
+# Exp1: 0.0127
