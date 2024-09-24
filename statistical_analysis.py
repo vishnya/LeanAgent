@@ -100,6 +100,29 @@ from scipy import stats
 repos = data_exp3['Repository']
 n_repos = len(repos)
 
+def format_comparison(comparison_df):
+    formatted_output = ""
+    for _, row in comparison_df.iterrows():
+        metric = row['Metric']
+        exp3_value = row['Experiment 3']
+        exp8_value = row['Experiment 8']
+        difference = row['Difference (Exp3 - Exp8)']
+        
+        if difference > 0:
+            better = "Exp3 BETTER"
+        elif difference < 0:
+            better = "Exp8 better"
+        else:
+            better = "Tie"
+        
+        formatted_output += f"{metric}:\n"
+        formatted_output += f"  Exp3: {exp3_value:.4f}\n"
+        formatted_output += f"  Exp8: {exp8_value:.4f}\n"
+        formatted_output += f"  Diff: {difference:.4f}\n"
+        formatted_output += f"  {better}\n\n"
+    
+    return formatted_output
+
 def calculate_AA(data, exp_name):
     test_accuracies = data[f'Average Test R@10 {exp_name}']
     return test_accuracies[-1]  # The last value represents AA_k
@@ -153,7 +176,7 @@ def calculate_metrics(data, exp_name):
 metrics_exp3 = calculate_metrics(data_exp3, 'Exp3')
 metrics_exp8 = calculate_metrics(data_exp8, 'Exp8')
 
-# Compare metrics
+# For the first comparison
 comparison = pd.DataFrame({
     'Metric': metrics_exp3.keys(),
     'Experiment 3': metrics_exp3.values(),
@@ -161,7 +184,8 @@ comparison = pd.DataFrame({
     'Difference (Exp3 - Exp8)': [metrics_exp3[k] - metrics_exp8[k] for k in metrics_exp3.keys()]
 })
 
-print(comparison)
+print("Main Metrics Comparison:")
+print(format_comparison(comparison))
 
 # Visualize learning curves
 plt.figure(figsize=(12, 6))
@@ -248,12 +272,13 @@ def calculate_additional_metrics(data, exp_name):
 additional_metrics_exp3 = calculate_additional_metrics(data_exp3, 'Exp3')
 additional_metrics_exp8 = calculate_additional_metrics(data_exp8, 'Exp8')
 
-# Compare additional metrics
-comparison = pd.DataFrame({
+# For the additional metrics comparison
+additional_comparison = pd.DataFrame({
     'Metric': additional_metrics_exp3.keys(),
     'Experiment 3': additional_metrics_exp3.values(),
     'Experiment 8': additional_metrics_exp8.values(),
     'Difference (Exp3 - Exp8)': [additional_metrics_exp3[k] - additional_metrics_exp8[k] for k in additional_metrics_exp3.keys()]
 })
 
-print(comparison)
+print("Additional Metrics Comparison:")
+print(format_comparison(additional_comparison))
