@@ -382,6 +382,15 @@ data_exp8 = {
     'task14 Test R@10: Lean4Lean': [73.47417840375586],
 }
 
+experiments = {
+    'Exp1': data_exp1,
+    'Exp3': data_exp3,
+    'Exp7': data_exp7,
+    'Exp8': data_exp8
+}
+
+
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -391,32 +400,19 @@ from scipy import stats
 repos = data_exp3['Repository']
 n_repos = len(repos)
 
+
+def format_comparison(comparison):
+    formatted_output = ""
+    for metric, result in comparison.items():
+        formatted_output += f"{metric}:\n"
+        formatted_output += f"  Best: {result['Best']}\n"
+        formatted_output += f"  Value: {result['Value']:.4f}\n"
+        formatted_output += f"  Improvement: +{result['Improvement']:.2f}%\n\n"
+    return formatted_output
+
+
 def calculate_percent_change(exp3_value, exp8_value):
     return ((exp3_value - exp8_value) / exp8_value) * 100
-
-def format_comparison(comparison_df):
-    formatted_output = ""
-    for _, row in comparison_df.iterrows():
-        metric = row['Metric']
-        exp3_value = row['Experiment 3']
-        exp8_value = row['Experiment 8']
-        difference = row['Difference (Exp3 - Exp8)']
-        percent_change = row['Percent Change']
-        
-        if percent_change > 0:
-            better = f"Exp3 BETTER (+{percent_change:.2f}%)"
-        elif percent_change < 0:
-            better = f"Exp8 better ({percent_change:.2f}%)"
-        else:
-            better = "Tie"
-        
-        formatted_output += f"{metric}:\n"
-        formatted_output += f"  Exp3: {exp3_value:.4f}\n"
-        formatted_output += f"  Exp8: {exp8_value:.4f}\n"
-        formatted_output += f"  Diff: {difference:.4f}\n"
-        formatted_output += f"  {better}\n\n"
-    
-    return formatted_output
 
 def calculate_AA(data, exp_name):
     test_accuracies = data[f'Average Test R@10 {exp_name}']
@@ -531,43 +527,6 @@ def calculate_metrics(data, exp_name):
 
     return metrics
 
-# Calculate metrics for both experiments
-metrics_exp3 = calculate_metrics(data_exp3, 'Exp3')
-metrics_exp8 = calculate_metrics(data_exp8, 'Exp8')
-
-# For the first comparison
-comparison = pd.DataFrame({
-    'Metric': metrics_exp3.keys(),
-    'Experiment 3': metrics_exp3.values(),
-    'Experiment 8': metrics_exp8.values(),
-    'Difference (Exp3 - Exp8)': [metrics_exp3[k] - metrics_exp8[k] for k in metrics_exp3.keys()],
-    'Percent Change': [calculate_percent_change(metrics_exp3[k], metrics_exp8[k]) for k in metrics_exp3.keys()]
-})
-
-print("Main Metrics Comparison:")
-print(format_comparison(comparison))
-
-# Visualize learning curves
-plt.figure(figsize=(12, 6))
-plt.plot(data_exp3['Average Test R@10 Exp3'], label='Experiment 3')
-plt.plot(data_exp8['Average Test R@10 Exp8'], label='Experiment 8')
-plt.xlabel('Repository')
-plt.ylabel('Average Test R@10')
-plt.title('Learning Curves: Experiment 3 vs Experiment 8')
-plt.legend()
-plt.grid(True)
-plt.show()
-
-# Visualize validation R@10
-plt.figure(figsize=(12, 6))
-plt.plot(data_exp3['Validation R@10 Exp3'], label='Experiment 3')
-plt.plot(data_exp8['Validation R@10 Exp8'], label='Experiment 8')
-plt.xlabel('Repository')
-plt.ylabel('Validation R@10')
-plt.title('Validation R@10: Experiment 3 vs Experiment 8')
-plt.legend()
-plt.grid(True)
-plt.show()
 
 def calculate_additional_metrics(data, exp_name):
     metrics = {}
@@ -634,18 +593,62 @@ def calculate_additional_metrics(data, exp_name):
     
     return metrics
 
-# Calculate additional metrics for both experiments
-additional_metrics_exp3 = calculate_additional_metrics(data_exp3, 'Exp3')
-additional_metrics_exp8 = calculate_additional_metrics(data_exp8, 'Exp8')
+def calculate_all_metrics(experiments):
+    all_metrics = {}
+    for exp_name, data in experiments.items():
+        metrics = calculate_metrics(data, exp_name)
+        additional_metrics = calculate_additional_metrics(data, exp_name)
+        all_metrics[exp_name] = {**metrics, **additional_metrics}
+    return all_metrics
 
-# For the additional metrics comparison
-additional_comparison = pd.DataFrame({
-    'Metric': additional_metrics_exp3.keys(),
-    'Experiment 3': additional_metrics_exp3.values(),
-    'Experiment 8': additional_metrics_exp8.values(),
-    'Difference (Exp3 - Exp8)': [additional_metrics_exp3[k] - additional_metrics_exp8[k] for k in additional_metrics_exp3.keys()],
-    'Percent Change': [calculate_percent_change(additional_metrics_exp3[k], additional_metrics_exp8[k]) for k in additional_metrics_exp3.keys()]
-})
+def compare_metrics(all_metrics):
+    comparison = {}
+    for metric in all_metrics['Exp1'].keys():
+        values = {exp: metrics[metric] for exp, metrics in all_metrics.items()}
+        best_exp = max(values, key=values.get)
+        best_value = values[best_exp]
+        
+        # Find the second best value
+        second_best_value = max(v for k, v in values.items() if k != best_exp)
+        
+        # Calculate percentage improvement
+        percent_improvement = ((best_value - second_best_value) / second_best_value) * 100
+        
+        comparison[metric] = {
+            'Best': best_exp,
+            'Value': best_value,
+            'Improvement': percent_improvement
+        }
+    return comparison
 
-print("Additional Metrics Comparison:")
-print(format_comparison(additional_comparison))
+# Calculate metrics for all experiments
+all_metrics = calculate_all_metrics(experiments)
+
+# Compare metrics across experiments
+comparison = compare_metrics(all_metrics)
+
+# Print the results
+print("Metrics Comparison:")
+print(format_comparison(comparison))
+
+# Visualize learning curves
+plt.figure(figsize=(12, 6))
+plt.plot(data_exp3['Average Test R@10 Exp3'], label='Experiment 3')
+plt.plot(data_exp8['Average Test R@10 Exp8'], label='Experiment 8')
+plt.xlabel('Repository')
+plt.ylabel('Average Test R@10')
+plt.title('Learning Curves: Experiment 3 vs Experiment 8')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Visualize validation R@10
+plt.figure(figsize=(12, 6))
+plt.plot(data_exp3['Validation R@10 Exp3'], label='Experiment 3')
+plt.plot(data_exp8['Validation R@10 Exp8'], label='Experiment 8')
+plt.xlabel('Repository')
+plt.ylabel('Validation R@10')
+plt.title('Validation R@10: Experiment 3 vs Experiment 8')
+plt.legend()
+plt.grid(True)
+plt.show()
