@@ -100,6 +100,9 @@ from scipy import stats
 repos = data_exp3['Repository']
 n_repos = len(repos)
 
+def calculate_percent_change(exp3_value, exp8_value):
+    return ((exp3_value - exp8_value) / exp8_value) * 100
+
 def format_comparison(comparison_df):
     formatted_output = ""
     for _, row in comparison_df.iterrows():
@@ -107,11 +110,12 @@ def format_comparison(comparison_df):
         exp3_value = row['Experiment 3']
         exp8_value = row['Experiment 8']
         difference = row['Difference (Exp3 - Exp8)']
+        percent_change = row['Percent Change']
         
-        if difference > 0:
-            better = "Exp3 BETTER"
-        elif difference < 0:
-            better = "Exp8 better"
+        if percent_change > 0:
+            better = f"Exp3 BETTER (+{percent_change:.2f}%)"
+        elif percent_change < 0:
+            better = f"Exp8 better ({percent_change:.2f}%)"
         else:
             better = "Tie"
         
@@ -150,11 +154,11 @@ def calculate_metrics(data, exp_name):
     #     forgetting.append(np.max(task_performance) - data[f'task{i-1} Test R@10: {repos[i-2]}'][-1])
     # metrics['Avg_Forgetting'] = np.mean(forgetting)
     
-    # 4. Forward Transfer
-    forward_transfer = []
-    for i in range(2, n_repos + 1):
-        forward_transfer.append(data[f'task{i} Test R@10: {repos[i-1]}'][0] - data[f'task1 Test R@10: {repos[0]}'][0])
-    metrics['Avg_Forward_Transfer'] = np.mean(forward_transfer)
+    # # 4. Forward Transfer
+    # forward_transfer = []
+    # for i in range(2, n_repos + 1):
+    #     forward_transfer.append(data[f'task{i} Test R@10: {repos[i-1]}'][0] - data[f'task1 Test R@10: {repos[0]}'][0])
+    # metrics['Avg_Forward_Transfer'] = np.mean(forward_transfer)
     
     # 5. Backward Transfer
     backward_transfer = []
@@ -181,7 +185,8 @@ comparison = pd.DataFrame({
     'Metric': metrics_exp3.keys(),
     'Experiment 3': metrics_exp3.values(),
     'Experiment 8': metrics_exp8.values(),
-    'Difference (Exp3 - Exp8)': [metrics_exp3[k] - metrics_exp8[k] for k in metrics_exp3.keys()]
+    'Difference (Exp3 - Exp8)': [metrics_exp3[k] - metrics_exp8[k] for k in metrics_exp3.keys()],
+    'Percent Change': [calculate_percent_change(metrics_exp3[k], metrics_exp8[k]) for k in metrics_exp3.keys()]
 })
 
 print("Main Metrics Comparison:")
@@ -256,7 +261,7 @@ def calculate_additional_metrics(data, exp_name):
     # 11. Stability-Plasticity Score (SPS)
     stability = 1 - (np.std(data[f'Average Test R@10 {exp_name}']) / np.mean(data[f'Average Test R@10 {exp_name}']))
     plasticity = np.mean(np.diff(data[f'Validation R@10 {exp_name}']))
-    beta = 0.5  # Assuming equal weight to stability and plasticity
+    beta = 0.7  # Assuming equal weight to stability and plasticity
     metrics['SPS'] = beta * stability + (1 - beta) * plasticity
     
     # 12. Catastrophic Forgetting Resilience (CFR)
@@ -277,7 +282,8 @@ additional_comparison = pd.DataFrame({
     'Metric': additional_metrics_exp3.keys(),
     'Experiment 3': additional_metrics_exp3.values(),
     'Experiment 8': additional_metrics_exp8.values(),
-    'Difference (Exp3 - Exp8)': [additional_metrics_exp3[k] - additional_metrics_exp8[k] for k in additional_metrics_exp3.keys()]
+    'Difference (Exp3 - Exp8)': [additional_metrics_exp3[k] - additional_metrics_exp8[k] for k in additional_metrics_exp3.keys()],
+    'Percent Change': [calculate_percent_change(additional_metrics_exp3[k], additional_metrics_exp8[k]) for k in additional_metrics_exp3.keys()]
 })
 
 print("Additional Metrics Comparison:")
