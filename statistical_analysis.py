@@ -833,6 +833,28 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
 
+def calculate_expanded_bwt(data):
+    N = len(data['Repository'])
+    bwt_sum = 0
+    count = 0
+
+    for i in range(2, N + 1):
+        for j in range(1, i):
+            task_i_key = f'task{i} Test R@10: {data["Repository"][i-1]}'
+            task_j_key = f'task{j} Test R@10: {data["Repository"][j-1]}'
+            
+            if task_i_key in data and task_j_key in data:
+                R_i_j = data[task_j_key][i-j-1]  # Performance on task j after learning task i
+                R_j_j = data[task_j_key][0]      # Initial performance on task j
+                
+                bwt_sum += R_i_j - R_j_j
+                count += 1
+
+    if count > 0:
+        return bwt_sum / count
+    else:
+        return 0  # Return 0 if no valid comparisons were made
+
 def calculate_AA(data, exp_name):
     test_accuracies = data[f'Average Test R@10 {exp_name}']
     return test_accuracies[-1]  # The last value represents AA_k
@@ -849,13 +871,13 @@ def calculate_metrics(data, exp_name):
     # aulc = np.trapz(data[f'Average Test R@10 {exp_name}']) / len(data['Repository'])
     # metrics['AULC'] = aulc
     
-    # 5. Backward Transfer
-    backward_transfer = []
-    for i in range(1, len(data['Repository'])):
-        task_key = f'task{i} Test R@10: {data["Repository"][i-1]}'
-        if task_key in data:
-            backward_transfer.append(data[task_key][-1] - data[task_key][0])
-    metrics['Avg_Backward_Transfer'] = np.mean(backward_transfer)
+    # # 5. Backward Transfer
+    # backward_transfer = []
+    # for i in range(1, len(data['Repository'])):
+    #     task_key = f'task{i} Test R@10: {data["Repository"][i-1]}'
+    #     if task_key in data:
+    #         backward_transfer.append(data[task_key][-1] - data[task_key][0])
+    # metrics['Avg_Backward_Transfer'] = np.mean(backward_transfer)
     
     # Extract the task-specific accuracies
     task_accuracies = {}
@@ -905,6 +927,8 @@ def calculate_metrics(data, exp_name):
     window_size = 5
     wp_values = [max(0, avg_test[i] - avg_test[max(0, i-window_size)]) for i in range(len(avg_test))]
     metrics['WP5'] = np.mean(wp_values)
+
+    metrics['Expanded_BWT'] = calculate_expanded_bwt(data)
 
     return metrics
 
@@ -1000,7 +1024,7 @@ print(format_comparison(comparison))
 def calculate_composite_score(metrics):
     # Normalize the metrics
     normalized_metrics = {}
-    for metric in ['WF5', 'FM', 'WP5', 'IP']:
+    for metric in ['WF5', 'FM', 'WP5', 'IP', 'Expanded_BWT', 'CFR']:
         values = [m[metric] for m in metrics.values()]
         min_val, max_val = min(values), max(values)
         if max_val - min_val == 0:
@@ -1011,10 +1035,12 @@ def calculate_composite_score(metrics):
     # Calculate composite score
     composite_scores = {}
     for exp in metrics:
-        score = (0.4 * (1 - normalized_metrics['WF5'][exp])) + \
-                (0.4 * (1 - normalized_metrics['FM'][exp])) + \
+        score = (0.25 * (1 - normalized_metrics['WF5'][exp])) + \
+                (0.25 * (1 - normalized_metrics['FM'][exp])) + \
                 (0.1 * normalized_metrics['WP5'][exp]) + \
-                (0.1 * normalized_metrics['IP'][exp])
+                (0.1 * normalized_metrics['IP'][exp]) + \
+                (0.15 * normalized_metrics['Expanded_BWT'][exp]) + \
+                (0.15 * normalized_metrics['CFR'][exp])
         composite_scores[exp] = score
 
     return composite_scores
@@ -1029,12 +1055,6 @@ for exp, score in sorted(composite_scores.items(), key=lambda x: x[1], reverse=T
 
 
 # Metrics Comparison:
-# Avg_Backward_Transfer:
-#   1. Exp7: 1.3288
-#   2. Exp3: 1.1847
-#   3. Exp1: 1.0912
-#   4. Exp8: 0.7867
-#   Best improvement: +12.16%
 
 # WF5:
 #   1. Exp3: 0.1800
@@ -1049,6 +1069,13 @@ for exp, score in sorted(composite_scores.items(), key=lambda x: x[1], reverse=T
 #   3. Exp7: 1.4729
 #   4. Exp1: 0.8914
 #   Best improvement: +38.26%
+
+# Expanded_BWT:
+#   1. Exp3: 1.2086
+#   2. Exp7: 1.0397
+#   3. Exp8: 0.7563
+#   4. Exp1: 0.5124
+#   Best improvement: +16.25%
 
 # FM:
 #   1. Exp3: 0.8455
@@ -1071,17 +1098,17 @@ for exp, score in sorted(composite_scores.items(), key=lambda x: x[1], reverse=T
 #   4. Exp8: 0.8458
 #   Best improvement: +0.43%
 
+# Composite Scores:
+# Exp3: 0.9412
+# Exp8: 0.6784
+# Exp7: 0.4105
+# Exp1: 0.1268
 
 
 # MERGE ALL:
 
 
 # Metrics Comparison:
-# Avg_Backward_Transfer:
-#   1. Exp2: 0.8240
-#   2. Exp4: 0.5314
-#   3. Exp9: -1.0482
-#   Best improvement: +55.07%
 
 # WF5:
 #   1. Exp4: 2.2300
@@ -1094,6 +1121,12 @@ for exp, score in sorted(composite_scores.items(), key=lambda x: x[1], reverse=T
 #   2. Exp2: 0.0000
 #   3. Exp9: 0.0000
 #   Best improvement: inf%
+
+# Expanded_BWT:
+#   1. Exp4: 0.7270
+#   2. Exp2: -0.1983
+#   3. Exp9: -1.3354
+#   Best improvement: +-466.63%
 
 # FM:
 #   1. Exp4: 4.0622
@@ -1115,11 +1148,5 @@ for exp, score in sorted(composite_scores.items(), key=lambda x: x[1], reverse=T
 
 # Composite Scores:
 # Exp4: 1.0000
-# Exp9: 0.0732
-# Exp2: 0.0707
-
-# Composite Scores:
-# Exp3: 0.9575
-# Exp8: 0.8813
-# Exp7: 0.2213
-# Exp1: 0.0127
+# Exp2: 0.1403
+# Exp9: 0.0458
