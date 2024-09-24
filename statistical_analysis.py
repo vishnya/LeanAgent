@@ -234,7 +234,7 @@ def calculate_additional_metrics(data, exp_name):
     # pli_values = np.maximum(0, np.diff(data[f'Average Test R@10 {exp_name}']))
     # metrics['PLI'] = np.sum(pli_values) / len(pli_values)
     
-    # return metrics
+    return metrics
 
 # Calculate additional metrics for both experiments
 additional_metrics_exp3 = calculate_additional_metrics(data_exp3, 'Exp3')
