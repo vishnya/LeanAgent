@@ -93,173 +93,332 @@ data_exp8 = {
 
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 from scipy import stats
 
-# Create DataFrames
-df3 = pd.DataFrame(data_exp3)
-df8 = pd.DataFrame(data_exp8)
+# Prepare data
+repos = data_exp3['Repository']
+n_repos = len(repos)
 
-# Combine the dataframes
-df = pd.merge(df3, df8, on='Repository', suffixes=('_exp3', '_exp8'))
-
-def calculate_metrics(df):
+# Helper function to calculate metrics
+def calculate_metrics(data, exp_name):
     metrics = {}
     
-    # 1. Average Performance (Higher is better)
-    metrics['avg_val_performance_exp3'] = df['Validation R@10 Exp3'].mean()
-    metrics['avg_val_performance_exp8'] = df['Validation R@10 Exp8'].mean()
-    metrics['avg_test_performance_exp3'] = df['Average Test R@10 Exp3'].mean()
-    metrics['avg_test_performance_exp8'] = df['Average Test R@10 Exp8'].mean()
+    # 1. Final Average Test R@10
+    metrics['Final_Avg_Test_R@10'] = data[f'Average Test R@10 {exp_name}'][-1]
     
-    # 2. Forgetting Measure (Lower is better)
-    # Assuming the order of repositories represents the learning sequence
-    metrics['forgetting_exp3'] = df['Average Test R@10 Exp3'].iloc[0] - df['Average Test R@10 Exp3'].iloc[-1]
-    metrics['forgetting_exp8'] = df['Average Test R@10 Exp8'].iloc[0] - df['Average Test R@10 Exp8'].iloc[-1]
-
-    def calculate_forgetting(series):
-        max_performance = np.maximum.accumulate(series)
-        forgetting = np.mean(max_performance - series)
-        return forgetting
+    # 2. Area Under the Learning Curve (AULC)
+    aulc = np.trapz(data[f'Average Test R@10 {exp_name}']) / n_repos
+    metrics['AULC'] = aulc
     
-    metrics['new_forgetting_exp3'] = calculate_forgetting(df['Average Test R@10 Exp3'])
-    metrics['new_forgetting_exp8'] = calculate_forgetting(df['Average Test R@10 Exp8'])
+    # # 3. Forgetting Measure
+    # forgetting = []
+    # for i in range(2, n_repos + 1):
+    #     task_performance = [data[f'task{j} Test R@10: {repos[j-1]}'][i-j-1] for j in range(1, i)]
+    #     forgetting.append(np.max(task_performance) - data[f'task{i-1} Test R@10: {repos[i-2]}'][-1])
+    # metrics['Avg_Forgetting'] = np.mean(forgetting)
     
-    # 3. Learning Curve Area (Higher is better)
-    metrics['learning_curve_area_exp3'] = np.trapz(df['Average Test R@10 Exp3'])
-    metrics['learning_curve_area_exp8'] = np.trapz(df['Average Test R@10 Exp8'])
+    # 4. Forward Transfer
+    forward_transfer = []
+    for i in range(2, n_repos + 1):
+        forward_transfer.append(data[f'task{i} Test R@10: {repos[i-1]}'][0] - data[f'task1 Test R@10: {repos[0]}'][0])
+    metrics['Avg_Forward_Transfer'] = np.mean(forward_transfer)
     
-    # 4. Stability (Higher is better)
-    metrics['stability_exp3'] = 1 / df['Average Test R@10 Exp3'].std()
-    metrics['stability_exp8'] = 1 / df['Average Test R@10 Exp8'].std()
+    # 5. Backward Transfer
+    backward_transfer = []
+    for i in range(1, n_repos):
+        backward_transfer.append(data[f'task{i} Test R@10: {repos[i-1]}'][-1] - data[f'task{i} Test R@10: {repos[i-1]}'][0])
+    metrics['Avg_Backward_Transfer'] = np.mean(backward_transfer)
     
-    # 5. Plasticity (Higher is better)
-    metrics['plasticity_exp3'] = df['Validation R@10 Exp3'].mean()
-    metrics['plasticity_exp8'] = df['Validation R@10 Exp8'].mean()
+    # 6. Stability (using Average Test R@10)
+    stability = np.mean(np.diff(data[f'Average Test R@10 {exp_name}']))
+    metrics['Stability'] = stability
     
-    # 6. Plasticity-Stability Balance (Higher is better)
-    metrics['plasticity_stability_balance_exp3'] = metrics['plasticity_exp3'] * metrics['stability_exp3']
-    metrics['plasticity_stability_balance_exp8'] = metrics['plasticity_exp8'] * metrics['stability_exp8']
+    # 7. Plasticity (using Validation R@10)
+    plasticity = np.mean(np.diff(data[f'Validation R@10 {exp_name}']))
+    metrics['Plasticity'] = plasticity
     
-    # 7. Incremental Learning Score (Higher is better)
-    def incremental_learning_score(series):
-        return np.sum(np.diff(series) > 0) / (len(series) - 1)
-    
-    metrics['incremental_learning_exp3'] = incremental_learning_score(df['Average Test R@10 Exp3'])
-    metrics['incremental_learning_exp8'] = incremental_learning_score(df['Average Test R@10 Exp8'])
-    
-    # 8. Catastrophic Forgetting Resistance (Higher is better)
-    def catastrophic_forgetting_resistance(series):
-        diffs = np.diff(series)
-        return 1 - (np.sum(diffs[diffs < 0]) / np.sum(np.abs(diffs)))
-    
-    metrics['catastrophic_forgetting_resistance_exp3'] = catastrophic_forgetting_resistance(df['Average Test R@10 Exp3'])
-    metrics['catastrophic_forgetting_resistance_exp8'] = catastrophic_forgetting_resistance(df['Average Test R@10 Exp8'])
-    
-    # Helper function to calculate metrics for both experiments
-    def calc_for_both(metric_name, func, *args):
-        metrics[f"{metric_name}_exp3"] = func(df['Average Test R@10 Exp3'], *args)
-        metrics[f"{metric_name}_exp8"] = func(df['Average Test R@10 Exp8'], *args)
-
-    # Average Accuracy (AA)
-    calc_for_both("AA", np.mean)
-
-    # Forgetting Measure (FM)
-    def forgetting_measure(series):
-        max_performance = np.maximum.accumulate(series)
-        return np.mean(max_performance - series)
-    calc_for_both("FM", forgetting_measure)
-
-    # Incremental Plasticity (IP)
-    def incremental_plasticity(series):
-        return np.mean(np.diff(series))
-    calc_for_both("IP", incremental_plasticity)
-
-    # Stability to Plasticity Ratio (SPR)
-    def spr(test_series, val_series):
-        return np.mean(test_series) / np.mean(val_series)
-    metrics["SPR_exp3"] = spr(df['Average Test R@10 Exp3'], df['Validation R@10 Exp3'])
-    metrics["SPR_exp8"] = spr(df['Average Test R@10 Exp8'], df['Validation R@10 Exp8'])
-
-    # Rate of Change in Test R@10 (RCT)
-    def rct(series):
-        return np.mean(np.diff(series))
-    calc_for_both("RCT", rct)
-
-    # Cumulative Progress (CP)
-    def cumulative_progress(series):
-        return np.sum(np.diff(series))
-    calc_for_both("CP", cumulative_progress)
-
-    # Average Incremental Accuracy (AIA)
-    def aia(series):
-        return np.mean(np.cumsum(series) / np.arange(1, len(series) + 1))
-    calc_for_both("AIA", aia)
-
-    # Remembering (REM) and Positive Backward Transfer (BWT+)
-    def rem_bwt(series):
-        bwt = series[-1] - series[0]
-        return 1 - abs(min(bwt, 0)), max(bwt, 0)
-    metrics["REM_exp3"], metrics["BWT+_exp3"] = rem_bwt(df['Average Test R@10 Exp3'])
-    metrics["REM_exp8"], metrics["BWT+_exp8"] = rem_bwt(df['Average Test R@10 Exp8'])
-
-    # Time-Weighted Cumulative Performance (TWCP)
-    def twcp(series, alpha=0.1):
-        weights = np.exp(alpha * np.arange(len(series)))
-        return np.sum(weights * series) / np.sum(weights)
-    calc_for_both("TWCP", twcp)
-
-    # Stability-Plasticity Score (SPS)
-    def sps(test_series, val_series, beta=0.5):
-        stability = 1 - (np.std(test_series) / np.mean(test_series))
-        plasticity = np.mean(np.diff(val_series))
-        return beta * stability + (1 - beta) * plasticity
-    metrics["SPS_exp3"] = sps(df['Average Test R@10 Exp3'], df['Validation R@10 Exp3'])
-    metrics["SPS_exp8"] = sps(df['Average Test R@10 Exp8'], df['Validation R@10 Exp8'])
-
-    # Catastrophic Forgetting Resilience (CFR)
-    def cfr(series):
-        return np.min(series) / np.max(series)
-    calc_for_both("CFR", cfr)
-
-    # Progressive Learning Index (PLI)
-    def pli(series):
-        return np.sum(np.maximum(0, np.diff(series))) / (len(series) - 1)
-    calc_for_both("PLI", pli)
-
     return metrics
 
-# Calculate metrics
-metrics = calculate_metrics(df)
+# Calculate metrics for both experiments
+metrics_exp3 = calculate_metrics(data_exp3, 'Exp3')
+metrics_exp8 = calculate_metrics(data_exp8, 'Exp8')
 
 # Compare metrics
-comparison = {}
-for metric in metrics:
-    if metric.endswith('_exp3'):
-        base_metric = metric[:-5]
-        exp8_metric = f"{base_metric}_exp8"
-        if base_metric in ['forgetting']:  # Lower is better
-            comparison[base_metric] = 'Exp3' if metrics[metric] < metrics[exp8_metric] else 'Exp8'
-        else:  # Higher is better
-            comparison[base_metric] = 'Exp3' if metrics[metric] > metrics[exp8_metric] else 'Exp8'
+comparison = pd.DataFrame({
+    'Metric': metrics_exp3.keys(),
+    'Experiment 3': metrics_exp3.values(),
+    'Experiment 8': metrics_exp8.values(),
+    'Difference (Exp3 - Exp8)': [metrics_exp3[k] - metrics_exp8[k] for k in metrics_exp3.keys()]
+})
 
-# Print results
-print("Metrics:")
-for metric, value in metrics.items():
-    print(f"{metric}: {value:.4f}")
+print(comparison)
 
-print("\nComparison (which experiment performs better):")
-for metric, better_exp in comparison.items():
-    print(f"{metric}: {better_exp}")
+# Visualize learning curves
+plt.figure(figsize=(12, 6))
+plt.plot(data_exp3['Average Test R@10 Exp3'], label='Experiment 3')
+plt.plot(data_exp8['Average Test R@10 Exp8'], label='Experiment 8')
+plt.xlabel('Repository')
+plt.ylabel('Average Test R@10')
+plt.title('Learning Curves: Experiment 3 vs Experiment 8')
+plt.legend()
+plt.grid(True)
+plt.show()
 
-# Perform statistical tests
-statistical_tests = {}
-for metric in ['Validation R@10', 'Average Test R@10']:
-    t_stat, p_value = stats.ttest_rel(df[f'{metric} Exp3'], df[f'{metric} Exp8'])
-    statistical_tests[metric] = {'t_statistic': t_stat, 'p_value': p_value}
+# Visualize validation R@10
+plt.figure(figsize=(12, 6))
+plt.plot(data_exp3['Validation R@10 Exp3'], label='Experiment 3')
+plt.plot(data_exp8['Validation R@10 Exp8'], label='Experiment 8')
+plt.xlabel('Repository')
+plt.ylabel('Validation R@10')
+plt.title('Validation R@10: Experiment 3 vs Experiment 8')
+plt.legend()
+plt.grid(True)
+plt.show()
 
-print("\nStatistical Tests (Paired t-test):")
-for metric, results in statistical_tests.items():
-    print(f"{metric}:")
-    print(f"  t-statistic: {results['t_statistic']:.4f}")
-    print(f"  p-value: {results['p_value']:.4f}")
-    print(f"  Significant difference: {'Yes' if results['p_value'] < 0.05 else 'No'}")
+def calculate_additional_metrics(data, exp_name):
+    metrics = {}
+    
+    # 1. Average validation R@10 performance
+    metrics['Avg_Validation_R@10'] = np.mean(data[f'Validation R@10 {exp_name}'])
+    
+    # 2. Average Accuracy (AA)
+    metrics['AA'] = np.mean(data[f'Average Test R@10 {exp_name}'])
+    
+    # 3. Forgetting Measure (FM)
+    fm_values = []
+    for i in range(2, len(data['Repository']) + 1):
+        task_performances = [data[f'task{j} Test R@10: {data["Repository"][j-1]}'][i-j-1] for j in range(1, i)]
+        fm_values.append(np.max(task_performances) - data[f'task{i-1} Test R@10: {data["Repository"][i-2]}'][-1])
+    metrics['FM'] = np.mean(fm_values)
+    
+    # 4. Incremental Plasticity (IP)
+    ip_values = np.diff(data[f'Validation R@10 {exp_name}'])
+    metrics['IP'] = np.mean(ip_values)
+    
+    # 5. Stability to Plasticity Ratio (SPR)
+    metrics['SPR'] = np.mean(data[f'Average Test R@10 {exp_name}']) / np.mean(data[f'Validation R@10 {exp_name}'])
+    
+    # 6. Rate of Change in Test R@10 (RCT)
+    rct_values = np.diff(data[f'Average Test R@10 {exp_name}'])
+    metrics['RCT'] = np.mean(rct_values)
+    
+    # 7. Cumulative Progress (CP)
+    metrics['CP'] = np.sum(np.diff(data[f'Average Test R@10 {exp_name}']))
+    
+    # 8. Average Incremental Accuracy (AIA)
+    aia_values = [np.mean(data[f'Average Test R@10 {exp_name}'][:i+1]) for i in range(len(data['Repository']))]
+    metrics['AIA'] = np.mean(aia_values)
+    
+    # 9. Remembering (REM) and Positive Backward Transfer (BWT+)
+    bwt_values = []
+    for i in range(1, len(data['Repository'])):
+        bwt_values.append(data[f'task{i} Test R@10: {data["Repository"][i-1]}'][-1] - data[f'task{i} Test R@10: {data["Repository"][i-1]}'][0])
+    metrics['REM'] = 1 - abs(min(0, np.mean(bwt_values)))
+    metrics['BWT+'] = max(0, np.mean(bwt_values))
+    
+    # 10. Time-Weighted Cumulative Performance (TWCP)
+    weights = np.arange(1, len(data['Repository']) + 1)
+    metrics['TWCP'] = np.sum(weights * data[f'Average Test R@10 {exp_name}']) / np.sum(weights)
+    
+    # 11. Stability-Plasticity Score (SPS)
+    stability = 1 - (np.std(data[f'Average Test R@10 {exp_name}']) / np.mean(data[f'Average Test R@10 {exp_name}']))
+    plasticity = np.mean(np.diff(data[f'Validation R@10 {exp_name}']))
+    beta = 0.5  # Assuming equal weight to stability and plasticity
+    metrics['SPS'] = beta * stability + (1 - beta) * plasticity
+    
+    # 12. Catastrophic Forgetting Resilience (CFR)
+    metrics['CFR'] = np.min(data[f'Average Test R@10 {exp_name}']) / np.max(data[f'Average Test R@10 {exp_name}'])
+    
+    # # 13. Progressive Learning Index (PLI)
+    # pli_values = np.maximum(0, np.diff(data[f'Average Test R@10 {exp_name}']))
+    # metrics['PLI'] = np.sum(pli_values) / len(pli_values)
+    
+    # return metrics
+
+# Calculate additional metrics for both experiments
+additional_metrics_exp3 = calculate_additional_metrics(data_exp3, 'Exp3')
+additional_metrics_exp8 = calculate_additional_metrics(data_exp8, 'Exp8')
+
+# Compare additional metrics
+comparison = pd.DataFrame({
+    'Metric': additional_metrics_exp3.keys(),
+    'Experiment 3': additional_metrics_exp3.values(),
+    'Experiment 8': additional_metrics_exp8.values(),
+    'Difference (Exp3 - Exp8)': [additional_metrics_exp3[k] - additional_metrics_exp8[k] for k in additional_metrics_exp3.keys()]
+})
+
+print(comparison)
+
+# import numpy as np
+# import pandas as pd
+# from scipy import stats
+
+# # Create DataFrames
+# df3 = pd.DataFrame(data_exp3)
+# df8 = pd.DataFrame(data_exp8)
+
+# # Combine the dataframes
+# df = pd.merge(df3, df8, on='Repository', suffixes=('_exp3', '_exp8'))
+
+# def calculate_metrics(df):
+#     metrics = {}
+    
+#     # 1. Average Performance (Higher is better)
+#     metrics['avg_val_performance_exp3'] = df['Validation R@10 Exp3'].mean()
+#     metrics['avg_val_performance_exp8'] = df['Validation R@10 Exp8'].mean()
+#     metrics['avg_test_performance_exp3'] = df['Average Test R@10 Exp3'].mean()
+#     metrics['avg_test_performance_exp8'] = df['Average Test R@10 Exp8'].mean()
+    
+#     # 2. Forgetting Measure (Lower is better)
+#     # Assuming the order of repositories represents the learning sequence
+#     metrics['forgetting_exp3'] = df['Average Test R@10 Exp3'].iloc[0] - df['Average Test R@10 Exp3'].iloc[-1]
+#     metrics['forgetting_exp8'] = df['Average Test R@10 Exp8'].iloc[0] - df['Average Test R@10 Exp8'].iloc[-1]
+
+#     def calculate_forgetting(series):
+#         max_performance = np.maximum.accumulate(series)
+#         forgetting = np.mean(max_performance - series)
+#         return forgetting
+    
+#     metrics['new_forgetting_exp3'] = calculate_forgetting(df['Average Test R@10 Exp3'])
+#     metrics['new_forgetting_exp8'] = calculate_forgetting(df['Average Test R@10 Exp8'])
+    
+#     # 3. Learning Curve Area (Higher is better)
+#     metrics['learning_curve_area_exp3'] = np.trapz(df['Average Test R@10 Exp3'])
+#     metrics['learning_curve_area_exp8'] = np.trapz(df['Average Test R@10 Exp8'])
+    
+#     # 4. Stability (Higher is better)
+#     metrics['stability_exp3'] = 1 / df['Average Test R@10 Exp3'].std()
+#     metrics['stability_exp8'] = 1 / df['Average Test R@10 Exp8'].std()
+    
+#     # 5. Plasticity (Higher is better)
+#     metrics['plasticity_exp3'] = df['Validation R@10 Exp3'].mean()
+#     metrics['plasticity_exp8'] = df['Validation R@10 Exp8'].mean()
+    
+#     # 6. Plasticity-Stability Balance (Higher is better)
+#     metrics['plasticity_stability_balance_exp3'] = metrics['plasticity_exp3'] * metrics['stability_exp3']
+#     metrics['plasticity_stability_balance_exp8'] = metrics['plasticity_exp8'] * metrics['stability_exp8']
+    
+#     # 7. Incremental Learning Score (Higher is better)
+#     def incremental_learning_score(series):
+#         return np.sum(np.diff(series) > 0) / (len(series) - 1)
+    
+#     metrics['incremental_learning_exp3'] = incremental_learning_score(df['Average Test R@10 Exp3'])
+#     metrics['incremental_learning_exp8'] = incremental_learning_score(df['Average Test R@10 Exp8'])
+    
+#     # 8. Catastrophic Forgetting Resistance (Higher is better)
+#     def catastrophic_forgetting_resistance(series):
+#         diffs = np.diff(series)
+#         return 1 - (np.sum(diffs[diffs < 0]) / np.sum(np.abs(diffs)))
+    
+#     metrics['catastrophic_forgetting_resistance_exp3'] = catastrophic_forgetting_resistance(df['Average Test R@10 Exp3'])
+#     metrics['catastrophic_forgetting_resistance_exp8'] = catastrophic_forgetting_resistance(df['Average Test R@10 Exp8'])
+    
+#     # Helper function to calculate metrics for both experiments
+#     def calc_for_both(metric_name, func, *args):
+#         metrics[f"{metric_name}_exp3"] = func(df['Average Test R@10 Exp3'], *args)
+#         metrics[f"{metric_name}_exp8"] = func(df['Average Test R@10 Exp8'], *args)
+
+#     # Average Accuracy (AA)
+#     calc_for_both("AA", np.mean)
+
+#     # Forgetting Measure (FM)
+#     def forgetting_measure(series):
+#         max_performance = np.maximum.accumulate(series)
+#         return np.mean(max_performance - series)
+#     calc_for_both("FM", forgetting_measure)
+
+#     # Incremental Plasticity (IP)
+#     def incremental_plasticity(series):
+#         return np.mean(np.diff(series))
+#     calc_for_both("IP", incremental_plasticity)
+
+#     # Stability to Plasticity Ratio (SPR)
+#     def spr(test_series, val_series):
+#         return np.mean(test_series) / np.mean(val_series)
+#     metrics["SPR_exp3"] = spr(df['Average Test R@10 Exp3'], df['Validation R@10 Exp3'])
+#     metrics["SPR_exp8"] = spr(df['Average Test R@10 Exp8'], df['Validation R@10 Exp8'])
+
+#     # Rate of Change in Test R@10 (RCT)
+#     def rct(series):
+#         return np.mean(np.diff(series))
+#     calc_for_both("RCT", rct)
+
+#     # Cumulative Progress (CP)
+#     def cumulative_progress(series):
+#         return np.sum(np.diff(series))
+#     calc_for_both("CP", cumulative_progress)
+
+#     # Average Incremental Accuracy (AIA)
+#     def aia(series):
+#         return np.mean(np.cumsum(series) / np.arange(1, len(series) + 1))
+#     calc_for_both("AIA", aia)
+
+#     # Remembering (REM) and Positive Backward Transfer (BWT+)
+#     def rem_bwt(series):
+#         bwt = series[-1] - series[0]
+#         return 1 - abs(min(bwt, 0)), max(bwt, 0)
+#     metrics["REM_exp3"], metrics["BWT+_exp3"] = rem_bwt(df['Average Test R@10 Exp3'])
+#     metrics["REM_exp8"], metrics["BWT+_exp8"] = rem_bwt(df['Average Test R@10 Exp8'])
+
+#     # Time-Weighted Cumulative Performance (TWCP)
+#     def twcp(series, alpha=0.1):
+#         weights = np.exp(alpha * np.arange(len(series)))
+#         return np.sum(weights * series) / np.sum(weights)
+#     calc_for_both("TWCP", twcp)
+
+#     # Stability-Plasticity Score (SPS)
+#     def sps(test_series, val_series, beta=0.5):
+#         stability = 1 - (np.std(test_series) / np.mean(test_series))
+#         plasticity = np.mean(np.diff(val_series))
+#         return beta * stability + (1 - beta) * plasticity
+#     metrics["SPS_exp3"] = sps(df['Average Test R@10 Exp3'], df['Validation R@10 Exp3'])
+#     metrics["SPS_exp8"] = sps(df['Average Test R@10 Exp8'], df['Validation R@10 Exp8'])
+
+#     # Catastrophic Forgetting Resilience (CFR)
+#     def cfr(series):
+#         return np.min(series) / np.max(series)
+#     calc_for_both("CFR", cfr)
+
+#     # Progressive Learning Index (PLI)
+#     def pli(series):
+#         return np.sum(np.maximum(0, np.diff(series))) / (len(series) - 1)
+#     calc_for_both("PLI", pli)
+
+#     return metrics
+
+# # Calculate metrics
+# metrics = calculate_metrics(df)
+
+# # Compare metrics
+# comparison = {}
+# for metric in metrics:
+#     if metric.endswith('_exp3'):
+#         base_metric = metric[:-5]
+#         exp8_metric = f"{base_metric}_exp8"
+#         if base_metric in ['forgetting']:  # Lower is better
+#             comparison[base_metric] = 'Exp3' if metrics[metric] < metrics[exp8_metric] else 'Exp8'
+#         else:  # Higher is better
+#             comparison[base_metric] = 'Exp3' if metrics[metric] > metrics[exp8_metric] else 'Exp8'
+
+# # Print results
+# print("Metrics:")
+# for metric, value in metrics.items():
+#     print(f"{metric}: {value:.4f}")
+
+# print("\nComparison (which experiment performs better):")
+# for metric, better_exp in comparison.items():
+#     print(f"{metric}: {better_exp}")
+
+# # Perform statistical tests
+# statistical_tests = {}
+# for metric in ['Validation R@10', 'Average Test R@10']:
+#     t_stat, p_value = stats.ttest_rel(df[f'{metric} Exp3'], df[f'{metric} Exp8'])
+#     statistical_tests[metric] = {'t_statistic': t_stat, 'p_value': p_value}
+
+# print("\nStatistical Tests (Paired t-test):")
+# for metric, results in statistical_tests.items():
+#     print(f"{metric}:")
+#     print(f"  t-statistic: {results['t_statistic']:.4f}")
+#     print(f"  p-value: {results['p_value']:.4f}")
+#     print(f"  Significant difference: {'Yes' if results['p_value'] < 0.05 else 'No'}")
