@@ -69,40 +69,64 @@ import re
 #     'merged_with_new_lean4lean': 'task14 Test R@10: Lean4Lean'
 # }
 
+# # Define a dictionary to store the R@10 results for each task
+# task_results_exp = {
+#     'task1 Test R@10: SciLean': [],
+#     'task2 Test R@10: FLT': [],
+#     'task3 Test R@10: PFR': [],
+#     'task4 Test R@10: PrimeNumberTheoremAnd': [],
+#     'task5 Test R@10: Compfiles': [],
+#     'task6 Test R@10: Debate': [],
+#     'task7 Test R@10: Mathematics in Lean Source': [],
+#     'task8 Test R@10: Lean4Lean': [],
+#     'task9 Test R@10: Matrix Cookbook': [],
+#     'task10 Test R@10: Math Workshop': [],
+#     'task11 Test R@10: LeanEuclid': [],
+#     'task12 Test R@10: Foundation': [],
+#     'task13 Test R@10: Con-nf': [],
+#     'task14 Test R@10: Saturn': []
+# }
+
+# # Define a mapping of repo names to tasks
+# repo_to_task_mapping = {
+#     'merged_with_new_SciLean': 'task1 Test R@10: SciLean',
+#     'merged_with_new_FLT': 'task2 Test R@10: FLT',
+#     'merged_with_new_pfr': 'task3 Test R@10: PFR',
+#     'merged_with_new_PrimeNumberTheoremAnd': 'task4 Test R@10: PrimeNumberTheoremAnd',
+#     'merged_with_new_compfiles': 'task5 Test R@10: Compfiles',
+#     'merged_with_new_debate': 'task6 Test R@10: Debate',
+#     'merged_with_new_mathematics_in_lean_source': 'task7 Test R@10: Mathematics in Lean Source',
+#     'merged_with_new_lean4lean': 'task8 Test R@10: Lean4Lean',
+#     'merged_with_new_lean-matrix-cookbook': 'task9 Test R@10: Matrix Cookbook',
+#     'merged_with_new_lean-math-workshop': 'task10 Test R@10: Math Workshop',
+#     'merged_with_new_LeanEuclid': 'task11 Test R@10: LeanEuclid',
+#     'merged_with_new_Foundation': 'task12 Test R@10: Foundation',
+#     'merged_with_new_con-nf': 'task13 Test R@10: Con-nf',
+#     'merged_with_new_Saturn': 'task14 Test R@10: Saturn'
+# }
+
 # Define a dictionary to store the R@10 results for each task
 task_results_exp = {
-    'task1 Test R@10: SciLean': [],
-    'task2 Test R@10: FLT': [],
-    'task3 Test R@10: PFR': [],
-    'task4 Test R@10: PrimeNumberTheoremAnd': [],
-    'task5 Test R@10: Compfiles': [],
-    'task6 Test R@10: Debate': [],
-    'task7 Test R@10: Mathematics in Lean Source': [],
-    'task8 Test R@10: Lean4Lean': [],
-    'task9 Test R@10: Matrix Cookbook': [],
-    'task10 Test R@10: Math Workshop': [],
-    'task11 Test R@10: LeanEuclid': [],
-    'task12 Test R@10: Foundation': [],
-    'task13 Test R@10: Con-nf': [],
-    'task14 Test R@10: Saturn': []
+    'task1 Test R@10: Zeta 3 Irrational': [],
+    'task2 Test R@10: Formal Book': [],
+    'task3 Test R@10: Formalization of Constructable Numbers': [],
+    'task4 Test R@10: Carleson': [],
+    'task5 Test R@10: LeanAPAP': [],
+    'task6 Test R@10: Hairy Ball Theorem': [],
+    'task7 Test R@10: Coxeter': [],
+    'task8 Test R@10: Lean4 PDL': []
 }
 
 # Define a mapping of repo names to tasks
 repo_to_task_mapping = {
-    'merged_with_new_SciLean': 'task1 Test R@10: SciLean',
-    'merged_with_new_FLT': 'task2 Test R@10: FLT',
-    'merged_with_new_pfr': 'task3 Test R@10: PFR',
-    'merged_with_new_PrimeNumberTheoremAnd': 'task4 Test R@10: PrimeNumberTheoremAnd',
-    'merged_with_new_compfiles': 'task5 Test R@10: Compfiles',
-    'merged_with_new_debate': 'task6 Test R@10: Debate',
-    'merged_with_new_mathematics_in_lean_source': 'task7 Test R@10: Mathematics in Lean Source',
-    'merged_with_new_lean4lean': 'task8 Test R@10: Lean4Lean',
-    'merged_with_new_lean-matrix-cookbook': 'task9 Test R@10: Matrix Cookbook',
-    'merged_with_new_lean-math-workshop': 'task10 Test R@10: Math Workshop',
-    'merged_with_new_LeanEuclid': 'task11 Test R@10: LeanEuclid',
-    'merged_with_new_Foundation': 'task12 Test R@10: Foundation',
-    'merged_with_new_con-nf': 'task13 Test R@10: Con-nf',
-    'merged_with_new_Saturn': 'task14 Test R@10: Saturn'
+    'merged_with_new_zeta_3_irrational': 'task1 Test R@10: Zeta 3 Irrational',
+    'merged_with_new_formal_book': 'task2 Test R@10: Formal Book',
+    'merged_with_new_Formalisation-of-constructable-numbers': 'task3 Test R@10: Formalization of Constructable Numbers',
+    'merged_with_new_carleson': 'task4 Test R@10: Carleson',
+    'merged_with_new_LeanAPAP': 'task5 Test R@10: LeanAPAP',
+    'merged_with_new_hairy-ball-theorem-lean': 'task6 Test R@10: Hairy Ball Theorem',
+    'merged_with_new_coxeter': 'task7 Test R@10: Coxeter',
+    'merged_with_new_lean4-pdl': 'task8 Test R@10: Lean4 PDL'
 }
 
 # Regular expression to match R@10 lines
@@ -135,9 +159,23 @@ def parse_experiment_results(file_path):
 # 3
 # file_path = 'total_evaluation_results_PT_single_repo_no_ewc_curriculum.txt'  # Path to the text file containing results
 # 7
-file_path = 'total_evaluation_results_PT_single_repo_ewc.txt'  # Path to the text file containing results
+# file_path = 'total_evaluation_results_PT_single_repo_ewc.txt'  # Path to the text file containing results
 # 8
 # file_path = 'total_evaluation_results_PT_single_repo_ewc_curriculum.txt'  # Path to the text file containing results
+
+# 2
+# file_path = 'total_evaluation_results_PT_merge_all_no_ewc.txt'  # Path to the text file containing results
+# 4
+# file_path = 'total_evaluation_results_PT_merge_all_no_ewc_curriculum.txt'  # Path to the text file containing results
+# 9
+# file_path = 'total_evaluation_results_PT_merge_all_ewc.txt'  # Path to the text file containing results
+# 10
+# file_path = 'total_evaluation_results_PT_merge_all_ewc_curriculum.txt'  # Path to the text file containing results
+
+# 3 more
+# file_path = "total_evaluation_results_PT_single_repo_no_ewc_curriculum_sorries.txt"
+# 8 more
+file_path = "total_evaluation_results_PT_single_repo_ewc_curriculum_sorries.txt"
 parse_experiment_results(file_path)
 
 # # Print out the results
