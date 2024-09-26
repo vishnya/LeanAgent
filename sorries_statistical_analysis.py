@@ -351,154 +351,39 @@ print("\nComposite Scores:")
 for exp, score in sorted(composite_scores.items(), key=lambda x: x[1], reverse=True):
     print(f"{exp}: {score:.4f}")
 
-# SINGLE REPO:
-
-
-# Metrics Comparison:
-
-# WF5:
-#   1. Exp3: 0.1800
-#   2. Exp8: 0.7300
-#   3. Exp7: 7.1700
-#   4. Exp1: 7.6000
-#   Best improvement: -75.34%
-
-# WP5:
-#   1. Exp8: 3.4200
-#   2. Exp3: 2.4736
-#   3. Exp7: 1.4729
-#   4. Exp1: 0.8914
-#   Best improvement: +38.26%
-
-# Expanded_BWT:
-#   1. Exp3: 1.2086
-#   2. Exp7: 1.0397
-#   3. Exp8: 0.7563
-#   4. Exp1: 0.5124
-#   Best improvement: +16.25%
-
-# FM:
-#   1. Exp3: 0.8455
-#   2. Exp8: 2.1120
-#   3. Exp7: 4.0435
-#   4. Exp1: 6.5344
-#   Best improvement: -59.97%
-
-# IP:
-#   1. Exp8: 1.0638
-#   2. Exp3: 1.0231
-#   3. Exp1: 0.3585
-#   4. Exp7: 0.2562
-#   Best improvement: +3.98%
-
-# CFR:
-#   1. Exp7: 0.8805
-#   2. Exp3: 0.8767
-#   3. Exp1: 0.8722
-#   4. Exp8: 0.8458
-#   Best improvement: +0.43%
-
-# Composite Scores:
-# Exp3: 0.9357
-# Exp8: 0.6107
-# Exp7: 0.4736
-# Exp1: 0.1649
-
-
-# MERGE ALL:
-
-
-# Metrics Comparison:
-
-# WF5:
-#   1. Exp4: 2.2300
-#   2. Exp9: 13.3400
-#   3. Exp2: 15.8300
-#   Best improvement: -83.28%
-
-# WP5:
-#   1. Exp4: 0.0886
-#   2. Exp2: 0.0000
-#   3. Exp9: 0.0000
-#   Best improvement: inf%
-
-# Expanded_BWT:
-#   1. Exp4: 0.7270
-#   2. Exp2: -0.1983
-#   3. Exp9: -1.3354
-#   Best improvement: +-466.63%
-
-# FM:
-#   1. Exp4: 4.0622
-#   2. Exp2: 10.4955
-#   3. Exp9: 11.4362
-#   Best improvement: -61.30%
-
-# IP:
-#   1. Exp4: -0.6408
-#   2. Exp2: -1.4969
-#   3. Exp9: -1.7062
-#   Best improvement: +-57.19%
-
-# CFR:
-#   1. Exp4: 0.9365
-#   2. Exp2: 0.7618
-#   3. Exp9: 0.7545
-#   Best improvement: +22.93%
-
-# Composite Scores:
-# Exp4: 1.0000
-# Exp2: 0.1635
-# Exp9: 0.0366
-
-
 # Metrics Comparison:
 # WF5:
-#   1. Exp4: 2.2300
-#   2. Exp10: 5.8200
-#   3. Exp9: 13.3400
-#   4. Exp2: 15.8300
-#   Best improvement: -61.68%
+#   1. Exp3: 0.0000
+#   2. Exp8: 0.0000
+#   Best improvement: -0.00%
 
 # WP5:
-#   1. Exp10: 0.1114
-#   2. Exp4: 0.0886
-#   3. Exp2: 0.0000
-#   4. Exp9: 0.0000
-#   Best improvement: +25.81%
+#   1. Exp3: 3.2237
+#   2. Exp8: 3.0813
+#   Best improvement: +4.62%
 
 # Expanded_BWT:
-#   1. Exp4: 0.7270
-#   2. Exp2: -0.1983
-#   3. Exp10: -0.3880
-#   4. Exp9: -1.3354
-#   Best improvement: +-466.63%
+#   1. Exp3: 0.9457
+#   2. Exp8: 0.8642
+#   Best improvement: +9.43%
 
 # FM:
-#   1. Exp10: 3.8005
-#   2. Exp4: 4.0622
-#   3. Exp2: 10.4955
-#   4. Exp9: 11.4362
-#   Best improvement: -6.44%
+#   1. Exp3: -0.6377
+#   2. Exp8: -0.4357
+#   Best improvement: --46.36%
 
 # IP:
-#   1. Exp4: -0.6408
-#   2. Exp10: -0.8869
-#   3. Exp2: -1.4969
-#   4. Exp9: -1.7062
-#   Best improvement: +-27.75%
+#   1. Exp8: 1.5314
+#   2. Exp3: 1.3171
+#   Best improvement: +16.27%
 
 # CFR:
-#   1. Exp4: 0.9365
-#   2. Exp10: 0.9025
-#   3. Exp2: 0.7618
-#   4. Exp9: 0.7545
-#   Best improvement: +3.77%
+#   1. Exp8: 0.9054
+#   2. Exp3: 0.9014
+#   Best improvement: +0.45%
 
 
 
 # Composite Scores:
-# Exp4: 0.9726
-# Exp10: 0.7786
-# Exp2: 0.1626
-# Exp9: 0.0366
+# Exp3: 0.5000
+# Exp8: 0.3000
