@@ -21,6 +21,7 @@ warnings.filterwarnings("ignore", message="You are using `torch.load` with `weig
 warnings.filterwarnings("ignore", message="Lightning automatically upgraded your loaded checkpoint")
 warnings.filterwarnings("ignore", message="Found keys that are in the model state dict but not in the checkpoint")
 warnings.filterwarnings("ignore", message="Found keys that are not in the model state dict but in the checkpoint")
+warnings.filterwarnings("ignore", message="Running LeanDojo as the root user may cause unexpected issues.")
 
 def load_model(ret_checkpoint_path, device):
     config = {
@@ -69,9 +70,9 @@ class LeanAgent:
             self.model.retriever.reindex_corpus(batch_size=32)
             torch.save(self.model.retriever.corpus_embeddings, CORPUS_EMBEDDINGS_CACHE)
 
-        num_workers = 1
-        num_gpus = 1 if torch.cuda.is_available() else 0
-        timeout = 10
+        num_workers = 4
+        num_gpus = 4 if torch.cuda.is_available() else 0
+        timeout = 600
         max_expansions = None
         num_sampled_tactics = 64
         debug = False
@@ -89,6 +90,20 @@ class LeanAgent:
             num_sampled_tactics,
             debug,
         )
+    
+    def format_proof(self, proof):
+        if not proof:
+            return "No proof found."
+        
+        formatted_proof = "Proof steps:\n"
+        for i, step in enumerate(proof, 1):
+            formatted_proof += f"{i}. {step}\n"
+        return formatted_proof
+
+    def print_proof_result(self, result):
+        print(f"\nTheorem: {result.theorem.full_name}")
+        print(f"Status: {'Proved' if result.status == Status.PROVED else 'Not Proved'}")
+        print(f"\n{self.format_proof(result.proof)}")
 
     def prove_theorem(self, repo_url: str, file_path: str, theorem_name: str) -> SearchResult:
         repo_commit, pos = self.get_repo_info(repo_url)
@@ -96,15 +111,18 @@ class LeanAgent:
         theorem = Theorem(repo, file_path, theorem_name)
         print(f"Proving {theorem_name}")
         results = self.prover.search_unordered(repo, [theorem], [pos])
-        return results[0] if results else None
+        return self.print_proof_result(results[0]) if results else None
     
     @staticmethod
     def get_repo_info(repo_url):
-        # TODO: chagen pos based on theorme
         if "miniF2F" in repo_url:
             return "9e445f5435407f014b88b44a98436d50dd7abd00", Pos(517, 1)
         elif "mathematics_in_lean_source" in repo_url:
             return "5297e0fb051367c48c0a084411853a576389ecf5", Pos(170, 1)
+        elif "SciLean" in repo_url:
+            return "22d53b2f4e3db2a172e71da6eb9c916e62655744", Pos(222, 1)
+        elif "FormalBook" in repo_url:
+            return "6fbe8c2985008c0bfb30050750a71b90388ad3a3", Pos(222, 1)
         return None, None
 
 def format_proof(proof):
@@ -126,35 +144,26 @@ def main():
     # python leanagent.py
 
     print("\nDemo: Continuously Improving")
-    agent = LeanAgent()
-    result = agent.prove_theorem(
-        repo_url="https://github.com/yangky11/miniF2F-lean4",
-        file_path="MiniF2F/Test.lean",
-        theorem_name="mathd_algebra_160"
-    )
-    print_proof_result(result)
-
-    # baseline_agent = LeanAgent(use_baseline=True)
-    # baseline_result = agent.prove_theorem(
-    #     repo_url="https://github.com/yangky11/miniF2F-lean4",
-    #     file_path="MiniF2F/Test.lean",
-    #     theorem_name="induction_12dvd4expnp1p20"
+    # agent = LeanAgent()
+    # agent.prove_theorem(
+    #     repo_url="https://github.com/lecopivo/SciLean",
+    #     file_path="SciLean/Core/FloatAsReal.lean",
+    #     theorem_name="SciLean.re_float"
     # )
-    # print_proof_result(result)
-    # # TODO: update
-    # print(f"Baseline model succeeded: {baseline_result.status == Status.PROVED if baseline_result else False}")
-    # print("LeanAgent succeeded, demonstrating significant performance improvement")
+
+    baseline_agent = LeanAgent(use_baseline=True)
+    baseline_agent.prove_theorem(
+        repo_url="https://github.com/lecopivo/SciLean",
+        file_path="SciLean/Core/FloatAsReal.lean",
+        theorem_name="SciLean.re_float"
+    )
 
     # print("\nDemo: Continuously Generalizable")
     # result = agent.prove_theorem(
-    #     repo_url="https://github.com/leanprover-community/mathematics_in_lean",
-    #     file_path="MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean",
-    #     theorem_name="C03S01.Subset.trans"
+    #     repo_url="https://github.com/mo271/FormalBook",
+    #     file_path="FormalBook/Chapter_06.lean",
+    #     theorem_name="wedderburn"
     # )
-    # print(f"Proof found: {result.status == Status.PROVED if result else False}")
-    # if result and result.status == Status.PROVED:
-    #     print(result.proof)
-    # print("LeanAgent generalizes to new repositories without retraining")
 
 if __name__ == "__main__":
     main()
