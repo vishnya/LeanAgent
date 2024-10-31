@@ -1088,7 +1088,7 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     sha = None
     v = None
     if "debate" in url:
-        sha = "7fb39251b705797ee54e08c96177fabd29a5b5a3"
+        sha = "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"
         v = "v4.8.0"
     elif "hairy" in url:
         sha = "a778826d19c8a7ddf1d26beeea628c45450612e6"
@@ -1437,7 +1437,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 3
+        current_epoch = 23
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False
@@ -1496,8 +1496,14 @@ def main():
             # #     # lean_git_repo = LeanGitRepo(url, commit)
             # #     # lean_git_repos.append(lean_git_repo)
 
-            #     clone_url = "https://github.com/corent1234/hairy-ball-theorem-lean"
-            #     commit = "a778826d19c8a7ddf1d26beeea628c45450612e6"
+            #     # clone_url = "https://github.com/corent1234/hairy-ball-theorem-lean"
+            #     # commit = "a778826d19c8a7ddf1d26beeea628c45450612e6"
+            #     # url = clone_url.replace('.git', '')
+            #     # lean_git_repo = LeanGitRepo(url, commit)
+            #     # lean_git_repos.append(lean_git_repo)
+
+            #     clone_url = "https://github.com/Adarsh321123/PutnamBench"
+            #     commit = "14ea70715649764b046183d4417d50bd9cf6cd0b"
             #     url = clone_url.replace('.git', '')
             #     lean_git_repo = LeanGitRepo(url, commit)
             #     lean_git_repos.append(lean_git_repo)
