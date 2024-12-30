@@ -1,0 +1,138 @@
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+[31mCould not terminate `[1m/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py[22m[26m` due to (pid=2527733, name='python3')[39m
+Did not find any active Ray processes.
+Running main3_more_sorries.py
+[2024-09-17 19:55:22,369] [WARNING] [real_accelerator.py:162:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+[2024-09-17 19:55:22,370] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+WARNING 09-17 19:55:24 _custom_ops.py:18] Failed to import from vllm._C with ImportError('libcuda.so.1: cannot open shared object file: No such file or directory')
+2024-09-17 19:55:27.403 | INFO     | __main__:main:1507 - Running progressive training
+2024-09-17 19:55:27.403 | INFO     | __main__:main:1513 - Configuring LeanDojo...
+2024-09-17 19:55:27.407 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 19:55:27.407 | INFO     | __main__:main:1515 - LeanDojo configured
+2024-09-17 19:55:27.407 | INFO     | __main__:main:1520 - Starting the main process
+2024-09-17 19:55:27.408 | INFO     | __main__:main:1528 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 19:55:59.333 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 19:55:59.333 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 19:56:08.186 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 19:56:08.186 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 19:56:14.782 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 19:56:14.783 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 19:56:16.781 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 19:56:16.781 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 19:56:23.909 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 19:56:23.909 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 19:56:32.017 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 19:56:32.017 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 19:56:32.678 | INFO     | __main__:main:1530 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 19:56:32.679 | INFO     | __main__:main:1537 - Found 100 repositories
+2024-09-17 19:56:32.679 | INFO     | __main__:main:1540 - Starting curriculum learning
+2024-09-17 19:56:32.929 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-09-17 19:56:50.752 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0
+2024-09-17 19:57:08.278 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc2
+2024-09-17 19:57:25.678 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-17 19:57:43.263 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-17 19:58:00.154 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc3
+2024-09-17 19:58:19.239 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-17 19:58:36.166 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc1
+2024-09-17 19:58:53.018 | INFO     | __main__:main:1629 - Processing https://github.com/PSchwahn/semileanear2024
+2024-09-17 19:58:53.019 | INFO     | __main__:add_repo_to_database:1194 - Processing https://github.com/PSchwahn/semileanear2024.git
+2024-09-17 19:58:53.316 | INFO     | __main__:get_compatible_commit:596 - Latest commit: e41f70c5f6958ba8b453df708c7fc475f7530927
+2024-09-17 19:58:53.316 | INFO     | __main__:get_compatible_commit:599 - Creating LeanGitRepo for https://github.com/PSchwahn/semileanear2024
+2024-09-17 19:58:53.316 | INFO     | __main__:get_compatible_commit:601 - Getting config for https://github.com/PSchwahn/semileanear2024.git
+2024-09-17 19:58:53.316 | INFO     | __main__:get_compatible_commit:608 - Searching for compatible commit for https://github.com/PSchwahn/semileanear2024.git
+2024-09-17 19:58:53.323 | INFO     | __main__:get_compatible_commit:614 - Already in a Git repository
+2024-09-17 19:58:53.324 | INFO     | __main__:get_compatible_commit:624 - Fetching commits for https://github.com/PSchwahn/semileanear2024.git
+2024-09-17 19:58:55.181 | INFO     | __main__:get_compatible_commit:628 - Fetched commits for https://github.com/PSchwahn/semileanear2024.git
+2024-09-17 19:58:55.185 | INFO     | __main__:get_compatible_commit:634 - Getting list of commits for https://github.com/PSchwahn/semileanear2024.git
+2024-09-17 19:58:55.208 | INFO     | __main__:get_compatible_commit:639 - Found 62 commits for https://github.com/PSchwahn/semileanear2024.git
+2024-09-17 19:59:08.567 | INFO     | __main__:get_compatible_commit:652 - Error in get_compatible_commit: No compatible commit found
+2024-09-17 19:59:08.567 | INFO     | __main__:add_repo_to_database:1212 - Failed to find a compatible commit for https://github.com/PSchwahn/semileanear2024.git
+2024-09-17 19:59:08.567 | INFO     | __main__:main:1629 - Processing https://github.com/ahhwuhu/zeta_3_irrational
+2024-09-17 19:59:08.567 | INFO     | __main__:add_repo_to_database:1194 - Processing https://github.com/ahhwuhu/zeta_3_irrational.git
+2024-09-17 19:59:08.864 | INFO     | __main__:get_compatible_commit:596 - Latest commit: 3d68ddd90434a398c9a72f30d50c57f15a0118c7
+2024-09-17 19:59:08.865 | INFO     | __main__:get_compatible_commit:599 - Creating LeanGitRepo for https://github.com/ahhwuhu/zeta_3_irrational
+2024-09-17 19:59:08.865 | INFO     | __main__:get_compatible_commit:601 - Getting config for https://github.com/ahhwuhu/zeta_3_irrational.git
+2024-09-17 19:59:08.865 | INFO     | __main__:get_compatible_commit:608 - Searching for compatible commit for https://github.com/ahhwuhu/zeta_3_irrational.git
+2024-09-17 19:59:08.870 | INFO     | __main__:get_compatible_commit:614 - Already in a Git repository
+2024-09-17 19:59:08.872 | INFO     | __main__:get_compatible_commit:624 - Fetching commits for https://github.com/ahhwuhu/zeta_3_irrational.git
+2024-09-17 19:59:10.953 | INFO     | __main__:get_compatible_commit:628 - Fetched commits for https://github.com/ahhwuhu/zeta_3_irrational.git
+2024-09-17 19:59:10.958 | INFO     | __main__:get_compatible_commit:634 - Getting list of commits for https://github.com/ahhwuhu/zeta_3_irrational.git
+2024-09-17 19:59:10.983 | INFO     | __main__:get_compatible_commit:639 - Found 87 commits for https://github.com/ahhwuhu/zeta_3_irrational.git
+2024-09-17 19:59:11.965 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-17 19:59:28.632 | INFO     | __main__:get_compatible_commit:646 - Found compatible commit 914712200e463cfc97fe37e929d518dd58806a38 for https://github.com/ahhwuhu/zeta_3_irrational.git
+2024-09-17 19:59:28.633 | INFO     | __main__:add_repo_to_database:1214 - Found compatible commit 914712200e463cfc97fe37e929d518dd58806a38 for https://github.com/ahhwuhu/zeta_3_irrational.git
+2024-09-17 19:59:28.633 | INFO     | __main__:add_repo_to_database:1215 - Lean version: v4.8.0-rc2
+2024-09-17 19:59:28.633 | INFO     | __main__:add_repo_to_database:1220 - Generating benchmark at /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38
+2024-09-17 19:59:28.633 | INFO     | generate_benchmark_lean4:main:354 - Generating dataset to go into /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38
+2024-09-17 19:59:28.633 | INFO     | generate_benchmark_lean4:main:361 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0-rc2\n'}
+2024-09-17 19:59:28.633 | INFO     | generate_benchmark_lean4:main:363 - lean version v: v4.8.0-rc2
+2024-09-17 19:59:28.634 | INFO     | generate_benchmark_lean4:main:364 - is supported: True
+2024-09-17 19:59:28.634 | INFO     | generate_benchmark_lean4:main:373 - lean path1 /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:59:28.634 | INFO     | generate_benchmark_lean4:main:374 - lean path2 /.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:59:28.634 | INFO     | generate_benchmark_lean4:main:375 - lean path3 ~/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:59:28.634 | INFO     | generate_benchmark_lean4:main:379 - Lean toolchain path 2 does not exist: /.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:59:28.634 | INFO     | generate_benchmark_lean4:main:381 - Lean toolchain path 3 does not exist: ~/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:59:28.635 | INFO     | generate_benchmark_lean4:main:384 - Switched to Lean toolchain at: /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:59:28.678 | INFO     | generate_benchmark_lean4:main:386 - lean --version: Lean (version 4.8.0-rc2, x86_64-unknown-linux-gnu, commit 873ef2d894af, Release)
+
+2024-09-17 19:59:28.678 | INFO     | generate_benchmark_lean4:main:387 - repo: LeanGitRepo(url='https://github.com/ahhwuhu/zeta_3_irrational', commit='914712200e463cfc97fe37e929d518dd58806a38')
+2024-09-17 19:59:28.679 | INFO     | generate_benchmark_lean4:main:389 - Configuring LeanDojo again...
+2024-09-17 19:59:28.689 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 19:59:28.689 | INFO     | generate_benchmark_lean4:main:391 - LeanDojo configured
+2024-09-17 19:59:28.690 | INFO     | generate_benchmark_lean4:main:394 - Tracing the repo...
+2024-09-18 05:22:08.574 | INFO     | lean_dojo.data_extraction.trace:get_traced_repo_path:79 - Tracing LeanGitRepo(url='https://github.com/ahhwuhu/zeta_3_irrational', commit='914712200e463cfc97fe37e929d518dd58806a38')
+2024-09-18 05:22:08.579 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:81 - Working in the temporary directory /tmp/tmpfjr70p_3
+2024-09-18 05:22:09.085 | DEBUG    | lean_dojo.data_extraction.lean:clone_and_checkout:479 - Cloning LeanGitRepo(url='https://github.com/ahhwuhu/zeta_3_irrational', commit='914712200e463cfc97fe37e929d518dd58806a38')
+2024-09-18 05:22:09.877 | DEBUG    | lean_dojo.data_extraction.trace:_trace:33 - Tracing LeanGitRepo(url='https://github.com/ahhwuhu/zeta_3_irrational', commit='914712200e463cfc97fe37e929d518dd58806a38')
+2024-09-18 05:22:09.899 | DEBUG    | lean_dojo.container:run:184 - NUM_PROCS=32 python build_lean4_repo.py zeta_3_irrational
+2024-09-18 05:22:10.234 | INFO     | __main__:main:165 - Building zeta_3_irrational
+Traceback (most recent call last):
+  File "/tmp/tmpfjr70p_3/workspace/build_lean4_repo.py", line 200, in <module>
+    main()
+  File "/tmp/tmpfjr70p_3/workspace/build_lean4_repo.py", line 172, in main
+    run_cmd("lake build")
+  File "/tmp/tmpfjr70p_3/workspace/build_lean4_repo.py", line 29, in run_cmd
+    res = subprocess.run(cmd, shell=True, capture_output=capture_output, check=True)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 505, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1146, in communicate
+    self.wait()
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1209, in wait
+    return self._wait(timeout=timeout)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1959, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1917, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main3_more_sorries.py", line 2412, in <module>
+    fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
+  File "/data/yingzi_ma/lean_project/ReProver/main3_more_sorries.py", line 1630, in main
+    db.to_json(dynamic_database_json_path)
+  File "/data/yingzi_ma/lean_project/ReProver/main3_more_sorries.py", line 1221, in add_repo_to_database
+    # Ignore sorry theorems from the repo's dependencies
+  File "/data/yingzi_ma/lean_project/ReProver/generate_benchmark_lean4.py", line 395, in main
+    traced_repo = trace(repo)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/data_extraction/trace.py", line 115, in trace
+    cached_path = get_traced_repo_path(repo, build_deps)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/data_extraction/trace.py", line 82, in get_traced_repo_path
+    _trace(repo, build_deps)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/data_extraction/trace.py", line 45, in _trace
+    container.run(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/container.py", line 194, in run
+    execute(cmd, capture_output=capture_output)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/utils.py", line 85, in execute
+    res = subprocess.run(cmd, shell=True, capture_output=capture_output, check=True)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 505, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1146, in communicate
+    self.wait()
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1209, in wait
+    return self._wait(timeout=timeout)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1959, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1917, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt

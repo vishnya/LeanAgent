@@ -1,0 +1,1949 @@
+2024-09-22 01:53:26.022 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 70.32608695652173
+2024-09-22 01:53:26.022 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 71.41304347826087
+2024-09-22 01:53:26.022 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 71.41304347826087
+2024-09-22 01:53:26.022 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 72.5
+2024-09-22 01:53:26.023 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 73.22463768115941
+2024-09-22 01:53:26.023 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 73.94927536231883
+2024-09-22 01:53:26.023 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 73.94927536231883
+2024-09-22 01:53:26.024 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 73.94927536231883
+2024-09-22 01:53:26.024 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 73.94927536231883
+2024-09-22 01:53:26.024 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 73.94927536231883
+2024-09-22 01:53:26.024 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 74.22101449275362
+2024-09-22 01:53:26.025 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 74.22101449275362
+2024-09-22 01:53:26.025 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 74.22101449275362
+2024-09-22 01:53:26.025 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 74.4927536231884
+2024-09-22 01:53:26.025 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 74.85507246376811
+2024-09-22 01:53:26.026 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 75.94202898550724
+2024-09-22 01:53:26.026 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 75.94202898550724
+2024-09-22 01:53:26.026 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 75.94202898550724
+2024-09-22 01:53:26.027 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 75.94202898550724
+2024-09-22 01:53:26.027 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 78.47826086956522
+2024-09-22 01:53:26.027 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 78.47826086956522
+2024-09-22 01:53:26.027 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 78.47826086956522
+2024-09-22 01:53:26.028 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 78.47826086956522
+2024-09-22 01:53:26.028 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 78.47826086956522
+2024-09-22 01:53:26.028 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 79.20289855072464
+2024-09-22 01:53:26.028 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 79.20289855072464
+2024-09-22 01:53:26.029 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 79.20289855072464
+2024-09-22 01:53:26.029 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 79.20289855072464
+2024-09-22 01:53:26.029 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 79.20289855072464
+2024-09-22 01:53:26.029 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 79.20289855072464
+2024-09-22 01:53:26.030 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 79.20289855072464
+2024-09-22 01:53:26.030 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 79.20289855072464
+2024-09-22 01:53:26.030 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 79.20289855072464
+2024-09-22 01:53:26.031 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 79.56521739130436
+2024-09-22 01:53:26.031 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 79.56521739130436
+2024-09-22 01:53:26.031 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 79.56521739130436
+2024-09-22 01:53:26.031 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 79.56521739130436
+2024-09-22 01:53:26.032 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 79.56521739130436
+2024-09-22 01:53:26.032 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 79.56521739130436
+2024-09-22 01:53:26.032 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 81.73913043478261
+2024-09-22 01:53:26.032 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 81.73913043478261
+2024-09-22 01:53:26.033 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 81.73913043478261
+2024-09-22 01:53:26.033 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 81.73913043478261
+2024-09-22 01:53:26.033 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 81.73913043478261
+2024-09-22 01:53:26.033 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 81.73913043478261
+2024-09-22 01:53:26.034 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 81.73913043478261
+2024-09-22 01:53:26.034 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 81.73913043478261
+2024-09-22 01:53:26.034 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 81.73913043478261
+2024-09-22 01:53:26.035 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 81.73913043478261
+2024-09-22 01:53:26.035 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 82.10144927536231
+2024-09-22 01:53:26.035 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 82.10144927536231
+2024-09-22 01:53:26.035 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 82.10144927536231
+2024-09-22 01:53:26.036 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 84.27536231884058
+2024-09-22 01:53:26.036 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 84.27536231884058
+2024-09-22 01:53:26.036 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 84.27536231884058
+2024-09-22 01:53:26.036 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 84.27536231884058
+2024-09-22 01:53:26.037 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 84.27536231884058
+2024-09-22 01:53:26.037 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 85.3623188405797
+2024-09-22 01:53:26.037 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 85.3623188405797
+2024-09-22 01:53:26.037 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 85.3623188405797
+2024-09-22 01:53:26.038 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 85.3623188405797
+2024-09-22 01:53:26.038 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 85.3623188405797
+2024-09-22 01:53:26.038 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 85.3623188405797
+2024-09-22 01:53:26.039 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 85.3623188405797
+2024-09-22 01:53:26.039 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 85.3623188405797
+2024-09-22 01:53:26.039 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 85.3623188405797
+2024-09-22 01:53:26.039 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 85.3623188405797
+2024-09-22 01:53:26.040 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 87.53623188405797
+2024-09-22 01:53:26.040 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 87.53623188405797
+2024-09-22 01:53:26.040 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 87.53623188405797
+2024-09-22 01:53:26.040 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 87.53623188405797
+2024-09-22 01:53:26.041 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 87.53623188405797
+2024-09-22 01:53:26.041 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 87.53623188405797
+2024-09-22 01:53:26.041 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 87.53623188405797
+2024-09-22 01:53:26.042 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 87.53623188405797
+2024-09-22 01:53:26.042 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 87.53623188405797
+2024-09-22 01:53:26.042 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 87.53623188405797
+2024-09-22 01:53:26.042 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 87.53623188405797
+2024-09-22 01:53:26.043 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 87.53623188405797
+2024-09-22 01:53:26.043 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 87.53623188405797
+2024-09-22 01:53:26.043 | INFO     | retrieval.model:validation_step:381 - MRR: 0.46366751837270004
+2024-09-22 01:53:26.043 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+2024-09-22 01:53:26.054 | INFO     | retrieval.model:validation_step:318 - Inside validation_step
+2024-09-22 01:53:26.069 | INFO     | retrieval.model:validation_step:322 - Embeddings staled validation step: False
+2024-09-22 01:53:26.123 | INFO     | retrieval.model:validation_step:372 - Recall@1_val: 20.67287784679089
+2024-09-22 01:53:26.124 | INFO     | retrieval.model:validation_step:372 - Recall@2_val: 25.564182194616976
+2024-09-22 01:53:26.124 | INFO     | retrieval.model:validation_step:372 - Recall@3_val: 32.28778467908903
+2024-09-22 01:53:26.124 | INFO     | retrieval.model:validation_step:372 - Recall@4_val: 33.374741200828154
+2024-09-22 01:53:26.124 | INFO     | retrieval.model:validation_step:372 - Recall@5_val: 37.90372670807454
+2024-09-22 01:53:26.125 | INFO     | retrieval.model:validation_step:372 - Recall@6_val: 40.38819875776397
+2024-09-22 01:53:26.125 | INFO     | retrieval.model:validation_step:372 - Recall@7_val: 41.475155279503106
+2024-09-22 01:53:26.125 | INFO     | retrieval.model:validation_step:372 - Recall@8_val: 44.91718426501035
+2024-09-22 01:53:26.125 | INFO     | retrieval.model:validation_step:372 - Recall@9_val: 49.15631469979296
+2024-09-22 01:53:26.126 | INFO     | retrieval.model:validation_step:372 - Recall@10_val: 54.047619047619044
+2024-09-22 01:53:26.126 | INFO     | retrieval.model:validation_step:372 - Recall@11_val: 55.93167701863353
+2024-09-22 01:53:26.126 | INFO     | retrieval.model:validation_step:372 - Recall@12_val: 57.74327122153209
+2024-09-22 01:53:26.126 | INFO     | retrieval.model:validation_step:372 - Recall@13_val: 58.830227743271216
+2024-09-22 01:53:26.127 | INFO     | retrieval.model:validation_step:372 - Recall@14_val: 59.26501035196687
+2024-09-22 01:53:26.127 | INFO     | retrieval.model:validation_step:372 - Recall@15_val: 59.26501035196687
+2024-09-22 01:53:26.127 | INFO     | retrieval.model:validation_step:372 - Recall@16_val: 64.46687370600414
+2024-09-22 01:53:26.128 | INFO     | retrieval.model:validation_step:372 - Recall@17_val: 64.46687370600414
+2024-09-22 01:53:26.128 | INFO     | retrieval.model:validation_step:372 - Recall@18_val: 65.55383022774326
+2024-09-22 01:53:26.128 | INFO     | retrieval.model:validation_step:372 - Recall@19_val: 66.6407867494824
+2024-09-22 01:53:26.128 | INFO     | retrieval.model:validation_step:372 - Recall@20_val: 68.27122153209109
+2024-09-22 01:53:26.129 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 69.35817805383022
+2024-09-22 01:53:26.129 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 70.08281573498965
+2024-09-22 01:53:26.129 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 72.25672877846792
+2024-09-22 01:53:26.129 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 72.98136645962732
+2024-09-22 01:53:26.130 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 73.52484472049689
+2024-09-22 01:53:26.130 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 73.52484472049689
+2024-09-22 01:53:26.130 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 73.52484472049689
+2024-09-22 01:53:26.130 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 73.8871635610766
+2024-09-22 01:53:26.131 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 75.51759834368531
+2024-09-22 01:53:26.131 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 77.69151138716357
+2024-09-22 01:53:26.131 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 78.05383022774328
+2024-09-22 01:53:26.131 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 78.05383022774328
+2024-09-22 01:53:26.132 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 78.59730848861284
+2024-09-22 01:53:26.132 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 78.59730848861284
+2024-09-22 01:53:26.132 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 79.68426501035196
+2024-09-22 01:53:26.132 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 79.68426501035196
+2024-09-22 01:53:26.133 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 79.68426501035196
+2024-09-22 01:53:26.133 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 79.68426501035196
+2024-09-22 01:53:26.133 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 79.99482401656316
+2024-09-22 01:53:26.133 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 79.99482401656316
+2024-09-22 01:53:26.134 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 79.99482401656316
+2024-09-22 01:53:26.134 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 79.99482401656316
+2024-09-22 01:53:26.134 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 79.99482401656316
+2024-09-22 01:53:26.135 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 80.71946169772256
+2024-09-22 01:53:26.135 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 80.71946169772256
+2024-09-22 01:53:26.135 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 80.71946169772256
+2024-09-22 01:53:26.135 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 80.71946169772256
+2024-09-22 01:53:26.136 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 80.71946169772256
+2024-09-22 01:53:26.136 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 80.71946169772256
+2024-09-22 01:53:26.136 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 80.71946169772256
+2024-09-22 01:53:26.136 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 80.71946169772256
+2024-09-22 01:53:26.137 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 81.08178053830228
+2024-09-22 01:53:26.137 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 81.08178053830228
+2024-09-22 01:53:26.137 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 81.08178053830228
+2024-09-22 01:53:26.137 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 81.39233954451346
+2024-09-22 01:53:26.138 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 81.39233954451346
+2024-09-22 01:53:26.138 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 82.11697722567288
+2024-09-22 01:53:26.138 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 82.11697722567288
+2024-09-22 01:53:26.138 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 82.11697722567288
+2024-09-22 01:53:26.139 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 82.11697722567288
+2024-09-22 01:53:26.139 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 82.11697722567288
+2024-09-22 01:53:26.139 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 82.11697722567288
+2024-09-22 01:53:26.139 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 82.11697722567288
+2024-09-22 01:53:26.140 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 82.11697722567288
+2024-09-22 01:53:26.140 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 84.29089026915115
+2024-09-22 01:53:26.140 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 84.29089026915115
+2024-09-22 01:53:26.140 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 84.29089026915115
+2024-09-22 01:53:26.141 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 84.29089026915115
+2024-09-22 01:53:26.141 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 84.83436853002071
+2024-09-22 01:53:26.141 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 84.83436853002071
+2024-09-22 01:53:26.141 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 84.83436853002071
+2024-09-22 01:53:26.142 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 84.83436853002071
+2024-09-22 01:53:26.142 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 84.83436853002071
+2024-09-22 01:53:26.142 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 84.83436853002071
+2024-09-22 01:53:26.142 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 85.1966873706004
+2024-09-22 01:53:26.143 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 85.1966873706004
+2024-09-22 01:53:26.143 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 85.1966873706004
+2024-09-22 01:53:26.143 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 85.55900621118012
+2024-09-22 01:53:26.143 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 85.55900621118012
+2024-09-22 01:53:26.144 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 85.55900621118012
+2024-09-22 01:53:26.144 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 85.55900621118012
+2024-09-22 01:53:26.144 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 85.55900621118012
+2024-09-22 01:53:26.145 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 85.55900621118012
+2024-09-22 01:53:26.145 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 85.55900621118012
+2024-09-22 01:53:26.145 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 85.55900621118012
+2024-09-22 01:53:26.145 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 85.55900621118012
+2024-09-22 01:53:26.146 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 85.55900621118012
+2024-09-22 01:53:26.146 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 85.55900621118012
+2024-09-22 01:53:26.146 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 85.55900621118012
+2024-09-22 01:53:26.146 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 85.55900621118012
+2024-09-22 01:53:26.147 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 86.10248447204968
+2024-09-22 01:53:26.147 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 86.10248447204968
+2024-09-22 01:53:26.147 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 86.10248447204968
+2024-09-22 01:53:26.147 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 87.1894409937888
+2024-09-22 01:53:26.148 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 89.36335403726707
+2024-09-22 01:53:26.148 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 89.36335403726707
+2024-09-22 01:53:26.148 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 89.36335403726707
+2024-09-22 01:53:26.148 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 89.36335403726707
+2024-09-22 01:53:26.149 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 89.36335403726707
+2024-09-22 01:53:26.149 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 89.36335403726707
+2024-09-22 01:53:26.149 | INFO     | retrieval.model:validation_step:381 - MRR: 0.44167804290802004
+2024-09-22 01:53:26.149 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+2024-09-22 01:53:26.160 | INFO     | retrieval.model:validation_step:318 - Inside validation_step
+2024-09-22 01:53:26.175 | INFO     | retrieval.model:validation_step:322 - Embeddings staled validation step: False
+2024-09-22 01:53:28.033 | INFO     | retrieval.model:validation_step:372 - Recall@1_val: 21.666666666666664
+2024-09-22 01:53:28.034 | INFO     | retrieval.model:validation_step:372 - Recall@2_val: 36.25
+2024-09-22 01:53:28.035 | INFO     | retrieval.model:validation_step:372 - Recall@3_val: 43.541666666666664
+2024-09-22 01:53:28.035 | INFO     | retrieval.model:validation_step:372 - Recall@4_val: 48.54166666666666
+2024-09-22 01:53:28.035 | INFO     | retrieval.model:validation_step:372 - Recall@5_val: 51.66666666666666
+2024-09-22 01:53:28.036 | INFO     | retrieval.model:validation_step:372 - Recall@6_val: 54.99999999999999
+2024-09-22 01:53:28.036 | INFO     | retrieval.model:validation_step:372 - Recall@7_val: 55.83333333333332
+2024-09-22 01:53:28.036 | INFO     | retrieval.model:validation_step:372 - Recall@8_val: 58.33333333333333
+2024-09-22 01:53:28.037 | INFO     | retrieval.model:validation_step:372 - Recall@9_val: 58.33333333333333
+2024-09-22 01:53:28.037 | INFO     | retrieval.model:validation_step:372 - Recall@10_val: 59.58333333333332
+2024-09-22 01:53:28.037 | INFO     | retrieval.model:validation_step:372 - Recall@11_val: 63.958333333333314
+2024-09-22 01:53:28.037 | INFO     | retrieval.model:validation_step:372 - Recall@12_val: 63.958333333333314
+2024-09-22 01:53:28.038 | INFO     | retrieval.model:validation_step:372 - Recall@13_val: 65.20833333333333
+2024-09-22 01:53:28.038 | INFO     | retrieval.model:validation_step:372 - Recall@14_val: 69.79166666666666
+2024-09-22 01:53:28.038 | INFO     | retrieval.model:validation_step:372 - Recall@15_val: 73.125
+2024-09-22 01:53:28.038 | INFO     | retrieval.model:validation_step:372 - Recall@16_val: 73.75
+2024-09-22 01:53:28.039 | INFO     | retrieval.model:validation_step:372 - Recall@17_val: 73.75
+2024-09-22 01:53:28.039 | INFO     | retrieval.model:validation_step:372 - Recall@18_val: 74.58333333333333
+2024-09-22 01:53:28.039 | INFO     | retrieval.model:validation_step:372 - Recall@19_val: 75.41666666666667
+2024-09-22 01:53:28.039 | INFO     | retrieval.model:validation_step:372 - Recall@20_val: 75.41666666666667
+2024-09-22 01:53:28.040 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 76.04166666666666
+2024-09-22 01:53:28.040 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 76.875
+2024-09-22 01:53:28.040 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 76.875
+2024-09-22 01:53:28.041 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 77.70833333333333
+2024-09-22 01:53:28.041 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 78.54166666666667
+2024-09-22 01:53:28.041 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 78.54166666666667
+2024-09-22 01:53:28.041 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 80.0
+2024-09-22 01:53:28.042 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 80.0
+2024-09-22 01:53:28.042 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 80.0
+2024-09-22 01:53:28.042 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 80.0
+2024-09-22 01:53:28.042 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 80.0
+2024-09-22 01:53:28.043 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 80.0
+2024-09-22 01:53:28.043 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 80.0
+2024-09-22 01:53:28.043 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 80.625
+2024-09-22 01:53:28.043 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 80.625
+2024-09-22 01:53:28.044 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 80.625
+2024-09-22 01:53:28.044 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 80.625
+2024-09-22 01:53:28.044 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 80.625
+2024-09-22 01:53:28.044 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 81.875
+2024-09-22 01:53:28.045 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 81.875
+2024-09-22 01:53:28.045 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 83.54166666666666
+2024-09-22 01:53:28.045 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 83.54166666666666
+2024-09-22 01:53:28.045 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 83.54166666666666
+2024-09-22 01:53:28.046 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 83.54166666666666
+2024-09-22 01:53:28.046 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 84.79166666666667
+2024-09-22 01:53:28.046 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 84.79166666666667
+2024-09-22 01:53:28.046 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 84.79166666666667
+2024-09-22 01:53:28.047 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 84.79166666666667
+2024-09-22 01:53:28.047 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 84.79166666666667
+2024-09-22 01:53:28.047 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 84.79166666666667
+2024-09-22 01:53:28.048 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 84.79166666666667
+2024-09-22 01:53:28.048 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 84.79166666666667
+2024-09-22 01:53:28.048 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 84.79166666666667
+2024-09-22 01:53:28.048 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 84.79166666666667
+2024-09-22 01:53:28.049 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 84.79166666666667
+2024-09-22 01:53:28.049 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 84.79166666666667
+2024-09-22 01:53:28.049 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 84.79166666666667
+2024-09-22 01:53:28.049 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 84.79166666666667
+2024-09-22 01:53:28.050 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 84.79166666666667
+2024-09-22 01:53:28.050 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 84.79166666666667
+2024-09-22 01:53:28.050 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 84.79166666666667
+2024-09-22 01:53:28.050 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 84.79166666666667
+2024-09-22 01:53:28.051 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 84.79166666666667
+2024-09-22 01:53:28.051 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 87.29166666666666
+2024-09-22 01:53:28.051 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 87.29166666666666
+2024-09-22 01:53:28.051 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 87.29166666666666
+2024-09-22 01:53:28.052 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 87.29166666666666
+2024-09-22 01:53:28.052 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 87.29166666666666
+2024-09-22 01:53:28.052 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 88.54166666666666
+2024-09-22 01:53:28.052 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 88.54166666666666
+2024-09-22 01:53:28.053 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 88.54166666666666
+2024-09-22 01:53:28.053 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 88.54166666666666
+2024-09-22 01:53:28.053 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 88.54166666666666
+2024-09-22 01:53:28.054 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 88.54166666666666
+2024-09-22 01:53:28.054 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 88.54166666666666
+2024-09-22 01:53:28.054 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 88.54166666666666
+2024-09-22 01:53:28.054 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 88.54166666666666
+2024-09-22 01:53:28.055 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 88.54166666666666
+2024-09-22 01:53:28.055 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 88.54166666666666
+2024-09-22 01:53:28.055 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 89.375
+2024-09-22 01:53:28.055 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 89.375
+2024-09-22 01:53:28.056 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 89.375
+2024-09-22 01:53:28.056 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 89.375
+2024-09-22 01:53:28.056 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 89.375
+2024-09-22 01:53:28.056 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 89.375
+2024-09-22 01:53:28.057 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 89.375
+2024-09-22 01:53:28.057 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 89.375
+2024-09-22 01:53:28.057 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 89.375
+2024-09-22 01:53:28.057 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 89.375
+2024-09-22 01:53:28.058 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 89.375
+2024-09-22 01:53:28.058 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 89.375
+2024-09-22 01:53:28.058 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 89.375
+2024-09-22 01:53:28.058 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 89.375
+2024-09-22 01:53:28.059 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 89.375
+2024-09-22 01:53:28.059 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 89.375
+2024-09-22 01:53:28.059 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 89.375
+2024-09-22 01:53:28.059 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 89.375
+2024-09-22 01:53:28.060 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 89.375
+2024-09-22 01:53:28.060 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 89.375
+2024-09-22 01:53:28.060 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 89.375
+2024-09-22 01:53:28.061 | INFO     | retrieval.model:validation_step:381 - MRR: 0.47968362366799866
+2024-09-22 01:53:28.061 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+2024-09-22 01:53:28.067 | INFO     | retrieval.model:validation_step:318 - Inside validation_step
+2024-09-22 01:53:28.082 | INFO     | retrieval.model:validation_step:322 - Embeddings staled validation step: False
+2024-09-22 01:53:28.475 | INFO     | retrieval.model:validation_step:372 - Recall@1_val: 13.626126126126126
+2024-09-22 01:53:28.476 | INFO     | retrieval.model:validation_step:372 - Recall@2_val: 40.25096525096525
+2024-09-22 01:53:28.476 | INFO     | retrieval.model:validation_step:372 - Recall@3_val: 43.40411840411841
+2024-09-22 01:53:28.477 | INFO     | retrieval.model:validation_step:372 - Recall@4_val: 44.282496782496786
+2024-09-22 01:53:28.477 | INFO     | retrieval.model:validation_step:372 - Recall@5_val: 46.53474903474903
+2024-09-22 01:53:28.477 | INFO     | retrieval.model:validation_step:372 - Recall@6_val: 47.435649935649934
+2024-09-22 01:53:28.478 | INFO     | retrieval.model:validation_step:372 - Recall@7_val: 50.476190476190474
+2024-09-22 01:53:28.478 | INFO     | retrieval.model:validation_step:372 - Recall@8_val: 55.40862290862291
+2024-09-22 01:53:28.478 | INFO     | retrieval.model:validation_step:372 - Recall@9_val: 58.497425997426
+2024-09-22 01:53:28.479 | INFO     | retrieval.model:validation_step:372 - Recall@10_val: 58.88352638352639
+2024-09-22 01:53:28.479 | INFO     | retrieval.model:validation_step:372 - Recall@11_val: 61.58622908622908
+2024-09-22 01:53:28.479 | INFO     | retrieval.model:validation_step:372 - Recall@12_val: 64.28893178893179
+2024-09-22 01:53:28.479 | INFO     | retrieval.model:validation_step:372 - Recall@13_val: 64.28893178893179
+2024-09-22 01:53:28.480 | INFO     | retrieval.model:validation_step:372 - Recall@14_val: 64.28893178893179
+2024-09-22 01:53:28.480 | INFO     | retrieval.model:validation_step:372 - Recall@15_val: 64.28893178893179
+2024-09-22 01:53:28.480 | INFO     | retrieval.model:validation_step:372 - Recall@16_val: 67.37773487773488
+2024-09-22 01:53:28.481 | INFO     | retrieval.model:validation_step:372 - Recall@17_val: 68.72908622908623
+2024-09-22 01:53:28.481 | INFO     | retrieval.model:validation_step:372 - Recall@18_val: 70.08043758043758
+2024-09-22 01:53:28.481 | INFO     | retrieval.model:validation_step:372 - Recall@19_val: 70.08043758043758
+2024-09-22 01:53:28.481 | INFO     | retrieval.model:validation_step:372 - Recall@20_val: 73.32368082368082
+2024-09-22 01:53:28.482 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 73.32368082368082
+2024-09-22 01:53:28.482 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 73.32368082368082
+2024-09-22 01:53:28.482 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 73.32368082368082
+2024-09-22 01:53:28.483 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 73.32368082368082
+2024-09-22 01:53:28.483 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 73.66151866151866
+2024-09-22 01:53:28.483 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 73.66151866151866
+2024-09-22 01:53:28.483 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 73.66151866151866
+2024-09-22 01:53:28.484 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 73.66151866151866
+2024-09-22 01:53:28.484 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 73.66151866151866
+2024-09-22 01:53:28.484 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 73.66151866151866
+2024-09-22 01:53:28.484 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 73.66151866151866
+2024-09-22 01:53:28.485 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 73.66151866151866
+2024-09-22 01:53:28.485 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 73.66151866151866
+2024-09-22 01:53:28.485 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 73.66151866151866
+2024-09-22 01:53:28.486 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 73.66151866151866
+2024-09-22 01:53:28.486 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 73.9993564993565
+2024-09-22 01:53:28.486 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 73.9993564993565
+2024-09-22 01:53:28.486 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 73.9993564993565
+2024-09-22 01:53:28.487 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 74.9002574002574
+2024-09-22 01:53:28.487 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 74.9002574002574
+2024-09-22 01:53:28.487 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 77.60296010296011
+2024-09-22 01:53:28.488 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 77.60296010296011
+2024-09-22 01:53:28.488 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 77.60296010296011
+2024-09-22 01:53:28.488 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 77.60296010296011
+2024-09-22 01:53:28.488 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 77.60296010296011
+2024-09-22 01:53:28.489 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 77.60296010296011
+2024-09-22 01:53:28.489 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 77.60296010296011
+2024-09-22 01:53:28.489 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 77.60296010296011
+2024-09-22 01:53:28.490 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 77.60296010296011
+2024-09-22 01:53:28.490 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 80.3056628056628
+2024-09-22 01:53:28.490 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 81.20656370656371
+2024-09-22 01:53:28.491 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 81.20656370656371
+2024-09-22 01:53:28.491 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 81.20656370656371
+2024-09-22 01:53:28.491 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 81.20656370656371
+2024-09-22 01:53:28.491 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 81.20656370656371
+2024-09-22 01:53:28.492 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 81.20656370656371
+2024-09-22 01:53:28.492 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 81.20656370656371
+2024-09-22 01:53:28.492 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 81.20656370656371
+2024-09-22 01:53:28.492 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 81.88223938223939
+2024-09-22 01:53:28.493 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 82.42277992277994
+2024-09-22 01:53:28.493 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 82.42277992277994
+2024-09-22 01:53:28.493 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 83.0984555984556
+2024-09-22 01:53:28.494 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 83.0984555984556
+2024-09-22 01:53:28.494 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 83.0984555984556
+2024-09-22 01:53:28.494 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 83.43629343629344
+2024-09-22 01:53:28.494 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 84.7876447876448
+2024-09-22 01:53:28.495 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 85.46332046332047
+2024-09-22 01:53:28.495 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 85.46332046332047
+2024-09-22 01:53:28.495 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 85.46332046332047
+2024-09-22 01:53:28.495 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 85.46332046332047
+2024-09-22 01:53:28.496 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 85.46332046332047
+2024-09-22 01:53:28.496 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 85.46332046332047
+2024-09-22 01:53:28.496 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 85.46332046332047
+2024-09-22 01:53:28.497 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 85.46332046332047
+2024-09-22 01:53:28.497 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 85.46332046332047
+2024-09-22 01:53:28.497 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 85.46332046332047
+2024-09-22 01:53:28.497 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 85.46332046332047
+2024-09-22 01:53:28.498 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 85.46332046332047
+2024-09-22 01:53:28.498 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 86.81467181467181
+2024-09-22 01:53:28.498 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 86.81467181467181
+2024-09-22 01:53:28.499 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 86.81467181467181
+2024-09-22 01:53:28.499 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 86.81467181467181
+2024-09-22 01:53:28.499 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 86.81467181467181
+2024-09-22 01:53:28.499 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 86.81467181467181
+2024-09-22 01:53:28.500 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 86.81467181467181
+2024-09-22 01:53:28.500 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 86.81467181467181
+2024-09-22 01:53:28.500 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 86.81467181467181
+2024-09-22 01:53:28.501 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 86.81467181467181
+2024-09-22 01:53:28.501 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 86.81467181467181
+2024-09-22 01:53:28.501 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 86.81467181467181
+2024-09-22 01:53:28.501 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 86.81467181467181
+2024-09-22 01:53:28.502 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 86.81467181467181
+2024-09-22 01:53:28.502 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 86.81467181467181
+2024-09-22 01:53:28.502 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 86.81467181467181
+2024-09-22 01:53:28.502 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 86.81467181467181
+2024-09-22 01:53:28.503 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 86.81467181467181
+2024-09-22 01:53:28.503 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 86.81467181467181
+2024-09-22 01:53:28.503 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 87.4903474903475
+2024-09-22 01:53:28.504 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 87.4903474903475
+2024-09-22 01:53:28.504 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 87.4903474903475
+2024-09-22 01:53:28.504 | INFO     | retrieval.model:validation_step:381 - MRR: 0.42076721127341293
+2024-09-22 01:53:28.504 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+                                                                                                                  2
+024-09-22 01:53:28.511 | INFO     | retrieval.model:validation_step:372 - Recall@1_val: 28.07971014492753 0.39it/s]
+2024-09-22 01:53:28.512 | INFO     | retrieval.model:validation_step:372 - Recall@2_val: 41.757246376811594
+2024-09-22 01:53:28.512 | INFO     | retrieval.model:validation_step:372 - Recall@3_val: 46.28623188405797
+2024-09-22 01:53:28.512 | INFO     | retrieval.model:validation_step:372 - Recall@4_val: 48.91304347826087
+2024-09-22 01:53:28.513 | INFO     | retrieval.model:validation_step:372 - Recall@5_val: 51.08695652173913
+2024-09-22 01:53:28.513 | INFO     | retrieval.model:validation_step:372 - Recall@6_val: 54.347826086956516
+2024-09-22 01:53:28.513 | INFO     | retrieval.model:validation_step:372 - Recall@7_val: 57.2463768115942
+2024-09-22 01:53:28.513 | INFO     | retrieval.model:validation_step:372 - Recall@8_val: 58.33333333333333
+2024-09-22 01:53:28.514 | INFO     | retrieval.model:validation_step:372 - Recall@9_val: 58.87681159420289
+2024-09-22 01:53:28.514 | INFO     | retrieval.model:validation_step:372 - Recall@10_val: 59.96376811594203
+2024-09-22 01:53:28.514 | INFO     | retrieval.model:validation_step:372 - Recall@11_val: 59.96376811594203
+2024-09-22 01:53:28.515 | INFO     | retrieval.model:validation_step:372 - Recall@12_val: 59.96376811594203
+2024-09-22 01:53:28.515 | INFO     | retrieval.model:validation_step:372 - Recall@13_val: 61.59420289855072
+2024-09-22 01:53:28.515 | INFO     | retrieval.model:validation_step:372 - Recall@14_val: 62.95289855072463
+2024-09-22 01:53:28.515 | INFO     | retrieval.model:validation_step:372 - Recall@15_val: 68.38768115942028
+2024-09-22 01:53:28.515 | INFO     | retrieval.model:validation_step:318 - Inside validation_step
+2024-09-22 01:53:28.516 | INFO     | retrieval.model:validation_step:372 - Recall@16_val: 68.93115942028986
+2024-09-22 01:53:28.516 | INFO     | retrieval.model:validation_step:372 - Recall@17_val: 68.93115942028986
+2024-09-22 01:53:28.516 | INFO     | retrieval.model:validation_step:372 - Recall@18_val: 69.47463768115941
+2024-09-22 01:53:28.516 | INFO     | retrieval.model:validation_step:372 - Recall@19_val: 70.01811594202898
+2024-09-22 01:53:28.517 | INFO     | retrieval.model:validation_step:372 - Recall@20_val: 71.10507246376811
+2024-09-22 01:53:28.517 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 71.37681159420289
+2024-09-22 01:53:28.517 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 71.92028985507245
+2024-09-22 01:53:28.518 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 73.00724637681158
+2024-09-22 01:53:28.518 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 73.00724637681158
+2024-09-22 01:53:28.518 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 73.00724637681158
+2024-09-22 01:53:28.518 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 74.0942028985507
+2024-09-22 01:53:28.519 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 74.63768115942028
+2024-09-22 01:53:28.519 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 74.63768115942028
+2024-09-22 01:53:28.519 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 74.63768115942028
+2024-09-22 01:53:28.519 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 75.72463768115941
+2024-09-22 01:53:28.520 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 75.72463768115941
+2024-09-22 01:53:28.520 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 76.26811594202898
+2024-09-22 01:53:28.520 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 77.35507246376811
+2024-09-22 01:53:28.520 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 77.35507246376811
+2024-09-22 01:53:28.521 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 77.35507246376811
+2024-09-22 01:53:28.521 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 78.07971014492753
+2024-09-22 01:53:28.521 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 78.6231884057971
+2024-09-22 01:53:28.522 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 82.42753623188406
+2024-09-22 01:53:28.522 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 82.42753623188406
+2024-09-22 01:53:28.522 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 82.42753623188406
+2024-09-22 01:53:28.522 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 82.42753623188406
+2024-09-22 01:53:28.523 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 82.42753623188406
+2024-09-22 01:53:28.523 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 82.42753623188406
+2024-09-22 01:53:28.523 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 82.69927536231884
+2024-09-22 01:53:28.523 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 82.69927536231884
+2024-09-22 01:53:28.524 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 82.69927536231884
+2024-09-22 01:53:28.524 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 82.69927536231884
+2024-09-22 01:53:28.524 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 82.69927536231884
+2024-09-22 01:53:28.525 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 82.69927536231884
+2024-09-22 01:53:28.525 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 82.69927536231884
+2024-09-22 01:53:28.525 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 82.69927536231884
+2024-09-22 01:53:28.525 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 82.69927536231884
+2024-09-22 01:53:28.526 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 82.69927536231884
+2024-09-22 01:53:28.526 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 82.69927536231884
+2024-09-22 01:53:28.526 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 82.69927536231884
+2024-09-22 01:53:28.526 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 82.69927536231884
+2024-09-22 01:53:28.527 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 82.69927536231884
+2024-09-22 01:53:28.527 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 82.69927536231884
+2024-09-22 01:53:28.527 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 82.69927536231884
+2024-09-22 01:53:28.528 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 82.69927536231884
+2024-09-22 01:53:28.528 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 82.69927536231884
+2024-09-22 01:53:28.528 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 82.69927536231884
+2024-09-22 01:53:28.528 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 82.69927536231884
+2024-09-22 01:53:28.529 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 82.69927536231884
+2024-09-22 01:53:28.529 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 82.69927536231884
+2024-09-22 01:53:28.529 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 82.69927536231884
+2024-09-22 01:53:28.529 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 82.69927536231884
+2024-09-22 01:53:28.530 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 82.69927536231884
+2024-09-22 01:53:28.530 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 83.24275362318842
+2024-09-22 01:53:28.530 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 83.24275362318842
+2024-09-22 01:53:28.530 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 83.24275362318842
+2024-09-22 01:53:28.531 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 83.24275362318842
+2024-09-22 01:53:28.531 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 83.24275362318842
+2024-09-22 01:53:28.531 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 83.24275362318842
+2024-09-22 01:53:28.532 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 83.24275362318842
+2024-09-22 01:53:28.532 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 83.24275362318842
+2024-09-22 01:53:28.532 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 83.24275362318842
+2024-09-22 01:53:28.532 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 83.78623188405798
+2024-09-22 01:53:28.533 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 83.78623188405798
+2024-09-22 01:53:28.533 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 84.51086956521739
+2024-09-22 01:53:28.533 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 84.51086956521739
+2024-09-22 01:53:28.533 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 84.51086956521739
+2024-09-22 01:53:28.533 | INFO     | retrieval.model:validation_step:322 - Embeddings staled validation step: False
+2024-09-22 01:53:28.534 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 84.51086956521739
+2024-09-22 01:53:28.534 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 84.51086956521739
+2024-09-22 01:53:28.534 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 84.51086956521739
+2024-09-22 01:53:28.534 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 84.51086956521739
+2024-09-22 01:53:28.535 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 84.51086956521739
+2024-09-22 01:53:28.535 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 84.51086956521739
+2024-09-22 01:53:28.535 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 84.51086956521739
+2024-09-22 01:53:28.536 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 84.51086956521739
+2024-09-22 01:53:28.536 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 84.51086956521739
+2024-09-22 01:53:28.536 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 84.51086956521739
+2024-09-22 01:53:28.536 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 84.51086956521739
+2024-09-22 01:53:28.537 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 85.05434782608695
+2024-09-22 01:53:28.537 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 85.05434782608695
+2024-09-22 01:53:28.537 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 85.05434782608695
+2024-09-22 01:53:28.537 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 85.05434782608695
+2024-09-22 01:53:28.538 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 85.05434782608695
+2024-09-22 01:53:28.538 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 85.59782608695652
+2024-09-22 01:53:28.538 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 85.59782608695652
+2024-09-22 01:53:28.539 | INFO     | retrieval.model:validation_step:381 - MRR: 0.5792470306200282
+2024-09-22 01:53:28.539 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+2024-09-22 01:53:28.544 | INFO     | retrieval.model:validation_step:318 - Inside validation_step
+2024-09-22 01:53:28.560 | INFO     | retrieval.model:validation_step:322 - Embeddings staled validation step: False
+2024-09-22 01:53:28.631 | INFO     | retrieval.model:validation_step:372 - Recall@1_val: 23.27343199436223
+2024-09-22 01:53:28.632 | INFO     | retrieval.model:validation_step:372 - Recall@2_val: 31.994362226920366
+2024-09-22 01:53:28.632 | INFO     | retrieval.model:validation_step:372 - Recall@3_val: 36.45172656800563
+2024-09-22 01:53:28.632 | INFO     | retrieval.model:validation_step:372 - Recall@4_val: 41.10288935870331
+2024-09-22 01:53:28.632 | INFO     | retrieval.model:validation_step:372 - Recall@5_val: 43.81606765327695
+2024-09-22 01:53:28.633 | INFO     | retrieval.model:validation_step:372 - Recall@6_val: 48.62327594885734
+2024-09-22 01:53:28.633 | INFO     | retrieval.model:validation_step:372 - Recall@7_val: 56.19903352461492
+2024-09-22 01:53:28.633 | INFO     | retrieval.model:validation_step:372 - Recall@8_val: 56.410450015101176
+2024-09-22 01:53:28.634 | INFO     | retrieval.model:validation_step:372 - Recall@9_val: 57.009463404812244
+2024-09-22 01:53:28.634 | INFO     | retrieval.model:validation_step:372 - Recall@10_val: 57.784657203261844
+2024-09-22 01:53:28.634 | INFO     | retrieval.model:validation_step:372 - Recall@11_val: 59.27967381455753
+2024-09-22 01:53:28.634 | INFO     | retrieval.model:validation_step:372 - Recall@12_val: 59.27967381455753
+2024-09-22 01:53:28.635 | INFO     | retrieval.model:validation_step:372 - Recall@13_val: 59.861069163394745
+2024-09-22 01:53:28.635 | INFO     | retrieval.model:validation_step:372 - Recall@14_val: 61.314557535487765
+2024-09-22 01:53:28.635 | INFO     | retrieval.model:validation_step:372 - Recall@15_val: 61.314557535487765
+2024-09-22 01:53:28.635 | INFO     | retrieval.model:validation_step:372 - Recall@16_val: 61.52597402597403
+2024-09-22 01:53:28.636 | INFO     | retrieval.model:validation_step:372 - Recall@17_val: 61.52597402597403
+2024-09-22 01:53:28.636 | INFO     | retrieval.model:validation_step:372 - Recall@18_val: 61.71977247558643
+2024-09-22 01:53:28.636 | INFO     | retrieval.model:validation_step:372 - Recall@19_val: 62.7063827645223
+2024-09-22 01:53:28.636 | INFO     | retrieval.model:validation_step:372 - Recall@20_val: 62.7063827645223
+2024-09-22 01:53:28.637 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 62.7063827645223
+2024-09-22 01:53:28.637 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 63.28777811335951
+2024-09-22 01:53:28.637 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 63.62000402698076
+2024-09-22 01:53:28.637 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 64.3574448807007
+2024-09-22 01:53:28.638 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 64.3574448807007
+2024-09-22 01:53:28.638 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 64.3574448807007
+2024-09-22 01:53:28.638 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 64.90108728480823
+2024-09-22 01:53:28.638 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 64.90108728480823
+2024-09-22 01:53:28.639 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 67.03287023054465
+2024-09-22 01:53:28.639 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 67.03287023054465
+2024-09-22 01:53:28.639 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 67.22666868015706
+2024-09-22 01:53:28.639 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 68.68015705225008
+2024-09-22 01:53:28.640 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 68.68015705225008
+2024-09-22 01:53:28.640 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 73.62201751736636
+2024-09-22 01:53:28.640 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 73.62201751736636
+2024-09-22 01:53:28.640 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 75.38382160475183
+2024-09-22 01:53:28.641 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 75.38382160475183
+2024-09-22 01:53:28.641 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 75.7160475183731
+2024-09-22 01:53:28.641 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 75.7160475183731
+2024-09-22 01:53:28.642 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 75.7160475183731
+2024-09-22 01:53:28.642 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 75.7160475183731
+2024-09-22 01:53:28.642 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 75.7160475183731
+2024-09-22 01:53:28.642 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 75.7160475183731
+2024-09-22 01:53:28.643 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 75.7160475183731
+2024-09-22 01:53:28.643 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 75.7160475183731
+2024-09-22 01:53:28.643 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 75.7160475183731
+2024-09-22 01:53:28.643 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 76.49124131682271
+2024-09-22 01:53:28.644 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 76.49124131682271
+2024-09-22 01:53:28.644 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 76.49124131682271
+2024-09-22 01:53:28.644 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 76.78193899124132
+2024-09-22 01:53:28.644 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 76.78193899124132
+2024-09-22 01:53:28.645 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 76.78193899124132
+2024-09-22 01:53:28.645 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 77.24705527031108
+2024-09-22 01:53:28.645 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 77.6346521695359
+2024-09-22 01:53:28.645 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 77.6346521695359
+2024-09-22 01:53:28.646 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 77.6346521695359
+2024-09-22 01:53:28.646 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 77.6346521695359
+2024-09-22 01:53:28.646 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 77.6346521695359
+2024-09-22 01:53:28.646 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 77.6346521695359
+2024-09-22 01:53:28.647 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 77.6346521695359
+2024-09-22 01:53:28.647 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 77.6346521695359
+2024-09-22 01:53:28.647 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 77.6346521695359
+2024-09-22 01:53:28.647 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 77.8284506191483
+2024-09-22 01:53:28.648 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 78.0222490687607
+2024-09-22 01:53:28.648 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 78.0222490687607
+2024-09-22 01:53:28.648 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 78.0222490687607
+2024-09-22 01:53:28.648 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 78.0222490687607
+2024-09-22 01:53:28.649 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 78.0222490687607
+2024-09-22 01:53:28.649 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 80.81294674317931
+2024-09-22 01:53:28.649 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 81.14517265680055
+2024-09-22 01:53:28.650 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 82.30796335447498
+2024-09-22 01:53:28.650 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 83.08315715292458
+2024-09-22 01:53:28.650 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 83.08315715292458
+2024-09-22 01:53:28.650 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 83.08315715292458
+2024-09-22 01:53:28.651 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 83.08315715292458
+2024-09-22 01:53:28.651 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 83.08315715292458
+2024-09-22 01:53:28.651 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 83.08315715292458
+2024-09-22 01:53:28.651 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 83.08315715292458
+2024-09-22 01:53:28.652 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 83.6645525017618
+2024-09-22 01:53:28.652 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 83.6645525017618
+2024-09-22 01:53:28.652 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 84.82734319943623
+2024-09-22 01:53:28.652 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 84.82734319943623
+2024-09-22 01:53:28.653 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 84.82734319943623
+2024-09-22 01:53:28.653 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 84.82734319943623
+2024-09-22 01:53:28.653 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 84.82734319943623
+2024-09-22 01:53:28.653 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 84.82734319943623
+2024-09-22 01:53:28.654 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 84.82734319943623
+2024-09-22 01:53:28.654 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 85.02114164904864
+2024-09-22 01:53:28.654 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 85.02114164904864
+2024-09-22 01:53:28.655 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 85.02114164904864
+2024-09-22 01:53:28.655 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 85.02114164904864
+2024-09-22 01:53:28.655 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 85.02114164904864
+2024-09-22 01:53:28.655 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 85.02114164904864
+2024-09-22 01:53:28.656 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 85.02114164904864
+2024-09-22 01:53:28.656 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 85.02114164904864
+2024-09-22 01:53:28.656 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 85.02114164904864
+2024-09-22 01:53:28.657 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 85.02114164904864
+2024-09-22 01:53:28.657 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 85.02114164904864
+2024-09-22 01:53:28.657 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 85.02114164904864
+2024-09-22 01:53:28.657 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 87.34672304439746
+2024-09-22 01:53:28.658 | INFO     | retrieval.model:validation_step:381 - MRR: 0.4945159390993529
+2024-09-22 01:53:28.658 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+2024-09-22 01:53:28.663 | INFO     | retrieval.model:validation_step:318 - Inside validation_step
+2024-09-22 01:53:28.678 | INFO     | retrieval.model:validation_step:322 - Embeddings staled validation step: False
+2024-09-22 01:53:29.136 | INFO     | retrieval.model:validation_step:372 - Recall@1_val: 39.973544973544975
+2024-09-22 01:53:29.136 | INFO     | retrieval.model:validation_step:372 - Recall@2_val: 42.513227513227505
+2024-09-22 01:53:29.137 | INFO     | retrieval.model:validation_step:372 - Recall@3_val: 47.962962962962955
+2024-09-22 01:53:29.137 | INFO     | retrieval.model:validation_step:372 - Recall@4_val: 58.83597883597883
+2024-09-22 01:53:29.137 | INFO     | retrieval.model:validation_step:372 - Recall@5_val: 68.5185185185185
+2024-09-22 01:53:29.138 | INFO     | retrieval.model:validation_step:372 - Recall@6_val: 70.8994708994709
+2024-09-22 01:53:29.138 | INFO     | retrieval.model:validation_step:372 - Recall@7_val: 73.01587301587301
+2024-09-22 01:53:29.138 | INFO     | retrieval.model:validation_step:372 - Recall@8_val: 73.01587301587301
+2024-09-22 01:53:29.138 | INFO     | retrieval.model:validation_step:372 - Recall@9_val: 75.39682539682539
+2024-09-22 01:53:29.139 | INFO     | retrieval.model:validation_step:372 - Recall@10_val: 75.39682539682539
+2024-09-22 01:53:29.139 | INFO     | retrieval.model:validation_step:372 - Recall@11_val: 76.34920634920634
+2024-09-22 01:53:29.139 | INFO     | retrieval.model:validation_step:372 - Recall@12_val: 78.88888888888889
+2024-09-22 01:53:29.139 | INFO     | retrieval.model:validation_step:372 - Recall@13_val: 78.88888888888889
+2024-09-22 01:53:29.140 | INFO     | retrieval.model:validation_step:372 - Recall@14_val: 78.88888888888889
+2024-09-22 01:53:29.140 | INFO     | retrieval.model:validation_step:372 - Recall@15_val: 78.88888888888889
+2024-09-22 01:53:29.140 | INFO     | retrieval.model:validation_step:372 - Recall@16_val: 78.88888888888889
+2024-09-22 01:53:29.140 | INFO     | retrieval.model:validation_step:372 - Recall@17_val: 78.88888888888889
+2024-09-22 01:53:29.141 | INFO     | retrieval.model:validation_step:372 - Recall@18_val: 79.4179894179894
+2024-09-22 01:53:29.141 | INFO     | retrieval.model:validation_step:372 - Recall@19_val: 81.7989417989418
+2024-09-22 01:53:29.141 | INFO     | retrieval.model:validation_step:372 - Recall@20_val: 82.32804232804233
+2024-09-22 01:53:29.141 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 82.32804232804233
+2024-09-22 01:53:29.142 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 82.32804232804233
+2024-09-22 01:53:29.142 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 83.91534391534391
+2024-09-22 01:53:29.142 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 83.91534391534391
+2024-09-22 01:53:29.142 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 83.91534391534391
+2024-09-22 01:53:29.143 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 83.91534391534391
+2024-09-22 01:53:29.143 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 83.91534391534391
+2024-09-22 01:53:29.143 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 83.91534391534391
+2024-09-22 01:53:29.143 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 85.5026455026455
+2024-09-22 01:53:29.144 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 85.5026455026455
+2024-09-22 01:53:29.144 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 85.5026455026455
+2024-09-22 01:53:29.144 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 85.5026455026455
+2024-09-22 01:53:29.144 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 86.03174603174602
+2024-09-22 01:53:29.145 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 86.03174603174602
+2024-09-22 01:53:29.145 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 86.56084656084656
+2024-09-22 01:53:29.145 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 86.56084656084656
+2024-09-22 01:53:29.145 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 86.56084656084656
+2024-09-22 01:53:29.146 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 86.56084656084656
+2024-09-22 01:53:29.146 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 86.56084656084656
+2024-09-22 01:53:29.146 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 86.56084656084656
+2024-09-22 01:53:29.146 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 86.56084656084656
+2024-09-22 01:53:29.147 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 87.5132275132275
+2024-09-22 01:53:29.147 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 87.5132275132275
+2024-09-22 01:53:29.147 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 87.5132275132275
+2024-09-22 01:53:29.147 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 88.46560846560845
+2024-09-22 01:53:29.148 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 88.46560846560845
+2024-09-22 01:53:29.148 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 88.46560846560845
+2024-09-22 01:53:29.148 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 88.46560846560845
+2024-09-22 01:53:29.148 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 88.46560846560845
+2024-09-22 01:53:29.149 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 88.46560846560845
+2024-09-22 01:53:29.149 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 88.46560846560845
+2024-09-22 01:53:29.149 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 88.46560846560845
+2024-09-22 01:53:29.149 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 88.46560846560845
+2024-09-22 01:53:29.150 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 88.46560846560845
+2024-09-22 01:53:29.150 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 88.46560846560845
+2024-09-22 01:53:29.150 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 88.46560846560845
+2024-09-22 01:53:29.150 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 88.46560846560845
+2024-09-22 01:53:29.151 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 89.65608465608464
+2024-09-22 01:53:29.151 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 89.65608465608464
+2024-09-22 01:53:29.151 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 89.65608465608464
+2024-09-22 01:53:29.151 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 89.65608465608464
+2024-09-22 01:53:29.152 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 89.65608465608464
+2024-09-22 01:53:29.152 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 89.65608465608464
+2024-09-22 01:53:29.152 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 89.65608465608464
+2024-09-22 01:53:29.152 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 89.65608465608464
+2024-09-22 01:53:29.153 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 89.65608465608464
+2024-09-22 01:53:29.153 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 89.65608465608464
+2024-09-22 01:53:29.153 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 89.65608465608464
+2024-09-22 01:53:29.153 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 89.65608465608464
+2024-09-22 01:53:29.154 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 89.65608465608464
+2024-09-22 01:53:29.154 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 89.65608465608464
+2024-09-22 01:53:29.154 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 89.65608465608464
+2024-09-22 01:53:29.154 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 89.65608465608464
+2024-09-22 01:53:29.155 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 89.65608465608464
+2024-09-22 01:53:29.155 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 89.65608465608464
+2024-09-22 01:53:29.155 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 89.65608465608464
+2024-09-22 01:53:29.155 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 89.65608465608464
+2024-09-22 01:53:29.156 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 89.65608465608464
+2024-09-22 01:53:29.156 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 89.65608465608464
+2024-09-22 01:53:29.156 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 89.65608465608464
+2024-09-22 01:53:29.157 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 89.65608465608464
+2024-09-22 01:53:29.157 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 89.65608465608464
+2024-09-22 01:53:29.157 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 89.65608465608464
+2024-09-22 01:53:29.157 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 89.65608465608464
+2024-09-22 01:53:29.158 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 89.65608465608464
+2024-09-22 01:53:29.158 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 89.65608465608464
+2024-09-22 01:53:29.158 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 89.65608465608464
+2024-09-22 01:53:29.158 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 89.65608465608464
+2024-09-22 01:53:29.159 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 89.65608465608464
+2024-09-22 01:53:29.159 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 89.65608465608464
+2024-09-22 01:53:29.159 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 89.65608465608464
+2024-09-22 01:53:29.159 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 89.65608465608464
+2024-09-22 01:53:29.160 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 89.65608465608464
+2024-09-22 01:53:29.160 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 89.65608465608464
+2024-09-22 01:53:29.160 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 89.65608465608464
+2024-09-22 01:53:29.160 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 90.18518518518519
+2024-09-22 01:53:29.161 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 90.18518518518519
+2024-09-22 01:53:29.161 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 90.18518518518519
+2024-09-22 01:53:29.161 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 90.71428571428571
+2024-09-22 01:53:29.161 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 90.71428571428571
+2024-09-22 01:53:29.162 | INFO     | retrieval.model:validation_step:381 - MRR: 0.7555555555555555
+2024-09-22 01:53:29.162 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+2024-09-22 01:53:29.716 | INFO     | retrieval.model:validation_step:372 - Recall@1_val: 13.88888888888889
+2024-09-22 01:53:29.717 | INFO     | retrieval.model:validation_step:372 - Recall@2_val: 36.9047619047619
+2024-09-22 01:53:29.717 | INFO     | retrieval.model:validation_step:372 - Recall@3_val: 48.8095238095238
+2024-09-22 01:53:29.717 | INFO     | retrieval.model:validation_step:372 - Recall@4_val: 48.8095238095238
+2024-09-22 01:53:29.718 | INFO     | retrieval.model:validation_step:372 - Recall@5_val: 55.95238095238094
+2024-09-22 01:53:29.718 | INFO     | retrieval.model:validation_step:372 - Recall@6_val: 61.9047619047619
+2024-09-22 01:53:29.718 | INFO     | retrieval.model:validation_step:372 - Recall@7_val: 71.42857142857142
+2024-09-22 01:53:29.719 | INFO     | retrieval.model:validation_step:372 - Recall@8_val: 76.19047619047619
+2024-09-22 01:53:29.719 | INFO     | retrieval.model:validation_step:372 - Recall@9_val: 77.77777777777777
+2024-09-22 01:53:29.719 | INFO     | retrieval.model:validation_step:372 - Recall@10_val: 82.53968253968253
+2024-09-22 01:53:29.719 | INFO     | retrieval.model:validation_step:372 - Recall@11_val: 82.53968253968253
+2024-09-22 01:53:29.720 | INFO     | retrieval.model:validation_step:372 - Recall@12_val: 87.30158730158729
+2024-09-22 01:53:29.720 | INFO     | retrieval.model:validation_step:372 - Recall@13_val: 88.4920634920635
+2024-09-22 01:53:29.720 | INFO     | retrieval.model:validation_step:372 - Recall@14_val: 90.87301587301587
+2024-09-22 01:53:29.721 | INFO     | retrieval.model:validation_step:372 - Recall@15_val: 92.46031746031747
+2024-09-22 01:53:29.721 | INFO     | retrieval.model:validation_step:372 - Recall@16_val: 92.46031746031747
+2024-09-22 01:53:29.721 | INFO     | retrieval.model:validation_step:372 - Recall@17_val: 92.46031746031747
+2024-09-22 01:53:29.721 | INFO     | retrieval.model:validation_step:372 - Recall@18_val: 92.46031746031747
+2024-09-22 01:53:29.722 | INFO     | retrieval.model:validation_step:372 - Recall@19_val: 92.46031746031747
+2024-09-22 01:53:29.722 | INFO     | retrieval.model:validation_step:372 - Recall@20_val: 92.46031746031747
+2024-09-22 01:53:29.722 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 92.46031746031747
+2024-09-22 01:53:29.722 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 92.46031746031747
+2024-09-22 01:53:29.723 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 92.46031746031747
+2024-09-22 01:53:29.723 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 92.46031746031747
+2024-09-22 01:53:29.723 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 94.04761904761905
+2024-09-22 01:53:29.723 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 94.04761904761905
+2024-09-22 01:53:29.724 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 94.04761904761905
+2024-09-22 01:53:29.724 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 94.04761904761905
+2024-09-22 01:53:29.724 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 94.04761904761905
+2024-09-22 01:53:29.725 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 94.04761904761905
+2024-09-22 01:53:29.725 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 94.04761904761905
+2024-09-22 01:53:29.725 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 94.04761904761905
+2024-09-22 01:53:29.725 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 94.04761904761905
+2024-09-22 01:53:29.726 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 94.04761904761905
+2024-09-22 01:53:29.726 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 94.04761904761905
+2024-09-22 01:53:29.726 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 94.04761904761905
+2024-09-22 01:53:29.726 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 94.04761904761905
+2024-09-22 01:53:29.727 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 94.04761904761905
+2024-09-22 01:53:29.727 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 94.04761904761905
+2024-09-22 01:53:29.727 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 94.04761904761905
+2024-09-22 01:53:29.727 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 94.04761904761905
+2024-09-22 01:53:29.728 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 94.04761904761905
+2024-09-22 01:53:29.728 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 94.04761904761905
+2024-09-22 01:53:29.728 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 94.04761904761905
+2024-09-22 01:53:29.729 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 94.04761904761905
+2024-09-22 01:53:29.729 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 94.04761904761905
+2024-09-22 01:53:29.729 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 94.04761904761905
+2024-09-22 01:53:29.729 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 94.04761904761905
+2024-09-22 01:53:29.730 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 94.04761904761905
+2024-09-22 01:53:29.730 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 94.04761904761905
+2024-09-22 01:53:29.730 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 94.04761904761905
+2024-09-22 01:53:29.730 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 94.04761904761905
+2024-09-22 01:53:29.731 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 94.04761904761905
+2024-09-22 01:53:29.731 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 94.04761904761905
+2024-09-22 01:53:29.731 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 94.04761904761905
+2024-09-22 01:53:29.731 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 94.04761904761905
+2024-09-22 01:53:29.732 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 94.04761904761905
+2024-09-22 01:53:29.732 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 94.04761904761905
+2024-09-22 01:53:29.732 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 94.04761904761905
+2024-09-22 01:53:29.732 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 94.04761904761905
+2024-09-22 01:53:29.733 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 94.04761904761905
+2024-09-22 01:53:29.733 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 94.04761904761905
+2024-09-22 01:53:29.733 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 94.04761904761905
+2024-09-22 01:53:29.734 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 94.04761904761905
+2024-09-22 01:53:29.734 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 94.04761904761905
+2024-09-22 01:53:29.734 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 94.04761904761905
+2024-09-22 01:53:29.734 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 94.04761904761905
+2024-09-22 01:53:29.735 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 94.04761904761905
+2024-09-22 01:53:29.735 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 94.04761904761905
+2024-09-22 01:53:29.735 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 94.04761904761905
+2024-09-22 01:53:29.736 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 94.04761904761905
+2024-09-22 01:53:29.736 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 94.04761904761905
+2024-09-22 01:53:29.736 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 94.04761904761905
+2024-09-22 01:53:29.736 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 94.04761904761905
+2024-09-22 01:53:29.737 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 94.04761904761905
+2024-09-22 01:53:29.737 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 94.04761904761905
+2024-09-22 01:53:29.737 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 94.04761904761905
+2024-09-22 01:53:29.737 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 94.04761904761905
+2024-09-22 01:53:29.738 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 94.04761904761905
+2024-09-22 01:53:29.738 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 94.04761904761905
+2024-09-22 01:53:29.738 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 94.04761904761905
+2024-09-22 01:53:29.738 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 94.04761904761905
+2024-09-22 01:53:29.739 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 94.04761904761905
+2024-09-22 01:53:29.739 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 94.04761904761905
+2024-09-22 01:53:29.739 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 94.04761904761905
+2024-09-22 01:53:29.739 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 94.04761904761905
+2024-09-22 01:53:29.740 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 94.04761904761905
+2024-09-22 01:53:29.740 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 94.04761904761905
+2024-09-22 01:53:29.740 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 94.04761904761905
+2024-09-22 01:53:29.740 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 94.04761904761905
+2024-09-22 01:53:29.741 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 94.04761904761905
+2024-09-22 01:53:29.741 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 94.04761904761905
+2024-09-22 01:53:29.741 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 94.04761904761905
+2024-09-22 01:53:29.742 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 94.04761904761905
+2024-09-22 01:53:29.742 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 94.04761904761905
+2024-09-22 01:53:29.742 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 94.04761904761905
+2024-09-22 01:53:29.742 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 94.04761904761905
+2024-09-22 01:53:29.743 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 94.04761904761905
+2024-09-22 01:53:29.743 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 94.04761904761905
+2024-09-22 01:53:29.743 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 94.04761904761905
+2024-09-22 01:53:29.743 | INFO     | retrieval.model:validation_step:381 - MRR: 0.4901927437641723
+2024-09-22 01:53:29.744 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+2024-09-22 01:53:29.848 | INFO     | retrieval.model:validation_step:372 - Recall@1_val: 8.771929824561402
+2024-09-22 01:53:29.848 | INFO     | retrieval.model:validation_step:372 - Recall@2_val: 35.08771929824561
+2024-09-22 01:53:29.849 | INFO     | retrieval.model:validation_step:372 - Recall@3_val: 35.08771929824561
+2024-09-22 01:53:29.849 | INFO     | retrieval.model:validation_step:372 - Recall@4_val: 43.85964912280701
+2024-09-22 01:53:29.849 | INFO     | retrieval.model:validation_step:372 - Recall@5_val: 49.12280701754385
+2024-09-22 01:53:29.850 | INFO     | retrieval.model:validation_step:372 - Recall@6_val: 51.754385964912274
+2024-09-22 01:53:29.850 | INFO     | retrieval.model:validation_step:372 - Recall@7_val: 59.64912280701755
+2024-09-22 01:53:29.850 | INFO     | retrieval.model:validation_step:372 - Recall@8_val: 64.91228070175438
+2024-09-22 01:53:29.850 | INFO     | retrieval.model:validation_step:372 - Recall@9_val: 64.91228070175438
+2024-09-22 01:53:29.851 | INFO     | retrieval.model:validation_step:372 - Recall@10_val: 64.91228070175438
+2024-09-22 01:53:29.851 | INFO     | retrieval.model:validation_step:372 - Recall@11_val: 64.91228070175438
+2024-09-22 01:53:29.851 | INFO     | retrieval.model:validation_step:372 - Recall@12_val: 66.66666666666667
+2024-09-22 01:53:29.852 | INFO     | retrieval.model:validation_step:372 - Recall@13_val: 68.42105263157895
+2024-09-22 01:53:29.852 | INFO     | retrieval.model:validation_step:372 - Recall@14_val: 68.42105263157895
+2024-09-22 01:53:29.852 | INFO     | retrieval.model:validation_step:372 - Recall@15_val: 68.42105263157895
+2024-09-22 01:53:29.852 | INFO     | retrieval.model:validation_step:372 - Recall@16_val: 70.17543859649122
+2024-09-22 01:53:29.853 | INFO     | retrieval.model:validation_step:372 - Recall@17_val: 70.17543859649122
+2024-09-22 01:53:29.853 | INFO     | retrieval.model:validation_step:372 - Recall@18_val: 75.43859649122805
+2024-09-22 01:53:29.853 | INFO     | retrieval.model:validation_step:372 - Recall@19_val: 75.43859649122805
+2024-09-22 01:53:29.853 | INFO     | retrieval.model:validation_step:372 - Recall@20_val: 75.43859649122805
+2024-09-22 01:53:29.854 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 75.43859649122805
+2024-09-22 01:53:29.854 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 77.19298245614034
+2024-09-22 01:53:29.854 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 78.94736842105263
+2024-09-22 01:53:29.854 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 78.94736842105263
+2024-09-22 01:53:29.855 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 78.94736842105263
+2024-09-22 01:53:29.855 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 78.94736842105263
+2024-09-22 01:53:29.855 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 78.94736842105263
+2024-09-22 01:53:29.855 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 78.94736842105263
+2024-09-22 01:53:29.856 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 78.94736842105263
+2024-09-22 01:53:29.856 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 78.94736842105263
+2024-09-22 01:53:29.856 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 84.21052631578947
+2024-09-22 01:53:29.856 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 84.21052631578947
+2024-09-22 01:53:29.857 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 84.21052631578947
+2024-09-22 01:53:29.857 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 84.21052631578947
+2024-09-22 01:53:29.857 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 84.21052631578947
+2024-09-22 01:53:29.858 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 84.21052631578947
+2024-09-22 01:53:29.858 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 84.21052631578947
+2024-09-22 01:53:29.858 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 84.21052631578947
+2024-09-22 01:53:29.858 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 84.21052631578947
+2024-09-22 01:53:29.859 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 89.47368421052632
+2024-09-22 01:53:29.859 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 89.47368421052632
+2024-09-22 01:53:29.859 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 92.10526315789474
+2024-09-22 01:53:29.859 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 92.10526315789474
+2024-09-22 01:53:29.860 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 92.10526315789474
+2024-09-22 01:53:29.860 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 92.10526315789474
+2024-09-22 01:53:29.860 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 92.10526315789474
+2024-09-22 01:53:29.860 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 92.10526315789474
+2024-09-22 01:53:29.861 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 92.10526315789474
+2024-09-22 01:53:29.861 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 92.10526315789474
+2024-09-22 01:53:29.861 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 92.10526315789474
+2024-09-22 01:53:29.861 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 92.10526315789474
+2024-09-22 01:53:29.862 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 92.10526315789474
+2024-09-22 01:53:29.862 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 92.10526315789474
+2024-09-22 01:53:29.862 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 92.10526315789474
+2024-09-22 01:53:29.862 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 92.10526315789474
+2024-09-22 01:53:29.863 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 92.10526315789474
+2024-09-22 01:53:29.863 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 92.10526315789474
+2024-09-22 01:53:29.863 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 92.10526315789474
+2024-09-22 01:53:29.863 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 92.10526315789474
+2024-09-22 01:53:29.864 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 92.10526315789474
+2024-09-22 01:53:29.864 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 94.73684210526315
+2024-09-22 01:53:29.864 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 94.73684210526315
+2024-09-22 01:53:29.864 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 94.73684210526315
+2024-09-22 01:53:29.865 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 94.73684210526315
+2024-09-22 01:53:29.865 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 94.73684210526315
+2024-09-22 01:53:29.865 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 94.73684210526315
+2024-09-22 01:53:29.865 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 94.73684210526315
+2024-09-22 01:53:29.866 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 94.73684210526315
+2024-09-22 01:53:29.866 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 94.73684210526315
+2024-09-22 01:53:29.866 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 94.73684210526315
+2024-09-22 01:53:29.866 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 94.73684210526315
+2024-09-22 01:53:29.867 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 94.73684210526315
+2024-09-22 01:53:29.867 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 94.73684210526315
+2024-09-22 01:53:29.867 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 94.73684210526315
+2024-09-22 01:53:29.868 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 94.73684210526315
+2024-09-22 01:53:29.868 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 94.73684210526315
+2024-09-22 01:53:29.868 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 94.73684210526315
+2024-09-22 01:53:29.868 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 94.73684210526315
+2024-09-22 01:53:29.869 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 94.73684210526315
+2024-09-22 01:53:29.869 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 94.73684210526315
+2024-09-22 01:53:29.869 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 94.73684210526315
+2024-09-22 01:53:29.869 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 94.73684210526315
+2024-09-22 01:53:29.870 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 94.73684210526315
+2024-09-22 01:53:29.870 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 94.73684210526315
+2024-09-22 01:53:29.870 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 94.73684210526315
+2024-09-22 01:53:29.871 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 94.73684210526315
+2024-09-22 01:53:29.871 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 100.0
+2024-09-22 01:53:29.871 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 100.0
+2024-09-22 01:53:29.871 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 100.0
+2024-09-22 01:53:29.872 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 100.0
+2024-09-22 01:53:29.872 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 100.0
+2024-09-22 01:53:29.872 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 100.0
+2024-09-22 01:53:29.872 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 100.0
+2024-09-22 01:53:29.873 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 100.0
+2024-09-22 01:53:29.873 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 100.0
+2024-09-22 01:53:29.873 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 100.0
+2024-09-22 01:53:29.873 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 100.0
+2024-09-22 01:53:29.874 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 100.0
+2024-09-22 01:53:29.874 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 100.0
+2024-09-22 01:53:29.874 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 100.0
+2024-09-22 01:53:29.874 | INFO     | retrieval.model:validation_step:381 - MRR: 0.42414903591942404
+2024-09-22 01:53:29.875 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+2024-09-22 01:53:30.956 | INFO     | retrieval.model:validation_step:372 - Recall@1_val: 23.148148148148145
+2024-09-22 01:53:30.957 | INFO     | retrieval.model:validation_step:372 - Recall@2_val: 32.407407407407405
+2024-09-22 01:53:30.957 | INFO     | retrieval.model:validation_step:372 - Recall@3_val: 38.333333333333336
+2024-09-22 01:53:30.958 | INFO     | retrieval.model:validation_step:372 - Recall@4_val: 43.888888888888886
+2024-09-22 01:53:30.958 | INFO     | retrieval.model:validation_step:372 - Recall@5_val: 48.33333333333333
+2024-09-22 01:53:30.958 | INFO     | retrieval.model:validation_step:372 - Recall@6_val: 49.07407407407407
+2024-09-22 01:53:30.959 | INFO     | retrieval.model:validation_step:372 - Recall@7_val: 50.37037037037037
+2024-09-22 01:53:30.959 | INFO     | retrieval.model:validation_step:372 - Recall@8_val: 51.481481481481474
+2024-09-22 01:53:30.959 | INFO     | retrieval.model:validation_step:372 - Recall@9_val: 52.222222222222214
+2024-09-22 01:53:30.960 | INFO     | retrieval.model:validation_step:372 - Recall@10_val: 52.222222222222214
+2024-09-22 01:53:30.960 | INFO     | retrieval.model:validation_step:372 - Recall@11_val: 52.222222222222214
+2024-09-22 01:53:30.960 | INFO     | retrieval.model:validation_step:372 - Recall@12_val: 52.222222222222214
+2024-09-22 01:53:30.960 | INFO     | retrieval.model:validation_step:372 - Recall@13_val: 54.074074074074076
+2024-09-22 01:53:30.961 | INFO     | retrieval.model:validation_step:372 - Recall@14_val: 54.39153439153439
+2024-09-22 01:53:30.961 | INFO     | retrieval.model:validation_step:372 - Recall@15_val: 55.13227513227513
+2024-09-22 01:53:30.961 | INFO     | retrieval.model:validation_step:372 - Recall@16_val: 56.798941798941804
+2024-09-22 01:53:30.962 | INFO     | retrieval.model:validation_step:372 - Recall@17_val: 56.798941798941804
+2024-09-22 01:53:30.962 | INFO     | retrieval.model:validation_step:372 - Recall@18_val: 56.798941798941804
+2024-09-22 01:53:30.962 | INFO     | retrieval.model:validation_step:372 - Recall@19_val: 56.798941798941804
+2024-09-22 01:53:30.962 | INFO     | retrieval.model:validation_step:372 - Recall@20_val: 60.13227513227514
+2024-09-22 01:53:30.963 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 60.873015873015866
+2024-09-22 01:53:30.963 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 62.67195767195767
+2024-09-22 01:53:30.963 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 62.67195767195767
+2024-09-22 01:53:30.964 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 63.78306878306878
+2024-09-22 01:53:30.964 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 64.89417989417989
+2024-09-22 01:53:30.964 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 67.11640211640211
+2024-09-22 01:53:30.964 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 67.43386243386243
+2024-09-22 01:53:30.965 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 67.43386243386243
+2024-09-22 01:53:30.965 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 67.43386243386243
+2024-09-22 01:53:30.965 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 67.43386243386243
+2024-09-22 01:53:30.966 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 67.98941798941799
+2024-09-22 01:53:30.966 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 69.65608465608466
+2024-09-22 01:53:30.966 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 69.65608465608466
+2024-09-22 01:53:30.966 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 70.76719576719577
+2024-09-22 01:53:30.967 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 70.76719576719577
+2024-09-22 01:53:30.967 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 70.76719576719577
+2024-09-22 01:53:30.967 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 71.32275132275132
+2024-09-22 01:53:30.967 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 71.32275132275132
+2024-09-22 01:53:30.968 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 71.64021164021165
+2024-09-22 01:53:30.968 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 71.64021164021165
+2024-09-22 01:53:30.968 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 71.64021164021165
+2024-09-22 01:53:30.969 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 71.64021164021165
+2024-09-22 01:53:30.969 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 71.64021164021165
+2024-09-22 01:53:30.969 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 71.64021164021165
+2024-09-22 01:53:30.969 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 71.64021164021165
+2024-09-22 01:53:30.970 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 71.64021164021165
+2024-09-22 01:53:30.970 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 74.6031746031746
+2024-09-22 01:53:30.970 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 75.15873015873015
+2024-09-22 01:53:30.971 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 76.26984126984127
+2024-09-22 01:53:30.971 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 76.26984126984127
+2024-09-22 01:53:30.971 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 76.26984126984127
+2024-09-22 01:53:30.971 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 76.26984126984127
+2024-09-22 01:53:30.972 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 76.26984126984127
+2024-09-22 01:53:30.972 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 76.26984126984127
+2024-09-22 01:53:30.972 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 76.26984126984127
+2024-09-22 01:53:30.973 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 76.26984126984127
+2024-09-22 01:53:30.973 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 76.26984126984127
+2024-09-22 01:53:30.973 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 76.26984126984127
+2024-09-22 01:53:30.973 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 76.26984126984127
+2024-09-22 01:53:30.974 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 76.26984126984127
+2024-09-22 01:53:30.974 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 76.26984126984127
+2024-09-22 01:53:30.974 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 76.26984126984127
+2024-09-22 01:53:30.975 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 76.26984126984127
+2024-09-22 01:53:30.975 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 76.26984126984127
+2024-09-22 01:53:30.975 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 76.26984126984127
+2024-09-22 01:53:30.975 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 76.26984126984127
+2024-09-22 01:53:30.976 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 76.26984126984127
+2024-09-22 01:53:30.976 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 77.01058201058201
+2024-09-22 01:53:30.976 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 77.01058201058201
+2024-09-22 01:53:30.976 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 77.01058201058201
+2024-09-22 01:53:30.977 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 77.01058201058201
+2024-09-22 01:53:30.977 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 77.01058201058201
+2024-09-22 01:53:30.977 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 77.01058201058201
+2024-09-22 01:53:30.978 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 77.01058201058201
+2024-09-22 01:53:30.978 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 77.01058201058201
+2024-09-22 01:53:30.978 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 77.01058201058201
+2024-09-22 01:53:30.978 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 77.01058201058201
+2024-09-22 01:53:30.979 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 77.01058201058201
+2024-09-22 01:53:30.979 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 77.01058201058201
+2024-09-22 01:53:30.979 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 77.01058201058201
+2024-09-22 01:53:30.979 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 77.01058201058201
+2024-09-22 01:53:30.980 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 77.01058201058201
+2024-09-22 01:53:30.980 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 77.01058201058201
+2024-09-22 01:53:30.980 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 77.01058201058201
+2024-09-22 01:53:30.981 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 77.01058201058201
+2024-09-22 01:53:30.981 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 77.01058201058201
+2024-09-22 01:53:30.981 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 77.01058201058201
+2024-09-22 01:53:30.981 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 77.01058201058201
+2024-09-22 01:53:30.982 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 77.01058201058201
+2024-09-22 01:53:30.982 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 77.01058201058201
+2024-09-22 01:53:30.982 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 77.01058201058201
+2024-09-22 01:53:30.983 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 77.01058201058201
+2024-09-22 01:53:30.983 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 77.75132275132276
+2024-09-22 01:53:30.983 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 77.75132275132276
+2024-09-22 01:53:30.983 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 77.75132275132276
+2024-09-22 01:53:30.984 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 77.75132275132276
+2024-09-22 01:53:30.984 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 77.75132275132276
+2024-09-22 01:53:30.984 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 77.75132275132276
+2024-09-22 01:53:30.984 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 77.75132275132276
+2024-09-22 01:53:30.985 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 77.75132275132276
+2024-09-22 01:53:30.985 | INFO     | retrieval.model:validation_step:381 - MRR: 0.49630987740916815
+2024-09-22 01:53:30.985 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+                                                                                                                  2
+024-09-22 01:53:30.996 | INFO     | retrieval.model:validation_step:318 - Inside validation_step3<00:05,  0.39it/s]
+2024-09-22 01:53:31.011 | INFO     | retrieval.model:validation_step:322 - Embeddings staled validation step: False
+2024-09-22 01:53:33.115 | INFO     | retrieval.model:validation_step:372 - Recall@1_val: 29.96031746031746
+2024-09-22 01:53:33.116 | INFO     | retrieval.model:validation_step:372 - Recall@2_val: 45.198412698412696
+2024-09-22 01:53:33.116 | INFO     | retrieval.model:validation_step:372 - Recall@3_val: 49.232804232804234
+2024-09-22 01:53:33.117 | INFO     | retrieval.model:validation_step:372 - Recall@4_val: 55.26455026455027
+2024-09-22 01:53:33.117 | INFO     | retrieval.model:validation_step:372 - Recall@5_val: 58.439153439153436
+2024-09-22 01:53:33.117 | INFO     | retrieval.model:validation_step:372 - Recall@6_val: 60.22486772486773
+2024-09-22 01:53:33.118 | INFO     | retrieval.model:validation_step:372 - Recall@7_val: 66.17724867724868
+2024-09-22 01:53:33.118 | INFO     | retrieval.model:validation_step:372 - Recall@8_val: 67.63227513227513
+2024-09-22 01:53:33.118 | INFO     | retrieval.model:validation_step:372 - Recall@9_val: 67.63227513227513
+2024-09-22 01:53:33.118 | INFO     | retrieval.model:validation_step:372 - Recall@10_val: 70.01322751322752
+2024-09-22 01:53:33.119 | INFO     | retrieval.model:validation_step:372 - Recall@11_val: 73.58465608465609
+2024-09-22 01:53:33.119 | INFO     | retrieval.model:validation_step:372 - Recall@12_val: 73.58465608465609
+2024-09-22 01:53:33.119 | INFO     | retrieval.model:validation_step:372 - Recall@13_val: 73.58465608465609
+2024-09-22 01:53:33.119 | INFO     | retrieval.model:validation_step:372 - Recall@14_val: 75.96560846560847
+2024-09-22 01:53:33.120 | INFO     | retrieval.model:validation_step:372 - Recall@15_val: 76.75925925925927
+2024-09-22 01:53:33.120 | INFO     | retrieval.model:validation_step:372 - Recall@16_val: 76.75925925925927
+2024-09-22 01:53:33.120 | INFO     | retrieval.model:validation_step:372 - Recall@17_val: 76.75925925925927
+2024-09-22 01:53:33.120 | INFO     | retrieval.model:validation_step:372 - Recall@18_val: 77.35449735449735
+2024-09-22 01:53:33.121 | INFO     | retrieval.model:validation_step:372 - Recall@19_val: 77.35449735449735
+2024-09-22 01:53:33.121 | INFO     | retrieval.model:validation_step:372 - Recall@20_val: 77.6190476190476
+2024-09-22 01:53:33.121 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 77.6190476190476
+2024-09-22 01:53:33.122 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 77.6190476190476
+2024-09-22 01:53:33.122 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 79.99999999999999
+2024-09-22 01:53:33.122 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 81.66666666666667
+2024-09-22 01:53:33.122 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 81.66666666666667
+2024-09-22 01:53:33.123 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 81.66666666666667
+2024-09-22 01:53:33.123 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 82.46031746031744
+2024-09-22 01:53:33.123 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 82.46031746031744
+2024-09-22 01:53:33.123 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 82.46031746031744
+2024-09-22 01:53:33.124 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 82.46031746031744
+2024-09-22 01:53:33.124 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 82.46031746031744
+2024-09-22 01:53:33.124 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 82.46031746031744
+2024-09-22 01:53:33.124 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 82.46031746031744
+2024-09-22 01:53:33.125 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 82.93650793650794
+2024-09-22 01:53:33.125 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 82.93650793650794
+2024-09-22 01:53:33.125 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 83.33333333333334
+2024-09-22 01:53:33.125 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 83.33333333333334
+2024-09-22 01:53:33.126 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 83.33333333333334
+2024-09-22 01:53:33.126 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 83.33333333333334
+2024-09-22 01:53:33.126 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 83.33333333333334
+2024-09-22 01:53:33.126 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 83.33333333333334
+2024-09-22 01:53:33.127 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 83.33333333333334
+2024-09-22 01:53:33.127 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 83.80952380952381
+2024-09-22 01:53:33.127 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 83.80952380952381
+2024-09-22 01:53:33.127 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 83.80952380952381
+2024-09-22 01:53:33.128 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 83.80952380952381
+2024-09-22 01:53:33.128 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 83.80952380952381
+2024-09-22 01:53:33.128 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 83.80952380952381
+2024-09-22 01:53:33.128 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 84.28571428571429
+2024-09-22 01:53:33.129 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 84.28571428571429
+2024-09-22 01:53:33.129 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 84.55026455026456
+2024-09-22 01:53:33.129 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 84.55026455026456
+2024-09-22 01:53:33.130 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 84.55026455026456
+2024-09-22 01:53:33.130 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 84.81481481481481
+2024-09-22 01:53:33.130 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 85.21164021164022
+2024-09-22 01:53:33.130 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 85.21164021164022
+2024-09-22 01:53:33.131 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 85.21164021164022
+2024-09-22 01:53:33.131 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 85.21164021164022
+2024-09-22 01:53:33.131 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 85.21164021164022
+2024-09-22 01:53:33.131 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 85.21164021164022
+2024-09-22 01:53:33.132 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 85.21164021164022
+2024-09-22 01:53:33.132 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 85.21164021164022
+2024-09-22 01:53:33.132 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 85.21164021164022
+2024-09-22 01:53:33.132 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 86.005291005291
+2024-09-22 01:53:33.133 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 86.005291005291
+2024-09-22 01:53:33.133 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 86.005291005291
+2024-09-22 01:53:33.133 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 86.005291005291
+2024-09-22 01:53:33.133 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 86.005291005291
+2024-09-22 01:53:33.134 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 86.005291005291
+2024-09-22 01:53:33.134 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 86.005291005291
+2024-09-22 01:53:33.134 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 86.005291005291
+2024-09-22 01:53:33.134 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 86.005291005291
+2024-09-22 01:53:33.135 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 86.005291005291
+2024-09-22 01:53:33.135 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 86.005291005291
+2024-09-22 01:53:33.135 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 86.005291005291
+2024-09-22 01:53:33.135 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 86.005291005291
+2024-09-22 01:53:33.136 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 86.005291005291
+2024-09-22 01:53:33.136 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 86.005291005291
+2024-09-22 01:53:33.136 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 86.005291005291
+2024-09-22 01:53:33.136 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 86.005291005291
+2024-09-22 01:53:33.137 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 86.005291005291
+2024-09-22 01:53:33.137 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 86.005291005291
+2024-09-22 01:53:33.137 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 86.005291005291
+2024-09-22 01:53:33.137 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 86.005291005291
+2024-09-22 01:53:33.138 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 86.005291005291
+2024-09-22 01:53:33.138 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 86.005291005291
+2024-09-22 01:53:33.138 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 86.005291005291
+2024-09-22 01:53:33.138 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 86.005291005291
+2024-09-22 01:53:33.139 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 86.005291005291
+2024-09-22 01:53:33.139 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 87.19576719576719
+2024-09-22 01:53:33.139 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 87.19576719576719
+2024-09-22 01:53:33.139 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 87.19576719576719
+2024-09-22 01:53:33.140 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 87.19576719576719
+2024-09-22 01:53:33.140 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 87.19576719576719
+2024-09-22 01:53:33.140 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 87.19576719576719
+2024-09-22 01:53:33.140 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 88.38624338624338
+2024-09-22 01:53:33.141 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 88.38624338624338
+2024-09-22 01:53:33.141 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 88.38624338624338
+2024-09-22 01:53:33.141 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 88.38624338624338
+2024-09-22 01:53:33.142 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 88.38624338624338
+2024-09-22 01:53:33.142 | INFO     | retrieval.model:validation_step:381 - MRR: 0.5775761160854328
+2024-09-22 01:53:33.142 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+                                                                                                                  2
+024-09-22 01:53:33.149 | INFO     | retrieval.model:validation_step:318 - Inside validation_step5<00:02,  0.40it/s]
+2024-09-22 01:53:33.164 | INFO     | retrieval.model:validation_step:322 - Embeddings staled validation step: False
+2024-09-22 01:53:34.160 | INFO     | retrieval.model:validation_step:372 - Recall@1_val: 24.24242424242424
+2024-09-22 01:53:34.165 | INFO     | retrieval.model:validation_step:372 - Recall@2_val: 32.57575757575758
+2024-09-22 01:53:34.165 | INFO     | retrieval.model:validation_step:372 - Recall@3_val: 37.12121212121212
+2024-09-22 01:53:34.166 | INFO     | retrieval.model:validation_step:372 - Recall@4_val: 46.21212121212121
+2024-09-22 01:53:34.166 | INFO     | retrieval.model:validation_step:372 - Recall@5_val: 48.48484848484848
+2024-09-22 01:53:34.166 | INFO     | retrieval.model:validation_step:372 - Recall@6_val: 51.515151515151516
+2024-09-22 01:53:34.166 | INFO     | retrieval.model:validation_step:372 - Recall@7_val: 54.54545454545454
+2024-09-22 01:53:34.167 | INFO     | retrieval.model:validation_step:372 - Recall@8_val: 59.84848484848485
+2024-09-22 01:53:34.167 | INFO     | retrieval.model:validation_step:372 - Recall@9_val: 62.121212121212125
+2024-09-22 01:53:34.167 | INFO     | retrieval.model:validation_step:372 - Recall@10_val: 66.66666666666666
+2024-09-22 01:53:34.168 | INFO     | retrieval.model:validation_step:372 - Recall@11_val: 66.66666666666666
+2024-09-22 01:53:34.168 | INFO     | retrieval.model:validation_step:372 - Recall@12_val: 67.42424242424242
+2024-09-22 01:53:34.168 | INFO     | retrieval.model:validation_step:372 - Recall@13_val: 67.42424242424242
+2024-09-22 01:53:34.168 | INFO     | retrieval.model:validation_step:372 - Recall@14_val: 68.18181818181817
+2024-09-22 01:53:34.169 | INFO     | retrieval.model:validation_step:372 - Recall@15_val: 68.18181818181817
+2024-09-22 01:53:34.169 | INFO     | retrieval.model:validation_step:372 - Recall@16_val: 68.18181818181817
+2024-09-22 01:53:34.169 | INFO     | retrieval.model:validation_step:372 - Recall@17_val: 68.18181818181817
+2024-09-22 01:53:34.169 | INFO     | retrieval.model:validation_step:372 - Recall@18_val: 68.18181818181817
+2024-09-22 01:53:34.170 | INFO     | retrieval.model:validation_step:372 - Recall@19_val: 68.18181818181817
+2024-09-22 01:53:34.170 | INFO     | retrieval.model:validation_step:372 - Recall@20_val: 68.18181818181817
+2024-09-22 01:53:34.170 | INFO     | retrieval.model:validation_step:372 - Recall@21_val: 68.18181818181817
+2024-09-22 01:53:34.170 | INFO     | retrieval.model:validation_step:372 - Recall@22_val: 68.18181818181817
+2024-09-22 01:53:34.171 | INFO     | retrieval.model:validation_step:372 - Recall@23_val: 68.18181818181817
+2024-09-22 01:53:34.171 | INFO     | retrieval.model:validation_step:372 - Recall@24_val: 70.45454545454545
+2024-09-22 01:53:34.171 | INFO     | retrieval.model:validation_step:372 - Recall@25_val: 70.45454545454545
+2024-09-22 01:53:34.171 | INFO     | retrieval.model:validation_step:372 - Recall@26_val: 71.2121212121212
+2024-09-22 01:53:34.172 | INFO     | retrieval.model:validation_step:372 - Recall@27_val: 71.2121212121212
+2024-09-22 01:53:34.172 | INFO     | retrieval.model:validation_step:372 - Recall@28_val: 71.96969696969695
+2024-09-22 01:53:34.172 | INFO     | retrieval.model:validation_step:372 - Recall@29_val: 76.51515151515152
+2024-09-22 01:53:34.172 | INFO     | retrieval.model:validation_step:372 - Recall@30_val: 76.51515151515152
+2024-09-22 01:53:34.173 | INFO     | retrieval.model:validation_step:372 - Recall@31_val: 76.51515151515152
+2024-09-22 01:53:34.173 | INFO     | retrieval.model:validation_step:372 - Recall@32_val: 76.51515151515152
+2024-09-22 01:53:34.173 | INFO     | retrieval.model:validation_step:372 - Recall@33_val: 76.51515151515152
+2024-09-22 01:53:34.174 | INFO     | retrieval.model:validation_step:372 - Recall@34_val: 76.51515151515152
+2024-09-22 01:53:34.174 | INFO     | retrieval.model:validation_step:372 - Recall@35_val: 76.51515151515152
+2024-09-22 01:53:34.174 | INFO     | retrieval.model:validation_step:372 - Recall@36_val: 77.27272727272727
+2024-09-22 01:53:34.174 | INFO     | retrieval.model:validation_step:372 - Recall@37_val: 77.27272727272727
+2024-09-22 01:53:34.175 | INFO     | retrieval.model:validation_step:372 - Recall@38_val: 77.27272727272727
+2024-09-22 01:53:34.175 | INFO     | retrieval.model:validation_step:372 - Recall@39_val: 77.27272727272727
+2024-09-22 01:53:34.175 | INFO     | retrieval.model:validation_step:372 - Recall@40_val: 77.27272727272727
+2024-09-22 01:53:34.175 | INFO     | retrieval.model:validation_step:372 - Recall@41_val: 77.27272727272727
+2024-09-22 01:53:34.176 | INFO     | retrieval.model:validation_step:372 - Recall@42_val: 77.27272727272727
+2024-09-22 01:53:34.176 | INFO     | retrieval.model:validation_step:372 - Recall@43_val: 81.81818181818183
+2024-09-22 01:53:34.176 | INFO     | retrieval.model:validation_step:372 - Recall@44_val: 81.81818181818183
+2024-09-22 01:53:34.176 | INFO     | retrieval.model:validation_step:372 - Recall@45_val: 81.81818181818183
+2024-09-22 01:53:34.177 | INFO     | retrieval.model:validation_step:372 - Recall@46_val: 81.81818181818183
+2024-09-22 01:53:34.177 | INFO     | retrieval.model:validation_step:372 - Recall@47_val: 81.81818181818183
+2024-09-22 01:53:34.177 | INFO     | retrieval.model:validation_step:372 - Recall@48_val: 81.81818181818183
+2024-09-22 01:53:34.177 | INFO     | retrieval.model:validation_step:372 - Recall@49_val: 81.81818181818183
+2024-09-22 01:53:34.178 | INFO     | retrieval.model:validation_step:372 - Recall@50_val: 81.81818181818183
+2024-09-22 01:53:34.178 | INFO     | retrieval.model:validation_step:372 - Recall@51_val: 81.81818181818183
+2024-09-22 01:53:34.178 | INFO     | retrieval.model:validation_step:372 - Recall@52_val: 81.81818181818183
+2024-09-22 01:53:34.178 | INFO     | retrieval.model:validation_step:372 - Recall@53_val: 81.81818181818183
+2024-09-22 01:53:34.179 | INFO     | retrieval.model:validation_step:372 - Recall@54_val: 81.81818181818183
+2024-09-22 01:53:34.179 | INFO     | retrieval.model:validation_step:372 - Recall@55_val: 81.81818181818183
+2024-09-22 01:53:34.179 | INFO     | retrieval.model:validation_step:372 - Recall@56_val: 81.81818181818183
+2024-09-22 01:53:34.179 | INFO     | retrieval.model:validation_step:372 - Recall@57_val: 86.36363636363636
+2024-09-22 01:53:34.180 | INFO     | retrieval.model:validation_step:372 - Recall@58_val: 86.36363636363636
+2024-09-22 01:53:34.180 | INFO     | retrieval.model:validation_step:372 - Recall@59_val: 86.36363636363636
+2024-09-22 01:53:34.180 | INFO     | retrieval.model:validation_step:372 - Recall@60_val: 86.36363636363636
+2024-09-22 01:53:34.180 | INFO     | retrieval.model:validation_step:372 - Recall@61_val: 86.36363636363636
+2024-09-22 01:53:34.181 | INFO     | retrieval.model:validation_step:372 - Recall@62_val: 86.36363636363636
+2024-09-22 01:53:34.181 | INFO     | retrieval.model:validation_step:372 - Recall@63_val: 86.36363636363636
+2024-09-22 01:53:34.181 | INFO     | retrieval.model:validation_step:372 - Recall@64_val: 86.36363636363636
+2024-09-22 01:53:34.181 | INFO     | retrieval.model:validation_step:372 - Recall@65_val: 86.36363636363636
+2024-09-22 01:53:34.182 | INFO     | retrieval.model:validation_step:372 - Recall@66_val: 86.36363636363636
+2024-09-22 01:53:34.182 | INFO     | retrieval.model:validation_step:372 - Recall@67_val: 86.36363636363636
+2024-09-22 01:53:34.182 | INFO     | retrieval.model:validation_step:372 - Recall@68_val: 86.36363636363636
+2024-09-22 01:53:34.182 | INFO     | retrieval.model:validation_step:372 - Recall@69_val: 86.36363636363636
+2024-09-22 01:53:34.183 | INFO     | retrieval.model:validation_step:372 - Recall@70_val: 86.36363636363636
+2024-09-22 01:53:34.183 | INFO     | retrieval.model:validation_step:372 - Recall@71_val: 86.36363636363636
+2024-09-22 01:53:34.183 | INFO     | retrieval.model:validation_step:372 - Recall@72_val: 86.36363636363636
+2024-09-22 01:53:34.183 | INFO     | retrieval.model:validation_step:372 - Recall@73_val: 87.87878787878788
+2024-09-22 01:53:34.184 | INFO     | retrieval.model:validation_step:372 - Recall@74_val: 87.87878787878788
+2024-09-22 01:53:34.184 | INFO     | retrieval.model:validation_step:372 - Recall@75_val: 87.87878787878788
+2024-09-22 01:53:34.184 | INFO     | retrieval.model:validation_step:372 - Recall@76_val: 87.87878787878788
+2024-09-22 01:53:34.184 | INFO     | retrieval.model:validation_step:372 - Recall@77_val: 87.87878787878788
+2024-09-22 01:53:34.185 | INFO     | retrieval.model:validation_step:372 - Recall@78_val: 87.87878787878788
+2024-09-22 01:53:34.185 | INFO     | retrieval.model:validation_step:372 - Recall@79_val: 87.87878787878788
+2024-09-22 01:53:34.185 | INFO     | retrieval.model:validation_step:372 - Recall@80_val: 87.87878787878788
+2024-09-22 01:53:34.185 | INFO     | retrieval.model:validation_step:372 - Recall@81_val: 88.63636363636365
+2024-09-22 01:53:34.186 | INFO     | retrieval.model:validation_step:372 - Recall@82_val: 88.63636363636365
+2024-09-22 01:53:34.186 | INFO     | retrieval.model:validation_step:372 - Recall@83_val: 88.63636363636365
+2024-09-22 01:53:34.186 | INFO     | retrieval.model:validation_step:372 - Recall@84_val: 88.63636363636365
+2024-09-22 01:53:34.186 | INFO     | retrieval.model:validation_step:372 - Recall@85_val: 88.63636363636365
+2024-09-22 01:53:34.187 | INFO     | retrieval.model:validation_step:372 - Recall@86_val: 88.63636363636365
+2024-09-22 01:53:34.187 | INFO     | retrieval.model:validation_step:372 - Recall@87_val: 88.63636363636365
+2024-09-22 01:53:34.187 | INFO     | retrieval.model:validation_step:372 - Recall@88_val: 88.63636363636365
+2024-09-22 01:53:34.187 | INFO     | retrieval.model:validation_step:372 - Recall@89_val: 88.63636363636365
+2024-09-22 01:53:34.188 | INFO     | retrieval.model:validation_step:372 - Recall@90_val: 88.63636363636365
+2024-09-22 01:53:34.188 | INFO     | retrieval.model:validation_step:372 - Recall@91_val: 88.63636363636365
+2024-09-22 01:53:34.188 | INFO     | retrieval.model:validation_step:372 - Recall@92_val: 88.63636363636365
+2024-09-22 01:53:34.189 | INFO     | retrieval.model:validation_step:372 - Recall@93_val: 90.90909090909093
+2024-09-22 01:53:34.189 | INFO     | retrieval.model:validation_step:372 - Recall@94_val: 90.90909090909093
+2024-09-22 01:53:34.189 | INFO     | retrieval.model:validation_step:372 - Recall@95_val: 90.90909090909093
+2024-09-22 01:53:34.189 | INFO     | retrieval.model:validation_step:372 - Recall@96_val: 90.90909090909093
+2024-09-22 01:53:34.190 | INFO     | retrieval.model:validation_step:372 - Recall@97_val: 90.90909090909093
+2024-09-22 01:53:34.190 | INFO     | retrieval.model:validation_step:372 - Recall@98_val: 90.90909090909093
+2024-09-22 01:53:34.190 | INFO     | retrieval.model:validation_step:372 - Recall@99_val: 90.90909090909093
+2024-09-22 01:53:34.190 | INFO     | retrieval.model:validation_step:372 - Recall@100_val: 95.45454545454545
+2024-09-22 01:53:34.191 | INFO     | retrieval.model:validation_step:381 - MRR: 0.5633461711616653
+2024-09-22 01:53:34.191 | INFO     | retrieval.model:validation_step:389 - End of validation_step
+Epoch 3: 100%|████████████████████████████████████████████████████| 10391/10391 [1:07:45<00:00,  2.56it/s, v_num=6]
+[rank: 1] Metric Recall@10_val improved by 0.117 >= min_delta = 0.0. New best score: 65.141
+[rank: 0] Metric Recall@10_val improved by 0.117 >= min_delta = 0.0. New best score: 65.141
+[rank: 3] Metric Recall@10_val improved by 0.117 >= min_delta = 0.0. New best score: 65.141
+[rank: 2] Metric Recall@10_val improved by 0.117 >= min_delta = 0.0. New best score: 65.141
+Epoch 3, global step 14101: 'Recall@10_val' reached 65.14058 (best 65.14058), saving model to '/data/yingzi_ma/lean
+_project/checkpoints_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c10327
+98a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_val=65.14.ckpt' as top 4
+`Trainer.fit` stopped: `max_epochs=4` reached.
+Epoch 3: 100%|████████████████████████████████████████████████████| 10391/10391 [1:07:49<00:00,  2.55it/s, v_num=6]
+2024-09-22 01:53:41.243 | INFO     | __main__:main:1679 - hit the barrier after training
+2024-09-22 01:53:41.270 | INFO     | __main__:main:1679 - hit the barrier after training
+2024-09-22 01:53:41.450 | INFO     | __main__:main:1679 - hit the barrier after training
+2024-09-22 01:53:41.631 | INFO     | __main__:main:1679 - hit the barrier after training
+2024-09-22 01:53:41.631 | INFO     | __main__:main:1685 - Finished progressive training at epoch 4
+2024-09-22 01:53:41.631 | INFO     | __main__:main:1685 - Finished progressive training at epoch 4
+2024-09-22 01:53:41.631 | INFO     | __main__:main:1685 - Finished progressive training at epoch 4
+2024-09-22 01:53:41.631 | INFO     | __main__:main:1685 - Finished progressive training at epoch 4
+2024-09-22 01:53:41.632 | INFO     | __main__:find_latest_checkpoint:704 - Using the latest checkpoint: /data/yingz
+i_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47
+fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_val=65.14.ckpt
+2024-09-22 01:53:41.632 | INFO     | __main__:find_latest_checkpoint:704 - Using the latest checkpoint: /data/yingz
+i_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47
+fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_val=65.14.ckpt
+2024-09-22 01:53:41.632 | INFO     | __main__:main:1692 - Found latest checkpoint: /data/yingzi_ma/lean_project/che
+ckpoints_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf
+261445d_lambda_0.1_epoch=3-Recall@10_val=65.14.ckpt
+2024-09-22 01:53:41.632 | INFO     | __main__:find_latest_checkpoint:704 - Using the latest checkpoint: /data/yingz
+i_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47
+fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_val=65.14.ckpt
+2024-09-22 01:53:41.632 | INFO     | __main__:main:1692 - Found latest checkpoint: /data/yingzi_ma/lean_project/che
+ckpoints_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf
+261445d_lambda_0.1_epoch=3-Recall@10_val=65.14.ckpt
+2024-09-22 01:53:41.632 | INFO     | __main__:find_latest_checkpoint:704 - Using the latest checkpoint: /data/yingz
+i_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47
+fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_val=65.14.ckpt
+2024-09-22 01:53:41.632 | INFO     | __main__:main:1692 - Found latest checkpoint: /data/yingzi_ma/lean_project/che
+ckpoints_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf
+261445d_lambda_0.1_epoch=3-Recall@10_val=65.14.ckpt
+2024-09-22 01:53:41.632 | INFO     | __main__:main:1692 - Found latest checkpoint: /data/yingzi_ma/lean_project/che
+ckpoints_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf
+261445d_lambda_0.1_epoch=3-Recall@10_val=65.14.ckpt
+2024-09-22 01:53:45.768 | INFO     | __main__:main:1701 - Testing...
+2024-09-22 01:53:45.771 | INFO     | retrieval.main:run_cli:60 - PID: 1858449
+2024-09-22 01:53:45.794 | INFO     | __main__:main:1701 - Testing...
+2024-09-22 01:53:45.794 | INFO     | retrieval.main:run_cli:60 - PID: 1870221
+2024-09-22 01:53:45.844 | INFO     | __main__:main:1701 - Testing...
+2024-09-22 01:53:45.844 | INFO     | retrieval.main:run_cli:60 - PID: 1870220
+2024-09-22 01:53:45.863 | INFO     | __main__:main:1701 - Testing...
+2024-09-22 01:53:45.863 | INFO     | retrieval.main:run_cli:60 - PID: 1870219
+[rank: 0] Seed set to 3407
+2024-09-22 01:53:46.035 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2
+665f091/random
+2024-09-22 01:53:46.035 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723
+c2665f091/corpus.jsonl
+[rank: 3] Seed set to 3407
+2024-09-22 01:53:46.043 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2
+665f091/random
+2024-09-22 01:53:46.043 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723
+c2665f091/corpus.jsonl
+[rank: 2] Seed set to 3407
+2024-09-22 01:53:46.099 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2
+665f091/random
+2024-09-22 01:53:46.099 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723
+c2665f091/corpus.jsonl
+[rank: 1] Seed set to 3407
+2024-09-22 01:53:46.197 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2
+665f091/random
+2024-09-22 01:53:46.198 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723
+c2665f091/corpus.jsonl
+2024-09-22 01:53:46.641 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/cor
+pus.jsonl
+2024-09-22 01:53:46.643 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/cor
+pus.jsonl
+2024-09-22 01:53:46.646 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/cor
+pus.jsonl
+2024-09-22 01:53:46.777 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/cor
+pus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+[rank: 3] Seed set to 3407
+[rank: 2] Seed set to 3407
+[rank: 1] Seed set to 3407
+2024-09-22 01:54:27.179 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b4
+14b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 361595
+2024-09-22 01:54:27.207 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b4
+14b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 4889
+2024-09-22 01:54:28.032 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b4
+14b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 361595
+2024-09-22 01:54:28.060 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b4
+14b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 4889
+2024-09-22 01:54:29.048 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b4
+14b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 361595
+2024-09-22 01:54:29.075 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b4
+14b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 4889
+2024-09-22 01:54:35.203 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b4
+14b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 361595
+2024-09-22 01:54:35.235 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b4
+14b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 4889
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curricu
+lum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_v
+al=65.14.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curricul
+um_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_va
+l=65.14.ckpt
+2024-09-22 01:54:40.011 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 01:54:40.012 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|                                                                                     | 0/2783 [00:00<?, ?it/s]
+2024-09-22 01:54:40.125 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 01:54:40.129 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|                                                                             | 2/2783 [00:00<03:02, 15.22it/s]
+2024-09-22 01:54:40.210 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 01:54:40.211 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+Predicting: |                                                                                | 0/? [00:00<?, ?it/s]
+2024-09-22 01:54:40.832 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 01:54:40.832 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████████████| 2783/2783 [16:19<00:00,  2.84it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 2783/2783 [16:21<00:00,  2.84it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 2783/2783 [16:24<00:00,  2.83it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 2783/2783 [16:32<00:00,  2.80it/s]
+Predicting DataLoader 0:   0%|                                                              | 0/20 [00:00<?, ?it/s]
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/loops/prediction_loop.py:25
+5: predict returned None if it was on purpose, ignore this warning...
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████████████| 20/20 [00:49<00:00,  0.40it/s]
+2024-09-22 02:12:03.072 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:12:03.072 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:12:03.072 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:12:03.072 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:12:03.286 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_1.pkl
+2024-09-22 02:12:03.286 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:12:03.299 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_2.pkl
+2024-09-22 02:12:03.299 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:12:03.299 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_3.pkl
+2024-09-22 02:12:03.299 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:12:03.311 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_0.pkl
+2024-09-22 02:12:03.311 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:12:03.312 | INFO     | retrieval.model:on_predict_epoch_end:566 - All GPUs have completed their predi
+ctions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████████████| 20/20 [00:49<00:00,  0.40it/s]
+2024-09-22 02:12:04.292 | INFO     | retrieval.main:run_cli:60 - PID: 1870221
+2024-09-22 02:12:04.326 | INFO     | retrieval.main:run_cli:60 - PID: 1870219
+2024-09-22 02:12:04.349 | INFO     | retrieval.main:run_cli:60 - PID: 1870220
+[rank: 3] Seed set to 3407
+2024-09-22 02:12:04.626 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367c4
+8c0a084411853a576389ecf5/random
+2024-09-22 02:12:04.626 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367
+c48c0a084411853a576389ecf5/corpus.jsonl
+[rank: 1] Seed set to 3407
+2024-09-22 02:12:04.654 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367c4
+8c0a084411853a576389ecf5/random
+2024-09-22 02:12:04.654 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367
+c48c0a084411853a576389ecf5/corpus.jsonl
+[rank: 2] Seed set to 3407
+2024-09-22 02:12:04.669 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367c4
+8c0a084411853a576389ecf5/random
+2024-09-22 02:12:04.669 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367
+c48c0a084411853a576389ecf5/corpus.jsonl
+2024-09-22 02:12:05.168 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a0844118
+53a576389ecf5/corpus.jsonl
+2024-09-22 02:12:05.175 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a0844118
+53a576389ecf5/corpus.jsonl
+2024-09-22 02:12:05.211 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a0844118
+53a576389ecf5/corpus.jsonl
+2024-09-22 02:12:05.415 | INFO     | __main__:main:1723 - Loaded the predictions pickle files
+2024-09-22 02:12:05.488 | INFO     | __main__:main:1726 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_si
+ngle_repo_no_ewc_curriculum_abl3/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/test.jso
+n
+100%|███████████████████████████████████████████████████████████████████████| 2427/2427 [00:00<00:00, 35102.47it/s]
+2024-09-22 02:12:05.558 | INFO     | __main__:main:1728 - R@1 = 23.8909113394238 %, R@10 = 64.09778881603029 %, MRR
+ = 0.531797377792438
+2024-09-22 02:12:05.560 | INFO     | retrieval.main:run_cli:60 - PID: 1858449
+[rank: 0] Seed set to 3407
+2024-09-22 02:12:05.819 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367c4
+8c0a084411853a576389ecf5/random
+2024-09-22 02:12:05.819 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367
+c48c0a084411853a576389ecf5/corpus.jsonl
+2024-09-22 02:12:06.339 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a0844118
+53a576389ecf5/corpus.jsonl
+[rank: 3] Seed set to 3407
+[rank: 2] Seed set to 3407
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+[rank: 1] Seed set to 3407
+2024-09-22 02:12:20.181 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0
+fb051367c48c0a084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 179343
+2024-09-22 02:12:20.202 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0
+fb051367c48c0a084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 2489
+2024-09-22 02:12:21.703 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0
+fb051367c48c0a084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 179343
+2024-09-22 02:12:21.717 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0
+fb051367c48c0a084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 2489
+2024-09-22 02:12:27.151 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0
+fb051367c48c0a084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 179343
+2024-09-22 02:12:27.166 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0
+fb051367c48c0a084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 2489
+2024-09-22 02:12:27.469 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0
+fb051367c48c0a084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 179343
+2024-09-22 02:12:27.482 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0
+fb051367c48c0a084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 2489
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curricu
+lum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_v
+al=65.14.ckpt
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curricul
+um_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_va
+l=65.14.ckpt
+2024-09-22 02:12:30.001 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:12:30.002 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|                                                                                     | 0/1840 [00:00<?, ?it/s]
+2024-09-22 02:12:30.114 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:12:30.115 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|                                                                             | 2/1840 [00:00<01:56, 15.80it/s]
+2024-09-22 02:12:30.188 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:12:30.189 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+Predicting: |                                                                                | 0/? [00:00<?, ?it/s]
+2024-09-22 02:12:31.024 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:12:31.025 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████████████| 1840/1840 [09:47<00:00,  3.13it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 1840/1840 [09:49<00:00,  3.12it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 1840/1840 [09:50<00:00,  3.11it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 1840/1840 [09:56<00:00,  3.08it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████████████| 10/10 [00:21<00:00,  0.46it/s]
+2024-09-22 02:22:49.346 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:22:49.347 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:22:49.347 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:22:49.347 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:22:49.439 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_0.pkl
+2024-09-22 02:22:49.440 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:22:49.450 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_1.pkl
+2024-09-22 02:22:49.450 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:22:49.453 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_2.pkl
+2024-09-22 02:22:49.453 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:22:49.455 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_3.pkl
+2024-09-22 02:22:49.456 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:22:49.456 | INFO     | retrieval.model:on_predict_epoch_end:566 - All GPUs have completed their predi
+ctions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████████████| 10/10 [00:21<00:00,  0.46it/s]
+2024-09-22 02:22:50.528 | INFO     | retrieval.main:run_cli:60 - PID: 1870219
+2024-09-22 02:22:50.544 | INFO     | retrieval.main:run_cli:60 - PID: 1870221
+2024-09-22 02:22:50.625 | INFO     | retrieval.main:run_cli:60 - PID: 1870220
+[rank: 3] Seed set to 3407
+2024-09-22 02:22:50.853 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a
+6046c1baf261445d/random
+2024-09-22 02:22:50.854 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c103279
+8a6046c1baf261445d/corpus.jsonl
+[rank: 1] Seed set to 3407
+2024-09-22 02:22:50.865 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a
+6046c1baf261445d/random
+2024-09-22 02:22:50.865 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c103279
+8a6046c1baf261445d/corpus.jsonl
+[rank: 2] Seed set to 3407
+2024-09-22 02:22:50.958 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a
+6046c1baf261445d/random
+2024-09-22 02:22:50.958 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c103279
+8a6046c1baf261445d/corpus.jsonl
+2024-09-22 02:22:51.396 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf26
+1445d/corpus.jsonl
+2024-09-22 02:22:51.458 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf26
+1445d/corpus.jsonl
+2024-09-22 02:22:51.582 | INFO     | __main__:main:1723 - Loaded the predictions pickle files
+2024-09-22 02:22:51.652 | INFO     | __main__:main:1726 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_si
+ngle_repo_no_ewc_curriculum_abl3/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf
+5/random/test.json
+  0%|                                                                                     | 0/1577 [00:00<?, ?it/s]
+2024-09-22 02:22:51.673 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf26
+1445d/corpus.jsonl
+100%|███████████████████████████████████████████████████████████████████████| 1577/1577 [00:00<00:00, 33561.92it/s]
+2024-09-22 02:22:51.700 | INFO     | __main__:main:1728 - R@1 = 26.05514426420404 %, R@10 = 65.78583827961162 %, MR
+R = 0.5568043806559443
+2024-09-22 02:22:51.702 | INFO     | retrieval.main:run_cli:60 - PID: 1858449
+[rank: 0] Seed set to 3407
+2024-09-22 02:22:52.056 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a
+6046c1baf261445d/random
+2024-09-22 02:22:52.056 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c103279
+8a6046c1baf261445d/corpus.jsonl
+2024-09-22 02:22:52.681 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf26
+1445d/corpus.jsonl
+[rank: 1] Seed set to 3407
+[rank: 3] Seed set to 3407
+[rank: 2] Seed set to 3407
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+2024-09-22 02:23:05.835 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd
+6c1032798a6046c1baf261445d/random/cache_train/cached_data.pkl
+Training dataset size: 166265
+2024-09-22 02:23:05.868 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd
+6c1032798a6046c1baf261445d/random/cache_pred/cached_data.pkl
+Testing dataset size: 2484
+2024-09-22 02:23:10.020 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd
+6c1032798a6046c1baf261445d/random/cache_train/cached_data.pkl
+Training dataset size: 166265
+2024-09-22 02:23:10.034 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd
+6c1032798a6046c1baf261445d/random/cache_pred/cached_data.pkl
+Testing dataset size: 2484
+2024-09-22 02:23:11.747 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd
+6c1032798a6046c1baf261445d/random/cache_train/cached_data.pkl
+Training dataset size: 166265
+2024-09-22 02:23:15.321 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd
+6c1032798a6046c1baf261445d/random/cache_pred/cached_data.pkl
+Testing dataset size: 2484
+2024-09-22 02:23:15.397 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd
+6c1032798a6046c1baf261445d/random/cache_train/cached_data.pkl
+Training dataset size: 166265
+2024-09-22 02:23:15.420 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd
+6c1032798a6046c1baf261445d/random/cache_pred/cached_data.pkl
+Testing dataset size: 2484
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curricu
+lum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_v
+al=65.14.ckpt
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curricul
+um_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_va
+l=65.14.ckpt
+2024-09-22 02:23:18.357 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:23:18.358 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|                                                                             | 2/1805 [00:00<01:49, 16.45it/s]
+2024-09-22 02:23:18.550 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:23:18.550 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|▏                                                                            | 4/1805 [00:00<02:43, 11.04it/s]
+2024-09-22 02:23:18.782 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:23:18.782 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+Predicting: |                                                                                | 0/? [00:00<?, ?it/s]
+2024-09-22 02:23:19.578 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:23:19.578 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████████████| 1805/1805 [09:39<00:00,  3.12it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 1805/1805 [09:40<00:00,  3.11it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 1805/1805 [09:42<00:00,  3.10it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 1805/1805 [09:47<00:00,  3.07it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████████████| 10/10 [00:22<00:00,  0.45it/s]
+2024-09-22 02:33:29.620 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:33:29.620 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:33:29.620 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:33:29.620 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:33:29.723 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_0.pkl
+2024-09-22 02:33:29.724 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:33:29.725 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_1.pkl
+2024-09-22 02:33:29.725 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:33:29.730 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_3.pkl
+2024-09-22 02:33:29.730 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:33:29.731 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_2.pkl
+2024-09-22 02:33:29.731 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:33:29.731 | INFO     | retrieval.model:on_predict_epoch_end:566 - All GPUs have completed their predi
+ctions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████████████| 10/10 [00:22<00:00,  0.45it/s]
+2024-09-22 02:33:30.801 | INFO     | retrieval.main:run_cli:60 - PID: 1870219
+2024-09-22 02:33:30.823 | INFO     | retrieval.main:run_cli:60 - PID: 1870221
+2024-09-22 02:33:30.885 | INFO     | retrieval.main:run_cli:60 - PID: 1870220
+[rank: 1] Seed set to 3407
+2024-09-22 02:33:31.110 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7b
+d67f9916ae24253d566/random
+2024-09-22 02:33:31.110 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd
+7bd67f9916ae24253d566/corpus.jsonl
+[rank: 3] Seed set to 3407
+2024-09-22 02:33:31.131 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7b
+d67f9916ae24253d566/random
+2024-09-22 02:33:31.131 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd
+7bd67f9916ae24253d566/corpus.jsonl
+[rank: 2] Seed set to 3407
+2024-09-22 02:33:31.159 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7b
+d67f9916ae24253d566/random
+2024-09-22 02:33:31.159 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd
+7bd67f9916ae24253d566/corpus.jsonl
+2024-09-22 02:33:31.518 | INFO     | __main__:main:1723 - Loaded the predictions pickle files
+2024-09-22 02:33:31.561 | INFO     | __main__:main:1726 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_si
+ngle_repo_no_ewc_curriculum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d/random
+/test.json
+100%|███████████████████████████████████████████████████████████████████████| 1538/1538 [00:00<00:00, 47114.62it/s]
+2024-09-22 02:33:31.594 | INFO     | __main__:main:1728 - R@1 = 26.78439665473481 %, R@10 = 65.27121714057671 %, MR
+R = 0.5565216854609171
+2024-09-22 02:33:31.596 | INFO     | retrieval.main:run_cli:60 - PID: 1858449
+2024-09-22 02:33:31.706 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae2
+4253d566/corpus.jsonl
+2024-09-22 02:33:31.735 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae2
+4253d566/corpus.jsonl
+[rank: 0] Seed set to 3407
+2024-09-22 02:33:31.850 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7b
+d67f9916ae24253d566/random
+2024-09-22 02:33:31.850 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd
+7bd67f9916ae24253d566/corpus.jsonl
+2024-09-22 02:33:32.368 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae2
+4253d566/corpus.jsonl
+2024-09-22 02:33:32.386 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae2
+4253d566/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+[rank: 1] Seed set to 3407
+[rank: 3] Seed set to 3407
+[rank: 2] Seed set to 3407
+2024-09-22 02:33:45.075 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd6856
+60b5fedd7bd67f9916ae24253d566/random/cache_train/cached_data.pkl
+Training dataset size: 195152
+2024-09-22 02:33:45.095 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd6856
+60b5fedd7bd67f9916ae24253d566/random/cache_pred/cached_data.pkl
+Testing dataset size: 3036
+2024-09-22 02:33:48.289 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd6856
+60b5fedd7bd67f9916ae24253d566/random/cache_train/cached_data.pkl
+Training dataset size: 195152
+2024-09-22 02:33:48.308 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd6856
+60b5fedd7bd67f9916ae24253d566/random/cache_pred/cached_data.pkl
+Testing dataset size: 3036
+2024-09-22 02:33:48.308 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd6856
+60b5fedd7bd67f9916ae24253d566/random/cache_train/cached_data.pkl
+Training dataset size: 195152
+2024-09-22 02:33:48.325 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd6856
+60b5fedd7bd67f9916ae24253d566/random/cache_pred/cached_data.pkl
+Testing dataset size: 3036
+2024-09-22 02:33:48.454 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd6856
+60b5fedd7bd67f9916ae24253d566/random/cache_train/cached_data.pkl
+Training dataset size: 195152
+2024-09-22 02:33:48.469 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd6856
+60b5fedd7bd67f9916ae24253d566/random/cache_pred/cached_data.pkl
+Testing dataset size: 3036
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curricu
+lum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_v
+al=65.14.ckpt
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curricul
+um_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_va
+l=65.14.ckpt
+2024-09-22 02:33:55.450 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:33:55.451 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|                                                                             | 2/1809 [00:00<01:57, 15.43it/s]
+2024-09-22 02:33:55.666 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:33:55.667 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|▏                                                                            | 4/1809 [00:00<02:50, 10.60it/s]
+2024-09-22 02:33:55.831 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:33:55.831 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+Predicting: |                                                                                | 0/? [00:00<?, ?it/s]
+2024-09-22 02:33:56.685 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:33:56.686 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████████████| 1809/1809 [09:41<00:00,  3.11it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 1809/1809 [09:43<00:00,  3.10it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 1809/1809 [09:44<00:00,  3.09it/s]
+100%|██████████████████████████████████████████████████████████████████████████| 1809/1809 [09:50<00:00,  3.06it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████████████| 12/12 [00:28<00:00,  0.43it/s]
+2024-09-22 02:44:15.872 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:44:15.979 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_0.pkl
+2024-09-22 02:44:15.979 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:44:20.543 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:44:20.543 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:44:20.650 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_2.pkl
+2024-09-22 02:44:20.650 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:44:20.692 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_1.pkl
+2024-09-22 02:44:20.692 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:44:22.642 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-22 02:44:22.794 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test
+_pickle_3.pkl
+2024-09-22 02:44:22.795 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-22 02:44:22.795 | INFO     | retrieval.model:on_predict_epoch_end:566 - All GPUs have completed their predi
+ctions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████████████| 12/12 [00:35<00:00,  0.34it/s]
+2024-09-22 02:44:23.898 | INFO     | retrieval.main:run_cli:60 - PID: 1870220
+2024-09-22 02:44:23.935 | INFO     | retrieval.main:run_cli:60 - PID: 1870221
+2024-09-22 02:44:23.968 | INFO     | retrieval.main:run_cli:60 - PID: 1870219
+[rank: 2] Seed set to 3407
+2024-09-22 02:44:24.256 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random
+2024-09-22 02:44:24.256 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744/corpus.jsonl
+[rank: 3] Seed set to 3407
+2024-09-22 02:44:24.280 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random
+2024-09-22 02:44:24.280 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744/corpus.jsonl
+[rank: 1] Seed set to 3407
+2024-09-22 02:44:24.320 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random
+2024-09-22 02:44:24.320 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744/corpus.jsonl
+2024-09-22 02:44:24.794 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpu
+s.jsonl
+2024-09-22 02:44:24.892 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpu
+s.jsonl
+2024-09-22 02:44:24.979 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpu
+s.jsonl
+[rank: 3] Seed set to 3407
+[rank: 1] Seed set to 3407
+[rank: 2] Seed set to 3407
+2024-09-22 02:44:45.011 | INFO     | __main__:main:1723 - Loaded the predictions pickle files
+2024-09-22 02:44:45.057 | INFO     | __main__:main:1726 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_si
+ngle_repo_no_ewc_curriculum_abl3/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566/ran
+dom/test.json
+100%|███████████████████████████████████████████████████████████████████████| 1582/1582 [00:00<00:00, 38260.86it/s]
+2024-09-22 02:44:45.100 | INFO     | __main__:main:1728 - R@1 = 24.187255771439446 %, R@10 = 63.09788086063597 %, M
+RR = 0.5292760390211574
+2024-09-22 02:44:45.102 | INFO     | retrieval.main:run_cli:60 - PID: 1858449
+[rank: 0] Seed set to 3407
+2024-09-22 02:44:45.358 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean
+_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random
+2024-09-22 02:44:45.358 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744/corpus.jsonl
+2024-09-22 02:44:46.344 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/da
+tasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpu
+s.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+2024-09-22 02:44:54.560 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149016
+2024-09-22 02:44:54.580 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2427
+2024-09-22 02:44:58.306 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149016
+2024-09-22 02:44:58.320 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2427
+2024-09-22 02:44:58.891 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149016
+2024-09-22 02:44:58.914 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2427
+2024-09-22 02:45:04.574 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149016
+2024-09-22 02:45:04.598 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2427
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curricu
+lum_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_v
+al=65.14.ckpt
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curricul
+um_abl3/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d_lambda_0.1_epoch=3-Recall@10_va
+l=65.14.ckpt
+2024-09-22 02:45:07.197 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:45:07.198 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|                                                                                     | 0/2027 [00:00<?, ?it/s]
+2024-09-22 02:45:07.317 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:45:07.318 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|▏                                                                            | 4/2027 [00:00<03:18, 10.17it/s]
+2024-09-22 02:45:07.662 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:45:07.663 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+Predicting: |                                                                                | 0/? [00:00<?, ?it/s]
+2024-09-22 02:45:08.406 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: Tru
+e
+2024-09-22 02:45:08.406 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  7%|█████▎                                                                     | 142/2027 [00:50<17:05,  1.84it/s]
+  7%|█████▏                                                                     | 139/2027 [00:49<17:12,  1.83it/s]

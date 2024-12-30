@@ -93,8 +93,8 @@ repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR
 
 DATA_DIR = "datasets_retrieval_single_repo_no_ewc_curriculum_pfr"
 CHECKPOINT_DIR = "checkpoints_retrieval_single_repo_no_ewc_curriculum_pfr"
-DB_FILE_NAME = "dynamic_database_retrieval_single_repo_no_ewc_curriculum_pfr.json"
-PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_single_repo_no_ewc_curriculum.log"
+DB_FILE_NAME = "dynamic_database_retrieval_single_repo_no_ewc_curriculum_pfr_14.json"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_retrieval_single_repo_no_ewc_curriculum_14.log"
 ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_retrieval_single_repo_no_ewc_curriculum.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_ewc"
@@ -1379,7 +1379,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 16
+        current_epoch = 0
         epochs_per_repo = 1
         # run_progressive_training = True
         run_progressive_training = False
@@ -1431,22 +1431,22 @@ def main():
         if curriculum_learning:
             logger.info("Starting curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-            # if is_main_process:
+            if is_main_process:
 
-                # clone_url ="https://github.com/teorth/pfr"
-                # commit = "861715b9bf9482d2442760169cb2a3ff54091f75"
-                # url = clone_url.replace('.git', '')
-                # lean_git_repo = LeanGitRepo(url, commit)
-                # lean_git_repos.append(lean_git_repo)
+                clone_url ="https://github.com/teorth/pfr"
+                commit = "861715b9bf9482d2442760169cb2a3ff54091f75"
+                url = clone_url.replace('.git', '')
+                lean_git_repo = LeanGitRepo(url, commit)
+                lean_git_repos.append(lean_git_repo)
 
                 # # search_github_repositories("Lean", num_repos)
-                # for i in range(len(lean_git_repos)):
-                #     repo = lean_git_repos[i]
-                #     logger.info(f"Processing {repo.url}")
-                #     result = add_repo_to_database(dynamic_database_json_path, repo, db)
-                #     if result is not None:
-                #         logger.info(f"Successfully added repo {repo.url}")                    
-                # logger.info(f"Successfully added {num_repos} repositories to the database")
+                for i in range(len(lean_git_repos)):
+                    repo = lean_git_repos[i]
+                    logger.info(f"Processing {repo.url}")
+                    result = add_repo_to_database(dynamic_database_json_path, repo, db)
+                    if result is not None:
+                        logger.info(f"Successfully added repo {repo.url}")                    
+                logger.info(f"Successfully added {num_repos} repositories to the database")
                 
                 # sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
                 # print("Sorted repositories. Saving now...")
@@ -1750,7 +1750,7 @@ def main():
                                 f.write("\n\n\n")
                                 f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                     else:
-                        model_checkpoint_path = f"{RAID_DIR}/checkpoints_retrieval_single_repo_no_ewc_curriculum_pfr/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_epoch=15-Recall@10_val=74.85.ckpt"
+                        model_checkpoint_path = f"{RAID_DIR}/checkpoints_retrieval_single_repo_no_ewc_curriculum_pfr/merged_with_new_lean4-pdl_c7f649fe3c4891cf1a01c120e82ebc5f6199856e_lambda_0.1_epoch=23-Recall@10_val=76.02.ckpt"
                         if result is None:
                             logger.info(f"Skipping repository {repo.url} due to preprocessing issues")
                             continue

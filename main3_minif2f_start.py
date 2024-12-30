@@ -92,11 +92,11 @@ repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
 
 DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum"
-CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum_start"
+CHECKPOINT_DIR = "checkpoints_retrieval_curriculum_start"
 EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum.txt"
 DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_curriculum_full_start.json"
-PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum_minif2f_start.log"
-ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curriculum_full_minif2f_start.pkl"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum_minif2f_start_reprover.log"
+ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curriculum_full_minif2f_start_reprover.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_ewc"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc"
@@ -1225,8 +1225,8 @@ def main():
         # Configure these parameters!
         current_epoch = 0
         epochs_per_repo = 1
-        run_progressive_training = True
-        # run_progressive_training = False
+        # run_progressive_training = True
+        run_progressive_training = False
         # use_fisher = True
         use_fisher = False
         single_repo = True
@@ -1379,8 +1379,7 @@ def main():
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
 
-                        if "miniF2F" not in repo.url:
-                            db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+                        # db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
                     
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"

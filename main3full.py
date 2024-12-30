@@ -1091,7 +1091,7 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
         sha = "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"
         v = "v4.8.0"
     elif "hairy" in url:
-        sha = "a778826d19c8a7ddf1d26beeea628c45450612e6"
+        sha = "fa500d7d2e58580bac7c050f0f6c408041b70205"
         v = "v4.7.0"
     elif "compfiles" in url:
         sha = "f99bf6f2928d47dd1a445b414b3a723c2665f091"
@@ -1496,11 +1496,11 @@ def main():
             # #     # lean_git_repo = LeanGitRepo(url, commit)
             # #     # lean_git_repos.append(lean_git_repo)
 
-            #     # clone_url = "https://github.com/corent1234/hairy-ball-theorem-lean"
-            #     # commit = "a778826d19c8a7ddf1d26beeea628c45450612e6"
-            #     # url = clone_url.replace('.git', '')
-            #     # lean_git_repo = LeanGitRepo(url, commit)
-            #     # lean_git_repos.append(lean_git_repo)
+                # clone_url = "https://github.com/teorth/equational_theories"
+                # commit = "f0c97cc8a4f2e3292100fddf7d0ee2817588ecab"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
 
             #     clone_url = "https://github.com/Adarsh321123/PutnamBench"
             #     commit = "14ea70715649764b046183d4417d50bd9cf6cd0b"
@@ -1517,13 +1517,13 @@ def main():
         
             # #     # logger.info(f"Found {len(lean_git_repos)} compatible repositories")
 
-            #     for i in range(len(lean_git_repos)):
-            #         repo = lean_git_repos[i]
-            #         logger.info(f"Processing {repo.url}")
-            #         result = add_repo_to_database(dynamic_database_json_path, repo, db)
-            #         if result is not None:
-            #             logger.info(f"Successfully added repo {repo.url}")                    
-            #     logger.info(f"Successfully added {num_repos} repositories to the database")
+                # for i in range(len(lean_git_repos)):
+                #     repo = lean_git_repos[i]
+                #     logger.info(f"Processing {repo.url}")
+                #     result = add_repo_to_database(dynamic_database_json_path, repo, db)
+                #     if result is not None:
+                #         logger.info(f"Successfully added repo {repo.url}")                    
+                # logger.info(f"Successfully added {num_repos} repositories to the database")
                 
             # #     sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
             # #     print("Sorted repositories. Saving now...")
@@ -1587,6 +1587,23 @@ def main():
                         raise Exception("Failed to read repository information after multiple attempts")
                     time.sleep(1)
                 
+            def get_sanitized_repo_info(repo_info):
+                sanitized_info = []
+                for info in repo_info:
+                    # Check if this is the removed repository
+                    if 'ahhwuhu/zeta_3_irrational' in info['url']:
+                        # Replace with the placeholder repository
+                        logger.info("Replacing zeta")
+                        new_info = info.copy()
+                        new_info['url'] = 'https://github.com/Adarsh321123/SimpleLean'
+                        new_info['commit'] = '99a5078e1614e61f0d9cc234ca246c8744a4e660'
+                        sanitized_info.append(new_info)
+                    else:
+                        sanitized_info.append(info)
+                return sanitized_info
+
+            repo_info = get_sanitized_repo_info(repo_info)
+                
             lean_git_repos = [LeanGitRepo(info['url'].replace('.git', ''), info['commit']) for info in repo_info]
 
             for i in range(num_repos):
@@ -1626,10 +1643,11 @@ def main():
                     if run_progressive_training:
                         try:
                             model_checkpoint_path = find_latest_checkpoint()
+                            model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b_lambda_0.1_epoch=23-Recall@10_val=63.58.ckpt"
                             logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
                         except FileNotFoundError as e:
                             logger.error(str(e))
-                            model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                            model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b_lambda_0.1_epoch=23-Recall@10_val=63.58.ckpt"
                         
                         # Train the model on the new dataset that we generated from the dynamic database.
                         logger.info("Inside train_test_fisher")
@@ -1767,6 +1785,7 @@ def main():
                         # TODO: don't load corpus and reindex for every repo we use for average recall
                         try:
                             best_model_path = find_latest_checkpoint()
+                            model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b_lambda_0.1_epoch=23-Recall@10_val=63.58.ckpt"
                             logger.info(f"Found latest checkpoint: {best_model_path}")
                             best_model = PremiseRetriever.load(best_model_path, device, freeze=False, config=config)
                         except FileNotFoundError as e:
@@ -1787,6 +1806,8 @@ def main():
                         for data_path in testing_paths:
                             # TODO: remove this for tests that do not use merged dataset
                             if "merged" not in data_path:
+                                continue
+                            if "PutnamBench" in repo.url and ("SimpleLean" in data_path or "equational_theories" in data_path):
                                 continue
                             # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
                             run_cli(best_model_path, data_path)
@@ -1827,7 +1848,7 @@ def main():
                                 f.write("\n\n\n")
                                 f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                     else:
-                        model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                        model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b_lambda_0.1_epoch=23-Recall@10_val=63.58.ckpt"
                         if result is None:
                             logger.info(f"Skipping repository {repo.url} due to preprocessing issues")
                             continue
@@ -2013,10 +2034,11 @@ def main():
                     if run_progressive_training:
                         try:
                             model_checkpoint_path = find_latest_checkpoint()
+                            model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a_lambda_0.1_epoch=21-Recall@10_val=76.85.ckpt"
                             logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
                         except FileNotFoundError as e:
                             logger.error(str(e))
-                            model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                            model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a_lambda_0.1_epoch=21-Recall@10_val=76.85.ckpt"
                         
                         # Train the model on the new dataset that we generated from the dynamic database.
                         logger.info("Inside train_test_fisher")
@@ -2154,6 +2176,7 @@ def main():
                         # TODO: don't load corpus and reindex for every repo we use for average recall
                         try:
                             best_model_path = find_latest_checkpoint()
+                            model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a_lambda_0.1_epoch=21-Recall@10_val=76.85.ckpt"
                             logger.info(f"Found latest checkpoint: {best_model_path}")
                             best_model = PremiseRetriever.load(best_model_path, device, freeze=False, config=config)
                         except FileNotFoundError as e:

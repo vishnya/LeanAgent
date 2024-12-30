@@ -1,0 +1,922 @@
+(base) yingzi_ma@cais-login-0:~/lean_project/ReProver$ srun --partition=compute --gpus=4 --nodes=1 --time=2-00:00:00 --pty /
+bin/bash
+srun: job 32681 queued and waiting for resources
+srun: job 32681 has been allocated resources
+(base) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProver$ export RAID_DIR="/data/yingzi_ma/lean_project"
+cd ${RAID_DIR}/ReProver
+echo "Script executed from: ${PWD}"
+source ${RAID_DIR}/../miniconda3/etc/profile.d/conda.sh
+conda activate ReProver
+export PYTHONPATH="${PYTHONPATH}:${RAID_DIR}/ReProver"
+export GITHUB_ACCESS_TOKEN="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"
+export CACHE_DIR="${RAID_DIR}/.cache/lean_dojo"
+echo "Removing old cache files"
+rm -rf /tmp/ray
+echo "Stopping ray"
+ray stop --force
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_CORE_WORKER_834741.log': Permission
+denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_CORE_WORKER_834743.log': Permission
+denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_CORE_WORKER_834746.log': Permission
+denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_CORE_WORKER_834747.log': Permission
+denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_CORE_WORKER_835354.log': Permission
+denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_GCS.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_CORE_WORKER_834744.log': Permission
+denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_RAYLET.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_CORE_WORKER_834742.log': Permission
+denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_CORE_WORKER_833907.log': Permission
+denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_AUTOSCALER.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_CORE_WORKER_834748.log': Permission
+denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-43_407834_833965/logs/events/event_CORE_WORKER_834745.log': Permission
+denied
+Stopping ray
+Could not terminate `/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py` due to (pid=784996, name='python3')
+Did not find any active Ray processes.
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProver$ python build.py
+[2024-09-15 17:14:47,010] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-15 17:14:52.487 | INFO     | __main__:main:1196 - Running progressive training
+2024-09-15 17:14:52.487 | INFO     | __main__:main:1202 - Configuring LeanDojo...
+2024-09-15 17:14:52.490 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/ying
+zi_ma/lean_project/ReProver
+2024-09-15 17:14:52.490 | INFO     | __main__:main:1204 - LeanDojo configured
+2024-09-15 17:14:52.490 | INFO     | __main__:main:1226 - Found 15 repositories
+2024-09-15 17:14:52.490 | INFO     | __main__:main:1317 - Starting without curriculum learning
+2024-09-15 17:14:52.861 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4
+v4.5.0-rc1
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProver$ python build.py
+[2024-09-15 17:44:34,106] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-15 17:44:38.055 | INFO     | __main__:main:1196 - Running progressive training
+2024-09-15 17:44:38.055 | INFO     | __main__:main:1202 - Configuring LeanDojo...
+2024-09-15 17:44:38.058 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/ying
+zi_ma/lean_project/ReProver
+2024-09-15 17:44:38.058 | INFO     | __main__:main:1204 - LeanDojo configured
+2024-09-15 17:44:38.059 | INFO     | __main__:main:1226 - Found 15 repositories
+2024-09-15 17:44:38.059 | INFO     | __main__:main:1317 - Starting without curriculum learning
+2024-09-15 17:44:38.445 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4
+v4.5.0-rc1
+(ReProver) yingzi_ma@compute-permanent-n
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProver$ python retrieval/main.py fit --help
+^Z
+[1]+  Stopped                 python retrieval/main.py fit --help
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProver$ cd ..
+cd(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project$ cd ReProverTrain
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain$ python retrieval/main.py fit --help
+[2024-09-15 23:24:23,225] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-15 23:24:26.070 | INFO     | __main__:main:19 - PID: 555744
+usage: main.py [options] fit [-h] [-c CONFIG] [--print_config[=flags]]
+                             [--seed_everything SEED_EVERYTHING] [--trainer CONFIG]
+                             [--trainer.accelerator.help CLASS_PATH_OR_NAME]
+                             [--trainer.accelerator ACCELERATOR]
+                             [--trainer.strategy.help CLASS_PATH_OR_NAME]
+                             [--trainer.strategy STRATEGY] [--trainer.devices DEVICES]
+                             [--trainer.num_nodes NUM_NODES]
+                             [--trainer.precision PRECISION]
+                             [--trainer.logger.help CLASS_PATH_OR_NAME]
+                             [--trainer.logger LOGGER]
+                             [--trainer.callbacks.help CLASS_PATH_OR_NAME]
+                             [--trainer.callbacks CALLBACKS]
+                             [--trainer.fast_dev_run FAST_DEV_RUN]
+                             [--trainer.max_epochs MAX_EPOCHS]
+                             [--trainer.min_epochs MIN_EPOCHS]
+                             [--trainer.max_steps MAX_STEPS]
+                             [--trainer.min_steps MIN_STEPS]
+                             [--trainer.max_time MAX_TIME]
+                             [--trainer.limit_train_batches LIMIT_TRAIN_BATCHES]
+                             [--trainer.limit_val_batches LIMIT_VAL_BATCHES]
+                             [--trainer.limit_test_batches LIMIT_TEST_BATCHES]
+                             [--trainer.limit_predict_batches LIMIT_PREDICT_BATCHES]
+                             [--trainer.overfit_batches OVERFIT_BATCHES]
+                             [--trainer.val_check_interval VAL_CHECK_INTERVAL]
+                             [--trainer.check_val_every_n_epoch CHECK_VAL_EVERY_N_EPOCH]
+                             [--trainer.num_sanity_val_steps NUM_SANITY_VAL_STEPS]
+                             [--trainer.log_every_n_steps LOG_EVERY_N_STEPS]
+                             [--trainer.enable_checkpointing {true,false,null}]
+                             [--trainer.enable_progress_bar {true,false,null}]
+                             [--trainer.enable_model_summary {true,false,null}]
+                             [--trainer.accumulate_grad_batches ACCUMULATE_GRAD_BATCHES]
+                             [--trainer.gradient_clip_val GRADIENT_CLIP_VAL]
+                             [--trainer.gradient_clip_algorithm GRADIENT_CLIP_ALGORITHM]
+                             [--trainer.deterministic DETERMINISTIC]
+                             [--trainer.benchmark {true,false,null}]
+                             [--trainer.inference_mode {true,false}]
+                             [--trainer.use_distributed_sampler {true,false}]
+                             [--trainer.profiler.help CLASS_PATH_OR_NAME]
+                             [--trainer.profiler PROFILER]
+                             [--trainer.detect_anomaly {true,false}]
+                             [--trainer.barebones {true,false}]
+                             [--trainer.plugins.help CLASS_PATH_OR_NAME]
+                             [--trainer.plugins PLUGINS]
+                             [--trainer.sync_batchnorm {true,false}]
+                             [--trainer.reload_dataloaders_every_n_epochs RELOAD_DATALOADERS_EVERY_N_EPOCHS]
+                             [--trainer.default_root_dir DEFAULT_ROOT_DIR]
+                             [--model CONFIG] --model.model_name MODEL_NAME
+                             --model.lr LR --model.warmup_steps WARMUP_STEPS
+                             [--model.num_retrieved NUM_RETRIEVED] [--data CONFIG]
+                             --data.data_path DATA_PATH
+                             --data.corpus_path CORPUS_PATH
+                             --data.num_negatives NUM_NEGATIVES
+                             --data.num_in_file_negatives NUM_IN_FILE_NEGATIVES
+                             --data.batch_size BATCH_SIZE
+                             --data.eval_batch_size EVAL_BATCH_SIZE
+                             --data.max_seq_len MAX_SEQ_LEN
+                             --data.num_workers NUM_WORKERS
+                             [--optimizer.help CLASS_PATH_OR_NAME]
+                             [--optimizer CONFIG | CLASS_PATH_OR_NAME | .INIT_ARG_NAME VALUE]
+                             [--lr_scheduler.help CLASS_PATH_OR_NAME]
+                             [--lr_scheduler CONFIG | CLASS_PATH_OR_NAME | .INIT_ARG_NAME VALUE]
+                             [--ckpt_path CKPT_PATH]
+
+Runs the full optimization routine.
+
+options:
+  -h, --help            Show this help message and exit.
+  -c CONFIG, --config CONFIG
+                        Path to a configuration file in json or yaml format.
+  --print_config[=flags]
+                        Print the configuration after applying all other arguments and
+                        exit. The optional flags customizes the output and are one or
+                        more keywords separated by comma. The supported flags are:
+                        comments, skip_default, skip_null.
+  --seed_everything SEED_EVERYTHING
+                        Set to an int to run seed_everything with this value before
+                        classes instantiation.Set to True to use a random seed. (type:
+                        Union[bool, int], default: True)
+
+Customize every aspect of training via flags:
+  --trainer CONFIG      Path to a configuration file.
+  --trainer.accelerator.help CLASS_PATH_OR_NAME
+                        Show the help for the given subclass of Accelerator and exit.
+  --trainer.accelerator ACCELERATOR
+                        Supports passing different accelerator types ("cpu", "gpu",
+                        "tpu", "ipu", "hpu", "mps", "auto") as well as custom
+                        accelerator instances. (type: Union[str, Accelerator], default:
+                        auto, known subclasses:
+                        pytorch_lightning.accelerators.CPUAccelerator,
+                        pytorch_lightning.accelerators.CUDAAccelerator,
+                        pytorch_lightning.accelerators.MPSAccelerator,
+                        pytorch_lightning.accelerators.XLAAccelerator)
+  --trainer.strategy.help CLASS_PATH_OR_NAME
+                        Show the help for the given subclass of Strategy and exit.
+  --trainer.strategy STRATEGY
+                        Supports different training strategies with aliases as well
+                        custom strategies. Default: ``"auto"``. (type: Union[str,
+                        Strategy], default: auto, known subclasses:
+                        pytorch_lightning.strategies.DDPStrategy,
+                        pytorch_lightning.strategies.DeepSpeedStrategy,
+                        pytorch_lightning.strategies.XLAStrategy,
+                        pytorch_lightning.strategies.FSDPStrategy,
+                        pytorch_lightning.strategies.SingleDeviceStrategy,
+                        pytorch_lightning.strategies.SingleDeviceXLAStrategy)
+  --trainer.devices DEVICES, --trainer.devices+ DEVICES
+                        The devices to use. Can be set to a positive number (int or
+                        str), a sequence of device indices (list or str), the value
+                        ``-1`` to indicate all available devices should be used, or
+                        ``"auto"`` for automatic selection based on the chosen
+                        accelerator. Default: ``"auto"``. (type: Union[List[int], str,
+                        int], default: auto)
+  --trainer.num_nodes NUM_NODES
+                        Number of GPU nodes for distributed training. Default: ``1``.
+                        (type: int, default: 1)
+  --trainer.precision PRECISION
+                        Double precision (64, '64' or '64-true'), full precision (32,
+                        '32' or '32-true'), 16bit mixed precision (16, '16', '16-mixed')
+                        or bfloat16 mixed precision ('bf16', 'bf16-mixed'). Can be used
+                        on CPU, GPU, TPUs, HPUs or IPUs. Default: ``'32-true'``. (type:
+                        Union[Literal[64, 32, 16], Literal['transformer-engine',
+                        'transformer-engine-float16', '16-true', '16-mixed',
+                        'bf16-true', 'bf16-mixed', '32-true', '64-true'], Literal['64',
+                        '32', '16', 'bf16'], null], default: null)
+  --trainer.logger.help CLASS_PATH_OR_NAME
+                        Show the help for the given subclass of Logger and exit.
+  --trainer.logger LOGGER, --trainer.logger+ LOGGER
+                        Logger (or iterable collection of loggers) for experiment
+                        tracking. A ``True`` value uses the default
+                        ``TensorBoardLogger`` if it is installed, otherwise
+                        ``CSVLogger``. ``False`` will disable logging. If multiple
+                        loggers are provided, local files (checkpoints, profiler traces,
+                        etc.) are saved in the ``log_dir`` of the first logger. Default:
+                        ``True``. (type: Union[Logger, Iterable[Logger], bool, null],
+                        default: null, known subclasses:
+                        pytorch_lightning.loggers.logger.DummyLogger,
+                        pytorch_lightning.loggers.CometLogger,
+                        pytorch_lightning.loggers.CSVLogger,
+                        pytorch_lightning.loggers.MLFlowLogger,
+                        pytorch_lightning.loggers.NeptuneLogger,
+                        pytorch_lightning.loggers.TensorBoardLogger,
+                        pytorch_lightning.loggers.WandbLogger, typing.Iterable)
+  --trainer.callbacks.help CLASS_PATH_OR_NAME
+                        Show the help for the given subclass of Callback and exit.
+  --trainer.callbacks CALLBACKS, --trainer.callbacks+ CALLBACKS
+                        Add a callback or list of callbacks. Default: ``None``. (type:
+                        Union[List[Callback], Callback, null], default: null, known
+                        subclasses: pytorch_lightning.Callback,
+                        pytorch_lightning.callbacks.BatchSizeFinder,
+                        pytorch_lightning.callbacks.Checkpoint,
+                        pytorch_lightning.callbacks.ModelCheckpoint,
+                        pytorch_lightning.callbacks.OnExceptionCheckpoint,
+                        pytorch_lightning.callbacks.DeviceStatsMonitor,
+                        pytorch_lightning.callbacks.EarlyStopping,
+                        pytorch_lightning.callbacks.BaseFinetuning,
+                        pytorch_lightning.callbacks.BackboneFinetuning,
+                        pytorch_lightning.callbacks.GradientAccumulationScheduler,
+                        pytorch_lightning.callbacks.LambdaCallback,
+                        pytorch_lightning.callbacks.LearningRateFinder,
+                        pytorch_lightning.callbacks.LearningRateMonitor,
+                        pytorch_lightning.callbacks.ModelSummary,
+                        pytorch_lightning.callbacks.RichModelSummary,
+                        pytorch_lightning.callbacks.BasePredictionWriter,
+                        pytorch_lightning.callbacks.ProgressBar,
+                        pytorch_lightning.callbacks.RichProgressBar,
+                        pytorch_lightning.callbacks.TQDMProgressBar,
+                        pytorch_lightning.callbacks.Timer,
+                        pytorch_lightning.callbacks.ModelPruning,
+                        pytorch_lightning.callbacks.SpikeDetection,
+                        pytorch_lightning.callbacks.StochasticWeightAveraging,
+                        pytorch_lightning.callbacks.ThroughputMonitor,
+                        pytorch_lightning.cli.SaveConfigCallback)
+  --trainer.fast_dev_run FAST_DEV_RUN
+                        Runs n if set to ``n`` (int) else 1 if set to ``True`` batch(es)
+                        of train, val and test to find any bugs (ie: a sort of unit
+                        test). Default: ``False``. (type: Union[int, bool], default:
+                        False)
+  --trainer.max_epochs MAX_EPOCHS
+                        Stop training once this number of epochs is reached. Disabled by
+                        default (None). If both max_epochs and max_steps are not
+                        specified, defaults to ``max_epochs = 1000``. To enable infinite
+                        training, set ``max_epochs = -1``. (type: Optional[int],
+                        default: null)
+  --trainer.min_epochs MIN_EPOCHS
+                        Force training for at least these many epochs. Disabled by
+                        default (None). (type: Optional[int], default: null)
+  --trainer.max_steps MAX_STEPS
+                        Stop training after this number of steps. Disabled by default
+                        (-1). If ``max_steps = -1`` and ``max_epochs = None``, will
+                        default to ``max_epochs = 1000``. To enable infinite training,
+                        set ``max_epochs`` to ``-1``. (type: int, default: -1)
+  --trainer.min_steps MIN_STEPS
+                        Force training for at least these number of steps. Disabled by
+                        default (``None``). (type: Optional[int], default: null)
+  --trainer.max_time MAX_TIME
+                        Stop training after this amount of time has passed. Disabled by
+                        default (``None``). The time duration can be specified in the
+                        format DD:HH:MM:SS (days, hours, minutes seconds), as a
+                        :class:`datetime.timedelta`, or a dictionary with keys that will
+                        be passed to :class:`datetime.timedelta`. (type: Union[str,
+                        timedelta, Dict[str, int], null], default: null)
+  --trainer.limit_train_batches LIMIT_TRAIN_BATCHES
+                        How much of training dataset to check (float = fraction, int =
+                        num_batches). Default: ``1.0``. (type: Union[int, float, null],
+                        default: null)
+  --trainer.limit_val_batches LIMIT_VAL_BATCHES
+                        How much of validation dataset to check (float = fraction, int =
+                        num_batches). Default: ``1.0``. (type: Union[int, float, null],
+                        default: null)
+  --trainer.limit_test_batches LIMIT_TEST_BATCHES
+                        How much of test dataset to check (float = fraction, int =
+                        num_batches). Default: ``1.0``. (type: Union[int, float, null],
+                        default: null)
+  --trainer.limit_predict_batches LIMIT_PREDICT_BATCHES
+                        How much of prediction dataset to check (float = fraction, int =
+                        num_batches). Default: ``1.0``. (type: Union[int, float, null],
+                        default: null)
+  --trainer.overfit_batches OVERFIT_BATCHES
+                        Overfit a fraction of training/validation data (float) or a set
+                        number of batches (int). Default: ``0.0``. (type: Union[int,
+                        float], default: 0.0)
+  --trainer.val_check_interval VAL_CHECK_INTERVAL
+                        How often to check the validation set. Pass a ``float`` in the
+                        range [0.0, 1.0] to check after a fraction of the training
+                        epoch. Pass an ``int`` to check after a fixed number of training
+                        batches. An ``int`` value can only be higher than the number of
+                        training batches when ``check_val_every_n_epoch=None``, which
+                        validates after every ``N`` training batches across epochs or
+                        during iteration-based training. Default: ``1.0``. (type:
+                        Union[int, float, null], default: null)
+  --trainer.check_val_every_n_epoch CHECK_VAL_EVERY_N_EPOCH
+                        Perform a validation loop every after every `N` training epochs.
+                        If ``None``, validation will be done solely based on the number
+                        of training batches, requiring ``val_check_interval`` to be an
+                        integer value. Default: ``1``. (type: Optional[int], default: 1)
+  --trainer.num_sanity_val_steps NUM_SANITY_VAL_STEPS
+                        Sanity check runs n validation batches before starting the
+                        training routine. Set it to `-1` to run all batches in all
+                        validation dataloaders. Default: ``2``. (type: Optional[int],
+                        default: null)
+  --trainer.log_every_n_steps LOG_EVERY_N_STEPS
+                        How often to log within steps. Default: ``50``. (type:
+                        Optional[int], default: null)
+  --trainer.enable_checkpointing {true,false,null}
+                        If ``True``, enable checkpointing. It will configure a default
+                        ModelCheckpoint callback if there is no user-defined
+                        ModelCheckpoint in :paramref:`~pytorch_lightning.trainer.trainer
+                        .Trainer.callbacks`. Default: ``True``. (type: Optional[bool],
+                        default: null)
+  --trainer.enable_progress_bar {true,false,null}
+                        Whether to enable to progress bar by default. Default: ``True``.
+                        (type: Optional[bool], default: null)
+  --trainer.enable_model_summary {true,false,null}
+                        Whether to enable model summarization by default. Default:
+                        ``True``. (type: Optional[bool], default: null)
+  --trainer.accumulate_grad_batches ACCUMULATE_GRAD_BATCHES
+                        Accumulates gradients over k batches before stepping the
+                        optimizer. Default: 1. (type: int, default: 1)
+  --trainer.gradient_clip_val GRADIENT_CLIP_VAL
+                        The value at which to clip gradients. Passing
+                        ``gradient_clip_val=None`` disables gradient clipping. If using
+                        Automatic Mixed Precision (AMP), the gradients will be unscaled
+                        before. Default: ``None``. (type: Union[int, float, null],
+                        default: null)
+  --trainer.gradient_clip_algorithm GRADIENT_CLIP_ALGORITHM
+                        The gradient clipping algorithm to use. Pass
+                        ``gradient_clip_algorithm="value"`` to clip by value, and
+                        ``gradient_clip_algorithm="norm"`` to clip by norm. By default
+                        it will be set to ``"norm"``. (type: Optional[str], default:
+                        null)
+  --trainer.deterministic DETERMINISTIC
+                        If ``True``, sets whether PyTorch operations must use
+                        deterministic algorithms. Set to ``"warn"`` to use deterministic
+                        algorithms whenever possible, throwing warnings on operations
+                        that don't support deterministic mode. If not set, defaults to
+                        ``False``. Default: ``None``. (type: Union[bool,
+                        Literal['warn'], null], default: null)
+  --trainer.benchmark {true,false,null}
+                        The value (``True`` or ``False``) to set
+                        ``torch.backends.cudnn.benchmark`` to. The value for
+                        ``torch.backends.cudnn.benchmark`` set in the current session
+                        will be used (``False`` if not manually set). If :paramref:`~pyt
+                        orch_lightning.trainer.trainer.Trainer.deterministic` is set to
+                        ``True``, this will default to ``False``. Override to manually
+                        set a different value. Default: ``None``. (type: Optional[bool],
+                        default: null)
+  --trainer.inference_mode {true,false}
+                        Whether to use :func:`torch.inference_mode` or
+                        :func:`torch.no_grad` during evaluation
+                        (``validate``/``test``/``predict``). (type: bool, default: True)
+  --trainer.use_distributed_sampler {true,false}
+                        Whether to wrap the DataLoader's sampler with
+                        :class:`torch.utils.data.DistributedSampler`. If not specified
+                        this is toggled automatically for strategies that require it. By
+                        default, it will add ``shuffle=True`` for the train sampler and
+                        ``shuffle=False`` for validation/test/predict samplers. If you
+                        want to disable this logic, you can pass ``False`` and add your
+                        own distributed sampler in the dataloader hooks. If ``True`` and
+                        a distributed sampler was already added, Lightning will not
+                        replace the existing one. For iterable-style datasets, we don't
+                        do this automatically. (type: bool, default: True)
+  --trainer.profiler.help CLASS_PATH_OR_NAME
+                        Show the help for the given subclass of Profiler and exit.
+  --trainer.profiler PROFILER
+                        To profile individual steps during training and assist in
+                        identifying bottlenecks. Default: ``None``. (type:
+                        Union[Profiler, str, null], default: null, known subclasses:
+                        pytorch_lightning.profilers.AdvancedProfiler,
+                        pytorch_lightning.profilers.PassThroughProfiler,
+                        pytorch_lightning.profilers.PyTorchProfiler,
+                        pytorch_lightning.profilers.SimpleProfiler,
+                        pytorch_lightning.profilers.XLAProfiler)
+  --trainer.detect_anomaly {true,false}
+                        Enable anomaly detection for the autograd engine. Default:
+                        ``False``. (type: bool, default: False)
+  --trainer.barebones {true,false}
+                        Whether to run in "barebones mode", where all features that may
+                        impact raw speed are disabled. This is meant for analyzing the
+                        Trainer overhead and is discouraged during regular training
+                        runs. The following features are deactivated: :paramref:`~pytorc
+                        h_lightning.trainer.trainer.Trainer.enable_checkpointing`,
+                        :paramref:`~pytorch_lightning.trainer.trainer.Trainer.logger`, :
+                        paramref:`~pytorch_lightning.trainer.trainer.Trainer.enable_prog
+                        ress_bar`, :paramref:`~pytorch_lightning.trainer.trainer.Trainer
+                        .log_every_n_steps`, :paramref:`~pytorch_lightning.trainer.train
+                        er.Trainer.enable_model_summary`, :paramref:`~pytorch_lightning.
+                        trainer.trainer.Trainer.num_sanity_val_steps`, :paramref:`~pytor
+                        ch_lightning.trainer.trainer.Trainer.fast_dev_run`, :paramref:`~
+                        pytorch_lightning.trainer.trainer.Trainer.detect_anomaly`,
+                        :paramref:`~pytorch_lightning.trainer.trainer.Trainer.profiler`,
+                        :meth:`~pytorch_lightning.core.LightningModule.log`,
+                        :meth:`~pytorch_lightning.core.LightningModule.log_dict`. (type:
+                        bool, default: False)
+  --trainer.plugins.help CLASS_PATH_OR_NAME
+                        Show the help for the given subclass of
+                        {Precision,ClusterEnvironment,CheckpointIO,LayerSync} and exit.
+  --trainer.plugins PLUGINS, --trainer.plugins+ PLUGINS
+                        Plugins allow modification of core behavior like ddp and amp,
+                        and enable custom lightning plugins. Default: ``None``. (type:
+                        Union[Precision, ClusterEnvironment, CheckpointIO, LayerSync,
+                        List[Union[Precision, ClusterEnvironment, CheckpointIO,
+                        LayerSync]], null], default: null, known subclasses:
+                        pytorch_lightning.plugins.Precision,
+                        pytorch_lightning.plugins.MixedPrecision,
+                        pytorch_lightning.plugins.BitsandbytesPrecision,
+                        pytorch_lightning.plugins.DeepSpeedPrecision,
+                        pytorch_lightning.plugins.DoublePrecision,
+                        pytorch_lightning.plugins.FSDPPrecision,
+                        pytorch_lightning.plugins.HalfPrecision,
+                        pytorch_lightning.plugins.TransformerEnginePrecision,
+                        pytorch_lightning.plugins.XLAPrecision,
+                        lightning_fabric.plugins.environments.KubeflowEnvironment,
+                        lightning_fabric.plugins.environments.LightningEnvironment,
+                        lightning_fabric.plugins.environments.LSFEnvironment,
+                        lightning_fabric.plugins.environments.MPIEnvironment,
+                        lightning_fabric.plugins.environments.SLURMEnvironment,
+                        lightning_fabric.plugins.environments.TorchElasticEnvironment,
+                        lightning_fabric.plugins.environments.XLAEnvironment,
+                        lightning_fabric.plugins.TorchCheckpointIO,
+                        lightning_fabric.plugins.XLACheckpointIO,
+                        pytorch_lightning.plugins.AsyncCheckpointIO,
+                        pytorch_lightning.plugins.TorchSyncBatchNorm)
+  --trainer.sync_batchnorm {true,false}
+                        Synchronize batch norm layers between process groups/whole
+                        world. Default: ``False``. (type: bool, default: False)
+  --trainer.reload_dataloaders_every_n_epochs RELOAD_DATALOADERS_EVERY_N_EPOCHS
+                        Set to a positive integer to reload dataloaders every n epochs.
+                        Default: ``0``. (type: int, default: 0)
+  --trainer.default_root_dir DEFAULT_ROOT_DIR
+                        Default path for logs and weights when no logger/ckpt_callback
+                        passed. Default: ``os.getcwd()``. Can be remote file paths such
+                        as `s3://mybucket/path` or 'hdfs://path/' (type: Union[str,
+                        Path, null], default: null)
+
+<class 'retrieval.model.PremiseRetriever'>:
+  --model CONFIG        Path to a configuration file.
+  --model.model_name MODEL_NAME
+                        (required, type: str)
+  --model.lr LR         (required, type: float)
+  --model.warmup_steps WARMUP_STEPS
+                        (required, type: int)
+  --model.num_retrieved NUM_RETRIEVED
+                        (type: int, default: 100)
+
+<class 'retrieval.datamodule.RetrievalDataModule'>:
+  --data CONFIG         Path to a configuration file.
+  --data.data_path DATA_PATH
+                        (required, type: str)
+  --data.corpus_path CORPUS_PATH
+                        (required, type: str)
+  --data.num_negatives NUM_NEGATIVES
+                        (required, type: int)
+  --data.num_in_file_negatives NUM_IN_FILE_NEGATIVES
+                        (required, type: int)
+  --data.batch_size BATCH_SIZE
+                        (required, type: int)
+  --data.eval_batch_size EVAL_BATCH_SIZE
+                        (required, type: int)
+  --data.max_seq_len MAX_SEQ_LEN
+                        (required, type: int)
+  --data.num_workers NUM_WORKERS
+                        (required, type: int)
+
+Linked arguments:
+  model.model_name --> data.model_name [applied on parse]
+                        Target argument 'data.model_name' lacks type and help (type:
+                        str)
+  data.max_seq_len --> model.max_seq_len [applied on parse]
+                        Target argument 'model.max_seq_len' lacks type and help (type:
+                        int)
+
+Base class for all optimizers:
+  --optimizer.help CLASS_PATH_OR_NAME
+                        Show the help for the given subclass of Optimizer and exit.
+  --optimizer CONFIG | CLASS_PATH_OR_NAME | .INIT_ARG_NAME VALUE
+                        One or more arguments specifying "class_path" and "init_args"
+                        for any subclass of Optimizer. (type: <class 'Optimizer'>, known
+                        subclasses: torch.optim.Optimizer, torch.optim.Adadelta,
+                        torch.optim.Adagrad, torch.optim.Adam, torch.optim.Adamax,
+                        torch.optim.AdamW, torch.optim.ASGD, torch.optim.LBFGS,
+                        torch.optim.NAdam, torch.optim.RAdam, torch.optim.RMSprop,
+                        torch.optim.Rprop, torch.optim.SGD, torch.optim.SparseAdam,
+                        transformers.trainer_pt_utils.LayerWiseDummyOptimizer,
+                        transformers.AdamW, transformers.Adafactor,
+                        deepspeed.ops.adam.DeepSpeedCPUAdam,
+                        deepspeed.ops.adam.FusedAdam,
+                        deepspeed.ops.adagrad.DeepSpeedCPUAdagrad,
+                        deepspeed.ops.lamb.FusedLamb,
+                        deepspeed.ops.lion.DeepSpeedCPULion,
+                        deepspeed.ops.lion.FusedLion)
+
+(<class 'torch.optim.lr_scheduler.LRScheduler'>, <class 'pytorch_lightning.cli.ReduceLROnPlateau'>):
+  --lr_scheduler.help CLASS_PATH_OR_NAME
+                        Show the help for the given subclass of
+                        {LRScheduler,ReduceLROnPlateau} and exit.
+  --lr_scheduler CONFIG | CLASS_PATH_OR_NAME | .INIT_ARG_NAME VALUE
+                        One or more arguments specifying "class_path" and "init_args"
+                        for any subclass of {LRScheduler,ReduceLROnPlateau}. (type:
+                        Union[LRScheduler, ReduceLROnPlateau], known subclasses:
+                        torch.optim.lr_scheduler.LRScheduler,
+                        torch.optim.lr_scheduler.LambdaLR,
+                        transformers.optimization.AdafactorSchedule,
+                        torch.optim.lr_scheduler.MultiplicativeLR,
+                        torch.optim.lr_scheduler.StepLR,
+                        torch.optim.lr_scheduler.MultiStepLR,
+                        torch.optim.lr_scheduler.ConstantLR,
+                        torch.optim.lr_scheduler.LinearLR,
+                        torch.optim.lr_scheduler.ExponentialLR,
+                        torch.optim.lr_scheduler.SequentialLR,
+                        torch.optim.lr_scheduler.PolynomialLR,
+                        torch.optim.lr_scheduler.CosineAnnealingLR,
+                        torch.optim.lr_scheduler.ChainedScheduler,
+                        torch.optim.lr_scheduler.ReduceLROnPlateau,
+                        pytorch_lightning.cli.ReduceLROnPlateau,
+                        torch.optim.lr_scheduler.CyclicLR,
+                        torch.optim.lr_scheduler.CosineAnnealingWarmRestarts,
+                        torch.optim.lr_scheduler.OneCycleLR,
+                        torch.optim.swa_utils.SWALR,
+                        transformers.trainer_pt_utils.LayerWiseDummyScheduler)
+
+Runs the full optimization routine:
+  --ckpt_path CKPT_PATH
+                        Path/URL of the checkpoint from which training is resumed. Could
+                        also be one of two special keywords ``"last"`` and ``"hpc"``. If
+                        there is no checkpoint file at the path, an exception is raised.
+                        (type: Union[str, Path, null], default: null)
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain$ mkdir logs
+(ReProver) yingzi_ma@compute-permanent-n
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain$
+python retrieval/main.py fit --config retrieval/confs/cli_lean4_random.yaml --trainer.logger.name train_retriever_random --t
+rainer.logger.save_dir logs/train_retriever_random
+[2024-09-15 23:26:17,973] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-15 23:26:20.034 | INFO     | __main__:main:19 - PID: 556619
+[rank: 0] Seed set to 3407
+Traceback (most recent call last):
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_typehints.py", line 1043, in ada
+pt_typehints
+    val = adapt_class_type(val, serialize, instantiate_classes, sub_add_kwargs, prev_val=prev_val)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_typehints.py", line 1321, in ada
+pt_class_type
+    return instantiator_fn(val_class, **{**init_args, **dict_kwargs})
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_common.py", line 148, in default
+_class_instantiator
+    return class_type(*args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/loggers/wandb.py", line 309,
+ in __init__
+    raise ModuleNotFoundError(str(_WANDB_AVAILABLE))
+ModuleNotFoundError: Requirement 'wandb>=0.12.10' not met. HINT: Try running `pip install -U 'wandb>=0.12.10'`
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_typehints.py", line 821, in adap
+t_typehints
+    vals.append(adapt_typehints(val, subtypehint, **adapt_kwargs))
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_typehints.py", line 1047, in ada
+pt_typehints
+    raise_unexpected_value(f"Problem with given class_path {class_path!r}:\n{error}", exception=ex)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_typehints.py", line 702, in rais
+e_unexpected_value
+    raise ValueError(message) from exception
+ValueError: Problem with given class_path 'pytorch_lightning.loggers.WandbLogger':
+  Requirement 'wandb>=0.12.10' not met. HINT: Try running `pip install -U 'wandb>=0.12.10'`
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/main.py", line 25, in <module>
+    main()
+  File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/main.py", line 20, in main
+    cli = CLI(PremiseRetriever, RetrievalDataModule)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/cli.py", line 385, in __init
+__
+    self.instantiate_classes()
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/cli.py", line 535, in instan
+tiate_classes
+    self.config_init = self.parser.instantiate_classes(self.config)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_deprecated.py", line 140, in pat
+ched_instantiate_classes
+    cfg = self._unpatched_instantiate_classes(cfg, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_core.py", line 1196, in instanti
+ate_classes
+    cfg[subcommand] = subparser.instantiate_classes(cfg[subcommand], instantiate_groups=instantiate_groups)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_deprecated.py", line 140, in pat
+ched_instantiate_classes
+    cfg = self._unpatched_instantiate_classes(cfg, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_core.py", line 1187, in instanti
+ate_classes
+    parent[key] = component.instantiate_classes(value)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_typehints.py", line 600, in inst
+antiate_classes
+    value[num] = adapt_typehints(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_typehints.py", line 826, in adap
+t_typehints
+    raise_union_unexpected_value(typehint, val, vals)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_typehints.py", line 710, in rais
+e_union_unexpected_value
+    raise ValueError(
+ValueError: Does not validate against any of the Union subtypes
+Subtypes: (<class 'pytorch_lightning.loggers.logger.Logger'>, typing.Iterable[pytorch_lightning.loggers.logger.Logger], <cla
+ss 'bool'>, <class 'NoneType'>)
+Errors:
+  - Problem with given class_path 'pytorch_lightning.loggers.WandbLogger':
+      Requirement 'wandb>=0.12.10' not met. HINT: Try running `pip install -U 'wandb>=0.12.10'`
+  - Expected a <class 'collections.abc.Iterable'>
+  - Expected a <class 'bool'>
+  - Expected a <class 'NoneType'>
+Given value type: <class 'jsonargparse._namespace.Namespace'>
+Given value: Namespace(class_path='pytorch_lightning.loggers.WandbLogger', init_args=Namespace(name='train_retriever_random'
+, save_dir='logs/train_retriever_random', version=None, offline=False, dir=None, id=None, anonymous=None, project=None, log_
+model=False, prefix='', checkpoint_name=None))
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain$ python -m pip install -U 'wandb>=0.12.10
+>
+> ^C
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain$ python -m pip install wandb
+Collecting wandb
+  Downloading wandb-0.18.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+Requirement already satisfied: click!=8.0.0,>=7.1 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (
+from wandb) (8.1.7)
+Collecting docker-pycreds>=0.4.0 (from wandb)
+  Using cached docker_pycreds-0.4.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting gitpython!=3.1.29,>=1.0.0 (from wandb)
+  Using cached GitPython-3.1.43-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: platformdirs in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from w
+andb) (4.2.2)
+Requirement already satisfied: protobuf!=4.21.0,!=5.28.0,<6,>=3.19.0 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3
+.10/site-packages (from wandb) (5.27.3)
+Requirement already satisfied: psutil>=5.0.0 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from
+wandb) (6.0.0)
+Requirement already satisfied: pyyaml in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from wandb)
+(6.0.2)
+Requirement already satisfied: requests<3,>=2.0.0 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (
+from wandb) (2.32.3)
+Collecting sentry-sdk>=1.0.0 (from wandb)
+  Downloading sentry_sdk-2.14.0-py2.py3-none-any.whl.metadata (9.7 kB)
+Collecting setproctitle (from wandb)
+  Using cached setproctitle-1.3.3-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86
+_64.whl.metadata (9.9 kB)
+Requirement already satisfied: setuptools in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from wan
+db) (72.1.0)
+Requirement already satisfied: six>=1.4.0 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from doc
+ker-pycreds>=0.4.0->wandb) (1.16.0)
+Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.29,>=1.0.0->wandb)
+  Using cached gitdb-4.0.11-py3-none-any.whl.metadata (1.2 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-pack
+ages (from requests<3,>=2.0.0->wandb) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from r
+equests<3,>=2.0.0->wandb) (3.8)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (
+from requests<3,>=2.0.0->wandb) (2.2.2)
+Requirement already satisfied: certifi>=2017.4.17 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (
+from requests<3,>=2.0.0->wandb) (2024.7.4)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.29,>=1.0.0->wandb)
+  Using cached smmap-5.0.1-py3-none-any.whl.metadata (4.3 kB)
+Downloading wandb-0.18.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 83.7 MB/s eta 0:00:00
+Using cached docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+Using cached GitPython-3.1.43-py3-none-any.whl (207 kB)
+Downloading sentry_sdk-2.14.0-py2.py3-none-any.whl (311 kB)
+Using cached setproctitle-1.3.3-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_6
+4.whl (30 kB)
+Using cached gitdb-4.0.11-py3-none-any.whl (62 kB)
+Using cached smmap-5.0.1-py3-none-any.whl (24 kB)
+Installing collected packages: smmap, setproctitle, sentry-sdk, docker-pycreds, gitdb, gitpython, wandb
+Successfully installed docker-pycreds-0.4.0 gitdb-4.0.11 gitpython-3.1.43 sentry-sdk-2.14.0 setproctitle-1.3.3 smmap-5.0.1 w
+andb-0.18.0
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain$ python -m pip install wandb
+Requirement already satisfied: wandb in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (0.18.0)
+Requirement already satisfied: click!=8.0.0,>=7.1 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (
+from wandb) (8.1.7)
+Requirement already satisfied: docker-pycreds>=0.4.0 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-package
+s (from wandb) (0.4.0)
+Requirement already satisfied: gitpython!=3.1.29,>=1.0.0 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-pac
+kages (from wandb) (3.1.43)
+Requirement already satisfied: platformdirs in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from w
+andb) (4.2.2)
+Requirement already satisfied: protobuf!=4.21.0,!=5.28.0,<6,>=3.19.0 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3
+.10/site-packages (from wandb) (5.27.3)
+Requirement already satisfied: psutil>=5.0.0 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from
+wandb) (6.0.0)
+Requirement already satisfied: pyyaml in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from wandb)
+(6.0.2)
+Requirement already satisfied: requests<3,>=2.0.0 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (
+from wandb) (2.32.3)
+Requirement already satisfied: sentry-sdk>=1.0.0 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (f
+rom wandb) (2.14.0)
+Requirement already satisfied: setproctitle in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from w
+andb) (1.3.3)
+Requirement already satisfied: setuptools in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from wan
+db) (72.1.0)
+Requirement already satisfied: six>=1.4.0 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from doc
+ker-pycreds>=0.4.0->wandb) (1.16.0)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (fro
+m gitpython!=3.1.29,>=1.0.0->wandb) (4.0.11)
+Requirement already satisfied: charset-normalizer<4,>=2 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-pack
+ages (from requests<3,>=2.0.0->wandb) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (from r
+equests<3,>=2.0.0->wandb) (3.8)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (
+from requests<3,>=2.0.0->wandb) (2.2.2)
+Requirement already satisfied: certifi>=2017.4.17 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (
+from requests<3,>=2.0.0->wandb) (2024.7.4)
+Requirement already satisfied: smmap<6,>=3.0.1 in /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages (fro
+m gitdb<5,>=4.0.1->gitpython!=3.1.29,>=1.0.0->wandb) (5.0.1)
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain$ python retrieval/main.py fit --config retrieva
+l/confs/cli_lean4_random.yaml --trainer.logger.name train_retriever_random --trainer.logger.save_dir logs/train_retriever_ra
+ndom
+[2024-09-15 23:27:15,804] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-15 23:27:17.818 | INFO     | __main__:main:19 - PID: 557305
+[rank: 0] Seed set to 3407
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWa
+rning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in t
+ransformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/hugging
+face/transformers/issues/31884
+  warnings.warn(
+2024-09-15 23:27:20.411 | INFO     | common:__init__:200 - Building the corpus from data/leandojo_benchmark_4/corpus.jsonl
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/main.py", line 25, in <module>
+    main()
+  File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/main.py", line 20, in main
+    cli = CLI(PremiseRetriever, RetrievalDataModule)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/cli.py", line 385, in __init
+__
+    self.instantiate_classes()
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/cli.py", line 535, in instan
+tiate_classes
+    self.config_init = self.parser.instantiate_classes(self.config)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_deprecated.py", line 140, in pat
+ched_instantiate_classes
+    cfg = self._unpatched_instantiate_classes(cfg, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_core.py", line 1196, in instanti
+ate_classes
+    cfg[subcommand] = subparser.instantiate_classes(cfg[subcommand], instantiate_groups=instantiate_groups)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_deprecated.py", line 140, in pat
+ched_instantiate_classes
+    cfg = self._unpatched_instantiate_classes(cfg, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_core.py", line 1190, in instanti
+ate_classes
+    component.instantiate_class(component, cfg)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_signatures.py", line 599, in gro
+up_instantiate_class
+    parent[key] = instantiator_fn(group.group_class, **value)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/jsonargparse/_common.py", line 148, in default
+_class_instantiator
+    return class_type(*args, **kwargs)
+  File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/datamodule.py", line 225, in __init__
+    self.corpus = Corpus(corpus_path)
+  File "/data/yingzi_ma/lean_project/ReProverTrain/common.py", line 202, in __init__
+    for line in open(jsonl_path):
+FileNotFoundError: [Errno 2] No such file or directory: 'data/leandojo_benchmark_4/corpus.jsonl'
+(ReProver) yingzi_ma@compute-permanent-n
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain$ mkdir data
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain$ cd data
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain/data$ pwd
+/data/yingzi_ma/lean_project/ReProverTrain/data
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain/data$ ls
+mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain/data$ mv mathlib4_2b29e73438e240a427bcecc7c0fe1
+9306beb1310/leandojo_benchmark_4
+mv: missing destination file operand after 'mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310/leandojo_benchmark_4'
+Try 'mv --help' for more information.
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain/data$ mv mathlib4_2b29e73438e240a427bcecc7c0fe1
+9306beb1310 leandojo_benchmark_4
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain/data$ cd ..
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain$ python retrieval/main.py fit --config retrieva
+l/confs/cli_lean4_random.yaml --trainer.logger.name train_retriever_random --trainer.logger.save_dir logs/train_retriever_ra
+ndom
+[2024-09-15 23:29:46,509] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-15 23:29:48.490 | INFO     | __main__:main:19 - PID: 558865
+[rank: 0] Seed set to 3407
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWa
+rning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in t
+ransformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/hugging
+face/transformers/issues/31884
+  warnings.warn(
+2024-09-15 23:29:50.763 | INFO     | common:__init__:200 - Building the corpus from data/leandojo_benchmark_4/corpus.jsonl
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: Th
+e `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend
+your python command with `srun` like so: srun python retrieval/main.py fit --config retrieval/confs/cli_l ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+initializing deepspeed distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+NCCL version 2.20.5+cuda12.4
+wandb: Using wandb-core as the SDK backend. Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: gray311. Use `wandb login --relogin` to force relogin
+wandb: WARNING Path logs/train_retriever_random/wandb/ wasn't writable, using system temp directory.
+wandb: Tracking run with wandb version 0.18.0
+wandb: Run data is saved locally in /tmp/wandb/run-20240915_233026-4lx7sog7
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run train_retriever_random
+wandb: ⭐️ View project at https://wandb.ai/gray311/lightning_logs
+wandb: 🚀 View run at https://wandb.ai/gray311/lightning_logs/runs/4lx7sog7
+2024-09-15 23:30:26.773 | INFO     | retrieval.datamodule:_load_data:46 - Loading data from data/leandojo_benchmark_4/random
+/train.json
+  0%|                                                                                            | 0/116251 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/main.py", line 25, in <module>
+    main()
+  File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/main.py", line 20, in main
+    cli = CLI(PremiseRetriever, RetrievalDataModule)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/cli.py", line 388, in __init
+__
+    self._run_subcommand(self.subcommand)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/cli.py", line 679, in _run_s
+ubcommand
+    fn(**fn_kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 54
+4, in fit
+    call._call_and_handle_interrupt(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 43, i
+n _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subproc
+ess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 58
+0, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 94
+9, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 92, i
+n _call_setup_hook
+    _call_lightning_datamodule_hook(trainer, "setup", stage=fn)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 179,
+in _call_lightning_datamodule_hook
+    return fn(*args, **kwargs)
+  File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/datamodule.py", line 234, in setup
+    self.ds_train = RetrievalDataset(
+  File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/datamodule.py", line 40, in __init__
+    self.data = list(
+  File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/datamodule.py", line 41, in <genexpr>
+    itertools.chain.from_iterable(self._load_data(path) for path in data_paths)
+  File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/datamodule.py", line 55, in _load_data
+    all_pos_premises = get_all_pos_premises(
+  File "/data/yingzi_ma/lean_project/ReProverTrain/common.py", line 348, in get_all_pos_premises
+    p = corpus.locate_premise(def_path, Pos(*prov["def_pos"]))
+  File "/data/yingzi_ma/lean_project/ReProverTrain/common.py", line 258, in locate_premise
+    for p in self.get_premises(path):
+  File "/data/yingzi_ma/lean_project/ReProverTrain/common.py", line 247, in get_premises
+    return self._get_file(path).premises
+  File "/data/yingzi_ma/lean_project/ReProverTrain/common.py", line 222, in _get_file
+    return self.transitive_dep_graph.nodes[path]["file"]
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/networkx/classes/reportviews.py", line 194, in
+ __getitem__
+    return self._nodes[n]
+KeyError: './Mathlib/CategoryTheory/EffectiveEpi/Extensive.lean'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/main.py", line 25, in <module>
+[rank0]:     main()
+[rank0]:   File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/main.py", line 20, in main
+[rank0]:     cli = CLI(PremiseRetriever, RetrievalDataModule)
+[rank0]:   File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/cli.py", line 388,
+in __init__
+[rank0]:     self._run_subcommand(self.subcommand)
+[rank0]:   File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/cli.py", line 679,
+in _run_subcommand
+[rank0]:     fn(**fn_kwargs)
+[rank0]:   File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py"
+, line 544, in fit
+[rank0]:     call._call_and_handle_interrupt(
+[rank0]:   File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", l
+ine 43, in _call_and_handle_interrupt
+[rank0]:     return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+[rank0]:   File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/strategies/launcher
+s/subprocess_script.py", line 105, in launch
+[rank0]:     return function(*args, **kwargs)
+[rank0]:   File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py"
+, line 580, in _fit_impl
+[rank0]:     self._run(model, ckpt_path=ckpt_path)
+[rank0]:   File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py"
+, line 949, in _run
+[rank0]:     call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+[rank0]:   File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", l
+ine 92, in _call_setup_hook
+[rank0]:     _call_lightning_datamodule_hook(trainer, "setup", stage=fn)
+[rank0]:   File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", l
+ine 179, in _call_lightning_datamodule_hook
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/datamodule.py", line 234, in setup
+[rank0]:     self.ds_train = RetrievalDataset(
+[rank0]:   File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/datamodule.py", line 40, in __init__
+[rank0]:     self.data = list(
+[rank0]:   File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/datamodule.py", line 41, in <genexpr>
+[rank0]:     itertools.chain.from_iterable(self._load_data(path) for path in data_paths)
+[rank0]:   File "/data/yingzi_ma/lean_project/ReProverTrain/retrieval/datamodule.py", line 55, in _load_data
+[rank0]:     all_pos_premises = get_all_pos_premises(
+[rank0]:   File "/data/yingzi_ma/lean_project/ReProverTrain/common.py", line 348, in get_all_pos_premises
+[rank0]:     p = corpus.locate_premise(def_path, Pos(*prov["def_pos"]))
+[rank0]:   File "/data/yingzi_ma/lean_project/ReProverTrain/common.py", line 258, in locate_premise
+[rank0]:     for p in self.get_premises(path):
+[rank0]:   File "/data/yingzi_ma/lean_project/ReProverTrain/common.py", line 247, in get_premises
+[rank0]:     return self._get_file(path).premises
+[rank0]:   File "/data/yingzi_ma/lean_project/ReProverTrain/common.py", line 222, in _get_file
+[rank0]:     return self.transitive_dep_graph.nodes[path]["file"]
+[rank0]:   File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/networkx/classes/reportviews.py", lin
+e 194, in __getitem__
+[rank0]:     return self._nodes[n]
+[rank0]: KeyError: './Mathlib/CategoryTheory/EffectiveEpi/Extensive.lean'
+wandb: 🚀 View run train_retriever_random at: https://wandb.ai/gray311/lightning_logs/runs/4lx7sog7
+wandb: Find logs at: ../../../../tmp/wandb/run-20240915_233026-4lx7sog7/logs
+^Z
+[2]+  Stopped                 python retrieval/main.py fit --config retrieval/confs/cli_lean4_random.yaml --trainer.logger.n
+ame train_retriever_random --trainer.logger.save_dir logs/train_retriever_random
+(ReProver) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProverTrain$

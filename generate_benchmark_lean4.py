@@ -367,7 +367,7 @@ def main(url, commit, dst_dir):
     v = v[1:] # ignore "v" at beginning
     
     # TODO: set this in main.py so we don't need to do so here
-    lean_dir1 = f"{RAID_DIR}/.elan/toolchains/leanprover--lean4---{v}"
+    lean_dir1 = f"/data/yingzi_ma/.elan/toolchains/leanprover--lean4---{v}"
     lean_dir2 = f"/.elan/toolchains/leanprover--lean4---{v}"
     lean_dir3 = f"~/.elan/toolchains/leanprover--lean4---{v}"
     logger.info(f"lean path1 {lean_dir1}")

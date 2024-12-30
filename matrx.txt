@@ -1,0 +1,1933 @@
+2024-09-07 17:03:48.116 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for aesop master
+2024-09-07 17:03:48.622 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for ProofWidgets4 v0.0.36
+2024-09-07 17:03:49.191 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-cli main
+2024-09-07 17:03:50.060 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for import-graph main
+2024-09-07 17:03:50.693 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='1b0072fea2aa6a0ef8ef8b506ec5223
+b184cb4d0')
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-09-07 17:03:52.740 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-06-05
+2024-09-07 17:03:54.205 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an unsupporte
+d Lean version: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-09-07 17:03:54.206 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/batteries', commit='8feac540abb781cb1349
+688c816dc02fae66b49c')
+2024-09-07 17:03:54.397 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='2c8ae451ce9ffc83554322b
+14437159c1a9703f9')
+2024-09-07 17:03:54.608 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='e291aa4de57079b3d2199b9e
+b7b4b00922b85a7c')
+2024-09-07 17:03:54.975 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='e6b6247c61280c77
+ade6bbf0bc3c66a44fe2e0c5')
+2024-09-07 17:03:55.338 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b67
+5ef3e347d0')
+2024-09-07 17:03:55.537 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='fb7841a6f4fb389ec
+0e47dd4677844d49906af3c')
+2024-09-07 17:04:07.285 | DEBUG    | lean_dojo.data_extraction.traced_data:save_to_disk:1106 - Saving 2734 traced XML files to /tmp/tmp5ylylcf9/lean-matrix-cookbook with 31 workers
+100%|██████████████████████████████████████████████████████████████████| 2734/2734 [03:37<00:00, 12.58it/s]
+2024-09-07 17:30:09.130 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /data/yingzi_ma/lean_project/.cache/lean_dojo/eric-wieser-lean-matrix-cookbook-f15a149d321ac99ff9b9c024b58e
+7882f564669f/lean-matrix-cookbook
+2024-09-07 17:30:13.022 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1123 - Loading 2734 traced XML files from /data/yingzi_ma/lean_project/.cache/lean_dojo/eric-wieser-lean-matrix-cookbook-f15a14
+9d321ac99ff9b9c024b58e7882f564669f/lean-matrix-cookbook with 31 workers
+100%|██████████████████████████████████████████████████████████████████| 2734/2734 [10:02<00:00,  4.54it/s]
+2024-09-07 17:40:15.177 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/eric-wieser/lean-matrix-cookbook', commit='f15a149d321ac99ff9
+b9c024b58e7882f564669f')
+2024-09-07 17:40:15.334 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-07 17:40:16.459 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-07 17:40:18.577 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='b5eba595428809e96f3ed
+113bc7ba776c5f801ac')
+2024-09-07 17:40:18.939 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-07 17:40:20.054 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-07 17:40:22.173 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='1b0072fea2aa6a0ef8ef8b506ec5223
+b184cb4d0')
+2024-09-07 17:40:22.174 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/batteries', commit='8feac540abb781cb1349
+688c816dc02fae66b49c')
+2024-09-07 17:40:22.174 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='2c8ae451ce9ffc83554322b
+14437159c1a9703f9')
+2024-09-07 17:40:22.174 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='e291aa4de57079b3d2199b9e
+b7b4b00922b85a7c')
+2024-09-07 17:40:22.174 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='e6b6247c61280c77
+ade6bbf0bc3c66a44fe2e0c5')
+2024-09-07 17:40:22.174 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b67
+5ef3e347d0')
+2024-09-07 17:40:22.174 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='fb7841a6f4fb389ec
+0e47dd4677844d49906af3c')
+2024-09-07 17:40:37.740 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1009 - Checking the sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/eric-wieser/lean-matrix-cookbook', commit='f15a
+149d321ac99ff9b9c024b58e7882f564669f'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanprover/lean4', commit='e9e858a4484905a0bfe97c4f05c3924ead02eed8'), 'batteries': LeanGitRepo(url='https://github.co
+m/leanprover-community/batteries', commit='fa571ea02a804b52a59e58012b1e21fe4f0514f2'), 'Qq': LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='53156671405fbbd5402ed17a79bd129b961bd8d6'), 'aesop
+': LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='53ba96ad7666d4a2515292974631629b5ea5dfee'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='
+e6b6247c61280c77ade6bbf0bc3c66a44fe2e0c5'), 'Cli': LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350b675ef3e347d0'), 'mathlib': LeanGitRepo(url='https://github.com/leanprov
+er-community/mathlib4', commit='b5eba595428809e96f3ed113bc7ba776c5f801ac'), '«doc-gen4»': LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='1b0072fea2aa6a0ef8ef8b506ec5223b184cb4d0'), 'MD4Lean': LeanGi
+tRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f325c7e9d619bb56fb005'), 'UnicodeBasic': LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='7afce91e4fcee25c1ed06dca8d
+71b82bed396776'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQuery', commit='0a294fe9bf23b396c5cc955054c50b9b652ec5ad'), 'importGraph': LeanGitRepo(url='https://github.com/leanprover-community/im
+port-graph', commit='fb7841a6f4fb389ec0e47dd4677844d49906af3c')}, root_dir=PosixPath('/data/yingzi_ma/lean_project/.cache/lean_dojo/eric-wieser-lean-matrix-cookbook-f15a149d321ac99ff9b9c024b58e7882f564669f/lean-matrix
+-cookbook'))
+2024-09-07 17:40:48.752 | INFO     | generate_benchmark_lean4:main:367 - Successfully traced the repo
+2024-09-07 17:40:56.140 | INFO     | generate_benchmark_lean4:split_data:132 - 67585 theorems in total
+2024-09-07 17:40:56.140 | INFO     | generate_benchmark_lean4:split_data:137 - 67585 theorems in total, with 1351 for validation and 1351 for testing
+2024-09-07 17:40:56.140 | INFO     | generate_benchmark_lean4:split_randomly:80 - Splitting the theorems randomly
+2024-09-07 17:40:56.160 | INFO     | generate_benchmark_lean4:split_by_premise:94 - Splitting the theorems by premises
+2024-09-07 17:41:02.894 | INFO     | generate_benchmark_lean4:main:375 - Successfully split the data
+2024-09-07 17:42:55.498 | INFO     | generate_benchmark_lean4:export_proofs:201 - 64883 theorems and 95899 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/lean-matrix-cookbook_f
+15a149d321ac99ff9b9c024b58e7882f564669f/random/train.json
+2024-09-07 17:42:55.947 | INFO     | generate_benchmark_lean4:export_proofs:201 - 1351 theorems and 1982 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/lean-matrix-cookbook_f15
+a149d321ac99ff9b9c024b58e7882f564669f/random/val.json
+2024-09-07 17:42:56.224 | INFO     | generate_benchmark_lean4:export_proofs:201 - 1351 theorems and 1927 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/lean-matrix-cookbook_f15
+a149d321ac99ff9b9c024b58e7882f564669f/random/test.json
+2024-09-07 17:43:09.379 | INFO     | generate_benchmark_lean4:export_proofs:201 - 64883 theorems and 94879 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/lean-matrix-cookbook_f
+15a149d321ac99ff9b9c024b58e7882f564669f/novel_premises/train.json
+2024-09-07 17:43:09.896 | INFO     | generate_benchmark_lean4:export_proofs:201 - 1351 theorems and 2675 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/lean-matrix-cookbook_f15
+a149d321ac99ff9b9c024b58e7882f564669f/novel_premises/val.json
+2024-09-07 17:43:10.200 | INFO     | generate_benchmark_lean4:export_proofs:201 - 1351 theorems and 2254 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/lean-matrix-cookbook_f15
+a149d321ac99ff9b9c024b58e7882f564669f/novel_premises/test.json
+2024-09-07 17:43:10.201 | INFO     | generate_benchmark_lean4:export_proofs:205 - 135170 theorems saved in total
+2024-09-07 17:43:10.202 | INFO     | generate_benchmark_lean4:export_data:293 - Successfully exported the proofs
+2024-09-07 17:43:28.247 | INFO     | generate_benchmark_lean4:export_premises:228 - 102294 theorems/definitions from 2734 files saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/lean-matr
+ix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/corpus.jsonl
+2024-09-07 17:43:28.261 | INFO     | generate_benchmark_lean4:export_data:297 - Successfully exported the premises
+2024-09-07 17:43:28.262 | INFO     | generate_benchmark_lean4:export_data:305 - Successfully exported the metadata
+2024-09-07 17:43:28.262 | INFO     | generate_benchmark_lean4:main:377 - Successfully exported the data
+2024-09-07 17:43:28.370 | INFO     | __main__:add_repo_to_database:1020 - Finished generating benchmark at /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/lean-matrix-cookbook_f15a149d321ac99ff9
+b9c024b58e7882f564669f
+100%|█████████████████████████████████████████████████████████████| 64883/64883 [00:01<00:00, 57770.87it/s]
+100%|███████████████████████████████████████████████████████████████| 1351/1351 [00:00<00:00, 53821.65it/s]
+100%|███████████████████████████████████████████████████████████████| 1351/1351 [00:00<00:00, 69923.18it/s]
+2024-09-07 17:43:31.157 | INFO     | __main__:add_repo_to_database:1045 - Before adding new repo:
+2024-09-07 17:43:31.157 | INFO     | dynamic_database:print_database_contents:610 - Current database contents:
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:add_repository:586 - Attempting to add repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:add_repository:589 - Added new repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-07 17:43:31.158 | INFO     | __main__:add_repo_to_database:1048 - After adding new repo:
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:610 - Current database contents:
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-07 17:43:31.158 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-07 17:43:31.159 | INFO     | dynamic_database:print_database_contents:612 -   - https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-07 17:44:09.834 | INFO     | __main__:main:1422 - Successfully added repo https://github.com/eric-wieser/lean-matrix-cookbook. Total repos: 1
+Processing /data/yingzi_ma/lean_project/repos_new/FormalizedFormalLogic/Foundation
+2024-09-07 17:44:09.834 | INFO     | __main__:add_repo_to_database:990 - Processing https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-07 17:44:10.138 | INFO     | __main__:get_compatible_commit:326 - Latest commit: 24006582e25395fb5fa3da38181905cff44d0f36
+2024-09-07 17:44:10.138 | INFO     | __main__:get_compatible_commit:329 - Creating LeanGitRepo for https://github.com/FormalizedFormalLogic/Foundation
+2024-09-07 17:44:10.138 | INFO     | __main__:get_compatible_commit:331 - Getting config for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-07 17:44:10.138 | INFO     | __main__:get_compatible_commit:338 - Searching for compatible commit for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-07 17:44:10.142 | INFO     | __main__:get_compatible_commit:344 - Already in a Git repository
+2024-09-07 17:44:10.144 | INFO     | __main__:get_compatible_commit:354 - Fetching commits for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-07 17:44:11.709 | INFO     | __main__:get_compatible_commit:358 - Fetched commits for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-07 17:44:11.715 | INFO     | __main__:get_compatible_commit:364 - Getting list of commits for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-07 17:44:11.729 | INFO     | __main__:get_compatible_commit:369 - Found 570 commits for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-07 17:44:21.449 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc2
+2024-09-07 17:44:51.573 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0-rc2
+2024-09-07 17:45:06.534 | INFO     | __main__:get_compatible_commit:376 - Found compatible commit d5fe5d057a90a0703a745cdc318a1b6621490c21 for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-07 17:45:06.535 | INFO     | __main__:add_repo_to_database:1006 - Found compatible commit d5fe5d057a90a0703a745cdc318a1b6621490c21 for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-07 17:45:06.535 | INFO     | __main__:add_repo_to_database:1007 - Lean version: v4.7.0-rc2
+2024-09-07 17:45:06.535 | INFO     | __main__:add_repo_to_database:1012 - Generating benchmark at /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/Foundation_d5fe5d057a90a0703a745cdc318a1b6621490
+c21
+2024-09-07 17:45:06.535 | INFO     | generate_benchmark_lean4:main:324 - Generating dataset to go into /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/Foundation_d5fe5d057a90a0703a745cdc318a1b66
+21490c21
+2024-09-07 17:45:06.535 | INFO     | generate_benchmark_lean4:main:331 - lean toolchain version: {'content': 'leanprover/lean4:v4.7.0-rc2\n'}
+2024-09-07 17:45:06.535 | INFO     | generate_benchmark_lean4:main:333 - lean version v: v4.7.0-rc2
+2024-09-07 17:45:06.535 | INFO     | generate_benchmark_lean4:main:334 - is supported: True
+2024-09-07 17:45:06.535 | INFO     | generate_benchmark_lean4:main:344 - lean path1 /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.7.0-rc2
+2024-09-07 17:45:06.535 | INFO     | generate_benchmark_lean4:main:345 - lean path2 /.elan/toolchains/leanprover--lean4---4.7.0-rc2
+2024-09-07 17:45:06.535 | INFO     | generate_benchmark_lean4:main:346 - lean path3 ~/.elan/toolchains/leanprover--lean4---4.7.0-rc2
+2024-09-07 17:45:06.536 | INFO     | generate_benchmark_lean4:main:350 - Lean toolchain path 2 does not exist: /.elan/toolchains/leanprover--lean4---4.7.0-rc2
+2024-09-07 17:45:06.536 | INFO     | generate_benchmark_lean4:main:352 - Lean toolchain path 3 does not exist: ~/.elan/toolchains/leanprover--lean4---4.7.0-rc2
+2024-09-07 17:45:06.537 | INFO     | generate_benchmark_lean4:main:355 - Switched to Lean toolchain at: /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.7.0-rc2
+2024-09-07 17:45:06.614 | INFO     | generate_benchmark_lean4:main:357 - lean --version: Lean (version 4.7.0-rc2, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-09-07 17:45:06.614 | INFO     | generate_benchmark_lean4:main:358 - repo: LeanGitRepo(url='https://github.com/FormalizedFormalLogic/Foundation', commit='d5fe5d057a90a0703a745cdc318a1b6621490c21')
+2024-09-07 17:45:06.614 | INFO     | generate_benchmark_lean4:main:360 - Configuring LeanDojo again...
+2024-09-07 17:45:06.622 | INFO     | generate_benchmark_lean4:configure_leandojo:317 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-07 17:45:06.623 | INFO     | generate_benchmark_lean4:main:362 - LeanDojo configured
+2024-09-07 17:45:06.623 | INFO     | generate_benchmark_lean4:main:365 - Tracing the repo...
+2024-09-07 17:45:06.869 | INFO     | lean_dojo.data_extraction.trace:get_traced_repo_path:79 - Tracing LeanGitRepo(url='https://github.com/FormalizedFormalLogic/Foundation', commit='d5fe5d057a90a0703a745cdc318a1b66214
+90c21')
+2024-09-07 17:45:06.871 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:81 - Working in the temporary directory /tmp/tmp7o50mm8m
+2024-09-07 17:45:07.336 | DEBUG    | lean_dojo.data_extraction.lean:clone_and_checkout:479 - Cloning LeanGitRepo(url='https://github.com/FormalizedFormalLogic/Foundation', commit='d5fe5d057a90a0703a745cdc318a1b6621490
+c21')
+2024-09-07 17:45:08.283 | DEBUG    | lean_dojo.data_extraction.trace:_trace:33 - Tracing LeanGitRepo(url='https://github.com/FormalizedFormalLogic/Foundation', commit='d5fe5d057a90a0703a745cdc318a1b6621490c21')
+2024-09-07 17:45:08.298 | DEBUG    | lean_dojo.container:run:184 - NUM_PROCS=32 python build_lean4_repo.py Foundation
+2024-09-07 17:45:08.533 | INFO     | __main__:main:165 - Building Foundation
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git to './.lake/packages/mathlib'
+info: std: cloning https://github.com/leanprover/std4 to './.lake/packages/std'
+info: Qq: cloning https://github.com/leanprover-community/quote4 to './.lake/packages/Qq'
+info: aesop: cloning https://github.com/leanprover-community/aesop to './.lake/packages/aesop'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4 to './.lake/packages/proofwidgets'
+info: Cli: cloning https://github.com/leanprover/lean4-cli to './.lake/packages/Cli'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph.git to './.lake/packages/importGraph'
+[0/21] Building Std.Lean.Meta.Basic
+[0/22] Building Std.Lean.Position
+[0/25] Building Std.WF
+[0/26] Building Std.Data.Nat.Basic
+[0/26] Building Std.CodeAction.Attr
+[0/40] Building Std.Tactic.OpenPrivate
+[0/58] Building Std.Tactic.Lint.Basic
+[0/58] Building Std.Lean.Expr
+[0/59] Building Std.Data.List.Basic
+[0/86] Building Std.Tactic.Relation.Rfl
+[0/86] Building Std.Lean.Name
+[0/95] Building Std.Control.ForInStep.Basic
+[0/95] Building Std.Lean.NameMapAttribute
+[0/95] Building Std.Util.LibraryNote
+[0/95] Building Std.Classes.BEq
+[0/96] Building Std.Classes.SatisfiesM
+[0/96] Building Std.Data.MLList.Basic
+[0/98] Building Std.Classes.Order
+[0/134] Downloading proofwidgets cloud release
+[0/289] Building Aesop.RuleSet.Name
+[0/289] Building Std.Data.Fin.Basic
+[0/293] Building Std.Data.Char
+[0/293] Building Aesop.Options.Public
+[0/293] Building Std.Data.DList
+[0/293] Building Std.Data.LazyList
+[0/289] Building Std.Control.Lemmas
+[0/293] Building Aesop.ElabM
+[0/293] Building Std.Util.ProofWanted
+[0/623] Building Std.Data.Sum.Basic
+[0/642] Building Std.Lean.Meta.Expr
+[0/642] Building Std.Lean.Except
+[0/642] Building Std.Lean.Float
+[0/674] Building Std.Lean.PersistentHashMap
+[0/683] Building Std.Lean.MonadBacktrack
+[0/687] Building Std.Data.UInt
+[0/703] Building Std.Lean.Meta.Inaccessible
+[0/705] Building Std.Lean.Syntax
+[0/710] Building Std.Lean.Util.Path
+[0/718] Building Std.Tactic.Unreachable
+[0/718] Building Std.Tactic.Case
+[0/752] Building Std.Test.Internal.DummyLabelAttr
+[0/761] Building Std.Tactic.Instances
+[0/772] Building Std.Lean.Delaborator
+[0/775] Building Std.Util.ExtendedBinder
+[0/792] Building Std.Util.CheckTactic
+[0/797] Building Std.Util.Pickle
+[0/797] Building Std.Lean.SMap
+[0/800] Building Std.Tactic.Exact
+[0/800] Building Std.Lean.HashSet
+[0/797] Building Std.Tactic.Classical
+[0/804] Building Aesop.Check
+[0/840] Building Aesop.Percent
+[0/848] Building Std.Tactic.NoMatch
+[0/851] Building Std.Lean.NameMap
+[0/861] Building Std.Tactic.Congr
+[0/867] Building Std.Lean.PersistentHashSet
+[0/874] Building Std.Lean.IO.Process
+[0/888] Building Std.Lean.TagAttribute
+[0/903] Building Std.Lean.HashMap
+[0/918] Building Aesop.Frontend.Basic
+[0/929] Building Aesop.Exception
+[0/929] Building Std.Tactic.SeqFocus
+[0/929] Building Qq.SortLocalDecls
+[0/1753] Building Qq.Typ
+[0/1753] Building Qq.ForLean.ReduceEval
+[0/1753] Building ImportGraph.RequiredModules
+[0/1753] Building Qq.ForLean.ToExpr
+[0/1753] Building Qq.ForLean.Do
+[0/1753] Building Std.Tactic.Where
+[0/1753] Building Std.Tactic.SqueezeScope
+[1/1753] Compiling Std.Lean.Name
+[1/1753] Building Std.Data.List.Init.Attach
+[1/1753] Building Aesop.Nanos
+[2/1753] Compiling Std.WF
+[3/1753] Compiling Std.Control.ForInStep.Basic
+[3/1753] Building Std.Control.ForInStep.Lemmas
+[4/1753] Building Std.Data.PairingHeap
+[4/1753] Compiling Std.Classes.Order
+[5/1753] Compiling Std.Classes.BEq
+[7/1753] Compiling Std.Lean.Position
+[7/1753] Compiling Std.Data.Char
+[7/1753] Unpacking proofwidgets cloud release
+[8/1753] Compiling Std.Control.Lemmas
+[9/1753] Compiling Std.Lean.NameMapAttribute
+[10/1753] Compiling Std.Lean.Meta.Basic
+[10/1753] Building Std.Tactic.FalseOrByContra
+[10/1753] Building Std.Lean.Meta.InstantiateMVars
+[10/1753] Building Std.Lean.Meta.Clear
+[10/1753] Building Std.Lean.Meta.AssertHypotheses
+[10/1753] Building Std.Tactic.Init
+[11/1753] Compiling Std.Util.LibraryNote
+[11/1753] Building Std.Classes.Cast
+[12/1753] Compiling Std.Lean.Expr
+[13/1753] Compiling Std.Lean.Syntax
+[14/1753] Compiling Std.Lean.MonadBacktrack
+[14/1753] Building Std.Lean.Meta.SavedState
+[15/1753] Compiling Std.Data.DList
+[16/1753] Compiling Std.Lean.Meta.Expr
+[17/1753] Compiling Std.Data.Nat.Basic
+[18/1753] Compiling Std.Lean.Meta.Inaccessible
+[19/1753] Compiling Std.Tactic.Lint.Basic
+[19/1753] Building Std.Tactic.Lint.TypeClass
+[19/1753] Building Std.Tactic.Lint.Misc
+[20/1753] Compiling Std.Data.Fin.Basic
+[20/1753] Building Std.Data.Fin.Lemmas
+[21/1753] Compiling Std.Lean.Except
+[22/1753] Compiling Std.Lean.Util.Path
+[23/1753] Compiling Std.Tactic.Unreachable
+[24/1753] Compiling Std.Lean.PersistentHashMap
+[24/1753] Building Std.Linter.UnreachableTactic
+[25/1753] Compiling Std.Util.Pickle
+[26/1753] Compiling Std.CodeAction.Attr
+[26/1753] Building Std.CodeAction.Misc
+[27/1753] Building Std.CodeAction.Basic
+[27/1753] Compiling Aesop.Percent
+[28/1753] Building Aesop.Constants
+[28/1753] Compiling Std.Lean.SMap
+[29/1753] Compiling Std.Tactic.Exact
+[30/1753] Compiling Std.Data.Sum.Basic
+[31/1753] Compiling Aesop.Options.Public
+[32/1753] Building Std.Data.Sum.Lemmas
+[33/1753] Compiling Qq.SortLocalDecls
+[34/1753] Compiling Std.Lean.NameMap
+[34/1753] Compiling Std.Data.UInt
+[35/1753] Compiling Std.Lean.Float
+[36/1753] Compiling Std.Lean.IO.Process
+[36/1753] Building Std.Lean.Json
+[37/1753] Compiling Std.Lean.HashSet
+[39/1753] Compiling Std.Tactic.Classical
+[40/1753] Compiling Std.Test.Internal.DummyLabelAttr
+[40/1753] Compiling Std.Lean.TagAttribute
+[42/1753] Building Std.Lean.AttributeExtra
+[42/1753] Compiling Aesop.Check
+[42/1753] Building Aesop.Options.Internal
+[43/1753] Compiling Std.Lean.PersistentHashSet
+[45/1753] Compiling Std.Data.List.Init.Attach
+[45/1753] Building Std.Data.Array.Basic
+[46/1753] Compiling Aesop.ElabM
+[46/1753] Building Aesop.RuleTac.ElabRuleTerm
+[47/1753] Compiling Aesop.Nanos
+[48/1753] Compiling Std.Tactic.OpenPrivate
+[48/1753] Building Std.Tactic.Lint.Simp
+[48/1753] Building Std.Tactic.Lint.Frontend
+[48/1753] Building Std.Lean.Meta.Simp
+[49/1753] Compiling Std.Util.ProofWanted
+[51/1753] Compiling Aesop.Frontend.Basic
+[52/1753] Compiling Std.Tactic.Relation.Rfl
+[54/1753] Compiling Std.Lean.Delaborator
+[54/1753] Building Std.Tactic.PrintDependents
+[57/1753] Compiling Aesop.Exception
+[58/1753] Compiling Std.Util.ExtendedBinder
+[61/1753] Compiling Qq.Typ
+[62/1753] Compiling Std.Classes.SatisfiesM
+[63/1753] Compiling Std.Util.CheckTactic
+[64/1753] Compiling Std.Tactic.NoMatch
+[65/1753] Compiling Std.Tactic.SeqFocus
+[66/1753] Compiling Std.Tactic.Instances
+[68/1753] Compiling Aesop.RuleSet.Name
+[69/1753] Compiling Qq.ForLean.ToExpr
+[70/1753] Compiling Std.Control.ForInStep.Lemmas
+[70/1753] Building Std.Control.ForInStep
+[71/1753] Compiling Qq.ForLean.Do
+[72/1753] Building Mathlib.Tactic.Monotonicity.Attr
+[72/1753] Building Mathlib.Lean.Elab.Term
+[72/1753] Building Mathlib.Init.Data.Sigma.Basic
+[72/1753] Building Mathlib.Tactic.SudoSetOption
+[72/1753] Building Mathlib.Util.AssertExists
+[72/1753] Building Mathlib.Tactic.SuccessIfFailWithMsg
+[72/1753] Building Mathlib.Tactic.GuardHypNums
+[72/1753] Building Mathlib.Tactic.CasesM
+[72/1753] Building Mathlib.Mathport.Rename
+[72/1753] Building Mathlib.Tactic.ProjectionNotation
+[72/1753] Building Mathlib.Tactic.ApplyWith
+[72/1753] Building Mathlib.Tactic.PPWithUniv
+[72/1753] Building Mathlib.Util.CompileInductive
+[72/1753] Building Mathlib.Lean.PrettyPrinter.Delaborator
+[72/1753] Building Mathlib.Util.MemoFix
+[72/1753] Building Mathlib.Tactic.Clear!
+[72/1753] Building Mathlib.Tactic.Trace
+[72/1753] Building ProofWidgets.Compat
+[72/1753] Building Mathlib.Tactic.NthRewrite
+[72/1753] Building Mathlib.Tactic.ClearExcept
+[72/1753] Building Mathlib.Tactic.Substs
+[72/1753] Building Mathlib.Mathport.Attributes
+[72/1753] Building Mathlib.Util.WhatsNew
+[72/1753] Building Mathlib.Tactic.Spread
+[72/1753] Building Mathlib.Tactic.Recover
+[72/1753] Building Mathlib.Lean.Expr.Traverse
+[72/1753] Building Mathlib.Tactic.FailIfNoProgress
+[72/1753] Building Mathlib.Tactic.Set
+[72/1753] Building Mathlib.Tactic.UnsetOption
+[72/1753] Building Mathlib.Tactic.Relation.Rfl
+[72/1753] Building Mathlib.Tactic.HelpCmd
+[72/1753] Building Mathlib.Lean.EnvExtension
+[72/1753] Building Mathlib.Util.CountHeartbeats
+[72/1753] Building Mathlib.Init.Data.Nat.Notation
+[72/1753] Building Mathlib.Tactic.TypeCheck
+[72/1753] Building Mathlib.Tactic.Check
+[72/1753] Building Mathlib.Tactic.Constructor
+[72/1753] Building Mathlib.Util.WithWeakNamespace
+[72/1753] Building Mathlib.Tactic.GuardGoalNums
+[72/1753] Building Mathlib.Tactic.Clear_
+[72/1753] Building Mathlib.Tactic.Observe
+[72/1753] Building Mathlib.Tactic.SimpIntro
+[72/1753] Building Mathlib.Tactic.ExtendDoc
+[72/1753] Building Mathlib.Tactic.InferParam
+[72/1753] Building Mathlib.Util.Delaborators
+[72/1753] Building Mathlib.Tactic.ExtractGoal
+[72/1753] Building Mathlib.Tactic.Attr.Register
+[72/1753] Building Mathlib.Tactic.Rename
+[72/1753] Building Mathlib.Tactic.Existsi
+[72/1753] Building Mathlib.Lean.Meta.Simp
+[72/1753] Building Mathlib.Tactic.SimpRw
+[72/1753] Building Mathlib.Util.Tactic
+[72/1753] Building Mathlib.Tactic.Eqns
+[72/1753] Building Mathlib.Tactic.Conv
+[72/1753] Building Mathlib.Tactic.Widget.SelectInsertParamsClass
+[72/1753] Building Mathlib.Tactic.HaveI
+[72/1753] Building Mathlib.Data.Array.Defs
+[73/1753] Compiling Std.Tactic.Congr
+[73/1753] Building Mathlib.Tactic.Variable
+[73/1753] Building Mathlib.Tactic.Coe
+[73/1753] Building Mathlib.Tactic.Lemma
+[73/1753] Building Mathlib.Util.AtomM
+[73/1753] Building Mathlib.Lean.Meta.Basic
+[74/1753] Compiling Std.Lean.Meta.AssertHypotheses
+[77/1753] Compiling Std.Lean.Meta.Clear
+[79/1753] Compiling ImportGraph.RequiredModules
+[79/1753] Building ImportGraph.Imports
+[80/1753] Compiling Qq.ForLean.ReduceEval
+[80/1753] Building Qq.Macro
+[82/1753] Compiling Std.Lean.Meta.InstantiateMVars
+[83/1753] Compiling Std.Classes.Cast
+[88/1753] Compiling Std.Tactic.Where
+[90/1753] Compiling Std.Data.Fin.Lemmas
+[90/1753] Building Std.Data.Fin
+[94/1753] Compiling Std.Lean.Meta.SavedState
+[94/1753] Building Aesop.Util.EqualUpToIds
+[95/1753] Compiling Std.Data.MLList.Basic
+[95/1753] Building Std.Data.MLList.Heartbeats
+[97/1753] Compiling Aesop.Constants
+[99/1753] Compiling Std.Tactic.Lint.TypeClass
+[101/1753] Compiling Std.Lean.HashMap
+[103/1753] Compiling Std.Lean.Json
+[104/1753] Compiling Std.Tactic.SqueezeScope
+[108/1753] Compiling Std.Data.LazyList
+[116/1753] Compiling Aesop.Options.Internal
+[116/1753] Building Aesop.Options
+[118/1753] Compiling Std.Linter.UnreachableTactic
+[120/1753] Compiling Std.Tactic.Case
+[121/1753] Compiling Std.Lean.AttributeExtra
+[121/1753] Building Std.Linter.UnnecessarySeqFocus
+[125/1753] Compiling Std.Data.Array.Basic
+[131/1753] Compiling Std.Tactic.Init
+[135/1753] Compiling Std.Data.Sum.Lemmas
+[135/1753] Building Std.Data.Sum
+[138/1753] Compiling Std.Control.ForInStep
+[142/1753] Compiling Mathlib.Tactic.Monotonicity.Attr
+[145/1753] Compiling Mathlib.Init.Data.Sigma.Basic
+[146/1753] Compiling Std.Data.PairingHeap
+[147/1753] Compiling Mathlib.Lean.Elab.Term
+[149/1753] Compiling Mathlib.Tactic.ApplyWith
+[151/1753] Compiling Mathlib.Util.MemoFix
+[153/1753] Compiling Std.Tactic.FalseOrByContra
+[155/1753] Compiling Mathlib.Tactic.Clear!
+[156/1753] Compiling ProofWidgets.Compat
+[156/1753] Building ProofWidgets.Component.Basic
+[156/1753] Building ProofWidgets.Cancellable
+[157/1753] Compiling Mathlib.Mathport.Attributes
+[159/1753] Compiling Mathlib.Lean.PrettyPrinter.Delaborator
+[160/1753] Compiling Mathlib.Tactic.Trace
+[162/1753] Compiling Std.Tactic.PrintDependents
+[163/1753] Compiling Mathlib.Lean.EnvExtension
+[164/1753] Compiling Mathlib.Tactic.ClearExcept
+[165/1753] Compiling Mathlib.Tactic.PPWithUniv
+[166/1753] Compiling Mathlib.Util.AssertExists
+[167/1753] Compiling Mathlib.Lean.Expr.Traverse
+[168/1753] Compiling Aesop.RuleTac.ElabRuleTerm
+[168/1753] Building Mathlib.Lean.Meta.DiscrTree
+[168/1753] Building Mathlib.Lean.Expr.ReplaceRec
+[169/1753] Compiling Mathlib.Tactic.ProjectionNotation
+[170/1753] Compiling Mathlib.Tactic.UnsetOption
+[171/1753] Compiling Mathlib.Tactic.Substs
+[172/1753] Compiling Mathlib.Tactic.Clear_
+[173/1753] Compiling Mathlib.Tactic.ExtendDoc
+[174/1753] Compiling Mathlib.Tactic.GuardGoalNums
+[175/1753] Compiling Std.Tactic.Lint.Simp
+[177/1753] Compiling Mathlib.Tactic.GuardHypNums
+[177/1753] Compiling Mathlib.Tactic.Existsi
+[178/1753] Compiling Mathlib.Tactic.CasesM
+[179/1753] Compiling Mathlib.Tactic.Constructor
+[180/1753] Compiling Std.Lean.Meta.Simp
+[182/1753] Compiling Mathlib.Util.CountHeartbeats
+[183/1753] Compiling Mathlib.Mathport.Rename
+[184/1753] Compiling Mathlib.Util.Tactic
+[184/1753] Building Mathlib.Init.Propext
+[184/1753] Building Mathlib.Control.ULift
+[184/1753] Building Mathlib.Init.Control.Combinators
+[184/1753] Compiling Mathlib.Tactic.Relation.Rfl
+[184/1753] Building Mathlib.Init.Set
+[185/1753] Compiling Mathlib.Tactic.TypeCheck
+[186/1753] Building Mathlib.Init.Quot
+[186/1753] Building Mathlib.Init.Data.Ordering.Basic
+[186/1753] Building Mathlib.Tactic.SwapVar
+[186/1753] Compiling Mathlib.Data.Array.Defs
+[186/1753] Building Mathlib.Tactic.ToLevel
+[191/1753] Compiling Mathlib.Util.WithWeakNamespace
+[191/1753] Compiling ProofWidgets.Cancellable
+[192/1753] Compiling Mathlib.Tactic.Check
+[192/1753] Compiling Mathlib.Tactic.Attr.Register
+[192/1753] Compiling Mathlib.Tactic.Spread
+[192/1753] Building Mathlib.Tactic.HigherOrder
+[193/1753] Compiling Mathlib.Tactic.NthRewrite
+[193/1753] Compiling Std.CodeAction.Basic
+[193/1753] Building Mathlib.Tactic.ScopedNS
+[195/1753] Building Std.CodeAction.Deprecated
+[196/1753] Compiling Mathlib.Tactic.SudoSetOption
+[197/1753] Compiling Mathlib.Tactic.Eqns
+[197/1753] Compiling Mathlib.Tactic.HaveI
+[197/1753] Compiling Mathlib.Tactic.Recover
+[202/1753] Compiling Mathlib.Tactic.Set
+[203/1753] Compiling Mathlib.Tactic.Lemma
+[204/1753] Compiling Mathlib.Tactic.InferParam
+[205/1753] Compiling Std.Data.Fin
+[207/1753] Compiling Mathlib.Lean.Meta.Basic
+[207/1753] Building Mathlib.Tactic.ApplyAt
+[209/1753] Compiling Mathlib.Tactic.Widget.SelectInsertParamsClass
+[211/1753] Compiling Mathlib.Util.AtomM
+[212/1753] Compiling Mathlib.Tactic.Observe
+[215/1753] Compiling Mathlib.Tactic.Coe
+[217/1753] Compiling Std.Data.MLList.Heartbeats
+[218/1753] Compiling Aesop.Options
+[221/1753] Compiling Std.Data.Sum
+[227/1753] Compiling Mathlib.Tactic.FailIfNoProgress
+[229/1753] Compiling Mathlib.Tactic.SuccessIfFailWithMsg
+[232/1753] Compiling Std.Tactic.Lint.Misc
+[233/1753] Building Std.Control.Nondet.Basic
+[233/1753] Building Std.Data.RBMap.Basic
+[233/1753] Building Std.Lean.Util.EnvSearch
+[235/1753] Compiling Mathlib.Tactic.Conv
+[238/1753] Compiling Mathlib.Tactic.ExtractGoal
+[238/1753] Building Mathlib.Tactic.ApplyCongr
+[243/1753] Compiling Mathlib.Tactic.SimpIntro
+[246/1753] Compiling Std.CodeAction.Misc
+[246/1753] Building Std.CodeAction
+[248/1753] Compiling Mathlib.Init.Data.Nat.Notation
+[248/1753] Building Mathlib.Init.Data.Fin.Basic
+[249/1753] Compiling Mathlib.Lean.Expr.ReplaceRec
+[251/1753] Compiling Mathlib.Util.CompileInductive
+[252/1753] Compiling ProofWidgets.Component.Basic
+[252/1753] Building ProofWidgets.Component.Recharts
+[252/1753] Building ProofWidgets.Component.MakeEditLink
+[252/1753] Building ProofWidgets.Data.Html
+[253/1753] Compiling Mathlib.Util.WhatsNew
+[253/1753] Building ProofWidgets.Component.Panel.Basic
+[258/1753] Compiling Std.Linter.UnnecessarySeqFocus
+[258/1753] Building Std.Linter
+[269/1753] Compiling Mathlib.Lean.Meta.Simp
+[270/1753] Compiling Mathlib.Init.Control.Combinators
+[272/1753] Compiling Mathlib.Init.Propext
+[273/1753] Compiling Mathlib.Init.Data.Ordering.Basic
+[275/1753] Compiling Mathlib.Control.ULift
+[277/1753] Compiling Mathlib.Tactic.Rename
+[285/1753] Compiling Mathlib.Tactic.SwapVar
+[288/1753] Compiling Mathlib.Tactic.ToLevel
+[288/1753] Building Mathlib.Tactic.DeriveToExpr
+[294/1753] Compiling Mathlib.Init.Quot
+[296/1753] Compiling Mathlib.Lean.Meta.DiscrTree
+[300/1753] Compiling Mathlib.Init.Data.Fin.Basic
+[301/1753] Compiling Std.Lean.Util.EnvSearch
+[301/1753] Building Std.Tactic.PrintPrefix
+[304/1753] Compiling Mathlib.Tactic.ApplyAt
+[309/1753] Compiling Mathlib.Tactic.SimpRw
+[312/1753] Compiling Std.CodeAction
+[315/1753] Compiling Mathlib.Tactic.HigherOrder
+[320/1753] Compiling Std.Tactic.Lint.Frontend
+[320/1753] Building Std.Tactic.Lint
+[327/1753] Compiling Mathlib.Tactic.ApplyCongr
+[328/1753] Compiling Std.Linter
+[328/1753] Building Std.Tactic.Basic
+[331/1753] Compiling ProofWidgets.Component.MakeEditLink
+[336/1753] Compiling Std.Control.Nondet.Basic
+[336/1753] Building Mathlib.Tactic.Hint
+[339/1753] Compiling ProofWidgets.Component.Recharts
+[340/1753] Compiling Std.Tactic.Basic
+[341/1753] Building Mathlib.Tactic.GCongr.ForwardAttr
+[343/1753] Compiling Std.Tactic.PrintPrefix
+[347/1753] Compiling Mathlib.Init.Set
+[350/1753] Compiling Std.Tactic.Lint
+[350/1753] Building Mathlib.Tactic.Simps.NotationClass
+[350/1753] Building Mathlib.Tactic.Lint
+[358/1753] Compiling Mathlib.Tactic.GCongr.ForwardAttr
+[359/1753] Compiling ImportGraph.Imports
+[361/1753] Compiling Mathlib.Tactic.Lint
+[362/1753] Compiling ProofWidgets.Component.Panel.Basic
+[362/1753] Building ProofWidgets.Component.Panel.GoalTypePanel
+[364/1753] Compiling Mathlib.Tactic.Hint
+[365/1753] Compiling Mathlib.Tactic.ScopedNS
+[365/1753] Building Mathlib.Mathport.Notation
+[366/1753] Compiling Aesop.Util.EqualUpToIds
+[368/1753] Compiling Mathlib.Tactic.Variable
+[369/1753] Compiling Mathlib.Tactic.Simps.NotationClass
+[371/1753] Compiling Std.CodeAction.Deprecated
+[371/1753] Building Std.Tactic.Alias
+[375/1753] Compiling ProofWidgets.Component.Panel.GoalTypePanel
+[385/1753] Compiling ProofWidgets.Data.Html
+[385/1753] Building ProofWidgets.Component.HtmlDisplay
+[385/1753] Building ProofWidgets.Component.OfRpcMethod
+[385/1753] Building ProofWidgets.Data.Svg
+[385/1753] Building ProofWidgets.Presentation.Expr
+[385/1753] Building ProofWidgets.Component.PenroseDiagram
+[386/1753] Building Std.Tactic.PermuteGoals
+[386/1753] Compiling Std.Data.List.Basic
+[386/1753] Building Mathlib.Init.Data.List.Basic
+[386/1753] Building Mathlib.Data.String.Defs
+[386/1753] Building Std.Data.AssocList
+[391/1753] Compiling Mathlib.Data.String.Defs
+[392/1753] Compiling Std.Tactic.PermuteGoals
+[393/1753] Compiling Std.Tactic.Alias
+[394/1753] Compiling ProofWidgets.Component.HtmlDisplay
+[394/1753] Building Std.Data.Bool
+[394/1753] Building Std.Logic
+[394/1753] Building Std.Data.Nat.Lemmas
+[394/1753] Building Std.Data.Option.Lemmas
+[395/1753] Compiling Mathlib.Init.Data.List.Basic
+[396/1753] Compiling ProofWidgets.Component.OfRpcMethod
+[396/1753] Building Mathlib.Tactic.Widget.SelectPanelUtils
+[397/1753] Compiling ProofWidgets.Component.PenroseDiagram
+[401/1753] Compiling Mathlib.Tactic.DeriveToExpr
+[401/1753] Building Mathlib.Tactic.ToExpr
+[403/1753] Compiling ProofWidgets.Presentation.Expr
+[403/1753] Building ProofWidgets.Component.Panel.SelectionPanel
+[404/1753] Compiling Std.Data.Option.Lemmas
+[404/1753] Building Std.Data.Option
+[405/1753] Compiling Std.Data.Bool
+[405/1753] Building Std.Data.Array.Init.Lemmas
+[406/1753] Compiling Mathlib.Tactic.HelpCmd
+[412/1753] Compiling Std.Logic
+[412/1753] Building Mathlib.Init.Data.Quot
+[412/1753] Building Mathlib.Tactic.Use
+[412/1753] Building Mathlib.Lean.Meta
+[413/1753] Building Mathlib.Tactic.Attr.Core
+[414/1753] Compiling Std.Data.Option
+[419/1753] Compiling Mathlib.Tactic.Widget.SelectPanelUtils
+[419/1753] Building Mathlib.Tactic.Widget.Conv
+[419/1753] Building Mathlib.Tactic.Widget.Calc
+[420/1753] Compiling Std.Data.Nat.Lemmas
+[420/1753] Building Std.Data.Array.Merge
+[420/1753] Building Std.Data.Nat.Gcd
+[420/1753] Building Std.Data.Array.Match
+[420/1753] Building Std.Data.Int.Order
+[421/1753] Building Std.Data.List.Lemmas
+[421/1753] Building Std.Data.BinomialHeap.Basic
+[421/1753] Building Std.Data.BitVec.Lemmas
+[422/1753] Compiling Mathlib.Tactic.Attr.Core
+[423/1753] Compiling Mathlib.Init.Data.Quot
+[424/1753] Compiling Mathlib.Util.Delaborators
+[425/1753] Compiling ProofWidgets.Component.Panel.SelectionPanel
+[429/1753] Compiling Mathlib.Tactic.ToExpr
+[429/1753] Building Mathlib.Tactic.FBinop
+[432/1753] Compiling Std.Data.RBMap.Basic
+[432/1753] Building Std.Data.RBMap.WF
+[433/1753] Compiling Std.Data.BitVec.Lemmas
+[433/1753] Building Std.Data.BitVec
+[434/1753] Building ProofWidgets.Component.InteractiveSvg
+[434/1753] Compiling ProofWidgets.Data.Svg
+[438/1753] Compiling Mathlib.Lean.Meta
+[438/1753] Building Mathlib.Lean.Elab.Tactic.Basic
+[438/1753] Building Mathlib.Lean.Meta.CongrTheorems
+[441/1753] Compiling Std.Data.Nat.Gcd
+[441/1753] Building Std.Data.Nat
+[442/1753] Compiling Mathlib.Tactic.Widget.Conv
+[444/1753] Compiling Std.Data.Array.Match
+[445/1753] Building Std.Data.String.Basic
+[447/1753] Compiling Std.Data.Nat
+[450/1753] Compiling Std.Data.BitVec
+[452/1753] Compiling Std.Data.Array.Init.Lemmas
+[455/1753] Compiling Std.Data.Int.Order
+[455/1753] Building Std.Data.Int.DivMod
+[455/1753] Building Mathlib.Init.Data.Int.Basic
+[456/1753] Compiling Std.Data.AssocList
+[456/1753] Building Std.Data.HashMap.Basic
+[459/1753] Compiling Mathlib.Tactic.Use
+[461/1753] Compiling Std.Data.String.Basic
+[461/1753] Building Std.Lean.Meta.UnusedNames
+[462/1753] Compiling Mathlib.Lean.Elab.Tactic.Basic
+[462/1753] Building Mathlib.Tactic.Relation.Trans
+[463/1753] Compiling Mathlib.Init.Data.Int.Basic
+[464/1753] Compiling Std.Data.Array.Merge
+[464/1753] Building Aesop.Util.UnorderedArraySet
+[464/1753] Building Std.Lean.Meta.DiscrTree
+[469/1753] Compiling Mathlib.Tactic.Widget.Calc
+[471/1753] Compiling Std.Lean.Meta.UnusedNames
+[473/1753] Compiling Mathlib.Tactic.FBinop
+[473/1753] Building Mathlib.Data.SProd
+[474/1753] Compiling Std.Lean.Meta.DiscrTree
+[474/1753] Building Std.Util.Cache
+[476/1753] Compiling Aesop.Util.UnorderedArraySet
+[476/1753] Building ProofWidgets
+[476/1753] Compiling ProofWidgets.Component.InteractiveSvg
+[478/1753] Compiling Mathlib.Lean.Meta.CongrTheorems
+[482/1753] Compiling Std.Data.HashMap.Basic
+[482/1753] Building Aesop.Util.UnionFind
+[482/1753] Building Mathlib.Data.MLList.Dedup
+[482/1753] Building Mathlib.Lean.Name
+[483/1753] Compiling Qq.Macro
+[484/1753] Compiling ProofWidgets
+[485/1753] Compiling Mathlib.Data.SProd
+[485/1753] Building Qq.Delab
+[486/1753] Compiling Std.Util.Cache
+[486/1753] Building Mathlib.Tactic.Find
+[491/1753] Compiling Mathlib.Lean.Name
+[493/1753] Compiling Aesop.Util.UnionFind
+[496/1753] Compiling Mathlib.Tactic.Find
+[501/1753] Compiling Std.Data.Int.DivMod
+[501/1753] Building Std.Data.Rat.Basic
+[501/1753] Building Std.Data.Int.Gcd
+[502/1753] Compiling Mathlib.Data.MLList.Dedup
+[506/1753] Compiling Qq.Delab
+[506/1753] Building Qq.MetaM
+[507/1753] Compiling Std.Data.Int.Gcd
+[507/1753] Building Std.Data.Int.Lemmas
+[508/1753] Compiling Mathlib.Tactic.Relation.Trans
+[508/1753] Building Mathlib.Init.Logic
+[508/1753] Building Mathlib.Init.Core
+[510/1753] Compiling Std.Data.Int.Lemmas
+[510/1753] Building Std.Data.Int
+[513/1753] Compiling Qq.MetaM
+[513/1753] Building Qq.Match
+[513/1753] Building Qq.AssertInstancesCommute
+[514/1753] Compiling Mathlib.Init.Core
+[515/1753] Compiling Std.Data.Int
+[519/1753] Compiling Std.Data.Rat.Basic
+[519/1753] Building Std.Classes.RatCast
+[519/1753] Building Mathlib.Lean.Expr.Basic
+[519/1753] Building Mathlib.Data.Rat.Init
+[519/1753] Building Std.Data.Rat.Lemmas
+[521/1753] Compiling Mathlib.Mathport.Notation
+[522/1753] Compiling Std.Classes.RatCast
+[524/1753] Compiling Mathlib.Init.Logic
+[524/1753] Building Mathlib.Init.Algebra.Classes
+[525/1753] Building Mathlib.Init.Data.Bool.Lemmas
+[526/1753] Compiling Mathlib.Data.Rat.Init
+[530/1753] Compiling Qq.AssertInstancesCommute
+[531/1753] Building Std.Data.BinomialHeap.Lemmas
+[531/1753] Compiling Std.Data.BinomialHeap.Basic
+[533/1753] Compiling Mathlib.Init.Data.Bool.Lemmas
+[534/1753] Compiling Mathlib.Init.Algebra.Classes
+[536/1753] Compiling Mathlib.Lean.Expr.Basic
+[536/1753] Building Mathlib.Tactic.RenameBVar
+[536/1753] Building Mathlib.Tactic.Simps.Basic
+[536/1753] Building Mathlib.Tactic.Cases
+[536/1753] Building Mathlib.Tactic.GeneralizeProofs
+[536/1753] Building Mathlib.Tactic.Core
+[537/1753] Compiling Std.Data.BinomialHeap.Lemmas
+[537/1753] Building Std.Data.BinomialHeap
+[540/1753] Compiling Std.Data.Rat.Lemmas
+[540/1753] Building Std.Data.Rat
+[542/1753] Compiling Std.Data.BinomialHeap
+[545/1753] Compiling Std.Data.Rat
+[547/1753] Compiling Mathlib.Tactic.RenameBVar
+[550/1753] Compiling Mathlib.Tactic.GeneralizeProofs
+[552/1753] Compiling Mathlib.Tactic.Cases
+[553/1753] Compiling Mathlib.Tactic.Core
+[553/1753] Building Mathlib.Tactic.SplitIfs
+[553/1753] Building Mathlib.Tactic.WLOG
+[553/1753] Building Mathlib.Tactic.Propose
+[555/1753] Compiling Std.Data.RBMap.WF
+[555/1753] Building Std.Data.RBMap.Alter
+[558/1753] Compiling Mathlib.Tactic.WLOG
+[560/1753] Compiling Mathlib.Tactic.Propose
+[562/1753] Compiling Qq.Match
+[562/1753] Building Qq
+[562/1753] Building Mathlib.Tactic.Says
+[564/1753] Compiling Qq
+[564/1753] Building Mathlib.Util.Qq
+[567/1753] Compiling Mathlib.Util.Qq
+[569/1753] Compiling Mathlib.Tactic.Says
+[570/1753] Compiling Mathlib.Tactic.SplitIfs
+[574/1753] Compiling Std.Data.List.Lemmas
+[574/1753] Building Std.Data.List.Count
+[574/1753] Building Mathlib.Init.Data.List.Lemmas
+[574/1753] Building Std.Data.String.Lemmas
+[574/1753] Building Std.Lean.System.IO
+[574/1753] Building Std.Data.Range.Lemmas
+[574/1753] Building Mathlib.Init.Data.List.Instances
+[574/1753] Building Std.Data.Array.Lemmas
+[576/1753] Building Mathlib.Tactic.ToAdditive
+[576/1753] Compiling Mathlib.Tactic.Simps.Basic
+[578/1753] Compiling Mathlib.Init.Data.List.Lemmas
+[579/1753] Compiling Std.Lean.System.IO
+[579/1753] Building Std.Data.MLList.IO
+[580/1753] Compiling Mathlib.Init.Data.List.Instances
+[584/1753] Compiling Std.Data.MLList.IO
+[584/1753] Building Std.Data.MLList
+[585/1753] Compiling Std.Data.List.Count
+[585/1753] Building Std.Data.List.Pairwise
+[587/1753] Compiling Std.Data.Range.Lemmas
+[587/1753] Building Std.Data.Range
+[589/1753] Compiling Std.Data.MLList
+[593/1753] Compiling Std.Data.Range
+[595/1753] Building Std.Data.RBMap.Lemmas
+[595/1753] Compiling Std.Data.RBMap.Alter
+[596/1753] Compiling Std.Data.List.Pairwise
+[596/1753] Building Std.Data.List.Perm
+[599/1753] Compiling Mathlib.Tactic.ToAdditive
+[599/1753] Building Mathlib.Init.ZeroOne
+[600/1753] Compiling Mathlib.Init.ZeroOne
+[600/1753] Building Mathlib.Init.Data.Nat.Basic
+[602/1753] Compiling Mathlib.Init.Data.Nat.Basic
+[604/1753] Compiling Std.Data.List.Perm
+[604/1753] Building Std.Data.List
+[605/1753] Compiling Std.Data.Array.Lemmas
+[605/1753] Building Std.Data.Array
+[605/1753] Building Std.Data.HashMap.WF
+[605/1753] Building Std.Data.HashMap.Lemmas
+[605/1753] Building Std.Data.ByteArray
+[607/1753] Compiling Std.Data.List
+[609/1753] Compiling Std.Data.Array
+[610/1753] Compiling Std.Data.HashMap.Lemmas
+[614/1753] Compiling Std.Data.RBMap.Lemmas
+[614/1753] Building Std.Data.RBMap
+[616/1753] Compiling Std.Data.RBMap
+[619/1753] Compiling Std.Data.ByteArray
+[621/1753] Compiling Std.Data.String.Lemmas
+[621/1753] Building Std.Data.String
+[623/1753] Compiling Std.Data.String
+[623/1753] Building Aesop.Util.Basic
+[625/1753] Compiling Aesop.Util.Basic
+[625/1753] Building Aesop.Util.Tactic
+[625/1753] Building Aesop.Rule.Name
+[625/1753] Building Aesop.Tracing
+[626/1753] Compiling Aesop.Rule.Name
+[627/1753] Compiling Std.Data.HashMap.WF
+[627/1753] Building Std.Data.HashMap
+[631/1753] Compiling Std.Data.HashMap
+[632/1753] Compiling Aesop.Tracing
+[632/1753] Building Aesop.RulePattern
+[632/1753] Building Aesop.Stats.Basic
+[632/1753] Building Std
+[634/1753] Compiling Aesop.Util.Tactic
+[634/1753] Building Aesop.Script
+[635/1753] Compiling Std
+[635/1753] Building Mathlib.Tactic.TypeStar
+[638/1753] Compiling Aesop.Stats.Basic
+[638/1753] Building Aesop.Stats.Extension
+[640/1753] Compiling Mathlib.Tactic.TypeStar
+[640/1753] Building Mathlib.Data.Option.Defs
+[640/1753] Building Mathlib.Tactic.MkIffOfInductiveProp
+[640/1753] Building Mathlib.Data.Bracket
+[640/1753] Building Mathlib.Tactic.Basic
+[640/1753] Building Mathlib.Tactic.Inhabit
+[640/1753] Building Mathlib.Algebra.Group.Defs
+[640/1753] Building Mathlib.Init.Order.Defs
+[641/1753] Building Aesop.Index.Basic
+[641/1753] Compiling Aesop.RulePattern
+[643/1753] Compiling Aesop.Stats.Extension
+[643/1753] Building Aesop.Stats.Report
+[645/1753] Compiling Mathlib.Tactic.Inhabit
+[646/1753] Compiling Aesop.Stats.Report
+[648/1753] Compiling Aesop.Index.Basic
+[649/1753] Compiling Mathlib.Data.Bracket
+[650/1753] Compiling Mathlib.Data.Option.Defs
+[651/1753] Compiling Mathlib.Tactic.Basic
+[651/1753] Building Mathlib.Tactic.ExtractLets
+[651/1753] Building Mathlib.Tactic.RSuffices
+[651/1753] Building Mathlib.Tactic.DefEqTransformations
+[651/1753] Building Mathlib.Tactic.Lift
+[651/1753] Building Mathlib.Order.Notation
+[651/1753] Building Mathlib.Init.Function
+[658/1753] Compiling Mathlib.Init.Order.Defs
+[658/1753] Building Mathlib.Init.Data.Nat.Lemmas
+[658/1753] Building Mathlib.Init.Data.Int.Order
+[658/1753] Building Mathlib.Tactic.GCongr.Core
+[658/1753] Building Mathlib.Init.Order.LinearOrder
+[659/1753] Compiling Aesop.Script
+[659/1753] Building Aesop.RuleTac.Basic
+[660/1753] Compiling Mathlib.Tactic.RSuffices
+[662/1753] Compiling Mathlib.Init.Function
+[663/1753] Building Mathlib.Data.Prod.PProd
+[663/1753] Building Mathlib.Logic.Relator
+[663/1753] Building Mathlib.Data.Option.NAry
+[663/1753] Building Mathlib.Logic.Basic
+[663/1753] Building Mathlib.Logic.Nonempty
+[663/1753] Building Mathlib.Logic.Nontrivial.Defs
+[663/1753] Building Mathlib.Control.Basic
+[664/1753] Compiling Mathlib.Tactic.ExtractLets
+[665/1753] Compiling Mathlib.Init.Order.LinearOrder
+[667/1753] Compiling Mathlib.Tactic.MkIffOfInductiveProp
+[669/1753] Compiling Mathlib.Init.Data.Int.Order
+[671/1753] Compiling Mathlib.Order.Notation
+[673/1753] Compiling Aesop.RuleTac.Basic
+[673/1753] Building Aesop.RuleTac.Apply
+[673/1753] Building Aesop.RuleTac.Cases
+[673/1753] Building Aesop.RuleTac.Preprocess
+[673/1753] Building Aesop.RuleTac.Tactic
+[673/1753] Building Aesop.RuleTac.Forward
+[673/1753] Building Aesop.Rule.Basic
+[674/1753] Compiling Mathlib.Data.Prod.PProd
+[675/1753] Compiling Mathlib.Tactic.DefEqTransformations
+[677/1753] Compiling Mathlib.Init.Data.Nat.Lemmas
+[677/1753] Building Mathlib.Data.Bool.Basic
+[680/1753] Compiling Mathlib.Logic.Relator
+[681/1753] Compiling Mathlib.Logic.Nonempty
+[682/1753] Compiling Mathlib.Tactic.Lift
+[683/1753] Compiling Aesop.RuleTac.Preprocess
+[686/1753] Compiling Mathlib.Logic.Nontrivial.Defs
+[686/1753] Compiling Aesop.Rule.Basic
+[686/1753] Building Aesop.Search.Expansion.Basic
+[686/1753] Building Aesop.Index
+[693/1753] Compiling Aesop.RuleTac.Tactic
+[695/1753] Compiling Aesop.RuleTac.Cases
+[696/1753] Compiling Mathlib.Control.Basic
+[696/1753] Building Mathlib.Tactic.Rewrites
+[696/1753] Building Mathlib.Control.Functor
+[697/1753] Compiling Aesop.Search.Expansion.Basic
+[698/1753] Compiling Aesop.RuleTac.Apply
+[700/1753] Building Mathlib.Data.List.BigOperators.Defs
+[700/1753] Building Mathlib.Algebra.Group.Semiconj.Defs
+[700/1753] Building Mathlib.Algebra.Invertible.Defs
+[700/1753] Building Mathlib.Data.Nat.Cast.Defs
+[700/1753] Compiling Mathlib.Algebra.Group.Defs
+[702/1753] Compiling Mathlib.Data.Option.NAry
+[705/1753] Compiling Aesop.RuleTac.Forward
+[705/1753] Building Aesop.RuleTac
+[706/1753] Compiling Mathlib.Logic.Basic
+[706/1753] Building Mathlib.Logic.Function.Basic
+[706/1753] Building Mathlib.Tactic.Congr!
+[706/1753] Building Mathlib.Algebra.NeZero
+[706/1753] Building Mathlib.Tactic.PushNeg
+[706/1753] Building Mathlib.Tactic.Tauto
+[708/1753] Compiling Mathlib.Data.Bool.Basic
+[709/1753] Building Mathlib.Init.Data.Nat.Bitwise
+[712/1753] Compiling Mathlib.Tactic.GCongr.Core
+[715/1753] Compiling Mathlib.Control.Functor
+[715/1753] Building Mathlib.Data.List.Defs
+[715/1753] Building Mathlib.Control.Applicative
+[715/1753] Building Mathlib.Control.Traversable.Basic
+[716/1753] Compiling Aesop.RuleTac
+[717/1753] Compiling Mathlib.Data.List.BigOperators.Defs
+[721/1753] Compiling Mathlib.Algebra.NeZero
+[722/1753] Compiling Mathlib.Algebra.Group.Semiconj.Defs
+[724/1753] Compiling Aesop.Index
+[724/1753] Building Aesop.Rule
+[728/1753] Compiling Mathlib.Control.Traversable.Basic
+[729/1753] Compiling Mathlib.Algebra.Invertible.Defs
+[730/1753] Compiling Mathlib.Init.Data.Nat.Bitwise
+[731/1753] Compiling Mathlib.Data.Nat.Cast.Defs
+[731/1753] Building Mathlib.Data.Nat.Cast.NeZero
+[731/1753] Building Mathlib.Data.Int.Cast.Defs
+[735/1753] Compiling Aesop.Rule
+[735/1753] Building Aesop.RuleSet.Member
+[735/1753] Building Aesop.Tree.UnsafeQueue
+[737/1753] Compiling Mathlib.Control.Applicative
+[739/1753] Compiling Mathlib.Data.List.Defs
+[741/1753] Compiling Mathlib.Data.Int.Cast.Defs
+[743/1753] Compiling Mathlib.Data.Nat.Cast.NeZero
+[745/1753] Compiling Aesop.RuleSet.Member
+[745/1753] Building Aesop.Builder.Basic
+[746/1753] Compiling Aesop.Tree.UnsafeQueue
+[746/1753] Building Aesop.RuleSet.Filter
+[746/1753] Building Aesop.Tree.Data
+[749/1753] Compiling Mathlib.Tactic.Rewrites
+[751/1753] Compiling Mathlib.Tactic.Tauto
+[754/1753] Compiling Aesop.RuleSet.Filter
+[754/1753] Building Aesop.RuleSet
+[755/1753] Compiling Aesop.Builder.Basic
+[755/1753] Building Aesop.Builder.Cases
+[755/1753] Building Aesop.Builder.NormSimp
+[755/1753] Building Aesop.Builder.Forward
+[755/1753] Building Aesop.Builder.Unfold
+[755/1753] Building Aesop.Builder.Apply
+[756/1753] Compiling Mathlib.Logic.Function.Basic
+[756/1753] Building Aesop.Builder.Tactic
+[756/1753] Building Mathlib.Algebra.CharZero.Defs
+[756/1753] Building Mathlib.Logic.IsEmpty
+[756/1753] Building Mathlib.Data.Subtype
+[756/1753] Building Mathlib.Tactic.Choose
+[756/1753] Building Mathlib.Data.Sigma.Basic
+[757/1753] Building Mathlib.Data.Prod.Basic
+[757/1753] Building Mathlib.Algebra.GroupWithZero.Defs
+[757/1753] Building Mathlib.Data.FunLike.Basic
+[757/1753] Building Mathlib.Logic.Relation
+[757/1753] Compiling Mathlib.Tactic.PushNeg
+[757/1753] Building Mathlib.Logic.Function.Conjugate
+[757/1753] Building Mathlib.Tactic.Contrapose
+[757/1753] Building Mathlib.Data.Nat.Defs
+[757/1753] Building Mathlib.Tactic.ByContra
+[757/1753] Building Mathlib.Data.Sum.Basic
+[761/1753] Compiling Mathlib.Tactic.Congr!
+[761/1753] Building Mathlib.Tactic.TermCongr
+[761/1753] Building Mathlib.Tactic.Convert
+[762/1753] Compiling Aesop.Tree.Data
+[762/1753] Building Aesop.Tree.Traversal
+[762/1753] Building Aesop.Tree.RunMetaM
+[763/1753] Compiling Aesop.Builder.Cases
+[764/1753] Compiling Aesop.Builder.Apply
+[764/1753] Building Aesop.Builder.Constructors
+[765/1753] Compiling Aesop.Builder.NormSimp
+[766/1753] Compiling Mathlib.Logic.IsEmpty
+[766/1753] Building Mathlib.Logic.Unique
+[769/1753] Compiling Aesop.Tree.RunMetaM
+[769/1753] Building Aesop.Tree.TreeM
+[769/1753] Building Aesop.Tree.Tracing
+[770/1753] Compiling Mathlib.Logic.Function.Conjugate
+[772/1753] Compiling Aesop.Builder.Tactic
+[773/1753] Compiling Aesop.Tree.Traversal
+[773/1753] Building Mathlib.Logic.Function.Iterate
+[773/1753] Building Aesop.Tree.State
+[774/1753] Compiling Aesop.Builder.Unfold
+[775/1753] Compiling Mathlib.Data.Sigma.Basic
+[777/1753] Compiling Aesop.Builder.Forward
+[778/1753] Compiling Mathlib.Data.Subtype
+[778/1753] Building Mathlib.Tactic.IrreducibleDef
+[778/1753] Building Mathlib.Data.Set.Defs
+[781/1753] Compiling Mathlib.Tactic.Convert
+[781/1753] Building Mathlib.Data.Int.Defs
+[788/1753] Compiling Aesop.Builder.Constructors
+[788/1753] Building Aesop.Builder.Default
+[789/1753] Compiling Aesop.Tree.TreeM
+[789/1753] Building Aesop.Tree.AddRapp
+[789/1753] Building Aesop.Tree.ExtractScript
+[790/1753] Compiling Aesop.Tree.State
+[790/1753] Building Aesop.Tree.Check
+[790/1753] Building Aesop.Tree.Free
+[791/1753] Compiling Mathlib.Tactic.Choose
+[792/1753] Compiling Mathlib.Tactic.ByContra
+[794/1753] Compiling Mathlib.Tactic.Contrapose
+[796/1753] Building Aesop.Frontend.Extension.Init
+[796/1753] Building Aesop.Search.Expansion.Simp
+[796/1753] Compiling Aesop.RuleSet
+[798/1753] Compiling Mathlib.Data.Set.Defs
+[798/1753] Building Mathlib.Lean.Expr.ExtraRecognizers
+[798/1753] Building Mathlib.Order.SetNotation
+[802/1753] Compiling Mathlib.Data.Sum.Basic
+[803/1753] Compiling Aesop.Tree.Free
+[804/1753] Compiling Mathlib.Data.FunLike.Basic
+[804/1753] Building Mathlib.Data.FunLike.Embedding
+[806/1753] Compiling Mathlib.Algebra.CharZero.Defs
+[812/1753] Compiling Mathlib.Data.Int.Defs
+[813/1753] Compiling Mathlib.Algebra.GroupWithZero.Defs
+[814/1753] Compiling Mathlib.Data.Prod.Basic
+[814/1753] Building Mathlib.Algebra.Ring.Defs
+[814/1753] Building Mathlib.Algebra.GroupWithZero.NeZero
+[814/1753] Building Mathlib.Order.Basic
+[815/1753] Compiling Mathlib.Logic.Function.Iterate
+[818/1753] Compiling Mathlib.Data.Nat.Defs
+[818/1753] Building Mathlib.Algebra.Group.Commute.Defs
+[819/1753] Compiling Aesop.Frontend.Extension.Init
+[819/1753] Building Aesop.Frontend.Extension
+[821/1753] Compiling Mathlib.Lean.Expr.ExtraRecognizers
+[823/1753] Compiling Aesop.Tree.Tracing
+[823/1753] Building Aesop.Tree.ExtractProof
+[824/1753] Compiling Mathlib.Data.FunLike.Embedding
+[824/1753] Building Mathlib.Data.FunLike.Equiv
+[825/1753] Compiling Aesop.Tree.ExtractScript
+[827/1753] Compiling Mathlib.Tactic.IrreducibleDef
+[827/1753] Building Mathlib.Init.Classical
+[831/1753] Compiling Aesop.Builder.Default
+[831/1753] Building Aesop.Builder
+[833/1753] Compiling Aesop.Search.Expansion.Simp
+[835/1753] Compiling Mathlib.Logic.Unique
+[836/1753] Compiling Mathlib.Algebra.GroupWithZero.NeZero
+[836/1753] Building Mathlib.Data.Quot
+[836/1753] Building Mathlib.Algebra.Group.Pi.Basic
+[836/1753] Building Mathlib.Logic.Nontrivial.Basic
+[836/1753] Building Mathlib.Algebra.Invertible.GroupWithZero
+[840/1753] Compiling Mathlib.Logic.Relation
+[841/1753] Compiling Mathlib.Data.FunLike.Equiv
+[843/1753] Compiling Aesop.Frontend.Extension
+[844/1753] Compiling Mathlib.Init.Classical
+[847/1753] Compiling Aesop.Builder
+[847/1753] Building Aesop.Frontend.RuleExpr
+[849/1753] Compiling Mathlib.Algebra.Group.Commute.Defs
+[855/1753] Compiling Mathlib.Logic.Nontrivial.Basic
+[855/1753] Building Mathlib.Tactic.Nontriviality.Core
+[856/1753] Compiling Mathlib.Algebra.Invertible.GroupWithZero
+[857/1753] Compiling Aesop.Tree.Check
+[860/1753] Compiling Aesop.Tree.ExtractProof
+[863/1753] Compiling Aesop.Tree.AddRapp
+[863/1753] Building Aesop.Tree
+[866/1753] Compiling Aesop.Tree
+[866/1753] Building Aesop.Search.Queue.Class
+[867/1753] Compiling Mathlib.Algebra.Ring.Defs
+[867/1753] Building Mathlib.Algebra.Field.Defs
+[867/1753] Building Mathlib.Algebra.Ring.Semiconj
+[870/1753] Compiling Mathlib.Tactic.Nontriviality.Core
+[870/1753] Building Mathlib.Tactic.Nontriviality
+[871/1753] Building Mathlib.Tactic.Congrm
+[871/1753] Compiling Mathlib.Tactic.TermCongr
+[873/1753] Compiling Aesop.Search.Queue.Class
+[873/1753] Building Aesop.Search.Queue
+[873/1753] Building Aesop.Search.SearchM
+[875/1753] Compiling Mathlib.Algebra.Ring.Semiconj
+[876/1753] Compiling Mathlib.Data.Quot
+[877/1753] Compiling Mathlib.Algebra.Field.Defs
+[877/1753] Building Mathlib.Logic.Equiv.Defs
+[878/1753] Compiling Aesop.Search.Queue
+[881/1753] Compiling Mathlib.Tactic.Nontriviality
+[882/1753] Compiling Mathlib.Algebra.Group.Pi.Basic
+[882/1753] Building Mathlib.Algebra.Group.Hom.Defs
+[885/1753] Compiling Mathlib.Tactic.Congrm
+[885/1753] Building Mathlib.Tactic.Widget.Congrm
+[890/1753] Compiling Aesop.Search.SearchM
+[890/1753] Building Aesop.Search.RuleSelection
+[893/1753] Compiling Mathlib.Order.Basic
+[893/1753] Building Mathlib.Order.RelClasses
+[893/1753] Building Mathlib.Order.ULift
+[893/1753] Building Mathlib.Data.PNat.Defs
+[893/1753] Building Mathlib.Algebra.Order.ZeroLEOne
+[895/1753] Compiling Mathlib.Order.SetNotation
+[899/1753] Compiling Aesop.Search.RuleSelection
+[899/1753] Building Aesop.Search.Expansion.Norm
+[900/1753] Compiling Mathlib.Algebra.Order.ZeroLEOne
+[901/1753] Compiling Mathlib.Order.ULift
+[902/1753] Compiling Mathlib.Tactic.Widget.Congrm
+[903/1753] Compiling Aesop.Frontend.RuleExpr
+[903/1753] Building Aesop.Frontend.Attribute
+[906/1753] Compiling Mathlib.Data.PNat.Defs
+[910/1753] Compiling Mathlib.Logic.Equiv.Defs
+[910/1753] Building Mathlib.Logic.Equiv.Basic
+[910/1753] Building Mathlib.Order.Synonym
+[910/1753] Building Mathlib.Data.Finite.Defs
+[910/1753] Building Mathlib.Control.EquivFunctor
+[910/1753] Building Mathlib.Algebra.Opposites
+[911/1753] Compiling Aesop.Frontend.Attribute
+[911/1753] Building Aesop.Frontend.Tactic
+[911/1753] Building Aesop.BuiltinRules.Ext
+[911/1753] Building Aesop.BuiltinRules.Subst
+[911/1753] Building Aesop.Frontend.Command
+[911/1753] Building Aesop.BuiltinRules.Split
+[911/1753] Building Aesop.BuiltinRules.DestructProducts
+[911/1753] Building Aesop.BuiltinRules.Intros
+[911/1753] Building Aesop.BuiltinRules.Assumption
+[911/1753] Building Aesop.BuiltinRules.ApplyHyps
+[914/1753] Compiling Mathlib.Order.RelClasses
+[917/1753] Compiling Mathlib.Order.Synonym
+[917/1753] Building Mathlib.Algebra.Group.OrderSynonym
+[918/1753] Compiling Mathlib.Control.EquivFunctor
+[919/1753] Compiling Aesop.BuiltinRules.ApplyHyps
+[919/1753] Building Mathlib.Order.Max
+[919/1753] Building Mathlib.Order.Compare
+[920/1753] Compiling Mathlib.Data.Finite.Defs
+[920/1753] Building Mathlib.Data.Countable.Defs
+[924/1753] Compiling Aesop.BuiltinRules.Split
+[925/1753] Compiling Aesop.BuiltinRules.Assumption
+[926/1753] Compiling Mathlib.Algebra.Opposites
+[927/1753] Compiling Aesop.BuiltinRules.Ext
+[928/1753] Compiling Aesop.BuiltinRules.DestructProducts
+[931/1753] Compiling Aesop.BuiltinRules.Subst
+[932/1753] Compiling Aesop.Frontend.Command
+[933/1753] Compiling Aesop.BuiltinRules.Intros
+[934/1753] Compiling Mathlib.Order.Max
+[936/1753] Compiling Mathlib.Data.Countable.Defs
+[942/1753] Compiling Mathlib.Order.Compare
+[942/1753] Building Mathlib.Order.Monotone.Basic
+[944/1753] Compiling Mathlib.Algebra.Group.OrderSynonym
+[945/1753] Building Aesop.Search.Expansion
+[946/1753] Compiling Aesop.Search.Expansion.Norm
+[948/1753] Compiling Aesop.Frontend.Tactic
+[948/1753] Building Aesop.Frontend
+[952/1753] Compiling Mathlib.Algebra.Group.Hom.Defs
+[952/1753] Building Mathlib.Algebra.Group.TypeTags
+[953/1753] Compiling Aesop.Frontend
+[953/1753] Building Aesop.BuiltinRules
+[958/1753] Compiling Aesop.BuiltinRules
+[961/1753] Compiling Mathlib.Algebra.Group.TypeTags
+[961/1753] Building Mathlib.Data.Nat.Basic
+[962/1753] Compiling Aesop.Search.Expansion
+[962/1753] Building Aesop.Search.ExpandSafePrefix
+[963/1753] Compiling Mathlib.Order.Monotone.Basic
+[963/1753] Building Mathlib.Order.Lattice
+[966/1753] Compiling Mathlib.Data.Nat.Basic
+[967/1753] Building Mathlib.Data.ULift
+[967/1753] Compiling Mathlib.Logic.Equiv.Basic
+[969/1753] Compiling Aesop.Search.ExpandSafePrefix
+[969/1753] Building Aesop.Search.Main
+[970/1753] Compiling Mathlib.Data.ULift
+[975/1753] Compiling Mathlib.Order.Lattice
+[975/1753] Building Mathlib.Order.MinMax
+[975/1753] Building Mathlib.Order.BoundedOrder
+[978/1753] Compiling Mathlib.Order.MinMax
+[980/1753] Compiling Mathlib.Order.BoundedOrder
+[982/1753] Compiling Aesop.Search.Main
+[982/1753] Building Aesop.Main
+[983/1753] Compiling Aesop.Main
+[983/1753] Building Aesop
+[984/1753] Compiling Aesop
+[984/1753] Building Logic.Logic.Init
+[984/1753] Building Mathlib.Data.Option.Basic
+[984/1753] Building Mathlib.Tactic.SetLike
+[984/1753] Building Mathlib.Data.Finset.Attr
+[984/1753] Building Mathlib.Order.Disjoint
+[984/1753] Building Mathlib.Algebra.Group.Basic
+[985/1753] Building Mathlib.Tactic.Common
+[987/1753] Compiling Logic.Logic.Init
+[989/1753] Compiling Mathlib.Tactic.SetLike
+[990/1753] Compiling Mathlib.Data.Finset.Attr
+[991/1753] Compiling Mathlib.Tactic.Common
+[991/1753] Building Mathlib.Algebra.Group.WithOne.Defs
+[991/1753] Building Mathlib.Logic.Pairwise
+[995/1753] Compiling Mathlib.Data.Option.Basic
+[995/1753] Building Mathlib.Order.WithBot
+[995/1753] Building Mathlib.Logic.Equiv.Option
+[995/1753] Building Mathlib.Data.List.Basic
+[995/1753] Building Mathlib.Logic.Embedding.Basic
+[997/1753] Compiling Mathlib.Logic.Pairwise
+[999/1753] Compiling Mathlib.Algebra.Group.WithOne.Defs
+[1000/1753] Compiling Mathlib.Order.Disjoint
+[1000/1753] Building Mathlib.Order.PropInstances
+[1003/1753] Compiling Mathlib.Order.PropInstances
+[1003/1753] Building Mathlib.Order.Heyting.Basic
+[1004/1753] Compiling Mathlib.Logic.Embedding.Basic
+[1004/1753] Building Mathlib.Order.RelIso.Basic
+[1004/1753] Building Mathlib.GroupTheory.GroupAction.Defs
+[1007/1753] Compiling Mathlib.Logic.Equiv.Option
+[1010/1753] Compiling Mathlib.Algebra.Group.Basic
+[1010/1753] Building Mathlib.Data.Nat.Bits
+[1010/1753] Building Mathlib.Algebra.Group.Hom.Basic
+[1010/1753] Building Mathlib.Data.Nat.PSub
+[1010/1753] Building Mathlib.Algebra.Group.Embedding
+[1010/1753] Building Mathlib.Algebra.GroupWithZero.Basic
+[1010/1753] Building Mathlib.Data.Int.Cast.Basic
+[1010/1753] Building Mathlib.Algebra.Ring.Basic
+[1010/1753] Building Mathlib.Algebra.Group.Semiconj.Basic
+[1010/1753] Building Mathlib.Algebra.CovariantAndContravariant
+[1012/1753] Compiling Mathlib.Order.RelIso.Basic
+[1013/1753] Compiling Mathlib.Algebra.Group.Embedding
+[1014/1753] Compiling Mathlib.Algebra.Group.Semiconj.Basic
+[1014/1753] Building Mathlib.Algebra.Group.Commute.Basic
+[1018/1753] Compiling Mathlib.Data.Nat.Bits
+[1019/1753] Compiling Mathlib.Order.WithBot
+[1019/1753] Building Mathlib.Order.Hom.Basic
+[1020/1753] Compiling Mathlib.Data.Nat.PSub
+[1021/1753] Compiling Mathlib.Algebra.CovariantAndContravariant
+[1023/1753] Building Mathlib.Algebra.Order.Ring.Lemmas
+[1023/1753] Compiling Mathlib.Data.Int.Cast.Basic
+[1023/1753] Building Mathlib.Data.Int.Basic
+[1023/1753] Building Mathlib.Algebra.Order.Monoid.Lemmas
+[1023/1753] Building Mathlib.Algebra.Group.InjSurj
+[1023/1753] Building Mathlib.Tactic.NormNum.Result
+[1024/1753] Compiling Mathlib.Algebra.Ring.Basic
+[1028/1753] Compiling Mathlib.Algebra.Group.Commute.Basic
+[1028/1753] Building Mathlib.Algebra.GroupPower.Basic
+[1032/1753] Compiling Mathlib.Algebra.Group.Hom.Basic
+[1032/1753] Building Mathlib.Algebra.Group.Equiv.Basic
+[1033/1753] Compiling Mathlib.GroupTheory.GroupAction.Defs
+[1034/1753] Compiling Mathlib.Algebra.GroupWithZero.Basic
+[1038/1753] Compiling Mathlib.Data.Int.Basic
+[1040/1753] Compiling Mathlib.Algebra.GroupPower.Basic
+[1040/1753] Building Mathlib.Algebra.GroupPower.Hom
+[1040/1753] Building Mathlib.Algebra.Divisibility.Basic
+[1040/1753] Building Mathlib.Algebra.Group.Hom.Instances
+[1040/1753] Building Mathlib.Algebra.Group.Units
+[1042/1753] Compiling Mathlib.Tactic.NormNum.Result
+[1042/1753] Building Mathlib.Tactic.NormNum.Core
+[1043/1753] Compiling Mathlib.Order.Heyting.Basic
+[1043/1753] Building Mathlib.Order.BooleanAlgebra
+[1044/1753] Compiling Mathlib.Algebra.Group.Equiv.Basic
+[1044/1753] Building Mathlib.Algebra.GroupWithZero.Hom
+[1045/1753] Compiling Mathlib.Algebra.GroupPower.Hom
+[1047/1753] Compiling Mathlib.Algebra.Order.Ring.Lemmas
+[1050/1753] Compiling Mathlib.Order.Hom.Basic
+[1050/1753] Building Mathlib.Tactic.ApplyFun
+[1050/1753] Building Mathlib.Order.Antisymmetrization
+[1050/1753] Building Mathlib.Order.Hom.Bounded
+[1051/1753] Compiling Mathlib.Algebra.Group.InjSurj
+[1051/1753] Building Mathlib.Algebra.GroupWithZero.InjSurj
+[1052/1753] Compiling Mathlib.Algebra.Divisibility.Basic
+[1052/1753] Building Mathlib.Algebra.Ring.Divisibility.Basic
+[1057/1753] Compiling Mathlib.Algebra.GroupWithZero.Hom
+[1057/1753] Building Mathlib.Algebra.Ring.Hom.Defs
+[1058/1753] Compiling Mathlib.Tactic.NormNum.Core
+[1060/1753] Compiling Mathlib.Algebra.Order.Monoid.Lemmas
+[1060/1753] Building Mathlib.Algebra.Order.Monoid.Defs
+[1060/1753] Building Mathlib.Algebra.Order.Monoid.MinMax
+[1060/1753] Building Mathlib.Algebra.Order.Sub.Defs
+[1060/1753] Building Mathlib.Algebra.Order.Monoid.NatCast
+[1061/1753] Compiling Mathlib.Order.Antisymmetrization
+[1065/1753] Compiling Mathlib.Algebra.GroupWithZero.InjSurj
+[1065/1753] Building Mathlib.Algebra.Ring.InjSurj
+[1066/1753] Compiling Mathlib.Algebra.Ring.Divisibility.Basic
+[1068/1753] Compiling Mathlib.Tactic.ApplyFun
+[1070/1753] Compiling Mathlib.Algebra.Order.Monoid.NatCast
+[1071/1753] Compiling Mathlib.Algebra.Group.Hom.Instances
+[1073/1753] Compiling Mathlib.Algebra.Order.Monoid.MinMax
+[1074/1753] Compiling Mathlib.Algebra.Order.Sub.Defs
+[1077/1753] Compiling Mathlib.Algebra.Order.Monoid.Defs
+[1077/1753] Building Mathlib.Algebra.Order.Monoid.Canonical.Defs
+[1077/1753] Building Mathlib.Algebra.Order.Monoid.OrderDual
+[1077/1753] Building Mathlib.Algebra.Order.Group.Defs
+[1078/1753] Building Mathlib.Algebra.Order.Monoid.Basic
+[1080/1753] Compiling Mathlib.Order.Hom.Bounded
+[1082/1753] Compiling Mathlib.Algebra.Ring.Hom.Defs
+[1082/1753] Building Mathlib.Data.Nat.Cast.Basic
+[1083/1753] Compiling Mathlib.Algebra.Order.Monoid.OrderDual
+[1083/1753] Building Mathlib.Algebra.GroupPower.CovariantClass
+[1085/1753] Compiling Mathlib.Algebra.Order.Monoid.Basic
+[1088/1753] Compiling Mathlib.Algebra.Group.Units
+[1088/1753] Building Mathlib.Algebra.GroupWithZero.Units.Basic
+[1088/1753] Building Mathlib.Algebra.Group.Units.Hom
+[1088/1753] Building Mathlib.Algebra.Group.Opposite
+[1088/1753] Building Mathlib.Data.Nat.Units
+[1088/1753] Building Mathlib.GroupTheory.GroupAction.Units
+[1088/1753] Building Mathlib.Algebra.Group.Semiconj.Units
+[1088/1753] Building Mathlib.Algebra.Divisibility.Units
+[1088/1753] Building Mathlib.Algebra.Order.Monoid.Units
+[1088/1753] Building Mathlib.Algebra.Regular.Basic
+[1092/1753] Compiling Mathlib.Order.BooleanAlgebra
+[1092/1753] Compiling Mathlib.Algebra.Ring.InjSurj
+[1092/1753] Building Mathlib.Order.SymmDiff
+[1093/1753] Compiling Mathlib.Algebra.Order.Monoid.Canonical.Defs
+[1093/1753] Building Mathlib.Algebra.Order.Monoid.WithTop
+[1094/1753] Building Mathlib.Algebra.Order.Sub.Canonical
+[1094/1753] Building Mathlib.Algebra.Order.Monoid.TypeTags
+[1094/1753] Building Mathlib.Algebra.Order.Monoid.WithZero.Defs
+[1095/1753] Building Mathlib.Data.List.Infix
+[1095/1753] Building Mathlib.Data.List.MinMax
+[1095/1753] Compiling Mathlib.Data.List.Basic
+[1095/1753] Building Mathlib.Data.List.Lex
+[1095/1753] Building Mathlib.Data.List.Pairwise
+[1095/1753] Building Mathlib.Data.List.InsertNth
+[1095/1753] Building Mathlib.Data.List.Lattice
+[1098/1753] Compiling Mathlib.Data.Nat.Units
+[1100/1753] Compiling Mathlib.Data.Nat.Cast.Basic
+[1103/1753] Compiling Mathlib.Algebra.Order.Monoid.TypeTags
+[1104/1753] Compiling Mathlib.Algebra.Divisibility.Units
+[1106/1753] Compiling Mathlib.Data.List.Pairwise
+[1109/1753] Compiling Mathlib.Algebra.Order.Monoid.Units
+[1110/1753] Compiling Mathlib.GroupTheory.GroupAction.Units
+[1112/1753] Compiling Mathlib.Data.List.InsertNth
+[1113/1753] Compiling Mathlib.Data.List.Lattice
+[1116/1753] Compiling Mathlib.Algebra.Group.Semiconj.Units
+[1116/1753] Building Mathlib.Algebra.Group.Commute.Units
+[1118/1753] Compiling Mathlib.Algebra.GroupPower.CovariantClass
+[1120/1753] Compiling Mathlib.Algebra.Order.Monoid.WithZero.Defs
+[1121/1753] Compiling Mathlib.Data.List.Infix
+[1123/1753] Building Mathlib.Data.List.Forall2
+[1124/1753] Compiling Mathlib.Data.List.Lex
+[1125/1753] Compiling Mathlib.Algebra.GroupWithZero.Units.Basic
+[1125/1753] Building Mathlib.Algebra.GroupWithZero.Semiconj
+[1125/1753] Building Mathlib.Data.Int.Cast.Field
+[1125/1753] Building Mathlib.Algebra.GroupWithZero.Divisibility
+[1126/1753] Compiling Mathlib.Algebra.Regular.Basic
+[1127/1753] Building Mathlib.Algebra.Ring.Regular
+[1127/1753] Compiling Mathlib.Algebra.Group.Units.Hom
+[1127/1753] Building Mathlib.Algebra.Ring.Units
+[1127/1753] Building Mathlib.Algebra.Group.Units.Equiv
+[1134/1753] Compiling Mathlib.Algebra.Order.Sub.Canonical
+[1136/1753] Compiling Mathlib.Algebra.GroupWithZero.Semiconj
+[1137/1753] Compiling Mathlib.Data.Int.Cast.Field
+[1138/1753] Compiling Mathlib.Algebra.GroupWithZero.Divisibility
+[1139/1753] Compiling Mathlib.Algebra.Group.Commute.Units
+[1139/1753] Building Mathlib.Algebra.GroupWithZero.Commute
+[1139/1753] Building Mathlib.Algebra.Invertible.Basic
+[1143/1753] Compiling Mathlib.Order.SymmDiff
+[1143/1753] Building Mathlib.Data.Set.Basic
+[1143/1753] Building Mathlib.Order.Hom.Lattice
+[1144/1753] Compiling Mathlib.Algebra.Ring.Regular
+[1148/1753] Compiling Mathlib.Algebra.Ring.Units
+[1148/1753] Building Mathlib.Data.Int.Units
+[1148/1753] Building Mathlib.Algebra.Ring.Commute
+[1149/1753] Compiling Mathlib.Algebra.Group.Units.Equiv
+[1149/1753] Building Mathlib.Algebra.GroupWithZero.Units.Equiv
+[1150/1753] Compiling Mathlib.Algebra.Order.Monoid.WithTop
+[1151/1753] Building Mathlib.Algebra.Ring.Opposite
+[1151/1753] Building Mathlib.Algebra.Group.Prod
+[1151/1753] Compiling Mathlib.Algebra.Group.Opposite
+[1153/1753] Compiling Mathlib.Algebra.GroupWithZero.Commute
+[1153/1753] Building Mathlib.Algebra.GroupWithZero.Units.Lemmas
+[1157/1753] Compiling Mathlib.Algebra.Order.Group.Defs
+[1157/1753] Building Mathlib.Algebra.Order.Group.Units
+[1157/1753] Building Mathlib.Algebra.Order.Ring.Defs
+[1157/1753] Building Mathlib.Algebra.Order.Group.Instances
+[1158/1753] Compiling Mathlib.Algebra.GroupWithZero.Units.Equiv
+[1158/1753] Building Mathlib.Algebra.Order.Group.OrderIso
+[1159/1753] Compiling Mathlib.Data.List.MinMax
+[1163/1753] Compiling Mathlib.Algebra.Ring.Commute
+[1163/1753] Building Mathlib.Data.Nat.Cast.Commute
+[1165/1753] Compiling Mathlib.Data.Int.Units
+[1166/1753] Compiling Mathlib.Data.List.Forall2
+[1168/1753] Compiling Mathlib.Algebra.GroupWithZero.Units.Lemmas
+[1168/1753] Building Mathlib.Algebra.Field.Basic
+[1171/1753] Compiling Mathlib.Algebra.Order.Group.Instances
+[1173/1753] Compiling Mathlib.Algebra.Order.Group.Units
+[1173/1753] Building Mathlib.Algebra.Order.WithZero
+[1174/1753] Compiling Mathlib.Algebra.Invertible.Basic
+[1175/1753] Compiling Mathlib.Algebra.Order.Group.OrderIso
+[1175/1753] Building Mathlib.Algebra.Order.Group.Lattice
+[1180/1753] Compiling Mathlib.Data.Nat.Cast.Commute
+[1180/1753] Building Mathlib.Tactic.NormNum.Basic
+[1182/1753] Compiling Mathlib.Algebra.Ring.Opposite
+[1184/1753] Compiling Mathlib.Algebra.Order.Group.Lattice
+[1184/1753] Building Mathlib.Algebra.Order.Group.Abs
+[1186/1753] Compiling Mathlib.Algebra.Order.WithZero
+[1188/1753] Compiling Mathlib.Algebra.Group.Prod
+[1189/1753] Compiling Mathlib.Algebra.Field.Basic
+[1192/1753] Compiling Mathlib.Order.Hom.Lattice
+[1194/1753] Compiling Mathlib.Algebra.Order.Group.Abs
+[1194/1753] Building Mathlib.Algebra.Order.Group.MinMax
+[1195/1753] Compiling Mathlib.Tactic.NormNum.Basic
+[1196/1753] Compiling Mathlib.Data.Set.Basic
+[1196/1753] Building Mathlib.Order.WellFounded
+[1196/1753] Building Mathlib.Data.SetLike.Basic
+[1196/1753] Building Mathlib.Data.Set.Intervals.Basic
+[1196/1753] Building Mathlib.Algebra.Ring.Hom.Basic
+[1196/1753] Building Mathlib.Data.Set.Image
+[1196/1753] Building Mathlib.Data.Part
+[1199/1753] Compiling Mathlib.Algebra.Order.Group.MinMax
+[1200/1753] Compiling Mathlib.Data.SetLike.Basic
+[1201/1753] Compiling Mathlib.Algebra.Ring.Hom.Basic
+[1205/1753] Compiling Mathlib.Order.WellFounded
+[1205/1753] Building Mathlib.Data.Pi.Lex
+[1207/1753] Compiling Mathlib.Algebra.Order.Ring.Defs
+[1207/1753] Building Mathlib.Algebra.Order.Field.Defs
+[1207/1753] Building Mathlib.Algebra.Order.Positive.Ring
+[1207/1753] Building Mathlib.Algebra.Order.Ring.Canonical
+[1207/1753] Building Mathlib.Algebra.Order.Ring.CharZero
+[1209/1753] Compiling Mathlib.Algebra.Order.Ring.CharZero
+[1211/1753] Compiling Mathlib.Algebra.Order.Ring.Canonical
+[1211/1753] Building Mathlib.Data.Nat.Order.Basic
+[1213/1753] Compiling Mathlib.Algebra.Order.Positive.Ring
+[1214/1753] Compiling Mathlib.Data.Pi.Lex
+[1215/1753] Compiling Mathlib.Algebra.Order.Field.Defs
+[1217/1753] Compiling Mathlib.Data.Part
+[1221/1753] Compiling Mathlib.Data.Set.Image
+[1221/1753] Building Mathlib.Data.Bool.Set
+[1221/1753] Building Mathlib.Logic.Embedding.Set
+[1221/1753] Building Mathlib.Data.Nat.Set
+[1221/1753] Building Mathlib.Data.Set.Prod
+[1221/1753] Building Mathlib.Order.Directed
+[1223/1753] Compiling Mathlib.Data.Bool.Set
+[1225/1753] Compiling Mathlib.Data.Nat.Set
+[1226/1753] Compiling Mathlib.Order.Directed
+[1227/1753] Compiling Mathlib.Logic.Embedding.Set
+[1227/1753] Building Mathlib.Order.RelIso.Set
+[1231/1753] Compiling Mathlib.Data.Set.Intervals.Basic
+[1232/1753] Compiling Mathlib.Data.Nat.Order.Basic
+[1232/1753] Building Mathlib.Data.Nat.Cast.Order
+[1232/1753] Building Mathlib.Data.List.Chain
+[1232/1753] Building Mathlib.Data.Nat.ForSqrt
+[1232/1753] Building Mathlib.Data.Int.Order.Basic
+[1232/1753] Building Mathlib.Data.List.Card
+[1232/1753] Building Mathlib.Data.PNat.Basic
+[1233/1753] Compiling Mathlib.Order.RelIso.Set
+[1233/1753] Building Mathlib.Data.List.GetD
+[1233/1753] Building Mathlib.Algebra.GroupPower.Ring
+[1233/1753] Building Mathlib.Data.List.BigOperators.Basic
+[1233/1753] Building Mathlib.Data.Nat.Order.Lemmas
+[1233/1753] Building Mathlib.Data.Vector
+[1238/1753] Compiling Mathlib.Data.List.GetD
+[1238/1753] Building Mathlib.Data.Set.List
+[1239/1753] Compiling Mathlib.Data.List.Card
+[1241/1753] Compiling Mathlib.Data.Vector
+[1244/1753] Compiling Mathlib.Data.PNat.Basic
+[1246/1753] Compiling Mathlib.Data.Set.List
+[1248/1753] Compiling Mathlib.Data.Int.Order.Basic
+[1248/1753] Building Mathlib.Algebra.GroupWithZero.Power
+[1248/1753] Building Mathlib.Data.Rat.Defs
+[1249/1753] Compiling Mathlib.Data.Nat.Order.Lemmas
+[1249/1753] Building Mathlib.Data.Nat.GCD.Basic
+[1252/1753] Compiling Mathlib.Algebra.GroupPower.Ring
+[1252/1753] Building Mathlib.Algebra.GroupPower.Order
+[1254/1753] Compiling Mathlib.Data.List.Chain
+[1255/1753] Compiling Mathlib.Data.Nat.ForSqrt
+[1256/1753] Compiling Mathlib.Data.Nat.Cast.Order
+[1256/1753] Building Mathlib.Data.Int.Dvd.Basic
+[1256/1753] Building Mathlib.Data.Int.Cast.Lemmas
+[1256/1753] Building Mathlib.Algebra.Order.Invertible
+[1259/1753] Compiling Mathlib.Data.Set.Prod
+[1259/1753] Building Mathlib.Data.Set.NAry
+[1259/1753] Building Mathlib.Data.Set.Function
+[1262/1753] Compiling Mathlib.Algebra.GroupWithZero.Power
+[1263/1753] Compiling Mathlib.Data.Nat.GCD.Basic
+[1266/1753] Compiling Mathlib.Algebra.Order.Invertible
+[1268/1753] Compiling Mathlib.Data.Int.Dvd.Basic
+[1268/1753] Building Mathlib.Data.Int.Div
+[1270/1753] Compiling Mathlib.Data.Rat.Defs
+[1271/1753] Compiling Mathlib.Data.Set.NAry
+[1271/1753] Building Mathlib.Order.Bounds.Basic
+[1274/1753] Compiling Mathlib.Data.Int.Div
+[1276/1753] Compiling Mathlib.Algebra.GroupPower.Order
+[1276/1753] Building Mathlib.Data.Nat.Pow
+[1276/1753] Building Mathlib.Algebra.Order.Ring.Abs
+[1276/1753] Building Mathlib.Data.Nat.Factorial.Basic
+[1278/1753] Compiling Mathlib.Data.List.BigOperators.Basic
+[1278/1753] Building Mathlib.Data.List.BigOperators.Lemmas
+[1278/1753] Building Mathlib.Data.List.Zip
+[1278/1753] Building Mathlib.Data.List.Count
+[1278/1753] Building Mathlib.Data.List.Join
+[1279/1753] Compiling Mathlib.Data.Int.Cast.Lemmas
+[1279/1753] Building Mathlib.Tactic.Positivity.Core
+[1279/1753] Building Mathlib.Tactic.NormNum.Pow
+[1279/1753] Building Mathlib.Data.Rat.Lemmas
+[1279/1753] Building Mathlib.Data.Rat.Order
+[1282/1753] Compiling Mathlib.Data.Nat.Pow
+[1283/1753] Compiling Mathlib.Data.List.Count
+[1286/1753] Compiling Mathlib.Data.List.BigOperators.Lemmas
+[1287/1753] Compiling Mathlib.Data.List.Join
+[1287/1753] Building Mathlib.Data.List.Permutation
+[1289/1753] Compiling Mathlib.Algebra.Order.Ring.Abs
+[1289/1753] Building Mathlib.Algebra.Parity
+[1289/1753] Building Mathlib.Data.Int.Order.Lemmas
+[1291/1753] Compiling Mathlib.Data.Rat.Lemmas
+[1292/1753] Compiling Mathlib.Data.Nat.Factorial.Basic
+[1292/1753] Building Mathlib.Data.Nat.Choose.Basic
+[1293/1753] Building Mathlib.Data.Set.Intervals.Image
+[1293/1753] Compiling Mathlib.Data.Set.Function
+[1293/1753] Building Mathlib.Algebra.Group.Pi.Lemmas
+[1293/1753] Building Mathlib.Data.Set.Pairwise.Basic
+[1294/1753] Building Mathlib.Logic.Equiv.Set
+[1295/1753] Compiling Mathlib.Data.Rat.Order
+[1295/1753] Building Mathlib.Data.Rat.Field
+[1296/1753] Compiling Mathlib.Order.Bounds.Basic
+[1296/1753] Building Mathlib.Order.LatticeIntervals
+[1296/1753] Building Mathlib.Data.Int.GCD
+[1302/1753] Compiling Mathlib.Data.List.Zip
+[1304/1753] Compiling Mathlib.Data.Int.Order.Lemmas
+[1305/1753] Compiling Mathlib.Data.Rat.Field
+[1305/1753] Building Mathlib.Data.Rat.Cast.Defs
+[1307/1753] Compiling Mathlib.Tactic.NormNum.Pow
+[1309/1753] Compiling Mathlib.Order.LatticeIntervals
+[1310/1753] Compiling Mathlib.Data.List.Permutation
+[1313/1753] Compiling Mathlib.Tactic.Positivity.Core
+[1314/1753] Compiling Mathlib.Data.Set.Intervals.Image
+[1314/1753] Building Mathlib.Data.Set.Intervals.UnorderedInterval
+[1316/1753] Compiling Mathlib.Data.Set.Pairwise.Basic
+[1316/1753] Building Mathlib.Data.List.Nodup
+[1318/1753] Compiling Mathlib.Data.Int.GCD
+[1321/1753] Compiling Mathlib.Data.Nat.Choose.Basic
+[1322/1753] Compiling Mathlib.Logic.Equiv.Set
+[1322/1753] Building Mathlib.Order.Hom.Set
+[1323/1753] Compiling Mathlib.Algebra.Group.Pi.Lemmas
+[1325/1753] Compiling Mathlib.Algebra.Parity
+[1325/1753] Building Mathlib.Data.Nat.Sqrt
+[1325/1753] Building Mathlib.Algebra.Associated
+[1329/1753] Compiling Mathlib.Data.Rat.Cast.Defs
+[1329/1753] Building Mathlib.Tactic.NormNum.OfScientific
+[1331/1753] Compiling Mathlib.Order.Hom.Set
+[1331/1753] Building Mathlib.Data.Set.Intervals.OrderIso
+[1331/1753] Building Mathlib.Order.CompleteLattice
+[1331/1753] Building Mathlib.Data.Fin.Basic
+[1331/1753] Building Mathlib.Order.Antichain
+[1333/1753] Compiling Mathlib.Data.Nat.Sqrt
+[1335/1753] Compiling Mathlib.Data.List.Nodup
+[1335/1753] Building Mathlib.Data.List.Range
+[1335/1753] Building Mathlib.Data.List.Dedup
+[1335/1753] Building Mathlib.Data.List.Duplicate
+[1337/1753] Compiling Mathlib.Data.Set.Intervals.OrderIso
+[1339/1753] Compiling Mathlib.Tactic.NormNum.OfScientific
+[1340/1753] Compiling Mathlib.Order.Antichain
+[1343/1753] Compiling Mathlib.Data.Set.Intervals.UnorderedInterval
+[1343/1753] Building Mathlib.Data.Set.Intervals.OrderEmbedding
+[1345/1753] Compiling Mathlib.Data.List.Duplicate
+[1346/1753] Compiling Mathlib.Data.List.Dedup
+[1346/1753] Building Mathlib.Data.List.Perm
+[1349/1753] Compiling Mathlib.Data.List.Range
+[1352/1753] Compiling Mathlib.Data.Set.Intervals.OrderEmbedding
+[1352/1753] Building Mathlib.Data.Set.Intervals.OrdConnected
+[1354/1753] Compiling Mathlib.Data.Set.Intervals.OrdConnected
+[1354/1753] Building Mathlib.Order.Cover
+[1356/1753] Compiling Mathlib.Data.List.Perm
+[1356/1753] Building Mathlib.Data.List.Sublists
+[1356/1753] Building Mathlib.Data.List.Sigma
+[1356/1753] Building Mathlib.Data.Multiset.Basic
+[1358/1753] Compiling Mathlib.Order.CompleteLattice
+[1358/1753] Building Mathlib.Order.CompleteBooleanAlgebra
+[1359/1753] Building Mathlib.Order.GaloisConnection
+[1359/1753] Compiling Mathlib.Algebra.Associated
+[1360/1753] Compiling Mathlib.Data.Fin.Basic
+[1360/1753] Building Mathlib.Data.Fin.OrderHom
+[1361/1753] Compiling Mathlib.Order.Cover
+[1362/1753] Building Mathlib.Algebra.Function.Support
+[1366/1753] Compiling Mathlib.Data.List.Sublists
+[1367/1753] Compiling Mathlib.Algebra.Function.Support
+[1367/1753] Building Mathlib.Data.Int.CharZero
+[1367/1753] Building Mathlib.Algebra.Function.Indicator
+[1370/1753] Compiling Mathlib.Order.GaloisConnection
+[1370/1753] Building Mathlib.Order.ModularLattice
+[1370/1753] Building Mathlib.Data.Setoid.Basic
+[1371/1753] Compiling Mathlib.Data.Fin.OrderHom
+[1371/1753] Building Mathlib.Data.Fin.Tuple.Basic
+[1373/1753] Compiling Mathlib.Data.Int.CharZero
+[1373/1753] Building Mathlib.Data.Rat.Cast.CharZero
+[1376/1753] Compiling Mathlib.Data.Setoid.Basic
+[1377/1753] Compiling Mathlib.Data.Rat.Cast.CharZero
+[1377/1753] Building Mathlib.Tactic.NormNum.Inv
+[1377/1753] Building Mathlib.Data.Rat.Cast.Order
+[1380/1753] Compiling Mathlib.Order.ModularLattice
+[1381/1753] Compiling Mathlib.Algebra.Function.Indicator
+[1384/1753] Compiling Mathlib.Order.CompleteBooleanAlgebra
+[1384/1753] Building Mathlib.Data.Set.Lattice
+[1386/1753] Compiling Mathlib.Data.List.Sigma
+[1388/1753] Compiling Mathlib.Data.Rat.Cast.Order
+[1390/1753] Compiling Mathlib.Tactic.NormNum.Inv
+[1390/1753] Building Mathlib.Tactic.NormNum.Eq
+[1391/1753] Compiling Mathlib.Data.Fin.Tuple.Basic
+[1391/1753] Building Mathlib.Data.List.OfFn
+[1391/1753] Building Mathlib.Data.Fin.VecNotation
+[1394/1753] Compiling Mathlib.Data.List.OfFn
+[1394/1753] Building Mathlib.Data.List.Sort
+[1394/1753] Building Mathlib.Data.Vector.Basic
+[1394/1753] Building Mathlib.Data.List.FinRange
+[1396/1753] Compiling Mathlib.Tactic.NormNum.Eq
+[1396/1753] Building Mathlib.Tactic.NormNum.Ineq
+[1398/1753] Compiling Mathlib.Data.List.FinRange
+[1400/1753] Compiling Mathlib.Data.Fin.VecNotation
+[1400/1753] Building Mathlib.Logic.Equiv.Fin
+[1402/1753] Compiling Mathlib.Data.Multiset.Basic
+[1402/1753] Building Mathlib.Algebra.BigOperators.Multiset.Basic
+[1402/1753] Building Mathlib.Data.Multiset.Range
+[1403/1753] Compiling Mathlib.Data.List.Sort
+[1403/1753] Building Mathlib.Data.List.NodupEquivFin
+[1403/1753] Building Mathlib.Data.Multiset.Sort
+[1404/1753] Building Mathlib.Data.Rel
+[1404/1753] Building Mathlib.Data.Nat.Pairing
+[1404/1753] Building Mathlib.Data.Set.Sigma
+[1404/1753] Compiling Mathlib.Data.Set.Lattice
+[1404/1753] Building Mathlib.Order.ConditionallyCompleteLattice.Basic
+[1404/1753] Building Mathlib.Data.Set.Functor
+[1404/1753] Building Mathlib.Data.Set.Intervals.Disjoint
+[1404/1753] Building Mathlib.Order.Chain
+[1404/1753] Building Mathlib.Order.Atoms
+[1405/1753] Compiling Mathlib.Data.Multiset.Range
+[1408/1753] Building Mathlib.Data.Sym.Basic
+[1408/1753] Compiling Mathlib.Data.Vector.Basic
+[1411/1753] Compiling Mathlib.Data.Multiset.Sort
+[1414/1753] Compiling Mathlib.Logic.Equiv.Fin
+[1416/1753] Compiling Mathlib.Order.Chain
+[1416/1753] Building Mathlib.Order.Zorn
+[1417/1753] Compiling Mathlib.Data.Rel
+[1417/1753] Building Mathlib.Data.PFun
+[1418/1753] Compiling Mathlib.Data.List.NodupEquivFin
+[1421/1753] Compiling Mathlib.Data.Set.Intervals.Disjoint
+[1422/1753] Compiling Mathlib.Data.Set.Functor
+[1425/1753] Compiling Mathlib.Data.Nat.Pairing
+[1425/1753] Building Mathlib.Logic.Equiv.Nat
+[1428/1753] Compiling Mathlib.Data.Sym.Basic
+[1429/1753] Compiling Mathlib.Order.Zorn
+[1430/1753] Compiling Mathlib.Data.Set.Sigma
+[1434/1753] Compiling Mathlib.Tactic.NormNum.Ineq
+[1434/1753] Building Mathlib.Tactic.NormNum.DivMod
+[1435/1753] Compiling Mathlib.Logic.Equiv.Nat
+[1435/1753] Building Mathlib.Data.Countable.Basic
+[1435/1753] Building Mathlib.Logic.Encodable.Basic
+[1437/1753] Compiling Mathlib.Algebra.BigOperators.Multiset.Basic
+[1437/1753] Building Mathlib.Algebra.BigOperators.Multiset.Lemmas
+[1437/1753] Building Mathlib.Data.Multiset.Bind
+[1438/1753] Compiling Mathlib.Data.PFun
+[1441/1753] Compiling Mathlib.Data.Countable.Basic
+[1443/1753] Compiling Mathlib.Algebra.BigOperators.Multiset.Lemmas
+[1446/1753] Compiling Mathlib.Logic.Encodable.Basic
+[1447/1753] Compiling Mathlib.Order.Atoms
+[1447/1753] Building Mathlib.Order.ZornAtoms
+[1448/1753] Compiling Mathlib.Order.ConditionallyCompleteLattice.Basic
+[1452/1753] Compiling Mathlib.Tactic.NormNum.DivMod
+[1452/1753] Building Mathlib.Tactic.NormNum
+[1453/1753] Compiling Mathlib.Order.ZornAtoms
+[1455/1753] Compiling Mathlib.Data.Multiset.Bind
+[1455/1753] Building Mathlib.Data.Multiset.Nodup
+[1456/1753] Compiling Mathlib.Tactic.NormNum
+[1456/1753] Building Mathlib.Data.Nat.ModEq
+[1460/1753] Compiling Mathlib.Data.Multiset.Nodup
+[1460/1753] Building Mathlib.Data.Multiset.Sum
+[1460/1753] Building Mathlib.Data.Multiset.Powerset
+[1460/1753] Building Mathlib.Data.Multiset.Pi
+[1460/1753] Building Mathlib.Data.Multiset.Dedup
+[1462/1753] Compiling Mathlib.Data.Nat.ModEq
+[1462/1753] Building Mathlib.Data.Nat.Parity
+[1464/1753] Compiling Mathlib.Data.Multiset.Sum
+[1466/1753] Compiling Mathlib.Data.Multiset.Pi
+[1468/1753] Compiling Mathlib.Data.Multiset.Dedup
+[1468/1753] Building Mathlib.Data.Multiset.FinsetOps
+[1468/1753] Building Mathlib.Data.Multiset.Fold
+[1470/1753] Compiling Mathlib.Data.Multiset.Powerset
+[1472/1753] Compiling Mathlib.Data.Nat.Parity
+[1472/1753] Building Mathlib.Data.Nat.Prime
+[1474/1753] Compiling Mathlib.Data.Multiset.Fold
+[1475/1753] Compiling Mathlib.Data.Multiset.FinsetOps
+[1476/1753] Building Mathlib.Data.Multiset.Lattice
+[1476/1753] Building Mathlib.Data.Finset.Basic
+[1478/1753] Compiling Mathlib.Data.Nat.Prime
+[1479/1753] Compiling Mathlib.Data.Multiset.Lattice
+[1482/1753] Compiling Mathlib.Data.Finset.Basic
+[1482/1753] Building Mathlib.Data.Finset.Image
+[1484/1753] Compiling Mathlib.Data.Finset.Image
+[1484/1753] Building Mathlib.Data.Finset.Pi
+[1484/1753] Building Mathlib.Data.Finset.Fold
+[1484/1753] Building Mathlib.Data.Fintype.Basic
+[1484/1753] Building Mathlib.Data.Finset.Card
+[1486/1753] Compiling Mathlib.Data.Finset.Pi
+[1488/1753] Compiling Mathlib.Data.Finset.Fold
+[1490/1753] Compiling Mathlib.Data.Finset.Card
+[1490/1753] Building Mathlib.Data.Finset.Sum
+[1490/1753] Building Mathlib.Data.Finset.Option
+[1490/1753] Building Mathlib.Data.Finset.Prod
+[1492/1753] Compiling Mathlib.Data.Finset.Sum
+[1494/1753] Compiling Mathlib.Data.Finset.Option
+[1496/1753] Compiling Mathlib.Data.Fintype.Basic
+[1496/1753] Building Mathlib.Data.Fintype.Pi
+[1496/1753] Building Mathlib.Data.Fin.Fin2
+[1496/1753] Building Mathlib.Data.Fintype.Card
+[1498/1753] Compiling Mathlib.Data.Fin.Fin2
+[1500/1753] Compiling Mathlib.Data.Finset.Prod
+[1500/1753] Building Mathlib.Data.Finset.Lattice
+[1502/1753] Compiling Mathlib.Data.Fintype.Pi
+[1502/1753] Building Mathlib.Data.Fintype.Vector
+[1504/1753] Compiling Mathlib.Data.Fintype.Vector
+[1505/1753] Compiling Mathlib.Data.Fintype.Card
+[1505/1753] Building Mathlib.Data.Fintype.Prod
+[1505/1753] Building Mathlib.Data.Fintype.Sum
+[1505/1753] Building Mathlib.Logic.Denumerable
+[1508/1753] Compiling Mathlib.Data.Fintype.Prod
+[1510/1753] Compiling Mathlib.Data.Fintype.Sum
+[1512/1753] Compiling Mathlib.Logic.Denumerable
+[1514/1753] Compiling Mathlib.Data.Finset.Lattice
+[1514/1753] Building Mathlib.Data.Finset.Powerset
+[1514/1753] Building Mathlib.Data.Finset.Sort
+[1514/1753] Building Mathlib.Data.Finset.Sigma
+[1516/1753] Compiling Mathlib.Data.Finset.Sigma
+[1516/1753] Building Mathlib.Data.Fintype.Sigma
+[1517/1753] Compiling Mathlib.Data.Finset.Powerset
+[1517/1753] Building Mathlib.Data.Fintype.Powerset
+[1518/1753] Compiling Mathlib.Data.Finset.Sort
+[1519/1753] Building Mathlib.Algebra.BigOperators.Basic
+[1519/1753] Building Mathlib.Logic.Equiv.List
+[1522/1753] Compiling Mathlib.Data.Fintype.Powerset
+[1524/1753] Compiling Mathlib.Logic.Equiv.List
+[1524/1753] Building Mathlib.Data.W.Basic
+[1524/1753] Building Mathlib.Computability.Primrec
+[1526/1753] Compiling Mathlib.Data.W.Basic
+[1528/1753] Compiling Mathlib.Data.Fintype.Sigma
+[1528/1753] Building Mathlib.Data.Finite.Basic
+[1530/1753] Compiling Mathlib.Data.Finite.Basic
+[1530/1753] Building Logic.Vorspiel.BinaryRelations
+[1530/1753] Building Mathlib.Data.Set.Finite
+[1532/1753] Compiling Logic.Vorspiel.BinaryRelations
+[1534/1753] Compiling Mathlib.Computability.Primrec
+[1534/1753] Building Mathlib.Computability.Partrec
+[1536/1753] Compiling Mathlib.Data.Set.Finite
+[1536/1753] Building Mathlib.Data.Set.Countable
+[1536/1753] Building Mathlib.Order.Filter.Basic
+[1538/1753] Compiling Mathlib.Data.Set.Countable
+[1540/1753] Compiling Mathlib.Computability.Partrec
+[1540/1753] Building Mathlib.Computability.PartrecCode
+[1542/1753] Compiling Mathlib.Algebra.BigOperators.Basic
+[1542/1753] Building Mathlib.Data.Finset.Preimage
+[1542/1753] Building Mathlib.Data.Nat.GCD.BigOperators
+[1544/1753] Compiling Mathlib.Data.Nat.GCD.BigOperators
+[1544/1753] Building Mathlib.Data.Nat.ChineseRemainder
+[1546/1753] Compiling Mathlib.Data.Finset.Preimage
+[1548/1753] Compiling Mathlib.Order.Filter.Basic
+[1548/1753] Building Mathlib.Order.Filter.Ker
+[1548/1753] Building Mathlib.Order.Filter.Prod
+[1550/1753] Compiling Mathlib.Order.Filter.Ker
+[1552/1753] Compiling Mathlib.Data.Nat.ChineseRemainder
+[1552/1753] Building Mathlib.Logic.Godel.GodelBetaFunction
+[1554/1753] Compiling Mathlib.Order.Filter.Prod
+[1554/1753] Building Mathlib.Order.Filter.Bases
+[1556/1753] Compiling Mathlib.Logic.Godel.GodelBetaFunction
+[1558/1753] Compiling Mathlib.Order.Filter.Bases
+[1558/1753] Building Mathlib.Order.Filter.Pi
+[1558/1753] Building Mathlib.Order.Filter.AtTopBot
+[1560/1753] Compiling Mathlib.Order.Filter.Pi
+[1562/1753] Compiling Mathlib.Computability.PartrecCode
+[1562/1753] Building Mathlib.Computability.Halting
+[1564/1753] Compiling Mathlib.Computability.Halting
+[1566/1753] Compiling Mathlib.Order.Filter.AtTopBot
+[1566/1753] Building Mathlib.Order.Filter.Cofinite
+[1568/1753] Compiling Mathlib.Order.Filter.Cofinite
+[1568/1753] Building Mathlib.Order.Filter.Ultrafilter
+[1570/1753] Compiling Mathlib.Order.Filter.Ultrafilter
+[1570/1753] Building Logic.Vorspiel.Vorspiel
+stdout:
+![1, 2] : Fin (Nat.succ (Nat.succ 0)) → ℕ
+"a, b, c, d"
+./././Logic/Vorspiel/Vorspiel.lean:591:11: warning: unused variable `ha` [linter.unusedVariables]
+./././Logic/Vorspiel/Vorspiel.lean:592:11: warning: unused variable `has` [linter.unusedVariables]
+[1572/1753] Compiling Logic.Vorspiel.Vorspiel
+[1572/1753] Building Logic.Vorspiel.Order
+[1572/1753] Building Logic.Vorspiel.ExistsUnique
+[1572/1753] Building Logic.Vorspiel.Meta
+[1572/1753] Building Logic.Logic.LogicSymbol
+[1572/1753] Building Logic.Vorspiel.Collection
+[1572/1753] Building Logic.Vorspiel.Arith
+[1572/1753] Building Logic.Vorspiel.Computability
+[1574/1753] Compiling Logic.Vorspiel.ExistsUnique
+[1576/1753] Compiling Logic.Vorspiel.Order
+[1577/1753] Compiling Logic.Vorspiel.Collection
+stdout:
+e₁ == e₂: false
+isDefEq e₁ e₂: true
+isStrongEq e₁ e₂: true
+0
+![0, 3, 6, 9, 12]
+![0, 3, 6, 9, 12]
+3
+rfl
+🎉 Proof Success! 🎉
+![0, 1 + 8, 2 + 8, 3, 4, 8]
+Qq.vecCons_assoc_eq
+  (Qq.vecCons_assoc_eq
+    (Qq.vecCons_assoc_eq (Qq.vecCons_assoc_eq (Qq.vecCons_assoc_eq (Matrix.vecConsLast_vecEmpty 8)))))
+🎉 Proof Success! 🎉
+./././Logic/Vorspiel/Meta.lean:455:35: warning: unused variable `d` [linter.unusedVariables]
+./././Logic/Vorspiel/Meta.lean:457:35: warning: unused variable `d` [linter.unusedVariables]
+[1580/1753] Compiling Logic.Vorspiel.Meta
+[1581/1753] Compiling Logic.Vorspiel.Arith
+[1583/1753] Compiling Logic.Logic.LogicSymbol
+[1583/1753] Building Logic.Propositional.Classical.Basic.Formula
+[1583/1753] Building Logic.Modal.LogicSymbol
+[1583/1753] Building Logic.Logic.Semantics
+[1586/1753] Compiling Logic.Propositional.Classical.Basic.Formula
+[1588/1753] Compiling Logic.Logic.Semantics
+[1588/1753] Building Logic.Logic.System
+[1590/1753] Compiling Logic.Modal.LogicSymbol
+stdout:
+./././Logic/Vorspiel/Computability.lean:403:13: warning: unused variable `h` [linter.unusedVariables]
+./././Logic/Vorspiel/Computability.lean:459:13: warning: unused variable `ha` [linter.unusedVariables]
+./././Logic/Vorspiel/Computability.lean:483:21: warning: unused variable `h` [linter.unusedVariables]
+[1592/1753] Compiling Logic.Vorspiel.Computability
+[1592/1753] Building Logic.Vorspiel.OmegaRec
+[1594/1753] Compiling Logic.Logic.System
+[1594/1753] Building Logic.Propositional.Classical.Basic.Semantics
+[1594/1753] Building Logic.FirstOrder.Basic.Syntax.Language
+[1594/1753] Building Logic.Logic.HilbertStyle.Basic
+[1594/1753] Building Logic.Logic.Calculus
+[1595/1753] Compiling Logic.Vorspiel.OmegaRec
+[1595/1753] Building Logic.Vorspiel.W
+[1598/1753] Compiling Logic.Propositional.Classical.Basic.Semantics
+[1600/1753] Compiling Logic.Logic.HilbertStyle.Basic
+[1600/1753] Building Logic.Propositional.Superintuitionistic.Formula
+[1600/1753] Building Logic.Logic.HilbertStyle.Context
+[1602/1753] Compiling Logic.Logic.Calculus
+[1602/1753] Building Logic.AutoProver.Litform
+[1602/1753] Building Logic.Propositional.Classical.Basic.Calculus
+[1603/1753] Compiling Logic.Propositional.Superintuitionistic.Formula
+[1603/1753] Building Logic.Propositional.Superintuitionistic.Kripke.Semantics
+[1604/1753] Compiling Logic.FirstOrder.Basic.Syntax.Language
+[1604/1753] Building Logic.FirstOrder.Basic.Syntax.Term
+[1606/1753] Compiling Logic.AutoProver.Litform
+[1608/1753] Compiling Logic.Logic.HilbertStyle.Context
+[1608/1753] Building Logic.Modal.Standard.System
+[1608/1753] Building Logic.Logic.HilbertStyle.Supplemental
+[1611/1753] Compiling Logic.Propositional.Classical.Basic.Calculus
+[1611/1753] Building Logic.AutoProver.Prover
+[1612/1753] Compiling Logic.Modal.Standard.System
+[1612/1753] Building Logic.Modal.Standard.Formula
+[1616/1753] Compiling Logic.FirstOrder.Basic.Syntax.Term
+[1616/1753] Building Logic.FirstOrder.Basic.Syntax.Formula
+[1618/1753] Compiling Logic.Vorspiel.W
+[1619/1753] Compiling Logic.Modal.Standard.Formula
+[1619/1753] Building Logic.Modal.Standard.Kripke.Semantics
+[1622/1753] Compiling Logic.Propositional.Superintuitionistic.Kripke.Semantics
+stdout:
+LO.TwoSided.Derivation.{u} {F : Type u} [self : TwoSided F] (a✝a✝¹ : List F) : Type u
+[1624/1753] Compiling Logic.AutoProver.Prover
+[1624/1753] Building Logic.Propositional.Classical.Basic.Completeness
+[1625/1753] Compiling Logic.Modal.Standard.Kripke.Semantics
+[1625/1753] Building Logic.Modal.Standard.Kripke.Morphism
+[1626/1753] Building Logic.Propositional.Classical.Basic
+[1626/1753] Compiling Logic.Propositional.Classical.Basic.Completeness
+[1629/1753] Compiling Logic.FirstOrder.Basic.Syntax.Formula
+[1629/1753] Building Logic.FirstOrder.Basic.Syntax.Rew
+[1630/1753] Compiling Logic.Propositional.Classical.Basic
+[1634/1753] Compiling Logic.Modal.Standard.Kripke.Morphism
+[1636/1753] Compiling Logic.Logic.HilbertStyle.Supplemental
+[1636/1753] Building Logic.Modal.Standard.HilbertStyle
+[1636/1753] Building Logic.Propositional.Superintuitionistic.Deduction
+[1637/1753] Compiling Logic.Propositional.Superintuitionistic.Deduction
+[1637/1753] Building Logic.Propositional.Superintuitionistic.Kripke.Soundness
+[1639/1753] Compiling Logic.Propositional.Superintuitionistic.Kripke.Soundness
+[1639/1753] Building Logic.Propositional.Superintuitionistic.Kripke.LEM
+[1639/1753] Building Logic.Propositional.Superintuitionistic.Kripke.Classical
+[1639/1753] Building Logic.Propositional.Superintuitionistic.Kripke.Completeness
+[1641/1753] Compiling Logic.Propositional.Superintuitionistic.Kripke.LEM
+[1642/1753] Compiling Logic.Propositional.Superintuitionistic.Kripke.Classical
+[1645/1753] Compiling Logic.Modal.Standard.HilbertStyle
+[1645/1753] Building Logic.Modal.Standard.Deduction
+[1646/1753] Compiling Logic.Modal.Standard.Deduction
+[1646/1753] Building Logic.Modal.Standard.Kripke.Soundness
+[1646/1753] Building Logic.Modal.Standard.Geach
+[1646/1753] Building Logic.Modal.Standard.Boxdot
+[1646/1753] Building Logic.Modal.Standard.Maximal
+[1646/1753] Building Logic.Modal.Standard.Kripke.Reducible
+[1648/1753] Compiling Logic.Modal.Standard.Kripke.Reducible
+[1650/1753] Compiling Logic.Modal.Standard.Boxdot
+[1652/1753] Compiling Logic.FirstOrder.Basic.Syntax.Rew
+[1652/1753] Building Logic.FirstOrder.Basic.Calculus
+[1652/1753] Building Logic.FirstOrder.Basic.Semantics.Semantics
+[1653/1753] Compiling Logic.Modal.Standard.Kripke.Soundness
+[1653/1753] Building Logic.Modal.Standard.Kripke.GL.Definability
+[1653/1753] Building Logic.Modal.Standard.Kripke.Completeness
+[1656/1753] Compiling Logic.Propositional.Superintuitionistic.Kripke.Completeness
+[1656/1753] Building Logic.Propositional.Superintuitionistic.Kripke.DP
+[1658/1753] Compiling Logic.Modal.Standard.Maximal
+[1659/1753] Compiling Logic.Modal.Standard.Kripke.GL.Definability
+[1662/1753] Compiling Logic.Modal.Standard.Geach
+[1662/1753] Building Logic.Modal.Standard.Kripke.Geach.Definability
+[1664/1753] Compiling Logic.FirstOrder.Basic.Calculus
+[1665/1753] Compiling Logic.FirstOrder.Basic.Semantics.Semantics
+[1665/1753] Building Logic.FirstOrder.Basic.Soundness
+[1665/1753] Building Logic.FirstOrder.Basic.Operator
+[1665/1753] Building Logic.FirstOrder.Basic.Semantics.Elementary
+[1667/1753] Compiling Logic.Modal.Standard.Kripke.Geach.Definability
+[1669/1753] Compiling Logic.Propositional.Superintuitionistic.Kripke.DP
+[1669/1753] Building Logic.Propositional.Superintuitionistic
+[1669/1753] Building Logic.Modal.Standard.Kripke.ModalCompanion
+[1671/1753] Compiling Logic.Propositional.Superintuitionistic
+[1671/1753] Building Logic.Propositional.Translation
+[1674/1753] Compiling Logic.Propositional.Translation
+[1676/1753] Compiling Logic.FirstOrder.Basic.Soundness
+[1679/1753] Compiling Logic.FirstOrder.Basic.Semantics.Elementary
+[1681/1753] Compiling Logic.Modal.Standard.Kripke.Completeness
+[1681/1753] Building Logic.Modal.Standard.Kripke.Geach.Completeness
+[1683/1753] Compiling Logic.Modal.Standard.Kripke.ModalCompanion
+[1685/1753] Compiling Logic.FirstOrder.Basic.Operator
+[1685/1753] Building Logic.FirstOrder.Basic.Elab
+[1685/1753] Building Logic.FirstOrder.Basic.Model
+[1687/1753] Compiling Logic.Modal.Standard.Kripke.Geach.Completeness
+[1687/1753] Building Logic.Modal.Standard.Kripke.Geach.Reducible
+[1688/1753] Compiling Logic.FirstOrder.Basic.Model
+[1692/1753] Compiling Logic.Modal.Standard.Kripke.Geach.Reducible
+[1692/1753] Building Logic.Modal.Standard
+[1694/1753] Compiling Logic.Modal.Standard
+stdout:
+Operator.operator Operator.Add.add
+  ![Operator.operator Operator.Add.add ![&2, &0], Operator.operator Operator.Zero.zero ![]] : Semiterm ℒₒᵣ ℕ 8
+Operator.operator Operator.Add.add
+  ![Operator.operator Operator.Add.add ![&2, &0], Operator.operator Operator.Zero.zero ![]] : Semiterm ℒₒᵣ ℕ 8
+Operator.operator (Operator.npow ℒₒᵣ 2) ![#3] : Semiterm ℒₒᵣ ℕ 8
+func Language.Mul.mul
+  ![Operator.const (Operator.numeral ?m.7016 1),
+    Operator.const (Operator.numeral ?m.7016 3)] : Semiterm ?m.7016 ?m.7013 ?m.7014
+99 : Const ℒₒᵣ
+ᵀ“(1 + 8)” : Semiterm ℒₒᵣ ℕ 8
+func Language.Mul.mul ![ᵀ“1”, ᵀ“3”] : Semiterm ℒₒᵣ ℕ 8
+[→ &0, &5] (ᵀ“((3 * #3) + 9)”) : Semiterm ?m.26097 ℕ ?m.25761
+⇑ (ᵀ“((3 * #3) + 9)”) : Semiterm ?m.27114 ℕ ?m.27112
+ᵀ“((((3 * #3) * &"x") + &"y") + &"z")” : Semiterm ?m.28020 String ?m.28022
+~((∀' ∀' Operator.operator Operator.LT.lt ![ᵀ“((#0 + 1) * #1)”, ᵀ“(#0 + #1)”]) ⋎
+    Operator.operator Operator.LT.lt ![ᵀ“0”, ᵀ“5”]) : Semiformula ?m.37571 ?m.37568 ?m.37569
+Matrix.conj fun i => Operator.operator Operator.LT.lt ![#i, ᵀ“(#i + 9)”] : Semiformula ?m.38465 ?m.38421 ?m.38422
+Operator.operator Operator.LT.lt ![ᵀ“0”, ᵀ“1”] ⋎
+  Operator.operator Operator.Eq.eq ![ᵀ“0”, ᵀ“1”] ⋎
+    Operator.operator Operator.LT.lt ![ᵀ“1”, ᵀ“0”] : Semiformula ?m.39563 ?m.39560 ?m.39561
+and (or (all falsum) (ex verum)) (or (all falsum) (ex verum))
+“¬∃ ∀ (((#0 + 1) * #1) < (#0 + #1) ↔ 0 < &5)” : Semiformula ?m.77679 ℕ ?m.77043
+“(0 < 0 → (∀ 0 < #0 → ¬0 < 2))” : Sentence ℒₒᵣ
+~⊤ ⋎ (Rew.hom [→ ᵀ“2”, #3]) ((Rew.hom [→ #3, ᵀ“7”]) (“#0 < 5”)) : Semiformula ?m.79984 ?m.79981 ?m.79277
+“(⋀ i, #i < (#i + 9))” : Semiformula ?m.80920 ?m.80876 ?m.80877
+“(∀[#0 < 1] #0 = 0)” : Semiformula ?m.81530 ?m.81527 ?m.81244
+“(&"x" < &"y" → (&"y" < &"z" → &"x" < &"z"))” : Semiformula ?m.82251 String ?m.82253
+[1695/1753] Compiling Logic.FirstOrder.Basic.Elab
+[1695/1753] Building Logic.FirstOrder.Basic.Eq
+[1698/1753] Compiling Logic.FirstOrder.Basic.Eq
+[1698/1753] Building Logic.FirstOrder.Basic
+[1700/1753] Compiling Logic.FirstOrder.Basic
+[1700/1753] Building Logic.FirstOrder.Hauptsatz
+[1700/1753] Building Logic.FirstOrder.Ultraproduct
+[1700/1753] Building Logic.FirstOrder.Completeness.SubLanguage
+[1700/1753] Building Logic.FirstOrder.Computability.Term
+[1702/1753] Compiling Logic.FirstOrder.Ultraproduct
+[1704/1753] Compiling Logic.FirstOrder.Completeness.SubLanguage
+[1706/1753] Compiling Logic.FirstOrder.Computability.Term
+[1706/1753] Building Logic.FirstOrder.Computability.Formula
+[1708/1753] Compiling Logic.FirstOrder.Computability.Formula
+[1708/1753] Building Logic.FirstOrder.Computability.Coding
+[1709/1753] Compiling Logic.FirstOrder.Computability.Coding
+[1709/1753] Building Logic.FirstOrder.Completeness.Coding
+

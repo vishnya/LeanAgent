@@ -1,0 +1,1883 @@
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+Stopped only 0 out of 5 Ray processes within the grace period 16 seconds. Set `-v` to see more details. Remaining proce
+sses [psutil.Process(pid=2014318, name='raylet', status='zombie', started='18:51:52'), psutil.Process(pid=2014229, name
+='python', status='zombie', started='18:51:51'), psutil.Process(pid=2014356, name='python', status='zombie', started='1
+8:51:53'), psutil.Process(pid=2014225, name='python', status='zombie', started='18:51:51'), psutil.Process(pid=2013990,
+ name='gcs_server', status='zombie', started='18:51:50')] will be forcefully terminated.
+You can also use `--force` to forcefully terminate processes or set higher `--grace-period` to wait longer time for pro
+per termination.
+kill: (6943): Operation not permitted
+kill: (7223): Operation not permitted
+kill: (1796073): Operation not permitted
+kill: (1796174): Operation not permitted
+kill: (1848973): Operation not permitted
+kill: (1849029): Operation not permitted
+kill: (1882147): Operation not permitted
+kill: (1882245): Operation not permitted
+kill: (1969173): Operation not permitted
+kill: (1969210): Operation not permitted
+kill: (1969211): Operation not permitted
+kill: (1969212): Operation not permitted
+kill: (1969219): Operation not permitted
+kill: (1970479): Operation not permitted
+kill: (1970522): Operation not permitted
+kill: (1970523): Operation not permitted
+kill: (1970524): Operation not permitted
+kill: (1970531): Operation not permitted
+kill: (1971213): Operation not permitted
+kill: (1971231): Operation not permitted
+kill: (1971232): Operation not permitted
+kill: (1971233): Operation not permitted
+kill: (1971240): Operation not permitted
+kill: (2016327): No such process
+Sun Sep 22 18:55:11 2024
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:0F:00.0 Off |                    0 |
+| N/A   40C    P0             86W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          On  |   00000000:15:00.0 Off |                    0 |
+| N/A   38C    P0             86W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100-SXM4-80GB          On  |   00000000:D6:00.0 Off |                    0 |
+| N/A   38C    P0             87W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100-SXM4-80GB          On  |   00000000:DA:00.0 Off |                    0 |
+| N/A   41C    P0             91W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Running main3_abl2.py
+[2024-09-22 18:55:17,774] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-22 18:55:21.621 | INFO     | __main__:main:1405 - Running retrieval baseline
+2024-09-22 18:55:21.621 | INFO     | __main__:main:1408 - Configuring LeanDojo...
+2024-09-22 18:55:21.624 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data
+/yingzi_ma/lean_project/ReProver
+2024-09-22 18:55:21.624 | INFO     | __main__:main:1410 - LeanDojo configured
+2024-09-22 18:55:21.624 | INFO     | __main__:main:1415 - Starting the main process
+2024-09-22 18:55:21.624 | INFO     | __main__:main:1423 - Loading database from /data/yingzi_ma/lean_project/dynamic_da
+tabase_PT_single_repo_no_ewc_curriculum_abl2.json
+2024-09-22 18:55:21.624 | INFO     | __main__:main:1425 - Loaded database from /data/yingzi_ma/lean_project/dynamic_dat
+abase_PT_single_repo_no_ewc_curriculum_abl2.json
+2024-09-22 18:55:21.624 | INFO     | __main__:main:1432 - Found 9 repositories
+2024-09-22 18:55:21.625 | INFO     | __main__:main:1435 - Starting curriculum learning
+2024-09-22 18:55:21.944 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for l
+ean4 v4.8.0-rc1
+2024-09-22 18:55:39.556 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for l
+ean4 v4.7.0
+2024-09-22 18:55:56.741 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for l
+ean4 v4.8.0
+2024-09-22 18:56:15.896 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for l
+ean4 v4.7.0-rc2
+2024-09-22 18:56:33.790 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for l
+ean4 v4.8.0-rc2
+2024-09-22 18:56:51.160 | INFO     | __main__:main:1519 - length of lean_git_repos: 9
+2024-09-22 18:56:51.160 | INFO     | __main__:main:1520 - i: 0
+2024-09-22 18:56:51.160 | INFO     | __main__:main:1526 - Main process
+2024-09-22 18:56:51.160 | INFO     | __main__:main:1527 - Using lambda = 0.0
+2024-09-22 18:56:51.160 | INFO     | __main__:main:1528 - Processing https://github.com/teorth/pfr
+2024-09-22 18:56:51.161 | INFO     | __main__:main:1535 - Adding repo to repos_for_merged_dataset
+2024-09-22 18:56:51.161 | INFO     | __main__:main:1548 - All GPUs
+2024-09-22 18:56:51.161 | INFO     | __main__:main:1784 - Starting the prover
+2024-09-22 18:56:51.161 | INFO     | prover.proof_search_abl2:__init__:407 - Inside __init__
+2024-09-22 18:56:51.161 | INFO     | prover.proof_search_abl2:__init__:412 - ckpt_path is not None
+2024-09-22 18:56:51.161 | INFO     | prover.proof_search_abl2:__init__:427 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You ar
+e using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implic
+itly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https:
+//github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default
+ value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling
+. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case wh
+ere you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this exper
+imental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files perma
+nently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-22 18:56:51.830 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_pro
+ject/checkpoints_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lam
+bda_0.1_epoch=4-Recall@10_val=63.49.ckpt
+2024-09-22 18:56:51.830 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_pro
+ject/checkpoints_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lam
+bda_0.1_epoch=4-Recall@10_val=63.49.ckpt
+2024-09-22 18:56:54.386 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys
+that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.enco
+der.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encode
+r.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'retriev
+er.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.re
+lative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.encode
+r.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight',
+'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.layer_
+norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.encoder.e
+ncoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriev
+er.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDen
+se.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block
+.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.e
+ncoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 're
+triever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.layer_norm.
+weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.lay
+er.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retriever.enco
+der.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 're
+triever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttenti
+on.v.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.la
+yer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.en
+coder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight'
+, 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttenti
+on.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.la
+yer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retriever.encoder.e
+ncoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'ret
+riever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseRel
+uDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.la
+yer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.e
+ncoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 're
+triever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.w
+i_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.5
+.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.e
+ncoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 're
+triever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttenti
+on.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1
+.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encode
+r.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttenti
+on.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.la
+yer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder.encode
+r.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight',
+'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_
+norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retriever.encoder.e
+ncoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriev
+er.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDen
+se.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block
+.8.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.e
+ncoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 're
+triever.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.
+weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.lay
+er.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.enco
+der.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'r
+etriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAtte
+ntion.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.
+10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.enco
+der.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo
+.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.S
+elfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder
+.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_
+0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.11
+.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.
+encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys
+that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'stat
+e_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-22 18:56:54.746 | INFO     | prover.proof_search_abl2:__init__:452 - Loaded model from /data/yingzi_ma/lean_pro
+ject/model_lightning.ckpt
+2024-09-22 18:56:54.747 | INFO     | prover.proof_search_abl2:__init__:453 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-22 18:56:54.747 | INFO     | prover.proof_search_abl2:__init__:456 - Loading indexed corpus from /data/yingzi_m
+a/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2
+687/corpus.jsonl
+2024-09-22 18:56:54.747 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datase
+ts_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-22 18:57:01.227 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-22 18:57:01.227 | INFO     | prover.proof_search_abl2:__init__:458 - Loaded indexed corpus from /data/yingzi_ma
+/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a26
+87/corpus.jsonl
+2024-09-22 18:57:01.227 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████████| 3433/3433 [05:15<00:00, 10.90it/s]
+2024-09-22 19:02:16.484 | INFO     | prover.proof_search_abl2:__init__:460 - Finished reindexing!
+2024-09-22 19:02:16.484 | INFO     | prover.proof_search_abl2:__init__:471 - Launching 4 workers with 4 GPUs.
+2024-09-22 19:02:19,745 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=2052850) [2024-09-22 19:02:55,612] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+(ProverActor pid=2052850) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: F
+utureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during un
+pickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future
+release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be execut
+ed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly
+ allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True`
+ for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues r
+elated to this experimental feature.
+(ProverActor pid=2052850)   return torch.load(io.BytesIO(b))
+(pid=2053026) [2024-09-22 19:03:04,994] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+(ProverActor pid=2053026) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: F
+utureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during un
+pickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future
+release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be execut
+ed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly
+ allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True`
+ for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues r
+elated to this experimental feature.
+(ProverActor pid=2053026)   return torch.load(io.BytesIO(b))
+(pid=2053522) [2024-09-22 19:03:16,621] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+2024-09-22 19:03:19.964 | INFO     | __main__:load_encountered_theorems:986 - The file encountered_theorems_PT_single_r
+epo_no_ewc_curriculum_abl2.pkl does not exist. Starting with an empty set.
+2024-09-22 19:03:19.964 | INFO     | __main__:save_progress:967 - Saving encountered theorems...
+2024-09-22 19:03:19.968 | INFO     | __main__:prove_sorry_theorems:1063 - Finished attempting to prove sorry theorems
+2024-09-22 19:03:19.970 | INFO     | __main__:main:1823 - Finished searching for proofs of sorry theorems
+2024-09-22 19:03:19.970 | INFO     | __main__:main:1826 - Shutting down Ray after proving
+2024-09-22 19:03:23.383 | INFO     | __main__:main:1846 - Finished processing the repository
+2024-09-22 19:03:23.383 | INFO     | __main__:main:1848 - current epoch: 5
+2024-09-22 19:03:23.383 | INFO     | __main__:main:1519 - length of lean_git_repos: 9
+2024-09-22 19:03:23.383 | INFO     | __main__:main:1520 - i: 1
+2024-09-22 19:03:23.383 | INFO     | __main__:main:1526 - Main process
+2024-09-22 19:03:23.383 | INFO     | __main__:main:1527 - Using lambda = 0.0
+2024-09-22 19:03:23.383 | INFO     | __main__:main:1528 - Processing https://github.com/lecopivo/SciLean
+2024-09-22 19:03:23.383 | INFO     | __main__:main:1535 - Adding repo to repos_for_merged_dataset
+2024-09-22 19:03:23.384 | INFO     | dynamic_database:generate_merged_dataset:415 - Merging selected repositories in th
+e database:
+2024-09-22 19:03:23.384 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/lecopivo/Sci
+Lean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-22 19:03:23.384 | WARNING  | dynamic_database:safe_remove_dir_path:377 - /data/yingzi_ma/lean_project/datasets_
+PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744 already exists.
+Removing it now.
+2024-09-22 19:03:23.403 | INFO     | dynamic_database:generate_merged_dataset:439 - Exported proofs to /data/yingzi_ma/
+lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744
+2024-09-22 19:03:23.404 | INFO     | dynamic_database:generate_merged_dataset:442 - Merged and exported corpus to /data
+/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6
+eb9c916e62655744
+2024-09-22 19:03:23.405 | INFO     | dynamic_database:generate_merged_dataset:445 - Exported traced files to /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c9
+16e62655744
+2024-09-22 19:03:23.406 | INFO     | dynamic_database:generate_merged_dataset:448 - Exported metadata to /data/yingzi_m
+a/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744
+2024-09-22 19:03:23.406 | INFO     | __main__:main:1548 - All GPUs
+2024-09-22 19:03:23.406 | INFO     | __main__:main:1784 - Starting the prover
+2024-09-22 19:03:23.406 | INFO     | prover.proof_search_abl2:__init__:407 - Inside __init__
+2024-09-22 19:03:23.406 | INFO     | prover.proof_search_abl2:__init__:412 - ckpt_path is not None
+2024-09-22 19:03:23.406 | INFO     | prover.proof_search_abl2:__init__:427 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You ar
+e using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implic
+itly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https:
+//github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default
+ value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling
+. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case wh
+ere you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this exper
+imental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files perma
+nently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-22 19:03:23.574 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_pro
+ject/checkpoints_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lam
+bda_0.1_epoch=4-Recall@10_val=63.49.ckpt
+2024-09-22 19:03:23.575 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_pro
+ject/checkpoints_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lam
+bda_0.1_epoch=4-Recall@10_val=63.49.ckpt
+2024-09-22 19:03:25.930 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys
+that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.enco
+der.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encode
+r.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'retriev
+er.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.re
+lative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.encode
+r.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight',
+'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.layer_
+norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.encoder.e
+ncoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriev
+er.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDen
+se.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block
+.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.e
+ncoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 're
+triever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.layer_norm.
+weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.lay
+er.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retriever.enco
+der.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 're
+triever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttenti
+on.v.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.la
+yer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.en
+coder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight'
+, 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttenti
+on.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.la
+yer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retriever.encoder.e
+ncoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'ret
+riever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseRel
+uDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.la
+yer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.e
+ncoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 're
+triever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.w
+i_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.5
+.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.e
+ncoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 're
+triever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttenti
+on.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1
+.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encode
+r.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttenti
+on.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.la
+yer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder.encode
+r.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight',
+'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_
+norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retriever.encoder.e
+ncoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriev
+er.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDen
+se.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block
+.8.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.e
+ncoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 're
+triever.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.
+weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.lay
+er.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.enco
+der.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'r
+etriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAtte
+ntion.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.
+10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.enco
+der.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo
+.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.S
+elfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder
+.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_
+0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.11
+.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.
+encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys
+that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'stat
+e_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-22 19:03:26.297 | INFO     | prover.proof_search_abl2:__init__:452 - Loaded model from /data/yingzi_ma/lean_pro
+ject/model_lightning.ckpt
+2024-09-22 19:03:26.298 | INFO     | prover.proof_search_abl2:__init__:453 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-22 19:03:26.298 | INFO     | prover.proof_search_abl2:__init__:456 - Loading indexed corpus from /data/yingzi_m
+a/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744/corpus.jsonl
+2024-09-22 19:03:26.298 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datase
+ts_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+2024-09-22 19:03:26.299 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-22 19:03:26.299 | INFO     | prover.proof_search_abl2:__init__:458 - Loaded indexed corpus from /data/yingzi_ma
+/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62
+655744/corpus.jsonl
+2024-09-22 19:03:26.299 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+0it [00:00, ?it/s]
+2024-09-22 19:03:26.300 | INFO     | prover.proof_search_abl2:__init__:460 - Finished reindexing!
+2024-09-22 19:03:26.300 | INFO     | prover.proof_search_abl2:__init__:471 - Launching 4 workers with 4 GPUs.
+2024-09-22 19:03:28,348 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+^Z
+[4]+  Stopped                 bash run_code3_abl2.sh
+(base) yingzi_ma@compute-permanent-node-1021:~/lean_project/ReProver$ bash run_code3_abl2.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+Stopped only 113 out of 118 Ray processes within the grace period 16 seconds. Set `-v` to see more details. Remaining p
+rocesses [psutil.Process(pid=2054093, name='raylet', status='zombie', started='19:03:27'), psutil.Process(pid=2054170,
+name='python', status='zombie', started='19:03:27'), psutil.Process(pid=2054004, name='python', status='zombie', starte
+d='19:03:26'), psutil.Process(pid=2054005, name='python', status='zombie', started='19:03:26'), psutil.Process(pid=2053
+769, name='gcs_server', status='zombie', started='19:03:26')] will be forcefully terminated.
+You can also use `--force` to forcefully terminate processes or set higher `--grace-period` to wait longer time for pro
+per termination.
+kill: (6943): Operation not permitted
+kill: (7223): Operation not permitted
+kill: (1796073): Operation not permitted
+kill: (1796174): Operation not permitted
+kill: (1848973): Operation not permitted
+kill: (1849029): Operation not permitted
+kill: (1882147): Operation not permitted
+kill: (1882245): Operation not permitted
+kill: (1969173): Operation not permitted
+kill: (1969210): Operation not permitted
+kill: (1969211): Operation not permitted
+kill: (1969212): Operation not permitted
+kill: (1969219): Operation not permitted
+kill: (1970479): Operation not permitted
+kill: (1970522): Operation not permitted
+kill: (1970523): Operation not permitted
+kill: (1970524): Operation not permitted
+kill: (1970531): Operation not permitted
+kill: (1971213): Operation not permitted
+kill: (1971231): Operation not permitted
+kill: (1971232): Operation not permitted
+kill: (1971233): Operation not permitted
+kill: (1971240): Operation not permitted
+kill: (2018993): Operation not permitted
+kill: (2019021): Operation not permitted
+kill: (2057358): No such process
+Sun Sep 22 19:08:18 2024
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:0F:00.0 Off |                    0 |
+| N/A   41C    P0             86W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          On  |   00000000:15:00.0 Off |                    0 |
+| N/A   38C    P0             86W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100-SXM4-80GB          On  |   00000000:D6:00.0 Off |                    0 |
+| N/A   38C    P0             88W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100-SXM4-80GB          On  |   00000000:DA:00.0 Off |                    0 |
+| N/A   42C    P0             91W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Running main3_abl2.py
+[2024-09-22 19:08:24,909] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-22 19:08:28.759 | INFO     | __main__:main:1405 - Running retrieval baseline
+2024-09-22 19:08:28.759 | INFO     | __main__:main:1408 - Configuring LeanDojo...
+2024-09-22 19:08:28.762 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data
+/yingzi_ma/lean_project/ReProver
+2024-09-22 19:08:28.762 | INFO     | __main__:main:1410 - LeanDojo configured
+2024-09-22 19:08:28.762 | INFO     | __main__:main:1415 - Starting the main process
+2024-09-22 19:08:28.763 | INFO     | __main__:main:1423 - Loading database from /data/yingzi_ma/lean_project/dynamic_da
+tabase_PT_single_repo_no_ewc_curriculum_abl2.json
+2024-09-22 19:09:18.341 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-22 19:09:18.341 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/lec
+opivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-22 19:09:24.450 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-22 19:09:24.450 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/Imp
+erialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-22 19:09:31.497 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-22 19:09:31.497 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teo
+rth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-22 19:09:47.576 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-22 19:09:47.576 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/dwr
+ensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-22 19:09:49.163 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-22 19:09:49.163 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/goo
+gle-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-22 19:09:58.864 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-22 19:09:58.865 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/avi
+gad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-22 19:09:59.466 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-22 19:09:59.466 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/For
+malizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-22 19:09:59.606 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-22 19:09:59.606 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/dig
+ama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-22 19:10:01.163 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-22 19:10:01.164 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/eri
+c-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-22 19:10:03.003 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-22 19:10:03.003 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yum
+a-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-22 19:10:12.452 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-22 19:10:12.453 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/log
+anrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-22 19:10:13.161 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-22 19:10:13.161 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/lea
+nprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-22 19:10:13.447 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-22 19:10:13.447 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/sid
+dhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-22 19:10:15.453 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github
+.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-22 19:10:15.453 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/Ale
+xKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-22 19:10:16.571 | INFO     | __main__:main:1425 - Loaded database from /data/yingzi_ma/lean_project/dynamic_dat
+abase_PT_single_repo_no_ewc_curriculum_abl2.json
+2024-09-22 19:10:16.573 | INFO     | __main__:main:1432 - Found 9 repositories
+2024-09-22 19:10:16.573 | INFO     | __main__:main:1435 - Starting curriculum learning
+2024-09-22 19:10:17.007 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for l
+ean4 v4.8.0-rc1
+2024-09-22 19:10:34.277 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for l
+ean4 v4.7.0
+2024-09-22 19:10:51.239 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for l
+ean4 v4.8.0
+2024-09-22 19:11:09.469 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for l
+ean4 v4.7.0-rc2
+2024-09-22 19:11:27.148 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for l
+ean4 v4.8.0-rc2
+2024-09-22 19:11:44.549 | INFO     | __main__:main:1519 - length of lean_git_repos: 9
+2024-09-22 19:11:44.549 | INFO     | __main__:main:1520 - i: 0
+2024-09-22 19:11:44.549 | INFO     | __main__:main:1526 - Main process
+2024-09-22 19:11:44.550 | INFO     | __main__:main:1527 - Using lambda = 0.0
+2024-09-22 19:11:44.550 | INFO     | __main__:main:1528 - Processing https://github.com/teorth/pfr
+2024-09-22 19:11:44.550 | INFO     | __main__:main:1535 - Adding repo to repos_for_merged_dataset
+2024-09-22 19:11:44.550 | INFO     | __main__:main:1548 - All GPUs
+2024-09-22 19:11:44.550 | INFO     | __main__:main:1784 - Starting the prover
+2024-09-22 19:11:44.550 | INFO     | prover.proof_search_abl2:__init__:407 - Inside __init__
+2024-09-22 19:11:44.550 | INFO     | prover.proof_search_abl2:__init__:412 - ckpt_path is not None
+2024-09-22 19:11:44.550 | INFO     | prover.proof_search_abl2:__init__:427 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You ar
+e using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implic
+itly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https:
+//github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default
+ value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling
+. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case wh
+ere you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this exper
+imental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files perma
+nently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-22 19:11:45.173 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_pro
+ject/checkpoints_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lam
+bda_0.1_epoch=4-Recall@10_val=63.49.ckpt
+2024-09-22 19:11:45.173 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_pro
+ject/checkpoints_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lam
+bda_0.1_epoch=4-Recall@10_val=63.49.ckpt
+2024-09-22 19:11:47.853 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys
+that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.enco
+der.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encode
+r.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'retriev
+er.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.re
+lative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.encode
+r.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight',
+'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.layer_
+norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.encoder.e
+ncoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriev
+er.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDen
+se.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block
+.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.e
+ncoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 're
+triever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.layer_norm.
+weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.lay
+er.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retriever.enco
+der.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 're
+triever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttenti
+on.v.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.la
+yer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.en
+coder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight'
+, 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttenti
+on.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.la
+yer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retriever.encoder.e
+ncoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'ret
+riever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseRel
+uDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.la
+yer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.e
+ncoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 're
+triever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.w
+i_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.5
+.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.e
+ncoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 're
+triever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttenti
+on.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1
+.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encode
+r.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttenti
+on.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.la
+yer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder.encode
+r.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight',
+'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_
+norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retriever.encoder.e
+ncoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriev
+er.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDen
+se.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block
+.8.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.e
+ncoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 're
+triever.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.
+weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.lay
+er.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.enco
+der.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'r
+etriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAtte
+ntion.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.
+10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.enco
+der.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo
+.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.S
+elfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder
+.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_
+0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.11
+.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.
+encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys
+that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'stat
+e_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-22 19:11:48.542 | INFO     | prover.proof_search_abl2:__init__:452 - Loaded model from /data/yingzi_ma/lean_pro
+ject/model_lightning.ckpt
+2024-09-22 19:11:48.543 | INFO     | prover.proof_search_abl2:__init__:453 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-22 19:11:48.543 | INFO     | prover.proof_search_abl2:__init__:456 - Loading indexed corpus from /data/yingzi_m
+a/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2
+687/corpus.jsonl
+2024-09-22 19:11:48.543 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datase
+ts_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-22 19:11:54.307 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-22 19:11:54.307 | INFO     | prover.proof_search_abl2:__init__:458 - Loaded indexed corpus from /data/yingzi_ma
+/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a26
+87/corpus.jsonl
+2024-09-22 19:11:54.307 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████████| 3433/3433 [05:15<00:00, 10.89it/s]
+2024-09-22 19:17:10.304 | INFO     | prover.proof_search_abl2:__init__:460 - Finished reindexing!
+2024-09-22 19:17:10.305 | INFO     | prover.proof_search_abl2:__init__:471 - Launching 4 workers with 4 GPUs.
+2024-09-22 19:17:14,148 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=2094726) [2024-09-22 19:17:51,417] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+(ProverActor pid=2094726) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: F
+utureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during un
+pickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future
+release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be execut
+ed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly
+ allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True`
+ for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues r
+elated to this experimental feature.
+(ProverActor pid=2094726)   return torch.load(io.BytesIO(b))
+(pid=2094905) [2024-09-22 19:18:03,417] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+(ProverActor pid=2094905) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: F
+utureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during un
+pickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future
+release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be execut
+ed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly
+ allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True`
+ for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues r
+elated to this experimental feature.
+(ProverActor pid=2094905)   return torch.load(io.BytesIO(b))
+(pid=2095403) [2024-09-22 19:18:15,799] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+(ProverActor pid=2095403) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: F
+utureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during un
+pickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future
+release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be execut
+ed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly
+ allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True`
+ for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues r
+elated to this experimental feature.
+(ProverActor pid=2095403)   return torch.load(io.BytesIO(b))
+2024-09-22 19:18:22.601 | INFO     | __main__:prove_sorry_theorems:1012 - Found 37 sorry theorems to prove
+Processing theorems from teorth/pfr:   0%|                                        | 0/37 [00:00<?, ?theorem/s]2024-09-2
+2 19:18:22.602 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for multiDist_nonneg
+2024-09-22 19:18:22.602 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (765, 1)
+2024-09-22 19:18:22.602 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for rho_plus_of_sum
+2024-09-22 19:18:22.602 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (71, 1)
+2024-09-22 19:18:22.602 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for dist_of_min_eq_zero
+2024-09-22 19:18:22.602 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (174, 1)
+2024-09-22 19:18:22.602 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for cond_multiDist_chainR
+ule
+2024-09-22 19:18:22.602 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (965, 1)
+2024-09-22 19:18:22.602 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for dist_add_dist_eq
+2024-09-22 19:18:22.602 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (140, 1)
+2024-09-22 19:18:22.603 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for multiDist_indep
+2024-09-22 19:18:22.603 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (760, 1)
+2024-09-22 19:18:22.603 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for cor_multiDist_chainRu
+le
+2024-09-22 19:18:22.603 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (986, 1)
+2024-09-22 19:18:22.603 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for iter_multiDist_chainR
+ule
+2024-09-22 19:18:22.603 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (973, 1)
+2024-09-22 19:18:22.603 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for ent_of_sum_le_ent_of_
+sum
+2024-09-22 19:18:22.603 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (546, 1)
+2024-09-22 19:18:22.603 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for condRho_minus_le
+2024-09-22 19:18:22.603 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (95, 1)
+2024-09-22 19:18:22.603 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for multiTau_continuous
+2024-09-22 19:18:22.604 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (52, 1)
+2024-09-22 19:18:22.604 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for multiTau_min_exists
+2024-09-22 19:18:22.604 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (56, 1)
+2024-09-22 19:18:22.604 | INFO     | prover.proof_search_abl2:search_unordered:514 - Distributed
+(ProverActor pid=2094726) 2024-09-22 19:18:22.613 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='cond_multiDist_chainRule')
+(ProverActor pid=2094905) 2024-09-22 19:18:22.611 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='dist_of_min_eq_zero')
+(ProverActor pid=2095403) 2024-09-22 19:18:29.361 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='rho_plus_of_sum')
+(pid=2095583) [2024-09-22 19:18:30,542] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+(ProverActor pid=2095583) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: F
+utureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during un
+pickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future
+release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be execut
+ed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly
+ allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True`
+ for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues r
+elated to this experimental feature.
+(ProverActor pid=2095583)   return torch.load(io.BytesIO(b))
+(ProverActor pid=2095583) 2024-09-22 19:18:42.934 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_nonneg')
+(ProverActor pid=2094726) 2024-09-22 19:20:18.949 | INFO     | prover.proof_search_abl2:_best_first_search:143 - Ran ou
+t of nodes to search.
+(ProverActor pid=2094726) 2024-09-22 19:20:33.619 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='cond_multiDist_chainRule'), status=<Status.OPEN: 'Open'>, proof
+=None, actor_time=3.4804159458726645, environment_time=4.552784325554967, total_time=9.034784719813615, num_total_nodes
+=40, num_searched_nodes=1)
+(ProverActor pid=2094726) 2024-09-22 19:20:33.625 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='dist_add_dist_eq')
+(ProverActor pid=2095403) 2024-09-22 19:29:21.893 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 377928
+9.374176627
+(ProverActor pid=2095403) 2024-09-22 19:29:21.893 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 377868
+9.377780133
+(ProverActor pid=2095403) 2024-09-22 19:29:21.893 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+68838761561
+(ProverActor pid=2095403) 2024-09-22 19:29:21.893 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095403) 2024-09-22 19:29:21.893 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095403) 2024-09-22 19:29:31.656 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='rho_plus_of_sum'), status=<Status.OPEN: 'Open'>, proof=None, ac
+tor_time=22.91662788344547, environment_time=144.82269214792177, total_time=600.9971719528548, num_total_nodes=282, num
+_searched_nodes=7)
+(ProverActor pid=2095403) 2024-09-22 19:29:31.662 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_indep')
+(ProverActor pid=2094905) 2024-09-22 19:29:23.857 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600 [r
+epeated 4x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see
+ https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.
+)
+(ProverActor pid=2094905) 2024-09-22 19:29:23.857 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094905) 2024-09-22 19:29:40.610 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='dist_of_min_eq_zero'), status=<Status.OPEN: 'Open'>, proof=None
+, actor_time=172.9123187023215, environment_time=321.0461461963132, total_time=600.9977111290209, num_total_nodes=2138,
+ num_searched_nodes=63)
+(ProverActor pid=2094905) 2024-09-22 19:29:40.616 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='cor_multiDist_chainRule')
+(ProverActor pid=2095583) 2024-09-22 19:30:11.223 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 377933
+8.704645184
+(ProverActor pid=2095583) 2024-09-22 19:30:11.223 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 377873
+8.72382107
+(ProverActor pid=2095583) 2024-09-22 19:30:11.223 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.98
+12081339769
+(ProverActor pid=2095583) 2024-09-22 19:30:11.223 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095583) 2024-09-22 19:30:11.224 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095583) 2024-09-22 19:30:23.688 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_nonneg'), status=<Status.OPEN: 'Open'>, proof=None, a
+ctor_time=412.57119017792866, environment_time=186.40722684655339, total_time=600.9814047887921, num_total_nodes=1861,
+num_searched_nodes=107)
+(ProverActor pid=2095583) 2024-09-22 19:30:23.693 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='iter_multiDist_chainRule')
+(ProverActor pid=2094726) 2024-09-22 19:31:26.834 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 377941
+4.315179686
+(ProverActor pid=2094726) 2024-09-22 19:31:26.834 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 377881
+4.319951035
+(ProverActor pid=2094726) 2024-09-22 19:31:26.834 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+58882071078
+(ProverActor pid=2094726) 2024-09-22 19:31:26.834 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094726) 2024-09-22 19:31:26.835 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094726) 2024-09-22 19:31:40.004 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='dist_add_dist_eq'), status=<Status.OPEN: 'Open'>, proof=None, a
+ctor_time=287.7327423132956, environment_time=312.0946144075133, total_time=600.9962782771327, num_total_nodes=2245, nu
+m_searched_nodes=92)
+(ProverActor pid=2094726) 2024-09-22 19:31:40.009 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='ent_of_sum_le_ent_of_sum')
+(ProverActor pid=2095403) 2024-09-22 19:41:00.055 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 377998
+7.536215754
+(ProverActor pid=2095403) 2024-09-22 19:41:00.055 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 377938
+7.558279618
+(ProverActor pid=2095403) 2024-09-22 19:41:00.055 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.97
+82724739052
+(ProverActor pid=2095403) 2024-09-22 19:41:00.055 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095403) 2024-09-22 19:41:00.055 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095403) 2024-09-22 19:41:08.818 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_indep'), status=<Status.OPEN: 'Open'>, proof=None, ac
+tor_time=3.400355637539178, environment_time=0.7786616208031774, total_time=600.9784741387703, num_total_nodes=6, num_s
+earched_nodes=0)
+(ProverActor pid=2095403) 2024-09-22 19:41:08.823 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='condRho_minus_le')
+(ProverActor pid=2094905) 2024-09-22 19:41:38.763 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378002
+6.24469234
+(ProverActor pid=2094905) 2024-09-22 19:41:38.763 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 377942
+6.261655342
+(ProverActor pid=2094905) 2024-09-22 19:41:38.763 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.98
+3431827277
+(ProverActor pid=2094905) 2024-09-22 19:41:38.764 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094905) 2024-09-22 19:41:38.764 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094905) 2024-09-22 19:41:46.389 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='cor_multiDist_chainRule'), status=<Status.OPEN: 'Open'>, proof=
+None, actor_time=345.4586477018893, environment_time=254.31413728371263, total_time=600.9837202341296, num_total_nodes=
+2915, num_searched_nodes=112)
+(ProverActor pid=2094905) 2024-09-22 19:41:46.393 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MultiTauFunctional.lean'), full_name='multiTau_continuous')
+(ProverActor pid=2095583) 2024-09-22 19:42:06.359 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378005
+3.840896359
+(ProverActor pid=2095583) 2024-09-22 19:42:06.360 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 377945
+3.858963007
+(ProverActor pid=2095583) 2024-09-22 19:42:06.360 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.98
+23858728632
+(ProverActor pid=2095583) 2024-09-22 19:42:06.360 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095583) 2024-09-22 19:42:06.363 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095583) 2024-09-22 19:42:26.910 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='iter_multiDist_chainRule'), status=<Status.OPEN: 'Open'>, proof
+=None, actor_time=257.4825378507376, environment_time=339.01111144339666, total_time=600.985596450977, num_total_nodes=
+2186, num_searched_nodes=67)
+(ProverActor pid=2095583) 2024-09-22 19:42:26.916 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MultiTauFunctional.lean'), full_name='multiTau_min_exists')
+(ProverActor pid=2094726) 2024-09-22 19:43:10.814 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094726) 2024-09-22 19:43:26.936 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='ent_of_sum_le_ent_of_sum'), status=<Status.OPEN: 'Open'>, proof
+=None, actor_time=364.2893970152363, environment_time=234.61895385291427, total_time=600.0945290359668, num_total_nodes
+=3092, num_searched_nodes=111)
+(ProverActor pid=2095403) 2024-09-22 19:51:45.632 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378063
+3.113171092
+(ProverActor pid=2095403) 2024-09-22 19:51:45.632 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378003
+3.116843702
+(ProverActor pid=2095403) 2024-09-22 19:51:45.632 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+67516199686
+(ProverActor pid=2095403) 2024-09-22 19:51:45.632 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095403) 2024-09-22 19:51:45.632 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095403) 2024-09-22 19:51:53.425 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='condRho_minus_le'), status=<Status.OPEN: 'Open'>, proof=None, a
+ctor_time=311.06691000936553, environment_time=288.76150950044394, total_time=600.9970309971832, num_total_nodes=3685,
+num_searched_nodes=103)
+(ProverActor pid=2094905) 2024-09-22 19:52:35.227 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378068
+2.708371576
+(ProverActor pid=2094905) 2024-09-22 19:52:35.227 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378008
+2.713196035
+(ProverActor pid=2094905) 2024-09-22 19:52:35.227 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+56154520623
+(ProverActor pid=2094905) 2024-09-22 19:52:35.227 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094905) 2024-09-22 19:52:35.227 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094905) 2024-09-22 19:52:42.646 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MultiTauFunctional.lean'), full_name='multiTau_continuous'), status=<Status.OPEN: 'Open'>, proof
+=None, actor_time=356.569467111025, environment_time=242.8989743925631, total_time=600.9958521770313, num_total_nodes=5
+197, num_searched_nodes=104)
+(ProverActor pid=2095583) 2024-09-22 19:53:22.680 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378073
+0.161347737
+(ProverActor pid=2095583) 2024-09-22 19:53:22.680 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378013
+0.165399891
+(ProverActor pid=2095583) 2024-09-22 19:53:22.680 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+64365572669
+(ProverActor pid=2095583) 2024-09-22 19:53:22.680 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095583) 2024-09-22 19:53:22.680 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+2024-09-22 19:53:28.886 | INFO     | __main__:process_theorem_batch:958 - No proof found for cond_multiDist_chainRule
+2024-09-22 19:53:28.886 | INFO     | __main__:process_theorem_batch:958 - No proof found for rho_plus_of_sum
+2024-09-22 19:53:28.887 | INFO     | __main__:process_theorem_batch:958 - No proof found for dist_of_min_eq_zero
+2024-09-22 19:53:28.887 | INFO     | __main__:process_theorem_batch:958 - No proof found for multiDist_nonneg
+2024-09-22 19:53:28.887 | INFO     | __main__:process_theorem_batch:958 - No proof found for dist_add_dist_eq
+2024-09-22 19:53:28.887 | INFO     | __main__:process_theorem_batch:958 - No proof found for multiDist_indep
+2024-09-22 19:53:28.887 | INFO     | __main__:process_theorem_batch:958 - No proof found for cor_multiDist_chainRule
+2024-09-22 19:53:28.887 | INFO     | __main__:process_theorem_batch:958 - No proof found for iter_multiDist_chainRule
+2024-09-22 19:53:28.887 | INFO     | __main__:process_theorem_batch:958 - No proof found for ent_of_sum_le_ent_of_sum
+2024-09-22 19:53:28.887 | INFO     | __main__:process_theorem_batch:958 - No proof found for condRho_minus_le
+2024-09-22 19:53:28.887 | INFO     | __main__:process_theorem_batch:958 - No proof found for multiTau_continuous
+2024-09-22 19:53:28.887 | INFO     | __main__:process_theorem_batch:958 - No proof found for multiTau_min_exists
+(ProverActor pid=2095583) 2024-09-22 19:53:28.884 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MultiTauFunctional.lean'), full_name='multiTau_min_exists'), status=<Status.OPEN: 'Open'>, proof
+=None, actor_time=265.3873054301366, environment_time=334.2505034399219, total_time=600.9967225841247, num_total_nodes=
+2118, num_searched_nodes=77)
+^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B2024-09-22 19:56:58.315 | INFO     | __main__:save_progress:967 - S
+aving encountered theorems...
+Processing theorems from teorth/pfr:  32%|█████████                   | 12/37 [38:35<1:20:24, 192.98s/theorem]2024-09-2
+2 19:56:58.318 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for rho_of_translate
+2024-09-22 19:56:58.318 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (58, 1)
+2024-09-22 19:56:58.318 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for dist_le_of_sum_zero
+2024-09-22 19:56:58.318 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (146, 1)
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for iter_multiDist_chainR
+ule'
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (982, 1)
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for rho_continuous
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (62, 1)
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for multidist_eq_zero
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (849, 1)
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for condMultiDist_eq
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (865, 1)
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for condRho_of_translate
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (89, 1)
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for multidist_ruzsa_IV
+2024-09-22 19:56:58.319 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (844, 1)
+2024-09-22 19:56:58.320 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for multidist_ruzsa_II
+2024-09-22 19:56:58.320 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (833, 1)
+2024-09-22 19:56:58.320 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for multidist_ruzsa_III
+2024-09-22 19:56:58.320 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (838, 1)
+2024-09-22 19:56:58.320 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for condRho_le
+2024-09-22 19:56:58.320 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (101, 1)
+2024-09-22 19:56:58.320 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for condRho_sum_le'
+2024-09-22 19:56:58.320 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (165, 1)
+2024-09-22 19:56:58.320 | INFO     | prover.proof_search_abl2:search_unordered:514 - Distributed
+(ProverActor pid=2094726) 2024-09-22 19:56:58.327 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='rho_continuous')
+(ProverActor pid=2094905) 2024-09-22 19:56:58.325 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='dist_le_of_sum_zero')
+(ProverActor pid=2095403) 2024-09-22 19:56:58.326 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name="iter_multiDist_chainRule'")
+(ProverActor pid=2095583) 2024-09-22 19:56:58.324 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='rho_of_translate')
+(ProverActor pid=2094905) 2024-09-22 19:58:51.954 | INFO     | prover.proof_search_abl2:_best_first_search:143 - Ran ou
+t of nodes to search.
+(ProverActor pid=2094905) 2024-09-22 19:59:05.772 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='dist_le_of_sum_zero'), status=<Status.OPEN: 'Open'>, proof=None
+, actor_time=32.11140091205016, environment_time=27.639642159920186, total_time=60.76973812421784, num_total_nodes=344,
+ num_searched_nodes=12)
+(ProverActor pid=2094905) 2024-09-22 19:59:05.777 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='multidist_eq_zero')
+(ProverActor pid=2094726) 2024-09-22 20:07:47.276 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378159
+4.75757086
+(ProverActor pid=2094726) 2024-09-22 20:07:47.276 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378099
+4.761558434
+(ProverActor pid=2094726) 2024-09-22 20:07:47.276 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+64605779387
+(ProverActor pid=2094726) 2024-09-22 20:07:47.276 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094726) 2024-09-22 20:07:47.278 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094726) 2024-09-22 20:07:56.659 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='rho_continuous'), status=<Status.OPEN: 'Open'>, proof=None, act
+or_time=296.84660743083805, environment_time=301.10974761052057, total_time=600.9982496821322, num_total_nodes=4451, nu
+m_searched_nodes=106)
+(ProverActor pid=2094726) 2024-09-22 20:07:56.666 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='condMultiDist_eq')
+(ProverActor pid=2095583) 2024-09-22 20:08:17.221 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378162
+4.702501595
+(ProverActor pid=2095583) 2024-09-22 20:08:17.221 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378102
+4.70684311
+(ProverActor pid=2095583) 2024-09-22 20:08:17.221 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+60816460662
+(ProverActor pid=2095583) 2024-09-22 20:08:17.221 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095583) 2024-09-22 20:08:17.222 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095583) 2024-09-22 20:08:29.880 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='rho_of_translate'), status=<Status.OPEN: 'Open'>, proof=None, a
+ctor_time=117.23004512349144, environment_time=108.90836665034294, total_time=600.9964164639823, num_total_nodes=1276,
+num_searched_nodes=49)
+(ProverActor pid=2095583) 2024-09-22 20:08:29.886 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='condRho_of_translate')
+(ProverActor pid=2095403) 2024-09-22 20:08:37.641 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378164
+5.122699338
+(ProverActor pid=2095403) 2024-09-22 20:08:37.641 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378104
+5.140474757
+(ProverActor pid=2095403) 2024-09-22 20:08:37.641 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.98
+26473109424
+(ProverActor pid=2095403) 2024-09-22 20:08:37.642 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095403) 2024-09-22 20:08:37.642 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095403) 2024-09-22 20:08:46.655 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name="iter_multiDist_chainRule'"), status=<Status.OPEN: 'Open'>, proo
+f=None, actor_time=468.44172176206484, environment_time=127.21949515165761, total_time=600.9833181980066, num_total_nod
+es=3960, num_searched_nodes=125)
+(ProverActor pid=2095403) 2024-09-22 20:08:46.661 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='multidist_ruzsa_IV')
+(ProverActor pid=2094726) 2024-09-22 20:10:24.333 | INFO     | prover.proof_search_abl2:_best_first_search:143 - Ran ou
+t of nodes to search.
+(ProverActor pid=2094726) 2024-09-22 20:10:36.914 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='condMultiDist_eq'), status=<Status.OPEN: 'Open'>, proof=None, a
+ctor_time=23.600037303753197, environment_time=32.76180993625894, total_time=57.3721810830757, num_total_nodes=186, num
+_searched_nodes=6)
+(ProverActor pid=2094726) 2024-09-22 20:10:36.920 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='multidist_ruzsa_II')
+(ProverActor pid=2094905) 2024-09-22 20:10:51.748 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378177
+9.229192927
+(ProverActor pid=2094905) 2024-09-22 20:10:51.748 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378117
+9.247700949
+(ProverActor pid=2094905) 2024-09-22 20:10:51.748 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.98
+19908109494
+(ProverActor pid=2094905) 2024-09-22 20:10:51.748 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094905) 2024-09-22 20:10:51.748 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094905) 2024-09-22 20:11:11.000 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multidist_eq_zero'), status=<Status.OPEN: 'Open'>, proof=None,
+actor_time=373.5906784259714, environment_time=224.6442363904789, total_time=600.9822695967741, num_total_nodes=1575, n
+um_searched_nodes=96)
+(ProverActor pid=2094905) 2024-09-22 20:11:11.006 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='multidist_ruzsa_III')
+(ProverActor pid=2095583) 2024-09-22 20:19:17.943 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378228
+5.424208704
+(ProverActor pid=2095583) 2024-09-22 20:19:17.943 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378168
+5.42822773
+(ProverActor pid=2095583) 2024-09-22 20:19:17.943 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+63723029941
+(ProverActor pid=2095583) 2024-09-22 20:19:17.943 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095583) 2024-09-22 20:19:17.943 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095583) 2024-09-22 20:19:31.026 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='condRho_of_translate'), status=<Status.OPEN: 'Open'>, proof=Non
+e, actor_time=16.38991240086034, environment_time=410.54121555713937, total_time=600.9965905491263, num_total_nodes=185
+, num_searched_nodes=6)
+(ProverActor pid=2095583) 2024-09-22 20:19:31.033 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='condRho_le')
+(ProverActor pid=2095403) 2024-09-22 20:20:35.773 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378236
+3.254724539
+(ProverActor pid=2095403) 2024-09-22 20:20:35.773 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378176
+3.276542441
+(ProverActor pid=2095403) 2024-09-22 20:20:35.774 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.97
+86261292174
+(ProverActor pid=2095403) 2024-09-22 20:20:35.774 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095403) 2024-09-22 20:20:35.774 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095403) 2024-09-22 20:20:49.413 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multidist_ruzsa_IV'), status=<Status.OPEN: 'Open'>, proof=None,
+ actor_time=373.07243903400376, environment_time=226.70885506970808, total_time=600.9788278541528, num_total_nodes=1645
+, num_searched_nodes=100)
+(ProverActor pid=2095403) 2024-09-22 20:20:49.418 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name="condRho_sum_le'")
+(ProverActor pid=2094726) 2024-09-22 20:22:38.257 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378248
+5.739010035
+(ProverActor pid=2094726) 2024-09-22 20:22:38.258 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378188
+5.763173527
+(ProverActor pid=2094726) 2024-09-22 20:22:38.258 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.97
+6509984117
+(ProverActor pid=2094726) 2024-09-22 20:22:38.258 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094726) 2024-09-22 20:22:38.258 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094726) 2024-09-22 20:22:51.494 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multidist_ruzsa_II'), status=<Status.OPEN: 'Open'>, proof=None,
+ actor_time=372.3571687359363, environment_time=225.8726127394475, total_time=600.9767932007089, num_total_nodes=1591,
+num_searched_nodes=97)
+(ProverActor pid=2094905) 2024-09-22 20:22:57.073 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378250
+4.554222138
+(ProverActor pid=2094905) 2024-09-22 20:22:57.073 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378190
+4.572871766
+(ProverActor pid=2094905) 2024-09-22 20:22:57.073 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.98
+17562908866
+(ProverActor pid=2094905) 2024-09-22 20:22:57.073 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094905) 2024-09-22 20:22:57.074 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094905) 2024-09-22 20:23:08.013 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multidist_ruzsa_III'), status=<Status.OPEN: 'Open'>, proof=None
+, actor_time=371.58189972583205, environment_time=227.14893245417625, total_time=600.983109083958, num_total_nodes=1647
+, num_searched_nodes=95)
+(ProverActor pid=2095583) 2024-09-22 20:30:19.619 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378294
+7.100375309
+(ProverActor pid=2095583) 2024-09-22 20:30:19.619 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378234
+7.106494574
+(ProverActor pid=2095583) 2024-09-22 20:30:19.619 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+42158730701
+(ProverActor pid=2095583) 2024-09-22 20:30:19.619 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095583) 2024-09-22 20:30:19.621 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095583) 2024-09-22 20:30:25.767 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='condRho_le'), status=<Status.OPEN: 'Open'>, proof=None, actor_t
+ime=348.9248758815229, environment_time=249.29037251509726, total_time=600.9959721062332, num_total_nodes=3724, num_sea
+rched_nodes=115)
+(ProverActor pid=2095403) 2024-09-22 20:31:42.996 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378303
+0.478108228
+(ProverActor pid=2095403) 2024-09-22 20:31:42.997 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378243
+0.493632444
+(ProverActor pid=2095403) 2024-09-22 20:31:42.997 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.98
+48228329793
+(ProverActor pid=2095403) 2024-09-22 20:31:42.997 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095403) 2024-09-22 20:31:42.997 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+2024-09-22 20:31:48.727 | INFO     | __main__:process_theorem_batch:958 - No proof found for dist_le_of_sum_zero
+2024-09-22 20:31:48.727 | INFO     | __main__:process_theorem_batch:958 - No proof found for rho_continuous
+2024-09-22 20:31:48.727 | INFO     | __main__:process_theorem_batch:958 - No proof found for rho_of_translate
+2024-09-22 20:31:48.727 | INFO     | __main__:process_theorem_batch:958 - No proof found for iter_multiDist_chainRule'
+2024-09-22 20:31:48.727 | INFO     | __main__:process_theorem_batch:958 - No proof found for condMultiDist_eq
+2024-09-22 20:31:48.727 | INFO     | __main__:process_theorem_batch:958 - No proof found for multidist_eq_zero
+2024-09-22 20:31:48.727 | INFO     | __main__:process_theorem_batch:958 - No proof found for condRho_of_translate
+2024-09-22 20:31:48.727 | INFO     | __main__:process_theorem_batch:958 - No proof found for multidist_ruzsa_IV
+2024-09-22 20:31:48.727 | INFO     | __main__:process_theorem_batch:958 - No proof found for multidist_ruzsa_II
+2024-09-22 20:31:48.728 | INFO     | __main__:process_theorem_batch:958 - No proof found for multidist_ruzsa_III
+2024-09-22 20:31:48.728 | INFO     | __main__:process_theorem_batch:958 - No proof found for condRho_le
+2024-09-22 20:31:48.728 | INFO     | __main__:process_theorem_batch:958 - No proof found for condRho_sum_le'
+(ProverActor pid=2095403) 2024-09-22 20:31:48.724 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name="condRho_sum_le'"), status=<Status.OPEN: 'Open'>, proof=None, ac
+tor_time=398.8883223645389, environment_time=198.3081847280264, total_time=600.985306203831, num_total_nodes=3195, num_
+searched_nodes=121)
+2024-09-22 20:33:22.658 | INFO     | __main__:save_progress:967 - Saving encountered theorems...
+Processing theorems from teorth/pfr:  65%|██████████████████▏         | 24/37 [1:15:00<40:24, 186.54s/theorem]2024-09-2
+2 20:33:22.661 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for condRho_of_sum_le
+2024-09-22 20:33:22.661 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (111, 1)
+2024-09-22 20:33:22.661 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for rho_of_sum
+2024-09-22 20:33:22.661 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (75, 1)
+2024-09-22 20:33:22.661 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for multiDist_chainRule
+2024-09-22 20:33:22.661 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (958, 1)
+2024-09-22 20:33:22.662 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for rho_of_subgroup
+2024-09-22 20:33:22.662 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (55, 1)
+2024-09-22 20:33:22.662 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for multidist_ruzsa_I
+2024-09-22 20:33:22.662 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (828, 1)
+2024-09-22 20:33:22.662 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for condRho_plus_le
+2024-09-22 20:33:22.662 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (98, 1)
+2024-09-22 20:33:22.662 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for I_two_le
+2024-09-22 20:33:22.662 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (143, 1)
+2024-09-22 20:33:22.662 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for rho_minus_of_sum
+2024-09-22 20:33:22.662 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (66, 1)
+2024-09-22 20:33:22.662 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for condRho_of_injective
+2024-09-22 20:33:22.663 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (92, 1)
+2024-09-22 20:33:22.663 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for rho_of_sum_le
+2024-09-22 20:33:22.663 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (106, 1)
+2024-09-22 20:33:22.663 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for phi_min_exists
+2024-09-22 20:33:22.663 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (128, 1)
+2024-09-22 20:33:22.663 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for condRho_sum_le
+2024-09-22 20:33:22.663 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (156, 1)
+2024-09-22 20:33:22.663 | INFO     | prover.proof_search_abl2:search_unordered:514 - Distributed
+(ProverActor pid=2094726) 2024-09-22 20:33:22.670 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='rho_of_subgroup')
+(ProverActor pid=2094905) 2024-09-22 20:33:22.669 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_chainRule')
+(ProverActor pid=2095403) 2024-09-22 20:33:22.667 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='condRho_of_sum_le')
+(ProverActor pid=2095583) 2024-09-22 20:33:22.668 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='rho_of_sum')
+(ProverActor pid=2094726) 2024-09-22 20:43:59.484 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378376
+6.966069869
+(ProverActor pid=2094726) 2024-09-22 20:43:59.485 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378316
+6.970390573
+(ProverActor pid=2094726) 2024-09-22 20:43:59.485 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+61060266942
+(ProverActor pid=2094726) 2024-09-22 20:43:59.485 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094726) 2024-09-22 20:43:59.485 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095583) 2024-09-22 20:44:13.968 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='rho_of_sum'), status=<Status.OPEN: 'Open'>, proof=None, actor_t
+ime=14.217533458024263, environment_time=9.254901525564492, total_time=600.9960277741775, num_total_nodes=188, num_sear
+ched_nodes=4)
+(ProverActor pid=2095583) 2024-09-22 20:44:13.973 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/MoreRuzsaDist.lean'), full_name='multidist_ruzsa_I')
+(ProverActor pid=2095583) 2024-09-22 20:44:00.923 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600 [r
+epeated 8x across cluster]
+(ProverActor pid=2095583) 2024-09-22 20:44:00.923 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions). [repeated 2x across cluster]
+(ProverActor pid=2095403) 2024-09-22 20:44:14.023 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='condRho_of_sum_le'), status=<Status.OPEN: 'Open'>, proof=None,
+actor_time=52.97893823031336, environment_time=544.4933288614266, total_time=600.9795588441193, num_total_nodes=589, nu
+m_searched_nodes=16)
+(ProverActor pid=2095403) 2024-09-22 20:44:14.028 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='condRho_plus_le')
+(ProverActor pid=2094726) 2024-09-22 20:44:19.071 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='rho_of_subgroup'), status=<Status.OPEN: 'Open'>, proof=None, ac
+tor_time=290.1944102970883, environment_time=309.629766643513, total_time=600.9963272418827, num_total_nodes=3119, num_
+searched_nodes=97)
+(ProverActor pid=2094726) 2024-09-22 20:44:19.076 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='I_two_le')
+(ProverActor pid=2094905) 2024-09-22 20:44:54.254 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378382
+1.735175877
+(ProverActor pid=2094905) 2024-09-22 20:44:54.254 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378322
+1.759313915
+(ProverActor pid=2094905) 2024-09-22 20:44:54.254 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.97
+63161628507
+(ProverActor pid=2094905) 2024-09-22 20:44:54.254 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094905) 2024-09-22 20:44:54.254 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095403) 2024-09-22 20:44:55.298 | INFO     | prover.proof_search_abl2:_best_first_search:167 - Failed
+ early!
+(ProverActor pid=2094905) 2024-09-22 20:45:09.021 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_chainRule'), status=<Status.OPEN: 'Open'>, proof=None
+, actor_time=457.1802442460321, environment_time=142.59386738948524, total_time=600.9765680888668, num_total_nodes=4010
+, num_searched_nodes=110)
+(ProverActor pid=2094905) 2024-09-22 20:45:09.026 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='rho_minus_of_sum')
+(ProverActor pid=2095403) 2024-09-22 20:45:25.710 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='condRho_plus_le'), status=<Status.FAILED: 'Failed'>, proof=None
+, actor_time=1.7538262689486146, environment_time=0.1525803986005485, total_time=2.907446901779622, num_total_nodes=24,
+ num_searched_nodes=1)
+(ProverActor pid=2095403) 2024-09-22 20:45:25.716 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='condRho_of_injective')
+(ProverActor pid=2094726) 2024-09-22 20:54:57.846 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378442
+5.327772176
+(ProverActor pid=2094726) 2024-09-22 20:54:57.846 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378382
+5.331620839
+(ProverActor pid=2094726) 2024-09-22 20:54:57.847 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+66004579328
+(ProverActor pid=2094726) 2024-09-22 20:54:57.847 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094726) 2024-09-22 20:54:57.849 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094726) 2024-09-22 20:55:05.983 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='I_two_le'), status=<Status.OPEN: 'Open'>, proof=None, actor_tim
+e=164.56593075953424, environment_time=433.8274364694953, total_time=600.9986758381128, num_total_nodes=1696, num_searc
+hed_nodes=50)
+(ProverActor pid=2094726) 2024-09-22 20:55:05.988 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='rho_of_sum_le')
+(ProverActor pid=2095583) 2024-09-22 20:55:39.483 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378446
+6.964416977
+(ProverActor pid=2095583) 2024-09-22 20:55:39.483 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378386
+6.981493865
+(ProverActor pid=2095583) 2024-09-22 20:55:39.483 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.98
+33665830083
+(ProverActor pid=2095583) 2024-09-22 20:55:39.483 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095583) 2024-09-22 20:55:39.486 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095583) 2024-09-22 20:55:47.550 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multidist_ruzsa_I'), status=<Status.OPEN: 'Open'>, proof=None,
+actor_time=372.82596233533695, environment_time=225.19574956642464, total_time=600.985684629064, num_total_nodes=1648,
+num_searched_nodes=101)
+(ProverActor pid=2095583) 2024-09-22 20:55:47.557 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='phi_min_exists')
+(ProverActor pid=2094905) 2024-09-22 20:56:11.716 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378449
+9.197895472
+(ProverActor pid=2094905) 2024-09-22 20:56:11.717 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378389
+9.201655371
+(ProverActor pid=2094905) 2024-09-22 20:56:11.717 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+67945539393
+(ProverActor pid=2094905) 2024-09-22 20:56:11.717 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094905) 2024-09-22 20:56:11.717 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095403) 2024-09-22 20:56:26.272 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600 [r
+epeated 4x across cluster]
+(ProverActor pid=2095403) 2024-09-22 20:56:26.272 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094905) 2024-09-22 20:56:31.973 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='rho_minus_of_sum'), status=<Status.OPEN: 'Open'>, proof=None, a
+ctor_time=40.69404306914657, environment_time=119.61769071314484, total_time=600.9970729607157, num_total_nodes=361, nu
+m_searched_nodes=11)
+(ProverActor pid=2094905) 2024-09-22 20:56:31.979 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='condRho_sum_le')
+(ProverActor pid=2095403) 2024-09-22 20:56:43.962 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='condRho_of_injective'), status=<Status.OPEN: 'Open'>, proof=Non
+e, actor_time=517.25515451096, environment_time=82.52188469748944, total_time=600.9956131568179, num_total_nodes=3519,
+num_searched_nodes=151)
+(ProverActor pid=2094726) 2024-09-22 21:05:46.564 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378507
+4.045220973
+(ProverActor pid=2094726) 2024-09-22 21:05:46.564 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378447
+4.049316817
+(ProverActor pid=2094726) 2024-09-22 21:05:46.564 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+63075760752
+(ProverActor pid=2094726) 2024-09-22 21:05:46.564 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094726) 2024-09-22 21:05:46.564 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2094726) 2024-09-22 21:05:53.783 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='rho_of_sum_le'), status=<Status.OPEN: 'Open'>, proof=None, acto
+r_time=102.00916289305314, environment_time=480.3153129895218, total_time=600.9965117010288, num_total_nodes=1015, num_
+searched_nodes=32)
+(ProverActor pid=2095583) 2024-09-22 21:06:41.242 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378512
+8.723682324
+(ProverActor pid=2095583) 2024-09-22 21:06:41.242 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378452
+8.727571904
+(ProverActor pid=2095583) 2024-09-22 21:06:41.242 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+64718786068
+(ProverActor pid=2095583) 2024-09-22 21:06:41.242 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2095583) 2024-09-22 21:06:41.243 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+(ProverActor pid=2095583) 2024-09-22 21:06:48.542 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='phi_min_exists'), status=<Status.OPEN: 'Open'>, proof=None, act
+or_time=323.91810339782387, environment_time=275.11417676880956, total_time=600.9966690936126, num_total_nodes=2757, nu
+m_searched_nodes=101)
+(ProverActor pid=2094905) 2024-09-22 21:07:26.849 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378517
+4.331057305
+(ProverActor pid=2094905) 2024-09-22 21:07:26.850 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378457
+4.335012709
+(ProverActor pid=2094905) 2024-09-22 21:07:26.850 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+65183571912
+(ProverActor pid=2094905) 2024-09-22 21:07:26.850 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094905) 2024-09-22 21:07:26.850 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+2024-09-22 21:07:33.035 | INFO     | __main__:process_theorem_batch:958 - No proof found for rho_of_sum
+2024-09-22 21:07:33.035 | INFO     | __main__:process_theorem_batch:958 - No proof found for condRho_of_sum_le
+2024-09-22 21:07:33.035 | INFO     | __main__:process_theorem_batch:958 - No proof found for rho_of_subgroup
+2024-09-22 21:07:33.035 | INFO     | __main__:process_theorem_batch:958 - No proof found for multiDist_chainRule
+2024-09-22 21:07:33.035 | INFO     | __main__:process_theorem_batch:958 - No proof found for condRho_plus_le
+2024-09-22 21:07:33.035 | INFO     | __main__:process_theorem_batch:958 - No proof found for I_two_le
+2024-09-22 21:07:33.036 | INFO     | __main__:process_theorem_batch:958 - No proof found for multidist_ruzsa_I
+2024-09-22 21:07:33.036 | INFO     | __main__:process_theorem_batch:958 - No proof found for rho_minus_of_sum
+2024-09-22 21:07:33.036 | INFO     | __main__:process_theorem_batch:958 - No proof found for condRho_of_injective
+2024-09-22 21:07:33.036 | INFO     | __main__:process_theorem_batch:958 - No proof found for rho_of_sum_le
+2024-09-22 21:07:33.036 | INFO     | __main__:process_theorem_batch:958 - No proof found for phi_min_exists
+2024-09-22 21:07:33.036 | INFO     | __main__:process_theorem_batch:958 - No proof found for condRho_sum_le
+(ProverActor pid=2094905) 2024-09-22 21:07:33.032 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='condRho_sum_le'), status=<Status.OPEN: 'Open'>, proof=None, act
+or_time=420.8015869478695, environment_time=178.99657657230273, total_time=600.9968243651092, num_total_nodes=3108, num
+_searched_nodes=120)
+2024-09-22 21:08:57.767 | INFO     | __main__:save_progress:967 - Saving encountered theorems...
+Processing theorems from teorth/pfr:  97%|███████████████████████████▏| 36/37 [1:50:35<03:02, 182.60s/theorem]2024-09-2
+2 21:08:57.770 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for I_one_le
+2024-09-22 21:08:57.770 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (137, 1)
+Processing theorems from teorth/pfr: 100%|████████████████████████████| 37/37 [1:50:35<00:00, 179.33s/theorem]
+2024-09-22 21:08:57.770 | INFO     | prover.proof_search_abl2:search_unordered:514 - Distributed
+(ProverActor pid=2094905) 2024-09-22 21:08:57.773 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixP
+ath('PFR/RhoFunctional.lean'), full_name='I_one_le')
+(ProverActor pid=2094905) 2024-09-22 21:19:30.446 | INFO     | prover.proof_search_abl2:_best_first_search:149 - 378589
+7.927942849
+(ProverActor pid=2094905) 2024-09-22 21:19:30.447 | INFO     | prover.proof_search_abl2:_best_first_search:150 - 378529
+7.931955591
+(ProverActor pid=2094905) 2024-09-22 21:19:30.447 | INFO     | prover.proof_search_abl2:_best_first_search:151 - 599.99
+6420968324
+(ProverActor pid=2094905) 2024-09-22 21:19:30.447 | INFO     | prover.proof_search_abl2:_best_first_search:152 - 600
+(ProverActor pid=2094905) 2024-09-22 21:19:30.447 | INFO     | prover.proof_search_abl2:_best_first_search:163 - Hit th
+e resource limit (timeout or max_expansions).
+2024-09-22 21:19:36.115 | INFO     | __main__:process_theorem_batch:958 - No proof found for I_one_le
+(ProverActor pid=2094905) 2024-09-22 21:19:36.113 | INFO     | prover.proof_search_abl2:search:128 - SearchResult(theor
+em=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), fi
+le_path=PosixPath('PFR/RhoFunctional.lean'), full_name='I_one_le'), status=<Status.OPEN: 'Open'>, proof=None, actor_tim
+e=423.37728832289577, environment_time=176.37300732498989, total_time=600.9967114562169, num_total_nodes=5485, num_sear
+ched_nodes=167)
+2024-09-22 21:23:31.858 | INFO     | __main__:save_progress:967 - Saving encountered theorems...
+2024-09-22 21:23:31.861 | INFO     | __main__:prove_sorry_theorems:1063 - Finished attempting to prove sorry theorems
+2024-09-22 21:25:04.163 | INFO     | __main__:main:1823 - Finished searching for proofs of sorry theorems
+2024-09-22 21:25:04.164 | INFO     | __main__:main:1826 - Shutting down Ray after proving
+2024-09-22 21:25:06.485 | INFO     | __main__:main:1846 - Finished processing the repository
+2024-09-22 21:25:06.486 | INFO     | __main__:main:1848 - current epoch: 5
+2024-09-22 21:25:06.486 | INFO     | __main__:main:1519 - length of lean_git_repos: 9
+2024-09-22 21:25:06.486 | INFO     | __main__:main:1520 - i: 1
+2024-09-22 21:25:06.486 | INFO     | __main__:main:1526 - Main process
+2024-09-22 21:25:06.486 | INFO     | __main__:main:1527 - Using lambda = 0.0
+2024-09-22 21:25:06.486 | INFO     | __main__:main:1528 - Processing https://github.com/lecopivo/SciLean
+2024-09-22 21:25:06.486 | INFO     | __main__:main:1535 - Adding repo to repos_for_merged_dataset
+2024-09-22 21:25:06.487 | INFO     | dynamic_database:generate_merged_dataset:415 - Merging selected repositories in th
+e database:
+2024-09-22 21:25:06.487 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/lecopivo/Sci
+Lean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-22 21:25:57.535 | WARNING  | dynamic_database:safe_remove_dir_path:377 - /data/yingzi_ma/lean_project/datasets_
+PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744 already exists.
+Removing it now.
+2024-09-22 21:26:15.300 | INFO     | dynamic_database:generate_merged_dataset:439 - Exported proofs to /data/yingzi_ma/
+lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744
+2024-09-22 21:26:15.720 | INFO     | dynamic_database:generate_merged_dataset:442 - Merged and exported corpus to /data
+/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6
+eb9c916e62655744
+2024-09-22 21:26:15.729 | INFO     | dynamic_database:generate_merged_dataset:445 - Exported traced files to /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c9
+16e62655744
+2024-09-22 21:26:15.731 | INFO     | dynamic_database:generate_merged_dataset:448 - Exported metadata to /data/yingzi_m
+a/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744
+2024-09-22 21:26:15.744 | INFO     | __main__:main:1548 - All GPUs
+2024-09-22 21:26:15.744 | INFO     | __main__:main:1784 - Starting the prover
+2024-09-22 21:26:15.744 | INFO     | prover.proof_search_abl2:__init__:407 - Inside __init__
+2024-09-22 21:26:15.744 | INFO     | prover.proof_search_abl2:__init__:412 - ckpt_path is not None
+2024-09-22 21:26:15.744 | INFO     | prover.proof_search_abl2:__init__:427 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You ar
+e using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implic
+itly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https:
+//github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default
+ value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling
+. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case wh
+ere you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this exper
+imental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files perma
+nently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-22 21:26:16.430 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_pro
+ject/checkpoints_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lam
+bda_0.1_epoch=4-Recall@10_val=63.49.ckpt
+2024-09-22 21:26:16.430 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_pro
+ject/checkpoints_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lam
+bda_0.1_epoch=4-Recall@10_val=63.49.ckpt
+2024-09-22 21:26:20.200 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys
+that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.enco
+der.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encode
+r.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'retriev
+er.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.re
+lative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.encode
+r.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight',
+'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.layer_
+norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.encoder.e
+ncoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriev
+er.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDen
+se.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block
+.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.e
+ncoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 're
+triever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.layer_norm.
+weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.lay
+er.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retriever.enco
+der.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 're
+triever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttenti
+on.v.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.la
+yer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.en
+coder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight'
+, 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttenti
+on.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.la
+yer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retriever.encoder.e
+ncoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'ret
+riever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseRel
+uDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.la
+yer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.e
+ncoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 're
+triever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.w
+i_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.5
+.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.e
+ncoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 're
+triever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttenti
+on.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1
+.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encode
+r.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttenti
+on.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.la
+yer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder.encode
+r.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight',
+'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_
+norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retriever.encoder.e
+ncoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriev
+er.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDen
+se.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block
+.8.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.e
+ncoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 're
+triever.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.
+weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.lay
+er.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.enco
+der.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'r
+etriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAtte
+ntion.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.
+10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.enco
+der.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo
+.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.S
+elfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder
+.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_
+0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.11
+.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.
+encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys
+that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'stat
+e_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-22 21:26:20.613 | INFO     | prover.proof_search_abl2:__init__:452 - Loaded model from /data/yingzi_ma/lean_pro
+ject/model_lightning.ckpt
+2024-09-22 21:26:20.614 | INFO     | prover.proof_search_abl2:__init__:453 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-22 21:26:20.614 | INFO     | prover.proof_search_abl2:__init__:456 - Loading indexed corpus from /data/yingzi_m
+a/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744/corpus.jsonl
+2024-09-22 21:26:20.614 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datase
+ts_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+2024-09-22 21:26:26.771 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-22 21:26:26.771 | INFO     | prover.proof_search_abl2:__init__:458 - Loaded indexed corpus from /data/yingzi_ma
+/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl2/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62
+655744/corpus.jsonl
+2024-09-22 21:26:26.771 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████████████████| 4054/4054 [05:31<00:00, 12.24it/s]
+2024-09-22 21:31:57.860 | INFO     | prover.proof_search_abl2:__init__:460 - Finished reindexing!
+2024-09-22 21:31:57.860 | INFO     | prover.proof_search_abl2:__init__:471 - Launching 4 workers with 4 GPUs.
+2024-09-22 21:32:02,084 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=2212996) [2024-09-22 21:32:43,600] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+(ProverActor pid=2212996) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: F
+utureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during un
+pickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future
+release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be execut
+ed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly
+ allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True`
+ for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues r
+elated to this experimental feature.
+(ProverActor pid=2212996)   return torch.load(io.BytesIO(b))
+(pid=2213351) [2024-09-22 21:32:53,457] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+(ProverActor pid=2213351) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: F
+utureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during un
+pickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future
+release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be execut
+ed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly
+ allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True`
+ for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues r
+elated to this experimental feature.
+(ProverActor pid=2213351)   return torch.load(io.BytesIO(b))
+(pid=2213548) [2024-09-22 21:33:05,976] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+(ProverActor pid=2213548) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: F
+utureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during un
+pickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future
+release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be execut
+ed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly
+ allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True`
+ for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues r
+elated to this experimental feature.
+(ProverActor pid=2213548)   return torch.load(io.BytesIO(b))
+2024-09-22 21:33:14.646 | INFO     | __main__:prove_sorry_theorems:1012 - Found 294 sorry theorems to prove
+Processing theorems from lecopivo/SciLean:   0%|                                          | 0/294 [00:00<?, ?theorem/s]
+2024-09-22 21:33:14.646 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for SciLean.Rand.add_as_f
+lip_E
+2024-09-22 21:33:14.647 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (61, 1)
+2024-09-22 21:33:14.647 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for SciLean.parametric_in
+verse_affine
+2024-09-22 21:33:14.647 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (116, 1)
+2024-09-22 21:33:14.647 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for SciLean.revDerivUpdat
+e.pi_rule
+2024-09-22 21:33:14.647 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (291, 1)
+2024-09-22 21:33:14.647 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for SciLean.Diffeomorphis
+m.id_rule
+2024-09-22 21:33:14.647 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (42, 1)
+2024-09-22 21:33:14.647 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for SciLean.CDifferentiab
+leAt.id_rule
+2024-09-22 21:33:14.648 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (36, 1)
+2024-09-22 21:33:14.648 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for Function.Bijective.HV
+Add.hVAdd.arg_a1.Bijective_rule_group
+2024-09-22 21:33:14.648 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (207, 1)
+2024-09-22 21:33:14.648 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for SciLean.Prod.snd.arg_
+self.CDifferentiable_rule
+2024-09-22 21:33:14.648 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (174, 1)
+2024-09-22 21:33:14.648 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for SciLean.HasSemiAdjoin
+t.Prod.snd.arg_self.HasSemiAdjoint_rule
+2024-09-22 21:33:14.648 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (216, 1)
+2024-09-22 21:33:14.648 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for SciLean.Inner.inner.a
+rg_a0a1.CDifferentiable_rule
+2024-09-22 21:33:14.648 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (387, 1)
+2024-09-22 21:33:14.649 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for Function.invFun.HSub.
+hSub.arg_a1.invFun_rule
+2024-09-22 21:33:14.649 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (168, 1)
+2024-09-22 21:33:14.649 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for SciLean.fwdDeriv.Inde
+xType.sum.arg_f.fwdDeriv_rule
+2024-09-22 21:33:14.649 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (381, 1)
+2024-09-22 21:33:14.649 | INFO     | __main__:prove_sorry_theorems:1035 - Searching for proof for SciLean.HAdd.hAdd.arg
+_a1.cderiv_rule
+2024-09-22 21:33:14.649 | INFO     | __main__:prove_sorry_theorems:1036 - Position: (283, 1)
+2024-09-22 21:33:14.649 | INFO     | prover.proof_search_abl2:search_unordered:514 - Distributed
+(ProverActor pid=2212996) 2024-09-22 21:33:14.660 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/lecopivo/SciLean', commit='22d53b2f4e3db2a172e71da6eb9c916e62655744'), file_path=
+PosixPath('SciLean/Core/FunctionPropositions/Diffeomorphism.lean'), full_name='SciLean.Diffeomorphism.id_rule')
+(ProverActor pid=2213351) 2024-09-22 21:33:14.659 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/lecopivo/SciLean', commit='22d53b2f4e3db2a172e71da6eb9c916e62655744'), file_path=
+PosixPath('SciLean/Core/FunctionTransformations/RevDeriv.lean'), full_name='SciLean.revDerivUpdate.pi_rule')
+(ProverActor pid=2213548) 2024-09-22 21:33:19.802 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/lecopivo/SciLean', commit='22d53b2f4e3db2a172e71da6eb9c916e62655744'), file_path=
+PosixPath('SciLean/Core/Integral/PlaneDecomposition.lean'), full_name='SciLean.parametric_inverse_affine')
+(pid=2213728) [2024-09-22 21:33:22,232] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda
+ (auto detect)
+(ProverActor pid=2213728) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: F
+utureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during un
+pickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future
+release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be execut
+ed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly
+ allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True`
+ for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues r
+elated to this experimental feature.
+(ProverActor pid=2213728)   return torch.load(io.BytesIO(b))
+(ProverActor pid=2213728) 2024-09-22 21:33:35.195 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/lecopivo/SciLean', commit='22d53b2f4e3db2a172e71da6eb9c916e62655744'), file_path=
+PosixPath('SciLean/Core/Rand/Distributions/Flip.lean'), full_name='SciLean.Rand.add_as_flip_E')
+(ProverActor pid=2213548) 2024-09-22 21:34:15.646 | WARNING  | prover.proof_search_abl2:search:132 - EOF
+(ProverActor pid=2213548) 2024-09-22 21:34:15.652 | INFO     | prover.proof_search_abl2:search:81 - Proving Theorem(rep
+o=LeanGitRepo(url='https://github.com/lecopivo/SciLean', commit='22d53b2f4e3db2a172e71da6eb9c916e62655744'), file_path=
+PosixPath('SciLean/Core/FunctionPropositions/CDifferentiable.lean'), full_name='SciLean.CDifferentiableAt.id_rule')
+^Z^Z
+[5]+  Stopped                 bash run_code3_abl2.sh
+(base) yingzi_ma@compute-permanent-node-1021:~/lean_project/ReProver$

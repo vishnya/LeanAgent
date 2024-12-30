@@ -1,0 +1,1299 @@
+ed validation step: False
+2024-09-11 23:22:57.263 | INFO     | retrieval.model:validation_step:373 - Recall@1_val: 44.69696969696969
+2024-09-11 23:22:57.264 | INFO     | retrieval.model:validation_step:373 - Recall@2_val: 50.75757575757576
+2024-09-11 23:22:57.265 | INFO     | retrieval.model:validation_step:373 - Recall@3_val: 59.84848484848485
+2024-09-11 23:22:57.265 | INFO     | retrieval.model:validation_step:373 - Recall@4_val: 66.28787878787878
+2024-09-11 23:22:57.265 | INFO     | retrieval.model:validation_step:373 - Recall@5_val: 68.18181818181817
+2024-09-11 23:22:57.266 | INFO     | retrieval.model:validation_step:373 - Recall@6_val: 68.18181818181817
+2024-09-11 23:22:57.266 | INFO     | retrieval.model:validation_step:373 - Recall@7_val: 69.31818181818181
+2024-09-11 23:22:57.267 | INFO     | retrieval.model:validation_step:373 - Recall@8_val: 74.05303030303028
+2024-09-11 23:22:57.267 | INFO     | retrieval.model:validation_step:373 - Recall@9_val: 74.05303030303028
+2024-09-11 23:22:57.267 | INFO     | retrieval.model:validation_step:373 - Recall@10_val: 77.4621212121212
+2024-09-11 23:22:57.267 | INFO     | retrieval.model:validation_step:373 - Recall@11_val: 80.49242424242424
+2024-09-11 23:22:57.268 | INFO     | retrieval.model:validation_step:373 - Recall@12_val: 80.49242424242424
+2024-09-11 23:22:57.268 | INFO     | retrieval.model:validation_step:373 - Recall@13_val: 84.6590909090909
+2024-09-11 23:22:57.268 | INFO     | retrieval.model:validation_step:373 - Recall@14_val: 85.79545454545455
+2024-09-11 23:22:57.269 | INFO     | retrieval.model:validation_step:373 - Recall@15_val: 87.31060606060606
+2024-09-11 23:22:57.269 | INFO     | retrieval.model:validation_step:373 - Recall@16_val: 87.31060606060606
+2024-09-11 23:22:57.269 | INFO     | retrieval.model:validation_step:373 - Recall@17_val: 87.31060606060606
+2024-09-11 23:22:57.270 | INFO     | retrieval.model:validation_step:373 - Recall@18_val: 87.31060606060606
+2024-09-11 23:22:57.270 | INFO     | retrieval.model:validation_step:373 - Recall@19_val: 87.31060606060606
+2024-09-11 23:22:57.270 | INFO     | retrieval.model:validation_step:373 - Recall@20_val: 88.06818181818183
+2024-09-11 23:22:57.270 | INFO     | retrieval.model:validation_step:373 - Recall@21_val: 88.63636363636364
+2024-09-11 23:22:57.271 | INFO     | retrieval.model:validation_step:373 - Recall@22_val: 88.63636363636364
+2024-09-11 23:22:57.271 | INFO     | retrieval.model:validation_step:373 - Recall@23_val: 88.63636363636364
+2024-09-11 23:22:57.271 | INFO     | retrieval.model:validation_step:373 - Recall@24_val: 89.39393939393938
+2024-09-11 23:22:57.272 | INFO     | retrieval.model:validation_step:373 - Recall@25_val: 89.39393939393938
+2024-09-11 23:22:57.272 | INFO     | retrieval.model:validation_step:373 - Recall@26_val: 89.39393939393938
+2024-09-11 23:22:57.272 | INFO     | retrieval.model:validation_step:373 - Recall@27_val: 89.39393939393938
+2024-09-11 23:22:57.273 | INFO     | retrieval.model:validation_step:373 - Recall@28_val: 90.53030303030302
+2024-09-11 23:22:57.273 | INFO     | retrieval.model:validation_step:373 - Recall@29_val: 90.53030303030302
+2024-09-11 23:22:57.273 | INFO     | retrieval.model:validation_step:373 - Recall@30_val: 92.80303030303028
+2024-09-11 23:22:57.274 | INFO     | retrieval.model:validation_step:373 - Recall@31_val: 92.80303030303028
+2024-09-11 23:22:57.274 | INFO     | retrieval.model:validation_step:373 - Recall@32_val: 92.80303030303028
+2024-09-11 23:22:57.274 | INFO     | retrieval.model:validation_step:373 - Recall@33_val: 93.56060606060606
+2024-09-11 23:22:57.274 | INFO     | retrieval.model:validation_step:373 - Recall@34_val: 93.56060606060606
+2024-09-11 23:22:57.275 | INFO     | retrieval.model:validation_step:373 - Recall@35_val: 93.56060606060606
+2024-09-11 23:22:57.275 | INFO     | retrieval.model:validation_step:373 - Recall@36_val: 93.56060606060606
+2024-09-11 23:22:57.275 | INFO     | retrieval.model:validation_step:373 - Recall@37_val: 93.56060606060606
+2024-09-11 23:22:57.276 | INFO     | retrieval.model:validation_step:373 - Recall@38_val: 93.56060606060606
+2024-09-11 23:22:57.276 | INFO     | retrieval.model:validation_step:373 - Recall@39_val: 93.56060606060606
+2024-09-11 23:22:57.276 | INFO     | retrieval.model:validation_step:373 - Recall@40_val: 93.56060606060606
+2024-09-11 23:22:57.277 | INFO     | retrieval.model:validation_step:373 - Recall@41_val: 93.56060606060606
+2024-09-11 23:22:57.277 | INFO     | retrieval.model:validation_step:373 - Recall@42_val: 93.56060606060606
+2024-09-11 23:22:57.277 | INFO     | retrieval.model:validation_step:373 - Recall@43_val: 93.56060606060606
+2024-09-11 23:22:57.278 | INFO     | retrieval.model:validation_step:373 - Recall@44_val: 93.56060606060606
+2024-09-11 23:22:57.278 | INFO     | retrieval.model:validation_step:373 - Recall@45_val: 93.56060606060606
+2024-09-11 23:22:57.278 | INFO     | retrieval.model:validation_step:373 - Recall@46_val: 93.56060606060606
+2024-09-11 23:22:57.279 | INFO     | retrieval.model:validation_step:373 - Recall@47_val: 93.56060606060606
+2024-09-11 23:22:57.279 | INFO     | retrieval.model:validation_step:373 - Recall@48_val: 94.12878787878788
+2024-09-11 23:22:57.279 | INFO     | retrieval.model:validation_step:373 - Recall@49_val: 94.12878787878788
+2024-09-11 23:22:57.279 | INFO     | retrieval.model:validation_step:373 - Recall@50_val: 94.12878787878788
+2024-09-11 23:22:57.280 | INFO     | retrieval.model:validation_step:373 - Recall@51_val: 94.12878787878788
+2024-09-11 23:22:57.280 | INFO     | retrieval.model:validation_step:373 - Recall@52_val: 94.12878787878788
+2024-09-11 23:22:57.280 | INFO     | retrieval.model:validation_step:373 - Recall@53_val: 94.12878787878788
+2024-09-11 23:22:57.281 | INFO     | retrieval.model:validation_step:373 - Recall@54_val: 94.12878787878788
+2024-09-11 23:22:57.281 | INFO     | retrieval.model:validation_step:373 - Recall@55_val: 94.12878787878788
+2024-09-11 23:22:57.281 | INFO     | retrieval.model:validation_step:373 - Recall@56_val: 94.12878787878788
+2024-09-11 23:22:57.281 | INFO     | retrieval.model:validation_step:373 - Recall@57_val: 94.12878787878788
+2024-09-11 23:22:57.282 | INFO     | retrieval.model:validation_step:373 - Recall@58_val: 94.12878787878788
+2024-09-11 23:22:57.282 | INFO     | retrieval.model:validation_step:373 - Recall@59_val: 94.12878787878788
+2024-09-11 23:22:57.282 | INFO     | retrieval.model:validation_step:373 - Recall@60_val: 94.12878787878788
+2024-09-11 23:22:57.283 | INFO     | retrieval.model:validation_step:373 - Recall@61_val: 94.12878787878788
+2024-09-11 23:22:57.283 | INFO     | retrieval.model:validation_step:373 - Recall@62_val: 94.12878787878788
+2024-09-11 23:22:57.283 | INFO     | retrieval.model:validation_step:373 - Recall@63_val: 94.12878787878788
+2024-09-11 23:22:57.283 | INFO     | retrieval.model:validation_step:373 - Recall@64_val: 94.12878787878788
+2024-09-11 23:22:57.284 | INFO     | retrieval.model:validation_step:373 - Recall@65_val: 94.12878787878788
+2024-09-11 23:22:57.284 | INFO     | retrieval.model:validation_step:373 - Recall@66_val: 94.12878787878788
+2024-09-11 23:22:57.284 | INFO     | retrieval.model:validation_step:373 - Recall@67_val: 94.12878787878788
+2024-09-11 23:22:57.285 | INFO     | retrieval.model:validation_step:373 - Recall@68_val: 94.12878787878788
+2024-09-11 23:22:57.285 | INFO     | retrieval.model:validation_step:373 - Recall@69_val: 94.12878787878788
+2024-09-11 23:22:57.285 | INFO     | retrieval.model:validation_step:373 - Recall@70_val: 94.12878787878788
+2024-09-11 23:22:57.286 | INFO     | retrieval.model:validation_step:373 - Recall@71_val: 94.12878787878788
+2024-09-11 23:22:57.286 | INFO     | retrieval.model:validation_step:373 - Recall@72_val: 94.12878787878788
+2024-09-11 23:22:57.286 | INFO     | retrieval.model:validation_step:373 - Recall@73_val: 94.12878787878788
+2024-09-11 23:22:57.286 | INFO     | retrieval.model:validation_step:373 - Recall@74_val: 94.12878787878788
+2024-09-11 23:22:57.287 | INFO     | retrieval.model:validation_step:373 - Recall@75_val: 94.12878787878788
+2024-09-11 23:22:57.287 | INFO     | retrieval.model:validation_step:373 - Recall@76_val: 94.12878787878788
+2024-09-11 23:22:57.287 | INFO     | retrieval.model:validation_step:373 - Recall@77_val: 94.12878787878788
+2024-09-11 23:22:57.288 | INFO     | retrieval.model:validation_step:373 - Recall@78_val: 94.12878787878788
+2024-09-11 23:22:57.288 | INFO     | retrieval.model:validation_step:373 - Recall@79_val: 94.12878787878788
+2024-09-11 23:22:57.288 | INFO     | retrieval.model:validation_step:373 - Recall@80_val: 94.12878787878788
+2024-09-11 23:22:57.289 | INFO     | retrieval.model:validation_step:373 - Recall@81_val: 94.12878787878788
+2024-09-11 23:22:57.289 | INFO     | retrieval.model:validation_step:373 - Recall@82_val: 94.12878787878788
+2024-09-11 23:22:57.289 | INFO     | retrieval.model:validation_step:373 - Recall@83_val: 94.12878787878788
+2024-09-11 23:22:57.289 | INFO     | retrieval.model:validation_step:373 - Recall@84_val: 94.12878787878788
+2024-09-11 23:22:57.290 | INFO     | retrieval.model:validation_step:373 - Recall@85_val: 95.26515151515152
+2024-09-11 23:22:57.290 | INFO     | retrieval.model:validation_step:373 - Recall@86_val: 95.26515151515152
+2024-09-11 23:22:57.290 | INFO     | retrieval.model:validation_step:373 - Recall@87_val: 95.26515151515152
+2024-09-11 23:22:57.291 | INFO     | retrieval.model:validation_step:373 - Recall@88_val: 95.26515151515152
+2024-09-11 23:22:57.291 | INFO     | retrieval.model:validation_step:373 - Recall@89_val: 95.26515151515152
+2024-09-11 23:22:57.291 | INFO     | retrieval.model:validation_step:373 - Recall@90_val: 95.26515151515152
+2024-09-11 23:22:57.292 | INFO     | retrieval.model:validation_step:373 - Recall@91_val: 95.26515151515152
+2024-09-11 23:22:57.292 | INFO     | retrieval.model:validation_step:373 - Recall@92_val: 95.26515151515152
+2024-09-11 23:22:57.292 | INFO     | retrieval.model:validation_step:373 - Recall@93_val: 95.26515151515152
+2024-09-11 23:22:57.293 | INFO     | retrieval.model:validation_step:373 - Recall@94_val: 95.26515151515152
+2024-09-11 23:22:57.293 | INFO     | retrieval.model:validation_step:373 - Recall@95_val: 95.26515151515152
+2024-09-11 23:22:57.293 | INFO     | retrieval.model:validation_step:373 - Recall@96_val: 95.26515151515152
+2024-09-11 23:22:57.294 | INFO     | retrieval.model:validation_step:373 - Recall@97_val: 95.26515151515152
+2024-09-11 23:22:57.294 | INFO     | retrieval.model:validation_step:373 - Recall@98_val: 95.26515151515152
+2024-09-11 23:22:57.294 | INFO     | retrieval.model:validation_step:373 - Recall@99_val: 95.26515151515152
+2024-09-11 23:22:57.294 | INFO     | retrieval.model:validation_step:373 - Recall@100_val: 96.02272727272727
+2024-09-11 23:22:57.295 | INFO     | retrieval.model:validation_step:382 - MRR: 0.6998808010171645
+2024-09-11 23:22:57.295 | INFO     | retrieval.model:validation_step:390 - End of validation_step
+                                                                                            2024-09-11 23:22:57.303 | INFO     | retrieval.model:validation_step:319 - Inside validation_step
+2024-09-11 23:22:57.322 | INFO     | retrieval.model:validation_step:323 - Embeddings staled validation step: False
+2024-09-11 23:22:58.994 | INFO     | retrieval.model:validation_step:373 - Recall@1_val: 10.873015873015872
+2024-09-11 23:22:58.995 | INFO     | retrieval.model:validation_step:373 - Recall@2_val: 13.253968253968255
+2024-09-11 23:22:58.996 | INFO     | retrieval.model:validation_step:373 - Recall@3_val: 22.77777777777778
+2024-09-11 23:22:58.996 | INFO     | retrieval.model:validation_step:373 - Recall@4_val: 26.746031746031747
+2024-09-11 23:22:58.996 | INFO     | retrieval.model:validation_step:373 - Recall@5_val: 28.65079365079365
+2024-09-11 23:22:58.997 | INFO     | retrieval.model:validation_step:373 - Recall@6_val: 33.41269841269841
+2024-09-11 23:22:58.997 | INFO     | retrieval.model:validation_step:373 - Recall@7_val: 33.41269841269841
+2024-09-11 23:22:58.997 | INFO     | retrieval.model:validation_step:373 - Recall@8_val: 38.17460317460318
+2024-09-11 23:22:58.998 | INFO     | retrieval.model:validation_step:373 - Recall@9_val: 43.888888888888886
+2024-09-11 23:22:58.998 | INFO     | retrieval.model:validation_step:373 - Recall@10_val: 46.42857142857143
+2024-09-11 23:22:58.998 | INFO     | retrieval.model:validation_step:373 - Recall@11_val: 48.57142857142856
+2024-09-11 23:22:58.999 | INFO     | retrieval.model:validation_step:373 - Recall@12_val: 60.63492063492064
+2024-09-11 23:22:58.999 | INFO     | retrieval.model:validation_step:373 - Recall@13_val: 65.39682539682539
+2024-09-11 23:22:58.999 | INFO     | retrieval.model:validation_step:373 - Recall@14_val: 66.34920634920634
+2024-09-11 23:22:58.999 | INFO     | retrieval.model:validation_step:373 - Recall@15_val: 66.34920634920634
+2024-09-11 23:22:59.000 | INFO     | retrieval.model:validation_step:373 - Recall@16_val: 71.11111111111111
+2024-09-11 23:22:59.000 | INFO     | retrieval.model:validation_step:373 - Recall@17_val: 71.11111111111111
+2024-09-11 23:22:59.000 | INFO     | retrieval.model:validation_step:373 - Recall@18_val: 71.11111111111111
+2024-09-11 23:22:59.001 | INFO     | retrieval.model:validation_step:373 - Recall@19_val: 74.84126984126985
+2024-09-11 23:22:59.001 | INFO     | retrieval.model:validation_step:373 - Recall@20_val: 74.84126984126985
+2024-09-11 23:22:59.001 | INFO     | retrieval.model:validation_step:373 - Recall@21_val: 74.84126984126985
+2024-09-11 23:22:59.002 | INFO     | retrieval.model:validation_step:373 - Recall@22_val: 74.84126984126985
+2024-09-11 23:22:59.002 | INFO     | retrieval.model:validation_step:373 - Recall@23_val: 74.84126984126985
+2024-09-11 23:22:59.002 | INFO     | retrieval.model:validation_step:373 - Recall@24_val: 76.42857142857142
+2024-09-11 23:22:59.003 | INFO     | retrieval.model:validation_step:373 - Recall@25_val: 76.42857142857142
+2024-09-11 23:22:59.003 | INFO     | retrieval.model:validation_step:373 - Recall@26_val: 76.42857142857142
+2024-09-11 23:22:59.003 | INFO     | retrieval.model:validation_step:373 - Recall@27_val: 76.42857142857142
+2024-09-11 23:22:59.004 | INFO     | retrieval.model:validation_step:373 - Recall@28_val: 77.6190476190476
+2024-09-11 23:22:59.004 | INFO     | retrieval.model:validation_step:373 - Recall@29_val: 78.57142857142857
+2024-09-11 23:22:59.004 | INFO     | retrieval.model:validation_step:373 - Recall@30_val: 78.57142857142857
+2024-09-11 23:22:59.005 | INFO     | retrieval.model:validation_step:373 - Recall@31_val: 78.57142857142857
+2024-09-11 23:22:59.005 | INFO     | retrieval.model:validation_step:373 - Recall@32_val: 78.57142857142857
+2024-09-11 23:22:59.005 | INFO     | retrieval.model:validation_step:373 - Recall@33_val: 78.57142857142857
+2024-09-11 23:22:59.006 | INFO     | retrieval.model:validation_step:373 - Recall@34_val: 78.57142857142857
+2024-09-11 23:22:59.006 | INFO     | retrieval.model:validation_step:373 - Recall@35_val: 78.57142857142857
+2024-09-11 23:22:59.006 | INFO     | retrieval.model:validation_step:373 - Recall@36_val: 78.57142857142857
+2024-09-11 23:22:59.007 | INFO     | retrieval.model:validation_step:373 - Recall@37_val: 78.57142857142857
+2024-09-11 23:22:59.007 | INFO     | retrieval.model:validation_step:373 - Recall@38_val: 79.52380952380955
+2024-09-11 23:22:59.007 | INFO     | retrieval.model:validation_step:373 - Recall@39_val: 79.52380952380955
+2024-09-11 23:22:59.008 | INFO     | retrieval.model:validation_step:373 - Recall@40_val: 79.52380952380955
+2024-09-11 23:22:59.008 | INFO     | retrieval.model:validation_step:373 - Recall@41_val: 79.52380952380955
+2024-09-11 23:22:59.008 | INFO     | retrieval.model:validation_step:373 - Recall@42_val: 79.52380952380955
+2024-09-11 23:22:59.009 | INFO     | retrieval.model:validation_step:373 - Recall@43_val: 79.52380952380955
+2024-09-11 23:22:59.009 | INFO     | retrieval.model:validation_step:373 - Recall@44_val: 79.52380952380955
+2024-09-11 23:22:59.009 | INFO     | retrieval.model:validation_step:373 - Recall@45_val: 79.52380952380955
+2024-09-11 23:22:59.010 | INFO     | retrieval.model:validation_step:373 - Recall@46_val: 79.52380952380955
+2024-09-11 23:22:59.010 | INFO     | retrieval.model:validation_step:373 - Recall@47_val: 79.52380952380955
+2024-09-11 23:22:59.010 | INFO     | retrieval.model:validation_step:373 - Recall@48_val: 79.52380952380955
+2024-09-11 23:22:59.011 | INFO     | retrieval.model:validation_step:373 - Recall@49_val: 79.52380952380955
+2024-09-11 23:22:59.011 | INFO     | retrieval.model:validation_step:373 - Recall@50_val: 79.52380952380955
+2024-09-11 23:22:59.011 | INFO     | retrieval.model:validation_step:373 - Recall@51_val: 79.52380952380955
+2024-09-11 23:22:59.012 | INFO     | retrieval.model:validation_step:373 - Recall@52_val: 79.52380952380955
+2024-09-11 23:22:59.012 | INFO     | retrieval.model:validation_step:373 - Recall@53_val: 80.47619047619047
+2024-09-11 23:22:59.012 | INFO     | retrieval.model:validation_step:373 - Recall@54_val: 80.47619047619047
+2024-09-11 23:22:59.013 | INFO     | retrieval.model:validation_step:373 - Recall@55_val: 80.47619047619047
+2024-09-11 23:22:59.013 | INFO     | retrieval.model:validation_step:373 - Recall@56_val: 82.85714285714285
+2024-09-11 23:22:59.014 | INFO     | retrieval.model:validation_step:373 - Recall@57_val: 82.85714285714285
+2024-09-11 23:22:59.014 | INFO     | retrieval.model:validation_step:373 - Recall@58_val: 82.85714285714285
+2024-09-11 23:22:59.014 | INFO     | retrieval.model:validation_step:373 - Recall@59_val: 82.85714285714285
+2024-09-11 23:22:59.014 | INFO     | retrieval.model:validation_step:373 - Recall@60_val: 82.85714285714285
+2024-09-11 23:22:59.015 | INFO     | retrieval.model:validation_step:373 - Recall@61_val: 82.85714285714285
+2024-09-11 23:22:59.015 | INFO     | retrieval.model:validation_step:373 - Recall@62_val: 82.85714285714285
+2024-09-11 23:22:59.015 | INFO     | retrieval.model:validation_step:373 - Recall@63_val: 82.85714285714285
+2024-09-11 23:22:59.016 | INFO     | retrieval.model:validation_step:373 - Recall@64_val: 83.80952380952381
+2024-09-11 23:22:59.016 | INFO     | retrieval.model:validation_step:373 - Recall@65_val: 83.80952380952381
+2024-09-11 23:22:59.016 | INFO     | retrieval.model:validation_step:373 - Recall@66_val: 83.80952380952381
+2024-09-11 23:22:59.017 | INFO     | retrieval.model:validation_step:373 - Recall@67_val: 83.80952380952381
+2024-09-11 23:22:59.017 | INFO     | retrieval.model:validation_step:373 - Recall@68_val: 83.80952380952381
+2024-09-11 23:22:59.017 | INFO     | retrieval.model:validation_step:373 - Recall@69_val: 83.80952380952381
+2024-09-11 23:22:59.018 | INFO     | retrieval.model:validation_step:373 - Recall@70_val: 83.80952380952381
+2024-09-11 23:22:59.018 | INFO     | retrieval.model:validation_step:373 - Recall@71_val: 83.80952380952381
+2024-09-11 23:22:59.019 | INFO     | retrieval.model:validation_step:373 - Recall@72_val: 83.80952380952381
+2024-09-11 23:22:59.019 | INFO     | retrieval.model:validation_step:373 - Recall@73_val: 83.80952380952381
+2024-09-11 23:22:59.019 | INFO     | retrieval.model:validation_step:373 - Recall@74_val: 83.80952380952381
+2024-09-11 23:22:59.020 | INFO     | retrieval.model:validation_step:373 - Recall@75_val: 83.80952380952381
+2024-09-11 23:22:59.020 | INFO     | retrieval.model:validation_step:373 - Recall@76_val: 86.34920634920634
+2024-09-11 23:22:59.020 | INFO     | retrieval.model:validation_step:373 - Recall@77_val: 86.34920634920634
+2024-09-11 23:22:59.021 | INFO     | retrieval.model:validation_step:373 - Recall@78_val: 86.34920634920634
+2024-09-11 23:22:59.021 | INFO     | retrieval.model:validation_step:373 - Recall@79_val: 86.34920634920634
+2024-09-11 23:22:59.021 | INFO     | retrieval.model:validation_step:373 - Recall@80_val: 86.34920634920634
+2024-09-11 23:22:59.022 | INFO     | retrieval.model:validation_step:373 - Recall@81_val: 86.34920634920634
+2024-09-11 23:22:59.022 | INFO     | retrieval.model:validation_step:373 - Recall@82_val: 86.34920634920634
+2024-09-11 23:22:59.022 | INFO     | retrieval.model:validation_step:373 - Recall@83_val: 86.34920634920634
+2024-09-11 23:22:59.023 | INFO     | retrieval.model:validation_step:373 - Recall@84_val: 86.34920634920634
+2024-09-11 23:22:59.023 | INFO     | retrieval.model:validation_step:373 - Recall@85_val: 86.34920634920634
+2024-09-11 23:22:59.023 | INFO     | retrieval.model:validation_step:373 - Recall@86_val: 86.34920634920634
+2024-09-11 23:22:59.023 | INFO     | retrieval.model:validation_step:373 - Recall@87_val: 86.34920634920634
+2024-09-11 23:22:59.024 | INFO     | retrieval.model:validation_step:373 - Recall@88_val: 86.34920634920634
+2024-09-11 23:22:59.024 | INFO     | retrieval.model:validation_step:373 - Recall@89_val: 86.34920634920634
+2024-09-11 23:22:59.024 | INFO     | retrieval.model:validation_step:373 - Recall@90_val: 87.93650793650795
+2024-09-11 23:22:59.025 | INFO     | retrieval.model:validation_step:373 - Recall@91_val: 87.93650793650795
+2024-09-11 23:22:59.025 | INFO     | retrieval.model:validation_step:373 - Recall@92_val: 87.93650793650795
+2024-09-11 23:22:59.026 | INFO     | retrieval.model:validation_step:373 - Recall@93_val: 87.93650793650795
+2024-09-11 23:22:59.026 | INFO     | retrieval.model:validation_step:373 - Recall@94_val: 87.93650793650795
+2024-09-11 23:22:59.026 | INFO     | retrieval.model:validation_step:373 - Recall@95_val: 88.8888888888889
+2024-09-11 23:22:59.026 | INFO     | retrieval.model:validation_step:373 - Recall@96_val: 88.8888888888889
+2024-09-11 23:22:59.027 | INFO     | retrieval.model:validation_step:373 - Recall@97_val: 90.47619047619048
+2024-09-11 23:22:59.027 | INFO     | retrieval.model:validation_step:373 - Recall@98_val: 90.47619047619048
+2024-09-11 23:22:59.027 | INFO     | retrieval.model:validation_step:373 - Recall@99_val: 90.47619047619048
+2024-09-11 23:22:59.028 | INFO     | retrieval.model:validation_step:373 - Recall@100_val: 95.23809523809523
+2024-09-11 23:22:59.028 | INFO     | retrieval.model:validation_step:382 - MRR: 0.3658316196474091
+2024-09-11 23:22:59.028 | INFO     | retrieval.model:validation_step:390 - End of validation_step
+Epoch 2: 100%|██████████████████████████| 25672/25672 [3:31:43<00:00,  2.02it/s, v_num=17085]Epoch 2, global step 18247: 'Recall@10_val' reached 61.22599 (best 61.22599), saving model to '/data/yingzi_ma/lean_project/checkpoints_PT_merge
+_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt' as top 2
+`Trainer.fit` stopped: `max_epochs=3` reached.
+Epoch 2: 100%|██████████████████████████| 25672/25672 [3:31:50<00:00,  2.02it/s, v_num=17085]
+2024-09-11 23:23:11.685 | INFO     | __main__:main:1462 - hit the barrier after training
+2024-09-11 23:23:11.770 | INFO     | __main__:main:1462 - hit the barrier after training
+2024-09-11 23:23:12.006 | INFO     | __main__:main:1462 - hit the barrier after training
+2024-09-11 23:23:12.026 | INFO     | __main__:main:1462 - hit the barrier after training
+2024-09-11 23:23:12.026 | INFO     | __main__:main:1468 - Finished progressive training at epoch 3
+2024-09-11 23:23:12.026 | INFO     | __main__:main:1468 - Finished progressive training at epoch 3
+2024-09-11 23:23:12.027 | INFO     | __main__:main:1468 - Finished progressive training at epoch 3
+2024-09-11 23:23:12.027 | INFO     | __main__:main:1468 - Finished progressive training at epoch 3
+2024-09-11 23:23:12.028 | INFO     | __main__:find_latest_checkpoint:524 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd6
+7f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-11 23:23:12.028 | INFO     | __main__:find_latest_checkpoint:524 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd6
+7f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-11 23:23:12.028 | INFO     | __main__:find_latest_checkpoint:524 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd6
+7f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-11 23:23:12.028 | INFO     | __main__:find_latest_checkpoint:524 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd6
+7f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-11 23:23:12.028 | INFO     | __main__:main:1475 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lam
+bda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-11 23:23:12.028 | INFO     | __main__:main:1475 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lam
+bda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-11 23:23:12.028 | INFO     | __main__:main:1475 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lam
+bda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-11 23:23:12.028 | INFO     | __main__:main:1475 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lam
+bda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-11 23:23:17.092 | INFO     | __main__:main:1484 - Testing...
+2024-09-11 23:23:17.096 | INFO     | retrieval.main:run_cli:60 - PID: 1969098
+2024-09-11 23:23:17.135 | INFO     | __main__:main:1484 - Testing...
+2024-09-11 23:23:17.137 | INFO     | retrieval.main:run_cli:60 - PID: 1974804
+2024-09-11 23:23:17.140 | INFO     | __main__:main:1484 - Testing...
+2024-09-11 23:23:17.141 | INFO     | __main__:main:1484 - Testing...
+2024-09-11 23:23:17.142 | INFO     | retrieval.main:run_cli:60 - PID: 1974805
+2024-09-11 23:23:17.142 | INFO     | retrieval.main:run_cli:60 - PID: 1974806
+[rank: 0] Seed set to 3407
+2024-09-11 23:23:17.372 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae2425
+3d566/random
+2024-09-11 23:23:17.372 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24
+253d566/corpus.jsonl
+[rank: 1] Seed set to 3407
+2024-09-11 23:23:17.392 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae2425
+3d566/random
+2024-09-11 23:23:17.392 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24
+253d566/corpus.jsonl
+[rank: 3] Seed set to 3407
+2024-09-11 23:23:17.404 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae2425
+3d566/random
+2024-09-11 23:23:17.405 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24
+253d566/corpus.jsonl
+[rank: 2] Seed set to 3407
+2024-09-11 23:23:17.408 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae2425
+3d566/random
+2024-09-11 23:23:17.408 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24
+253d566/corpus.jsonl
+2024-09-11 23:23:18.079 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566/corpu
+s.jsonl
+2024-09-11 23:23:18.079 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566/corpu
+s.jsonl
+2024-09-11 23:23:18.087 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566/corpu
+s.jsonl
+2024-09-11 23:23:18.090 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566/corpu
+s.jsonl
+[rank: 3] Seed set to 3407
+Using bfloat16 Automatic Mixed Precision (AMP)
+[rank: 2] Seed set to 3407
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+[rank: 1] Seed set to 3407
+2024-09-11 23:24:08.370 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f
+9916ae24253d566/random/cache_train/cached_data.pkl
+Training dataset size: 410758
+2024-09-11 23:24:08.456 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f
+9916ae24253d566/random/cache_pred/cached_data.pkl
+Testing dataset size: 7509
+2024-09-11 23:24:15.659 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f
+9916ae24253d566/random/cache_train/cached_data.pkl
+Training dataset size: 410758
+2024-09-11 23:24:18.694 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f
+9916ae24253d566/random/cache_train/cached_data.pkl
+Training dataset size: 410758
+2024-09-11 23:24:18.752 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f
+9916ae24253d566/random/cache_pred/cached_data.pkl
+Testing dataset size: 7509
+2024-09-11 23:24:24.228 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f
+9916ae24253d566/random/cache_pred/cached_data.pkl
+Testing dataset size: 7509
+2024-09-11 23:24:28.503 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f
+9916ae24253d566/random/cache_train/cached_data.pkl
+Training dataset size: 410758
+2024-09-11 23:24:28.566 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f
+9916ae24253d566/random/cache_pred/cached_data.pkl
+Testing dataset size: 7509
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ck
+pt
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckp
+t
+2024-09-11 23:24:59.087 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-11 23:24:59.088 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+  0%|                                                               | 0/2813 [00:00<?, ?it/s]2024-09-11 23:24:59.183 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-11 23:24:59.185 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+  0%|                                                       | 2/2813 [00:00<03:16, 14.34it/s]2024-09-11 23:24:59.401 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-11 23:24:59.402 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+Predicting: |                                                          | 0/? [00:00<?, ?it/s]2024-09-11 23:25:00.107 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-11 23:25:00.108 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+100%|████████████████████████████████████████████████████| 2813/2813 [16:29<00:00,  2.84it/s]
+100%|████████████████████████████████████████████████████| 2813/2813 [16:34<00:00,  2.83it/s]
+100%|████████████████████████████████████████████████████| 2813/2813 [16:33<00:00,  2.83it/s]
+100%|████████████████████████████████████████████████████| 2813/2813 [16:35<00:00,  2.83it/s]
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/loops/prediction_loop.py:255: predict returned None if it was on purpose, ignore this warning...
+Predicting DataLoader 0: 100%|███████████████████████████████| 30/30 [01:48<00:00,  0.28it/s]2024-09-11 23:43:22.595 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-11 23:43:22.912 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_0.pkl
+2024-09-11 23:43:22.913 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-11 23:43:31.285 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-11 23:43:31.620 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_1.pkl
+2024-09-11 23:43:31.620 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-11 23:43:50.883 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-11 23:43:50.883 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-11 23:43:51.190 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_3.pkl
+2024-09-11 23:43:51.191 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-11 23:43:51.249 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_2.pkl
+2024-09-11 23:43:51.250 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-11 23:43:51.250 | INFO     | retrieval.model:on_predict_epoch_end:567 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|███████████████████████████████| 30/30 [02:17<00:00,  0.22it/s]
+2024-09-11 23:43:53.294 | INFO     | retrieval.main:run_cli:60 - PID: 1974806
+2024-09-11 23:43:53.336 | INFO     | retrieval.main:run_cli:60 - PID: 1974805
+2024-09-11 23:43:53.367 | INFO     | retrieval.main:run_cli:60 - PID: 1974804
+[rank: 3] Seed set to 3407
+2024-09-11 23:43:53.582 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a
+576389ecf5/random
+2024-09-11 23:43:53.583 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a08441185
+3a576389ecf5/corpus.jsonl
+[rank: 2] Seed set to 3407
+2024-09-11 23:43:53.627 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a
+576389ecf5/random
+2024-09-11 23:43:53.627 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a08441185
+3a576389ecf5/corpus.jsonl
+[rank: 1] Seed set to 3407
+2024-09-11 23:43:53.637 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a
+576389ecf5/random
+2024-09-11 23:43:53.637 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a08441185
+3a576389ecf5/corpus.jsonl
+2024-09-11 23:43:54.161 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf5/
+corpus.jsonl
+2024-09-11 23:43:54.170 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf5/
+corpus.jsonl
+2024-09-11 23:43:54.197 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf5/
+corpus.jsonl
+2024-09-11 23:43:54.661 | INFO     | __main__:main:1506 - Loaded the predictions pickle files
+2024-09-11 23:43:54.864 | INFO     | __main__:main:1509 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566/random/test.json
+100%|█████████████████████████████████████████████████| 3106/3106 [00:00<00:00, 15357.03it/s]
+2024-09-11 23:43:55.069 | INFO     | __main__:main:1511 - R@1 = 20.04769989866179 %, R@10 = 55.1297784659227 %, MRR = 0.45655016162304024
+2024-09-11 23:43:55.071 | INFO     | retrieval.main:run_cli:60 - PID: 1969098
+[rank: 0] Seed set to 3407
+2024-09-11 23:43:55.375 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a
+576389ecf5/random
+2024-09-11 23:43:55.375 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a08441185
+3a576389ecf5/corpus.jsonl
+2024-09-11 23:43:55.982 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf5/
+corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+[rank: 2] Seed set to 3407
+[rank: 1] Seed set to 3407
+[rank: 3] Seed set to 3407
+2024-09-11 23:44:59.399 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 394886
+2024-09-11 23:44:59.485 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 6381
+2024-09-11 23:45:03.433 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 394886
+2024-09-11 23:45:09.867 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 394886
+2024-09-11 23:45:09.916 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 6381
+2024-09-11 23:45:12.448 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 6381
+2024-09-11 23:45:15.701 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 394886
+2024-09-11 23:45:15.756 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 6381
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ck
+pt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckp
+t
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+2024-09-11 23:45:19.672 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-11 23:45:19.673 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+  0%|                                                       | 2/2801 [00:00<03:09, 14.76it/s]2024-09-11 23:45:19.930 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-11 23:45:19.931 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+  0%|                                                               | 0/2801 [00:00<?, ?it/s]2024-09-11 23:45:19.959 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-11 23:45:19.965 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+Predicting: |                                                          | 0/? [00:00<?, ?it/s]2024-09-11 23:45:20.854 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-11 23:45:20.854 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+100%|████████████████████████████████████████████████████| 2801/2801 [16:24<00:00,  2.84it/s]
+100%|████████████████████████████████████████████████████| 2801/2801 [16:30<00:00,  2.83it/s]
+100%|████████████████████████████████████████████████████| 2801/2801 [16:31<00:00,  2.83it/s]
+100%|████████████████████████████████████████████████████| 2801/2801 [16:31<00:00,  2.83it/s]
+Predicting DataLoader 0: 100%|███████████████████████████████| 25/25 [01:33<00:00,  0.27it/s]2024-09-12 00:03:25.514 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-12 00:03:25.515 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-12 00:03:25.515 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-12 00:03:25.734 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_1.pkl
+2024-09-12 00:03:25.734 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-12 00:03:25.798 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_2.pkl
+2024-09-12 00:03:25.798 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-12 00:03:25.859 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_0.pkl
+2024-09-12 00:03:25.859 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-12 00:03:29.772 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-12 00:03:29.981 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_3.pkl
+2024-09-12 00:03:29.982 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-12 00:03:29.982 | INFO     | retrieval.model:on_predict_epoch_end:567 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|███████████████████████████████| 25/25 [01:38<00:00,  0.26it/s]
+2024-09-12 00:03:31.888 | INFO     | retrieval.main:run_cli:60 - PID: 1974804
+2024-09-12 00:03:31.934 | INFO     | retrieval.main:run_cli:60 - PID: 1974805
+2024-09-12 00:03:31.958 | INFO     | retrieval.main:run_cli:60 - PID: 1974806
+[rank: 1] Seed set to 3407
+2024-09-12 00:03:32.188 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random
+2024-09-12 00:03:32.188 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corp
+us.jsonl
+[rank: 2] Seed set to 3407
+2024-09-12 00:03:32.204 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random
+2024-09-12 00:03:32.204 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corp
+us.jsonl
+[rank: 3] Seed set to 3407
+2024-09-12 00:03:32.242 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random
+2024-09-12 00:03:32.242 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corp
+us.jsonl
+2024-09-12 00:03:32.760 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corpus.jsonl
+2024-09-12 00:03:32.800 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corpus.jsonl
+2024-09-12 00:03:32.946 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corpus.jsonl
+2024-09-12 00:03:33.565 | INFO     | __main__:main:1506 - Loaded the predictions pickle files
+2024-09-12 00:03:33.718 | INFO     | __main__:main:1509 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf5/random/test.
+json
+100%|█████████████████████████████████████████████████| 2988/2988 [00:00<00:00, 17134.45it/s]
+2024-09-12 00:03:33.895 | INFO     | __main__:main:1511 - R@1 = 21.40638646984651 %, R@10 = 56.94559559462778 %, MRR = 0.4821895562526428
+2024-09-12 00:03:33.896 | INFO     | retrieval.main:run_cli:60 - PID: 1969098
+[rank: 0] Seed set to 3407
+2024-09-12 00:03:34.189 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random
+2024-09-12 00:03:34.190 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corp
+us.jsonl
+2024-09-12 00:03:34.843 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+[rank: 3] Seed set to 3407
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+[rank: 2] Seed set to 3407
+[rank: 1] Seed set to 3407
+2024-09-12 00:04:31.503 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_train/cached_data.pkl
+Training dataset size: 362149
+2024-09-12 00:04:31.548 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_pred/cached_data.pkl
+Testing dataset size: 5133
+2024-09-12 00:04:33.609 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_train/cached_data.pkl
+Training dataset size: 362149
+2024-09-12 00:04:33.652 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_pred/cached_data.pkl
+Testing dataset size: 5133
+2024-09-12 00:04:47.289 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_train/cached_data.pkl
+Training dataset size: 362149
+2024-09-12 00:04:47.331 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_pred/cached_data.pkl
+Testing dataset size: 5133
+2024-09-12 00:04:55.782 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_train/cached_data.pkl
+Training dataset size: 362149
+2024-09-12 00:04:55.823 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_pred/cached_data.pkl
+Testing dataset size: 5133
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ck
+pt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckp
+t
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+2024-09-12 00:04:59.702 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-12 00:04:59.703 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+  0%|                                                               | 0/2783 [00:00<?, ?it/s]2024-09-12 00:04:59.783 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-12 00:04:59.784 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+2024-09-12 00:04:59.786 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-12 00:04:59.787 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+Predicting: |                                                          | 0/? [00:00<?, ?it/s]2024-09-12 00:05:01.117 | INFO     | retrieval.model:on_predict_start:401 - Embeddings staled on predict start: True
+2024-09-12 00:05:01.118 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+100%|████████████████████████████████████████████████████| 2783/2783 [16:19<00:00,  2.84it/s]
+100%|████████████████████████████████████████████████████| 2783/2783 [16:24<00:00,  2.83it/s]
+100%|████████████████████████████████████████████████████| 2783/2783 [16:25<00:00,  2.82it/s]
+100%|████████████████████████████████████████████████████| 2783/2783 [16:24<00:00,  2.83it/s]
+Predicting DataLoader 0: 100%|███████████████████████████████| 21/21 [01:04<00:00,  0.33it/s]2024-09-12 00:22:30.278 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-12 00:22:30.549 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_0.pkl
+2024-09-12 00:22:30.549 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-12 00:22:46.919 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-12 00:22:46.919 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-12 00:22:46.920 | INFO     | retrieval.model:on_predict_epoch_end:504 - About to construct predictions map
+2024-09-12 00:22:47.160 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_2.pkl
+2024-09-12 00:22:47.160 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-12 00:22:47.184 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_3.pkl
+2024-09-12 00:22:47.184 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-12 00:22:47.206 | INFO     | retrieval.model:on_predict_epoch_end:524 - Retrieval predictions saved to test_pickle_1.pkl
+2024-09-12 00:22:47.206 | INFO     | retrieval.model:on_predict_epoch_end:563 - About to call barrier
+2024-09-12 00:22:47.207 | INFO     | retrieval.model:on_predict_epoch_end:567 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|███████████████████████████████| 21/21 [01:21<00:00,  0.26it/s]
+2024-09-12 00:22:49.439 | INFO     | __main__:main:1615 - Finished processing the repository
+2024-09-12 00:22:49.440 | INFO     | __main__:main:1617 - current epoch: 3
+2024-09-12 00:22:49.440 | INFO     | __main__:main:1296 - length of lean_git_repos: 14
+2024-09-12 00:22:49.440 | INFO     | __main__:main:1297 - i: 2
+2024-09-12 00:22:49.440 | INFO     | __main__:main:1327 - All GPUs
+2024-09-12 00:22:49.444 | INFO     | __main__:find_latest_checkpoint:524 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd6
+7f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-12 00:22:49.444 | INFO     | __main__:main:1334 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lam
+bda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-12 00:22:49.444 | INFO     | __main__:main:1340 - Inside train_test_fisher
+2024-09-12 00:22:49.444 | INFO     | __main__:main:1341 - Starting training at epoch 3
+[rank: 2] Seed set to 3407
+2024-09-12 00:22:49.522 | INFO     | __main__:main:1615 - Finished processing the repository
+2024-09-12 00:22:49.524 | INFO     | __main__:main:1617 - current epoch: 3
+2024-09-12 00:22:49.524 | INFO     | __main__:main:1296 - length of lean_git_repos: 14
+2024-09-12 00:22:49.524 | INFO     | __main__:main:1297 - i: 2
+2024-09-12 00:22:49.524 | INFO     | __main__:main:1327 - All GPUs
+2024-09-12 00:22:49.528 | INFO     | __main__:find_latest_checkpoint:524 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd6
+7f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-12 00:22:49.528 | INFO     | __main__:main:1334 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lam
+bda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-12 00:22:49.528 | INFO     | __main__:main:1340 - Inside train_test_fisher
+2024-09-12 00:22:49.528 | INFO     | __main__:main:1341 - Starting training at epoch 3
+[rank: 1] Seed set to 3407
+2024-09-12 00:22:49.638 | INFO     | __main__:main:1615 - Finished processing the repository
+2024-09-12 00:22:49.640 | INFO     | __main__:main:1617 - current epoch: 3
+2024-09-12 00:22:49.641 | INFO     | __main__:main:1296 - length of lean_git_repos: 14
+2024-09-12 00:22:49.641 | INFO     | __main__:main:1297 - i: 2
+2024-09-12 00:22:49.641 | INFO     | __main__:main:1327 - All GPUs
+2024-09-12 00:22:49.647 | INFO     | __main__:find_latest_checkpoint:524 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd6
+7f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-12 00:22:49.647 | INFO     | __main__:main:1334 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_lam
+bda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-12 00:22:49.647 | INFO     | __main__:main:1340 - Inside train_test_fisher
+2024-09-12 00:22:49.647 | INFO     | __main__:main:1341 - Starting training at epoch 3
+[rank: 3] Seed set to 3407
+2024-09-12 00:22:50.888 | INFO     | __main__:main:1506 - Loaded the predictions pickle files
+2024-09-12 00:22:51.000 | INFO     | __main__:main:1509 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/test.json
+100%|█████████████████████████████████████████████████| 2427/2427 [00:00<00:00, 23810.20it/s]
+2024-09-12 00:22:51.105 | INFO     | __main__:main:1511 - R@1 = 22.70087823068515 %, R@10 = 61.20314291705401 %, MRR = 0.5207101491143972
+2024-09-12 00:22:51.106 | INFO     | __main__:main:1526 - Average R@1 = 21.38498819973115 %, R@10 = 57.759505659201494 %, MRR = 0.48648328899669346
+2024-09-12 00:22:51.107 | INFO     | __main__:main:1562 - Starting the prover
+2024-09-12 00:22:51.107 | INFO     | prover.proof_search:__init__:407 - Inside __init__
+2024-09-12 00:22:51.107 | INFO     | prover.proof_search:__init__:412 - ckpt_path is not None
+2024-09-12 00:22:51.107 | INFO     | prover.proof_search:__init__:427 - Using RAG
+2024-09-12 00:22:51.108 | INFO     | prover.proof_search:find_latest_checkpoint:380 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd68566
+0b5fedd7bd67f9916ae24253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-12 00:22:51.973 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae2
+4253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-12 00:22:51.973 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae2
+4253d566_lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-12 00:22:52.157 | INFO     | __main__:main:1365 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_
+lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-12 00:22:52.263 | INFO     | __main__:main:1423 - right before barrier for data module
+2024-09-12 00:22:52.298 | INFO     | __main__:main:1365 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_
+lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-12 00:22:52.350 | INFO     | __main__:main:1423 - right before barrier for data module
+2024-09-12 00:22:52.520 | INFO     | __main__:main:1365 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566_
+lambda_0.1_epoch=2-Recall@10_val=61.23.ckpt
+2024-09-12 00:22:52.570 | INFO     | __main__:main:1423 - right before barrier for data module
+2024-09-12 00:22:55.350 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.enc
+oder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'retri
+ever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.enc
+oder.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.la
+yer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.enco
+der.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseR
+eluDense.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.en
+coder.encoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.lay
+er_norm.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retri
+ever.encoder.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.S
+elfAttention.v.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever
+.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0
+.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.la
+yer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retr
+iever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.
+DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.l
+ayer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight'
+, 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7
+.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'ret
+riever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.
+block.7.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight
+', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.bloc
+k.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weig
+ht', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.b
+lock.9.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.
+wo.weight', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encod
+er.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.
+wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.enco
+der.encoder.block.11.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.S
+elfAttention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 're
+triever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'sta
+te_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-12 00:22:56.144 | INFO     | prover.proof_search:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-12 00:22:56.146 | INFO     | prover.proof_search:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-12 00:22:56.146 | INFO     | prover.proof_search:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916a
+e24253d566/corpus.jsonl
+2024-09-12 00:22:56.146 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566/corpu
+s.jsonl
+2024-09-12 00:23:20.681 | INFO     | retrieval.model:load_corpus:160 - Embeddings staled load corpus jsonl: True
+2024-09-12 00:23:20.681 | INFO     | prover.proof_search:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae
+24253d566/corpus.jsonl
+2024-09-12 00:23:20.682 | INFO     | retrieval.model:reindex_corpus:287 - Re-indexing the retrieval corpus
+100%|████████████████████████████████████████████████████| 5625/5625 [09:10<00:00, 10.22it/s]
+2024-09-12 00:32:30.930 | INFO     | prover.proof_search:__init__:459 - Finished reindexing!
+2024-09-12 00:32:30.930 | INFO     | prover.proof_search:__init__:470 - Launching 4 workers with 4 GPUs.
+(autoscaler +9h26m42s) Tip: use `ray status` to view detailed cluster status. To disable these messages, set RAY_SCHEDULER_EVENTS=0.
+(autoscaler +9h26m42s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h26m42s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h29m17s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h30m48s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h31m47s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h33m17s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h33m17s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h33m17s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h33m48s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h34m52s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h34m52s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h34m52s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h34m52s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h34m52s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h34m52s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h37m20s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h38m19s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h38m48s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h38m48s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h39m18s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h39m18s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h39m18s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h40m18s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h41m48s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h42m50s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h43m23s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h44m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h44m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h44m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h44m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h44m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h44m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h45m53s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h48m23s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h48m53s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h49m23s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h50m25s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h51m24s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h52m55s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h53m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h55m26s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h55m26s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h55m26s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h55m26s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h55m26s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h55m26s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h55m55s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h56m27s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h56m27s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h56m27s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h56m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h57m26s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h58m54s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h58m54s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h58m54s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h58m54s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +9h59m55s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h1m28s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h1m57s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h3m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h3m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h4m27s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h4m27s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h4m27s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h4m27s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h5m28s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h6m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h6m59s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h8m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h8m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h9m0s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +10h10m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h11m0s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h11m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h11m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h11m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h12m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h14m2s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h14m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h15m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h15m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h15m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h15m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h16m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h18m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h18m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h18m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h18m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h20m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h21m2s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h21m32s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h23m33s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h25m4s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h25m36s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h25m36s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h25m36s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h25m36s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h25m36s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h25m36s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h25m36s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h26m41s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h26m41s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h28m45s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h29m48s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h29m48s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h29m48s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h30m46s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h31m47s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h33m24s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h34m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h34m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h34m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h34m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h34m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h34m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h34m56s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h35m57s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h37m27s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h38m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h38m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h39m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h39m59s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h41m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h41m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h41m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h41m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h41m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h42m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h42m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h43m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h43m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h45m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h46m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h47m0s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h49m0s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h49m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h49m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h49m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h49m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h51m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h51m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h52m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h52m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h52m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h52m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h53m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h54m2s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h54m34s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h55m32s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h56m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h56m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h57m2s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +10h59m33s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h59m33s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h59m33s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h59m33s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +10h59m33s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h1m4s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +11h3m2s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +11h3m33s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h4m4s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +11h4m4s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +11h4m4s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +11h4m4s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +11h4m34s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h5m32s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h6m3s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +11h7m35s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h8m7s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +11h9m7s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +11h10m6s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h11m37s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h12m38s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h14m7s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h15m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h17m7s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h17m7s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h17m7s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h17m40s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h18m10s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h20m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h20m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h20m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h21m9s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h22m41s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h25m10s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h25m10s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h25m10s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h25m10s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m8s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h26m39s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h27m36s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h27m37s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h29m41s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h31m43s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h33m14s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h34m11s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h34m11s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h34m11s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h34m11s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h35m43s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h36m13s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h36m13s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h36m13s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h36m13s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h36m13s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h37m14s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h38m44s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h39m15s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h40m15s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h40m45s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h40m45s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h41m45s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h43m48s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h44m48s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h45m19s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h45m19s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h45m19s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h45m19s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h45m19s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h45m19s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h45m19s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h45m19s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h46m21s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h46m50s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h49m28s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h51m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h51m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h51m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h53m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h54m0s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h54m0s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +11h55m28s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h55m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h55m58s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h57m29s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h58m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h58m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h58m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +11h59m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h1m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +12h1m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h3m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +12h3m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +12h3m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +12h3m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +12h3m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +12h3m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +12h3m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +12h4m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +12h6m33s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h7m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +12h7m1s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nod
+es to this Ray cluster.
+(autoscaler +12h7m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h7m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h7m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h7m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h7m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h7m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h7m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h8m31s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h9m30s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h10m32s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +12h10m32s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +12h10m32s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +12h12m4s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h14m5s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h16m6s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h16m35s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +12h17m6s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h17m6s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h17m6s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h17m6s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more no
+des to this Ray cluster.
+(autoscaler +12h17m36s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +12h18m37s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+(autoscaler +12h19m37s) Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more n
+odes to this Ray cluster.
+^C^C
+^Z
+[1]+  Stopped                 bash run_code4.sh
+(base) yingzi_ma@compute-permanent-node-834:~/lean_project/ReProver$ bash run_code4.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+Could not terminate `/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py` due to (pid=1715738, name='python3')
+Stopped only 257 out of 262 Ray processes within the grace period 16 seconds. Set `-v` to see more details. Remaining processes [psutil.Process(pid=2100056, name='raylet', status='zombie', started='18:54:28'), psutil.Process(pid=2099969,
+ name='python', status='zombie', started='18:54:26'), psutil.Process(pid=2099968, name='python', status='zombie', started='18:54:25'), psutil.Process(pid=2100284, name='python', status='zombie', started='18:54:29'), psutil.Process(pid=20
+99711, name='gcs_server', status='zombie', started='18:54:24')] will be forcefully terminated.
+You can also use `--force` to forcefully terminate processes or set higher `--grace-period` to wait longer time for proper termination.
+Running main4.py
+

@@ -1,0 +1,1225 @@
+ncoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_
+1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block
+.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', 'retrieve
+r.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.9.laye
+r.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'retriever.en
+coder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseRe
+luDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.q.weight', 'retriever.encoder
+.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.
+weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder
+.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'state_dict
+', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-21 08:11:17.002 | INFO     | prover.proof_search_all_sorries:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-21 08:11:17.003 | INFO     | prover.proof_search_all_sorries:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-21 08:11:17.003 | INFO     | prover.proof_search_all_sorries:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a60
+46c1baf261445d/corpus.jsonl
+2024-09-21 08:11:17.003 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d/corpus.jsonl
+2024-09-21 08:11:24.020 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-21 08:11:24.020 | INFO     | prover.proof_search_all_sorries:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a604
+6c1baf261445d/corpus.jsonl
+2024-09-21 08:11:24.021 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████| 3609/3609 [05:36<00:00, 10.73it/s]
+2024-09-21 08:17:00.387 | INFO     | prover.proof_search_all_sorries:__init__:459 - Finished reindexing!
+2024-09-21 08:17:00.387 | INFO     | prover.proof_search_all_sorries:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-09-21 08:17:02,367 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=305078) [2024-09-21 08:17:38,585] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=305078) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=305078)   return torch.load(io.BytesIO(b))
+(pid=305755) [2024-09-21 08:17:49,108] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=305755) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=305755)   return torch.load(io.BytesIO(b))
+(pid=305924) [2024-09-21 08:17:59,265] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 08:18:03.057 | INFO     | __main__:save_progress:819 - Saving encountered theorems...
+2024-09-21 08:18:03.059 | INFO     | __main__:prove_sorry_theorems:910 - Finished attempting to re-prove sorry theorems
+2024-09-21 08:18:03.061 | INFO     | __main__:main:1668 - Finished searching for proofs of sorry theorems
+2024-09-21 08:18:03.061 | INFO     | __main__:main:1671 - Shutting down Ray after proving
+2024-09-21 08:18:05.789 | INFO     | __main__:main:1691 - Finished processing the repository
+2024-09-21 08:18:05.789 | INFO     | __main__:main:1693 - current epoch: 2
+2024-09-21 08:18:05.789 | INFO     | __main__:main:1363 - length of lean_git_repos: 12
+2024-09-21 08:18:05.789 | INFO     | __main__:main:1364 - i: 2
+2024-09-21 08:18:05.789 | INFO     | __main__:main:1370 - Main process
+2024-09-21 08:18:05.790 | INFO     | __main__:main:1371 - Using lambda = 0.0
+2024-09-21 08:18:05.790 | INFO     | __main__:main:1372 - Processing https://github.com/ImperialCollegeLondon/FLT
+2024-09-21 08:18:05.790 | INFO     | __main__:main:1379 - Adding repo to repos_for_merged_dataset
+2024-09-21 08:18:05.790 | INFO     | __main__:main:1391 - All GPUs
+2024-09-21 08:18:05.790 | INFO     | __main__:main:1627 - Starting the prover
+2024-09-21 08:18:05.790 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-21 08:18:05.790 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-21 08:18:05.790 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-21 08:18:06.082 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:18:06.082 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:18:08.279 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+2024-09-21 08:18:08.748 | INFO     | prover.proof_search_all_sorries:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-21 08:18:08.749 | INFO     | prover.proof_search_all_sorries:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-21 08:18:08.749 | INFO     | prover.proof_search_all_sorries:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/
+corpus.jsonl
+2024-09-21 08:18:08.749 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/corpus.jsonl
+2024-09-21 08:18:15.865 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-21 08:18:15.866 | INFO     | prover.proof_search_all_sorries:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/c
+orpus.jsonl
+2024-09-21 08:18:15.866 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████| 3589/3589 [05:35<00:00, 10.71it/s]
+2024-09-21 08:23:50.988 | INFO     | prover.proof_search_all_sorries:__init__:459 - Finished reindexing!
+2024-09-21 08:23:50.988 | INFO     | prover.proof_search_all_sorries:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-09-21 08:23:53,038 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=340592) [2024-09-21 08:24:30,766] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=340592) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=340592)   return torch.load(io.BytesIO(b))
+(pid=341101) [2024-09-21 08:24:41,736] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=341101) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=341101)   return torch.load(io.BytesIO(b))
+(pid=341367) [2024-09-21 08:24:52,399] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 08:24:55.346 | INFO     | __main__:save_progress:819 - Saving encountered theorems...
+2024-09-21 08:24:55.348 | INFO     | __main__:prove_sorry_theorems:910 - Finished attempting to re-prove sorry theorems
+2024-09-21 08:24:55.350 | INFO     | __main__:main:1668 - Finished searching for proofs of sorry theorems
+2024-09-21 08:24:55.350 | INFO     | __main__:main:1671 - Shutting down Ray after proving
+2024-09-21 08:24:58.653 | INFO     | __main__:main:1691 - Finished processing the repository
+2024-09-21 08:24:58.654 | INFO     | __main__:main:1693 - current epoch: 3
+2024-09-21 08:24:58.654 | INFO     | __main__:main:1363 - length of lean_git_repos: 12
+2024-09-21 08:24:58.654 | INFO     | __main__:main:1364 - i: 3
+2024-09-21 08:24:58.654 | INFO     | __main__:main:1370 - Main process
+2024-09-21 08:24:58.654 | INFO     | __main__:main:1371 - Using lambda = 0.0
+2024-09-21 08:24:58.654 | INFO     | __main__:main:1372 - Processing https://github.com/teorth/pfr
+2024-09-21 08:24:58.654 | INFO     | __main__:main:1379 - Adding repo to repos_for_merged_dataset
+2024-09-21 08:24:58.654 | INFO     | __main__:main:1391 - All GPUs
+2024-09-21 08:24:58.654 | INFO     | __main__:main:1627 - Starting the prover
+2024-09-21 08:24:58.654 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-21 08:24:58.654 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-21 08:24:58.655 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-21 08:24:58.925 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:24:58.925 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:25:00.824 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+2024-09-21 08:25:02.825 | INFO     | prover.proof_search_all_sorries:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-21 08:25:02.827 | INFO     | prover.proof_search_all_sorries:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-21 08:25:02.827 | INFO     | prover.proof_search_all_sorries:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+corpus.jsonl
+2024-09-21 08:25:02.827 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-21 08:25:10.911 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-21 08:25:10.911 | INFO     | prover.proof_search_all_sorries:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/c
+orpus.jsonl
+2024-09-21 08:25:10.911 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████| 3433/3433 [05:18<00:00, 10.78it/s]
+2024-09-21 08:30:29.486 | INFO     | prover.proof_search_all_sorries:__init__:459 - Finished reindexing!
+2024-09-21 08:30:29.486 | INFO     | prover.proof_search_all_sorries:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-09-21 08:30:31,469 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=376238) [2024-09-21 08:31:08,775] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=376238) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=376238)   return torch.load(io.BytesIO(b))
+(pid=376410) [2024-09-21 08:31:19,194] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=376410) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=376410)   return torch.load(io.BytesIO(b))
+(pid=376574) [2024-09-21 08:31:30,112] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 08:31:32.898 | INFO     | __main__:save_progress:819 - Saving encountered theorems...
+2024-09-21 08:31:32.901 | INFO     | __main__:prove_sorry_theorems:910 - Finished attempting to re-prove sorry theorems
+2024-09-21 08:31:32.903 | INFO     | __main__:main:1668 - Finished searching for proofs of sorry theorems
+2024-09-21 08:31:32.904 | INFO     | __main__:main:1671 - Shutting down Ray after proving
+2024-09-21 08:31:35.054 | INFO     | __main__:main:1691 - Finished processing the repository
+2024-09-21 08:31:35.054 | INFO     | __main__:main:1693 - current epoch: 4
+2024-09-21 08:31:35.054 | INFO     | __main__:main:1363 - length of lean_git_repos: 12
+2024-09-21 08:31:35.054 | INFO     | __main__:main:1364 - i: 4
+2024-09-21 08:31:35.054 | INFO     | __main__:main:1370 - Main process
+2024-09-21 08:31:35.054 | INFO     | __main__:main:1371 - Using lambda = 0.0
+2024-09-21 08:31:35.054 | INFO     | __main__:main:1372 - Processing https://github.com/lecopivo/SciLean
+2024-09-21 08:31:35.055 | INFO     | __main__:main:1379 - Adding repo to repos_for_merged_dataset
+2024-09-21 08:31:35.055 | INFO     | __main__:main:1391 - All GPUs
+2024-09-21 08:31:35.055 | INFO     | __main__:main:1627 - Starting the prover
+2024-09-21 08:31:35.055 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-21 08:31:35.055 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-21 08:31:35.055 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-21 08:31:35.295 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:31:35.295 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:31:37.120 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+2024-09-21 08:31:37.471 | INFO     | prover.proof_search_all_sorries:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-21 08:31:37.472 | INFO     | prover.proof_search_all_sorries:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-21 08:31:37.472 | INFO     | prover.proof_search_all_sorries:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655
+744/corpus.jsonl
+2024-09-21 08:31:37.472 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+2024-09-21 08:31:43.977 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-21 08:31:43.977 | INFO     | prover.proof_search_all_sorries:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626557
+44/corpus.jsonl
+2024-09-21 08:31:43.977 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████| 4054/4054 [05:32<00:00, 12.21it/s]
+2024-09-21 08:37:15.980 | INFO     | prover.proof_search_all_sorries:__init__:459 - Finished reindexing!
+2024-09-21 08:37:15.980 | INFO     | prover.proof_search_all_sorries:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-09-21 08:37:18,508 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=411845) [2024-09-21 08:37:55,438] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=411845) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=411845)   return torch.load(io.BytesIO(b))
+(pid=412014) [2024-09-21 08:38:06,240] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=412014) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=412014)   return torch.load(io.BytesIO(b))
+(pid=412210) [2024-09-21 08:38:16,532] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 08:38:18.756 | INFO     | __main__:save_progress:819 - Saving encountered theorems...
+2024-09-21 08:38:18.758 | INFO     | __main__:prove_sorry_theorems:910 - Finished attempting to re-prove sorry theorems
+2024-09-21 08:38:18.760 | INFO     | __main__:main:1668 - Finished searching for proofs of sorry theorems
+2024-09-21 08:38:18.760 | INFO     | __main__:main:1671 - Shutting down Ray after proving
+2024-09-21 08:38:22.111 | INFO     | __main__:main:1691 - Finished processing the repository
+2024-09-21 08:38:22.112 | INFO     | __main__:main:1693 - current epoch: 5
+2024-09-21 08:38:22.112 | INFO     | __main__:main:1363 - length of lean_git_repos: 12
+2024-09-21 08:38:22.112 | INFO     | __main__:main:1364 - i: 5
+2024-09-21 08:38:22.112 | INFO     | __main__:main:1370 - Main process
+2024-09-21 08:38:22.112 | INFO     | __main__:main:1371 - Using lambda = 0.0
+2024-09-21 08:38:22.112 | INFO     | __main__:main:1372 - Processing https://github.com/google-deepmind/debate
+2024-09-21 08:38:22.112 | INFO     | __main__:main:1379 - Adding repo to repos_for_merged_dataset
+2024-09-21 08:38:22.112 | INFO     | __main__:main:1391 - All GPUs
+2024-09-21 08:38:22.112 | INFO     | __main__:main:1627 - Starting the prover
+2024-09-21 08:38:22.112 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-21 08:38:22.113 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-21 08:38:22.113 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-21 08:38:22.317 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:38:22.317 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:38:24.511 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+2024-09-21 08:38:24.839 | INFO     | prover.proof_search_all_sorries:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-21 08:38:24.840 | INFO     | prover.proof_search_all_sorries:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-21 08:38:24.840 | INFO     | prover.proof_search_all_sorries:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_debate_7fb39251b705797ee54e08c96177fabd29a5b5
+a3/corpus.jsonl
+2024-09-21 08:38:24.840 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_debate_7fb39251b705797ee54e08c96177fabd29a5b5a3/corpus.jsonl
+2024-09-21 08:38:30.691 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-21 08:38:30.692 | INFO     | prover.proof_search_all_sorries:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_debate_7fb39251b705797ee54e08c96177fabd29a5b5a
+3/corpus.jsonl
+2024-09-21 08:38:30.692 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████| 3240/3240 [04:58<00:00, 10.86it/s]
+2024-09-21 08:43:28.924 | INFO     | prover.proof_search_all_sorries:__init__:459 - Finished reindexing!
+2024-09-21 08:43:28.924 | INFO     | prover.proof_search_all_sorries:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-09-21 08:43:30,957 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=447068) [2024-09-21 08:44:05,866] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=447068) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=447068)   return torch.load(io.BytesIO(b))
+(pid=447226) [2024-09-21 08:44:14,879] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=447226) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=447226)   return torch.load(io.BytesIO(b))
+(pid=447389) [2024-09-21 08:44:24,577] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 08:44:25.193 | INFO     | __main__:save_progress:819 - Saving encountered theorems...
+2024-09-21 08:44:25.195 | INFO     | __main__:prove_sorry_theorems:910 - Finished attempting to re-prove sorry theorems
+2024-09-21 08:44:25.197 | INFO     | __main__:main:1668 - Finished searching for proofs of sorry theorems
+2024-09-21 08:44:25.197 | INFO     | __main__:main:1671 - Shutting down Ray after proving
+2024-09-21 08:44:27.299 | INFO     | __main__:main:1691 - Finished processing the repository
+2024-09-21 08:44:27.299 | INFO     | __main__:main:1693 - current epoch: 6
+2024-09-21 08:44:27.299 | INFO     | __main__:main:1363 - length of lean_git_repos: 12
+2024-09-21 08:44:27.299 | INFO     | __main__:main:1364 - i: 6
+2024-09-21 08:44:27.300 | INFO     | __main__:main:1370 - Main process
+2024-09-21 08:44:27.300 | INFO     | __main__:main:1371 - Using lambda = 0.0
+2024-09-21 08:44:27.300 | INFO     | __main__:main:1372 - Processing https://github.com/eric-wieser/lean-matrix-cookbook
+2024-09-21 08:44:27.300 | INFO     | __main__:main:1379 - Adding repo to repos_for_merged_dataset
+2024-09-21 08:44:27.300 | INFO     | __main__:main:1391 - All GPUs
+2024-09-21 08:44:27.300 | INFO     | __main__:main:1627 - Starting the prover
+2024-09-21 08:44:27.300 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-21 08:44:27.300 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-21 08:44:27.300 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-21 08:44:27.578 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:44:27.578 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:44:29.793 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+2024-09-21 08:44:30.115 | INFO     | prover.proof_search_all_sorries:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-21 08:44:30.116 | INFO     | prover.proof_search_all_sorries:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-21 08:44:30.116 | INFO     | prover.proof_search_all_sorries:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024
+b58e7882f564669f/corpus.jsonl
+2024-09-21 08:44:30.117 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f/corpus.json
+l
+2024-09-21 08:44:36.166 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-21 08:44:36.166 | INFO     | prover.proof_search_all_sorries:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b
+58e7882f564669f/corpus.jsonl
+2024-09-21 08:44:36.166 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████| 3197/3197 [04:53<00:00, 10.91it/s]
+2024-09-21 08:49:29.214 | INFO     | prover.proof_search_all_sorries:__init__:459 - Finished reindexing!
+2024-09-21 08:49:29.214 | INFO     | prover.proof_search_all_sorries:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-09-21 08:49:31,302 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=481953) [2024-09-21 08:50:07,414] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=481953) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=481953)   return torch.load(io.BytesIO(b))
+(pid=482110) [2024-09-21 08:50:16,648] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=482110) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=482110)   return torch.load(io.BytesIO(b))
+(pid=482289) [2024-09-21 08:50:27,478] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 08:50:28.758 | INFO     | __main__:save_progress:819 - Saving encountered theorems...
+2024-09-21 08:50:28.760 | INFO     | __main__:prove_sorry_theorems:910 - Finished attempting to re-prove sorry theorems
+2024-09-21 08:50:28.761 | INFO     | __main__:main:1668 - Finished searching for proofs of sorry theorems
+2024-09-21 08:50:28.762 | INFO     | __main__:main:1671 - Shutting down Ray after proving
+2024-09-21 08:50:30.903 | INFO     | __main__:main:1691 - Finished processing the repository
+2024-09-21 08:50:30.904 | INFO     | __main__:main:1693 - current epoch: 7
+2024-09-21 08:50:30.904 | INFO     | __main__:main:1363 - length of lean_git_repos: 12
+2024-09-21 08:50:30.904 | INFO     | __main__:main:1364 - i: 7
+2024-09-21 08:50:30.904 | INFO     | __main__:main:1370 - Main process
+2024-09-21 08:50:30.904 | INFO     | __main__:main:1371 - Using lambda = 0.0
+2024-09-21 08:50:30.904 | INFO     | __main__:main:1372 - Processing https://github.com/leanprover-community/con-nf
+2024-09-21 08:50:30.904 | INFO     | __main__:main:1379 - Adding repo to repos_for_merged_dataset
+2024-09-21 08:50:30.904 | INFO     | __main__:main:1391 - All GPUs
+2024-09-21 08:50:30.904 | INFO     | __main__:main:1627 - Starting the prover
+2024-09-21 08:50:30.905 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-21 08:50:30.905 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-21 08:50:30.905 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-21 08:50:31.138 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:50:31.138 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:50:32.959 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+2024-09-21 08:50:33.281 | INFO     | prover.proof_search_all_sorries:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-21 08:50:33.282 | INFO     | prover.proof_search_all_sorries:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-21 08:50:33.282 | INFO     | prover.proof_search_all_sorries:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_con-nf_00bdc85ba7d486a9e544a0806a1018dd06fa38
+56/corpus.jsonl
+2024-09-21 08:50:33.282 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_con-nf_00bdc85ba7d486a9e544a0806a1018dd06fa3856/corpus.jsonl
+2024-09-21 08:50:36.057 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-21 08:50:36.058 | INFO     | prover.proof_search_all_sorries:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_con-nf_00bdc85ba7d486a9e544a0806a1018dd06fa385
+6/corpus.jsonl
+2024-09-21 08:50:36.058 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████| 2006/2006 [02:47<00:00, 11.96it/s]
+2024-09-21 08:53:23.736 | INFO     | prover.proof_search_all_sorries:__init__:459 - Finished reindexing!
+2024-09-21 08:53:23.736 | INFO     | prover.proof_search_all_sorries:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-09-21 08:53:25,800 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=515951) [2024-09-21 08:53:57,640] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=515951) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=515951)   return torch.load(io.BytesIO(b))
+(pid=516096) [2024-09-21 08:54:03,061] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 08:54:05.208 | INFO     | __main__:save_progress:819 - Saving encountered theorems...
+2024-09-21 08:54:05.209 | INFO     | __main__:prove_sorry_theorems:910 - Finished attempting to re-prove sorry theorems
+2024-09-21 08:54:05.211 | INFO     | __main__:main:1668 - Finished searching for proofs of sorry theorems
+2024-09-21 08:54:05.211 | INFO     | __main__:main:1671 - Shutting down Ray after proving
+2024-09-21 08:54:08.113 | INFO     | __main__:main:1691 - Finished processing the repository
+2024-09-21 08:54:08.114 | INFO     | __main__:main:1693 - current epoch: 8
+2024-09-21 08:54:08.114 | INFO     | __main__:main:1363 - length of lean_git_repos: 12
+2024-09-21 08:54:08.114 | INFO     | __main__:main:1364 - i: 8
+2024-09-21 08:54:08.114 | INFO     | __main__:main:1370 - Main process
+2024-09-21 08:54:08.114 | INFO     | __main__:main:1371 - Using lambda = 0.0
+2024-09-21 08:54:08.114 | INFO     | __main__:main:1372 - Processing https://github.com/FormalizedFormalLogic/Foundation
+2024-09-21 08:54:08.114 | INFO     | __main__:main:1379 - Adding repo to repos_for_merged_dataset
+2024-09-21 08:54:08.114 | INFO     | __main__:main:1391 - All GPUs
+2024-09-21 08:54:08.114 | INFO     | __main__:main:1627 - Starting the prover
+2024-09-21 08:54:08.114 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-21 08:54:08.114 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-21 08:54:08.114 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-21 08:54:08.344 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:54:08.344 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:54:10.192 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+2024-09-21 08:54:10.514 | INFO     | prover.proof_search_all_sorries:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-21 08:54:10.515 | INFO     | prover.proof_search_all_sorries:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-21 08:54:10.515 | INFO     | prover.proof_search_all_sorries:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_Foundation_d5fe5d057a90a0703a745cdc318a1b6621
+490c21/corpus.jsonl
+2024-09-21 08:54:10.515 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_Foundation_d5fe5d057a90a0703a745cdc318a1b6621490c21/corpus.jsonl
+2024-09-21 08:54:12.752 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-21 08:54:12.753 | INFO     | prover.proof_search_all_sorries:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_Foundation_d5fe5d057a90a0703a745cdc318a1b66214
+90c21/corpus.jsonl
+2024-09-21 08:54:12.753 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████| 1812/1812 [02:33<00:00, 11.81it/s]
+2024-09-21 08:56:46.132 | INFO     | prover.proof_search_all_sorries:__init__:459 - Finished reindexing!
+2024-09-21 08:56:46.132 | INFO     | prover.proof_search_all_sorries:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-09-21 08:56:48,329 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=549524) [2024-09-21 08:57:20,370] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=549524) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=549524)   return torch.load(io.BytesIO(b))
+(pid=549658) [2024-09-21 08:57:25,808] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 08:57:28.464 | INFO     | __main__:save_progress:819 - Saving encountered theorems...
+2024-09-21 08:57:28.467 | INFO     | __main__:prove_sorry_theorems:910 - Finished attempting to re-prove sorry theorems
+2024-09-21 08:57:28.469 | INFO     | __main__:main:1668 - Finished searching for proofs of sorry theorems
+2024-09-21 08:57:28.469 | INFO     | __main__:main:1671 - Shutting down Ray after proving
+2024-09-21 08:57:30.557 | INFO     | __main__:main:1691 - Finished processing the repository
+2024-09-21 08:57:30.558 | INFO     | __main__:main:1693 - current epoch: 9
+2024-09-21 08:57:30.558 | INFO     | __main__:main:1363 - length of lean_git_repos: 12
+2024-09-21 08:57:30.558 | INFO     | __main__:main:1364 - i: 9
+2024-09-21 08:57:30.558 | INFO     | __main__:main:1370 - Main process
+2024-09-21 08:57:30.558 | INFO     | __main__:main:1371 - Using lambda = 0.0
+2024-09-21 08:57:30.558 | INFO     | __main__:main:1372 - Processing https://github.com/loganrjmurphy/LeanEuclid
+2024-09-21 08:57:30.558 | INFO     | __main__:main:1379 - Adding repo to repos_for_merged_dataset
+2024-09-21 08:57:30.558 | INFO     | __main__:main:1391 - All GPUs
+2024-09-21 08:57:30.558 | INFO     | __main__:main:1627 - Starting the prover
+2024-09-21 08:57:30.558 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-21 08:57:30.559 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-21 08:57:30.559 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-21 08:57:30.800 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:57:30.801 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 08:57:32.823 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+2024-09-21 08:57:33.140 | INFO     | prover.proof_search_all_sorries:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-21 08:57:33.141 | INFO     | prover.proof_search_all_sorries:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-21 08:57:33.141 | INFO     | prover.proof_search_all_sorries:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_LeanEuclid_f1912c3090eb82820575758efc31e40b9d
+b86bb8/corpus.jsonl
+2024-09-21 08:57:33.141 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_LeanEuclid_f1912c3090eb82820575758efc31e40b9db86bb8/corpus.jsonl
+2024-09-21 08:57:35.142 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-21 08:57:35.142 | INFO     | prover.proof_search_all_sorries:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_LeanEuclid_f1912c3090eb82820575758efc31e40b9db
+86bb8/corpus.jsonl
+2024-09-21 08:57:35.142 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████| 1268/1268 [01:59<00:00, 10.63it/s]
+2024-09-21 08:59:34.383 | INFO     | prover.proof_search_all_sorries:__init__:459 - Finished reindexing!
+2024-09-21 08:59:34.383 | INFO     | prover.proof_search_all_sorries:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-09-21 08:59:36,469 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=582889) [2024-09-21 09:00:07,239] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=582889) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=582889)   return torch.load(io.BytesIO(b))
+2024-09-21 09:00:13.041 | INFO     | __main__:save_progress:819 - Saving encountered theorems...
+2024-09-21 09:00:13.043 | INFO     | __main__:prove_sorry_theorems:910 - Finished attempting to re-prove sorry theorems
+2024-09-21 09:00:13.044 | INFO     | __main__:main:1668 - Finished searching for proofs of sorry theorems
+2024-09-21 09:00:13.044 | INFO     | __main__:main:1671 - Shutting down Ray after proving
+(pid=583036) [2024-09-21 09:00:11,915] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 09:00:15.182 | INFO     | __main__:main:1691 - Finished processing the repository
+2024-09-21 09:00:15.182 | INFO     | __main__:main:1693 - current epoch: 10
+2024-09-21 09:00:15.183 | INFO     | __main__:main:1363 - length of lean_git_repos: 12
+2024-09-21 09:00:15.183 | INFO     | __main__:main:1364 - i: 10
+2024-09-21 09:00:15.183 | INFO     | __main__:main:1370 - Main process
+2024-09-21 09:00:15.183 | INFO     | __main__:main:1371 - Using lambda = 0.0
+2024-09-21 09:00:15.183 | INFO     | __main__:main:1372 - Processing https://github.com/siddhartha-gadgil/Saturn
+2024-09-21 09:00:15.183 | INFO     | __main__:main:1379 - Adding repo to repos_for_merged_dataset
+2024-09-21 09:00:15.183 | INFO     | __main__:main:1391 - All GPUs
+2024-09-21 09:00:15.183 | INFO     | __main__:main:1627 - Starting the prover
+2024-09-21 09:00:15.183 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-21 09:00:15.183 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-21 09:00:15.183 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-21 09:00:15.405 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 09:00:15.405 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 09:00:17.341 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+2024-09-21 09:00:17.666 | INFO     | prover.proof_search_all_sorries:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-21 09:00:17.667 | INFO     | prover.proof_search_all_sorries:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-21 09:00:17.667 | INFO     | prover.proof_search_all_sorries:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a4
+2a/corpus.jsonl
+2024-09-21 09:00:17.667 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a/corpus.jsonl
+2024-09-21 09:00:18.763 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-21 09:00:18.763 | INFO     | prover.proof_search_all_sorries:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42
+a/corpus.jsonl
+2024-09-21 09:00:18.763 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|█████████████████████████████████████████████████████████████████| 1079/1079 [01:43<00:00, 10.39it/s]
+2024-09-21 09:02:02.632 | INFO     | prover.proof_search_all_sorries:__init__:459 - Finished reindexing!
+2024-09-21 09:02:02.632 | INFO     | prover.proof_search_all_sorries:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-09-21 09:02:04,689 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=615588) [2024-09-21 09:02:35,393] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=615588) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the
+ user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experiment
+al feature.
+(ProverActor pid=615588)   return torch.load(io.BytesIO(b))
+2024-09-21 09:02:40.751 | INFO     | __main__:save_progress:819 - Saving encountered theorems...
+2024-09-21 09:02:40.753 | INFO     | __main__:prove_sorry_theorems:910 - Finished attempting to re-prove sorry theorems
+2024-09-21 09:02:40.755 | INFO     | __main__:main:1668 - Finished searching for proofs of sorry theorems
+2024-09-21 09:02:40.755 | INFO     | __main__:main:1671 - Shutting down Ray after proving
+(pid=615895) [2024-09-21 09:02:39,836] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 09:02:42.684 | INFO     | __main__:main:1691 - Finished processing the repository
+2024-09-21 09:02:42.684 | INFO     | __main__:main:1693 - current epoch: 11
+2024-09-21 09:02:42.684 | INFO     | __main__:main:1363 - length of lean_git_repos: 12
+2024-09-21 09:02:42.684 | INFO     | __main__:main:1364 - i: 11
+2024-09-21 09:02:42.684 | INFO     | __main__:main:1370 - Main process
+2024-09-21 09:02:42.684 | INFO     | __main__:main:1371 - Using lambda = 0.0
+2024-09-21 09:02:42.685 | INFO     | __main__:main:1372 - Processing https://github.com/digama0/lean4lean
+2024-09-21 09:02:42.685 | INFO     | __main__:main:1379 - Adding repo to repos_for_merged_dataset
+2024-09-21 09:02:42.685 | INFO     | __main__:main:1391 - All GPUs
+2024-09-21 09:02:42.685 | INFO     | __main__:main:1627 - Starting the prover
+2024-09-21 09:02:42.685 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-21 09:02:42.685 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-21 09:02:42.685 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-21 09:02:42.960 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 09:02:42.960 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f_lambda_0.1_
+epoch=13-Recall@10_val=76.62.ckpt
+2024-09-21 09:02:45.108 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+2024-09-21 09:02:45.416 | INFO     | prover.proof_search_all_sorries:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-21 09:02:45.418 | INFO     | prover.proof_search_all_sorries:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-21 09:02:45.418 | INFO     | prover.proof_search_all_sorries:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef212
+76e0f/corpus.jsonl
+2024-09-21 09:02:45.418 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f/corpus.jsonl
+2024-09-21 09:02:46.322 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-21 09:02:46.322 | INFO     | prover.proof_search_all_sorries:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef2127
+6e0f/corpus.jsonl
+2024-09-21 09:02:46.322 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|███████████████████████████████████████████████████████████████████| 710/710 [01:10<00:00, 10.01it/s]
+2024-09-21 09:03:57.236 | INFO     | prover.proof_search_all_sorries:__init__:459 - Finished reindexing!
+2024-09-21 09:03:57.236 | INFO     | prover.proof_search_all_sorries:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-09-21 09:03:59,354 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=648486) [2024-09-21 09:04:29,189] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 09:04:30.780 | INFO     | __main__:save_progress:819 - Saving encountered theorems...
+2024-09-21 09:04:30.782 | INFO     | __main__:prove_sorry_theorems:910 - Finished attempting to re-prove sorry theorems
+2024-09-21 09:04:30.784 | INFO     | __main__:main:1668 - Finished searching for proofs of sorry theorems
+2024-09-21 09:04:30.784 | INFO     | __main__:main:1671 - Shutting down Ray after proving
+2024-09-21 09:04:34.032 | INFO     | __main__:main:1691 - Finished processing the repository
+2024-09-21 09:04:34.032 | INFO     | __main__:main:1693 - current epoch: 12
+2024-09-21 09:04:34.033 | INFO     | __main__:main:1363 - length of lean_git_repos: 12
+2024-09-21 09:04:34.033 | INFO     | __main__:main:1364 - i: 12
+2024-09-21 09:04:34.033 | INFO     | __main__:main:2073 - An error occurred: list index out of range
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main3_all_sorries.py", line 1365, in main
+    repo = lean_git_repos[i]
+IndexError: list index out of range
+(base) yingzi_ma@compute-permanent-node-1021:~/lean_project/ReProver$ slurmstepd: error: *** STEP 41073.0 ON compute-permanent-node-1021 CANCELLED AT 2024-09-21T12:00:56 DUE TO TIME LIMIT ***
+srun: error: compute-permanent-node-1021: task 0: Killed
+srun: Force Terminated StepId=41073.0
+(base) yingzi_ma@cais-login-0:~/lean_project/ReProver$ cd ../datasets_PT_single_repo_no_ewc_curriculum_abl3
+(base) yingzi_ma@cais-login-0:~/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3$ ls
+PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566
+merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147
+merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566
+merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744
+merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091
+merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d
+merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf5
+(base) yingzi_ma@cais-login-0:~/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3$ vim repo_info_compatible.json
+(base) yingzi_ma@cais-login-0:~/lean_project/datasets_PT_single_repo_no_ewc_curriculum_abl3$ c
+d ..
+(base) yingzi_ma@cais-login-0:~/lean_project$ cd checkpoints_PT_single_repo_no_ewc_curriculum_abl3
+(base) yingzi_ma@cais-login-0:~/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_abl3$ ls
+'merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091_lambda_0.1_epoch=0-Recall@10_val=59.00.ckpt'
+(base) yingzi_ma@cais-login-0:~/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_ab
+(base) yingzi_ma@cais-login-0:~/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_abl3$
+

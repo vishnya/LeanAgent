@@ -1,0 +1,982 @@
+[362/1165] Building Aesop.Builder.Unfold
+[362/1165] Building Aesop.Builder.Tactic
+[365/1165] Building Aesop.Builder.Constructors
+[366/1165] Building Aesop.Tree.Traversal
+[366/1165] Building Aesop.Tree.RunMetaM
+[369/1165] Building Aesop.Tree.State
+[370/1165] Building Aesop.Builder.Default
+[371/1165] Building Aesop.Tree.TreeM
+[371/1165] Building Aesop.Tree.Tracing
+[372/1165] Building Aesop.Tree.ExtractScript
+[372/1165] Building Aesop.Tree.Free
+[372/1165] Building Aesop.Tree.AddRapp
+[374/1165] Building Aesop.Builder
+[375/1165] Building Aesop.Tree.Check
+[380/1165] Building Std.Data.RBMap
+[381/1165] Building Aesop.Tree.ExtractProof
+[382/1165] Building Aesop.Search.Expansion.Simp
+[382/1165] Building Aesop.Frontend.RuleExpr
+[382/1165] Building Aesop.Frontend.Extension.Init
+[384/1165] Building Aesop.Frontend.Extension
+[387/1165] Building Aesop.Tree
+[389/1165] Building Aesop.Search.Queue.Class
+[390/1165] Building Aesop.Search.Queue
+[390/1165] Building Aesop.Search.SearchM
+[392/1165] Building Std.Data.Array
+[392/1165] Building Std.Data.ByteArray
+[392/1165] Building Std.Data.HashMap.WF
+[392/1165] Building Std.Data.HashMap.Lemmas
+[393/1165] Building Std.Data.String
+[394/1165] Building Aesop.Frontend.Attribute
+[398/1165] Building Aesop.Search.RuleSelection
+[399/1165] Building Aesop.BuiltinRules.Intros
+[399/1165] Building Aesop.BuiltinRules.Assumption
+[399/1165] Building Aesop.BuiltinRules.Split
+[399/1165] Building Aesop.Frontend.Tactic
+[399/1165] Building Aesop.BuiltinRules.DestructProducts
+[399/1165] Building Aesop.BuiltinRules.ApplyHyps
+[399/1165] Building Aesop.BuiltinRules.Subst
+[399/1165] Building Aesop.BuiltinRules.Ext
+[399/1165] Building Aesop.Frontend.Command
+[400/1165] Building Aesop.Search.Expansion.Norm
+[409/1165] Building Aesop.Frontend
+[411/1165] Building Aesop.BuiltinRules
+[412/1165] Building Aesop.Search.Expansion
+[414/1165] Building Std.Data.HashMap
+[416/1165] Building Aesop.Search.ExpandSafePrefix
+[417/1165] Building Aesop.Search.Main
+[418/1165] Building Std.Tactic.Omega
+[419/1165] Building Std.Data.Nat.Bitwise
+[419/1165] Building Std.Data.Int.Order
+[419/1165] Building Std.Data.Fin.Lemmas
+[420/1165] Building Mathlib.Init.Data.Int.Basic
+[420/1165] Building Std.Data.Int.DivMod
+[421/1165] Building Std.Data.BitVec.Basic
+[421/1165] Building Std.Data.Nat
+[425/1165] Building Std.Data.Fin
+[425/1165] Building Std.Data.BitVec.Lemmas
+[425/1165] Building Std.Data.List.Pairwise
+[427/1165] Building Std.Data.Int.Gcd
+[427/1165] Building Std.Data.Rat.Basic
+[428/1165] Building Std.Data.Int.Lemmas
+[429/1165] Building Std.Data.Int
+[430/1165] Building Std.Data.List.Perm
+[431/1165] Building Std.Data.BitVec.Folds
+[433/1165] Building Mathlib.Data.Rat.Init
+[433/1165] Building Std.Data.Rat.Lemmas
+[433/1165] Building Std.Classes.RatCast
+[433/1165] Building Mathlib.Lean.Expr.Basic
+[434/1165] Building Std.Data.BitVec.Bitblast
+[437/1165] Building Aesop.Main
+[438/1165] Building Std.Data.BitVec
+[440/1165] Building Mathlib.Tactic.LibrarySearch
+[440/1165] Building Mathlib.Tactic.Cases
+[440/1165] Building Mathlib.Tactic.Simps.Basic
+[440/1165] Building Mathlib.Tactic.Core
+[440/1165] Building Mathlib.Tactic.RenameBVar
+[440/1165] Building Mathlib.Tactic.GeneralizeProofs
+[441/1165] Building Aesop
+[442/1165] Building Std.Data.Rat
+[443/1165] Building Mathlib.Tactic.SetLike
+[443/1165] Building Mathlib.Data.Finset.Attr
+[449/1165] Building Mathlib.Tactic.SplitIfs
+[449/1165] Building Mathlib.Tactic.Propose
+[449/1165] Building Mathlib.Tactic.WLOG
+[450/1165] Building Std.Data.List
+[451/1165] Building Std
+[452/1165] Building Mathlib.Init.Data.List.Instances
+[452/1165] Building Mathlib.Init.Data.List.Lemmas
+[454/1165] Building Mathlib.Tactic.Observe
+[456/1165] Building Mathlib.Tactic.TypeStar
+[459/1165] Building Mathlib.Data.Bracket
+[459/1165] Building Mathlib.Tactic.Inhabit
+[459/1165] Building Mathlib.Tactic.MkIffOfInductiveProp
+[459/1165] Building Mathlib.Tactic.Basic
+[459/1165] Building Mathlib.Data.Option.Defs
+[459/1165] Building Mathlib.Data.List.TFAE
+[461/1165] Building Mathlib.Tactic.TFAE
+[465/1165] Building Mathlib.Init.Order.Defs
+[466/1165] Building Mathlib.Tactic.ExtractLets
+[466/1165] Building Mathlib.Tactic.RSuffices
+[466/1165] Building Mathlib.Tactic.DefEqTransformations
+[466/1165] Building Mathlib.Tactic.Lift
+[466/1165] Building Mathlib.Order.Notation
+[466/1165] Building Mathlib.Init.Function
+[470/1165] Building Mathlib.Init.Data.Int.Order
+[470/1165] Building Mathlib.Init.Order.LinearOrder
+[470/1165] Building Mathlib.Tactic.GCongr.Core
+[472/1165] Building Mathlib.Tactic.ToAdditive
+[473/1165] Building Mathlib.Logic.Nontrivial.Defs
+[473/1165] Building Mathlib.Data.Prod.PProd
+[473/1165] Building Mathlib.Control.Basic
+[473/1165] Building Mathlib.Data.Option.NAry
+[473/1165] Building Mathlib.Logic.Basic
+[473/1165] Building Mathlib.Logic.Relator
+[483/1165] Building Mathlib.Tactic.Rewrites
+[483/1165] Building Mathlib.Control.Functor
+[484/1165] Building Mathlib.Tactic.TermCongr
+[484/1165] Building Mathlib.Tactic.PushNeg
+[484/1165] Building Mathlib.Tactic.Tauto
+[486/1165] Building Mathlib.Control.Traversable.Basic
+[486/1165] Building Mathlib.Data.List.Defs
+[491/1165] Building Mathlib.Init.ZeroOne
+[492/1165] Building Mathlib.Tactic.ByContra
+[492/1165] Building Mathlib.Tactic.Contrapose
+[493/1165] Building Mathlib.Algebra.NeZero
+[493/1165] Building Mathlib.Init.Data.Nat.Basic
+[493/1165] Building Mathlib.Logic.Nonempty
+[493/1165] Building Mathlib.Algebra.Group.Defs
+[493/1165] Building Mathlib.Data.Int.Defs
+[496/1165] Building Mathlib.Init.Data.Nat.Lemmas
+[499/1165] Building Mathlib.Logic.Function.Basic
+[500/1165] Building Mathlib.Tactic.Congrm
+[501/1165] Building Mathlib.Tactic.Widget.Congrm
+[502/1165] Building Mathlib.Data.Bool.Basic
+[504/1165] Building Mathlib.Data.Subtype
+[504/1165] Building Mathlib.Data.FunLike.Basic
+[504/1165] Building Mathlib.Tactic.Choose
+[504/1165] Building Mathlib.Logic.Function.Conjugate
+[504/1165] Building Mathlib.Data.Sum.Basic
+[504/1165] Building Mathlib.Logic.IsEmpty
+[504/1165] Building Mathlib.Data.Nat.Defs
+[504/1165] Building Mathlib.Data.Sigma.Basic
+[504/1165] Building Mathlib.Data.Prod.Basic
+[504/1165] Building Mathlib.Logic.Relation
+[505/1165] Building Mathlib.Algebra.Group.Commutator
+[505/1165] Building Mathlib.Algebra.Group.Basic
+[505/1165] Building Mathlib.Control.Applicative
+[505/1165] Building Mathlib.Data.List.BigOperators.Defs
+[505/1165] Building Mathlib.Algebra.Group.Semiconj.Defs
+[505/1165] Building Mathlib.Data.Nat.Cast.Defs
+[505/1165] Building Mathlib.Algebra.Invertible.Defs
+[505/1165] Building Mathlib.Algebra.GroupWithZero.Defs
+[506/1165] Building Mathlib.Init.Data.Nat.Bitwise
+[507/1165] Building Mathlib.Data.FunLike.Embedding
+[508/1165] Building Mathlib.Logic.Unique
+[508/1165] Building Mathlib.Data.Option.Basic
+[509/1165] Building Mathlib.Logic.Function.Iterate
+[510/1165] Building Mathlib.Data.FunLike.Equiv
+[513/1165] Building Mathlib.Init.Data.Int.Bitwise
+[513/1165] Building Mathlib.Data.Num.Basic
+[514/1165] Building Mathlib.Data.Set.Defs
+[514/1165] Building Mathlib.Tactic.IrreducibleDef
+[515/1165] Building Mathlib.Algebra.GroupWithZero.NeZero
+[523/1165] Building Mathlib.Data.Quot
+[525/1165] Building Mathlib.Algebra.Invertible.GroupWithZero
+[526/1165] Building Mathlib.Logic.Nontrivial.Basic
+[526/1165] Building Mathlib.Order.Basic
+[527/1165] Building Mathlib.Algebra.Group.Pi.Basic
+[529/1165] Building Mathlib.Data.Nat.Cast.NeZero
+[529/1165] Building Mathlib.Data.Int.Cast.Defs
+[532/1165] Building Mathlib.Lean.Expr.ExtraRecognizers
+[532/1165] Building Mathlib.Order.SetNotation
+[536/1165] Building Mathlib.Tactic.Nontriviality.Core
+[537/1165] Building Mathlib.Algebra.Ring.Defs
+[537/1165] Building Mathlib.Algebra.CharZero.Defs
+[539/1165] Building Mathlib.Logic.Equiv.Defs
+[540/1165] Building Mathlib.Init.Classical
+[540/1165] Building Mathlib.Tactic.Common
+[541/1165] Building Mathlib.Algebra.Group.Commute.Defs
+[542/1165] Building Mathlib.Algebra.Quotient
+[542/1165] Building Mathlib.Algebra.Group.WithOne.Defs
+[542/1165] Building Mathlib.Logic.Pairwise
+[544/1165] Building Mathlib.Tactic.Nontriviality
+[548/1165] Building Mathlib.Algebra.Ring.Semiconj
+[548/1165] Building Mathlib.Algebra.Field.Defs
+[551/1165] Building Mathlib.Algebra.Group.Hom.Defs
+[553/1165] Building Mathlib.Algebra.Field.IsField
+[554/1165] Building Mathlib.Algebra.Group.Semiconj.Basic
+[554/1165] Building Mathlib.Data.Int.Cast.Basic
+[556/1165] Building Mathlib.Control.EquivFunctor
+[556/1165] Building Mathlib.Data.Finite.Defs
+[556/1165] Building Mathlib.Control.Monad.Basic
+[556/1165] Building Mathlib.Algebra.Opposites
+[556/1165] Building Mathlib.Logic.Equiv.Basic
+[557/1165] Building Mathlib.Algebra.Group.Commute.Basic
+[557/1165] Building Mathlib.Logic.Small.Defs
+[558/1165] Building Mathlib.Algebra.Group.InjSurj
+[559/1165] Building Mathlib.Data.Tree
+[559/1165] Building Mathlib.Order.RelClasses
+[559/1165] Building Mathlib.Order.Synonym
+[559/1165] Building Mathlib.Order.ULift
+[559/1165] Building Mathlib.Tactic.Zify
+[559/1165] Building Mathlib.Data.PNat.Defs
+[559/1165] Building Mathlib.Algebra.Order.ZeroLEOne
+[560/1165] Building Mathlib.Algebra.GroupPower.Basic
+[562/1165] Building Mathlib.Logic.Equiv.Option
+[563/1165] Building Mathlib.Data.Countable.Defs
+[569/1165] Building Mathlib.Order.Max
+[569/1165] Building Mathlib.Order.Compare
+[569/1165] Building Mathlib.Algebra.Group.OrderSynonym
+[575/1165] Building Mathlib.Algebra.GroupWithZero.Basic
+[575/1165] Building Mathlib.Algebra.Ring.OrderSynonym
+[576/1165] Building Mathlib.Data.Sigma.Lex
+[577/1165] Building Mathlib.Order.Monotone.Basic
+[580/1165] Building Mathlib.Logic.Embedding.Basic
+[580/1165] Building Mathlib.Data.ULift
+[581/1165] Building Mathlib.Algebra.GroupWithZero.InjSurj
+[584/1165] Building Mathlib.Algebra.Group.Commute.Hom
+[584/1165] Building Mathlib.Algebra.GroupWithZero.Hom
+[584/1165] Building Mathlib.Algebra.Group.TypeTags
+[584/1165] Building Mathlib.Algebra.Ring.Basic
+[585/1165] Building Mathlib.Algebra.GroupPower.Hom
+[585/1165] Building Mathlib.Algebra.Divisibility.Basic
+[585/1165] Building Mathlib.Algebra.Group.Units
+[587/1165] Building Mathlib.Order.Iterate
+[587/1165] Building Mathlib.Order.Lattice
+[587/1165] Building Mathlib.Algebra.CovariantAndContravariant
+[589/1165] Building Mathlib.Algebra.Ring.InjSurj
+[591/1165] Building Mathlib.Algebra.Group.Hom.Basic
+[592/1165] Building Mathlib.Algebra.Group.Embedding
+[592/1165] Building Mathlib.Order.RelIso.Basic
+[593/1165] Building Mathlib.Algebra.Ring.Hom.Defs
+[594/1165] Building Mathlib.Algebra.EuclideanDomain.Defs
+[596/1165] Building Mathlib.Data.Nat.Basic
+[596/1165] Building Mathlib.Data.Int.Basic
+[596/1165] Building Mathlib.GroupTheory.GroupAction.Defs
+[597/1165] Building Mathlib.Algebra.Order.Ring.Lemmas
+[599/1165] Building Mathlib.Data.Nat.Bits
+[599/1165] Building Mathlib.Tactic.NormNum.Result
+[602/1165] Building Mathlib.Algebra.Group.Hom.Instances
+[602/1165] Building Mathlib.Algebra.Group.Equiv.Basic
+[607/1165] Building Mathlib.Order.MinMax
+[607/1165] Building Mathlib.Order.BoundedOrder
+[609/1165] Building Mathlib.Algebra.Divisibility.Units
+[609/1165] Building Mathlib.Algebra.Group.Units.Hom
+[609/1165] Building Mathlib.GroupTheory.GroupAction.Units
+[609/1165] Building Mathlib.Algebra.Group.Semiconj.Units
+[609/1165] Building Mathlib.Algebra.GroupWithZero.Units.Basic
+[609/1165] Building Mathlib.Data.Nat.Units
+[611/1165] Building Mathlib.Algebra.Order.Monoid.Lemmas
+[613/1165] Building Mathlib.Algebra.Group.Commute.Units
+[614/1165] Building Mathlib.Algebra.Ring.Units
+[615/1165] Building Mathlib.Data.Prod.Lex
+[615/1165] Building Mathlib.Order.Disjoint
+[615/1165] Building Mathlib.Order.WithBot
+[616/1165] Building Mathlib.Tactic.NormNum.Core
+[617/1165] Building Mathlib.Algebra.GroupWithZero.Semiconj
+[618/1165] Building Mathlib.Algebra.GroupWithZero.Divisibility
+[621/1165] Building Mathlib.Algebra.GroupWithZero.Commute
+[625/1165] Building Mathlib.Data.Int.Units
+[625/1165] Building Mathlib.Algebra.Ring.Commute
+[626/1165] Building Mathlib.Algebra.GroupWithZero.Units.Lemmas
+[627/1165] Building Mathlib.Algebra.Ring.Divisibility.Basic
+[627/1165] Building Mathlib.Algebra.Group.Units.Equiv
+[627/1165] Building Mathlib.Data.Nat.Cast.Basic
+[627/1165] Building Mathlib.Algebra.Group.ULift
+[627/1165] Building Mathlib.Algebra.Group.Opposite
+[630/1165] Building Mathlib.Order.PropInstances
+[631/1165] Building Mathlib.Algebra.GroupWithZero.Units.Equiv
+[632/1165] Building Mathlib.Data.Nat.Cast.Commute
+[635/1165] Building Mathlib.Order.Heyting.Basic
+[638/1165] Building Mathlib.Data.Int.Cast.Field
+[638/1165] Building Mathlib.Algebra.Invertible.Basic
+[638/1165] Building Mathlib.Algebra.Field.Basic
+[640/1165] Building Mathlib.Order.Hom.Basic
+[642/1165] Building Mathlib.Algebra.Regular.Basic
+[642/1165] Building Mathlib.Algebra.Order.Monoid.Defs
+[642/1165] Building Mathlib.Algebra.Order.Monoid.NatCast
+[642/1165] Building Mathlib.Algebra.Order.Sub.Defs
+[642/1165] Building Mathlib.Algebra.Order.Monoid.MinMax
+[644/1165] Building Mathlib.Tactic.NormNum.Basic
+[646/1165] Building Mathlib.Algebra.Order.Monoid.OrderDual
+[646/1165] Building Mathlib.Algebra.Order.Monoid.Canonical.Defs
+[647/1165] Building Mathlib.GroupTheory.GroupAction.Opposite
+[647/1165] Building Mathlib.Algebra.Ring.Opposite
+[647/1165] Building Mathlib.Algebra.Group.Prod
+[648/1165] Building Mathlib.Algebra.Ring.Regular
+[649/1165] Building Mathlib.Algebra.Order.Group.Defs
+[650/1165] Building Mathlib.Algebra.GroupPower.CovariantClass
+[651/1165] Building Mathlib.Algebra.EuclideanDomain.Basic
+[652/1165] Building Mathlib.Algebra.Order.Monoid.TypeTags
+[652/1165] Building Mathlib.Algebra.Order.Monoid.WithTop
+[652/1165] Building Mathlib.Algebra.Order.Monoid.WithZero.Defs
+[652/1165] Building Mathlib.Algebra.Order.Sub.Canonical
+[653/1165] Building Mathlib.Algebra.GroupPower.IterateHom
+[655/1165] Building Mathlib.Tactic.ApplyFun
+[655/1165] Building Mathlib.Algebra.Order.Monoid.Basic
+[655/1165] Building Mathlib.Order.Antisymmetrization
+[655/1165] Building Mathlib.Data.Sum.Order
+[655/1165] Building Mathlib.Algebra.Order.Monoid.Units
+[655/1165] Building Mathlib.Order.Hom.Bounded
+[657/1165] Building Mathlib.Order.BooleanAlgebra
+[667/1165] Building Mathlib.Algebra.Order.Sub.WithTop
+[671/1165] Building Mathlib.Data.Nat.Cast.Prod
+[671/1165] Building Mathlib.GroupTheory.GroupAction.Prod
+[671/1165] Building Mathlib.Algebra.Order.Monoid.Prod
+[672/1165] Building Mathlib.Data.Int.Cast.Prod
+[677/1165] Building Mathlib.Algebra.Order.Group.InjSurj
+[677/1165] Building Mathlib.Algebra.Order.Group.OrderIso
+[677/1165] Building Mathlib.Algebra.Order.Group.Units
+[677/1165] Building Mathlib.Algebra.Order.Group.Instances
+[677/1165] Building Mathlib.Algebra.Order.Group.Prod
+[677/1165] Building Mathlib.Algebra.Order.Ring.Defs
+[678/1165] Building Mathlib.Algebra.SMulWithZero
+[681/1165] Building Mathlib.Algebra.Order.Hom.Monoid
+[682/1165] Building Mathlib.Algebra.Order.WithZero
+[683/1165] Building Mathlib.Algebra.Order.Group.Lattice
+[684/1165] Building Mathlib.Order.SymmDiff
+[685/1165] Building Mathlib.Algebra.Regular.SMul
+[686/1165] Building Mathlib.Algebra.Order.Group.Abs
+[689/1165] Building Mathlib.Data.Set.Basic
+[689/1165] Building Mathlib.Order.Hom.Lattice
+[691/1165] Building Mathlib.Algebra.Order.Group.MinMax
+[693/1165] Building Mathlib.Algebra.Order.Field.Defs
+[693/1165] Building Mathlib.Algebra.Order.Ring.CharZero
+[693/1165] Building Mathlib.Algebra.Order.Ring.Canonical
+[693/1165] Building Mathlib.Algebra.Order.Positive.Ring
+[693/1165] Building Mathlib.Algebra.Order.Ring.InjSurj
+[696/1165] Building Mathlib.Algebra.Order.Ring.WithTop
+[696/1165] Building Mathlib.Data.Nat.Order.Basic
+[699/1165] Building Mathlib.Order.WellFounded
+[699/1165] Building Mathlib.Algebra.Ring.Hom.Basic
+[699/1165] Building Mathlib.Data.Part
+[699/1165] Building Mathlib.Data.SetLike.Basic
+[699/1165] Building Mathlib.Data.Set.Intervals.Basic
+[699/1165] Building Mathlib.Data.Set.Image
+[703/1165] Building Mathlib.Data.Pi.Lex
+[704/1165] Building Mathlib.Data.Nat.Order.Lemmas
+[704/1165] Building Mathlib.Data.Vector
+[704/1165] Building Mathlib.Algebra.GroupPower.Ring
+[704/1165] Building Mathlib.Data.List.GetD
+[704/1165] Building Mathlib.Data.PNat.Basic
+[704/1165] Building Mathlib.Data.Nat.Cast.Order
+[704/1165] Building Mathlib.Data.Nat.ForSqrt
+[704/1165] Building Mathlib.Data.Int.Order.Basic
+[704/1165] Building Mathlib.Data.List.Basic
+[707/1165] Building Mathlib.Algebra.GroupPower.Order
+[708/1165] Building Mathlib.Tactic.Linarith.Lemmas
+[708/1165] Building Mathlib.Algebra.Order.Invertible
+[708/1165] Building Mathlib.Algebra.Order.Ring.Pow
+[711/1165] Building Mathlib.Data.Nat.GCD.Basic
+[712/1165] Building Mathlib.Order.Directed
+[712/1165] Building Mathlib.Logic.Embedding.Set
+[712/1165] Building Mathlib.Data.Nat.Set
+[712/1165] Building Mathlib.Data.Set.List
+[712/1165] Building Mathlib.Data.Bool.Set
+[712/1165] Building Mathlib.Data.Set.Prod
+[715/1165] Building Mathlib.Algebra.GroupWithZero.Power
+[716/1165] Building Mathlib.Data.Int.Cast.Lemmas
+[716/1165] Building Mathlib.Data.Rat.Defs
+[716/1165] Building Mathlib.Data.Int.Dvd.Basic
+[716/1165] Building Mathlib.Algebra.EuclideanDomain.Instances
+[716/1165] Building Mathlib.Data.Int.LeastGreatest
+[720/1165] Building Mathlib.Data.Int.Div
+[722/1165] Building Mathlib.Order.RelIso.Set
+[733/1165] Building Mathlib.Data.Set.NAry
+[733/1165] Building Mathlib.Data.Set.Function
+[734/1165] Building Mathlib.Order.Bounded
+[735/1165] Building Mathlib.Data.Nat.Bitwise
+[735/1165] Building Mathlib.Algebra.Order.Ring.Abs
+[735/1165] Building Mathlib.Data.Nat.Pow
+[735/1165] Building Mathlib.Data.Nat.Factorial.Basic
+[735/1165] Building Mathlib.Data.Nat.Size
+[736/1165] Building Mathlib.Data.Set.Intervals.Group
+[736/1165] Building Mathlib.Data.Rat.Order
+[736/1165] Building Mathlib.Algebra.Field.Opposite
+[736/1165] Building Mathlib.Tactic.Positivity.Core
+[736/1165] Building Mathlib.Data.Rat.Lemmas
+[736/1165] Building Mathlib.Tactic.NormNum.Pow
+[739/1165] Building Mathlib.Order.Bounds.Basic
+[743/1165] Building Mathlib.Data.Int.Order.Lemmas
+[743/1165] Building Mathlib.Data.Int.Order.Units
+[743/1165] Building Mathlib.Algebra.Parity
+[744/1165] Building Mathlib.Data.Rat.Field
+[745/1165] Building Mathlib.Data.Rat.Cast.Defs
+[746/1165] Building Mathlib.Data.Nat.Choose.Basic
+[750/1165] Building Mathlib.Tactic.FieldSimp
+[751/1165] Building Mathlib.Data.Int.Bitwise
+[752/1165] Building Mathlib.Data.Set.Pairwise.Basic
+[752/1165] Building Mathlib.Data.Set.Intervals.Image
+[752/1165] Building Mathlib.Data.Set.Intervals.Monoid
+[752/1165] Building Mathlib.GroupTheory.GroupAction.Pi
+[752/1165] Building Mathlib.Algebra.Group.Pi.Lemmas
+[752/1165] Building Mathlib.Logic.Equiv.Set
+[753/1165] Building Mathlib.Order.LatticeIntervals
+[754/1165] Building Mathlib.Data.Int.GCD
+[757/1165] Building Mathlib.Data.Int.Lemmas
+[759/1165] Building Mathlib.Data.Nat.Sqrt
+[759/1165] Building Mathlib.Algebra.Associated
+[760/1165] Building Mathlib.Order.Hom.Set
+[760/1165] Building Mathlib.Logic.Small.Basic
+[760/1165] Building Mathlib.Order.InitialSeg
+[760/1165] Building Mathlib.Algebra.Ring.Equiv
+[760/1165] Building Mathlib.GroupTheory.Perm.Basic
+[761/1165] Building Mathlib.Tactic.NormNum.OfScientific
+[763/1165] Building Mathlib.Data.Set.Intervals.UnorderedInterval
+[764/1165] Building Mathlib.Order.Bounds.OrderIso
+[764/1165] Building Mathlib.Data.Set.Intervals.OrderIso
+[764/1165] Building Mathlib.Order.CompleteLattice
+[764/1165] Building Mathlib.Data.Fin.Basic
+[769/1165] Building Mathlib.Order.Antichain
+[770/1165] Building Mathlib.Data.List.Pairwise
+[770/1165] Building Mathlib.Data.List.Lattice
+[770/1165] Building Mathlib.Data.List.Infix
+[770/1165] Building Mathlib.Data.List.MinMax
+[770/1165] Building Mathlib.Data.List.Lex
+[772/1165] Building Mathlib.Algebra.Order.Field.Basic
+[773/1165] Building Mathlib.GroupTheory.GroupAction.DomAct.Basic
+[773/1165] Building Mathlib.Algebra.Ring.Pi
+[781/1165] Building Mathlib.Data.List.Forall2
+[783/1165] Building Mathlib.Algebra.Group.Aut
+[783/1165] Building Mathlib.Dynamics.FixedPoints.Basic
+[784/1165] Building Mathlib.Algebra.Ring.CompTypeclasses
+[784/1165] Building Mathlib.Algebra.Ring.Prod
+[784/1165] Building Mathlib.Algebra.Ring.ULift
+[785/1165] Building Mathlib.Data.Set.Intervals.OrderEmbedding
+[790/1165] Building Mathlib.Data.List.Chain
+[790/1165] Building Mathlib.Data.List.Nodup
+[790/1165] Building Mathlib.Data.List.BigOperators.Basic
+[791/1165] Building Mathlib.Data.Set.Intervals.OrdConnected
+[792/1165] Building Mathlib.Algebra.Group.Conj
+[792/1165] Building Mathlib.GroupTheory.GroupAction.Group
+[793/1165] Building Mathlib.Order.Cover
+[794/1165] Building Mathlib.Data.List.Duplicate
+[796/1165] Building Mathlib.Algebra.Order.Kleene
+[797/1165] Building Mathlib.Data.Fin.OrderHom
+[798/1165] Building Mathlib.Order.CompleteBooleanAlgebra
+[798/1165] Building Mathlib.Order.GaloisConnection
+[802/1165] Building Mathlib.Algebra.GCDMonoid.Basic
+[803/1165] Building Mathlib.Data.Fin.Tuple.Basic
+[804/1165] Building Mathlib.Order.SuccPred.Basic
+[804/1165] Building Mathlib.Algebra.Function.Support
+[805/1165] Building Mathlib.Algebra.GroupRingAction.Basic
+[807/1165] Building Mathlib.Algebra.Ring.Aut
+[808/1165] Building Mathlib.Data.List.Join
+[808/1165] Building Mathlib.Data.List.Count
+[808/1165] Building Mathlib.Algebra.FreeMonoid.Basic
+[808/1165] Building Mathlib.Data.List.Zip
+[808/1165] Building Mathlib.Data.List.BigOperators.Lemmas
+[809/1165] Building Mathlib.Order.Hom.Order
+[809/1165] Building Mathlib.Data.Setoid.Basic
+[809/1165] Building Mathlib.Order.ModularLattice
+[810/1165] Building Mathlib.Data.Int.CharZero
+[810/1165] Building Mathlib.Algebra.Function.Indicator
+[811/1165] Building Mathlib.Data.List.Dedup
+[813/1165] Building Mathlib.Data.Rat.Cast.CharZero
+[813/1165] Building Mathlib.Tactic.Positivity.Basic
+[814/1165] Building Mathlib.Order.FixedPoints
+[815/1165] Building Mathlib.Data.Nat.Cast.Field
+[815/1165] Building Mathlib.Tactic.CancelDenoms.Core
+[816/1165] Building Mathlib.Data.List.Permutation
+[818/1165] Building Mathlib.Data.Set.Lattice
+[819/1165] Building Mathlib.Data.Nat.SuccPred
+[819/1165] Building Mathlib.Order.SuccPred.Limit
+[820/1165] Building Mathlib.Data.List.OfFn
+[821/1165] Building Mathlib.Data.List.Range
+[821/1165] Building Mathlib.Data.List.Rotate
+[824/1165] Building Mathlib.Tactic.NormNum.Inv
+[824/1165] Building Mathlib.Data.Rat.Cast.Order
+[826/1165] Building Mathlib.Data.List.Perm
+[827/1165] Building Mathlib.Algebra.CharZero.Lemmas
+[830/1165] Building Mathlib.Data.List.NatAntidiagonal
+[830/1165] Building Mathlib.Data.Fin.VecNotation
+[834/1165] Building Mathlib.Data.List.FinRange
+[835/1165] Building Mathlib.Data.ENat.Basic
+[835/1165] Building Mathlib.Data.List.Sort
+[835/1165] Building Mathlib.Algebra.Order.Field.Power
+[835/1165] Building Mathlib.Data.Vector.Basic
+[840/1165] Building Mathlib.Tactic.NormNum.Eq
+[840/1165] Building Mathlib.Tactic.Ring.Basic
+[843/1165] Building Mathlib.Data.List.Prime
+[843/1165] Building Mathlib.Data.List.Sublists
+[843/1165] Building Mathlib.Data.Multiset.Basic
+[844/1165] Building Mathlib.Logic.Equiv.Fin
+[846/1165] Building Mathlib.Data.List.NodupEquivFin
+[848/1165] Building Mathlib.Tactic.NormNum.Ineq
+[851/1165] Building Mathlib.Data.Nat.Pairing
+[851/1165] Building Mathlib.Order.UpperLower.Basic
+[851/1165] Building Mathlib.Data.Set.Sigma
+[851/1165] Building Mathlib.Data.Set.UnionLift
+[851/1165] Building Mathlib.Data.Set.Functor
+[851/1165] Building Mathlib.Order.Closure
+[851/1165] Building Mathlib.Logic.Small.Set
+[851/1165] Building Mathlib.Order.ConditionallyCompleteLattice.Basic
+[851/1165] Building Mathlib.Data.Set.Pointwise.Basic
+[851/1165] Building Mathlib.Data.Set.Intervals.Disjoint
+[851/1165] Building Mathlib.GroupTheory.Subsemigroup.Basic
+[851/1165] Building Mathlib.Order.Atoms
+[851/1165] Building Mathlib.Order.Hom.CompleteLattice
+[851/1165] Building Mathlib.Order.Chain
+[854/1165] Building Mathlib.Tactic.Positivity
+[854/1165] Building Mathlib.Algebra.Order.Hom.Basic
+[857/1165] Building Mathlib.Order.Zorn
+[857/1165] Building Mathlib.Order.OmegaCompletePartialOrder
+[863/1165] Building Mathlib.GroupTheory.Submonoid.Basic
+[863/1165] Building Mathlib.GroupTheory.Subsemigroup.Membership
+[863/1165] Building Mathlib.GroupTheory.Subsemigroup.Operations
+[864/1165] Building Mathlib.SetTheory.Cardinal.SchroederBernstein
+[865/1165] Building Mathlib.Logic.Equiv.Nat
+[870/1165] Building Mathlib.Algebra.Order.AbsoluteValue
+[871/1165] Building Mathlib.Data.Countable.Basic
+[871/1165] Building Mathlib.Logic.Encodable.Basic
+[872/1165] Building Mathlib.Order.ZornAtoms
+[873/1165] Building Mathlib.Tactic.NormNum.DivMod
+[878/1165] Building Mathlib.GroupTheory.Submonoid.MulOpposite
+[879/1165] Building Mathlib.Tactic.NormNum
+[881/1165] Building Mathlib.Data.Nat.ModEq
+[881/1165] Building Mathlib.Tactic.NormNum.GCD
+[881/1165] Building Mathlib.Tactic.Abel
+[882/1165] Building Mathlib.Order.SuccPred.CompleteLinearOrder
+[882/1165] Building Mathlib.Order.CompleteLatticeIntervals
+[884/1165] Building Mathlib.Data.Set.Semiring
+[884/1165] Building Mathlib.Data.Set.Pointwise.ListOfFn
+[888/1165] Building Mathlib.GroupTheory.Submonoid.Operations
+[888/1165] Building Mathlib.GroupTheory.Subsemigroup.Center
+[890/1165] Building Mathlib.Algebra.Order.Nonneg.Ring
+[891/1165] Building Mathlib.Data.Nat.Parity
+[892/1165] Building Mathlib.GroupTheory.Subsemigroup.Centralizer
+[895/1165] Building Mathlib.Data.Multiset.Sort
+[895/1165] Building Mathlib.Data.Multiset.Range
+[895/1165] Building Mathlib.Algebra.BigOperators.Multiset.Basic
+[895/1165] Building Mathlib.Data.Sym.Basic
+[898/1165] Building Mathlib.Data.Nat.Prime
+[901/1165] Building Mathlib.GroupTheory.Submonoid.Center
+[901/1165] Building Mathlib.GroupTheory.Congruence
+[902/1165] Building Mathlib.Tactic.Ring.PNat
+[902/1165] Building Mathlib.Tactic.Ring.RingNF
+[902/1165] Building Mathlib.Tactic.Linarith.Datatypes
+[903/1165] Building Mathlib.Data.Nat.Factors
+[904/1165] Building Mathlib.GroupTheory.Submonoid.Centralizer
+[905/1165] Building Mathlib.Data.NNRat.Defs
+[907/1165] Building Mathlib.GroupTheory.Subgroup.Basic
+[908/1165] Building Mathlib.Data.Multiset.Bind
+[908/1165] Building Mathlib.Algebra.BigOperators.Multiset.Lemmas
+[909/1165] Building Mathlib.Tactic.Linarith.Parsing
+[909/1165] Building Mathlib.Tactic.Linarith.Elimination
+[909/1165] Building Mathlib.Tactic.Linarith.Preprocessing
+[912/1165] Building Mathlib.Tactic.Ring
+[913/1165] Building Mathlib.Tactic.Linarith.Verification
+[914/1165] Building Mathlib.Algebra.Star.Basic
+[914/1165] Building Mathlib.Algebra.Module.Basic
+[915/1165] Building Mathlib.Data.Int.ModEq
+[915/1165] Building Mathlib.Tactic.Group
+[915/1165] Building Mathlib.Tactic.LinearCombination
+[915/1165] Building Mathlib.RingTheory.Coprime.Basic
+[921/1165] Building Mathlib.Data.Multiset.Nodup
+[922/1165] Building Mathlib.Tactic.Linarith.Frontend
+[924/1165] Building Mathlib.Algebra.Star.Pi
+[926/1165] Building Mathlib.Tactic.Linarith
+[927/1165] Building Mathlib.Data.Multiset.Powerset
+[927/1165] Building Mathlib.Data.Multiset.Pi
+[927/1165] Building Mathlib.Data.Multiset.Dedup
+[927/1165] Building Mathlib.Data.Multiset.NatAntidiagonal
+[927/1165] Building Mathlib.Data.Multiset.Sum
+[929/1165] Building Mathlib.Algebra.Order.Floor
+[933/1165] Building Mathlib.Data.Multiset.FinsetOps
+[933/1165] Building Mathlib.Data.Multiset.Fold
+[935/1165] Building Mathlib.Data.Finset.Basic
+[936/1165] Building Mathlib.Data.Multiset.Lattice
+[936/1165] Building Mathlib.Algebra.GCDMonoid.Multiset
+[939/1165] Building Mathlib.Algebra.Module.Pi
+[939/1165] Building Mathlib.Data.Set.Pointwise.SMul
+[939/1165] Building Mathlib.Algebra.PUnitInstances
+[939/1165] Building Mathlib.Algebra.Order.Module.Synonym
+[939/1165] Building Mathlib.GroupTheory.GroupAction.Hom
+[939/1165] Building Mathlib.Algebra.Module.Prod
+[939/1165] Building Mathlib.Algebra.Module.Hom
+[941/1165] Building Mathlib.Algebra.Order.Module.Defs
+[945/1165] Building Mathlib.Data.Rat.Floor
+[947/1165] Building Mathlib.Algebra.Order.Archimedean
+[948/1165] Building Mathlib.Algebra.Module.LinearMap.Basic
+[949/1165] Building Mathlib.Data.Finset.Order
+[949/1165] Building Mathlib.Data.Finset.Image
+[951/1165] Building Mathlib.Algebra.Order.Hom.Ring
+[952/1165] Building Mathlib.GroupTheory.Subgroup.Actions
+[952/1165] Building Mathlib.GroupTheory.Subgroup.Simple
+[952/1165] Building Mathlib.GroupTheory.Subgroup.MulOpposite
+[952/1165] Building Mathlib.GroupTheory.Subgroup.ZPowers
+[952/1165] Building Mathlib.Algebra.GroupRingAction.Subobjects
+[952/1165] Building Mathlib.Algebra.Star.SelfAdjoint
+[953/1165] Building Mathlib.Data.Finset.Fold
+[953/1165] Building Mathlib.Data.Finset.Card
+[953/1165] Building Mathlib.Data.Fintype.Basic
+[953/1165] Building Mathlib.Data.Finset.Pi
+[962/1165] Building Mathlib.Data.Finset.Prod
+[962/1165] Building Mathlib.Data.Finset.Sum
+[962/1165] Building Mathlib.Data.Finset.Option
+[962/1165] Building Mathlib.Data.Finset.Fin
+[967/1165] Building Mathlib.Tactic.FinCases
+[967/1165] Building Mathlib.Data.Fintype.Pi
+[967/1165] Building Mathlib.Data.Fintype.Card
+[967/1165] Building Mathlib.GroupTheory.Perm.Support
+[969/1165] Building Mathlib.Tactic.IntervalCases
+[970/1165] Building Mathlib.Data.Fintype.Vector
+[972/1165] Building Mathlib.Data.Finset.Lattice
+[973/1165] Building Mathlib.Data.ZMod.Defs
+[973/1165] Building Mathlib.Data.Fintype.Prod
+[973/1165] Building Mathlib.Data.Finite.Set
+[973/1165] Building Mathlib.Data.Fintype.Option
+[973/1165] Building Mathlib.Logic.Denumerable
+[973/1165] Building Mathlib.Data.Fintype.Sum
+[973/1165] Building Mathlib.GroupTheory.GroupAction.Basic
+[973/1165] Building Mathlib.Data.Fintype.Perm
+[975/1165] Building Mathlib.GroupTheory.Perm.List
+[984/1165] Building Mathlib.GroupTheory.GroupAction.ConjAct
+[984/1165] Building Mathlib.GroupTheory.GroupAction.SubMulAction
+[984/1165] Building Mathlib.GroupTheory.Coset
+[985/1165] Building Mathlib.GroupTheory.GroupAction.SubMulAction.Pointwise
+[987/1165] Building Mathlib.Algebra.Module.LinearMap.End
+[989/1165] Building Mathlib.Data.Finset.Pairwise
+[989/1165] Building Mathlib.Data.Fintype.Lattice
+[989/1165] Building Mathlib.Data.Finset.Powerset
+[989/1165] Building Mathlib.Data.Finset.Sigma
+[989/1165] Building Mathlib.Data.Finset.Sort
+[992/1165] Building Mathlib.Data.Fintype.Sigma
+[993/1165] Building Mathlib.Data.Fintype.List
+[993/1165] Building Mathlib.Data.Fintype.Powerset
+[993/1165] Building Mathlib.Order.SupIndep
+[993/1165] Building Mathlib.Algebra.BigOperators.Basic
+[994/1165] Building Mathlib.Logic.Equiv.List
+[996/1165] Building Mathlib.Data.List.Cycle
+[997/1165] Building Mathlib.Data.Finite.Basic
+[999/1165] Building Mathlib.Data.Set.Finite
+[1000/1165] Building Mathlib.Algebra.Module.Equiv
+[1003/1165] Building Mathlib.Dynamics.PeriodicPts
+[1004/1165] Building Mathlib.Data.Set.Intervals.Infinite
+[1004/1165] Building Mathlib.Data.Set.Countable
+[1004/1165] Building Mathlib.Order.Filter.Basic
+[1004/1165] Building Mathlib.Data.Finsupp.Defs
+[1004/1165] Building Mathlib.Algebra.Function.Finite
+[1004/1165] Building Mathlib.Order.ConditionallyCompleteLattice.Finset
+[1004/1165] Building Mathlib.Order.SupClosed
+[1004/1165] Building Mathlib.Data.Finset.NAry
+[1004/1165] Building Mathlib.Order.PartialSups
+[1004/1165] Building Mathlib.Data.Set.Pointwise.Finite
+[1013/1165] Building Mathlib.Algebra.Module.Opposites
+[1013/1165] Building Mathlib.Algebra.Module.ULift
+[1017/1165] Building Mathlib.Data.Finsupp.Fin
+[1017/1165] Building Mathlib.Data.Finsupp.Indicator
+[1018/1165] Building Mathlib.Data.Finset.NoncommProd
+[1018/1165] Building Mathlib.Algebra.BigOperators.Pi
+[1018/1165] Building Mathlib.Data.Set.Pointwise.BigOperators
+[1018/1165] Building Mathlib.Algebra.Star.BigOperators
+[1018/1165] Building Mathlib.Algebra.BigOperators.Option
+[1018/1165] Building Mathlib.GroupTheory.GroupAction.BigOperators
+[1018/1165] Building Mathlib.Algebra.BigOperators.RingEquiv
+[1018/1165] Building Mathlib.Data.Rat.BigOperators
+[1018/1165] Building Mathlib.Data.Finset.Preimage
+[1018/1165] Building Mathlib.Algebra.BigOperators.Ring
+[1022/1165] Building Mathlib.Data.Fintype.BigOperators
+[1025/1165] Building Mathlib.Order.LocallyFinite
+[1026/1165] Building Mathlib.Algebra.Module.BigOperators
+[1030/1165] Building Mathlib.RingTheory.Coprime.Lemmas
+[1030/1165] Building Mathlib.Algebra.BigOperators.Order
+[1031/1165] Building Mathlib.SetTheory.Cardinal.Basic
+[1032/1165] Building Mathlib.Order.Filter.Prod
+[1032/1165] Building Mathlib.Order.Filter.Ker
+[1033/1165] Building Mathlib.GroupTheory.Submonoid.Membership
+[1036/1165] Building Mathlib.Data.Finset.Antidiagonal
+[1036/1165] Building Mathlib.Data.Finset.LocallyFinite.Basic
+[1037/1165] Building Mathlib.Order.Filter.Bases
+[1038/1165] Building Mathlib.Data.Finset.NatAntidiagonal
+[1039/1165] Building Mathlib.Algebra.BigOperators.Finprod
+[1040/1165] Building Mathlib.GroupTheory.Subgroup.Finite
+[1040/1165] Building Mathlib.Algebra.GroupWithZero.NonZeroDivisors
+[1040/1165] Building Mathlib.Data.DFinsupp.Basic
+[1040/1165] Building Mathlib.Algebra.Module.Submodule.Basic
+[1040/1165] Building Mathlib.RingTheory.NonUnitalSubsemiring.Basic
+[1041/1165] Building Mathlib.Algebra.BigOperators.NatAntidiagonal
+[1043/1165] Building Mathlib.Order.Filter.Pi
+[1043/1165] Building Mathlib.Order.Filter.AtTopBot
+[1044/1165] Building Mathlib.SetTheory.Ordinal.Basic
+[1044/1165] Building Mathlib.SetTheory.Cardinal.ENat
+[1046/1165] Building Mathlib.GroupTheory.Commutator
+[1047/1165] Building Mathlib.Data.Nat.Interval
+[1049/1165] Building Mathlib.SetTheory.Cardinal.ToNat
+[1050/1165] Building Mathlib.Algebra.Module.Submodule.LinearMap
+[1050/1165] Building Mathlib.Algebra.Module.Submodule.Lattice
+[1051/1165] Building Mathlib.Algebra.BigOperators.Intervals
+[1051/1165] Building Mathlib.Data.Nat.Lattice
+[1051/1165] Building Mathlib.Data.Fin.Interval
+[1054/1165] Building Mathlib.RingTheory.Subsemiring.Basic
+[1056/1165] Building Mathlib.SetTheory.Ordinal.Arithmetic
+[1057/1165] Building Mathlib.Data.Fintype.Fin
+[1058/1165] Building Mathlib.Data.ENat.Lattice
+[1058/1165] Building Mathlib.Order.OrderIsoNat
+[1059/1165] Building Mathlib.Data.Nat.PartENat
+[1060/1165] Building Mathlib.Algebra.BigOperators.Fin
+[1061/1165] Building Mathlib.Order.WellFoundedSet
+[1061/1165] Building Mathlib.Order.CompactlyGenerated.Basic
+[1062/1165] Building Mathlib.Data.Nat.Choose.Sum
+[1062/1165] Building Mathlib.Algebra.GeomSum
+[1064/1165] Building Mathlib.GroupTheory.Submonoid.Pointwise
+[1065/1165] Building Mathlib.RingTheory.Multiplicity
+[1065/1165] Building Mathlib.SetTheory.Cardinal.PartENat
+[1068/1165] Building Mathlib.RingTheory.Subring.Basic
+[1069/1165] Building Mathlib.Algebra.Module.Submodule.RestrictScalars
+[1069/1165] Building Mathlib.Algebra.Module.Submodule.Map
+[1070/1165] Building Mathlib.SetTheory.Cardinal.Finite
+[1071/1165] Building Mathlib.Order.Filter.Cofinite
+[1072/1165] Building Mathlib.Combinatorics.Composition
+[1072/1165] Building Mathlib.Algebra.BigOperators.Finsupp
+[1074/1165] Building Mathlib.Order.Filter.Ultrafilter
+[1075/1165] Building Mathlib.Data.Finite.Card
+[1075/1165] Building Mathlib.Data.Fintype.Units
+[1075/1165] Building Mathlib.Data.Finset.Pointwise
+[1078/1165] Building Mathlib.Algebra.Group.ConjFinite
+[1079/1165] Building Mathlib.Order.Filter.Subsingleton
+[1081/1165] Building Mathlib.Order.Filter.EventuallyConst
+[1082/1165] Building Mathlib.GroupTheory.Subgroup.Pointwise
+[1083/1165] Building Mathlib.GroupTheory.GroupAction.Quotient
+[1085/1165] Building Mathlib.SetTheory.Ordinal.Exponential
+[1086/1165] Building Mathlib.Algebra.Module.Submodule.Ker
+[1087/1165] Building Mathlib.Combinatorics.Partition
+[1088/1165] Building Mathlib.SetTheory.Ordinal.FixedPoint
+[1090/1165] Building Mathlib.SetTheory.Ordinal.Principal
+[1092/1165] Building Mathlib.Algebra.BigOperators.Associated
+[1092/1165] Building Mathlib.Data.Finsupp.Basic
+[1094/1165] Building Mathlib.Data.DFinsupp.Encodable
+[1095/1165] Building Mathlib.LinearAlgebra.Basic
+[1095/1165] Building Mathlib.LinearAlgebra.BilinearMap
+[1095/1165] Building Mathlib.Algebra.Algebra.Basic
+[1096/1165] Building Mathlib.GroupTheory.QuotientGroup
+[1100/1165] Building Mathlib.Algebra.Algebra.Hom
+[1101/1165] Building Mathlib.GroupTheory.Finiteness
+[1102/1165] Building Mathlib.Data.Finsupp.Order
+[1102/1165] Building Mathlib.Data.Finsupp.ToDFinsupp
+[1104/1165] Building Mathlib.GroupTheory.Index
+[1105/1165] Building Mathlib.LinearAlgebra.Pi
+[1105/1165] Building Mathlib.LinearAlgebra.Span
+[1106/1165] Building Mathlib.Data.Finsupp.Encodable
+[1107/1165] Building Mathlib.Data.Finsupp.Multiset
+[1108/1165] Building Mathlib.GroupTheory.OrderOfElement
+[1110/1165] Building Mathlib.Algebra.Algebra.Prod
+[1110/1165] Building Mathlib.Algebra.Algebra.NonUnitalHom
+[1110/1165] Building Mathlib.Algebra.Algebra.Equiv
+[1111/1165] Building Mathlib.SetTheory.Cardinal.Ordinal
+[1114/1165] Building Mathlib.SetTheory.Cardinal.Cofinality
+[1116/1165] Building Mathlib.Algebra.Algebra.Pi
+[1116/1165] Building Mathlib.Algebra.Algebra.Opposite
+[1118/1165] Building Mathlib.GroupTheory.Perm.Sign
+[1122/1165] Building Mathlib.LinearAlgebra.Quotient
+[1122/1165] Building Mathlib.Algebra.Module.Submodule.Bilinear
+[1122/1165] Building Mathlib.Algebra.Algebra.Tower
+[1122/1165] Building Mathlib.LinearAlgebra.Prod
+[1122/1165] Building Mathlib.LinearAlgebra.Finsupp
+[1123/1165] Building Mathlib.LinearAlgebra.TensorProduct
+[1124/1165] Building Mathlib.GroupTheory.Perm.Option
+[1124/1165] Building Mathlib.Logic.Equiv.Fintype
+[1126/1165] Building Mathlib.GroupTheory.Perm.Cycle.Basic
+[1127/1165] Building Mathlib.Algebra.Algebra.RestrictScalars
+[1129/1165] Building Mathlib.Algebra.Star.Module
+[1132/1165] Building Mathlib.RingTheory.Ideal.Basic
+[1132/1165] Building Mathlib.LinearAlgebra.LinearIndependent
+[1133/1165] Building Mathlib.Data.Matrix.Basic
+[1134/1165] Building Mathlib.Algebra.Module.Submodule.Pointwise
+[1136/1165] Building Mathlib.Data.Matrix.RowCol
+[1136/1165] Building Mathlib.Data.Matrix.Block
+[1137/1165] Building Mathlib.Data.Matrix.Notation
+[1138/1165] Building Mathlib.LinearAlgebra.Basis
+[1139/1165] Building Mathlib.Algebra.Algebra.Bilinear
+[1140/1165] Building Mathlib.LinearAlgebra.Matrix.Trace
+[1141/1165] Building Mathlib.Algebra.Algebra.Operations
+[1142/1165] Building Mathlib.Data.Matrix.Basis
+[1146/1165] Building Mathlib.RingTheory.AlgebraTower
+[1146/1165] Building Mathlib.LinearAlgebra.StdBasis
+[1146/1165] Building Mathlib.RingTheory.Ideal.Operations
+[1149/1165] Building Mathlib.Algebra.Algebra.Subalgebra.Basic
+[1150/1165] Building Mathlib.Algebra.Algebra.Subalgebra.Tower
+[1150/1165] Building Mathlib.RingTheory.Finiteness
+[1151/1165] Building Mathlib.LinearAlgebra.Matrix.ToLin
+[1153/1165] Building Mathlib.RingTheory.Nilpotent
+[1154/1165] Building Mathlib.RingTheory.Noetherian
+[1155/1165] Building Mathlib.RingTheory.UniqueFactorizationDomain
+[1156/1165] Building Mathlib.RingTheory.PrincipalIdealDomain
+[1157/1165] Building Mathlib.RingTheory.Int.Basic
+[1158/1165] Building Mathlib.GroupTheory.Perm.Cycle.Type
+[1159/1165] Building Mathlib.GroupTheory.Perm.Fin
+[1160/1165] Building Mathlib.GroupTheory.SpecificGroups.Alternating
+[1160/1165] Building RubiksCube.RubiksCubeFunc
+stdout:
+./././RubiksCube/RubiksCubeFunc.lean:330:41: warning: unused variable `b` [lin
+ter.unusedVariables]
+({ permute := ![1, 5, 2, 3, 0, 4, 6, 7], orient := ![2, 1, 0, 0, 1, 2, 0, 0] }
+,
+ { permute := ![5, 1, 2, 3, 0, 8, 6, 7, 4, 9, 10, 11], orient := ![0, 0, 0, 0,
+ 0, 0, 0, 0, 0, 0, 0, 0] })
+({ permute := ![0, 2, 6, 3, 4, 1, 5, 7], orient := ![0, 2, 1, 0, 0, 1, 2, 0] }
+,
+ { permute := ![0, 6, 2, 3, 4, 1, 9, 7, 8, 5, 10, 11], orient := ![0, 1, 0, 0,
+ 0, 1, 1, 0, 0, 1, 0, 0] })
+({ permute := ![2, 1, 6, 3, 0, 4, 5, 7], orient := ![1, 2, 1, 0, 1, 2, 2, 0] }
+,
+ { permute := ![1, 6, 2, 3, 0, 8, 9, 7, 4, 5, 10, 11], orient := ![1, 1, 0, 0,
+ 0, 0, 1, 0, 0, 1, 0, 0] })
+[1162/1165] Building RubiksCube.FuncProofs
+error: > LEAN_PATH=./.lake/packages/std/.lake/build/lib:./.lake/packages/Qq/.l
+ake/build/lib:./.lake/packages/aesop/.lake/build/lib:./.lake/packages/proofwid
+gets/.lake/build/lib:./.lake/packages/Cli/.lake/build/lib:./.lake/packages/imp
+ortGraph/.lake/build/lib:./.lake/packages/mathlib/.lake/build/lib:./.lake/buil
+d/lib LD_LIBRARY_PATH=./.lake/build/lib /data/yingzi_ma/.elan/toolchains/leanp
+rover--lean4---v4.6.0/bin/lean -Dpp.unicode.fun=true -Dpp.proofs.withType=fals
+e ./././RubiksCube/FuncProofs.lean -R ././. -o ./.lake/build/lib/RubiksCube/Fu
+ncProofs.olean -i ./.lake/build/lib/RubiksCube/FuncProofs.ilean -c ./.lake/bui
+ld/ir/RubiksCube/FuncProofs.c
+error: stdout:
+({ permute := ![0, 1, 2, 3, 4, 5, 6, 7], orient := ![0, 0, 0, 0, 0, 0, 0, 0] }
+,
+ { permute := ![0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], orient := ![0, 1, 1, 0,
+ 0, 0, 0, 0, 0, 0, 0, 0] })
+./././RubiksCube/FuncProofs.lean:290:14: warning: unused variable `hra` [linte
+r.unusedVariables]
+./././RubiksCube/FuncProofs.lean:290:18: warning: unused variable `hrb` [linte
+r.unusedVariables]
+./././RubiksCube/FuncProofs.lean:322:16: warning: unused variable `hc3` [linte
+r.unusedVariables]
+./././RubiksCube/FuncProofs.lean:322:24: warning: unused variable `hc5` [linte
+r.unusedVariables]
+./././RubiksCube/FuncProofs.lean:332:16: warning: unused variable `hc3` [linte
+r.unusedVariables]
+./././RubiksCube/FuncProofs.lean:332:20: warning: unused variable `hc4` [linte
+r.unusedVariables]
+./././RubiksCube/FuncProofs.lean:416:10: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:514:10: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:530:10: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:546:10: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:562:10: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:577:10: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:596:10: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:925:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1247:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1338:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1357:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1375:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1392:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1408:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1424:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1440:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1455:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1470:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1488:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1666:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1864:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:1956:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:2042:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:2238:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:2433:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:2467:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:2551:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:2652:8: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:2697:9: warning: unused variable `xIsValid` [
+linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2699:8: warning: unused variable `currStat` [
+linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2702:17: warning: unused variable `h1_3` [lin
+ter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2703:8: warning: unused variable `currStat` [
+linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2704:8: warning: unused variable `currStat_sa
+tisfy` [linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2706:9: warning: unused variable `h2` [linter
+.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2710:17: warning: unused variable `h2_4` [lin
+ter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2713:8: warning: unused variable `currStat` [
+linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2714:8: warning: unused variable `currStat_sa
+tisfy` [linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2737:8: warning: unused variable `currStat` [
+linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2738:8: warning: unused variable `currStat_sa
+tisfy` [linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2871:7: warning: unused variable `xIsValid` [
+linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2873:6: warning: unused variable `currStat` [
+linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2876:21: warning: unused variable `h1_3` [lin
+ter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2876:41: warning: unused variable `h1_7` [lin
+ter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2877:6: warning: unused variable `currStat` [
+linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2884:21: warning: unused variable `h2_4` [lin
+ter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2884:41: warning: unused variable `h2_8` [lin
+ter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2887:6: warning: unused variable `currStat` [
+linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2888:6: warning: unused variable `currStat_sa
+tisfy` [linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:2897:7: warning: unused variable `corner_eqPe
+rmuteSign_edge` [linter.unusedVariables]
+./././RubiksCube/FuncProofs.lean:3044:9: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3044:9: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3044:9: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3057:6: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3061:24: error: function expected at
+  Reachable_TWGroup1
+term has type
+  ?m.1079172
+./././RubiksCube/FuncProofs.lean:3073:4: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3074:4: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3078:4: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3096:9: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3096:9: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3096:9: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3108:6: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3112:24: error: function expected at
+  Reachable_TWGroup2
+term has type
+  ?m.1080651
+./././RubiksCube/FuncProofs.lean:3147:9: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3147:9: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3147:9: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3159:6: warning: declaration uses 'sorry'
+./././RubiksCube/FuncProofs.lean:3163:24: error: function expected at
+  Reachable_TWGroup3
+term has type
+  ?m.1082872
+./././RubiksCube/FuncProofs.lean:3170:8: warning: declaration uses 'sorry'
+error: external command `/data/yingzi_ma/.elan/toolchains/leanprover--lean4---
+v4.6.0/bin/lean` exited with code 1
+Traceback (most recent call last):
+  File "/tmp/tmp7du6ob21/workspace/build_lean4_repo.py", line 200, in <module>
+    main()
+  File "/tmp/tmp7du6ob21/workspace/build_lean4_repo.py", line 172, in main
+    run_cmd("lake build")
+  File "/tmp/tmp7du6ob21/workspace/build_lean4_repo.py", line 29, in run_cmd
+    res = subprocess.run(cmd, shell=True, capture_output=capture_output, check
+=True)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py"
+, line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'lake build' returned non-zero exit sta
+tus 1.
+2024-09-17 08:04:10.332 | INFO     | generate_benchmark_lean4:main:398 - Faile
+d to trace repo LeanGitRepo(url='https://github.com/chenjulang/rubikcubegroup'
+, commit='48460a1a541a61d918d0faf289a579122f7fda93') because of Command 'NUM_P
+ROCS=32 python build_lean4_repo.py rubikcubegroup' returned non-zero exit stat
+us 1.
+2024-09-17 08:04:10.332 | INFO     | __main__:add_repo_to_database:1124 - Fail
+ed to trace https://github.com/chenjulang/rubikcubegroup
+2024-09-17 08:04:10.332 | INFO     | __main__:main:1531 - Successfully added 1
+8 repositories to the database
+Ready to calculate difficulties of all theorems
+2024-09-17 08:04:10.333 | INFO     | __main__:main:2305 - An error occurred: i
+ndex -1 is out of bounds for axis 0 with size 0
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main3_more_sorries.py", line 153
+3, in main
+    sorted_repos, categorized_theorems, percentiles = sort_repositories_by_dif
+ficulty(db)
+  File "/data/yingzi_ma/lean_project/ReProver/main3_more_sorries.py", line 131
+4, in sort_repositories_by_difficulty
+    percentiles = np.percentile(all_difficulties, [33, 67])
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/
+numpy/lib/function_base.py", line 4283, in percentile
+    return _quantile_unchecked(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/
+numpy/lib/function_base.py", line 4555, in _quantile_unchecked
+    return _ureduce(a,
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/
+numpy/lib/function_base.py", line 3823, in _ureduce
+    r = func(a, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/
+numpy/lib/function_base.py", line 4721, in _quantile_ureduce_func
+    result = _quantile(arr,
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/
+numpy/lib/function_base.py", line 4830, in _quantile
+    slices_having_nans = np.isnan(arr[-1, ...])
+(base) yingzi_ma@cais-login-0:~/lean_project/ReProver$
+

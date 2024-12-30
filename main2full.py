@@ -145,7 +145,7 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_no_ewc_full.pkl"
 # TODO: do we still need this?
 load_dotenv()
 
-repos_for_merged_dataset = [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"), ("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147")]
+repos_for_merged_dataset = [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"),("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"),("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"),("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21"),("https://github.com/loganrjmurphy/LeanEuclid", "f1912c3090eb82820575758efc31e40b9db86bb8"),("https://github.com/digama0/lean4lean", "05b1f4a68c5facea96a5ee51c6a56fef21276e0f"),("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d"),("https://github.com/leanprover-community/con-nf", "00bdc85ba7d486a9e544a0806a1018dd06fa3856"),("https://github.com/siddhartha-gadgil/Saturn", "3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"),("https://github.com/mo271/formal_book", "6fbe8c2985008c0bfb30050750a71b90388ad3a3"), ("https://github.com/yangky11/miniF2F-lean4", "9e445f5435407f014b88b44a98436d50dd7abd00"), ("https://github.com/fpvandoorn/carleson", "bec7808b907190882fa1fa54ce749af297c6cf37"), ("https://github.com/YaelDillies/LeanAPAP", "951c660a8d7ba8e39f906fdf657674a984effa8b"), ("https://github.com/NUS-Math-Formalization/coxeter", "96af8aee7943ca8685ed1b00cc83a559ea389a97"), ("https://github.com/m4lvin/lean4-pdl", "c7f649fe3c4891cf1a01c120e82ebc5f6199856e"), ("https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers", "01ef1f22a04f2ba8081c5fb29413f515a0e52878")]
 repos_for_proving = []
 
 # TODO: automate this
@@ -395,7 +395,7 @@ def find_and_save_compatible_commits(repo_info_file, lean_git_repos):
             sha = "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"
             v = "v4.8.0"
         elif "hairy" in url:
-            sha = "a778826d19c8a7ddf1d26beeea628c45450612e6"
+            sha = "fa500d7d2e58580bac7c050f0f6c408041b70205"
             v = "v4.7.0"
         elif "compfiles" in url:
             sha = "f99bf6f2928d47dd1a445b414b3a723c2665f091"
@@ -965,7 +965,7 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
         sha = "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"
         v = "v4.8.0"
     elif "hairy" in url:
-        sha = "a778826d19c8a7ddf1d26beeea628c45450612e6"
+        sha = "fa500d7d2e58580bac7c050f0f6c408041b70205"
         v = "v4.7.0"
     elif "compfiles" in url:
         sha = "f99bf6f2928d47dd1a445b414b3a723c2665f091"
@@ -1300,7 +1300,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 2
+        current_epoch = 8
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False
@@ -1441,7 +1441,74 @@ def main():
             logger.info("Starting without curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
             # if is_main_process:
-                #  search_github_repositories("Lean", num_repos)
+            #     #  search_github_repositories("Lean", num_repos)
+
+            #     clone_url = "https://github.com/ImperialCollegeLondon/FLT"
+            #     commit = "b208a302cdcbfadce33d8165f0b054bfa17e2147"
+            #     url = clone_url.replace('.git', '')
+            #     lean_git_repo = LeanGitRepo(url, commit)
+            #     lean_git_repos.append(lean_git_repo)
+
+            #     clone_url = "https://github.com/FormalizedFormalLogic/Foundation"
+            #     commit = "d5fe5d057a90a0703a745cdc318a1b6621490c21"
+            #     url = clone_url.replace('.git', '')
+            #     lean_git_repo = LeanGitRepo(url, commit)
+            #     lean_git_repos.append(lean_git_repo)
+
+            #     clone_url = "https://github.com/loganrjmurphy/LeanEuclid"
+            #     commit = "f1912c3090eb82820575758efc31e40b9db86bb8"
+            #     url = clone_url.replace('.git', '')
+            #     lean_git_repo = LeanGitRepo(url, commit)
+            #     lean_git_repos.append(lean_git_repo)
+
+            #     clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd"
+            #     commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
+            #     url = clone_url.replace('.git', '')
+            #     lean_git_repo = LeanGitRepo(url, commit)
+            #     lean_git_repos.append(lean_git_repo)
+
+            #     clone_url = "https://github.com/lecopivo/SciLean"
+            #     commit = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
+            #     url = clone_url.replace('.git', '')
+            #     lean_git_repo = LeanGitRepo(url, commit)
+            #     lean_git_repos.append(lean_git_repo)
+
+            #     clone_url = "https://github.com/dwrensha/compfiles"
+            #     commit = "f99bf6f2928d47dd1a445b414b3a723c2665f091"
+            #     url = clone_url.replace('.git', '')
+            #     lean_git_repo = LeanGitRepo(url, commit)
+            #     lean_git_repos.append(lean_git_repo)
+
+            #     clone_url = "https://github.com/google-deepmind/debate"
+            #     commit = "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"
+            #     url = clone_url.replace('.git', '')
+            #     lean_git_repo = LeanGitRepo(url, commit)
+            #     lean_git_repos.append(lean_git_repo)
+
+            #     clone_url = "https://github.com/eric-wieser/lean-matrix-cookbook"
+            #     commit = "f15a149d321ac99ff9b9c024b58e7882f564669f"
+            #     url = clone_url.replace('.git', '')
+            #     lean_git_repo = LeanGitRepo(url, commit)
+            #     lean_git_repos.append(lean_git_repo)
+
+            #     clone_url = "https://github.com/avigad/mathematics_in_lean_source"
+            #     commit = "5297e0fb051367c48c0a084411853a576389ecf5"
+            #     url = clone_url.replace('.git', '')
+            #     lean_git_repo = LeanGitRepo(url, commit)
+            #     lean_git_repos.append(lean_git_repo)
+
+            #     clone_url = "https://github.com/teorth/pfr"
+            #     commit = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+            #     url = clone_url.replace('.git', '')
+            #     lean_git_repo = LeanGitRepo(url, commit)
+            #     lean_git_repos.append(lean_git_repo)
+
+            #     for i in range(len(lean_git_repos)):
+            #         repo = lean_git_repos[i]
+            #         logger.info(f"Processing {repo.url}")
+            #         result = add_repo_to_database(dynamic_database_json_path, repo, db)
+            #         if result is not None:
+            #             logger.info(f"Successfully added repo {repo.url}")   
 
                 # clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
                 # commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
@@ -1477,6 +1544,23 @@ def main():
                     if attempt == max_attempts - 1:
                         raise Exception("Failed to read repository information after multiple attempts")
                     time.sleep(1)
+
+            def get_sanitized_repo_info(repo_info):
+                sanitized_info = []
+                for info in repo_info:
+                    # Check if this is the removed repository
+                    if 'ahhwuhu/zeta_3_irrational' in info['url']:
+                        # Replace with the placeholder repository
+                        logger.info("Replacing zeta")
+                        new_info = info.copy()
+                        new_info['url'] = 'https://github.com/Adarsh321123/SimpleLean'
+                        new_info['commit'] = '99a5078e1614e61f0d9cc234ca246c8744a4e660'
+                        sanitized_info.append(new_info)
+                    else:
+                        sanitized_info.append(info)
+                return sanitized_info
+
+            repo_info = get_sanitized_repo_info(repo_info)
                 
             lean_git_repos = [LeanGitRepo(info['url'].replace('.git', ''), info['commit']) for info in repo_info]
 
@@ -1518,7 +1602,23 @@ def main():
                             repos_for_proving.append((repo.url, repo.commit))
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
-                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_debate_de3a6e500ae1a65dfeea2f91ef519ebad9704be0", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "de3a6e500ae1a65dfeea2f91ef519ebad9704be0")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf5", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"),("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"),("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"),("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_Foundation_d5fe5d057a90a0703a745cdc318a1b6621490c21", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"),("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"),("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"),("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_LeanEuclid_f1912c3090eb82820575758efc31e40b9db86bb8", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"),("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"),("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"),("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21"),("https://github.com/loganrjmurphy/LeanEuclid", "f1912c3090eb82820575758efc31e40b9db86bb8")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_lean4lean_05b1f4a68c5facea96a5ee51c6a56fef21276e0f", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"),("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"),("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"),("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21"),("https://github.com/loganrjmurphy/LeanEuclid", "f1912c3090eb82820575758efc31e40b9db86bb8"),("https://github.com/digama0/lean4lean", "05b1f4a68c5facea96a5ee51c6a56fef21276e0f")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"),("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"),("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"),("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21"),("https://github.com/loganrjmurphy/LeanEuclid", "f1912c3090eb82820575758efc31e40b9db86bb8"),("https://github.com/digama0/lean4lean", "05b1f4a68c5facea96a5ee51c6a56fef21276e0f"),("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_con-nf_00bdc85ba7d486a9e544a0806a1018dd06fa3856", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"),("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"),("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"),("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21"),("https://github.com/loganrjmurphy/LeanEuclid", "f1912c3090eb82820575758efc31e40b9db86bb8"),("https://github.com/digama0/lean4lean", "05b1f4a68c5facea96a5ee51c6a56fef21276e0f"),("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d"),("https://github.com/leanprover-community/con-nf", "00bdc85ba7d486a9e544a0806a1018dd06fa3856")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"),("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"),("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"),("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21"),("https://github.com/loganrjmurphy/LeanEuclid", "f1912c3090eb82820575758efc31e40b9db86bb8"),("https://github.com/digama0/lean4lean", "05b1f4a68c5facea96a5ee51c6a56fef21276e0f"),("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d"),("https://github.com/leanprover-community/con-nf", "00bdc85ba7d486a9e544a0806a1018dd06fa3856"),("https://github.com/siddhartha-gadgil/Saturn", "3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3", [("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566"),("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"),("https://github.com/google-deepmind/debate", "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"),("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"),("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"),("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21"),("https://github.com/loganrjmurphy/LeanEuclid", "f1912c3090eb82820575758efc31e40b9db86bb8"),("https://github.com/digama0/lean4lean", "05b1f4a68c5facea96a5ee51c6a56fef21276e0f"),("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d"),("https://github.com/leanprover-community/con-nf", "00bdc85ba7d486a9e544a0806a1018dd06fa3856"),("https://github.com/siddhartha-gadgil/Saturn", "3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"),("https://github.com/mo271/formal_book", "6fbe8c2985008c0bfb30050750a71b90388ad3a3")])
+                        if "hairy" not in repo.url:
+                            db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
 
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
@@ -1532,10 +1632,11 @@ def main():
                     if run_progressive_training:
                         try:
                             model_checkpoint_path = find_latest_checkpoint()
+                            model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_Foundation_d5fe5d057a90a0703a745cdc318a1b6621490c21_lambda_0.1_epoch=8-Recall@10_val=52.32.ckpt"
                             logger.info(f"Found latest checkpoint: {model_checkpoint_path}")
                         except FileNotFoundError as e:
                             logger.error(str(e))
-                            model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+                            model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_Foundation_d5fe5d057a90a0703a745cdc318a1b6621490c21_lambda_0.1_epoch=8-Recall@10_val=52.32.ckpt"
                         
                         # Train the model on the new dataset that we generated from the dynamic database.
                         logger.info("Inside train_test_fisher")

@@ -1,0 +1,22 @@
+\begin{table}
+    \caption{Accuracy in proving \textit{sorry} theorems across repositories. Accuracy is calculated as (proven theorems / total \textit{sorry} theorems). LA denotes LeanAgent. ``During" shows accuracy during lifelong learning, ``Add. After" shows \textit{additional} accuracy after lifelong learning, and ``total" shows the combined accuracy. ``MIL" stands for Mathematics in Lean Source and ``Hairy Ball" refers to the Hairy Ball Theorem. Repositories with no \textit{sorry} theorems or no proven ones are not shown. The best accuracy for each repository is in bold. As noted previously, we progressively train on MiniF2F after the initial curriculum to demonstrate the use case of formalizing in a new repository after learning a curriculum. As such, we don't evaluate LeanAgent after lifelong learning on MiniF2F.}
+    \label{tab:theorem-proofs1}
+    \centering
+    \small
+    \begin{tabular}{@{}l|r|rrr|r|r@{}}
+    \hline
+    \textbf{Repository} & \textbf{\#sorry} & \multicolumn{3}{c|}{\textbf{LA Accuracy (\%)}} & \textbf{ReProver} & \textbf{ReProver+} \\
+    & & \textbf{Total} & \textbf{During} & \textbf{Add.} & \textbf{(\%)} & \textbf{(\%)} \\
+    \hline
+    MIL & 29 & \textbf{72.4} & 48.3 & 24.1 & 48.3 & - \\
+    MiniF2F & 406 & \textbf{24.4} & 24.4 & - & 20.9 & - \\
+    Formal Book & 29 & \textbf{10.3} & 6.9 & 3.4 & 6.9 & - \\
+    SciLean & 294 & \textbf{9.2} & 7.5 & 1.7 & 8.2 & - \\
+    Hairy Ball & 14 & \textbf{7.1} & 0.0 & 7.1 & 0.0 & - \\
+    Coxeter & 15 & \textbf{6.7} & 6.7 & 0.0 & 0.0 & - \\
+    Carleson & 24 & \textbf{4.2} & 4.2 & 0.0 & \textbf{4.2} & - \\
+    Lean4 PDL & 30 & \textbf{3.3} & 3.3 & 0.0 & \textbf{3.3} & - \\
+    PFR & 37 & \textbf{2.7} & 2.7 & 0.0 & 0.0 & - \\
+    \hline
+    \end{tabular}
+\end{table}

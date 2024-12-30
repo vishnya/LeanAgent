@@ -1,0 +1,2027 @@
+Massot/lean-differential-topology/5b020daa5f935140c53408748a9f11ba02e7bf42/lean-toolchain failed. Retrying...
+2024-09-17 06:22:45.649 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Patrick
+Massot/lean-differential-topology/5b020daa5f935140c53408748a9f11ba02e7bf42/lean-toolchain failed. Retrying...
+2024-09-17 06:22:47.678 | INFO     | __main__:search_github_repositories:635 - Failed to clone PatrickMassot/lean-differ
+ential-topology because of HTTP Error 404: Not Found
+2024-09-17 06:22:47.678 | INFO     | __main__:search_github_repositories:612 - Processing dselsam/binport
+2024-09-17 06:22:47.679 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/dselsam/binport.git
+2024-09-17 06:22:47.679 | INFO     | __main__:clone_repo:414 - Repo name: dselsam/binport
+2024-09-17 06:22:48.495 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/dselsam
+/binport/aef374df0e169e2c3f1dc911de240c076315805c/lean-toolchain failed. Retrying...
+2024-09-17 06:22:49.522 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/dselsam
+/binport/aef374df0e169e2c3f1dc911de240c076315805c/lean-toolchain failed. Retrying...
+2024-09-17 06:22:51.550 | INFO     | __main__:search_github_repositories:635 - Failed to clone dselsam/binport because o
+f HTTP Error 404: Not Found
+2024-09-17 06:22:51.551 | INFO     | __main__:search_github_repositories:612 - Processing T-Brick/DateTime
+2024-09-17 06:22:51.551 | INFO     | __main__:search_github_repositories:637 - Skipping T-Brick/DateTime since it is a k
+nown repository
+2024-09-17 06:22:51.551 | INFO     | __main__:search_github_repositories:612 - Processing Stavan-Jain/linear_algebra_gam
+e
+2024-09-17 06:22:51.551 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Stavan-Jain/linear_algebra_gam
+e.git
+2024-09-17 06:22:51.551 | INFO     | __main__:clone_repo:414 - Repo name: Stavan-Jain/linear_algebra_game
+2024-09-17 06:22:52.241 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Stavan-
+Jain/linear_algebra_game/5faca82772a03b1d6940ff16a7e8fea9d31ee063/lean-toolchain failed. Retrying...
+2024-09-17 06:22:53.269 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Stavan-
+Jain/linear_algebra_game/5faca82772a03b1d6940ff16a7e8fea9d31ee063/lean-toolchain failed. Retrying...
+2024-09-17 06:22:55.295 | INFO     | __main__:search_github_repositories:635 - Failed to clone Stavan-Jain/linear_algebr
+a_game because of HTTP Error 404: Not Found
+2024-09-17 06:22:55.296 | INFO     | __main__:search_github_repositories:612 - Processing isadofschi/combinatorial_nulls
+tellensatz
+2024-09-17 06:22:55.296 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/isadofschi/combinatorial_nulls
+tellensatz.git
+2024-09-17 06:22:55.296 | INFO     | __main__:clone_repo:414 - Repo name: isadofschi/combinatorial_nullstellensatz
+2024-09-17 06:22:56.018 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/isadofs
+chi/combinatorial_nullstellensatz/b5f2e75d51c3c8b9345d698a3ff4964c95bb5028/lean-toolchain failed. Retrying...
+2024-09-17 06:22:57.045 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/isadofs
+chi/combinatorial_nullstellensatz/b5f2e75d51c3c8b9345d698a3ff4964c95bb5028/lean-toolchain failed. Retrying...
+2024-09-17 06:22:59.074 | INFO     | __main__:search_github_repositories:635 - Failed to clone isadofschi/combinatorial_
+nullstellensatz because of HTTP Error 404: Not Found
+2024-09-17 06:22:59.075 | INFO     | __main__:search_github_repositories:612 - Processing chanind/mathlib-changelog
+2024-09-17 06:22:59.075 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/chanind/mathlib-changelog.git
+2024-09-17 06:22:59.075 | INFO     | __main__:clone_repo:414 - Repo name: chanind/mathlib-changelog
+2024-09-17 06:22:59.737 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/chanind
+/mathlib-changelog/f4a5d6be49d864984820f3c0520a87cda8328265/lean-toolchain failed. Retrying...
+2024-09-17 06:23:00.763 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/chanind
+/mathlib-changelog/f4a5d6be49d864984820f3c0520a87cda8328265/lean-toolchain failed. Retrying...
+2024-09-17 06:23:02.791 | INFO     | __main__:search_github_repositories:635 - Failed to clone chanind/mathlib-changelog
+ because of HTTP Error 404: Not Found
+2024-09-17 06:23:02.792 | INFO     | __main__:search_github_repositories:612 - Processing model-checking/rust-lean-model
+s
+2024-09-17 06:23:02.792 | INFO     | __main__:search_github_repositories:637 - Skipping model-checking/rust-lean-models
+since it is a known repository
+2024-09-17 06:23:02.792 | INFO     | __main__:search_github_repositories:612 - Processing bsubercaseaux/EmptyHexagonLean
+2024-09-17 06:23:02.792 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/bsubercaseaux/EmptyHexagonLean
+.git
+2024-09-17 06:23:02.792 | INFO     | __main__:clone_repo:414 - Repo name: bsubercaseaux/EmptyHexagonLean
+2024-09-17 06:23:03.416 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/bsuberc
+aseaux/EmptyHexagonLean/3399900b0d2dea2e3ec790249dacab9f5331da98/lean-toolchain failed. Retrying...
+2024-09-17 06:23:04.442 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/bsuberc
+aseaux/EmptyHexagonLean/3399900b0d2dea2e3ec790249dacab9f5331da98/lean-toolchain failed. Retrying...
+2024-09-17 06:23:06.469 | INFO     | __main__:search_github_repositories:635 - Failed to clone bsubercaseaux/EmptyHexago
+nLean because of HTTP Error 404: Not Found
+2024-09-17 06:23:06.469 | INFO     | __main__:search_github_repositories:612 - Processing MichaelStollBayreuth/EulerProd
+ucts
+2024-09-17 06:23:06.470 | INFO     | __main__:search_github_repositories:637 - Skipping MichaelStollBayreuth/EulerProduc
+ts since it is a known repository
+2024-09-17 06:23:06.470 | INFO     | __main__:search_github_repositories:612 - Processing hargoniX/Flame
+2024-09-17 06:23:06.470 | INFO     | __main__:search_github_repositories:637 - Skipping hargoniX/Flame since it is a kno
+wn repository
+2024-09-17 06:23:06.470 | INFO     | __main__:search_github_repositories:612 - Processing argumentcomputer/Http.lean
+2024-09-17 06:23:06.470 | INFO     | __main__:search_github_repositories:637 - Skipping argumentcomputer/Http.lean since
+ it is a known repository
+2024-09-17 06:23:06.470 | INFO     | __main__:search_github_repositories:612 - Processing Vilin97/linear-algebra-done-ri
+ght
+2024-09-17 06:23:06.470 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Vilin97/linear-algebra-done-ri
+ght.git
+2024-09-17 06:23:06.470 | INFO     | __main__:clone_repo:414 - Repo name: Vilin97/linear-algebra-done-right
+2024-09-17 06:23:07.269 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Vilin97
+/linear-algebra-done-right/0a715045dcae0b1fc7c2c196878b8f6807f686b4/lean-toolchain failed. Retrying...
+2024-09-17 06:23:08.294 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Vilin97
+/linear-algebra-done-right/0a715045dcae0b1fc7c2c196878b8f6807f686b4/lean-toolchain failed. Retrying...
+2024-09-17 06:23:10.321 | INFO     | __main__:search_github_repositories:635 - Failed to clone Vilin97/linear-algebra-do
+ne-right because of HTTP Error 404: Not Found
+2024-09-17 06:23:10.322 | INFO     | __main__:search_github_repositories:612 - Processing madvorak/vcsp
+2024-09-17 06:23:10.322 | INFO     | __main__:search_github_repositories:637 - Skipping madvorak/vcsp since it is a know
+n repository
+2024-09-17 06:23:10.323 | INFO     | __main__:search_github_repositories:612 - Processing kbuzzard/mathematics-in-lean
+2024-09-17 06:23:10.323 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/kbuzzard/mathematics-in-lean.g
+it
+2024-09-17 06:23:10.323 | INFO     | __main__:clone_repo:414 - Repo name: kbuzzard/mathematics-in-lean
+2024-09-17 06:23:10.961 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kbuzzar
+d/mathematics-in-lean/3fad7bb7e888dabef94921101af8671b78a4304a/lean-toolchain failed. Retrying...
+2024-09-17 06:23:11.987 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kbuzzar
+d/mathematics-in-lean/3fad7bb7e888dabef94921101af8671b78a4304a/lean-toolchain failed. Retrying...
+2024-09-17 06:23:14.019 | INFO     | __main__:search_github_repositories:635 - Failed to clone kbuzzard/mathematics-in-l
+ean because of HTTP Error 404: Not Found
+2024-09-17 06:23:16.003 | INFO     | __main__:search_github_repositories:612 - Processing teorth/newton
+2024-09-17 06:23:16.003 | INFO     | __main__:search_github_repositories:637 - Skipping teorth/newton since it is a know
+n repository
+2024-09-17 06:23:16.003 | INFO     | __main__:search_github_repositories:612 - Processing argumentcomputer/Parsec.lean
+2024-09-17 06:23:16.003 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/argumentcomputer/Parsec.lean.g
+it
+2024-09-17 06:23:16.003 | INFO     | __main__:clone_repo:414 - Repo name: argumentcomputer/Parsec.lean
+2024-09-17 06:23:16.815 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/argumen
+tcomputer/Parsec.lean/aa3f83103db4f0d8e60c48f8771647cd1ffd224d/lean-toolchain failed. Retrying...
+2024-09-17 06:23:17.841 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/argumen
+tcomputer/Parsec.lean/aa3f83103db4f0d8e60c48f8771647cd1ffd224d/lean-toolchain failed. Retrying...
+2024-09-17 06:23:19.869 | INFO     | __main__:search_github_repositories:635 - Failed to clone argumentcomputer/Parsec.l
+ean because of HTTP Error 404: Not Found
+2024-09-17 06:23:19.870 | INFO     | __main__:search_github_repositories:612 - Processing apnelson1/Matroid
+2024-09-17 06:23:19.870 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/apnelson1/Matroid.git
+2024-09-17 06:23:19.870 | INFO     | __main__:clone_repo:414 - Repo name: apnelson1/Matroid
+2024-09-17 06:23:20.540 | INFO     | __main__:search_github_repositories:624 - Cloned apnelson1/Matroid
+2024-09-17 06:23:20.540 | INFO     | __main__:search_github_repositories:612 - Processing smorel394/TS1
+2024-09-17 06:23:20.540 | INFO     | __main__:search_github_repositories:637 - Skipping smorel394/TS1 since it is a know
+n repository
+2024-09-17 06:23:20.540 | INFO     | __main__:search_github_repositories:612 - Processing ianjauslin-rutgers/pythagoras4
+2024-09-17 06:23:20.540 | INFO     | __main__:search_github_repositories:637 - Skipping ianjauslin-rutgers/pythagoras4 s
+ince it is a known repository
+2024-09-17 06:23:20.540 | INFO     | __main__:search_github_repositories:612 - Processing mortarsanjaya/IMOSLLean4
+2024-09-17 06:23:20.540 | INFO     | __main__:search_github_repositories:637 - Skipping mortarsanjaya/IMOSLLean4 since i
+t is a known repository
+2024-09-17 06:23:20.540 | INFO     | __main__:search_github_repositories:612 - Processing dupuisf/BibtexQuery
+2024-09-17 06:23:20.540 | INFO     | __main__:search_github_repositories:637 - Skipping dupuisf/BibtexQuery since it is
+a known repository
+2024-09-17 06:23:20.541 | INFO     | __main__:search_github_repositories:612 - Processing leanprover/smt2_interface
+2024-09-17 06:23:20.541 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/leanprover/smt2_interface.git
+2024-09-17 06:23:20.541 | INFO     | __main__:clone_repo:414 - Repo name: leanprover/smt2_interface
+2024-09-17 06:23:21.266 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanpro
+ver/smt2_interface/7ff0ce248b68ea4db2a2d4966a97b5786da05ed7/lean-toolchain failed. Retrying...
+2024-09-17 06:23:22.292 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanpro
+ver/smt2_interface/7ff0ce248b68ea4db2a2d4966a97b5786da05ed7/lean-toolchain failed. Retrying...
+2024-09-17 06:23:24.320 | INFO     | __main__:search_github_repositories:635 - Failed to clone leanprover/smt2_interface
+ because of HTTP Error 404: Not Found
+2024-09-17 06:23:24.321 | INFO     | __main__:search_github_repositories:612 - Processing jsm28/bmo2-2020-lean
+2024-09-17 06:23:24.321 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/jsm28/bmo2-2020-lean.git
+2024-09-17 06:23:24.322 | INFO     | __main__:clone_repo:414 - Repo name: jsm28/bmo2-2020-lean
+2024-09-17 06:23:25.030 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/jsm28/b
+mo2-2020-lean/ff87ce51ed080d462e63c5549d5f2b377ad83204/lean-toolchain failed. Retrying...
+2024-09-17 06:23:26.057 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/jsm28/b
+mo2-2020-lean/ff87ce51ed080d462e63c5549d5f2b377ad83204/lean-toolchain failed. Retrying...
+2024-09-17 06:23:28.085 | INFO     | __main__:search_github_repositories:635 - Failed to clone jsm28/bmo2-2020-lean beca
+use of HTTP Error 404: Not Found
+2024-09-17 06:23:28.085 | INFO     | __main__:search_github_repositories:612 - Processing gabriel-fallen/bidirectional-d
+emo
+2024-09-17 06:23:28.086 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/gabriel-fallen/bidirectional-d
+emo.git
+2024-09-17 06:23:28.086 | INFO     | __main__:clone_repo:414 - Repo name: gabriel-fallen/bidirectional-demo
+2024-09-17 06:23:28.779 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/gabriel
+-fallen/bidirectional-demo/023e691bafd7eef0b17d921f1c107dcc0bc50688/lean-toolchain failed. Retrying...
+2024-09-17 06:23:29.806 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/gabriel
+-fallen/bidirectional-demo/023e691bafd7eef0b17d921f1c107dcc0bc50688/lean-toolchain failed. Retrying...
+2024-09-17 06:23:31.833 | INFO     | __main__:search_github_repositories:635 - Failed to clone gabriel-fallen/bidirectio
+nal-demo because of HTTP Error 404: Not Found
+2024-09-17 06:23:31.834 | INFO     | __main__:search_github_repositories:612 - Processing jonsterling/lean4-sgdt
+2024-09-17 06:23:31.835 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/jonsterling/lean4-sgdt.git
+2024-09-17 06:23:31.835 | INFO     | __main__:clone_repo:414 - Repo name: jonsterling/lean4-sgdt
+2024-09-17 06:23:32.523 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/jonster
+ling/lean4-sgdt/5858bfe96f2c5de8343c0f7befddd946ef6ce3e6/lean-toolchain failed. Retrying...
+2024-09-17 06:23:33.550 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/jonster
+ling/lean4-sgdt/5858bfe96f2c5de8343c0f7befddd946ef6ce3e6/lean-toolchain failed. Retrying...
+2024-09-17 06:23:35.584 | INFO     | __main__:search_github_repositories:635 - Failed to clone jonsterling/lean4-sgdt be
+cause of HTTP Error 404: Not Found
+2024-09-17 06:23:35.585 | INFO     | __main__:search_github_repositories:612 - Processing dwrensha/math-puzzles-in-lean
+2024-09-17 06:23:35.585 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/dwrensha/math-puzzles-in-lean.
+git
+2024-09-17 06:23:35.585 | INFO     | __main__:clone_repo:414 - Repo name: dwrensha/math-puzzles-in-lean
+2024-09-17 06:23:36.269 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/dwrensh
+a/math-puzzles-in-lean/ebba0a21a82fb3bcd8dc89bef598f53b7e719fcc/lean-toolchain failed. Retrying...
+2024-09-17 06:23:37.298 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/dwrensh
+a/math-puzzles-in-lean/ebba0a21a82fb3bcd8dc89bef598f53b7e719fcc/lean-toolchain failed. Retrying...
+2024-09-17 06:23:39.326 | INFO     | __main__:search_github_repositories:635 - Failed to clone dwrensha/math-puzzles-in-
+lean because of HTTP Error 404: Not Found
+2024-09-17 06:23:39.327 | INFO     | __main__:search_github_repositories:612 - Processing sinhp/ProofLab
+2024-09-17 06:23:39.328 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/sinhp/ProofLab.git
+2024-09-17 06:23:39.328 | INFO     | __main__:clone_repo:414 - Repo name: sinhp/ProofLab
+2024-09-17 06:23:39.963 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/sinhp/P
+roofLab/67ef830b0358baf60743b64058a9b04836de6358/lean-toolchain failed. Retrying...
+2024-09-17 06:23:40.998 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/sinhp/P
+roofLab/67ef830b0358baf60743b64058a9b04836de6358/lean-toolchain failed. Retrying...
+2024-09-17 06:23:43.039 | INFO     | __main__:search_github_repositories:635 - Failed to clone sinhp/ProofLab because of
+ HTTP Error 404: Not Found
+2024-09-17 06:23:43.040 | INFO     | __main__:search_github_repositories:612 - Processing nomeata/lean-calcify
+2024-09-17 06:23:43.040 | INFO     | __main__:search_github_repositories:637 - Skipping nomeata/lean-calcify since it is
+ a known repository
+2024-09-17 06:23:43.041 | INFO     | __main__:search_github_repositories:612 - Processing algebraic-dev/parse
+2024-09-17 06:23:43.041 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/algebraic-dev/parse.git
+2024-09-17 06:23:43.041 | INFO     | __main__:clone_repo:414 - Repo name: algebraic-dev/parse
+2024-09-17 06:23:43.802 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4 4.8.0
+2024-09-17 06:24:00.380 | INFO     | __main__:search_github_repositories:635 - Failed to clone algebraic-dev/parse becau
+se of Invalid tag or branch: `4.8.0` for Repository(full_name="leanprover/lean4")
+2024-09-17 06:24:00.380 | INFO     | __main__:search_github_repositories:612 - Processing tydeu/lean4-partax
+2024-09-17 06:24:00.381 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/tydeu/lean4-partax.git
+2024-09-17 06:24:00.381 | INFO     | __main__:clone_repo:414 - Repo name: tydeu/lean4-partax
+2024-09-17 06:24:01.028 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4 4.3.0
+2024-09-17 06:24:17.694 | INFO     | __main__:search_github_repositories:635 - Failed to clone tydeu/lean4-partax becaus
+e of Invalid tag or branch: `4.3.0` for Repository(full_name="leanprover/lean4")
+2024-09-17 06:24:17.694 | INFO     | __main__:search_github_repositories:612 - Processing argumentcomputer/FFaCiL.lean
+2024-09-17 06:24:17.694 | INFO     | __main__:search_github_repositories:637 - Skipping argumentcomputer/FFaCiL.lean sin
+ce it is a known repository
+2024-09-17 06:24:17.694 | INFO     | __main__:search_github_repositories:612 - Processing EgbertRijke/GraphModel
+2024-09-17 06:24:17.694 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/EgbertRijke/GraphModel.git
+2024-09-17 06:24:17.694 | INFO     | __main__:clone_repo:414 - Repo name: EgbertRijke/GraphModel
+2024-09-17 06:24:18.313 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/EgbertR
+ijke/GraphModel/2a473880764093dd151554a913292ed465e80e62/lean-toolchain failed. Retrying...
+2024-09-17 06:24:19.340 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/EgbertR
+ijke/GraphModel/2a473880764093dd151554a913292ed465e80e62/lean-toolchain failed. Retrying...
+2024-09-17 06:24:21.379 | INFO     | __main__:search_github_repositories:635 - Failed to clone EgbertRijke/GraphModel be
+cause of HTTP Error 404: Not Found
+2024-09-17 06:24:21.380 | INFO     | __main__:search_github_repositories:612 - Processing kevinsullivan/uva-cs-dm-s19
+2024-09-17 06:24:21.381 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/kevinsullivan/uva-cs-dm-s19.gi
+t
+2024-09-17 06:24:21.381 | INFO     | __main__:clone_repo:414 - Repo name: kevinsullivan/uva-cs-dm-s19
+2024-09-17 06:24:22.029 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kevinsu
+llivan/uva-cs-dm-s19/3e7177682acdb56a2d16914e0344c10335583dcf/lean-toolchain failed. Retrying...
+2024-09-17 06:24:23.056 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kevinsu
+llivan/uva-cs-dm-s19/3e7177682acdb56a2d16914e0344c10335583dcf/lean-toolchain failed. Retrying...
+2024-09-17 06:24:25.083 | INFO     | __main__:search_github_repositories:635 - Failed to clone kevinsullivan/uva-cs-dm-s
+19 because of HTTP Error 404: Not Found
+2024-09-17 06:24:25.084 | INFO     | __main__:search_github_repositories:612 - Processing javra/iit
+2024-09-17 06:24:25.085 | INFO     | __main__:search_github_repositories:637 - Skipping javra/iit since it is a known re
+pository
+2024-09-17 06:24:25.085 | INFO     | __main__:search_github_repositories:612 - Processing arthurpaulino/viper
+2024-09-17 06:24:25.085 | INFO     | __main__:search_github_repositories:637 - Skipping arthurpaulino/viper since it is
+a known repository
+2024-09-17 06:24:25.085 | INFO     | __main__:search_github_repositories:612 - Processing lindy-labs/aegis
+2024-09-17 06:24:25.085 | INFO     | __main__:search_github_repositories:637 - Skipping lindy-labs/aegis since it is a k
+nown repository
+2024-09-17 06:24:25.085 | INFO     | __main__:search_github_repositories:612 - Processing PatrickMassot/NNG4
+2024-09-17 06:24:25.085 | INFO     | __main__:search_github_repositories:637 - Skipping PatrickMassot/NNG4 since it is a
+ known repository
+2024-09-17 06:24:25.085 | INFO     | __main__:search_github_repositories:612 - Processing kbuzzard/real-numbers-course
+2024-09-17 06:24:25.085 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/kbuzzard/real-numbers-course.g
+it
+2024-09-17 06:24:25.085 | INFO     | __main__:clone_repo:414 - Repo name: kbuzzard/real-numbers-course
+2024-09-17 06:24:25.764 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kbuzzar
+d/real-numbers-course/c9e80d519540378dfe3e03b4ac3fbf80d44be27b/lean-toolchain failed. Retrying...
+2024-09-17 06:24:26.792 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kbuzzar
+d/real-numbers-course/c9e80d519540378dfe3e03b4ac3fbf80d44be27b/lean-toolchain failed. Retrying...
+2024-09-17 06:24:28.818 | INFO     | __main__:search_github_repositories:635 - Failed to clone kbuzzard/real-numbers-cou
+rse because of HTTP Error 404: Not Found
+2024-09-17 06:24:28.819 | INFO     | __main__:search_github_repositories:612 - Processing argumentcomputer/YatimaStdLib.
+lean
+2024-09-17 06:24:28.819 | INFO     | __main__:search_github_repositories:637 - Skipping argumentcomputer/YatimaStdLib.le
+an since it is a known repository
+2024-09-17 06:24:28.819 | INFO     | __main__:search_github_repositories:612 - Processing fgdorais/lean4-unicode-basic
+2024-09-17 06:24:28.819 | INFO     | __main__:search_github_repositories:637 - Skipping fgdorais/lean4-unicode-basic sin
+ce it is a known repository
+2024-09-17 06:24:28.819 | INFO     | __main__:search_github_repositories:612 - Processing UniversalAlgebra/lean-ualib
+2024-09-17 06:24:28.819 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/UniversalAlgebra/lean-ualib.gi
+t
+2024-09-17 06:24:28.819 | INFO     | __main__:clone_repo:414 - Repo name: UniversalAlgebra/lean-ualib
+2024-09-17 06:24:29.549 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Univers
+alAlgebra/lean-ualib/ab9cbddbb5bdf1eeac4b0d5994bd6cad2a3665d4/lean-toolchain failed. Retrying...
+2024-09-17 06:24:30.576 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Univers
+alAlgebra/lean-ualib/ab9cbddbb5bdf1eeac4b0d5994bd6cad2a3665d4/lean-toolchain failed. Retrying...
+2024-09-17 06:24:32.611 | INFO     | __main__:search_github_repositories:635 - Failed to clone UniversalAlgebra/lean-ual
+ib because of HTTP Error 404: Not Found
+2024-09-17 06:24:32.612 | INFO     | __main__:search_github_repositories:612 - Processing BrownCS1951x/fpv2021
+2024-09-17 06:24:32.612 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/BrownCS1951x/fpv2021.git
+2024-09-17 06:24:32.612 | INFO     | __main__:clone_repo:414 - Repo name: BrownCS1951x/fpv2021
+2024-09-17 06:24:33.350 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/BrownCS
+1951x/fpv2021/10bdbd92e64fb34115b68794b8ff480468f4dcaa/lean-toolchain failed. Retrying...
+2024-09-17 06:24:34.378 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/BrownCS
+1951x/fpv2021/10bdbd92e64fb34115b68794b8ff480468f4dcaa/lean-toolchain failed. Retrying...
+2024-09-17 06:24:36.406 | INFO     | __main__:search_github_repositories:635 - Failed to clone BrownCS1951x/fpv2021 beca
+use of HTTP Error 404: Not Found
+2024-09-17 06:24:36.406 | INFO     | __main__:search_github_repositories:612 - Processing zygi/lean-protoc-plugin
+2024-09-17 06:24:36.407 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/zygi/lean-protoc-plugin.git
+2024-09-17 06:24:36.407 | INFO     | __main__:clone_repo:414 - Repo name: zygi/lean-protoc-plugin
+2024-09-17 06:24:37.100 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/zygi/le
+an-protoc-plugin/bbee5497a2c2048d3fc3dd133f798310a5644c4f/lean-toolchain failed. Retrying...
+2024-09-17 06:24:38.128 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/zygi/le
+an-protoc-plugin/bbee5497a2c2048d3fc3dd133f798310a5644c4f/lean-toolchain failed. Retrying...
+2024-09-17 06:24:40.157 | INFO     | __main__:search_github_repositories:635 - Failed to clone zygi/lean-protoc-plugin b
+ecause of HTTP Error 404: Not Found
+2024-09-17 06:24:40.158 | INFO     | __main__:search_github_repositories:612 - Processing ImperialCollegeLondon/diophant
+ine
+2024-09-17 06:24:40.158 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/ImperialCollegeLondon/diophant
+ine.git
+2024-09-17 06:24:40.158 | INFO     | __main__:clone_repo:414 - Repo name: ImperialCollegeLondon/diophantine
+2024-09-17 06:24:41.013 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Imperia
+lCollegeLondon/diophantine/93a407512156a7b13355a7d2fabb806f512362f5/lean-toolchain failed. Retrying...
+2024-09-17 06:24:42.040 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Imperia
+lCollegeLondon/diophantine/93a407512156a7b13355a7d2fabb806f512362f5/lean-toolchain failed. Retrying...
+2024-09-17 06:24:44.074 | INFO     | __main__:search_github_repositories:635 - Failed to clone ImperialCollegeLondon/dio
+phantine because of HTTP Error 404: Not Found
+2024-09-17 06:24:44.075 | INFO     | __main__:search_github_repositories:612 - Processing mhuisi/Uniq
+2024-09-17 06:24:44.076 | INFO     | __main__:search_github_repositories:637 - Skipping mhuisi/Uniq since it is a known
+repository
+2024-09-17 06:24:44.076 | INFO     | __main__:search_github_repositories:612 - Processing Kha/macro-supplement
+2024-09-17 06:24:44.076 | INFO     | __main__:search_github_repositories:637 - Skipping Kha/macro-supplement since it is
+ a known repository
+2024-09-17 06:24:44.076 | INFO     | __main__:search_github_repositories:612 - Processing gihanmarasingha/miu_language
+2024-09-17 06:24:44.076 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/gihanmarasingha/miu_language.g
+it
+2024-09-17 06:24:44.076 | INFO     | __main__:clone_repo:414 - Repo name: gihanmarasingha/miu_language
+2024-09-17 06:24:44.755 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/gihanma
+rasingha/miu_language/ffc2a1d4b33e76098578f3617b9b0a699dbcc885/lean-toolchain failed. Retrying...
+2024-09-17 06:24:45.789 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/gihanma
+rasingha/miu_language/ffc2a1d4b33e76098578f3617b9b0a699dbcc885/lean-toolchain failed. Retrying...
+2024-09-17 06:24:47.818 | INFO     | __main__:search_github_repositories:635 - Failed to clone gihanmarasingha/miu_langu
+age because of HTTP Error 404: Not Found
+2024-09-17 06:24:47.819 | INFO     | __main__:search_github_repositories:612 - Processing chenjulang/rubikcubegroup
+2024-09-17 06:24:47.820 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/chenjulang/rubikcubegroup.git
+2024-09-17 06:24:47.820 | INFO     | __main__:clone_repo:414 - Repo name: chenjulang/rubikcubegroup
+2024-09-17 06:24:48.507 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4 v4.6.0
+2024-09-17 06:25:04.609 | INFO     | __main__:search_github_repositories:624 - Cloned chenjulang/rubikcubegroup
+2024-09-17 06:25:04.609 | INFO     | __main__:search_github_repositories:612 - Processing mattrobball/lean-autograding
+2024-09-17 06:25:04.609 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mattrobball/lean-autograding.g
+it
+2024-09-17 06:25:04.609 | INFO     | __main__:clone_repo:414 - Repo name: mattrobball/lean-autograding
+2024-09-17 06:25:05.269 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/mattrob
+ball/lean-autograding/c004f4539968eaa5b3a42624308df9e9c9eeeca8/lean-toolchain failed. Retrying...
+2024-09-17 06:25:06.296 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/mattrob
+ball/lean-autograding/c004f4539968eaa5b3a42624308df9e9c9eeeca8/lean-toolchain failed. Retrying...
+2024-09-17 06:25:08.325 | INFO     | __main__:search_github_repositories:635 - Failed to clone mattrobball/lean-autograd
+ing because of HTTP Error 404: Not Found
+2024-09-17 06:25:08.326 | INFO     | __main__:search_github_repositories:612 - Processing unitb/temporal-logic
+2024-09-17 06:25:08.326 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/unitb/temporal-logic.git
+2024-09-17 06:25:08.326 | INFO     | __main__:clone_repo:414 - Repo name: unitb/temporal-logic
+2024-09-17 06:25:09.071 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/unitb/t
+emporal-logic/accec04d1b09ca841be065511c9e206b725b16e9/lean-toolchain failed. Retrying...
+2024-09-17 06:25:10.097 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/unitb/t
+emporal-logic/accec04d1b09ca841be065511c9e206b725b16e9/lean-toolchain failed. Retrying...
+2024-09-17 06:25:12.126 | INFO     | __main__:search_github_repositories:635 - Failed to clone unitb/temporal-logic beca
+use of HTTP Error 404: Not Found
+2024-09-17 06:25:12.127 | INFO     | __main__:search_github_repositories:612 - Processing ljt12138/Proof-of-Surreal
+2024-09-17 06:25:12.127 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/ljt12138/Proof-of-Surreal.git
+2024-09-17 06:25:12.127 | INFO     | __main__:clone_repo:414 - Repo name: ljt12138/Proof-of-Surreal
+2024-09-17 06:25:12.932 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ljt1213
+8/Proof-of-Surreal/6b92baf2382ac23dd0d700f5c958aa910ad4b754/lean-toolchain failed. Retrying...
+2024-09-17 06:25:13.960 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ljt1213
+8/Proof-of-Surreal/6b92baf2382ac23dd0d700f5c958aa910ad4b754/lean-toolchain failed. Retrying...
+2024-09-17 06:25:15.990 | INFO     | __main__:search_github_repositories:635 - Failed to clone ljt12138/Proof-of-Surreal
+ because of HTTP Error 404: Not Found
+2024-09-17 06:25:15.992 | INFO     | __main__:search_github_repositories:612 - Processing arthurpaulino/LeanMusic
+2024-09-17 06:25:15.992 | INFO     | __main__:search_github_repositories:637 - Skipping arthurpaulino/LeanMusic since it
+ is a known repository
+2024-09-17 06:25:15.993 | INFO     | __main__:search_github_repositories:612 - Processing argumentcomputer/Ipld.lean
+2024-09-17 06:25:15.993 | INFO     | __main__:search_github_repositories:637 - Skipping argumentcomputer/Ipld.lean since
+ it is a known repository
+2024-09-17 06:25:15.993 | INFO     | __main__:search_github_repositories:612 - Processing Odomontois/advent2022-lean
+2024-09-17 06:25:15.993 | INFO     | __main__:search_github_repositories:637 - Skipping Odomontois/advent2022-lean since
+ it is a known repository
+2024-09-17 06:25:15.993 | INFO     | __main__:search_github_repositories:612 - Processing anfelor/coc-lean
+2024-09-17 06:25:15.993 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/anfelor/coc-lean.git
+2024-09-17 06:25:15.993 | INFO     | __main__:clone_repo:414 - Repo name: anfelor/coc-lean
+2024-09-17 06:25:16.667 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/anfelor
+/coc-lean/fdd967d2b7bc349202a1deabbbce155eed4db73a/lean-toolchain failed. Retrying...
+2024-09-17 06:25:17.697 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/anfelor
+/coc-lean/fdd967d2b7bc349202a1deabbbce155eed4db73a/lean-toolchain failed. Retrying...
+2024-09-17 06:25:19.727 | INFO     | __main__:search_github_repositories:635 - Failed to clone anfelor/coc-lean because
+of HTTP Error 404: Not Found
+2024-09-17 06:25:19.729 | INFO     | __main__:search_github_repositories:612 - Processing kbuzzard/IISc-experiments
+2024-09-17 06:25:19.729 | INFO     | __main__:search_github_repositories:637 - Skipping kbuzzard/IISc-experiments since
+it is a known repository
+2024-09-17 06:25:19.729 | INFO     | __main__:search_github_repositories:612 - Processing mariainesdff/ideles
+2024-09-17 06:25:19.729 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mariainesdff/ideles.git
+2024-09-17 06:25:19.729 | INFO     | __main__:clone_repo:414 - Repo name: mariainesdff/ideles
+2024-09-17 06:25:20.455 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/mariain
+esdff/ideles/b85d242f18cbdb7a8755c048c2d4cb7b3c675127/lean-toolchain failed. Retrying...
+2024-09-17 06:25:21.481 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/mariain
+esdff/ideles/b85d242f18cbdb7a8755c048c2d4cb7b3c675127/lean-toolchain failed. Retrying...
+2024-09-17 06:25:23.509 | INFO     | __main__:search_github_repositories:635 - Failed to clone mariainesdff/ideles becau
+se of HTTP Error 404: Not Found
+2024-09-17 06:25:23.510 | INFO     | __main__:search_github_repositories:612 - Processing ykonstant1/InfinitePrimes
+2024-09-17 06:25:23.511 | INFO     | __main__:search_github_repositories:637 - Skipping ykonstant1/InfinitePrimes since
+it is a known repository
+2024-09-17 06:25:23.511 | INFO     | __main__:search_github_repositories:612 - Processing gebner/lean4-old
+2024-09-17 06:25:23.511 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/gebner/lean4-old.git
+2024-09-17 06:25:23.511 | INFO     | __main__:clone_repo:414 - Repo name: gebner/lean4-old
+2024-09-17 06:25:24.209 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/gebner/
+lean4-old/ee51cdfaf63ee313c914d83264f91f414a0e3b6e/lean-toolchain failed. Retrying...
+2024-09-17 06:25:25.237 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/gebner/
+lean4-old/ee51cdfaf63ee313c914d83264f91f414a0e3b6e/lean-toolchain failed. Retrying...
+2024-09-17 06:25:27.263 | INFO     | __main__:search_github_repositories:635 - Failed to clone gebner/lean4-old because
+of HTTP Error 404: Not Found
+2024-09-17 06:25:27.265 | INFO     | __main__:search_github_repositories:612 - Processing leanprover-community/lean-sens
+itivity
+2024-09-17 06:25:27.265 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/leanprover-community/lean-sens
+itivity.git
+2024-09-17 06:25:27.265 | INFO     | __main__:clone_repo:414 - Repo name: leanprover-community/lean-sensitivity
+2024-09-17 06:25:27.991 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanpro
+ver-community/lean-sensitivity/295adaf3f496166bbf97869c49de5373dd6b6d85/lean-toolchain failed. Retrying...
+2024-09-17 06:25:29.018 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanpro
+ver-community/lean-sensitivity/295adaf3f496166bbf97869c49de5373dd6b6d85/lean-toolchain failed. Retrying...
+2024-09-17 06:25:31.045 | INFO     | __main__:search_github_repositories:635 - Failed to clone leanprover-community/lean
+-sensitivity because of HTTP Error 404: Not Found
+2024-09-17 06:25:31.046 | INFO     | __main__:search_github_repositories:612 - Processing alexkassil/natural_number_game
+_lean4
+2024-09-17 06:25:31.046 | INFO     | __main__:search_github_repositories:637 - Skipping alexkassil/natural_number_game_l
+ean4 since it is a known repository
+2024-09-17 06:25:31.046 | INFO     | __main__:search_github_repositories:612 - Processing seewoo5/lean-poly-abc
+2024-09-17 06:25:31.046 | INFO     | __main__:search_github_repositories:637 - Skipping seewoo5/lean-poly-abc since it i
+s a known repository
+2024-09-17 06:25:31.046 | INFO     | __main__:search_github_repositories:612 - Processing semorrison/lean-tidy
+2024-09-17 06:25:31.046 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/semorrison/lean-tidy.git
+2024-09-17 06:25:31.046 | INFO     | __main__:clone_repo:414 - Repo name: semorrison/lean-tidy
+2024-09-17 06:25:31.723 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/semorri
+son/lean-tidy/6c1d46de6cff05e1c2c4c9692af812bca3e13b6c/lean-toolchain failed. Retrying...
+2024-09-17 06:25:32.753 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/semorri
+son/lean-tidy/6c1d46de6cff05e1c2c4c9692af812bca3e13b6c/lean-toolchain failed. Retrying...
+2024-09-17 06:25:34.791 | INFO     | __main__:search_github_repositories:635 - Failed to clone semorrison/lean-tidy beca
+use of HTTP Error 404: Not Found
+2024-09-17 06:25:34.791 | INFO     | __main__:search_github_repositories:612 - Processing menik1126/TRIGO
+2024-09-17 06:25:34.792 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/menik1126/TRIGO.git
+2024-09-17 06:25:34.792 | INFO     | __main__:clone_repo:414 - Repo name: menik1126/TRIGO
+2024-09-17 06:25:35.518 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/menik11
+26/TRIGO/052138e80d4e7245bca56efdf126a559fea30a5b/lean-toolchain failed. Retrying...
+2024-09-17 06:25:36.544 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/menik11
+26/TRIGO/052138e80d4e7245bca56efdf126a559fea30a5b/lean-toolchain failed. Retrying...
+2024-09-17 06:25:38.572 | INFO     | __main__:search_github_repositories:635 - Failed to clone menik1126/TRIGO because o
+f HTTP Error 404: Not Found
+2024-09-17 06:25:38.573 | INFO     | __main__:search_github_repositories:612 - Processing rah4927/lean-dojo-mew
+2024-09-17 06:25:38.573 | INFO     | __main__:search_github_repositories:637 - Skipping rah4927/lean-dojo-mew since it i
+s a known repository
+2024-09-17 06:25:38.573 | INFO     | __main__:search_github_repositories:612 - Processing lean-ja/fp-lean-ja
+2024-09-17 06:25:38.573 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lean-ja/fp-lean-ja.git
+2024-09-17 06:25:38.573 | INFO     | __main__:clone_repo:414 - Repo name: lean-ja/fp-lean-ja
+2024-09-17 06:25:39.303 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lean-ja
+/fp-lean-ja/7ae261d54902e09f163837a9498fd13bace54bec/lean-toolchain failed. Retrying...
+2024-09-17 06:25:40.332 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lean-ja
+/fp-lean-ja/7ae261d54902e09f163837a9498fd13bace54bec/lean-toolchain failed. Retrying...
+2024-09-17 06:25:42.362 | INFO     | __main__:search_github_repositories:635 - Failed to clone lean-ja/fp-lean-ja becaus
+e of HTTP Error 404: Not Found
+2024-09-17 06:25:42.363 | INFO     | __main__:search_github_repositories:612 - Processing dtumad/lean-crypto-formalizati
+on
+2024-09-17 06:25:42.363 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/dtumad/lean-crypto-formalizati
+on.git
+2024-09-17 06:25:42.363 | INFO     | __main__:clone_repo:414 - Repo name: dtumad/lean-crypto-formalization
+2024-09-17 06:25:43.040 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/dtumad/
+lean-crypto-formalization/820d66c3a6569d323a20b8390db1e7112db8a876/lean-toolchain failed. Retrying...
+2024-09-17 06:25:44.070 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/dtumad/
+lean-crypto-formalization/820d66c3a6569d323a20b8390db1e7112db8a876/lean-toolchain failed. Retrying...
+2024-09-17 06:25:46.097 | INFO     | __main__:search_github_repositories:635 - Failed to clone dtumad/lean-crypto-formal
+ization because of HTTP Error 404: Not Found
+2024-09-17 06:25:46.098 | INFO     | __main__:search_github_repositories:612 - Processing willcrichton/layout-types
+2024-09-17 06:25:46.098 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/willcrichton/layout-types.git
+2024-09-17 06:25:46.098 | INFO     | __main__:clone_repo:414 - Repo name: willcrichton/layout-types
+2024-09-17 06:25:46.744 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/willcri
+chton/layout-types/db82390461b589256f074f3baed54d0916b43930/lean-toolchain failed. Retrying...
+2024-09-17 06:25:47.773 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/willcri
+chton/layout-types/db82390461b589256f074f3baed54d0916b43930/lean-toolchain failed. Retrying...
+2024-09-17 06:25:49.801 | INFO     | __main__:search_github_repositories:635 - Failed to clone willcrichton/layout-types
+ because of HTTP Error 404: Not Found
+2024-09-17 06:25:49.802 | INFO     | __main__:search_github_repositories:612 - Processing mariainesdff/ostrowski
+2024-09-17 06:25:49.802 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mariainesdff/ostrowski.git
+2024-09-17 06:25:49.802 | INFO     | __main__:clone_repo:414 - Repo name: mariainesdff/ostrowski
+2024-09-17 06:25:50.465 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/mariain
+esdff/ostrowski/0d915b86aa803274e10acd956a4affbaa69cbf66/lean-toolchain failed. Retrying...
+2024-09-17 06:25:51.492 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/mariain
+esdff/ostrowski/0d915b86aa803274e10acd956a4affbaa69cbf66/lean-toolchain failed. Retrying...
+2024-09-17 06:25:53.521 | INFO     | __main__:search_github_repositories:635 - Failed to clone mariainesdff/ostrowski be
+cause of HTTP Error 404: Not Found
+2024-09-17 06:25:53.522 | INFO     | __main__:search_github_repositories:612 - Processing digama0/advent-of-code
+2024-09-17 06:25:53.522 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/digama0/advent-of-code.git
+2024-09-17 06:25:53.522 | INFO     | __main__:clone_repo:414 - Repo name: digama0/advent-of-code
+2024-09-17 06:25:54.284 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/digama0
+/advent-of-code/831935cd62bd9a554c1d3f773da744948fc306ec/lean-toolchain failed. Retrying...
+2024-09-17 06:25:55.311 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/digama0
+/advent-of-code/831935cd62bd9a554c1d3f773da744948fc306ec/lean-toolchain failed. Retrying...
+2024-09-17 06:25:57.339 | INFO     | __main__:search_github_repositories:635 - Failed to clone digama0/advent-of-code be
+cause of HTTP Error 404: Not Found
+2024-09-17 06:25:57.340 | INFO     | __main__:search_github_repositories:612 - Processing siddhartha-gadgil/proofs-and-p
+rograms-2023
+2024-09-17 06:25:57.340 | INFO     | __main__:search_github_repositories:637 - Skipping siddhartha-gadgil/proofs-and-pro
+grams-2023 since it is a known repository
+2024-09-17 06:25:57.340 | INFO     | __main__:search_github_repositories:612 - Processing PatrickMassot/lean4-game-serve
+r
+2024-09-17 06:25:57.340 | INFO     | __main__:search_github_repositories:637 - Skipping PatrickMassot/lean4-game-server
+since it is a known repository
+2024-09-17 06:25:57.340 | INFO     | __main__:search_github_repositories:612 - Processing ahevia/CC3101_2021
+2024-09-17 06:25:57.341 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/ahevia/CC3101_2021.git
+2024-09-17 06:25:57.341 | INFO     | __main__:clone_repo:414 - Repo name: ahevia/CC3101_2021
+2024-09-17 06:25:57.989 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ahevia/
+CC3101_2021/178392747409383f39e357b0dde919553d214aeb/lean-toolchain failed. Retrying...
+2024-09-17 06:25:59.031 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ahevia/
+CC3101_2021/178392747409383f39e357b0dde919553d214aeb/lean-toolchain failed. Retrying...
+2024-09-17 06:26:01.071 | INFO     | __main__:search_github_repositories:635 - Failed to clone ahevia/CC3101_2021 becaus
+e of HTTP Error 404: Not Found
+2024-09-17 06:26:01.072 | INFO     | __main__:search_github_repositories:612 - Processing knowsys/Formale-Systeme-in-LEA
+N
+2024-09-17 06:26:01.073 | INFO     | __main__:search_github_repositories:637 - Skipping knowsys/Formale-Systeme-in-LEAN
+since it is a known repository
+2024-09-17 06:26:01.073 | INFO     | __main__:search_github_repositories:612 - Processing ImperialCollegeLondon/tcc-lean
+-alg-geom-2022
+2024-09-17 06:26:01.073 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/ImperialCollegeLondon/tcc-lean
+-alg-geom-2022.git
+2024-09-17 06:26:01.073 | INFO     | __main__:clone_repo:414 - Repo name: ImperialCollegeLondon/tcc-lean-alg-geom-2022
+2024-09-17 06:26:01.886 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Imperia
+lCollegeLondon/tcc-lean-alg-geom-2022/21d4e02156d842332c8b56e044dabe147171c173/lean-toolchain failed. Retrying...
+2024-09-17 06:26:02.926 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Imperia
+lCollegeLondon/tcc-lean-alg-geom-2022/21d4e02156d842332c8b56e044dabe147171c173/lean-toolchain failed. Retrying...
+2024-09-17 06:26:04.967 | INFO     | __main__:search_github_repositories:635 - Failed to clone ImperialCollegeLondon/tcc
+-lean-alg-geom-2022 because of HTTP Error 404: Not Found
+2024-09-17 06:26:04.968 | INFO     | __main__:search_github_repositories:612 - Processing jthickstun/lean
+2024-09-17 06:26:04.969 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/jthickstun/lean.git
+2024-09-17 06:26:04.969 | INFO     | __main__:clone_repo:414 - Repo name: jthickstun/lean
+2024-09-17 06:26:05.631 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/jthicks
+tun/lean/8254b987f06be1f98ef2e0cc33b7d4655d77dc85/lean-toolchain failed. Retrying...
+2024-09-17 06:26:06.670 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/jthicks
+tun/lean/8254b987f06be1f98ef2e0cc33b7d4655d77dc85/lean-toolchain failed. Retrying...
+2024-09-17 06:26:08.711 | INFO     | __main__:search_github_repositories:635 - Failed to clone jthickstun/lean because o
+f HTTP Error 404: Not Found
+2024-09-17 06:26:08.712 | INFO     | __main__:search_github_repositories:612 - Processing antonkov/advent-of-code-2022
+2024-09-17 06:26:08.713 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/antonkov/advent-of-code-2022.g
+it
+2024-09-17 06:26:08.713 | INFO     | __main__:clone_repo:414 - Repo name: antonkov/advent-of-code-2022
+2024-09-17 06:26:09.425 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/antonko
+v/advent-of-code-2022/8803c6cd4b44494b633e633eb700fa6d6efe900a/lean-toolchain failed. Retrying...
+2024-09-17 06:26:10.465 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/antonko
+v/advent-of-code-2022/8803c6cd4b44494b633e633eb700fa6d6efe900a/lean-toolchain failed. Retrying...
+2024-09-17 06:26:12.506 | INFO     | __main__:search_github_repositories:635 - Failed to clone antonkov/advent-of-code-2
+022 because of HTTP Error 404: Not Found
+2024-09-17 06:26:12.508 | INFO     | __main__:search_github_repositories:612 - Processing Biiiilly/filter
+2024-09-17 06:26:12.508 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Biiiilly/filter.git
+2024-09-17 06:26:12.508 | INFO     | __main__:clone_repo:414 - Repo name: Biiiilly/filter
+2024-09-17 06:26:13.165 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Biiiill
+y/filter/f603aa9d7bf8e290f145f6bc9bdd338cd017b3ee/lean-toolchain failed. Retrying...
+2024-09-17 06:26:14.205 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Biiiill
+y/filter/f603aa9d7bf8e290f145f6bc9bdd338cd017b3ee/lean-toolchain failed. Retrying...
+2024-09-17 06:26:16.240 | INFO     | __main__:search_github_repositories:635 - Failed to clone Biiiilly/filter because o
+f HTTP Error 404: Not Found
+2024-09-17 06:26:16.241 | INFO     | __main__:search_github_repositories:612 - Processing alcides/AoC2021Lean4
+2024-09-17 06:26:16.242 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/alcides/AoC2021Lean4.git
+2024-09-17 06:26:16.242 | INFO     | __main__:clone_repo:414 - Repo name: alcides/AoC2021Lean4
+2024-09-17 06:26:16.910 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/alcides
+/AoC2021Lean4/12006f7c97a1f146b5fbbdf966e64a1dc8101a5a/lean-toolchain failed. Retrying...
+2024-09-17 06:26:17.937 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/alcides
+/AoC2021Lean4/12006f7c97a1f146b5fbbdf966e64a1dc8101a5a/lean-toolchain failed. Retrying...
+2024-09-17 06:26:19.965 | INFO     | __main__:search_github_repositories:635 - Failed to clone alcides/AoC2021Lean4 beca
+use of HTTP Error 404: Not Found
+2024-09-17 06:26:19.966 | INFO     | __main__:search_github_repositories:612 - Processing kbuzzard/mathlib4_experiments
+2024-09-17 06:26:19.967 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/kbuzzard/mathlib4_experiments.
+git
+2024-09-17 06:26:19.967 | INFO     | __main__:clone_repo:414 - Repo name: kbuzzard/mathlib4_experiments
+2024-09-17 06:26:20.676 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kbuzzar
+d/mathlib4_experiments/87cb879b4d602c8ecfd9283b7c0b06015abdbab1/lean-toolchain failed. Retrying...
+2024-09-17 06:26:21.703 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kbuzzar
+d/mathlib4_experiments/87cb879b4d602c8ecfd9283b7c0b06015abdbab1/lean-toolchain failed. Retrying...
+2024-09-17 06:26:23.733 | INFO     | __main__:search_github_repositories:635 - Failed to clone kbuzzard/mathlib4_experim
+ents because of HTTP Error 404: Not Found
+2024-09-17 06:26:23.734 | INFO     | __main__:search_github_repositories:612 - Processing katydid/symbolic-automatic-der
+ivatives
+2024-09-17 06:26:23.734 | INFO     | __main__:search_github_repositories:637 - Skipping katydid/symbolic-automatic-deriv
+atives since it is a known repository
+2024-09-17 06:26:23.735 | INFO     | __main__:search_github_repositories:612 - Processing girving/interval
+2024-09-17 06:26:23.735 | INFO     | __main__:search_github_repositories:637 - Skipping girving/interval since it is a k
+nown repository
+2024-09-17 06:26:23.735 | INFO     | __main__:search_github_repositories:612 - Processing ImperialCollegeLondon/group-th
+eory-experiments
+2024-09-17 06:26:23.735 | INFO     | __main__:search_github_repositories:637 - Skipping ImperialCollegeLondon/group-theo
+ry-experiments since it is a known repository
+2024-09-17 06:26:23.735 | INFO     | __main__:search_github_repositories:612 - Processing knowsys/CertifyingDatalog
+2024-09-17 06:26:23.735 | INFO     | __main__:search_github_repositories:637 - Skipping knowsys/CertifyingDatalog since
+it is a known repository
+2024-09-17 06:26:23.735 | INFO     | __main__:search_github_repositories:612 - Processing mk12/analysis-i
+2024-09-17 06:26:23.735 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mk12/analysis-i.git
+2024-09-17 06:26:23.735 | INFO     | __main__:clone_repo:414 - Repo name: mk12/analysis-i
+2024-09-17 06:26:24.520 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/mk12/an
+alysis-i/e85deae5441f705d9284eeb204c9c3ecb450c93a/lean-toolchain failed. Retrying...
+2024-09-17 06:26:25.560 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/mk12/an
+alysis-i/e85deae5441f705d9284eeb204c9c3ecb450c93a/lean-toolchain failed. Retrying...
+2024-09-17 06:26:27.587 | INFO     | __main__:search_github_repositories:635 - Failed to clone mk12/analysis-i because o
+f HTTP Error 404: Not Found
+2024-09-17 06:26:27.589 | INFO     | __main__:search_github_repositories:612 - Processing bergmannjg/leanCurl
+2024-09-17 06:26:27.589 | INFO     | __main__:search_github_repositories:637 - Skipping bergmannjg/leanCurl since it is
+a known repository
+2024-09-17 06:26:27.589 | INFO     | __main__:search_github_repositories:612 - Processing vasnesterov/HadwigerNelson
+2024-09-17 06:26:27.589 | INFO     | __main__:search_github_repositories:637 - Skipping vasnesterov/HadwigerNelson since
+ it is a known repository
+2024-09-17 06:26:27.589 | INFO     | __main__:search_github_repositories:612 - Processing eric-wieser/lean-graded-rings
+2024-09-17 06:26:27.589 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/eric-wieser/lean-graded-rings.
+git
+2024-09-17 06:26:27.589 | INFO     | __main__:clone_repo:414 - Repo name: eric-wieser/lean-graded-rings
+2024-09-17 06:26:28.292 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/eric-wi
+eser/lean-graded-rings/53bccd2553ee2052907ff9519e63f1945e6add4c/lean-toolchain failed. Retrying...
+2024-09-17 06:26:29.331 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/eric-wi
+eser/lean-graded-rings/53bccd2553ee2052907ff9519e63f1945e6add4c/lean-toolchain failed. Retrying...
+2024-09-17 06:26:31.370 | INFO     | __main__:search_github_repositories:635 - Failed to clone eric-wieser/lean-graded-r
+ings because of HTTP Error 404: Not Found
+2024-09-17 06:26:31.372 | INFO     | __main__:search_github_repositories:612 - Processing FWuermse/lean-postgres
+2024-09-17 06:26:31.372 | INFO     | __main__:search_github_repositories:637 - Skipping FWuermse/lean-postgres since it
+is a known repository
+2024-09-17 06:26:31.372 | INFO     | __main__:search_github_repositories:612 - Processing leanprover-community/import-gr
+aph
+2024-09-17 06:26:31.372 | INFO     | __main__:search_github_repositories:637 - Skipping leanprover-community/import-grap
+h since it is a known repository
+2024-09-17 06:26:31.372 | INFO     | __main__:search_github_repositories:612 - Processing SnobbyDragon/leanhanoi
+2024-09-17 06:26:31.372 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/SnobbyDragon/leanhanoi.git
+2024-09-17 06:26:31.372 | INFO     | __main__:clone_repo:414 - Repo name: SnobbyDragon/leanhanoi
+2024-09-17 06:26:32.117 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/SnobbyD
+ragon/leanhanoi/a42811ce5ab55e0451880a8c111c75b082936d39/lean-toolchain failed. Retrying...
+2024-09-17 06:26:33.144 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/SnobbyD
+ragon/leanhanoi/a42811ce5ab55e0451880a8c111c75b082936d39/lean-toolchain failed. Retrying...
+2024-09-17 06:26:35.172 | INFO     | __main__:search_github_repositories:635 - Failed to clone SnobbyDragon/leanhanoi be
+cause of HTTP Error 404: Not Found
+2024-09-17 06:26:35.173 | INFO     | __main__:search_github_repositories:612 - Processing pnwamk/lean4-assert-command
+2024-09-17 06:26:35.174 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/pnwamk/lean4-assert-command.gi
+t
+2024-09-17 06:26:35.174 | INFO     | __main__:clone_repo:414 - Repo name: pnwamk/lean4-assert-command
+2024-09-17 06:26:35.958 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/pnwamk/
+lean4-assert-command/6ad74ff0eb6933249135c81a83f59b507ba49eb0/lean-toolchain failed. Retrying...
+2024-09-17 06:26:36.999 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/pnwamk/
+lean4-assert-command/6ad74ff0eb6933249135c81a83f59b507ba49eb0/lean-toolchain failed. Retrying...
+2024-09-17 06:26:39.039 | INFO     | __main__:search_github_repositories:635 - Failed to clone pnwamk/lean4-assert-comma
+nd because of HTTP Error 404: Not Found
+2024-09-17 06:26:39.039 | INFO     | __main__:search_github_repositories:612 - Processing Human-Oriented-ATP/lean-tactic
+s
+2024-09-17 06:26:39.040 | INFO     | __main__:search_github_repositories:637 - Skipping Human-Oriented-ATP/lean-tactics
+since it is a known repository
+2024-09-17 06:26:39.040 | INFO     | __main__:search_github_repositories:612 - Processing paulcadman/lean4-leetcode
+2024-09-17 06:26:39.040 | INFO     | __main__:search_github_repositories:637 - Skipping paulcadman/lean4-leetcode since
+it is a known repository
+2024-09-17 06:26:39.040 | INFO     | __main__:search_github_repositories:612 - Processing 0art0/lean3-statement-translat
+ion-tool
+2024-09-17 06:26:39.040 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/0art0/lean3-statement-translat
+ion-tool.git
+2024-09-17 06:26:39.040 | INFO     | __main__:clone_repo:414 - Repo name: 0art0/lean3-statement-translation-tool
+2024-09-17 06:26:39.769 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/0art0/l
+ean3-statement-translation-tool/5bf00c4f3d7ddcae938e4d78349395061b866aab/lean-toolchain failed. Retrying...
+2024-09-17 06:26:40.810 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/0art0/l
+ean3-statement-translation-tool/5bf00c4f3d7ddcae938e4d78349395061b866aab/lean-toolchain failed. Retrying...
+2024-09-17 06:26:42.852 | INFO     | __main__:search_github_repositories:635 - Failed to clone 0art0/lean3-statement-tra
+nslation-tool because of HTTP Error 404: Not Found
+2024-09-17 06:26:42.853 | INFO     | __main__:search_github_repositories:612 - Processing lean-forward/cap_set_problem
+2024-09-17 06:26:42.853 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/lean-forward/cap_set_problem.g
+it
+2024-09-17 06:26:42.853 | INFO     | __main__:clone_repo:414 - Repo name: lean-forward/cap_set_problem
+2024-09-17 06:26:43.602 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lean-fo
+rward/cap_set_problem/095a2f18f81c551a0053f2e65806de751e438fc4/lean-toolchain failed. Retrying...
+2024-09-17 06:26:44.635 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/lean-fo
+rward/cap_set_problem/095a2f18f81c551a0053f2e65806de751e438fc4/lean-toolchain failed. Retrying...
+2024-09-17 06:26:46.671 | INFO     | __main__:search_github_repositories:635 - Failed to clone lean-forward/cap_set_prob
+lem because of HTTP Error 404: Not Found
+2024-09-17 06:26:46.672 | INFO     | __main__:search_github_repositories:612 - Processing argumentcomputer/Lurk.lean
+2024-09-17 06:26:46.673 | INFO     | __main__:search_github_repositories:637 - Skipping argumentcomputer/Lurk.lean since
+ it is a known repository
+2024-09-17 06:26:46.673 | INFO     | __main__:search_github_repositories:612 - Processing AlexDuchnowski/rubiks-cube
+2024-09-17 06:26:46.673 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/AlexDuchnowski/rubiks-cube.git
+2024-09-17 06:26:46.673 | INFO     | __main__:clone_repo:414 - Repo name: AlexDuchnowski/rubiks-cube
+2024-09-17 06:26:47.310 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4 v4.4.0-rc1
+2024-09-17 06:27:03.663 | INFO     | __main__:search_github_repositories:624 - Cloned AlexDuchnowski/rubiks-cube
+2024-09-17 06:27:03.663 | INFO     | __main__:search_github_repositories:612 - Processing SchrodingerZhu/lean-gccjit
+2024-09-17 06:27:03.663 | INFO     | __main__:search_github_repositories:637 - Skipping SchrodingerZhu/lean-gccjit since
+ it is a known repository
+2024-09-17 06:27:03.663 | INFO     | __main__:search_github_repositories:612 - Processing JamesGallicchio/http
+2024-09-17 06:27:03.663 | INFO     | __main__:search_github_repositories:637 - Skipping JamesGallicchio/http since it is
+ a known repository
+2024-09-17 06:27:03.663 | INFO     | __main__:search_github_repositories:612 - Processing alexpatel/lean-ex
+2024-09-17 06:27:03.663 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/alexpatel/lean-ex.git
+2024-09-17 06:27:03.664 | INFO     | __main__:clone_repo:414 - Repo name: alexpatel/lean-ex
+2024-09-17 06:27:04.340 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/alexpat
+el/lean-ex/37419b8d014ba3ba416e2252809a89a1604a1330/lean-toolchain failed. Retrying...
+2024-09-17 06:27:05.368 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/alexpat
+el/lean-ex/37419b8d014ba3ba416e2252809a89a1604a1330/lean-toolchain failed. Retrying...
+2024-09-17 06:27:07.398 | INFO     | __main__:search_github_repositories:635 - Failed to clone alexpatel/lean-ex because
+ of HTTP Error 404: Not Found
+2024-09-17 06:27:07.399 | INFO     | __main__:search_github_repositories:612 - Processing martincmartin/linear_algebra_d
+one_right3
+2024-09-17 06:27:07.400 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/martincmartin/linear_algebra_d
+one_right3.git
+2024-09-17 06:27:07.400 | INFO     | __main__:clone_repo:414 - Repo name: martincmartin/linear_algebra_done_right3
+2024-09-17 06:27:08.103 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/martinc
+martin/linear_algebra_done_right3/f224431a8fb250ea90163305a1db773b8af37a0f/lean-toolchain failed. Retrying...
+2024-09-17 06:27:09.130 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/martinc
+martin/linear_algebra_done_right3/f224431a8fb250ea90163305a1db773b8af37a0f/lean-toolchain failed. Retrying...
+2024-09-17 06:27:11.158 | INFO     | __main__:search_github_repositories:635 - Failed to clone martincmartin/linear_alge
+bra_done_right3 because of HTTP Error 404: Not Found
+2024-09-17 06:27:11.160 | INFO     | __main__:search_github_repositories:612 - Processing vaibhavkarve/igl2020
+2024-09-17 06:27:11.160 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/vaibhavkarve/igl2020.git
+2024-09-17 06:27:11.160 | INFO     | __main__:clone_repo:414 - Repo name: vaibhavkarve/igl2020
+2024-09-17 06:27:11.840 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/vaibhav
+karve/igl2020/891c3c429f3b1ba85cf612940bff60738160787d/lean-toolchain failed. Retrying...
+2024-09-17 06:27:12.879 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/vaibhav
+karve/igl2020/891c3c429f3b1ba85cf612940bff60738160787d/lean-toolchain failed. Retrying...
+2024-09-17 06:27:14.920 | INFO     | __main__:search_github_repositories:635 - Failed to clone vaibhavkarve/igl2020 beca
+use of HTTP Error 404: Not Found
+2024-09-17 06:27:14.921 | INFO     | __main__:search_github_repositories:612 - Processing unitb/separation-logic
+2024-09-17 06:27:14.922 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/unitb/separation-logic.git
+2024-09-17 06:27:14.922 | INFO     | __main__:clone_repo:414 - Repo name: unitb/separation-logic
+2024-09-17 06:27:15.766 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/unitb/s
+eparation-logic/bdde6fc8f16fd43932aea9827d6c63cadd91c2e8/lean-toolchain failed. Retrying...
+2024-09-17 06:27:16.806 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/unitb/s
+eparation-logic/bdde6fc8f16fd43932aea9827d6c63cadd91c2e8/lean-toolchain failed. Retrying...
+2024-09-17 06:27:18.847 | INFO     | __main__:search_github_repositories:635 - Failed to clone unitb/separation-logic be
+cause of HTTP Error 404: Not Found
+2024-09-17 06:27:18.848 | INFO     | __main__:search_github_repositories:612 - Processing ammkrn/printiest
+2024-09-17 06:27:18.848 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/ammkrn/printiest.git
+2024-09-17 06:27:18.848 | INFO     | __main__:clone_repo:414 - Repo name: ammkrn/printiest
+2024-09-17 06:27:19.590 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ammkrn/
+printiest/8598cb44caeb0e560cd41636e554ca93c9324edd/lean-toolchain failed. Retrying...
+2024-09-17 06:27:20.630 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ammkrn/
+printiest/8598cb44caeb0e560cd41636e554ca93c9324edd/lean-toolchain failed. Retrying...
+2024-09-17 06:27:22.658 | INFO     | __main__:search_github_repositories:635 - Failed to clone ammkrn/printiest because
+of HTTP Error 404: Not Found
+2024-09-17 06:27:22.659 | INFO     | __main__:search_github_repositories:612 - Processing jtristan/UnicodeSkipListTableE
+xample
+2024-09-17 06:27:22.659 | INFO     | __main__:search_github_repositories:637 - Skipping jtristan/UnicodeSkipListTableExa
+mple since it is a known repository
+2024-09-17 06:27:22.660 | INFO     | __main__:search_github_repositories:612 - Processing CAIMEOX/json-schema-lean
+2024-09-17 06:27:22.660 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/CAIMEOX/json-schema-lean.git
+2024-09-17 06:27:22.660 | INFO     | __main__:clone_repo:414 - Repo name: CAIMEOX/json-schema-lean
+2024-09-17 06:27:23.415 | INFO     | __main__:search_github_repositories:635 - Failed to clone CAIMEOX/json-schema-lean
+because of Invalid Lean 4 version: stable
+2024-09-17 06:27:23.416 | INFO     | __main__:search_github_repositories:612 - Processing adomani/MA4N1_2023
+2024-09-17 06:27:23.416 | INFO     | __main__:search_github_repositories:637 - Skipping adomani/MA4N1_2023 since it is a
+ known repository
+2024-09-17 06:27:23.416 | INFO     | __main__:search_github_repositories:612 - Processing remimimimimi/leansec
+2024-09-17 06:27:23.416 | INFO     | __main__:search_github_repositories:637 - Skipping remimimimimi/leansec since it is
+ a known repository
+2024-09-17 06:27:23.416 | INFO     | __main__:search_github_repositories:612 - Processing hhu-adam/lean-i18n
+2024-09-17 06:27:23.416 | INFO     | __main__:search_github_repositories:637 - Skipping hhu-adam/lean-i18n since it is a
+ known repository
+2024-09-17 06:27:23.416 | INFO     | __main__:search_github_repositories:612 - Processing RemyDegenne/testing-lower-boun
+ds
+2024-09-17 06:27:23.416 | INFO     | __main__:search_github_repositories:637 - Skipping RemyDegenne/testing-lower-bounds
+ since it is a known repository
+2024-09-17 06:27:23.416 | INFO     | __main__:search_github_repositories:612 - Processing Lix0120/eudoxus
+2024-09-17 06:27:23.416 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Lix0120/eudoxus.git
+2024-09-17 06:27:23.417 | INFO     | __main__:clone_repo:414 - Repo name: Lix0120/eudoxus
+2024-09-17 06:27:24.032 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Lix0120
+/eudoxus/8425b3ec28306fc55189899932bcb634038f22ba/lean-toolchain failed. Retrying...
+2024-09-17 06:27:25.059 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Lix0120
+/eudoxus/8425b3ec28306fc55189899932bcb634038f22ba/lean-toolchain failed. Retrying...
+2024-09-17 06:27:27.100 | INFO     | __main__:search_github_repositories:635 - Failed to clone Lix0120/eudoxus because o
+f HTTP Error 404: Not Found
+2024-09-17 06:27:27.102 | INFO     | __main__:search_github_repositories:612 - Processing mariainesdff/LocalClassFieldTh
+eory
+2024-09-17 06:27:27.102 | INFO     | __main__:search_github_repositories:637 - Skipping mariainesdff/LocalClassFieldTheo
+ry since it is a known repository
+2024-09-17 06:27:27.102 | INFO     | __main__:search_github_repositories:612 - Processing chughes87/Mandlebrah
+2024-09-17 06:27:27.102 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/chughes87/Mandlebrah.git
+2024-09-17 06:27:27.102 | INFO     | __main__:clone_repo:414 - Repo name: chughes87/Mandlebrah
+2024-09-17 06:27:27.796 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/chughes
+87/Mandlebrah/559d300a9ef3d43832d3b47cffb014abe7649538/lean-toolchain failed. Retrying...
+2024-09-17 06:27:28.837 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/chughes
+87/Mandlebrah/559d300a9ef3d43832d3b47cffb014abe7649538/lean-toolchain failed. Retrying...
+2024-09-17 06:27:30.878 | INFO     | __main__:search_github_repositories:635 - Failed to clone chughes87/Mandlebrah beca
+use of HTTP Error 404: Not Found
+2024-09-17 06:27:32.726 | INFO     | __main__:search_github_repositories:612 - Processing adamtopaz/lean-acl-pairs
+2024-09-17 06:27:32.727 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/adamtopaz/lean-acl-pairs.git
+2024-09-17 06:27:32.727 | INFO     | __main__:clone_repo:414 - Repo name: adamtopaz/lean-acl-pairs
+2024-09-17 06:27:33.529 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/adamtop
+az/lean-acl-pairs/dcf56cdcfd8f2b1fcc822ae1012057d881e77eee/lean-toolchain failed. Retrying...
+2024-09-17 06:27:34.569 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/adamtop
+az/lean-acl-pairs/dcf56cdcfd8f2b1fcc822ae1012057d881e77eee/lean-toolchain failed. Retrying...
+2024-09-17 06:27:36.611 | INFO     | __main__:search_github_repositories:635 - Failed to clone adamtopaz/lean-acl-pairs
+because of HTTP Error 404: Not Found
+2024-09-17 06:27:36.612 | INFO     | __main__:search_github_repositories:612 - Processing AviCraimer/relational-calculus
+-library-lean4
+2024-09-17 06:27:36.613 | INFO     | __main__:search_github_repositories:637 - Skipping AviCraimer/relational-calculus-l
+ibrary-lean4 since it is a known repository
+2024-09-17 06:27:36.613 | INFO     | __main__:search_github_repositories:612 - Processing madvorak/grammars
+2024-09-17 06:27:36.613 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/madvorak/grammars.git
+2024-09-17 06:27:36.613 | INFO     | __main__:clone_repo:414 - Repo name: madvorak/grammars
+2024-09-17 06:27:37.385 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/madvora
+k/grammars/1447343a45fcb7821070f1e20b57288d437323a6/lean-toolchain failed. Retrying...
+2024-09-17 06:27:38.426 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/madvora
+k/grammars/1447343a45fcb7821070f1e20b57288d437323a6/lean-toolchain failed. Retrying...
+2024-09-17 06:27:40.453 | INFO     | __main__:search_github_repositories:635 - Failed to clone madvorak/grammars because
+ of HTTP Error 404: Not Found
+2024-09-17 06:27:40.454 | INFO     | __main__:search_github_repositories:612 - Processing JLimperg/regensburg-itp-school
+-2023
+2024-09-17 06:27:40.455 | INFO     | __main__:search_github_repositories:637 - Skipping JLimperg/regensburg-itp-school-2
+023 since it is a known repository
+2024-09-17 06:27:40.455 | INFO     | __main__:search_github_repositories:612 - Processing jaalonso/Calculemus2
+2024-09-17 06:27:40.455 | INFO     | __main__:search_github_repositories:637 - Skipping jaalonso/Calculemus2 since it is
+ a known repository
+2024-09-17 06:27:40.455 | INFO     | __main__:search_github_repositories:612 - Processing mseri/BET
+2024-09-17 06:27:40.455 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mseri/BET.git
+2024-09-17 06:27:40.455 | INFO     | __main__:clone_repo:414 - Repo name: mseri/BET
+2024-09-17 06:27:41.173 | INFO     | __main__:search_github_repositories:624 - Cloned mseri/BET
+2024-09-17 06:27:41.174 | INFO     | __main__:search_github_repositories:612 - Processing Anderssorby/Nix.lean
+2024-09-17 06:27:41.174 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/Anderssorby/Nix.lean.git
+2024-09-17 06:27:41.174 | INFO     | __main__:clone_repo:414 - Repo name: Anderssorby/Nix.lean
+2024-09-17 06:27:41.914 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Anderss
+orby/Nix.lean/757cd56ba4272f49465d2c3daad2e84e26e3607b/lean-toolchain failed. Retrying...
+2024-09-17 06:27:42.954 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Anderss
+orby/Nix.lean/757cd56ba4272f49465d2c3daad2e84e26e3607b/lean-toolchain failed. Retrying...
+2024-09-17 06:27:44.995 | INFO     | __main__:search_github_repositories:635 - Failed to clone Anderssorby/Nix.lean beca
+use of HTTP Error 404: Not Found
+2024-09-17 06:27:44.996 | INFO     | __main__:search_github_repositories:612 - Processing xubaiw/Reservoir.lean
+2024-09-17 06:27:44.996 | INFO     | __main__:search_github_repositories:637 - Skipping xubaiw/Reservoir.lean since it i
+s a known repository
+2024-09-17 06:27:44.996 | INFO     | __main__:search_github_repositories:612 - Processing hargoniX/nest-core
+2024-09-17 06:27:44.996 | INFO     | __main__:search_github_repositories:637 - Skipping hargoniX/nest-core since it is a
+ known repository
+2024-09-17 06:27:44.996 | INFO     | __main__:search_github_repositories:612 - Processing luisscastillo/lean-game
+2024-09-17 06:27:44.997 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/luisscastillo/lean-game.git
+2024-09-17 06:27:44.997 | INFO     | __main__:clone_repo:414 - Repo name: luisscastillo/lean-game
+2024-09-17 06:27:45.708 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/luissca
+stillo/lean-game/44c454ca6f4dcb8de76401790cf3f4fa91738fc1/lean-toolchain failed. Retrying...
+2024-09-17 06:27:46.749 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/luissca
+stillo/lean-game/44c454ca6f4dcb8de76401790cf3f4fa91738fc1/lean-toolchain failed. Retrying...
+2024-09-17 06:27:48.791 | INFO     | __main__:search_github_repositories:635 - Failed to clone luisscastillo/lean-game b
+ecause of HTTP Error 404: Not Found
+2024-09-17 06:27:48.792 | INFO     | __main__:search_github_repositories:612 - Processing EdAyers/lean-humanproof
+2024-09-17 06:27:48.792 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/EdAyers/lean-humanproof.git
+2024-09-17 06:27:48.793 | INFO     | __main__:clone_repo:414 - Repo name: EdAyers/lean-humanproof
+2024-09-17 06:27:49.512 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/EdAyers
+/lean-humanproof/7fa4cc5a95c1bd4d7dc309bb8c132a6ca500fe8e/lean-toolchain failed. Retrying...
+2024-09-17 06:27:50.553 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/EdAyers
+/lean-humanproof/7fa4cc5a95c1bd4d7dc309bb8c132a6ca500fe8e/lean-toolchain failed. Retrying...
+2024-09-17 06:27:52.593 | INFO     | __main__:search_github_repositories:635 - Failed to clone EdAyers/lean-humanproof b
+ecause of HTTP Error 404: Not Found
+2024-09-17 06:27:52.594 | INFO     | __main__:search_github_repositories:612 - Processing siddhartha-gadgil/Polylean
+2024-09-17 06:27:52.595 | INFO     | __main__:search_github_repositories:637 - Skipping siddhartha-gadgil/Polylean since
+ it is a known repository
+2024-09-17 06:27:52.595 | INFO     | __main__:search_github_repositories:612 - Processing laughinggas/p-adic-L-functions
+2024-09-17 06:27:52.595 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/laughinggas/p-adic-L-functions
+.git
+2024-09-17 06:27:52.595 | INFO     | __main__:clone_repo:414 - Repo name: laughinggas/p-adic-L-functions
+2024-09-17 06:27:53.305 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/laughin
+ggas/p-adic-L-functions/88c5750b71f90ae9a9964968f4eabcb994d6d279/lean-toolchain failed. Retrying...
+2024-09-17 06:27:54.345 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/laughin
+ggas/p-adic-L-functions/88c5750b71f90ae9a9964968f4eabcb994d6d279/lean-toolchain failed. Retrying...
+2024-09-17 06:27:56.387 | INFO     | __main__:search_github_repositories:635 - Failed to clone laughinggas/p-adic-L-func
+tions because of HTTP Error 404: Not Found
+2024-09-17 06:27:56.388 | INFO     | __main__:search_github_repositories:612 - Processing awodey/Impredicative
+2024-09-17 06:27:56.389 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/awodey/Impredicative.git
+2024-09-17 06:27:56.389 | INFO     | __main__:clone_repo:414 - Repo name: awodey/Impredicative
+2024-09-17 06:27:57.171 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/awodey/
+Impredicative/a75cb9989a684133d31d4889a746ee4fa7b66cea/lean-toolchain failed. Retrying...
+2024-09-17 06:27:58.211 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/awodey/
+Impredicative/a75cb9989a684133d31d4889a746ee4fa7b66cea/lean-toolchain failed. Retrying...
+2024-09-17 06:28:00.252 | INFO     | __main__:search_github_repositories:635 - Failed to clone awodey/Impredicative beca
+use of HTTP Error 404: Not Found
+2024-09-17 06:28:00.253 | INFO     | __main__:search_github_repositories:612 - Processing MichaelStollBayreuth/Weights
+2024-09-17 06:28:00.253 | INFO     | __main__:search_github_repositories:637 - Skipping MichaelStollBayreuth/Weights sin
+ce it is a known repository
+2024-09-17 06:28:00.253 | INFO     | __main__:search_github_repositories:612 - Processing sanchace/FRACTRAN
+2024-09-17 06:28:00.253 | INFO     | __main__:search_github_repositories:637 - Skipping sanchace/FRACTRAN since it is a
+known repository
+2024-09-17 06:28:00.253 | INFO     | __main__:search_github_repositories:612 - Processing argumentcomputer/Poseidon.lean
+2024-09-17 06:28:00.253 | INFO     | __main__:search_github_repositories:637 - Skipping argumentcomputer/Poseidon.lean s
+ince it is a known repository
+2024-09-17 06:28:00.254 | INFO     | __main__:search_github_repositories:612 - Processing joehendrix/lean-libuv
+2024-09-17 06:28:00.254 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/joehendrix/lean-libuv.git
+2024-09-17 06:28:00.254 | INFO     | __main__:clone_repo:414 - Repo name: joehendrix/lean-libuv
+2024-09-17 06:28:00.986 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4 4.8.0-rc1
+2024-09-17 06:28:17.889 | INFO     | __main__:search_github_repositories:635 - Failed to clone joehendrix/lean-libuv bec
+ause of Invalid tag or branch: `4.8.0-rc1` for Repository(full_name="leanprover/lean4")
+2024-09-17 06:28:17.890 | INFO     | __main__:search_github_repositories:612 - Processing mariainesdff/norm_extensions
+2024-09-17 06:28:17.890 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/mariainesdff/norm_extensions.g
+it
+2024-09-17 06:28:17.890 | INFO     | __main__:clone_repo:414 - Repo name: mariainesdff/norm_extensions
+2024-09-17 06:28:18.569 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/mariain
+esdff/norm_extensions/53a20ab87cf8f6ab27eedef2d9da929898951d82/lean-toolchain failed. Retrying...
+2024-09-17 06:28:19.595 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/mariain
+esdff/norm_extensions/53a20ab87cf8f6ab27eedef2d9da929898951d82/lean-toolchain failed. Retrying...
+2024-09-17 06:28:21.656 | INFO     | __main__:search_github_repositories:635 - Failed to clone mariainesdff/norm_extensi
+ons because of HTTP Error 404: Not Found
+2024-09-17 06:28:21.658 | INFO     | __main__:search_github_repositories:612 - Processing madvorak/chomsky
+2024-09-17 06:28:21.658 | INFO     | __main__:clone_repo:413 - Cloning https://github.com/madvorak/chomsky.git
+2024-09-17 06:28:21.658 | INFO     | __main__:clone_repo:414 - Repo name: madvorak/chomsky
+2024-09-17 06:28:22.342 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2023-07-12
+2024-09-17 06:28:27.517 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/madvorak/chomsky', commit='b5c2a1baba6216ae969a7e9323b1acea4230ca38') relies on an unsupported Lean version: 6e90442
+1304c362a146883baa360f451376dd9b1
+2024-09-17 06:28:27.518 | INFO     | __main__:search_github_repositories:624 - Cloned madvorak/chomsky
+2024-09-17 06:28:27.518 | INFO     | __main__:search_github_repositories:647 - Total repositories processed: 19
+2024-09-17 06:28:27.521 | INFO     | __main__:search_github_repositories:652 - Search results saved to /data/yingzi_ma/l
+ean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/github_search_results.json
+2024-09-17 06:28:27.521 | INFO     | __main__:main:1447 - Processing https://github.com/opencompl/lean-mlir-old
+2024-09-17 06:28:27.521 | INFO     | __main__:add_repo_to_database:1095 - Processing https://github.com/opencompl/lean-m
+lir-old.git
+2024-09-17 06:28:27.835 | INFO     | __main__:get_compatible_commit:497 - Latest commit: fc863c4b0972ec251950eb4dc4cb276
+8d8f347a4
+2024-09-17 06:28:27.835 | INFO     | __main__:get_compatible_commit:500 - Creating LeanGitRepo for https://github.com/op
+encompl/lean-mlir-old
+2024-09-17 06:28:27.836 | INFO     | __main__:get_compatible_commit:502 - Getting config for https://github.com/opencomp
+l/lean-mlir-old.git
+2024-09-17 06:28:27.836 | INFO     | __main__:get_compatible_commit:509 - Searching for compatible commit for https://gi
+thub.com/opencompl/lean-mlir-old.git
+2024-09-17 06:28:27.841 | INFO     | __main__:get_compatible_commit:515 - Already in a Git repository
+2024-09-17 06:28:27.843 | INFO     | __main__:get_compatible_commit:525 - Fetching commits for https://github.com/openco
+mpl/lean-mlir-old.git
+2024-09-17 06:28:35.706 | INFO     | __main__:get_compatible_commit:529 - Fetched commits for https://github.com/opencom
+pl/lean-mlir-old.git
+2024-09-17 06:28:35.713 | INFO     | __main__:get_compatible_commit:535 - Getting list of commits for https://github.com
+/opencompl/lean-mlir-old.git
+2024-09-17 06:28:35.735 | INFO     | __main__:get_compatible_commit:540 - Found 492 commits for https://github.com/openc
+ompl/lean-mlir-old.git
+2024-09-17 06:28:35.956 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e43d21592801e5e40477b14b7a554e356060c40c') relies on an unsupported Lean version:
+5349a089e5bb6905eaca1a09e2b587488f8e4715
+2024-09-17 06:28:36.186 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a8f838d55af11c1ed10cde392a144dc35eaa06ba') relies on an unsupported Lean version:
+5349a089e5bb6905eaca1a09e2b587488f8e4715
+2024-09-17 06:28:36.413 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='85fd61e38dec57e4d67d7af4d49a1ccc67828c1b') relies on an unsupported Lean version:
+5349a089e5bb6905eaca1a09e2b587488f8e4715
+2024-09-17 06:28:36.664 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='9a8db3035fd9b95a1d79078cbc388653058f6f01') relies on an unsupported Lean version:
+5349a089e5bb6905eaca1a09e2b587488f8e4715
+2024-09-17 06:28:36.889 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='424f0bcb356559d59718a915a37aa46758cfc9c0') relies on an unsupported Lean version:
+5349a089e5bb6905eaca1a09e2b587488f8e4715
+2024-09-17 06:28:37.118 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b798c2e8bfa5ff7ddb4706321745520751ab7658') relies on an unsupported Lean version:
+5349a089e5bb6905eaca1a09e2b587488f8e4715
+2024-09-17 06:28:37.352 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c6dfa25e0a5161634cf6895953c890c51de9869d') relies on an unsupported Lean version:
+5349a089e5bb6905eaca1a09e2b587488f8e4715
+2024-09-17 06:28:37.622 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-09-28
+2024-09-17 06:28:45.076 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='41b6dff20d2e47b25458f38983f134c4f618f96d') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:45.303 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a7394c120710d267750d7525b5715a0e02ffb95c') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:45.522 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='572d6b633b5e608edaa2ee0372691928b86a6634') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:45.759 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='dd2f1106a70a2d83d5a2e6b024a74563997a857b') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:45.969 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='1d0548f1163e4f7f36e784bc82e963e58e17d84a') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:46.247 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a831f706a4a5968b232ef8407d9e751a9999f1f6') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:46.474 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='1119e457815d76bc8a73966eced15964f77d34c5') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:46.707 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f25302ab08b7ea205637ff97c1b6d00233c53d8c') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:46.912 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='bdb90276a88a2b8610e021575acd1ed0e1db427a') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:47.107 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='862ab27f2acb5ea2ffd8a97d065fa9061af945bb') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:47.317 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ce6389c35a7da1e564056567cb15bcfbd453ebd0') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:47.549 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-10-21
+2024-09-17 06:28:54.796 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='250b5f3457c7f4d9c17f9c79063b5dfc18fb6be8') relies on an unsupported Lean version:
+041307fd4b54a7aab59b0eb2c7c226a59435ab88
+2024-09-17 06:28:55.025 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='464b3147d6020ace3d105370e77863ad3d88df2f') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:55.254 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ff630758f2145114382aabd9ec3e1f10bcb470fe') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:55.465 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e3d1e144c4a35a6d1eabde3fe4b0c58ac1d48d06') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:55.701 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='724d118560f81bb16bbca66bef7ab1d173678d84') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:55.924 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a3cdc1b8f230ca120252dbb3bbb7270cde799178') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:56.154 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ac1aaf1d7f319c0bd59370f4558987457716e2c2') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:56.406 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='0e4d38b3a839d89ea440a7149e1b9af6cc2b2dc2') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:56.602 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a17c9d873d827962fa0c0e435d0cbba793496ae9') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:56.860 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='48ac161313bec2b27b0cda4190b127f414307fce') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:57.079 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f2b67434844ca747367c7e149700240d3d1b37a3') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:57.284 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ebba83faa3cf68bedd15f121c9a8c70c4f4e999b') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:57.516 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='7aeb04adb6ed9ed8d326c8a12d91b36063f4bd73') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:57.754 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='deedb003d1c532f5f9fcaa669cb15c7a4868b181') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:57.961 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='996bb162d46afa894298d301beffb921697e577b') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:58.167 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='56d9b4c09774c384845edfaeecc83b22bf463916') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:58.409 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c9cf3968b9a0b068091495d1babc8fca7d1a3fa3') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:58.675 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b5b880264478b2bfc6e1c10bd0fab5f90f2fdac5') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:58.910 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='db8201bf6a9acdf9ed5fb39c221f7eed17403707') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:59.128 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='38546bb26d1b50009edd2297c819edb8a13f9ca0') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:59.395 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b3755ca731a20b6fce5c4b59e2e807db46f88476') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:59.626 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='8c1b9a89e110577a2b7368cf1bb7d8ac5ea2bae8') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:28:59.885 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a042be122251ab1619869096eadd70754b373aa1') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:00.105 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='0548c63cd3cb8599a456d7fa6bdcac24539d1a38') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:00.313 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='4f89dca1dd87c31066bb7eba067be313e9ffad69') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:00.550 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='82c1b8f0340ca31a8da052e8c11e3073777e2b1a') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:00.761 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='63bec42af766c9f1f8775e8c600291e14ff674ae') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:00.977 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='cd30e4408a2d55e344ebaa032a76220ea32ba38e') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:01.180 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='5c9e3c6eb2f2eac52db22d2e5dbd173390a29348') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:01.433 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='bd45057f1eb79c8a870e09dc99981f20cfb4904d') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:01.638 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='44cd483b0d7fa5bd9a50a2635a1e98ef4ba88440') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:01.879 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='88b5dfc816a8fc7b32f8391749c4a0b7d1eb96e8') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:02.133 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c542e0e6abd00cff1f3408b980f50bdaf1735f42') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:02.348 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='fb5d6feea975580425ac2f161419e84ee97b2bc9') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:02.558 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a059e6b7c0a97ff5a8506937e9c037796fc89fb7') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:02.759 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='46ddf12b0213562d508cdf28a0e132dd0d56bedb') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:02.971 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='702641fa16867bd4080d867c15e0121d7c8e51fe') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:03.183 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='859a7cfbb44ab6619a1252075f1909e7e6028e5c') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:03.425 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='9cf96644530723ed0255117c6abbf9fc9a91dc65') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:03.639 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='2d6647516b6fbae5fb71b1de06229167704b4e9d') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:03.849 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='1eb2f24b7f45a3af767f3f6f15d2bd8cff8c71d4') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:04.064 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='61cd696e32ed8b56fee4ff925f647a033cae596d') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:04.314 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='344f1281f366ba27b7191714f7166e11e3798d26') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:04.514 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a6b58b8e27ee45eaf29b425334bca544cd7a77d0') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:04.748 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ed631341d5428874dcb400e85f7a1c3f2d0089dd') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:04.965 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='25a080a8f1c971452311f927808bbecfc724a4ae') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:05.188 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='cdcc7842523c759649cffc66f45f02927e2b4bd2') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:05.404 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='0680339605859fffa401df34de91fdb731b9705a') relies on an unsupported Lean version:
+fd5f3a5bad48e48ecdfdea22d96c9a13753a9d78
+2024-09-17 06:29:05.630 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-07-25
+2024-09-17 06:29:13.763 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ed75998da1f0e8f9b066ad2041afffedd587ff20') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:13.959 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d250beb9d0583202e5e5fdf450f2f1c90c2a221e') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:14.175 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='cf06d7e368a3616c0060dbc9ad6f35f9e951abee') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:14.382 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='de09ff93c6b4608f9bfaac487ad851b768dab6a0') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:15.041 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f35c9823730aac1cb0b0f4787a0dc3d76bb85ea2') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:15.238 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='afc55cfadac548dd521caddeb6029b812ef66578') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:15.497 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='00cbf40aa0b21887d326f65920ed7c8ef53a9f08') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:15.736 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ce777a9ff6a30f501268e42417a0f3bdbf03e5b6') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:15.944 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='246eaf41dc525cc2597b7db95e7f64fd6106765f') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:16.167 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c17b8d14c6c0bf1480510156dd383018d029fa64') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:16.406 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c3549d5af8f7f20b7b4b4d63a231fa931eb7ab28') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:16.598 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='304bd4c4e67e38b8c75a2122cbdc36fb3ca99bd8') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:16.808 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a0573fc587023fc71194d786bd94f257ef8f5511') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:17.019 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6b2c66086acb8c21a92ee70984beb5ffb1204ac2') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:17.219 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='345ea73e70b279cf1a6fa430340d39f1d7a47d66') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:17.438 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='30275dab6c801cb101576593d643cb6a4f7dc9d4') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:17.658 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='44eda7cbdd659a3ae1cc687e2c6a554d6092ddf1') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:17.873 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='eeceb5ae4cb5301326cae151c23840dc7089e6fe') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:18.100 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='45367f920028d9a494bffddf9167bd932b085f35') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:18.311 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='bba3e389f543df2ff607cf8ac8b7807d587a0ba0') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:18.521 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='627109459202fce8cfab525f3233bcc4e56a432c') relies on an unsupported Lean version:
+938516b00cba7ec15e89b817f2a70ac11fd00990
+2024-09-17 06:29:18.739 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-07-01
+2024-09-17 06:29:27.032 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c68deeec92c75e8e58d4befe37294a7301354eb8') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:27.254 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='daf8ddfc40d9ba0317dc5c8df9ab38781b5e6477') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:27.527 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ee220f80af3de0ac39bdaf49ab13ca100a5e4ff1') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:27.722 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='de89dd7b4b835849802beb1fc70cf08c83a5aece') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:27.937 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='daa70c09bb9316d46c2af12985534bcf47e15a25') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:28.145 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='336c52fe63332a17b78f55b376e59350ca513796') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:28.370 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='27b44fd62e14e9a217417badbe7ac713b94608ea') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:28.617 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ec8480ed78afdd53544cac589ada724a8c348203') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:28.844 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d6201cc55c8dcd9609a71daa707eb970e6eaf77d') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:29.073 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='2c3b16bb42333344570b720c10ae7e75a62350c7') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:29.280 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='18dc41b61d49a59a67f53a632e8b3c6d46ca4fee') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:29.464 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='7bfc61730e5ab98dc4cdb7cc49a30ee14b1a62e1') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:29.681 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='1a6526cd47269b14b5ef171391480a4b53dd277b') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:29.907 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c4183233facc2196b8121ef0735ed4f06d39914d') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:30.122 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f5f34e272349691fc7d7555be5603e8d2d981e27') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:30.345 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='3f24ec702a42887838737c0c69bfd5e05443bde7') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:30.574 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='bc85eaf3a3ee9d17d67ecebfd18bfdfb19ae009d') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:30.792 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='9ab54da7c3a4c7b55302760bdd2b146fde5fcc7b') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:31.019 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d4e25c9e63a255f7e4239961b4374358be8e4829') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:31.242 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='cf7d6828ef52a54339a2dc7aa6345bfd4d56c274') relies on an unsupported Lean version:
+d9be3e0017fe1da56de60d7b44de64ba5622df57
+2024-09-17 06:29:31.536 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-05-17
+2024-09-17 06:29:40.417 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='40429a597eca143435710a19ba31f03840a5b911') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:40.696 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='7151a80ac1bcbaa9c25b23e43e8f660271ae11f1') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:40.900 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='32c40b59d3babeb801fd932926c5e78086c74d2d') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:41.127 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b4c3fe16bf9840a85615e7ad046b51014a68b0c4') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:41.364 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='36fa5baa7776728e5be675e8c30f5d3a6e728013') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:41.582 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6be99961b8b9ec01575bec37b028f9b7b1891fdd') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:41.812 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='af3cf59a65f22f92731c4eb3ca3d734bd588321c') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:42.026 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='5ba447acd2dc828b5e87c4656de9b07374dd6e1c') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:42.214 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='8907fccc4e231fda3a0e192c38b929f17dcd77da') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:42.420 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a1df6f082dd15115ba8b7325d1893912137870b1') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:42.657 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='fcd5e924949c7fe08c2818aa59c0d2d3d1808fdd') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:42.875 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='be2e9883c537d2f2f331192aea894a3d0d04508d') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:43.073 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6f1b9dc4951b01c5af6857455e9098cda5e0a1d5') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:43.291 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a8cc5f338970d29e2a54dad4a80c2e5605e5688c') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:43.492 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ef2041b1636934f6383fb714a977084c45a0f7d4') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:43.696 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='62c72602aa3dfd5f2d266426ee76eec131f4dfc2') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:43.913 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='71e496baf6049b969e547a09a68728a4f9d3065e') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:44.144 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b816b214d5cd4a5eca233c3028cc8595ff94a917') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:44.360 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f2e40937173bfebe65c04d88085bbf8161431646') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:44.576 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ee111b5d46ed40e1c3cf8a226245803f8257f007') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:44.809 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a790884f376cc66fab2f00f2198db1c55ccc3f53') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:45.000 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e15b4610042c4037ce5e254664c17482f3ae6e82') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:45.263 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='bceb3f7497543aec36a41612b9d8b01f80269036') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:45.476 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='360b82bd637679324c39321fb4cf799e0bb92739') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:45.696 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='16ab9f17957866f9297b52d2df69b639d0190abe') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:45.908 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='0ab4bce593edfd633dab001b42e5f7f463d6c9dd') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:46.128 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='810119ac21ea3041be67a2e98e9b10fcc35f5630') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:46.331 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e23eb9ede03a6a780545c3b912e43e6082087c6b') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:46.546 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b0a693811345b4a3e4b092b4c99ec280b5ee802d') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:46.773 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='aa7392eba67ed0bf9eaab79579e1980fcab52cdc') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:46.987 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a54660610855c54fda6fa8653a7a6dedf9858662') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:47.212 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='032960d4d8e695f5c807cadccc7d4523dea160e9') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:47.492 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='1a33ec3c8c9c1845ddce280bfa71a46852a8ab08') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:47.702 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-04-26
+2024-09-17 06:29:56.804 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='dec588476ed30559b68ab537400344abc083309d') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:29:57.013 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='9eb375a847fb2a6b4536a243c5ae2f2b5530e990') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:29:57.221 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='65155854675dddfa833e104d3e00e396ab9ca2a5') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:29:57.425 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='143ce4939939fb33ea8a7ebe952057f994fb00c1') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:29:57.652 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='cf09155e274ce7b8ef3e9672c6a33f528b7f28b5') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:29:57.903 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='be7b813dfb353e53f1c7677f80b54c8ed8bd7012') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:58.119 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='8457fe571314026d82e51afb2da899a6d7bb0efb') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:29:58.339 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6abca13abeda633d73761aacc82d3653f49f4513') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:29:58.522 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='094ec0a6fbbd4760ccc69bf83e11a06c845ccbff') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:58.712 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='5d5bb302622aac9b1f856a91fa92e9339081ea23') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:58.907 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='1244721ddb885dc6a7023d15d63aef7e5de0c3ea') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:59.131 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='da35a9b19f6d60fb607da1ac80b086082ece02a0') relies on an unsupported Lean version:
+61c7b8b94c9e4a9fa7504c0adc850e2e8f73ea66
+2024-09-17 06:29:59.370 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d0f0d09eb522f01db9d0155ef3c4ca83b355aaa6') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:29:59.573 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a84a136f428c7d1bd23faf9428f9e94067ecb37f') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:29:59.794 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='98a7845753d5557c36b254cc3c2eee2d2ec2bada') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:00.003 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='229a27d2b3bb4f216f0300466ee65f8f3b27e9f6') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:00.277 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6887f989e343182990580852714a28a635849254') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:00.547 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a1ee635f11e26c31524a35a94d72fac4691b6b4e') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:00.773 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ff6b859ff83ff111cf3551579ac45dbf0ad3c624') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:00.988 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='9f8651f2daf5da80370fda2ecf64e1e667619edf') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:01.214 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='2c0a9b07cb2ab975f12eff29b3161471ee299a5b') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:01.496 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d429c49312ac193ea587047e8b6282e9eedd3888') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:01.704 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b790de5c162e2111de2ce940ba567b13f05d5d85') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:01.971 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='8fa8bf92074be47de030244c8cfde89dafe810c1') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:02.207 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b6dfcd741942c6b61f5d1fed99f44ec82dbbfedd') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:02.408 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='31813cf7bd7119ae3f14668086ba9ef663477cb5') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:02.627 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b21f2dc617581a97dc4af195e49c5a5c70681cce') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:02.851 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f87b43ccf432d3be8e8f6a7bb45a587693d0c7de') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:03.068 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='354e1ea35a7642c791aa5fb9fdf737b59360fe09') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:03.306 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='87b110201c1a26e97d33298c89495850bea37f72') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:03.549 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='4d2429e564c839bf77304f01a0094ede0124f733') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:03.748 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='8e61e27fe9da3220da17a64685ddae9f036206d9') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:03.958 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6693232a29eaa56437c16d2956197b09c92802ac') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:04.204 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='5ee02e6126d36047d55cf4dec6897462a12f454c') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:04.435 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='919fe23ad4308cc59b88a975c0dce1b9f41d3028') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:04.661 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='695a7f9d76b9d5f631d129e105deb6cd98bfa4b4') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:04.883 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='da1aa8edd098ae76e520484acc048bcd9d3f2085') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:05.100 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='14c0adf829b33ee227e08eef06f31ccebffec4bd') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:05.312 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='447c1f1a0e037e167b436eb0e54a3b01b6632cec') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:05.532 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-04-24
+2024-09-17 06:30:14.828 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='4640a0819f8b880e5fde420dfc98510b6e74a52b') relies on an unsupported Lean version:
+47b379e1bc85c03b8be2ff716d829fd6a5c6fe01
+2024-09-17 06:30:15.047 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-03-30
+2024-09-17 06:30:24.682 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6754ba2e4ffedfa549f8d4e59f221bbeccc8fd34') relies on an unsupported Lean version:
+c9926b3a8b64dde8ff59db255debe73da125e56f
+2024-09-17 06:30:24.908 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e7965bd4e1a311efd216cd741bfe87c4ba05f09f') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:25.114 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f9bb9dcfaa96d63cd7f88c792b9579c41d27fad0') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:25.343 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='3aa5644f4225a02d6198829b05474003d962a8b7') relies on an unsupported Lean version:
+c9926b3a8b64dde8ff59db255debe73da125e56f
+2024-09-17 06:30:25.569 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='969b76003e35dca711cd807c9eaf3349a6475cfa') relies on an unsupported Lean version:
+c9926b3a8b64dde8ff59db255debe73da125e56f
+2024-09-17 06:30:25.798 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='aecda32474989b5abecc34b935b953deab5195fa') relies on an unsupported Lean version:
+c9926b3a8b64dde8ff59db255debe73da125e56f
+2024-09-17 06:30:26.038 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='61dc5a109e3631349db900bd4394f81c3634819a') relies on an unsupported Lean version:
+c9926b3a8b64dde8ff59db255debe73da125e56f
+2024-09-17 06:30:26.250 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f97a41b92177ca02b1d902893cbc5d83e1f1ff47') relies on an unsupported Lean version:
+c9926b3a8b64dde8ff59db255debe73da125e56f
+2024-09-17 06:30:26.469 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='77c5e7aa6077457d94d0eab9c17f943ff4a2dc22') relies on an unsupported Lean version:
+c9926b3a8b64dde8ff59db255debe73da125e56f
+2024-09-17 06:30:26.724 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='aaa47987a4ec80e935b2bb8c7018b4f5a5c63b0c') relies on an unsupported Lean version:
+c9926b3a8b64dde8ff59db255debe73da125e56f
+2024-09-17 06:30:26.950 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='9a57de2fe0bff8b66786fcdffa61e8b8b5a43ef1') relies on an unsupported Lean version:
+c9926b3a8b64dde8ff59db255debe73da125e56f
+2024-09-17 06:30:27.180 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='51a9a3be63dc19a2d33ce7c05a506f7d57f93f0f') relies on an unsupported Lean version:
+c9926b3a8b64dde8ff59db255debe73da125e56f
+2024-09-17 06:30:27.446 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e4143fba2894d8ed17ce28279def6f5b42bf6d02') relies on an unsupported Lean version:
+3cf642688bcf12356292590822a8a372fbe04630
+2024-09-17 06:30:27.671 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-03-29
+2024-09-17 06:30:37.314 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='0fa2e13ea11af0a1635c9817a5233568cf696571') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:37.525 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='dec53993468d8f21cdd1be56b8975d01d8678ba4') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:37.745 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-03-09
+2024-09-17 06:30:47.364 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a128f399be9f62f255197cdfb94eb39b0ede8480') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:47.600 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f45152f796dd91b0095937db6106929193131345') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:47.838 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b82b03014ba152aa64df9eadc6fea367656051b8') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:48.074 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f937e27c30b0890ceff5cbe9d46b3b66195dc543') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:48.311 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='dab9816bb84a27b781a57b588e4f2413c3999ba8') relies on an unsupported Lean version:
+c9926b3a8b64dde8ff59db255debe73da125e56f
+2024-09-17 06:30:48.560 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='56c77128dc67393ccec5c20f0db50e698f8753a1') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:48.859 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='af192d553eb8bc1d17fbc27d50dbca98224c475e') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:49.065 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='556cfcc936effd5009455926191f3e4276fd3595') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:49.281 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a3c3f990cf545c872631c2c3ee56ca266671fa95') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:49.492 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='0b55eb71e04e77a23177f5015e4217d508c753d0') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:49.694 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a9beed577167e0958af496e79b05c0111653a4e7') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:49.885 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='4da89e4296a791ecc9ae597103346d2be0daff9d') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:50.090 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='90f10cf2e939bcc66de7fb4ccff56cc875f3c9af') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:50.282 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c8253509c1bd4936b6672bbcb9059ec5bf325dcb') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:50.485 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c5be71c5bb23aa894e723887c1f7de88ef92264e') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:50.694 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='4dadd591f8f42e2fe335c8ded875e9f30c399867') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:50.888 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='cd3eff263623a3dd2974f9166206ddd5ed64b213') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:51.111 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e43479df153784d261c02f5789900b9a08fc4138') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:51.365 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='2878efdfadaff5efbf53d7a9408776b89d463dfa') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:51.557 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='be8cbfc57a30373a4bf3744fb30bc85de04084b1') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:51.784 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='8ae28e6ccbfcc75014317448db760ce71940719c') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:51.987 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='1e4a59b0d767e919d7199c36847f2f1379f40a36') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:52.182 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='5e387652a3a210238b2eb5935b1823c710a14e99') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:52.413 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='449fbb1cfecac0ccf5230b103e06ad3efb426e4b') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:52.641 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='cc1565b498ee7ab9c0e7be2f5dc5e90d1a2f8f21') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:53.119 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e1912edfac4bd402d62a6f87296ecb68669fc424') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:53.387 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='bfd80274dc44907ce30d98ab415a1c8ea141d2d9') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:53.610 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='cdfa834e6f4cecc5b5fcb75fefa1cbe82dcd71d4') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:53.808 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='704539f134226ccf1f711b6299b300ff01eecf6b') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:54.058 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='3eb585217a3c02a153b87a026af31ddd2ffdb6c3') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:54.311 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='3d25aa4d70fc8cfb9e672ebc6b6c29c39d521a9d') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:54.518 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6e4e7698cbc9c032dfe5dd4b0014507331d35c8c') relies on an unsupported Lean version:
+c7321e0061137232f38598378c2d0c380f872082
+2024-09-17 06:30:54.726 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='144e146bc70ee8573d5630225915aee38f913b0d') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:55.010 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='abc38e3b86be8265e049323fc937d8715a7a3ffd') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:55.280 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='04b2d3ab0ecc7d6e61645dab0a355ee348d57652') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:55.508 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='0d5099a02c5a45fb88353854f38f649fa6e07c5e') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:55.741 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='0bf614224ba13e1eeb6733e9536d6b9759a8d0b0') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:55.958 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='062426d82ad7435ca8195518ab1d50a4b2d6afbf') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:56.189 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='db7f777affd81834fb5a67e8101ea8ecf479e582') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:56.457 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='cdd103138c84a062ab43fb5465cfc40b1d96ff0f') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:56.657 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c4ecfc5ccac1baec2f211360e4561680599bd3fd') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:56.899 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='fd2b547092e307f811e444554c6f2690e9b97e0f') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:57.122 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='7dfb7b54045b7e1a311cb6509c3943c9ed955cf9') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:57.334 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c933e16923261204c84b0b566dc6f5540ed7132e') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:57.562 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='158e50328dfc5ce237a1f1c7256e990e22f129eb') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:57.794 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a840ce84a7dcc9cfdcae50e1a8ba8cd2154f635f') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:58.032 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='7fa34c8e404d29138091f6de484dbb0adc5a58e0') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:58.218 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='cd764b69f8800bc003cb87cf62dd791bc130beb7') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:58.422 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='dc10a6d404d1ceb99b0977e6bf5cbcd059d5c5ff') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:58.628 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='3e30c09bb70edde2faa97319211d828f9c1d4977') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:58.839 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='3226a3a2927579f1269299df47927fcb89a8fc69') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:59.073 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='841ffecf0f8950aebbfb9fd8bfa6299549ee8877') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:59.281 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c965ed9f8a93458cd943f00f25fe3ed0ecbe62a9') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:59.493 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='879f3bb875d4511a31968b71d5c8e04b45e5bc23') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:59.728 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d3249398e8eb6505a91baa293142a991e7e8d5ca') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:30:59.949 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='77b7f9ff35e7dd7004378aeefdce34856f3cdc9f') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:00.191 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='7be2436b7476d81ebfc2747d9b5aa29dc5b281c8') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:00.441 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='5cf6f593508482384b6b225e08cd250eb84bf441') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:00.693 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b4eaf5aa660538e3fc3bdda8f005e729b5676dc2') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:00.906 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='37afdeadbb5e3eab3ef83b507f1bf39e955022a2') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:01.192 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='50d3a8db124db2fcb7492a3e39d2132dd5141ae9') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:01.414 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f2741c0a78fb815463c59b22970365c79f9b1728') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:01.629 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ec182f45cf445a329c61a346b63ed6ee051fbdc2') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:01.827 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='2e64af549edcb4864c7af5e62ed36ae8f1c1a424') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:02.076 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6695576549438789cac88bc6865c7e0467494d3f') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:02.300 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='70557f9f2634601d5657ee91850236e99bf8b158') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:02.520 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='aa0210833ddd83b5120d75fca16588ee33b8ada2') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:02.773 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='611a5412c2a2a843672fb752d50744f1b9c7da22') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:03.015 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='3f2a738c45a4c52d3bd086a28f921089f254d87d') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:03.222 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='16c27828fafc79253d289b8a3143d061262bbf91') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:03.453 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='7d4e7c0ac0439bb7e2b47414ae90c0b6a2112a6c') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:03.702 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='03095b19b962727141894fc2747d421af1268718') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:03.929 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='8872da66c5d73e5956a3a196e5a6ea4020f8578a') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:04.135 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='303ca006f880860396e8518ebebdbfd9b59a2353') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:04.343 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e29d0850e943198d50b691aeed7b6eec0be202df') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:04.579 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a4a59ecfc71620a969e028ff86e42a316968deb5') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:04.790 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='059b5d5922ad5b38bf30696afff0926edc6341bf') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:05.043 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='be4df7c3a4442372664b64518643dadcf909f3e4') relies on an unsupported Lean version:
+164f07a5e579d756d95093ffbdf5b88ee02faa40
+2024-09-17 06:31:05.317 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-03-04
+2024-09-17 06:31:14.983 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ff1fa9c543c5e5594ada565b7b947776a6222e30') relies on an unsupported Lean version:
+e4fa3e5d83221279356cf7df68e17343a3493c3e
+2024-09-17 06:31:15.192 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='bd86e833fa2c0943cf09395f095aa2576f0919eb') relies on an unsupported Lean version:
+e4fa3e5d83221279356cf7df68e17343a3493c3e
+2024-09-17 06:31:15.429 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='7da28496f199c6f8c9c0289cb2dbcb77832d3583') relies on an unsupported Lean version:
+e4fa3e5d83221279356cf7df68e17343a3493c3e
+2024-09-17 06:31:15.769 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d437abadf73c2075e2931621c50848bfe21d0441') relies on an unsupported Lean version:
+e4fa3e5d83221279356cf7df68e17343a3493c3e
+2024-09-17 06:31:15.995 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='3825b69e618c48f6ff9a2a0f9fc601e671655437') relies on an unsupported Lean version:
+e4fa3e5d83221279356cf7df68e17343a3493c3e
+2024-09-17 06:31:16.231 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d6b0456c6ea1ed1cc757b6489ac2505ce6f8526e') relies on an unsupported Lean version:
+e4fa3e5d83221279356cf7df68e17343a3493c3e
+2024-09-17 06:31:16.491 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2022-01-16
+2024-09-17 06:31:27.123 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='1949d6bee482a12d51ab6c7efee2654eb056df15') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:27.334 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b43f83c8867d8aa0156c004ab9514a26a76f93e5') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:27.541 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e0da075add058139c37b586b044f4ba5a943d562') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:27.748 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='65e2d3579f8cabb6571c3183b8c1fd2b791e9e5e') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:27.961 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6a844f2d676406fbf0519fbc72c19ffc716a54a0') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:28.166 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='68aa661f37281f40ff41ec10677f9bfbb4feeea5') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:28.476 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='51f1f426af717e03fd60fad5d10f47c1548bf843') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:28.688 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='a2c3ad99597e01a7ca1f7af76f4f7c708654ce89') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:28.928 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='56ffa57766c3cc41454bd1399635303509ed7224') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:29.151 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='979037504334ef7fa7f725758acedcd7672c7139') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:29.358 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='2543a272b2e79f28f7b7132f0ebeeffe5b4e2843') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:29.629 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b81b425fd7bbf2848ef45f19686feae13c6efce9') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:29.850 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d47d8cea10b1d5af9af98ba89ecc823b98d918c4') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:30.082 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f05324a84adbe2d80a6f213b28a1148d5b2820b2') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:30.322 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e8b302f53af3dd547f6a57923ed5d44ce2e278f2') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:30.546 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d3abdcd890e99bf7d08d0252e4695deba8c60534') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:30.796 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ee74f4ae9843507f0169b54dcc96d386a33ca519') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:31.018 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6061f05003ede4d07412419fa916f888bb57894d') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:31.233 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b71207911f8558f2df0a9d1d2a44140c8e51b336') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:31.437 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b870bdc8d72d8cdfac36f4735c0ece7bb95e1a83') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:31.640 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='cee3e97a741d2d8319e1679595f283a6e6d819e7') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:31.855 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b1f864410612f5bea532135dbf65530662a65850') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:32.065 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ee3906047b1adc44d715f68d0c96b640636f706a') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:32.385 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='de818b64b4fe25f6de55fa3b9b5cf5b112a61c47') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:32.589 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d5f127dc138d819d4ea3e627c584be7c981b09c3') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:32.931 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='97baee5d8c05e5ed5586adf62dae0ba2907012e7') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:33.139 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='497b4d5ef79b19c6ed88d8a84bfd0163aae85108') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:33.609 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f57e6427924712f72bf4187a7e088653419ac9f4') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:33.792 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c149777cdb7292bd05a498975034a37a1be74f0d') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:34.266 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='3ca5cc37a667cd6c4053e86e12f84d3b01b3ed42') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:34.536 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='7cf9c42add366c8eef24182d6b984ad8dbedd01d') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:34.747 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b21086d2ff50dce8f6032c8229198becc5e8392e') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:34.984 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='931cdfbf90bc502e2657bc8e7db5f7bddd5e8b5a') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:35.176 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='4739a41c56191bd4f017aea10242b0ce3cd08a76') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:35.369 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='618f8e8d4da907cf9755d8695db4cb2cdb5c8041') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:35.584 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f9d73ba87cb38252ff50c167e19ac617facb3538') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:35.789 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='2463a9489c56d807e5178b8d2cb82e26381b89ae') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:35.978 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e3d3b5b16b37ed14c25f074f7adc10f736eab61b') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:36.173 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='02b994a6e1dca16768c3346dada16b499a6111e1') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:36.397 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='450d045aeb84ac52f2226e70936d1746d6e9825f') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:36.582 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='527e48007432063166ec3c235edfb89115f6a7de') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:36.778 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='50cf34703cd48e2a43b5da9d8dca69ca521f7f93') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:36.972 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c7823de1239f0b36dcc5b6c4981aa6db0a0e6b27') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:37.194 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='f53666e0a6a06f4c60a76e314cfc69e55deea8a1') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:37.461 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='626d30bde9b752bed053eb2042d77939fd264eaf') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:37.696 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='c30f6f0b99ca4a537fab3b1e120bb0a146ca688b') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:37.888 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='af9af89fb70676e006e03df6a452d2cced1a45f1') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:38.118 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='6fd3abbff611fd35aa429675d2226452fb226a19') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:38.333 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='551bf7a342db882a523ae537cedc2393bbad638b') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:38.532 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b20e9b4b7463e7a3a3914f25ecfb6b283a88f077') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:38.761 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='2af198ef62338ea59246880e9f95945ae81fca7f') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:38.945 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='35b8149a1edc16e06a183dcabbb2d7b7e8ed942e') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:39.145 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='22857f0af87df761c5a8eca8835d163c2f95aa65') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:39.360 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='d12c6d7599bdb9668e267ca6b0e835b77526fd7f') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:39.562 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='14389ef28a7431749c2e1bec3456b79431b49342') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:39.755 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='0da2ec6cc0934bab5dff31b257b7a0049adbd3af') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:39.936 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='73cb6ce5e046c768eff865e0ff865749bb6ae883') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:40.171 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='db2778c820d2c6811cef973cace477017711b00e') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:40.369 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='8acc07301e2da71763fc57a30d4d4d59c0b1afad') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:40.615 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='aba5057eadde6439ac929428e73308df71becfc6') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:40.791 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='544d6435ab7faf92b074ee22b9c1733f4325f3c6') relies on an unsupported Lean version:
+189f4bd372d86d09f9299ad58c13fe661a327444
+2024-09-17 06:31:41.007 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for le
+an4-nightly nightly-2021-12-28
+2024-09-17 06:31:51.493 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='bf0ebbcc9353fc4cfc0b3364a22ed5cf38b4f306') relies on an unsupported Lean version:
+748c9ab73a4766d0891768d3f10de79f6ffe5230
+2024-09-17 06:31:51.745 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='ac5d03e3626941a71fb07f94c248a33c1828b8e0') relies on an unsupported Lean version:
+748c9ab73a4766d0891768d3f10de79f6ffe5230
+2024-09-17 06:31:52.024 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='e6f9ae875ccb424765a9e0a81006d50f1022f840') relies on an unsupported Lean version:
+748c9ab73a4766d0891768d3f10de79f6ffe5230
+2024-09-17 06:31:52.230 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='9777a8187250d39d6ebe9d9ee62cbdfeb14402d5') relies on an unsupported Lean version:
+748c9ab73a4766d0891768d3f10de79f6ffe5230
+2024-09-17 06:31:52.458 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.
+com/opencompl/lean-mlir-old', commit='b0c5eafbe8e293764fd22b5f4c79e6cb58f8f6c4') relies on an unsupported Lean version:
+748c9ab73a4766d0891768d3f10de79f6ffe5230
+2024-09-17 06:31:52.663 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/opencom
+pl/lean-mlir-old/42b6d659e2b2a9d53c8b0abe0d1432fcf5a72770/lean-toolchain failed. Retrying...
+2024-09-17 06:31:53.690 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/opencom
+pl/lean-mlir-old/42b6d659e2b2a9d53c8b0abe0d1432fcf5a72770/lean-toolchain failed. Retrying...
+2024-09-17 06:31:55.717 | INFO     | __main__:get_compatible_commit:553 - Error in get_compatible_commit: HTTP Error 404
+: Not Found
+2024-09-17 06:31:55.718 | INFO     | __main__:add_repo_to_database:1113 - Failed to find a compatible commit for https:/
+/github.com/opencompl/lean-mlir-old.git
+2024-09-17 06:31:55.718 | INFO     | __main__:main:1447 - Processing https://github.com/mo271/formal_book
+2024-09-17 06:31:55.718 | INFO     | __main__:add_repo_to_database:1095 - Processing https://github.com/mo271/formal_boo
+k.git
+2024-09-17 06:31:56.015 | INFO     | __main__:get_compatible_commit:497 - Latest commit: 6fbe8c2985008c0bfb30050750a71b9
+0388ad3a3
+2024-09-17 06:31:56.015 | INFO     | __main__:get_compatible_commit:500 - Creating LeanGitRepo for https://github.com/mo
+271/formal_book
+2024-09-17 06:31:56.015 | INFO     | __main__:get_compatible_commit:502 - Getting config for https://github.com/mo271/fo
+rmal_book.git
+2024-09-17 06:31:56.015 | INFO     | __main__:get_compatible_commit:506 - Latest commit compatible for url https://githu
+b.com/mo271/formal_book.git
+2024-09-17 06:31:56.016 | INFO     | __main__:add_repo_to_database:1115 - Found compatible commit 6fbe8c2985008c0bfb3005
+0750a71b90388ad3a3 for https://github.com/mo271/formal_book.git
+2024-09-17 06:31:56.016 | INFO     | __main__:add_repo_to_database:1116 - Lean version: v4.8.0-rc1
+2024-09-17 06:31:56.016 | INFO     | __main__:add_repo_to_database:1121 - Generating benchmark at /data/yingzi_ma/lean_p
+roject/datasets_PT_single_repo_no_ewc_curriculum_sorries/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3
+2024-09-17 06:31:56.016 | INFO     | generate_benchmark_lean4:main:354 - Generating dataset to go into /data/yingzi_ma/l
+ean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3
+2024-09-17 06:31:56.016 | INFO     | generate_benchmark_lean4:main:361 - lean toolchain version: {'content': 'leanprover
+/lean4:v4.8.0-rc1\n'}
+2024-09-17 06:31:56.016 | INFO     | generate_benchmark_lean4:main:363 - lean version v: v4.8.0-rc1
+2024-09-17 06:31:56.016 | INFO     | generate_benchmark_lean4:main:364 - is supported: True
+2024-09-17 06:31:56.016 | INFO     | generate_benchmark_lean4:main:373 - lean path1 /data/yingzi_ma/.elan/toolchains/lea
+nprover--lean4---4.8.0-rc1
+2024-09-17 06:31:56.016 | INFO     | generate_benchmark_lean4:main:374 - lean path2 /.elan/toolchains/leanprover--lean4-
+--4.8.0-rc1
+2024-09-17 06:31:56.016 | INFO     | generate_benchmark_lean4:main:375 - lean path3 ~/.elan/toolchains/leanprover--lean4
+---4.8.0-rc1
+2024-09-17 06:31:56.017 | INFO     | generate_benchmark_lean4:main:379 - Lean toolchain path 2 does not exist: /.elan/to
+olchains/leanprover--lean4---4.8.0-rc1
+2024-09-17 06:31:56.018 | INFO     | generate_benchmark_lean4:main:381 - Lean toolchain path 3 does not exist: ~/.elan/t
+oolchains/leanprover--lean4---4.8.0-rc1
+2024-09-17 06:31:56.018 | INFO     | generate_benchmark_lean4:main:384 - Switched to Lean toolchain at: /data/yingzi_ma/
+.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-17 06:31:56.127 | INFO     | generate_benchmark_lean4:main:386 - lean --version: Lean (version 4.8.0-rc1, x86_64
+-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-09-17 06:31:56.127 | INFO     | generate_benchmark_lean4:main:387 - repo: LeanGitRepo(url='https://github.com/mo271
+/formal_book', commit='6fbe8c2985008c0bfb30050750a71b90388ad3a3')
+2024-09-17 06:31:56.127 | INFO     | generate_benchmark_lean4:main:389 - Configuring LeanDojo again...
+2024-09-17 06:31:56.139 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/
+yingzi_ma/lean_project/ReProver
+2024-09-17 06:31:56.139 | INFO     | generate_benchmark_lean4:main:391 - LeanDojo configured
+2024-09-17 06:31:56.139 | INFO     | generate_benchmark_lean4:main:394 - Tracing the repo...
+2024-09-17 06:31:56.374 | INFO     | lean_dojo.data_extraction.trace:get_traced_repo_path:79 - Tracing LeanGitRepo(url='
+https://github.com/mo271/formal_book', commit='6fbe8c2985008c0bfb30050750a71b90388ad3a3')
+2024-09-17 06:31:56.375 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:81 - Working in the temporary
+directory /tmp/tmphq99cpg3
+2024-09-17 06:31:56.948 | DEBUG    | lean_dojo.data_extraction.lean:clone_and_checkout:479 - Cloning LeanGitRepo(url='ht
+tps://github.com/mo271/formal_book', commit='6fbe8c2985008c0bfb30050750a71b90388ad3a3')
+2024-09-17 06:31:57.516 | DEBUG    | lean_dojo.data_extraction.trace:_trace:33 - Tracing LeanGitRepo(url='https://github
+.com/mo271/formal_book', commit='6fbe8c2985008c0bfb30050750a71b90388ad3a3')
+2024-09-17 06:31:57.535 | DEBUG    | lean_dojo.container:run:184 - NUM_PROCS=32 python build_lean4_repo.py formal_book
+2024-09-17 06:31:57.744 | INFO     | __main__:main:165 - Building formal_book
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git to '././.lake/packages/mathlib'
+info: checkdecls: cloning https://github.com/PatrickMassot/checkdecls.git to '././.lake/packages/checkdecls'
+info: doc-gen4: cloning https://github.com/leanprover/doc-gen4 to '././.lake/packages/doc-gen4'
+info: batteries: cloning https://github.com/leanprover-community/batteries to '././.lake/packages/batteries'
+info: Qq: cloning https://github.com/leanprover-community/quote4 to '././.lake/packages/Qq'
+info: aesop: cloning https://github.com/leanprover-community/aesop to '././.lake/packages/aesop'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4 to '././.lake/packages/proofwidgets'
+info: Cli: cloning https://github.com/leanprover/lean4-cli to '././.lake/packages/Cli'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph.git to '././.lake/packages/importGraph'
+info: CMark: cloning https://github.com/xubaiw/CMark.lean to '././.lake/packages/CMark'
+info: UnicodeBasic: cloning https://github.com/fgdorais/lean4-unicode-basic to '././.lake/packages/UnicodeBasic'
+info: leanInk: cloning https://github.com/hargonix/LeanInk to '././.lake/packages/leanInk'
+[2/2126] Building Mathlib.Mathport.Rename

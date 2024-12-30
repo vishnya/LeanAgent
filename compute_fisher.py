@@ -83,13 +83,13 @@ repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR
 # PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_merge_all_no_ewc.log"
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_no_ewc.pkl"
 
-DATA_DIR = "datasets_PT_single_repo_ewc"
-CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc"
-FISHER_DIR = "fisher_PT_single_repo_ewc"
-EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_ewc.txt"
-DB_FILE_NAME = "dynamic_database_PT_single_repo_ewc.json"
-PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_ewc.log"
-ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc.pkl"
+DATA_DIR = "datasets_PT_single_repo_ewc_full"
+CHECKPOINT_DIR = "checkpoints_PT_single_repo_ewc_full"
+FISHER_DIR = "fisher_PT_single_repo_ewc_full"
+EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_ewc_full.txt"
+DB_FILE_NAME = "dynamic_database_PT_single_repo_ewc_full.json"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_ewc_full.log"
+ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_ewc_full.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum"
 # CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum"
@@ -1174,7 +1174,7 @@ def should_skip_repo():
 # TODO: incorporate latest changes from ReProver repo
 def main():
     """The main function that drives the bot."""
-    new_data_path = "/data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_con-nf_00bdc85ba7d486a9e544a0806a1018dd06fa3856"
+    new_data_path = "/data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc_full/merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"
     try:
         logger.info("Calculating Fisher Information Matrix for EWC")
         ### FISHER INFORMATION MATRIX FOR NEXT EWC

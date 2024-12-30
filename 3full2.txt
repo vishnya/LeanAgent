@@ -1,0 +1,1392 @@
+okbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 02:29:13.937 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/e
+ric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 02:29:15.837 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 02:29:15.837 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/y
+uma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 02:29:16.201 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 02:29:16.201 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/l
+oganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 02:29:16.823 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 02:29:16.823 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/F
+ormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 02:29:16.968 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 02:29:16.968 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/l
+eanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 02:29:17.056 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 02:29:17.056 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/n
+omeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 02:29:17.781 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 02:29:17.782 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/l
+eanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 02:29:18.076 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 02:29:18.076 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/s
+iddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 02:29:34.282 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 02:29:34.282 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/l
+eanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 02:29:36.056 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 02:29:36.056 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/r
+ami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 02:29:37.628 | INFO     | __main__:main:1261 - Loaded database from /data/yingzi_ma/lean_project/dynamic_d
+atabase_PT_single_repo_no_ewc_curriculum_full.json
+2024-09-16 02:29:37.629 | INFO     | __main__:main:1268 - Found 14 repositories
+2024-09-16 02:29:37.629 | INFO     | __main__:main:1271 - Starting curriculum learning
+2024-09-16 02:29:37.987 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for
+ lean4 v4.8.0
+2024-09-16 02:29:54.664 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for
+ lean4 v4.8.0-rc2
+2024-09-16 02:30:12.831 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for
+ lean4 v4.8.0-rc1
+2024-09-16 02:30:29.535 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for
+ lean4 v4.7.0
+2024-09-16 02:30:47.787 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for
+ lean4 v4.7.0-rc2
+2024-09-16 02:31:05.564 | INFO     | __main__:main:1356 - length of lean_git_repos: 14
+2024-09-16 02:31:05.565 | INFO     | __main__:main:1357 - i: 0
+2024-09-16 02:31:05.565 | INFO     | __main__:main:1363 - Main process
+2024-09-16 02:31:05.565 | INFO     | __main__:main:1364 - Using lambda = 0.0
+2024-09-16 02:31:05.565 | INFO     | __main__:main:1365 - Processing https://github.com/dwrensha/compfiles
+2024-09-16 02:31:05.565 | INFO     | __main__:main:1372 - Adding repo to repos_for_merged_dataset
+2024-09-16 02:31:05.565 | INFO     | __main__:main:1384 - All GPUs
+2024-09-16 02:31:05.565 | INFO     | __main__:main:1622 - Starting the prover
+2024-09-16 02:31:05.566 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-16 02:31:05.566 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-16 02:31:05.566 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You
+are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module im
+plicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See
+https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+ default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during
+unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowli
+sted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for a
+ny use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues relat
+ed to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files per
+manently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-16 02:31:06.391 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_p
+roject/retriever_random.ckpt
+2024-09-16 02:31:06.391 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_p
+roject/retriever_random.ckpt
+2024-09-16 02:31:06.392 | INFO     | __main__:main:2066 - An error occurred: Checkpoint /data/yingzi_ma/lean_project/
+retriever_random.ckpt does not exist.
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main3_all_sorries.py", line 1640, in main
+    prover = DistributedProver(
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search_all_sorries.py", line 449, in __init__
+    tac_gen = RetrievalAugmentedGenerator.load(
+  File "/data/yingzi_ma/lean_project/ReProver/generator/model.py", line 157, in load
+    return load_checkpoint(cls, ckpt_path, device, freeze, config)
+  File "/data/yingzi_ma/lean_project/ReProver/common.py", line 486, in load_checkpoint
+    model = model_cls.load_from_checkpoint(ckpt_path, strict=False, **config).to(device)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/utilities/model_helpe
+rs.py", line 125, in wrapper
+    return self.method(cls, *args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line
+ 1581, in load_from_checkpoint
+    loaded = _load_from_checkpoint(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py", line
+ 91, in _load_from_checkpoint
+    model = _load_state(cls, checkpoint, strict=strict, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py", line
+ 158, in _load_state
+    obj = cls(**_cls_kwargs)
+  File "/data/yingzi_ma/lean_project/ReProver/generator/model.py", line 139, in __init__
+    self.retriever = PremiseRetriever.load(
+  File "/data/yingzi_ma/lean_project/ReProver/retrieval/model.py", line 125, in load
+    return load_checkpoint(cls, ckpt_path, device, freeze, config)
+  File "/data/yingzi_ma/lean_project/ReProver/common.py", line 485, in load_checkpoint
+    if not _is_deepspeed_checkpoint(ckpt_path):
+  File "/data/yingzi_ma/lean_project/ReProver/common.py", line 479, in _is_deepspeed_checkpoint
+    raise FileExistsError(f"Checkpoint {path} does not exist.")
+FileExistsError: Checkpoint /data/yingzi_ma/lean_project/retriever_random.ckpt does not exist.
+(base) yingzi_ma@compute-permanent-node-794:~/lean_project/ReProver$ bash run_code3_all_sorries.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_CORE_WORKER_2467371.log': Pe
+rmission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_CORE_WORKER_2467369.log': Pe
+rmission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_CORE_WORKER_2467372.log': Pe
+rmission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_CORE_WORKER_2466761.log': Pe
+rmission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_GCS.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_RAYLET.log': Permission deni
+ed
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_CORE_WORKER_2467370.log': Pe
+rmission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_CORE_WORKER_2467368.log': Pe
+rmission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_CORE_WORKER_2467367.log': Pe
+rmission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_AUTOSCALER.log': Permission
+denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_CORE_WORKER_2467366.log': Pe
+rmission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_CORE_WORKER_2467365.log': Pe
+rmission denied
+rm: cannot remove '/tmp/ray/session_2024-08-22_03-10-45_628260_2466822/logs/events/event_CORE_WORKER_2467914.log': Pe
+rmission denied
+Stopping ray
+Could not terminate `/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py` due to (pid=2462372, name='python3')
+Did not find any active Ray processes.
+Running main3_all_sorries.py
+[2024-09-16 02:32:32,643] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detec
+t)
+2024-09-16 02:32:36.277 | INFO     | __main__:main:1241 - Running retrieval baseline
+2024-09-16 02:32:36.277 | INFO     | __main__:main:1244 - Configuring LeanDojo...
+2024-09-16 02:32:36.280 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /da
+ta/yingzi_ma/lean_project/ReProver
+2024-09-16 02:32:36.281 | INFO     | __main__:main:1246 - LeanDojo configured
+2024-09-16 02:32:36.281 | INFO     | __main__:main:1251 - Starting the main process
+2024-09-16 02:32:36.281 | INFO     | __main__:main:1259 - Loading database from /data/yingzi_ma/lean_project/dynamic_
+database_PT_single_repo_no_ewc_curriculum_full.json
+2024-09-16 02:33:42.932 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-16 02:33:42.932 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/l
+ecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-16 02:33:50.946 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-16 02:33:50.946 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/I
+mperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-16 02:34:00.135 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-16 02:34:00.135 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/t
+eorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-16 02:34:02.188 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-16 02:34:02.188 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/A
+lexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-16 02:34:13.845 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-16 02:34:13.845 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/d
+wrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-16 02:34:24.817 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-16 02:34:24.817 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/g
+oogle-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-16 02:34:26.798 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 02:34:26.798 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/a
+vigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 02:34:26.941 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-16 02:34:26.941 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/d
+igama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-16 02:34:39.413 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 02:34:39.413 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/e
+ric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 02:34:41.295 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 02:34:41.295 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/y
+uma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 02:34:41.658 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 02:34:41.658 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/l
+oganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 02:34:42.277 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 02:34:42.277 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/F
+ormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 02:34:42.421 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 02:34:42.422 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/l
+eanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 02:34:42.509 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 02:34:42.510 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/n
+omeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 02:34:43.233 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 02:34:43.233 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/l
+eanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 02:34:43.526 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 02:34:43.527 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/s
+iddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 02:34:59.650 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 02:34:59.650 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/l
+eanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 02:35:01.418 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://gith
+ub.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 02:35:01.419 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/r
+ami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 02:35:02.953 | INFO     | __main__:main:1261 - Loaded database from /data/yingzi_ma/lean_project/dynamic_d
+atabase_PT_single_repo_no_ewc_curriculum_full.json
+2024-09-16 02:35:02.955 | INFO     | __main__:main:1268 - Found 14 repositories
+2024-09-16 02:35:02.955 | INFO     | __main__:main:1271 - Starting curriculum learning
+2024-09-16 02:35:03.342 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for
+ lean4 v4.8.0
+2024-09-16 02:35:20.279 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for
+ lean4 v4.8.0-rc2
+2024-09-16 02:35:38.246 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for
+ lean4 v4.8.0-rc1
+2024-09-16 02:35:54.897 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for
+ lean4 v4.7.0
+2024-09-16 02:36:12.888 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for
+ lean4 v4.7.0-rc2
+2024-09-16 02:36:30.494 | INFO     | __main__:main:1356 - length of lean_git_repos: 14
+2024-09-16 02:36:30.494 | INFO     | __main__:main:1357 - i: 0
+2024-09-16 02:36:30.494 | INFO     | __main__:main:1363 - Main process
+2024-09-16 02:36:30.494 | INFO     | __main__:main:1364 - Using lambda = 0.0
+2024-09-16 02:36:30.494 | INFO     | __main__:main:1365 - Processing https://github.com/dwrensha/compfiles
+2024-09-16 02:36:30.494 | INFO     | __main__:main:1372 - Adding repo to repos_for_merged_dataset
+2024-09-16 02:36:30.494 | INFO     | __main__:main:1384 - All GPUs
+2024-09-16 02:36:30.494 | INFO     | __main__:main:1622 - Starting the prover
+2024-09-16 02:36:30.495 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-16 02:36:30.495 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-16 02:36:30.495 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You
+are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module im
+plicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See
+https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+ default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during
+unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowli
+sted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for a
+ny use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues relat
+ed to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files per
+manently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-16 02:36:31.159 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_p
+roject/ReProver/retriever_random.ckpt
+2024-09-16 02:36:31.159 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_p
+roject/ReProver/retriever_random.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files per
+manently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint retriever_random.ckpt`
+2024-09-16 02:36:34.236 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found key
+s that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.
+encoder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.
+encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight',
+'retriever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAt
+tention.relative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.en
+coder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.
+wi_1.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.
+0.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.
+encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight',
+'retriever.encoder.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_
+norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.bloc
+k.1.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retri
+ever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.w
+eight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.
+0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.enc
+oder.block.2.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'ret
+riever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseR
+eluDense.wo.weight', 'retriever.encoder.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.
+3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.enc
+oder.encoder.block.3.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weig
+ht', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseR
+eluDense.wi_0.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.enc
+oder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retri
+ever.encoder.encoder.block.4.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttentio
+n.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.l
+ayer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.enc
+oder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weig
+ht', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1
+.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.b
+lock.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retrieve
+r.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weig
+ht', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer
+.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.enco
+der.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', '
+retriever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAtt
+ention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.bloc
+k.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.en
+coder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.
+wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0
+.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.k.weight', 'retriever.encoder.enco
+der.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'ret
+riever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.
+wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.bloc
+k.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_norm.weight', 'retriever.enco
+der.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.k.weigh
+t', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.8.layer.0.Se
+lfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.bloc
+k.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'ret
+riever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_no
+rm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.9.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder
+.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', 'ret
+riever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseR
+eluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encod
+er.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'retrieve
+r.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention
+.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.
+layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encod
+er.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.w
+o.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.
+0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.en
+coder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight',
+'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseRelu
+Dense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encod
+er.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retri
+ever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found key
+s that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', '
+state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-16 02:36:36.500 | INFO     | prover.proof_search_all_sorries:__init__:452 - Loaded model from /data/yingzi_ma
+/lean_project/model_lightning.ckpt
+2024-09-16 02:36:36.501 | INFO     | prover.proof_search_all_sorries:__init__:453 - Using retriever: PremiseRetriever
+(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-16 02:36:36.502 | INFO     | prover.proof_search_all_sorries:__init__:456 - Loading indexed corpus from /data
+/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414
+b3a723c2665f091/corpus.jsonl
+2024-09-16 02:36:36.502 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/data
+sets_PT_single_repo_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corpus.jsonl
+2024-09-16 02:36:55.555 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-16 02:36:55.555 | INFO     | prover.proof_search_all_sorries:__init__:458 - Loaded indexed corpus from /data/
+yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b
+3a723c2665f091/corpus.jsonl
+2024-09-16 02:36:55.555 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|████████████████████████████████████████████████████████████████████████████| 5566/5566 [09:05<00:00, 10.21it/s]
+2024-09-16 02:46:00.710 | INFO     | prover.proof_search_all_sorries:__init__:460 - Finished reindexing!
+2024-09-16 02:46:00.710 | INFO     | prover.proof_search_all_sorries:__init__:471 - Launching 4 workers with 4 GPUs.
+2024-09-16 02:46:05,167 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(raylet) [2024-09-16 02:46:34,784 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7163809792; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:47:04,814 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7166173184; capacity: 207929917440. Object creation will
+fail if spilling is required. [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to
+ disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html
+#log-deduplication for more options.)
+(pid=2945291) [2024-09-16 02:47:10,821] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cu
+da (auto detect)
+(raylet) [2024-09-16 02:47:14,823 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7166148608; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(ProverActor pid=2945291) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414:
+ FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the defa
+ult pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code dur
+ing unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a
+ future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could
+ be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they ar
+e explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weig
+hts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub
+for any issues related to this experimental feature.
+(ProverActor pid=2945291)   return torch.load(io.BytesIO(b))
+(raylet) [2024-09-16 02:47:24,837 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7164755968; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:47:34,849 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7161212928; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(pid=2945901) [2024-09-16 02:47:40,325] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cu
+da (auto detect)
+(raylet) [2024-09-16 02:47:44,862 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7164227584; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(ProverActor pid=2945901) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414:
+ FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the defa
+ult pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code dur
+ing unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a
+ future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could
+ be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they ar
+e explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weig
+hts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub
+for any issues related to this experimental feature.
+(ProverActor pid=2945901)   return torch.load(io.BytesIO(b))
+(raylet) [2024-09-16 02:48:04,906 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7162257408; capacity: 207929917440. Object creation will
+fail if spilling is required. [repeated 2x across cluster]
+(pid=2946363) [2024-09-16 02:48:10,195] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cu
+da (auto detect)
+(ProverActor pid=2946363) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414:
+ FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the defa
+ult pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code dur
+ing unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a
+ future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could
+ be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they ar
+e explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weig
+hts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub
+for any issues related to this experimental feature.
+(ProverActor pid=2946363)   return torch.load(io.BytesIO(b))
+(raylet) [2024-09-16 02:48:14,939 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7162236928; capacity: 207929917440. Object creation will
+fail if spilling is required.
+2024-09-16 02:48:37.553 | INFO     | __main__:prove_sorry_theorems:852 - Found 5 sorry theorems to prove
+Processing theorems from dwrensha/compfiles:   0%|                                        | 0/5 [00:00<?, ?theorem/s]
+2024-09-16 02:48:37.554 | INFO     | __main__:prove_sorry_theorems:865 - Skipping already encountered theorem: Imo200
+8P5.even_subsets_card
+2024-09-16 02:48:37.554 | INFO     | __main__:prove_sorry_theorems:865 - Skipping already encountered theorem: Bulgar
+ia1998P6.lemma_1'
+2024-09-16 02:48:37.554 | INFO     | __main__:prove_sorry_theorems:865 - Skipping already encountered theorem: Imo200
+9P6.imo2009_p6_aux1
+2024-09-16 02:48:37.554 | INFO     | __main__:prove_sorry_theorems:865 - Skipping already encountered theorem: Imo200
+1P1.lemma1
+2024-09-16 02:48:37.554 | INFO     | __main__:prove_sorry_theorems:865 - Skipping already encountered theorem: Imo200
+8P5.claim
+Processing theorems from dwrensha/compfiles: 100%|██████████████████████████████| 5/5 [00:00<00:00, 7557.30theorem/s]
+2024-09-16 02:48:37.555 | INFO     | __main__:save_progress:807 - Saving encountered theorems...
+2024-09-16 02:48:37.556 | INFO     | __main__:prove_sorry_theorems:903 - Finished attempting to prove sorry theorems
+(raylet) [2024-09-16 02:48:44,972 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7159848960; capacity: 207929917440. Object creation will
+fail if spilling is required. [repeated 3x across cluster]
+(pid=2947002) [2024-09-16 02:48:45,070] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cu
+da (auto detect)
+(ProverActor pid=2947002) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414:
+ FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the defa
+ult pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code dur
+ing unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a
+ future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could
+ be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they ar
+e explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weig
+hts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub
+for any issues related to this experimental feature.
+(ProverActor pid=2947002)   return torch.load(io.BytesIO(b))
+(raylet) [2024-09-16 02:49:04,992 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7157927936; capacity: 207929917440. Object creation will
+fail if spilling is required. [repeated 2x across cluster]
+(raylet) [2024-09-16 02:49:15,002 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7157899264; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:49:25,011 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7156355072; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:49:35,020 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7152840704; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:49:45,029 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7154999296; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:49:55,038 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7156707328; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:50:05,047 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7155232768; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:50:15,057 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7155208192; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:50:25,065 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7153541120; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:50:35,076 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7149871104; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:50:45,085 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7152885760; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:50:55,094 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7152865280; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:51:05,104 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7151374336; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:51:15,116 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7151132672; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:51:25,125 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7149572096; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:51:35,135 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7146119168; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:51:45,142 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7147823104; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:51:55,150 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7149121536; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:52:05,156 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7147597824; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:52:15,164 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7147573248; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:52:25,170 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7146369024; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:52:35,177 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7142993920; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:52:45,184 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7146008576; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:52:55,190 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7145988096; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:53:05,199 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7144075264; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:53:15,208 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7144054784; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 02:53:25,216 E 2913824 2913853] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-46-00_842374_2905959 is over 95% full, available space: 7142772736; capacity: 207929917440. Object creation will
+fail if spilling is required.
+2024-09-16 02:53:27.209 | INFO     | __main__:main:1661 - Finished searching for proofs of sorry theorems
+2024-09-16 02:53:27.211 | INFO     | __main__:main:1664 - Shutting down Ray after proving
+2024-09-16 02:53:30.006 | INFO     | __main__:main:1684 - Finished processing the repository
+2024-09-16 02:53:30.006 | INFO     | __main__:main:1686 - current epoch: 1
+2024-09-16 02:53:30.006 | INFO     | __main__:main:1356 - length of lean_git_repos: 14
+2024-09-16 02:53:30.006 | INFO     | __main__:main:1357 - i: 1
+2024-09-16 02:53:30.006 | INFO     | __main__:main:1363 - Main process
+2024-09-16 02:53:30.007 | INFO     | __main__:main:1364 - Using lambda = 0.0
+2024-09-16 02:53:30.007 | INFO     | __main__:main:1365 - Processing https://github.com/avigad/mathematics_in_lean_so
+urce
+2024-09-16 02:53:30.007 | INFO     | __main__:main:1372 - Adding repo to repos_for_merged_dataset
+2024-09-16 02:53:30.007 | INFO     | __main__:main:1384 - All GPUs
+2024-09-16 02:53:30.007 | INFO     | __main__:main:1622 - Starting the prover
+2024-09-16 02:53:30.007 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-16 02:53:30.007 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-16 02:53:30.007 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You
+are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module im
+plicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See
+https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+ default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during
+unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowli
+sted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for a
+ny use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues relat
+ed to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files per
+manently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-16 02:53:30.215 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_p
+roject/ReProver/retriever_random.ckpt
+2024-09-16 02:53:30.215 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_p
+roject/ReProver/retriever_random.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files per
+manently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint retriever_random.ckpt`
+2024-09-16 02:53:32.529 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found key
+s that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.
+encoder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.
+encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight',
+'retriever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAt
+tention.relative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.en
+coder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.
+wi_1.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.
+0.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.
+encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight',
+'retriever.encoder.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_
+norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.bloc
+k.1.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retri
+ever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.w
+eight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.
+0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.enc
+oder.block.2.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'ret
+riever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseR
+eluDense.wo.weight', 'retriever.encoder.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.
+3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.enc
+oder.encoder.block.3.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weig
+ht', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseR
+eluDense.wi_0.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.enc
+oder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retri
+ever.encoder.encoder.block.4.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttentio
+n.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.l
+ayer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.enc
+oder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weig
+ht', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1
+.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.b
+lock.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retrieve
+r.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weig
+ht', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer
+.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.enco
+der.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', '
+retriever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAtt
+ention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.bloc
+k.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.en
+coder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.
+wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0
+.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.k.weight', 'retriever.encoder.enco
+der.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'ret
+riever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.
+wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.bloc
+k.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_norm.weight', 'retriever.enco
+der.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.k.weigh
+t', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.8.layer.0.Se
+lfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.bloc
+k.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'ret
+riever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_no
+rm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.9.la
+yer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder
+.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', 'ret
+riever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseR
+eluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encod
+er.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'retrieve
+r.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention
+.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.
+layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encod
+er.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.w
+o.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.
+0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.en
+coder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight',
+'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseRelu
+Dense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encod
+er.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retri
+ever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found key
+s that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', '
+state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-16 02:53:34.690 | INFO     | prover.proof_search_all_sorries:__init__:452 - Loaded model from /data/yingzi_ma
+/lean_project/model_lightning.ckpt
+2024-09-16 02:53:34.691 | INFO     | prover.proof_search_all_sorries:__init__:453 - Using retriever: PremiseRetriever
+(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-16 02:53:34.691 | INFO     | prover.proof_search_all_sorries:__init__:456 - Loading indexed corpus from /data
+/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb
+051367c48c0a084411853a576389ecf5/corpus.jsonl
+2024-09-16 02:53:34.691 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/data
+sets_PT_single_repo_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389
+ecf5/corpus.jsonl
+2024-09-16 02:53:41.980 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-16 02:53:41.980 | INFO     | prover.proof_search_all_sorries:__init__:458 - Loaded indexed corpus from /data/
+yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb0
+51367c48c0a084411853a576389ecf5/corpus.jsonl
+2024-09-16 02:53:41.980 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|████████████████████████████████████████████████████████████████████████████| 3679/3679 [05:41<00:00, 10.78it/s]
+2024-09-16 02:59:23.142 | INFO     | prover.proof_search_all_sorries:__init__:460 - Finished reindexing!
+2024-09-16 02:59:23.142 | INFO     | prover.proof_search_all_sorries:__init__:471 - Launching 4 workers with 4 GPUs.
+2024-09-16 02:59:27,261 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(raylet) [2024-09-16 02:59:56,812 E 2953309 2953350] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-59-23_267780_2905959 is over 95% full, available space: 7129563136; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 03:00:06,821 E 2953309 2953350] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-59-23_267780_2905959 is over 95% full, available space: 7128031232; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(pid=2984365) [2024-09-16 03:00:13,152] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cu
+da (auto detect)
+(raylet) [2024-09-16 03:00:16,831 E 2953309 2953350] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-59-23_267780_2905959 is over 95% full, available space: 7127990272; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(ProverActor pid=2984365) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414:
+ FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the defa
+ult pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code dur
+ing unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a
+ future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could
+ be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they ar
+e explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weig
+hts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub
+for any issues related to this experimental feature.
+(ProverActor pid=2984365)   return torch.load(io.BytesIO(b))
+(pid=2984538) [2024-09-16 03:00:22,705] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cu
+da (auto detect)
+(raylet) [2024-09-16 03:00:26,844 E 2953309 2953350] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-59-23_267780_2905959 is over 95% full, available space: 7127822336; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 03:00:36,859 E 2953309 2953350] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-59-23_267780_2905959 is over 95% full, available space: 7124672512; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(ProverActor pid=2984538) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414:
+ FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the defa
+ult pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code dur
+ing unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a
+ future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could
+ be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they ar
+e explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weig
+hts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub
+for any issues related to this experimental feature.
+(ProverActor pid=2984538)   return torch.load(io.BytesIO(b))
+(pid=2985244) [2024-09-16 03:00:37,816] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cu
+da (auto detect)
+2024-09-16 03:00:41.831 | INFO     | __main__:prove_sorry_theorems:852 - Found 15 sorry theorems to prove
+Processing theorems from avigad/mathematics_in_lean_source:   0%|                        | 0/15 [00:00<?, ?theorem/s]
+2024-09-16 03:00:41.831 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for cauchySeq_of_le_geom
+etric_two'
+2024-09-16 03:00:41.832 | INFO     | __main__:prove_sorry_theorems:876 - Position: (423, 1)
+2024-09-16 03:00:41.832 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S06.convergesTo_m
+ul_const
+2024-09-16 03:00:41.832 | INFO     | __main__:prove_sorry_theorems:876 - Position: (199, 1)
+2024-09-16 03:00:41.832 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S06.convergesTo_a
+dd
+2024-09-16 03:00:41.832 | INFO     | __main__:prove_sorry_theorems:876 - Position: (143, 1)
+2024-09-16 03:00:41.832 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S05.MyAbs.abs_lt
+2024-09-16 03:00:41.832 | INFO     | __main__:prove_sorry_theorems:876 - Position: (196, 1)
+2024-09-16 03:00:41.832 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for Cantor
+2024-09-16 03:00:41.833 | INFO     | __main__:prove_sorry_theorems:876 - Position: (673, 1)
+2024-09-16 03:00:41.833 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S06.exists_abs_le
+_of_convergesTo
+2024-09-16 03:00:41.833 | INFO     | __main__:prove_sorry_theorems:876 - Position: (239, 1)
+2024-09-16 03:00:41.833 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S05.MyAbs.le_abs_
+self
+2024-09-16 03:00:41.833 | INFO     | __main__:prove_sorry_theorems:876 - Position: (157, 1)
+2024-09-16 03:00:41.833 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for MyRing.two_mul
+2024-09-16 03:00:41.833 | INFO     | __main__:prove_sorry_theorems:876 - Position: (407, 1)
+2024-09-16 03:00:41.833 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S04.aux
+2024-09-16 03:00:41.833 | INFO     | __main__:prove_sorry_theorems:876 - Position: (246, 1)
+2024-09-16 03:00:41.833 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for MyRing.self_sub
+2024-09-16 03:00:41.834 | INFO     | __main__:prove_sorry_theorems:876 - Position: (382, 1)
+2024-09-16 03:00:41.834 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S01.Subset.trans
+2024-09-16 03:00:41.834 | INFO     | __main__:prove_sorry_theorems:876 - Position: (506, 1)
+2024-09-16 03:00:41.834 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S01.my_lemma3
+2024-09-16 03:00:41.834 | INFO     | __main__:prove_sorry_theorems:876 - Position: (99, 1)
+2024-09-16 03:00:41.834 | INFO     | prover.proof_search_all_sorries:search_unordered:514 - Distributed
+(ProverActor pid=2984365) 2024-09-16 03:00:41.845 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Th
+eorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411
+853a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S05_Disjunction.lean'), full_name='C03S05.MyAbs.abs_lt')
+(ProverActor pid=2985244) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414:
+ FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the defa
+ult pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code dur
+ing unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a
+ future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could
+ be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they ar
+e explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weig
+hts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub
+for any issues related to this experimental feature.
+(ProverActor pid=2985244)   return torch.load(io.BytesIO(b))
+(raylet) [2024-09-16 03:00:46,870 E 2953309 2953350] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-59-23_267780_2905959 is over 95% full, available space: 6450364416; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(pid=2985561) [2024-09-16 03:00:50,474] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cu
+da (auto detect)
+(ProverActor pid=2984538) 2024-09-16 03:00:41.843 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Th
+eorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411
+853a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S06_Sequences_and_Convergence.lean'), full_name='C03S06.converge
+sTo_add')
+(ProverActor pid=2985561) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414:
+ FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the defa
+ult pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code dur
+ing unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a
+ future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could
+ be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they ar
+e explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weig
+hts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub
+for any issues related to this experimental feature.
+(ProverActor pid=2985561)   return torch.load(io.BytesIO(b))
+(ProverActor pid=2985244) 2024-09-16 03:00:55.225 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Th
+eorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411
+853a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S06_Sequences_and_Convergence.lean'), full_name='C03S06.converge
+sTo_mul_const')
+(raylet) [2024-09-16 03:00:56,881 E 2953309 2953350] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-59-23_267780_2905959 is over 95% full, available space: 3240071168; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(raylet) [2024-09-16 03:01:06,892 E 2953309 2953350] (raylet) file_system_monitor.cc:111: /tmp/ray/session_2024-09-16
+_02-59-23_267780_2905959 is over 95% full, available space: 1147691008; capacity: 207929917440. Object creation will
+fail if spilling is required.
+(ProverActor pid=2985561) 2024-09-16 03:01:07.155 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Th
+eorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411
+853a576389ecf5'), file_path=PosixPath('MIL/C09_Topology/S02_Metric_Spaces.lean'), full_name="cauchySeq_of_le_geometri
+c_two'")
+Processing theorems from avigad/mathematics_in_lean_source:  73%|███████████    | 11/15 [00:28<00:10,  2.58s/theorem]
+2024-09-16 03:01:10.196 | INFO     | __main__:main:2066 - An error occurred: ray::ProverActor.search() (pid=2985561,
+ip=10.0.7.25, actor_id=97421b5a9f3d8f82700e3c8201000000, repr=<prover.proof_search_all_sorries.ProverActor object at
+0x7c0c2bddbfd0>)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search_all_sorries.py", line 332, in search
+    return self.prover.search(repo, thm, pos)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search_all_sorries.py", line 96, in search
+    with Dojo(thm, self.timeout, additional_imports=imps) as (
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 25
+5, in __enter__
+    raise ex
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 17
+6, in __enter__
+    shutil.copytree(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/shutil.py", line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/shutil.py", line 513, in _copytree
+    raise Error(errors)
+shutil.Error: [('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a
+084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Pen
+roseDiagram.c', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Penrose
+Diagram.c', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in
+_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/bu
+ild/ir/ProofWidgets/Component/PenroseDiagram.c' -> 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/buil
+d/ir/ProofWidgets/Component/PenroseDiagram.c'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_i
+n_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/b
+uild/ir/ProofWidgets/Component/Recharts.c.hash', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/
+ir/ProofWidgets/Component/Recharts.c.hash', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache
+/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts.c.hash' -> 'mathematics_in_lean_source/.lake/p
+ackages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts.c.hash'"), ('/data/yingzi_ma/lean_project/.cache/
+lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake
+/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c', 'mathematics_in_lean_source/.lake/packa
+ges/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c', "[Errno 28] No space left on device: '/data/y
+ingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mat
+hematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c' -> 'mathema
+tics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c'"), ('/data/ying
+zi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathem
+atics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/InteractiveSvg.c.hash', 'mathe
+matics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/InteractiveSvg.c.hash', "[Err
+no 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297
+e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidge
+ts/Component/InteractiveSvg.c.hash' -> 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWi
+dgets/Component/InteractiveSvg.c.hash'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_
+source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir
+/ProofWidgets/Component/Basic.c.hash', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWi
+dgets/Component/Basic.c.hash', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/av
+igad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/pr
+oofwidgets/.lake/build/ir/ProofWidgets/Component/Basic.c.hash' -> 'mathematics_in_lean_source/.lake/packages/proofwid
+gets/.lake/build/ir/ProofWidgets/Component/Basic.c.hash'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-ma
+thematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidg
+ets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c.hash', 'mathematics_in_lean_source/.lake/packages/proofwidge
+ts/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c.hash', "[Errno 28] No space left on device: '/data/yingzi_ma/
+lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_
+in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c.hash' -> 'mathematics
+_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c.hash'"), ('/data/yin
+gzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathe
+matics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts.c', 'mathematics_in_
+lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts.c', "[Errno 28] No space left
+on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a08441
+1853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts
+.c' -> 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts.c'"), (
+'/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389
+ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/PenroseDiagram.c.ha
+sh', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/PenroseDiagram.c.h
+ash', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_
+source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir
+/ProofWidgets/Component/PenroseDiagram.c.hash' -> 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build
+/ir/ProofWidgets/Component/PenroseDiagram.c.hash'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathemati
+cs_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.la
+ke/build/ir/ProofWidgets/Presentation', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofW
+idgets/Presentation', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/packages/proofwidgets/.l
+ake/build/ir/ProofWidgets/Presentation'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean
+_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/i
+r/ProofWidgets.c.hash', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.c.hash',
+"[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source
+-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/Proof
+Widgets.c.hash' -> 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.c.hash'"), ('/
+data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ec
+f5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.c', 'mathematics_in_lean_source
+/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.c', "[Errno 28] No space left on device: '/data/yingzi_ma/le
+an_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in
+_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.c' -> 'mathematics_in_lean_source/.lake/packages
+/proofwidgets/.lake/build/ir/ProofWidgets.c'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in
+_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/lake-man
+ifest.json', 'mathematics_in_lean_source/.lake/packages/proofwidgets/lake-manifest.json', "[Errno 28] No space left o
+n device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411
+853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/lake-manifest.json' -> 'mathematics_in_lean_sou
+rce/.lake/packages/proofwidgets/lake-manifest.json'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathema
+tics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/d
+oc', 'mathematics_in_lean_source/.lake/packages/proofwidgets/doc', "[Errno 28] No space left on device: 'mathematics_
+in_lean_source/.lake/packages/proofwidgets/doc'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics
+_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/Proof
+Widgets.lean', 'mathematics_in_lean_source/.lake/packages/proofwidgets/ProofWidgets.lean', "[Errno 28] No space left
+on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a08441
+1853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/ProofWidgets.lean' -> 'mathematics_in_lean_sou
+rce/.lake/packages/proofwidgets/ProofWidgets.lean'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathemat
+ics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/LI
+CENSE', 'mathematics_in_lean_source/.lake/packages/proofwidgets/LICENSE', "[Errno 28] No space left on device: '/data
+/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/m
+athematics_in_lean_source/.lake/packages/proofwidgets/LICENSE' -> 'mathematics_in_lean_source/.lake/packages/proofwid
+gets/LICENSE'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c
+0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/ProofWidgets', 'mathematics_in_lean_sou
+rce/.lake/packages/proofwidgets/ProofWidgets', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake
+/packages/proofwidgets/ProofWidgets'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_so
+urce-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/Cli', 'mathematics_in_lean_so
+urce/.lake/packages/Cli', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/packages/Cli'"), ('/
+data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ec
+f5/mathematics_in_lean_source/.lake/packages/importGraph', 'mathematics_in_lean_source/.lake/packages/importGraph', "
+[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/packages/importGraph'"), ('/data/yingzi_ma/lean
+_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_l
+ean_source/.lake/packages/Qq', 'mathematics_in_lean_source/.lake/packages/Qq', "[Errno 28] No space left on device: '
+mathematics_in_lean_source/.lake/packages/Qq'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_i
+n_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/lean4', 'mathematics
+_in_lean_source/.lake/packages/lean4', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/package
+s/lean4'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084
+411853a576389ecf5/mathematics_in_lean_source/.lake/packages/mathlib', 'mathematics_in_lean_source/.lake/packages/math
+lib', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/packages/mathlib'"), ('/data/yingzi_ma/l
+ean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_i
+n_lean_source/.lake/lakefile.olean.trace', 'mathematics_in_lean_source/.lake/lakefile.olean.trace', "[Errno 28] No sp
+ace left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c4
+8c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/lakefile.olean.trace' -> 'mathematics_in_lean_source/.lake/
+lakefile.olean.trace'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb05
+1367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.docker', 'mathematics_in_lean_source/.docker', "[Errno 28]
+ No space left on device: 'mathematics_in_lean_source/.docker'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avi
+gad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/ExtractData.lean',
+ 'mathematics_in_lean_source/ExtractData.lean', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.c
+ache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/
+ExtractData.lean' -> 'mathematics_in_lean_source/ExtractData.lean'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo
+/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.vscode', 'mat
+hematics_in_lean_source/.vscode', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.vscode'"), ('/dat
+a/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/
+mathematics_in_lean_source/make.bat', 'mathematics_in_lean_source/make.bat', "[Errno 28] No space left on device: '/d
+ata/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf
+5/mathematics_in_lean_source/make.bat' -> 'mathematics_in_lean_source/make.bat'"), ('/data/yingzi_ma/lean_project/.ca
+che/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.
+github', 'mathematics_in_lean_source/.github', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.gith
+ub'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a08441185
+3a576389ecf5/mathematics_in_lean_source/MIL.lean', 'mathematics_in_lean_source/MIL.lean', "[Errno 28] No space left o
+n device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411
+853a576389ecf5/mathematics_in_lean_source/MIL.lean' -> 'mathematics_in_lean_source/MIL.lean'"), ('/data/yingzi_ma/lea
+n_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_
+lean_source/lean-toolchain', 'mathematics_in_lean_source/lean-toolchain', "[Errno 28] No space left on device: '/data
+/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/m
+athematics_in_lean_source/lean-toolchain' -> 'mathematics_in_lean_source/lean-toolchain'"), ('/data/yingzi_ma/lean_pr
+oject/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean
+_source/.git', 'mathematics_in_lean_source/.git', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.g
+it'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a08441185
+3a576389ecf5/mathematics_in_lean_source/lakefile.lean', 'mathematics_in_lean_source/lakefile.lean', "[Errno 28] No sp
+ace left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c4
+8c0a084411853a576389ecf5/mathematics_in_lean_source/lakefile.lean' -> 'mathematics_in_lean_source/lakefile.lean'"), (
+'/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389
+ecf5/mathematics_in_lean_source/scripts', 'mathematics_in_lean_source/scripts', "[Errno 28] No space left on device:
+'mathematics_in_lean_source/scripts'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_so
+urce-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.gitpod.yml', 'mathematics_in_lean_source/.g
+itpod.yml', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in
+_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.gitpod.yml' -> 'mathematics_in_lean
+_source/.gitpod.yml'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051
+367c48c0a084411853a576389ecf5/mathematics_in_lean_source/README.md', 'mathematics_in_lean_source/README.md', "[Errno
+28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0f
+b051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/README.md' -> 'mathematics_in_lean_source/README.md'"),
+('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a57638
+9ecf5/mathematics_in_lean_source/sphinx_source', 'mathematics_in_lean_source/sphinx_source', "[Errno 28] No space lef
+t on device: 'mathematics_in_lean_source/sphinx_source'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mat
+hematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/user_repo_source', 'mathe
+matics_in_lean_source/user_repo_source', "[Errno 28] No space left on device: 'mathematics_in_lean_source/user_repo_s
+ource'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a08441
+1853a576389ecf5/mathematics_in_lean_source/Makefile', 'mathematics_in_lean_source/Makefile', "[Errno 28] No space lef
+t on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084
+411853a576389ecf5/mathematics_in_lean_source/Makefile' -> 'mathematics_in_lean_source/Makefile'"), ('/data/yingzi_ma/
+lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_
+in_lean_source/lake-manifest.json', 'mathematics_in_lean_source/lake-manifest.json', "[Errno 28] No space left on dev
+ice: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a5
+76389ecf5/mathematics_in_lean_source/lake-manifest.json' -> 'mathematics_in_lean_source/lake-manifest.json'"), ('/dat
+a/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/
+mathematics_in_lean_source/MIL', 'mathematics_in_lean_source/MIL', "[Errno 28] No space left on device: 'mathematics_
+in_lean_source/MIL'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb0513
+67c48c0a084411853a576389ecf5/mathematics_in_lean_source/.gitignore', 'mathematics_in_lean_source/.gitignore', "[Errno
+ 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0
+fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.gitignore' -> 'mathematics_in_lean_source/.gitignore'"
+)]
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main3_all_sorries.py", line 1658, in main
+    prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_merged_dataset)
+  File "/data/yingzi_ma/lean_project/ReProver/main3_all_sorries.py", line 889, in prove_sorry_theorems
+    process_theorem_batch(theorem_batch, positions_batch, repo, db, prover, dynamic_database_json_path)
+  File "/data/yingzi_ma/lean_project/ReProver/main3_all_sorries.py", line 774, in process_theorem_batch
+    results = prover.search_unordered(LeanGitRepo(repo.url, repo.commit), lean_dojo_theorems, positions_batch)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search_all_sorries.py", line 515, in search_unordered
+    results = list(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/util/actor_pool.py", line 170, in g
+et_generator
+    yield self.get_next_unordered()
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/util/actor_pool.py", line 370, in g
+et_next_unordered
+    return ray.get(future)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 2
+1, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line
+ 103, in wrapper
+    return func(*args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/worker.py", line 2661, in
+get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/worker.py", line 871, in g
+et_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(Error): ray::ProverActor.search() (pid=2985561, ip=10.0.7.25, actor_id=97421b5a9f3d8f8270
+0e3c8201000000, repr=<prover.proof_search_all_sorries.ProverActor object at 0x7c0c2bddbfd0>)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search_all_sorries.py", line 332, in search
+    return self.prover.search(repo, thm, pos)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search_all_sorries.py", line 96, in search
+    with Dojo(thm, self.timeout, additional_imports=imps) as (
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 25
+5, in __enter__
+    raise ex
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 17
+6, in __enter__
+    shutil.copytree(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/shutil.py", line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/shutil.py", line 513, in _copytree
+    raise Error(errors)
+shutil.Error: [('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a
+084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Pen
+roseDiagram.c', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Penrose
+Diagram.c', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in
+_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/bu
+ild/ir/ProofWidgets/Component/PenroseDiagram.c' -> 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/buil
+d/ir/ProofWidgets/Component/PenroseDiagram.c'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_i
+n_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/b
+uild/ir/ProofWidgets/Component/Recharts.c.hash', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/
+ir/ProofWidgets/Component/Recharts.c.hash', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache
+/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lak
+e/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts.c.hash' -> 'mathematics_in_lean_source/.lake/p
+ackages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts.c.hash'"), ('/data/yingzi_ma/lean_project/.cache/
+lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake
+/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c', 'mathematics_in_lean_source/.lake/packa
+ges/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c', "[Errno 28] No space left on device: '/data/y
+ingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mat
+hematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c' -> 'mathema
+tics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c'"), ('/data/ying
+zi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathem
+atics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/InteractiveSvg.c.hash', 'mathe
+matics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/InteractiveSvg.c.hash', "[Err
+no 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297
+e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidge
+ts/Component/InteractiveSvg.c.hash' -> 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWi
+dgets/Component/InteractiveSvg.c.hash'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_
+source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir
+/ProofWidgets/Component/Basic.c.hash', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWi
+dgets/Component/Basic.c.hash', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/av
+igad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/pr
+oofwidgets/.lake/build/ir/ProofWidgets/Component/Basic.c.hash' -> 'mathematics_in_lean_source/.lake/packages/proofwid
+gets/.lake/build/ir/ProofWidgets/Component/Basic.c.hash'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-ma
+thematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidg
+ets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c.hash', 'mathematics_in_lean_source/.lake/packages/proofwidge
+ts/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c.hash', "[Errno 28] No space left on device: '/data/yingzi_ma/
+lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_
+in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c.hash' -> 'mathematics
+_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/MakeEditLink.c.hash'"), ('/data/yin
+gzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathe
+matics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts.c', 'mathematics_in_
+lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts.c', "[Errno 28] No space left
+on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a08441
+1853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts
+.c' -> 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/Recharts.c'"), (
+'/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389
+ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/PenroseDiagram.c.ha
+sh', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets/Component/PenroseDiagram.c.h
+ash', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_
+source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir
+/ProofWidgets/Component/PenroseDiagram.c.hash' -> 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build
+/ir/ProofWidgets/Component/PenroseDiagram.c.hash'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathemati
+cs_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.la
+ke/build/ir/ProofWidgets/Presentation', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofW
+idgets/Presentation', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/packages/proofwidgets/.l
+ake/build/ir/ProofWidgets/Presentation'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean
+_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/i
+r/ProofWidgets.c.hash', 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.c.hash',
+"[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source
+-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/Proof
+Widgets.c.hash' -> 'mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.c.hash'"), ('/
+data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ec
+f5/mathematics_in_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.c', 'mathematics_in_lean_source
+/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.c', "[Errno 28] No space left on device: '/data/yingzi_ma/le
+an_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in
+_lean_source/.lake/packages/proofwidgets/.lake/build/ir/ProofWidgets.c' -> 'mathematics_in_lean_source/.lake/packages
+/proofwidgets/.lake/build/ir/ProofWidgets.c'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in
+_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/lake-man
+ifest.json', 'mathematics_in_lean_source/.lake/packages/proofwidgets/lake-manifest.json', "[Errno 28] No space left o
+n device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411
+853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/lake-manifest.json' -> 'mathematics_in_lean_sou
+rce/.lake/packages/proofwidgets/lake-manifest.json'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathema
+tics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/d
+oc', 'mathematics_in_lean_source/.lake/packages/proofwidgets/doc', "[Errno 28] No space left on device: 'mathematics_
+in_lean_source/.lake/packages/proofwidgets/doc'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics
+_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/Proof
+Widgets.lean', 'mathematics_in_lean_source/.lake/packages/proofwidgets/ProofWidgets.lean', "[Errno 28] No space left
+on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a08441
+1853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/ProofWidgets.lean' -> 'mathematics_in_lean_sou
+rce/.lake/packages/proofwidgets/ProofWidgets.lean'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathemat
+ics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/LI
+CENSE', 'mathematics_in_lean_source/.lake/packages/proofwidgets/LICENSE', "[Errno 28] No space left on device: '/data
+/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/m
+athematics_in_lean_source/.lake/packages/proofwidgets/LICENSE' -> 'mathematics_in_lean_source/.lake/packages/proofwid
+gets/LICENSE'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c
+0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/proofwidgets/ProofWidgets', 'mathematics_in_lean_sou
+rce/.lake/packages/proofwidgets/ProofWidgets', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake
+/packages/proofwidgets/ProofWidgets'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_so
+urce-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/Cli', 'mathematics_in_lean_so
+urce/.lake/packages/Cli', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/packages/Cli'"), ('/
+data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ec
+f5/mathematics_in_lean_source/.lake/packages/importGraph', 'mathematics_in_lean_source/.lake/packages/importGraph', "
+[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/packages/importGraph'"), ('/data/yingzi_ma/lean
+_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_l
+ean_source/.lake/packages/Qq', 'mathematics_in_lean_source/.lake/packages/Qq', "[Errno 28] No space left on device: '
+mathematics_in_lean_source/.lake/packages/Qq'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_i
+n_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/lean4', 'mathematics
+_in_lean_source/.lake/packages/lean4', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/package
+s/lean4'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084
+411853a576389ecf5/mathematics_in_lean_source/.lake/packages/mathlib', 'mathematics_in_lean_source/.lake/packages/math
+lib', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/packages/mathlib'"), ('/data/yingzi_ma/l
+ean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_i
+n_lean_source/.lake/lakefile.olean.trace', 'mathematics_in_lean_source/.lake/lakefile.olean.trace', "[Errno 28] No sp
+ace left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c4
+8c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/lakefile.olean.trace' -> 'mathematics_in_lean_source/.lake/
+lakefile.olean.trace'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb05
+1367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.docker', 'mathematics_in_lean_source/.docker', "[Errno 28]
+ No space left on device: 'mathematics_in_lean_source/.docker'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avi
+gad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/ExtractData.lean',
+ 'mathematics_in_lean_source/ExtractData.lean', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.c
+ache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/
+ExtractData.lean' -> 'mathematics_in_lean_source/ExtractData.lean'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo
+/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.vscode', 'mat
+hematics_in_lean_source/.vscode', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.vscode'"), ('/dat
+a/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/
+mathematics_in_lean_source/make.bat', 'mathematics_in_lean_source/make.bat', "[Errno 28] No space left on device: '/d
+ata/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf
+5/mathematics_in_lean_source/make.bat' -> 'mathematics_in_lean_source/make.bat'"), ('/data/yingzi_ma/lean_project/.ca
+che/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.
+github', 'mathematics_in_lean_source/.github', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.gith
+ub'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a08441185
+3a576389ecf5/mathematics_in_lean_source/MIL.lean', 'mathematics_in_lean_source/MIL.lean', "[Errno 28] No space left o
+n device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411
+853a576389ecf5/mathematics_in_lean_source/MIL.lean' -> 'mathematics_in_lean_source/MIL.lean'"), ('/data/yingzi_ma/lea
+n_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_
+lean_source/lean-toolchain', 'mathematics_in_lean_source/lean-toolchain', "[Errno 28] No space left on device: '/data
+/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/m
+athematics_in_lean_source/lean-toolchain' -> 'mathematics_in_lean_source/lean-toolchain'"), ('/data/yingzi_ma/lean_pr
+oject/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean
+_source/.git', 'mathematics_in_lean_source/.git', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.g
+it'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a08441185
+3a576389ecf5/mathematics_in_lean_source/lakefile.lean', 'mathematics_in_lean_source/lakefile.lean', "[Errno 28] No sp
+ace left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c4
+8c0a084411853a576389ecf5/mathematics_in_lean_source/lakefile.lean' -> 'mathematics_in_lean_source/lakefile.lean'"), (
+'/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389
+ecf5/mathematics_in_lean_source/scripts', 'mathematics_in_lean_source/scripts', "[Errno 28] No space left on device:
+'mathematics_in_lean_source/scripts'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_so
+urce-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.gitpod.yml', 'mathematics_in_lean_source/.g
+itpod.yml', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in
+_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.gitpod.yml' -> 'mathematics_in_lean
+_source/.gitpod.yml'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051
+367c48c0a084411853a576389ecf5/mathematics_in_lean_source/README.md', 'mathematics_in_lean_source/README.md', "[Errno
+28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0f
+b051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/README.md' -> 'mathematics_in_lean_source/README.md'"),
+('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a57638
+9ecf5/mathematics_in_lean_source/sphinx_source', 'mathematics_in_lean_source/sphinx_source', "[Errno 28] No space lef
+t on device: 'mathematics_in_lean_source/sphinx_source'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mat
+hematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/user_repo_source', 'mathe
+matics_in_lean_source/user_repo_source', "[Errno 28] No space left on device: 'mathematics_in_lean_source/user_repo_s
+ource'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a08441
+1853a576389ecf5/mathematics_in_lean_source/Makefile', 'mathematics_in_lean_source/Makefile', "[Errno 28] No space lef
+t on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084
+411853a576389ecf5/mathematics_in_lean_source/Makefile' -> 'mathematics_in_lean_source/Makefile'"), ('/data/yingzi_ma/
+lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_
+in_lean_source/lake-manifest.json', 'mathematics_in_lean_source/lake-manifest.json', "[Errno 28] No space left on dev
+ice: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a5
+76389ecf5/mathematics_in_lean_source/lake-manifest.json' -> 'mathematics_in_lean_source/lake-manifest.json'"), ('/dat
+a/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/
+mathematics_in_lean_source/MIL', 'mathematics_in_lean_source/MIL', "[Errno 28] No space left on device: 'mathematics_
+in_lean_source/MIL'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb0513
+67c48c0a084411853a576389ecf5/mathematics_in_lean_source/.gitignore', 'mathematics_in_lean_source/.gitignore', "[Errno
+ 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0
+fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.gitignore' -> 'mathematics_in_lean_source/.gitignore'"
+)]
+(ProverActor pid=2985561) 2024-09-16 03:01:10.197 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Th
+eorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411
+853a576389ecf5'), file_path=PosixPath('MIL/C04_Sets_and_Functions/S02_Functions.lean'), full_name='Cantor')
+2024-09-16 03:01:16,302 ERROR worker.py:409 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): ray::
+ProverActor.search() (pid=2985244, ip=10.0.7.25, actor_id=29d1d0b272e5f20b0d4290b501000000, repr=<prover.proof_search
+_all_sorries.ProverActor object at 0x71db33503e50>)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search_all_sorries.py", line 332, in search
+    return self.prover.search(repo, thm, pos)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search_all_sorries.py", line 96, in search
+    with Dojo(thm, self.timeout, additional_imports=imps) as (
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 25
+5, in __enter__
+    raise ex
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 17
+6, in __enter__
+    shutil.copytree(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/shutil.py", line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/shutil.py", line 513, in _copytree
+    raise Error(errors)
+shutil.Error: [('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a
+084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/lean4/lib/libclang-cpp.so', 'mathematics_in_lean_sourc
+e/.lake/packages/lean4/lib/libclang-cpp.so', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cach
+e/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.la
+ke/packages/lean4/lib/libclang-cpp.so' -> 'mathematics_in_lean_source/.lake/packages/lean4/lib/libclang-cpp.so'"), ('
+/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389e
+cf5/mathematics_in_lean_source/.lake/packages/lean4/LICENSE', 'mathematics_in_lean_source/.lake/packages/lean4/LICENS
+E', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_so
+urce-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/lean4/LICENSE' -> 'mathematic
+s_in_lean_source/.lake/packages/lean4/LICENSE'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_
+in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/lean4/include', 'ma
+thematics_in_lean_source/.lake/packages/lean4/include', "[Errno 28] No space left on device: 'mathematics_in_lean_sou
+rce/.lake/packages/lean4/include'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_sourc
+e-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake/packages/lean4/bin', 'mathematics_in_lean
+_source/.lake/packages/lean4/bin', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/packages/le
+an4/bin'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084
+411853a576389ecf5/mathematics_in_lean_source/.lake/packages/lean4/share', 'mathematics_in_lean_source/.lake/packages/
+lean4/share', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.lake/packages/lean4/share'"), ('/data
+/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/m
+athematics_in_lean_source/.lake/packages/mathlib', 'mathematics_in_lean_source/.lake/packages/mathlib', "[Errno 28] N
+o space left on device: 'mathematics_in_lean_source/.lake/packages/mathlib'"), ('/data/yingzi_ma/lean_project/.cache/
+lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.lake
+/lakefile.olean.trace', 'mathematics_in_lean_source/.lake/lakefile.olean.trace', "[Errno 28] No space left on device:
+ '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a57638
+9ecf5/mathematics_in_lean_source/.lake/lakefile.olean.trace' -> 'mathematics_in_lean_source/.lake/lakefile.olean.trac
+e'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853
+a576389ecf5/mathematics_in_lean_source/.docker', 'mathematics_in_lean_source/.docker', "[Errno 28] No space left on d
+evice: 'mathematics_in_lean_source/.docker'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_
+lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/ExtractData.lean', 'mathematics_in_le
+an_source/ExtractData.lean', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avig
+ad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/ExtractData.lean' -
+> 'mathematics_in_lean_source/ExtractData.lean'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics
+_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.vscode', 'mathematics_in_lean_so
+urce/.vscode', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.vscode'"), ('/data/yingzi_ma/lean_pr
+oject/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean
+_source/make.bat', 'mathematics_in_lean_source/make.bat', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_
+project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_le
+an_source/make.bat' -> 'mathematics_in_lean_source/make.bat'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/aviga
+d-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.github', 'mathemati
+cs_in_lean_source/.github', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.github'"), ('/data/ying
+zi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathem
+atics_in_lean_source/MIL.lean', 'mathematics_in_lean_source/MIL.lean', "[Errno 28] No space left on device: '/data/yi
+ngzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/math
+ematics_in_lean_source/MIL.lean' -> 'mathematics_in_lean_source/MIL.lean'"), ('/data/yingzi_ma/lean_project/.cache/le
+an_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/lean-to
+olchain', 'mathematics_in_lean_source/lean-toolchain', "[Errno 28] No space left on device: '/data/yingzi_ma/lean_pro
+ject/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_
+source/lean-toolchain' -> 'mathematics_in_lean_source/lean-toolchain'"), ('/data/yingzi_ma/lean_project/.cache/lean_d
+ojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.git', 'mat
+hematics_in_lean_source/.git', "[Errno 28] No space left on device: 'mathematics_in_lean_source/.git'"), ('/data/ying
+zi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathem
+atics_in_lean_source/lakefile.lean', 'mathematics_in_lean_source/lakefile.lean', "[Errno 28] No space left on device:
+ '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a57638
+9ecf5/mathematics_in_lean_source/lakefile.lean' -> 'mathematics_in_lean_source/lakefile.lean'"), ('/data/yingzi_ma/le
+an_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in
+_lean_source/scripts', 'mathematics_in_lean_source/scripts', "[Errno 28] No space left on device: 'mathematics_in_lea
+n_source/scripts'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367
+c48c0a084411853a576389ecf5/mathematics_in_lean_source/.gitpod.yml', 'mathematics_in_lean_source/.gitpod.yml', "[Errno
+ 28] No space left on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0
+fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/.gitpod.yml' -> 'mathematics_in_lean_source/.gitpod.yml
+'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a
+576389ecf5/mathematics_in_lean_source/README.md', 'mathematics_in_lean_source/README.md', "[Errno 28] No space left o
+n device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411
+853a576389ecf5/mathematics_in_lean_source/README.md' -> 'mathematics_in_lean_source/README.md'"), ('/data/yingzi_ma/l
+ean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_i
+n_lean_source/sphinx_source', 'mathematics_in_lean_source/sphinx_source', "[Errno 28] No space left on device: 'mathe
+matics_in_lean_source/sphinx_source'"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_so
+urce-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/user_repo_source', 'mathematics_in_lean_sour
+ce/user_repo_source', "[Errno 28] No space left on device: 'mathematics_in_lean_source/user_repo_source'"), ('/data/y
+ingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mat
+hematics_in_lean_source/Makefile', 'mathematics_in_lean_source/Makefile', "[Errno 28] No space left on device: '/data
+/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/m
+athematics_in_lean_source/Makefile' -> 'mathematics_in_lean_source/Makefile'"), ('/data/yingzi_ma/lean_project/.cache
+/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean_source/lake
+-manifest.json', 'mathematics_in_lean_source/lake-manifest.json', "[Errno 28] No space left on device: '/data/yingzi_
+ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathemati
+cs_in_lean_source/lake-manifest.json' -> 'mathematics_in_lean_source/lake-manifest.json'"), ('/data/yingzi_ma/lean_pr
+oject/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a576389ecf5/mathematics_in_lean
+_source/MIL', 'mathematics_in_lean_source/MIL', "[Errno 28] No space left on device: 'mathematics_in_lean_source/MIL'
+"), ('/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a084411853a5
+76389ecf5/mathematics_in_lean_source/.gitignore', 'mathematics_in_lean_source/.gitignore', "[Errno 28] No space left
+on device: '/data/yingzi_ma/lean_project/.cache/lean_dojo/avigad-mathematics_in_lean_source-5297e0fb051367c48c0a08441
+1853a576389ecf5/mathematics_in_lean_source/.gitignore' -> 'mathematics_in_lean_source/.gitignore'")]
+(base) yingzi_ma@compute-permanent-node-794:~/lean
+(base) yingzi_ma@compute-permanent-node-794:~/lean
+(base) yingzi_ma@compute-permanent-node-794:
+(base) yingzi_ma@compute-permanent-node-794:
+(base) yingzi_ma@compute-permanent-node-794:~/lean
+(base) yingzi_ma@compute-permanent-node-794:~/lean
+(base) yingzi_ma@compute-permanent-node-794:~/lean_project/ReProver$

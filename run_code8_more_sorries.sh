@@ -5,7 +5,7 @@ echo "Script executed from: ${PWD}"
 source ${RAID_DIR}/../miniconda3/etc/profile.d/conda.sh
 conda activate ReProver
 export PYTHONPATH="${PYTHONPATH}:${RAID_DIR}/ReProver"
-export GITHUB_ACCESS_TOKEN="<>"
+export GITHUB_ACCESS_TOKEN="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"
 export CACHE_DIR="${RAID_DIR}/.cache/lean_dojo"
 echo "Removing old cache files"
 rm -rf /tmp/ray

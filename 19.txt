@@ -1,0 +1,1983 @@
+  Attempting uninstall: nvidia-nvtx-cu12
+    Found existing installation: nvidia-nvtx-cu12 12.4.99
+    Uninstalling nvidia-nvtx-cu12-12.4.99:
+      Successfully uninstalled nvidia-nvtx-cu12-12.4.99
+  Attempting uninstall: nvidia-nvjitlink-cu12
+    Found existing installation: nvidia-nvjitlink-cu12 12.4.99
+    Uninstalling nvidia-nvjitlink-cu12-12.4.99:
+      Successfully uninstalled nvidia-nvjitlink-cu12-12.4.99
+  Attempting uninstall: nvidia-nccl-cu12
+    Found existing installation: nvidia-nccl-cu12 2.20.5
+    Uninstalling nvidia-nccl-cu12-2.20.5:
+      Successfully uninstalled nvidia-nccl-cu12-2.20.5
+  Attempting uninstall: nvidia-curand-cu12
+    Found existing installation: nvidia-curand-cu12 10.3.5.119
+    Uninstalling nvidia-curand-cu12-10.3.5.119:
+      Successfully uninstalled nvidia-curand-cu12-10.3.5.119
+  Attempting uninstall: nvidia-cufft-cu12
+    Found existing installation: nvidia-cufft-cu12 11.2.0.44
+    Uninstalling nvidia-cufft-cu12-11.2.0.44:
+      Successfully uninstalled nvidia-cufft-cu12-11.2.0.44
+  Attempting uninstall: nvidia-cuda-runtime-cu12
+    Found existing installation: nvidia-cuda-runtime-cu12 12.4.99
+    Uninstalling nvidia-cuda-runtime-cu12-12.4.99:
+      Successfully uninstalled nvidia-cuda-runtime-cu12-12.4.99
+  Attempting uninstall: nvidia-cuda-nvrtc-cu12
+    Found existing installation: nvidia-cuda-nvrtc-cu12 12.4.99
+    Uninstalling nvidia-cuda-nvrtc-cu12-12.4.99:
+      Successfully uninstalled nvidia-cuda-nvrtc-cu12-12.4.99
+  Attempting uninstall: nvidia-cuda-cupti-cu12
+    Found existing installation: nvidia-cuda-cupti-cu12 12.4.99
+    Uninstalling nvidia-cuda-cupti-cu12-12.4.99:
+      Successfully uninstalled nvidia-cuda-cupti-cu12-12.4.99
+  Attempting uninstall: nvidia-cublas-cu12
+    Found existing installation: nvidia-cublas-cu12 12.4.2.65
+    Uninstalling nvidia-cublas-cu12-12.4.2.65:
+      Successfully uninstalled nvidia-cublas-cu12-12.4.2.65
+  Attempting uninstall: nvidia-cusparse-cu12
+    Found existing installation: nvidia-cusparse-cu12 12.3.0.142
+    Uninstalling nvidia-cusparse-cu12-12.3.0.142:
+      Successfully uninstalled nvidia-cusparse-cu12-12.3.0.142
+  Attempting uninstall: nvidia-cusolver-cu12
+    Found existing installation: nvidia-cusolver-cu12 11.6.0.99
+    Uninstalling nvidia-cusolver-cu12-11.6.0.99:
+      Successfully uninstalled nvidia-cusolver-cu12-11.6.0.99
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour i
+s the source of the following dependency conflicts.
+torchvision 0.19.1 requires torch==2.4.1, but you have torch 2.5.1 which is incompatible.
+xformers 0.0.28.post1 requires torch==2.4.1, but you have torch 2.5.1 which is incompatible.
+torchaudio 2.4.1+cu124 requires torch==2.4.1, but you have torch 2.5.1 which is incompatible.
+colossalai 0.4.0 requires torch<2.3.0,>=2.1.0, but you have torch 2.5.1 which is incompatible.
+colossalai 0.4.0 requires transformers==4.39.3, but you have transformers 4.44.0 which is incompatible.
+Successfully installed aiohappyeyeballs-2.4.3 aiohttp-3.11.8 lightning-2.4.0 lightning-utilities-0.11.9 multidict-6.1.0 nvi
+dia-cublas-cu12-12.4.5.8 nvidia-cuda-cupti-cu12-12.4.127 nvidia-cuda-nvrtc-cu12-12.4.127 nvidia-cuda-runtime-cu12-12.4.127
+nvidia-cufft-cu12-11.2.1.3 nvidia-curand-cu12-10.3.5.147 nvidia-cusolver-cu12-11.6.1.9 nvidia-cusparse-cu12-12.3.1.170 nvid
+ia-nccl-cu12-2.21.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.4.127 propcache-0.2.0 pytorch-lightning-2.4.0 sympy-
+1.13.1 torch-2.5.1 torchmetrics-1.6.0 triton-3.1.0 yarl-1.18.0
+(base) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ python nn_pl_lightning.py
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 8, in <module>
+    from sklearn.metrics import accuracy_score, cohen_kappa_score, f1_score, precision_score, recall_score, roc_auc_score,
+average_precision_score
+ModuleNotFoundError: No module named 'sklearn'
+(base) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ conda env list
+# conda environments:
+#
+base                  *  /data/yingzi_ma/miniconda3
+163                      /data/yingzi_ma/miniconda3/envs/163
+ReProver                 /data/yingzi_ma/miniconda3/envs/ReProver
+leanagent                /data/yingzi_ma/miniconda3/envs/leanagent
+leanagent-demo1          /data/yingzi_ma/miniconda3/envs/leanagent-demo1
+sam                      /data/yingzi_ma/miniconda3/envs/sam
+unlearned                /data/yingzi_ma/miniconda3/envs/unlearned
+
+(base) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ conda activate 163
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ python -m pip install lightning
+Collecting lightning
+  Using cached lightning-2.4.0-py3-none-any.whl.metadata (38 kB)
+Requirement already satisfied: PyYAML<8.0,>=5.4 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from l
+ightning) (6.0.2)
+Requirement already satisfied: fsspec<2026.0,>=2022.5.0 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages
+ (from fsspec[http]<2026.0,>=2022.5.0->lightning) (2024.10.0)
+Collecting lightning-utilities<2.0,>=0.10.0 (from lightning)
+  Using cached lightning_utilities-0.11.9-py3-none-any.whl.metadata (5.2 kB)
+Requirement already satisfied: packaging<25.0,>=20.0 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (f
+rom lightning) (24.2)
+Requirement already satisfied: torch<4.0,>=2.1.0 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from
+lightning) (2.5.1)
+Collecting torchmetrics<3.0,>=0.7.0 (from lightning)
+  Using cached torchmetrics-1.6.0-py3-none-any.whl.metadata (20 kB)
+Requirement already satisfied: tqdm<6.0,>=4.57.0 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from
+lightning) (4.67.0)
+Requirement already satisfied: typing-extensions<6.0,>=4.4.0 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-pac
+kages (from lightning) (4.12.2)
+Collecting pytorch-lightning (from lightning)
+  Using cached pytorch_lightning-2.4.0-py3-none-any.whl.metadata (21 kB)
+Collecting aiohttp!=4.0.0a0,!=4.0.0a1 (from fsspec[http]<2026.0,>=2022.5.0->lightning)
+  Downloading aiohttp-3.11.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Requirement already satisfied: setuptools in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from lightni
+ng-utilities<2.0,>=0.10.0->lightning) (75.1.0)
+Requirement already satisfied: filelock in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from torch<4.0
+,>=2.1.0->lightning) (3.16.1)
+Requirement already satisfied: networkx in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from torch<4.0
+,>=2.1.0->lightning) (3.4.2)
+Requirement already satisfied: jinja2 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from torch<4.0,>
+=2.1.0->lightning) (3.1.4)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.4.127 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-
+packages (from torch<4.0,>=2.1.0->lightning) (12.4.127)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.4.127 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/sit
+e-packages (from torch<4.0,>=2.1.0->lightning) (12.4.127)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.4.127 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-
+packages (from torch<4.0,>=2.1.0->lightning) (12.4.127)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packa
+ges (from torch<4.0,>=2.1.0->lightning) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.4.5.8 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-pack
+ages (from torch<4.0,>=2.1.0->lightning) (12.4.5.8)
+Requirement already satisfied: nvidia-cufft-cu12==11.2.1.3 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packa
+ges (from torch<4.0,>=2.1.0->lightning) (11.2.1.3)
+Requirement already satisfied: nvidia-curand-cu12==10.3.5.147 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-pa
+ckages (from torch<4.0,>=2.1.0->lightning) (10.3.5.147)
+Requirement already satisfied: nvidia-cusolver-cu12==11.6.1.9 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-pa
+ckages (from torch<4.0,>=2.1.0->lightning) (11.6.1.9)
+Requirement already satisfied: nvidia-cusparse-cu12==12.3.1.170 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-
+packages (from torch<4.0,>=2.1.0->lightning) (12.3.1.170)
+Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages
+ (from torch<4.0,>=2.1.0->lightning) (2.21.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.4.127 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packag
+es (from torch<4.0,>=2.1.0->lightning) (12.4.127)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.4.127 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-p
+ackages (from torch<4.0,>=2.1.0->lightning) (12.4.127)
+Requirement already satisfied: triton==3.1.0 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from torc
+h<4.0,>=2.1.0->lightning) (3.1.0)
+Requirement already satisfied: sympy==1.13.1 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from torc
+h<4.0,>=2.1.0->lightning) (1.13.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from
+ sympy==1.13.1->torch<4.0,>=2.1.0->lightning) (1.3.0)
+Requirement already satisfied: numpy>1.20.0 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from torch
+metrics<3.0,>=0.7.0->lightning) (2.1.3)
+Collecting aiohappyeyeballs>=2.3.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2026.0,>=2022.5.0->lightning)
+  Using cached aiohappyeyeballs-2.4.3-py3-none-any.whl.metadata (6.1 kB)
+Collecting aiosignal>=1.1.2 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2026.0,>=2022.5.0->lightning)
+  Using cached aiosignal-1.3.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting attrs>=17.3.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2026.0,>=2022.5.0->lightning)
+  Using cached attrs-24.2.0-py3-none-any.whl.metadata (11 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2026.0,>=2022.5.0->lightning)
+  Downloading frozenlist-1.5.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_6
+4.whl.metadata (13 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2026.0,>=2022.5.0->lightning)
+  Using cached multidict-6.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+Collecting propcache>=0.2.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2026.0,>=2022.5.0->lightning)
+  Downloading propcache-0.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2026.0,>=2022.5.0->lightning)
+  Downloading yarl-1.18.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (67 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from ji
+nja2->torch<4.0,>=2.1.0->lightning) (3.0.2)
+Requirement already satisfied: idna>=2.0 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from yarl<2.0
+,>=1.17.0->aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2026.0,>=2022.5.0->lightning) (3.10)
+Using cached lightning-2.4.0-py3-none-any.whl (810 kB)
+Using cached lightning_utilities-0.11.9-py3-none-any.whl (28 kB)
+Using cached torchmetrics-1.6.0-py3-none-any.whl (926 kB)
+Using cached pytorch_lightning-2.4.0-py3-none-any.whl (815 kB)
+Downloading aiohttp-3.11.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 73.2 MB/s eta 0:00:00
+Using cached aiohappyeyeballs-2.4.3-py3-none-any.whl (14 kB)
+Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Using cached attrs-24.2.0-py3-none-any.whl (63 kB)
+Downloading frozenlist-1.5.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.
+whl (274 kB)
+Using cached multidict-6.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (129 kB)
+Downloading propcache-0.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (236 kB)
+Downloading yarl-1.18.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (343 kB)
+Installing collected packages: propcache, multidict, lightning-utilities, frozenlist, attrs, aiohappyeyeballs, yarl, aiosig
+nal, aiohttp, torchmetrics, pytorch-lightning, lightning
+Successfully installed aiohappyeyeballs-2.4.3 aiohttp-3.11.8 aiosignal-1.3.1 attrs-24.2.0 frozenlist-1.5.0 lightning-2.4.0
+lightning-utilities-0.11.9 multidict-6.1.0 propcache-0.2.0 pytorch-lightning-2.4.0 torchmetrics-1.6.0 yarl-1.18.0
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ python nn_pl_lightning.py
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 79, in <module>
+    logger = TensorBoardLogger("lightning_logs/")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/loggers/tensorboard.py", line 96
+, in __init__
+    super().__init__(
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/lightning_fabric/loggers/tensorboard.py", line 92,
+ in __init__
+    raise ModuleNotFoundError(
+ModuleNotFoundError: Neither `tensorboard` nor `tensorboardX` is available. Try `pip install`ing either.
+Requirement 'tensorboardX' not met. HINT: Try running `pip install -U 'tensorboardX'`
+Requirement 'tensorboard' not met. HINT: Try running `pip install -U 'tensorboard'`
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ pip install -U 'tensorboardX
+> ^C
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ pip install -U 'tensorboardX'
+Collecting tensorboardX
+  Downloading tensorboardX-2.6.2.2-py2.py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: numpy in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from tensorboardX
+) (2.1.3)
+Requirement already satisfied: packaging in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from tensorbo
+ardX) (24.2)
+Requirement already satisfied: protobuf>=3.20 in /data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages (from ten
+sorboardX) (5.28.3)
+Downloading tensorboardX-2.6.2.2-py2.py3-none-any.whl (101 kB)
+Installing collected packages: tensorboardX
+Successfully installed tensorboardX-2.6.2.2
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ python nn_pl_lightning.py
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 316, in <module>
+    def load_and_process_csv(filename: str) -> Tuple[np.ndarray, np.ndarray]:
+                                               ^^^^^
+NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ python nn_pl_lightning.py
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 988, in <module>
+    main()
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 975, in main
+    setup_environment()
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 931, in setup_environment
+    os.makedirs(BASE_RESULTS_FOLDER, exist_ok=True)
+    ^^
+NameError: name 'os' is not defined
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ python nn_pl_lightning.py
+DEBUG mode enabled
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 989, in <module>
+    main()
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 977, in main
+    indices, pop_fr = load_and_process_csv(f"{ANNOTATION_PATH}/normalized_neuron_firing_final.csv")
+                                              ^^^^^^^^^^^^^^^
+NameError: name 'ANNOTATION_PATH' is not defined
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ python nn_pl_lightning.py
+DEBUG mode enabled
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 990, in <module>
+    main()
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 978, in main
+    indices, pop_fr = load_and_process_csv(f"{ANNOTATION_PATH}/normalized_neuron_firing_final.csv")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 322, in load_and_process_csv
+    df = pd.read_csv(filename)
+         ^^
+NameError: name 'pd' is not defined. Did you mean: 'pl'?
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ python nn_pl_lightning.py
+DEBUG mode enabled
+First few entries in 'Neuron Firing' column:
+0    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+1    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+2    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+3    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+4    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+Name: Neuron Firing, dtype: object
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 991, in <module>
+    main()
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 979, in main
+    indices, pop_fr = load_and_process_csv(f"{ANNOTATION_PATH}/normalized_neuron_firing_final.csv")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 335, in load_and_process_csv
+    vectors.append(np.array(ast.literal_eval(vec), dtype=np.float32))
+                            ^^^
+NameError: name 'ast' is not defined
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ python nn_pl_lightning.py
+DEBUG mode enabled
+First few entries in 'Neuron Firing' column:
+0    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+1    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+2    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+3    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+4    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+Name: Neuron Firing, dtype: object
+Loaded 11971 indices and 11971 population firing rates
+
+Processing man_binary...
+
+Processing with split type: blocked
+Vector type: man_binary
+Output vector shape: (11971, 1)
+Number of positive samples: 5230.0
+Population firing rate shape: (11971, 1457)
+
+Training model with split_type blocked, block size = 500
+Blocking split 1/5
+Train set shape: (8000, 1457)
+Validation set shape: (1500, 1457)
+Test set shape: (2000, 1457)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `s
+run` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend you
+r python command with `srun` like so: srun python nn_pl_lightning.py ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA A100-SXM4-80GB') that has Tensor Cores. To properly utilize them, you should set `torc
+h.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read h
+ttps://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+
+  | Name      | Type    | Params | Mode
+----------------------------------------------
+0 | fc1       | Linear  | 46.7 K | train
+1 | fc2       | Linear  | 528    | train
+2 | fc3       | Linear  | 136    | train
+3 | fc4       | Linear  | 9      | train
+4 | relu      | ReLU    | 0      | train
+5 | dropout   | Dropout | 0      | train
+6 | sigmoid   | Sigmoid | 0      | train
+7 | criterion | BCELoss | 0      | train
+----------------------------------------------
+47.3 K    Trainable params
+0         Non-trainable params
+47.3 K    Total params
+0.189     Total estimated model params size (MB)
+8         Modules in train mode
+0         Modules in eval mode
+Sanity Checking: |                                                                                   | 0/? [00:00<?, ?it/s]
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:424
+: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_work
+ers` argument` to `num_workers=7` in the `DataLoader` to improve performance.
+Sanity Checking DataLoader 0:  50%|█████████████████████████████                             | 1/2 [00:00<00:00,  6.97it/s]
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:424
+: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_wo
+rkers` argument` to `num_workers=7` in the `DataLoader` to improve performance.
+Epoch 0:   0%|                                                                                     | 0/544 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 992, in <module>
+    main()
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 986, in main
+    process_single_vector(items, indices, pop_fr)
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 962, in process_single_vector
+    process_block_size(
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 880, in process_block_size
+    avg_metrics, std_metrics = multi_split_validation(
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 737, in multi_split_validation
+    metrics = single_split_validation(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 713, in single_split_validation
+    model, trainer, metrics = train_lightning_model(
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 268, in train_lightning_model
+    trainer.fit(model, data_module)
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 538, i
+n fit
+    call._call_and_handle_interrupt(
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/trainer/call.py", line 47, in _c
+all_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 574, i
+n _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 981, i
+n _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 1025,
+in _run_stage
+    self.fit_loop.run()
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/loops/fit_loop.py", line 205, in
+ run
+    self.advance()
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/loops/fit_loop.py", line 363, in
+ advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/loops/training_epoch_loop.py", l
+ine 140, in run
+    self.advance(data_fetcher)
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/loops/training_epoch_loop.py", l
+ine 250, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/loops/optimization/automatic.py"
+, line 190, in run
+    self._optimizer_step(batch_idx, closure)
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/loops/optimization/automatic.py"
+, line 268, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/trainer/call.py", line 167, in _
+call_lightning_module_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/core/module.py", line 1306, in o
+ptimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/core/optimizer.py", line 153, in
+ step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/strategies/strategy.py", line 23
+8, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/plugins/precision/precision.py",
+ line 122, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/torch/optim/optimizer.py", line 487, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/torch/optim/adam.py", line 202, in step
+    loss = closure()
+           ^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/plugins/precision/precision.py",
+ line 108, in _wrap_closure
+    closure_result = closure()
+                     ^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/loops/optimization/automatic.py"
+, line 144, in __call__
+    self._result = self.closure(*args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate
+_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/loops/optimization/automatic.py"
+, line 129, in closure
+    step_output = self._step_fn()
+                  ^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/loops/optimization/automatic.py"
+, line 317, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/trainer/call.py", line 319, in _
+call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/strategies/strategy.py", line 39
+0, in training_step
+    return self.lightning_module.training_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 117, in training_step
+    metrics = self._calculate_metrics(y_hat, y, "train")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/yingzi_ma/lean_project/cs163-2024-neural-decoding/nn_pl_lightning.py", line 140, in _calculate_metrics
+    y_prob = y_hat.cpu().numpy()
+             ^^^^^^^^^^^^^^^^^^^
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Epoch 0:   0%|          | 0/544 [00:00<?, ?it/s]
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$ python nn_pl_lightning.py
+DEBUG mode enabled
+First few entries in 'Neuron Firing' column:
+0    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+1    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+2    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+3    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+4    [0.0, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, ...
+Name: Neuron Firing, dtype: object
+Loaded 11971 indices and 11971 population firing rates
+
+Processing man_binary...
+
+Processing with split type: blocked
+Vector type: man_binary
+Output vector shape: (11971, 1)
+Number of positive samples: 5230.0
+Population firing rate shape: (11971, 1457)
+
+Training model with split_type blocked, block size = 500
+Blocking split 1/5
+Train set shape: (8000, 1457)
+Validation set shape: (1500, 1457)
+Test set shape: (2000, 1457)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `s
+run` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend you
+r python command with `srun` like so: srun python nn_pl_lightning.py ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA A100-SXM4-80GB') that has Tensor Cores. To properly utilize them, you should set `torc
+h.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read h
+ttps://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+
+  | Name      | Type    | Params | Mode
+----------------------------------------------
+0 | fc1       | Linear  | 46.7 K | train
+1 | fc2       | Linear  | 528    | train
+2 | fc3       | Linear  | 136    | train
+3 | fc4       | Linear  | 9      | train
+4 | relu      | ReLU    | 0      | train
+5 | dropout   | Dropout | 0      | train
+6 | sigmoid   | Sigmoid | 0      | train
+7 | criterion | BCELoss | 0      | train
+----------------------------------------------
+47.3 K    Trainable params
+0         Non-trainable params
+47.3 K    Total params
+0.189     Total estimated model params size (MB)
+8         Modules in train mode
+0         Modules in eval mode
+Sanity Checking: |                                                                                   | 0/? [00:00<?, ?it/s]
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:424
+: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_work
+ers` argument` to `num_workers=7` in the `DataLoader` to improve performance.
+Sanity Checking DataLoader 0:  50%|█████████████████████████████                             | 1/2 [00:00<00:00, 11.74it/s]
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:424
+: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_wo
+rkers` argument` to `num_workers=7` in the `DataLoader` to improve performance.
+Epoch 0: 100%|█| 544/544 [00:05<00:00, 94.36it/s, v_num=1, train_accuracy=0.875, train_kappa=0.750, train_f1=0.889, train_/
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control t
+his behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control t
+his behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control t
+his behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control t
+his behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control t
+his behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          N
+aN or Inf found in input tensor.██████████████████████████████████████████████████████████| 94/94 [00:00<00:00, 121.09it/s]
+Epoch 0: 100%|█| 544/544 [00:06<00:00, 83.11it/s, v_num=1, train_accuracy=0.875, train_kappa=0.750, train_f1=0.889, train_p
+Metric val_accuracy improved. New best score: 0.726
+Epoch 1: 100%|█| 544/544 [00:05<00:00, 95.44it/s, v_num=1, train_accuracy=0.938, train_kappa=0.875, train_f1=0.933, train_/
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control t
+his behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control t
+his behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control t
+his behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control t
+his behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWar
+ning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beha
+vior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          /
+data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A sing
+le label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter
+ to pass all known labels.
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:730: RuntimeWarning: in
+valid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to c
+ontrol this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control
+this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/data/yingzi_ma/miniconda3/envs/163/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWa
+rning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this beh
+avior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+                                                                                                                          N
+aN or Inf found in input tensor.██████████████████████████████████████████████████████████| 94/94 [00:00<00:00, 123.00it/s]
+Epoch 2:  52%|▌| 281/544 [00:02<00:02, 95.77it/s, v_num=1, train_accuracy=0.875, train_kappa=0.750, train_f1=0.857, train_p
+^Z
+[1]+  Stopped                 python nn_pl_lightning.py
+(163) yingzi_ma@compute-permanent-node-326:~/lean_project/cs163-2024-neural-decoding$

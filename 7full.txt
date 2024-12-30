@@ -1,0 +1,1504 @@
+ntion.v.weight:
+2024-09-16 22:35:22.518 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000145 (mean)
+2024-09-16 22:35:22.518 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000149 (mean)
+2024-09-16 22:35:22.520 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.520 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.521 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000568 (mean)
+2024-09-16 22:35:22.521 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000573 (mean)
+2024-09-16 22:35:22.523 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.523 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight:
+2024-09-16 22:35:22.523 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.497663 (mean)
+2024-09-16 22:35:22.523 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.499368 (mean)
+2024-09-16 22:35:22.525 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.525 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.525 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.019886 (mean)
+2024-09-16 22:35:22.526 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.019873 (mean)
+2024-09-16 22:35:22.527 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.528 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.529 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000334 (mean)
+2024-09-16 22:35:22.529 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000334 (mean)
+2024-09-16 22:35:22.530 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.530 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.532 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000231 (mean)
+2024-09-16 22:35:22.532 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000232 (mean)
+2024-09-16 22:35:22.532 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.533 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.534 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000099 (mean)
+2024-09-16 22:35:22.534 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000101 (mean)
+2024-09-16 22:35:22.535 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.535 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.535 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.041111 (mean)
+2024-09-16 22:35:22.535 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.041356 (mean)
+2024-09-16 22:35:22.537 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.537 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.538 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000022 (mean)
+2024-09-16 22:35:22.538 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000017 (mean)
+2024-09-16 22:35:22.540 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.540 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.540 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000387 (mean)
+2024-09-16 22:35:22.540 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000385 (mean)
+2024-09-16 22:35:22.542 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.542 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.542 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000181 (mean)
+2024-09-16 22:35:22.543 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000179 (mean)
+2024-09-16 22:35:22.544 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.545 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.545 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000946 (mean)
+2024-09-16 22:35:22.545 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000952 (mean)
+2024-09-16 22:35:22.547 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.547 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.547 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.042615 (mean)
+2024-09-16 22:35:22.548 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.042658 (mean)
+2024-09-16 22:35:22.549 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.549 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.550 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000595 (mean)
+2024-09-16 22:35:22.551 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000595 (mean)
+2024-09-16 22:35:22.552 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.552 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.553 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000008 (mean)
+2024-09-16 22:35:22.553 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000007 (mean)
+2024-09-16 22:35:22.554 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.554 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.555 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000034 (mean)
+2024-09-16 22:35:22.556 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000033 (mean)
+2024-09-16 22:35:22.557 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.557 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.557 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.067624 (mean)
+2024-09-16 22:35:22.557 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.068245 (mean)
+2024-09-16 22:35:22.559 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.559 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.559 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000111 (mean)
+2024-09-16 22:35:22.560 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000116 (mean)
+2024-09-16 22:35:22.561 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.562 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.562 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000601 (mean)
+2024-09-16 22:35:22.562 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000602 (mean)
+2024-09-16 22:35:22.564 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.564 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.564 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000447 (mean)
+2024-09-16 22:35:22.565 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000453 (mean)
+2024-09-16 22:35:22.566 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.566 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.567 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.001340 (mean)
+2024-09-16 22:35:22.567 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.001336 (mean)
+2024-09-16 22:35:22.569 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.569 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.569 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.056152 (mean)
+2024-09-16 22:35:22.569 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.056245 (mean)
+2024-09-16 22:35:22.571 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.571 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.572 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000191 (mean)
+2024-09-16 22:35:22.573 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000190 (mean)
+2024-09-16 22:35:22.574 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.574 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.575 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000132 (mean)
+2024-09-16 22:35:22.575 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000131 (mean)
+2024-09-16 22:35:22.576 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.576 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.577 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000089 (mean)
+2024-09-16 22:35:22.577 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000086 (mean)
+2024-09-16 22:35:22.578 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.579 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.579 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.086453 (mean)
+2024-09-16 22:35:22.579 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.086850 (mean)
+2024-09-16 22:35:22.581 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.581 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.581 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000134 (mean)
+2024-09-16 22:35:22.582 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000125 (mean)
+2024-09-16 22:35:22.583 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.583 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.584 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000483 (mean)
+2024-09-16 22:35:22.584 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000487 (mean)
+2024-09-16 22:35:22.586 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.586 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.586 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000247 (mean)
+2024-09-16 22:35:22.586 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000247 (mean)
+2024-09-16 22:35:22.588 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.588 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.589 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000046 (mean)
+2024-09-16 22:35:22.589 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000040 (mean)
+2024-09-16 22:35:22.591 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.591 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.591 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.061639 (mean)
+2024-09-16 22:35:22.591 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.061875 (mean)
+2024-09-16 22:35:22.593 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.593 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.594 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000071 (mean)
+2024-09-16 22:35:22.594 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000070 (mean)
+2024-09-16 22:35:22.595 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.596 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.597 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000115 (mean)
+2024-09-16 22:35:22.597 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000115 (mean)
+2024-09-16 22:35:22.598 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.598 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.599 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000056 (mean)
+2024-09-16 22:35:22.599 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000056 (mean)
+2024-09-16 22:35:22.600 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.600 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.601 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.097535 (mean)
+2024-09-16 22:35:22.601 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.097991 (mean)
+2024-09-16 22:35:22.603 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.603 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.603 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000059 (mean)
+2024-09-16 22:35:22.603 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000058 (mean)
+2024-09-16 22:35:22.605 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.605 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.606 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000187 (mean)
+2024-09-16 22:35:22.606 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000190 (mean)
+2024-09-16 22:35:22.608 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.608 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.608 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000070 (mean)
+2024-09-16 22:35:22.608 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000077 (mean)
+2024-09-16 22:35:22.610 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.610 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.610 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000110 (mean)
+2024-09-16 22:35:22.611 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000103 (mean)
+2024-09-16 22:35:22.612 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.613 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.613 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.071677 (mean)
+2024-09-16 22:35:22.613 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.071732 (mean)
+2024-09-16 22:35:22.615 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.615 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.616 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000056 (mean)
+2024-09-16 22:35:22.616 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000056 (mean)
+2024-09-16 22:35:22.617 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.617 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.618 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000099 (mean)
+2024-09-16 22:35:22.619 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000097 (mean)
+2024-09-16 22:35:22.620 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.620 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.621 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000006 (mean)
+2024-09-16 22:35:22.621 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000008 (mean)
+2024-09-16 22:35:22.622 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.622 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.623 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.106172 (mean)
+2024-09-16 22:35:22.623 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.106691 (mean)
+2024-09-16 22:35:22.625 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.625 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.625 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000105 (mean)
+2024-09-16 22:35:22.625 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000101 (mean)
+2024-09-16 22:35:22.627 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.627 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.627 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000309 (mean)
+2024-09-16 22:35:22.628 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000310 (mean)
+2024-09-16 22:35:22.629 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.630 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.630 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000028 (mean)
+2024-09-16 22:35:22.630 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000033 (mean)
+2024-09-16 22:35:22.632 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.647 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.648 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000066 (mean)
+2024-09-16 22:35:22.648 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000059 (mean)
+2024-09-16 22:35:22.648 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.649 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.649 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.070540 (mean)
+2024-09-16 22:35:22.649 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.070528 (mean)
+2024-09-16 22:35:22.651 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.651 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.652 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000164 (mean)
+2024-09-16 22:35:22.652 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000164 (mean)
+2024-09-16 22:35:22.653 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.654 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.655 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000198 (mean)
+2024-09-16 22:35:22.655 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000198 (mean)
+2024-09-16 22:35:22.656 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.656 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.657 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000003 (mean)
+2024-09-16 22:35:22.657 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000004 (mean)
+2024-09-16 22:35:22.658 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.658 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.659 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.114061 (mean)
+2024-09-16 22:35:22.659 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.114530 (mean)
+2024-09-16 22:35:22.661 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.661 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.661 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000062 (mean)
+2024-09-16 22:35:22.661 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000067 (mean)
+2024-09-16 22:35:22.663 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.663 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.664 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000297 (mean)
+2024-09-16 22:35:22.664 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000301 (mean)
+2024-09-16 22:35:22.666 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.666 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.666 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000034 (mean)
+2024-09-16 22:35:22.666 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000031 (mean)
+2024-09-16 22:35:22.668 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.668 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.668 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000905 (mean)
+2024-09-16 22:35:22.669 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000903 (mean)
+2024-09-16 22:35:22.670 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.671 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.671 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.077462 (mean)
+2024-09-16 22:35:22.671 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.077744 (mean)
+2024-09-16 22:35:22.673 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.673 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.674 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000249 (mean)
+2024-09-16 22:35:22.674 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000249 (mean)
+2024-09-16 22:35:22.675 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.675 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.676 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000179 (mean)
+2024-09-16 22:35:22.677 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000178 (mean)
+2024-09-16 22:35:22.678 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.678 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.679 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000234 (mean)
+2024-09-16 22:35:22.679 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000234 (mean)
+2024-09-16 22:35:22.680 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.680 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.680 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.125038 (mean)
+2024-09-16 22:35:22.681 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.125667 (mean)
+2024-09-16 22:35:22.683 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.683 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.683 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000016 (mean)
+2024-09-16 22:35:22.683 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000013 (mean)
+2024-09-16 22:35:22.685 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.685 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.685 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000258 (mean)
+2024-09-16 22:35:22.686 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000255 (mean)
+2024-09-16 22:35:22.687 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.688 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.688 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000008 (mean)
+2024-09-16 22:35:22.688 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000009 (mean)
+2024-09-16 22:35:22.690 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.690 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.690 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000936 (mean)
+2024-09-16 22:35:22.690 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000935 (mean)
+2024-09-16 22:35:22.692 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.692 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.692 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.082340 (mean)
+2024-09-16 22:35:22.693 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.082584 (mean)
+2024-09-16 22:35:22.695 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.695 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.696 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000184 (mean)
+2024-09-16 22:35:22.696 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000185 (mean)
+2024-09-16 22:35:22.697 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.697 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.698 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000190 (mean)
+2024-09-16 22:35:22.698 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000189 (mean)
+2024-09-16 22:35:22.699 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.700 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.701 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000193 (mean)
+2024-09-16 22:35:22.701 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000195 (mean)
+2024-09-16 22:35:22.702 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.702 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.702 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.128918 (mean)
+2024-09-16 22:35:22.702 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.129646 (mean)
+2024-09-16 22:35:22.704 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.705 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.705 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000028 (mean)
+2024-09-16 22:35:22.705 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000023 (mean)
+2024-09-16 22:35:22.707 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.707 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.707 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000059 (mean)
+2024-09-16 22:35:22.708 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000063 (mean)
+2024-09-16 22:35:22.709 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.709 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.710 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000277 (mean)
+2024-09-16 22:35:22.710 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000274 (mean)
+2024-09-16 22:35:22.712 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.712 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.712 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000159 (mean)
+2024-09-16 22:35:22.712 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000160 (mean)
+2024-09-16 22:35:22.714 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.714 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.714 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.113156 (mean)
+2024-09-16 22:35:22.714 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.113425 (mean)
+2024-09-16 22:35:22.716 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.717 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.717 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000268 (mean)
+2024-09-16 22:35:22.718 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000265 (mean)
+2024-09-16 22:35:22.719 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.719 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.720 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000116 (mean)
+2024-09-16 22:35:22.720 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000116 (mean)
+2024-09-16 22:35:22.721 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.721 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.722 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000087 (mean)
+2024-09-16 22:35:22.722 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000085 (mean)
+2024-09-16 22:35:22.724 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.724 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.724 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.157446 (mean)
+2024-09-16 22:35:22.724 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.158160 (mean)
+2024-09-16 22:35:22.726 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.726 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.726 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000006 (mean)
+2024-09-16 22:35:22.727 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000010 (mean)
+2024-09-16 22:35:22.729 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.729 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.729 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000116 (mean)
+2024-09-16 22:35:22.729 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000117 (mean)
+2024-09-16 22:35:22.731 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.731 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.731 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000031 (mean)
+2024-09-16 22:35:22.731 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000032 (mean)
+2024-09-16 22:35:22.733 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.734 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.734 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.001805 (mean)
+2024-09-16 22:35:22.734 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.001804 (mean)
+2024-09-16 22:35:22.736 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.736 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.736 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.104508 (mean)
+2024-09-16 22:35:22.736 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.104718 (mean)
+2024-09-16 22:35:22.738 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.738 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.739 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000424 (mean)
+2024-09-16 22:35:22.740 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000424 (mean)
+2024-09-16 22:35:22.741 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.741 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.742 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000008 (mean)
+2024-09-16 22:35:22.742 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000009 (mean)
+2024-09-16 22:35:22.743 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.743 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.744 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000050 (mean)
+2024-09-16 22:35:22.744 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000050 (mean)
+2024-09-16 22:35:22.746 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.746 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.746 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.197396 (mean)
+2024-09-16 22:35:22.746 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.198198 (mean)
+2024-09-16 22:35:22.748 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.748 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.748 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000055 (mean)
+2024-09-16 22:35:22.748 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000057 (mean)
+2024-09-16 22:35:22.750 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.750 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.751 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000076 (mean)
+2024-09-16 22:35:22.751 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000074 (mean)
+2024-09-16 22:35:22.753 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.753 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.753 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000560 (mean)
+2024-09-16 22:35:22.753 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000565 (mean)
+2024-09-16 22:35:22.755 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.755 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.756 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000939 (mean)
+2024-09-16 22:35:22.756 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000942 (mean)
+2024-09-16 22:35:22.758 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.758 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.758 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.125742 (mean)
+2024-09-16 22:35:22.758 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.125970 (mean)
+2024-09-16 22:35:22.760 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.760 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.761 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000245 (mean)
+2024-09-16 22:35:22.761 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000246 (mean)
+2024-09-16 22:35:22.762 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.763 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.764 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000172 (mean)
+2024-09-16 22:35:22.764 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000170 (mean)
+2024-09-16 22:35:22.765 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.765 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.766 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000124 (mean)
+2024-09-16 22:35:22.766 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000123 (mean)
+2024-09-16 22:35:22.767 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.767 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.768 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.253282 (mean)
+2024-09-16 22:35:22.768 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.253029 (mean)
+2024-09-16 22:35:22.770 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.770 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.770 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000108 (mean)
+2024-09-16 22:35:22.770 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000111 (mean)
+2024-09-16 22:35:22.772 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.772 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.773 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000072 (mean)
+2024-09-16 22:35:22.773 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000070 (mean)
+2024-09-16 22:35:22.775 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.775 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.775 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000416 (mean)
+2024-09-16 22:35:22.775 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000426 (mean)
+2024-09-16 22:35:22.777 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.777 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.777 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000342 (mean)
+2024-09-16 22:35:22.778 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000347 (mean)
+2024-09-16 22:35:22.779 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.780 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.780 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.135115 (mean)
+2024-09-16 22:35:22.780 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.135469 (mean)
+2024-09-16 22:35:22.782 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.782 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.783 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000654 (mean)
+2024-09-16 22:35:22.783 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000649 (mean)
+2024-09-16 22:35:22.784 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.784 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.785 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000141 (mean)
+2024-09-16 22:35:22.786 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000142 (mean)
+2024-09-16 22:35:22.787 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.787 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.788 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000018 (mean)
+2024-09-16 22:35:22.788 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000018 (mean)
+2024-09-16 22:35:22.789 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.789 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.789 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.430620 (mean)
+2024-09-16 22:35:22.790 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.427517 (mean)
+2024-09-16 22:35:22.792 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.792 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.final_layer_norm.weight:
+2024-09-16 22:35:22.792 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.113507 (mean)
+2024-09-16 22:35:22.792 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.113505 (mean)
+2024-09-16 22:35:22.794 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.794 | INFO     | __main__:main:1547 - hit the barrier after training
+2024-09-16 22:35:22.796 | INFO     | retrieval.model_ewc:on_fit_end:265 - End of training. Logging final EWC components:
+2024-09-16 22:35:22.796 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.shared.weight:
+2024-09-16 22:35:22.796 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.008320 (mean)
+2024-09-16 22:35:22.797 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.008324 (mean)
+2024-09-16 22:35:22.797 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.797 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.798 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000076 (mean)
+2024-09-16 22:35:22.798 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000080 (mean)
+2024-09-16 22:35:22.800 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.800 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.800 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000201 (mean)
+2024-09-16 22:35:22.800 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000201 (mean)
+2024-09-16 22:35:22.802 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.802 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.802 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000145 (mean)
+2024-09-16 22:35:22.803 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000149 (mean)
+2024-09-16 22:35:22.804 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.805 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.805 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000568 (mean)
+2024-09-16 22:35:22.805 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000573 (mean)
+2024-09-16 22:35:22.807 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.807 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight:
+2024-09-16 22:35:22.807 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.497663 (mean)
+2024-09-16 22:35:22.807 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.499368 (mean)
+2024-09-16 22:35:22.809 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.809 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.809 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.019886 (mean)
+2024-09-16 22:35:22.810 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.019873 (mean)
+2024-09-16 22:35:22.812 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.812 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.813 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000334 (mean)
+2024-09-16 22:35:22.813 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000334 (mean)
+2024-09-16 22:35:22.814 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.814 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.815 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000231 (mean)
+2024-09-16 22:35:22.815 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000232 (mean)
+2024-09-16 22:35:22.816 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.817 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.818 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000099 (mean)
+2024-09-16 22:35:22.818 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000101 (mean)
+2024-09-16 22:35:22.819 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.819 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.819 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.041111 (mean)
+2024-09-16 22:35:22.819 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.041356 (mean)
+2024-09-16 22:35:22.821 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.821 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.822 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000022 (mean)
+2024-09-16 22:35:22.822 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000017 (mean)
+2024-09-16 22:35:22.824 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.824 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.824 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000387 (mean)
+2024-09-16 22:35:22.824 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000385 (mean)
+2024-09-16 22:35:22.826 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.826 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.827 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000181 (mean)
+2024-09-16 22:35:22.827 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000179 (mean)
+2024-09-16 22:35:22.829 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.829 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.829 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000946 (mean)
+2024-09-16 22:35:22.829 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000952 (mean)
+2024-09-16 22:35:22.831 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.831 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.831 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.042615 (mean)
+2024-09-16 22:35:22.832 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.042658 (mean)
+2024-09-16 22:35:22.833 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.834 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.835 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000595 (mean)
+2024-09-16 22:35:22.835 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000595 (mean)
+2024-09-16 22:35:22.836 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.836 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.837 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000008 (mean)
+2024-09-16 22:35:22.837 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000007 (mean)
+2024-09-16 22:35:22.838 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.838 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.839 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000034 (mean)
+2024-09-16 22:35:22.840 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000033 (mean)
+2024-09-16 22:35:22.841 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.841 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.841 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.067624 (mean)
+2024-09-16 22:35:22.841 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.068245 (mean)
+2024-09-16 22:35:22.843 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.843 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.844 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000111 (mean)
+2024-09-16 22:35:22.844 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000116 (mean)
+2024-09-16 22:35:22.846 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.846 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.846 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000601 (mean)
+2024-09-16 22:35:22.846 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000602 (mean)
+2024-09-16 22:35:22.848 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.848 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.848 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000447 (mean)
+2024-09-16 22:35:22.849 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000453 (mean)
+2024-09-16 22:35:22.850 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.851 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.851 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.001340 (mean)
+2024-09-16 22:35:22.851 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.001336 (mean)
+2024-09-16 22:35:22.853 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.853 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.853 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.056152 (mean)
+2024-09-16 22:35:22.853 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.056245 (mean)
+2024-09-16 22:35:22.855 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.855 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.856 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000191 (mean)
+2024-09-16 22:35:22.857 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000190 (mean)
+2024-09-16 22:35:22.858 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.858 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.859 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000132 (mean)
+2024-09-16 22:35:22.859 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000131 (mean)
+2024-09-16 22:35:22.860 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.860 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.861 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000089 (mean)
+2024-09-16 22:35:22.861 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000086 (mean)
+2024-09-16 22:35:22.863 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.863 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.863 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.086453 (mean)
+2024-09-16 22:35:22.863 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.086850 (mean)
+2024-09-16 22:35:22.865 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.865 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.865 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000134 (mean)
+2024-09-16 22:35:22.866 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000125 (mean)
+2024-09-16 22:35:22.867 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.867 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.868 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000483 (mean)
+2024-09-16 22:35:22.868 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000487 (mean)
+2024-09-16 22:35:22.870 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.870 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.870 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000247 (mean)
+2024-09-16 22:35:22.870 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000247 (mean)
+2024-09-16 22:35:22.872 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.872 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.873 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000046 (mean)
+2024-09-16 22:35:22.873 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000040 (mean)
+2024-09-16 22:35:22.875 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.875 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.875 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.061639 (mean)
+2024-09-16 22:35:22.875 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.061875 (mean)
+2024-09-16 22:35:22.877 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.877 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.878 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000071 (mean)
+2024-09-16 22:35:22.878 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000070 (mean)
+2024-09-16 22:35:22.879 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.880 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.881 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000115 (mean)
+2024-09-16 22:35:22.881 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000115 (mean)
+2024-09-16 22:35:22.882 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.882 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.883 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000056 (mean)
+2024-09-16 22:35:22.883 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000056 (mean)
+2024-09-16 22:35:22.884 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.884 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.885 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.097535 (mean)
+2024-09-16 22:35:22.885 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.097991 (mean)
+2024-09-16 22:35:22.887 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.887 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.887 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000059 (mean)
+2024-09-16 22:35:22.887 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000058 (mean)
+2024-09-16 22:35:22.889 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.889 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.889 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000187 (mean)
+2024-09-16 22:35:22.890 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000190 (mean)
+2024-09-16 22:35:22.892 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.892 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.892 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000070 (mean)
+2024-09-16 22:35:22.892 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000077 (mean)
+2024-09-16 22:35:22.894 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.894 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.894 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000110 (mean)
+2024-09-16 22:35:22.894 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000103 (mean)
+2024-09-16 22:35:22.896 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.897 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.897 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.071677 (mean)
+2024-09-16 22:35:22.897 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.071732 (mean)
+2024-09-16 22:35:22.899 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.899 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.900 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000056 (mean)
+2024-09-16 22:35:22.900 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000056 (mean)
+2024-09-16 22:35:22.901 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.901 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.902 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000099 (mean)
+2024-09-16 22:35:22.902 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000097 (mean)
+2024-09-16 22:35:22.904 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.904 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.905 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000006 (mean)
+2024-09-16 22:35:22.905 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000008 (mean)
+2024-09-16 22:35:22.906 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.906 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.906 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.106172 (mean)
+2024-09-16 22:35:22.906 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.106691 (mean)
+2024-09-16 22:35:22.909 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.909 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.909 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000105 (mean)
+2024-09-16 22:35:22.909 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000101 (mean)
+2024-09-16 22:35:22.911 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.911 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.911 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000309 (mean)
+2024-09-16 22:35:22.911 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000310 (mean)
+2024-09-16 22:35:22.913 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.913 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.914 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000028 (mean)
+2024-09-16 22:35:22.914 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000033 (mean)
+2024-09-16 22:35:22.916 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.916 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.916 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000066 (mean)
+2024-09-16 22:35:22.916 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000059 (mean)
+2024-09-16 22:35:22.918 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.918 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.918 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.070540 (mean)
+2024-09-16 22:35:22.919 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.070528 (mean)
+2024-09-16 22:35:22.921 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.921 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.922 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000164 (mean)
+2024-09-16 22:35:22.922 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000164 (mean)
+2024-09-16 22:35:22.923 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.923 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.924 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000198 (mean)
+2024-09-16 22:35:22.924 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000198 (mean)
+2024-09-16 22:35:22.926 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.926 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.927 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000003 (mean)
+2024-09-16 22:35:22.927 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000004 (mean)
+2024-09-16 22:35:22.928 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.928 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.928 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.114061 (mean)
+2024-09-16 22:35:22.928 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.114530 (mean)
+2024-09-16 22:35:22.930 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.930 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.931 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000062 (mean)
+2024-09-16 22:35:22.931 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000067 (mean)
+2024-09-16 22:35:22.931 | INFO     | retrieval.model_ewc:on_fit_end:265 - End of training. Logging final EWC components:
+2024-09-16 22:35:22.931 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.shared.weight:
+2024-09-16 22:35:22.931 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.008320 (mean)
+2024-09-16 22:35:22.932 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.008324 (mean)
+2024-09-16 22:35:22.933 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.933 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.933 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000297 (mean)
+2024-09-16 22:35:22.933 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000301 (mean)
+2024-09-16 22:35:22.935 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.935 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.935 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.935 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.936 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000076 (mean)
+2024-09-16 22:35:22.936 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000034 (mean)
+2024-09-16 22:35:22.936 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000080 (mean)
+2024-09-16 22:35:22.936 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000031 (mean)
+2024-09-16 22:35:22.938 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.938 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.938 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.938 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.938 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000201 (mean)
+2024-09-16 22:35:22.938 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000201 (mean)
+2024-09-16 22:35:22.938 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000905 (mean)
+2024-09-16 22:35:22.938 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000903 (mean)
+2024-09-16 22:35:22.940 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.940 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.941 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.941 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.941 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000145 (mean)
+2024-09-16 22:35:22.941 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.077462 (mean)
+2024-09-16 22:35:22.941 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000149 (mean)
+2024-09-16 22:35:22.941 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.077744 (mean)
+2024-09-16 22:35:22.943 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.943 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.943 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.943 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.943 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000568 (mean)
+2024-09-16 22:35:22.943 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000573 (mean)
+2024-09-16 22:35:22.944 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000249 (mean)
+2024-09-16 22:35:22.944 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000249 (mean)
+2024-09-16 22:35:22.946 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.946 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight:
+2024-09-16 22:35:22.946 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.946 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.497663 (mean)
+2024-09-16 22:35:22.946 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.946 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.499368 (mean)
+2024-09-16 22:35:22.947 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000179 (mean)
+2024-09-16 22:35:22.947 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000178 (mean)
+2024-09-16 22:35:22.948 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.948 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.948 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.948 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.019886 (mean)
+2024-09-16 22:35:22.948 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.948 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.019873 (mean)
+2024-09-16 22:35:22.949 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000234 (mean)
+2024-09-16 22:35:22.949 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000234 (mean)
+2024-09-16 22:35:22.951 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.951 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.951 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.951 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.951 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.125038 (mean)
+2024-09-16 22:35:22.951 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.125667 (mean)
+2024-09-16 22:35:22.952 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000334 (mean)
+2024-09-16 22:35:22.952 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000334 (mean)
+2024-09-16 22:35:22.953 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.953 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.954 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000016 (mean)
+2024-09-16 22:35:22.954 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000013 (mean)
+2024-09-16 22:35:22.956 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.956 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.956 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.956 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.956 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000258 (mean)
+2024-09-16 22:35:22.956 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000255 (mean)
+2024-09-16 22:35:22.957 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000231 (mean)
+2024-09-16 22:35:22.957 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000232 (mean)
+2024-09-16 22:35:22.958 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.958 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.959 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000008 (mean)
+2024-09-16 22:35:22.959 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000009 (mean)
+2024-09-16 22:35:22.961 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.961 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.961 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.961 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.961 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000936 (mean)
+2024-09-16 22:35:22.961 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000935 (mean)
+2024-09-16 22:35:22.962 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000099 (mean)
+2024-09-16 22:35:22.962 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000101 (mean)
+2024-09-16 22:35:22.963 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.963 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.964 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.082340 (mean)
+2024-09-16 22:35:22.964 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.082584 (mean)
+2024-09-16 22:35:22.966 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.966 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.0.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.966 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.966 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.041111 (mean)
+2024-09-16 22:35:22.966 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.966 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.041356 (mean)
+2024-09-16 22:35:22.967 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000184 (mean)
+2024-09-16 22:35:22.967 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000185 (mean)
+2024-09-16 22:35:22.968 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.968 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.969 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.969 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.969 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000022 (mean)
+2024-09-16 22:35:22.969 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000017 (mean)
+2024-09-16 22:35:22.970 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000190 (mean)
+2024-09-16 22:35:22.970 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000189 (mean)
+2024-09-16 22:35:22.971 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.971 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.971 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.971 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.971 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000387 (mean)
+2024-09-16 22:35:22.971 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000385 (mean)
+2024-09-16 22:35:22.972 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000193 (mean)
+2024-09-16 22:35:22.972 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000195 (mean)
+2024-09-16 22:35:22.974 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.974 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.974 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.974 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.974 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000181 (mean)
+2024-09-16 22:35:22.974 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.128918 (mean)
+2024-09-16 22:35:22.974 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000179 (mean)
+2024-09-16 22:35:22.974 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.129646 (mean)
+2024-09-16 22:35:22.976 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.976 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.976 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.976 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.976 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000946 (mean)
+2024-09-16 22:35:22.977 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000952 (mean)
+2024-09-16 22:35:22.977 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000028 (mean)
+2024-09-16 22:35:22.977 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000023 (mean)
+2024-09-16 22:35:22.979 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.979 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.979 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.979 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.042615 (mean)
+2024-09-16 22:35:22.979 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.979 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.042658 (mean)
+2024-09-16 22:35:22.979 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000059 (mean)
+2024-09-16 22:35:22.979 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000063 (mean)
+2024-09-16 22:35:22.981 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.981 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.981 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.982 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:22.982 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000277 (mean)
+2024-09-16 22:35:22.982 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000274 (mean)
+2024-09-16 22:35:22.982 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000595 (mean)
+2024-09-16 22:35:22.982 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000595 (mean)
+2024-09-16 22:35:22.984 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.984 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:22.984 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000159 (mean)
+2024-09-16 22:35:22.984 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000160 (mean)
+2024-09-16 22:35:22.986 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.986 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.986 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.987 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.layer_norm.weight:
+2024-09-16 22:35:22.987 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.113156 (mean)
+2024-09-16 22:35:22.987 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.113425 (mean)
+2024-09-16 22:35:22.987 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000008 (mean)
+2024-09-16 22:35:22.987 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000007 (mean)
+2024-09-16 22:35:22.989 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.989 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:22.990 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000268 (mean)
+2024-09-16 22:35:22.990 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000265 (mean)
+2024-09-16 22:35:22.991 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.991 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.991 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.992 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:22.993 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000034 (mean)
+2024-09-16 22:35:22.993 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000116 (mean)
+2024-09-16 22:35:22.993 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000033 (mean)
+2024-09-16 22:35:22.993 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000116 (mean)
+2024-09-16 22:35:22.994 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.994 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.1.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.994 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.994 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.067624 (mean)
+2024-09-16 22:35:22.994 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:22.994 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.068245 (mean)
+2024-09-16 22:35:22.995 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000087 (mean)
+2024-09-16 22:35:22.995 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000085 (mean)
+2024-09-16 22:35:22.996 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.997 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.997 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.997 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.layer_norm.weight:
+2024-09-16 22:35:22.997 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000111 (mean)
+2024-09-16 22:35:22.997 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.157446 (mean)
+2024-09-16 22:35:22.997 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000116 (mean)
+2024-09-16 22:35:22.997 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.158160 (mean)
+2024-09-16 22:35:22.999 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.999 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:22.999 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:22.999 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:22.999 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000601 (mean)
+2024-09-16 22:35:23.000 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000602 (mean)
+2024-09-16 22:35:23.000 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000006 (mean)
+2024-09-16 22:35:23.000 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000010 (mean)
+2024-09-16 22:35:23.002 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.002 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.002 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.002 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.002 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000447 (mean)
+2024-09-16 22:35:23.002 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000453 (mean)
+2024-09-16 22:35:23.002 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000116 (mean)
+2024-09-16 22:35:23.002 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000117 (mean)
+2024-09-16 22:35:23.004 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.004 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.004 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.004 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.005 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.001340 (mean)
+2024-09-16 22:35:23.005 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.001336 (mean)
+2024-09-16 22:35:23.005 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000031 (mean)
+2024-09-16 22:35:23.005 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000032 (mean)
+2024-09-16 22:35:23.007 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.007 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.007 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.007 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.056152 (mean)
+2024-09-16 22:35:23.007 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.007 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.056245 (mean)
+2024-09-16 22:35:23.007 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.001805 (mean)
+2024-09-16 22:35:23.007 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.001804 (mean)
+2024-09-16 22:35:23.009 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.009 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.010 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.010 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.010 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.104508 (mean)
+2024-09-16 22:35:23.010 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.104718 (mean)
+2024-09-16 22:35:23.010 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000191 (mean)
+2024-09-16 22:35:23.011 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000190 (mean)
+2024-09-16 22:35:23.012 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.012 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.013 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000424 (mean)
+2024-09-16 22:35:23.013 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000424 (mean)
+2024-09-16 22:35:23.014 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.014 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.015 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.015 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.016 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000132 (mean)
+2024-09-16 22:35:23.016 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000008 (mean)
+2024-09-16 22:35:23.016 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000131 (mean)
+2024-09-16 22:35:23.016 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000009 (mean)
+2024-09-16 22:35:23.017 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.017 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.017 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.017 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.018 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000089 (mean)
+2024-09-16 22:35:23.018 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000086 (mean)
+2024-09-16 22:35:23.018 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000050 (mean)
+2024-09-16 22:35:23.019 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000050 (mean)
+2024-09-16 22:35:23.020 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.020 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.2.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.020 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.020 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.086453 (mean)
+2024-09-16 22:35:23.020 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.020 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.086850 (mean)
+2024-09-16 22:35:23.020 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.197396 (mean)
+2024-09-16 22:35:23.020 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.198198 (mean)
+2024-09-16 22:35:23.022 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.022 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:23.022 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.022 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:23.022 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000134 (mean)
+2024-09-16 22:35:23.023 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000125 (mean)
+2024-09-16 22:35:23.023 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000055 (mean)
+2024-09-16 22:35:23.023 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000057 (mean)
+2024-09-16 22:35:23.025 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.025 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.025 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.025 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.025 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000483 (mean)
+2024-09-16 22:35:23.025 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000487 (mean)
+2024-09-16 22:35:23.025 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000076 (mean)
+2024-09-16 22:35:23.025 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000074 (mean)
+2024-09-16 22:35:23.027 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.027 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.028 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.028 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.028 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000247 (mean)
+2024-09-16 22:35:23.028 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000247 (mean)
+2024-09-16 22:35:23.028 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000560 (mean)
+2024-09-16 22:35:23.028 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000565 (mean)
+2024-09-16 22:35:23.030 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.030 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.030 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.030 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.030 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000046 (mean)
+2024-09-16 22:35:23.030 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000040 (mean)
+2024-09-16 22:35:23.030 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000939 (mean)
+2024-09-16 22:35:23.031 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000942 (mean)
+2024-09-16 22:35:23.033 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.033 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.033 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.033 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.061639 (mean)
+2024-09-16 22:35:23.033 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.033 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.061875 (mean)
+2024-09-16 22:35:23.033 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.125742 (mean)
+2024-09-16 22:35:23.033 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.125970 (mean)
+2024-09-16 22:35:23.035 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.035 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.035 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.035 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.036 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000071 (mean)
+2024-09-16 22:35:23.036 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000070 (mean)
+2024-09-16 22:35:23.036 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000245 (mean)
+2024-09-16 22:35:23.037 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000246 (mean)
+2024-09-16 22:35:23.038 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.038 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.038 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.038 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.039 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000115 (mean)
+2024-09-16 22:35:23.039 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000115 (mean)
+2024-09-16 22:35:23.039 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000172 (mean)
+2024-09-16 22:35:23.039 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000170 (mean)
+2024-09-16 22:35:23.040 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.040 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.040 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.041 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.041 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000056 (mean)
+2024-09-16 22:35:23.042 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000056 (mean)
+2024-09-16 22:35:23.042 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000124 (mean)
+2024-09-16 22:35:23.042 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000123 (mean)
+2024-09-16 22:35:23.043 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.043 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.3.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.043 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.097535 (mean)
+2024-09-16 22:35:23.043 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.043 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.043 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.097991 (mean)
+2024-09-16 22:35:23.043 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.253282 (mean)
+2024-09-16 22:35:23.043 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.253029 (mean)
+2024-09-16 22:35:23.045 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.046 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:23.046 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.046 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:23.046 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000059 (mean)
+2024-09-16 22:35:23.046 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000058 (mean)
+2024-09-16 22:35:23.046 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000108 (mean)
+2024-09-16 22:35:23.046 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000111 (mean)
+2024-09-16 22:35:23.048 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.048 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.048 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.048 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.048 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000187 (mean)
+2024-09-16 22:35:23.048 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000190 (mean)
+2024-09-16 22:35:23.049 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000072 (mean)
+2024-09-16 22:35:23.049 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000070 (mean)
+2024-09-16 22:35:23.051 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.051 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.051 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.051 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.051 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000070 (mean)
+2024-09-16 22:35:23.051 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000077 (mean)
+2024-09-16 22:35:23.051 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000416 (mean)
+2024-09-16 22:35:23.051 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000426 (mean)
+2024-09-16 22:35:23.053 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.053 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.053 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.053 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.053 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000110 (mean)
+2024-09-16 22:35:23.054 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000103 (mean)
+2024-09-16 22:35:23.054 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000342 (mean)
+2024-09-16 22:35:23.054 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000347 (mean)
+2024-09-16 22:35:23.056 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.056 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.056 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.056 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.071677 (mean)
+2024-09-16 22:35:23.056 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.056 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.071732 (mean)
+2024-09-16 22:35:23.056 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.135115 (mean)
+2024-09-16 22:35:23.056 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.135469 (mean)
+2024-09-16 22:35:23.058 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.058 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.059 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.059 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.060 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000056 (mean)
+2024-09-16 22:35:23.060 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000654 (mean)
+2024-09-16 22:35:23.060 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000056 (mean)
+2024-09-16 22:35:23.060 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000649 (mean)
+2024-09-16 22:35:23.061 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.061 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.061 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.061 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.062 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000099 (mean)
+2024-09-16 22:35:23.062 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000141 (mean)
+2024-09-16 22:35:23.062 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000097 (mean)
+2024-09-16 22:35:23.063 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000142 (mean)
+2024-09-16 22:35:23.064 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.064 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.064 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.064 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.065 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000006 (mean)
+2024-09-16 22:35:23.065 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000018 (mean)
+2024-09-16 22:35:23.065 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000008 (mean)
+2024-09-16 22:35:23.065 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000018 (mean)
+2024-09-16 22:35:23.066 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.066 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.4.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.066 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.066 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.106172 (mean)
+2024-09-16 22:35:23.066 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.067 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.106691 (mean)
+2024-09-16 22:35:23.067 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.430620 (mean)
+2024-09-16 22:35:23.067 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.427517 (mean)
+2024-09-16 22:35:23.069 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.069 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:23.069 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.069 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.final_layer_norm.weight:
+2024-09-16 22:35:23.069 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000105 (mean)
+2024-09-16 22:35:23.069 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.113507 (mean)
+2024-09-16 22:35:23.069 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000101 (mean)
+2024-09-16 22:35:23.069 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.113505 (mean)
+2024-09-16 22:35:23.071 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.071 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.072 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.072 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000309 (mean)
+2024-09-16 22:35:23.072 | INFO     | __main__:main:1547 - hit the barrier after training
+2024-09-16 22:35:23.072 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000310 (mean)
+2024-09-16 22:35:23.074 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.074 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.074 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000028 (mean)
+2024-09-16 22:35:23.074 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000033 (mean)
+2024-09-16 22:35:23.076 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.076 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.077 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000066 (mean)
+2024-09-16 22:35:23.077 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000059 (mean)
+2024-09-16 22:35:23.079 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.079 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.079 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.070540 (mean)
+2024-09-16 22:35:23.079 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.070528 (mean)
+2024-09-16 22:35:23.081 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.081 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.082 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000164 (mean)
+2024-09-16 22:35:23.082 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000164 (mean)
+2024-09-16 22:35:23.084 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.084 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.085 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000198 (mean)
+2024-09-16 22:35:23.085 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000198 (mean)
+2024-09-16 22:35:23.086 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.086 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.087 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000003 (mean)
+2024-09-16 22:35:23.087 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000004 (mean)
+2024-09-16 22:35:23.088 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.089 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.5.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.089 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.114061 (mean)
+2024-09-16 22:35:23.089 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.114530 (mean)
+2024-09-16 22:35:23.091 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.091 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:23.091 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000062 (mean)
+2024-09-16 22:35:23.091 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000067 (mean)
+2024-09-16 22:35:23.093 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.093 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.094 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000297 (mean)
+2024-09-16 22:35:23.094 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000301 (mean)
+2024-09-16 22:35:23.096 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.096 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.096 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000034 (mean)
+2024-09-16 22:35:23.096 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000031 (mean)
+2024-09-16 22:35:23.098 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.098 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.098 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000905 (mean)
+2024-09-16 22:35:23.099 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000903 (mean)
+2024-09-16 22:35:23.101 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.101 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.101 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.077462 (mean)
+2024-09-16 22:35:23.101 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.077744 (mean)
+2024-09-16 22:35:23.103 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.103 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.104 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000249 (mean)
+2024-09-16 22:35:23.104 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000249 (mean)
+2024-09-16 22:35:23.105 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.106 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.106 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000179 (mean)
+2024-09-16 22:35:23.107 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000178 (mean)
+2024-09-16 22:35:23.108 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.108 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.109 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000234 (mean)
+2024-09-16 22:35:23.109 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000234 (mean)
+2024-09-16 22:35:23.110 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.110 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.6.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.110 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.125038 (mean)
+2024-09-16 22:35:23.111 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.125667 (mean)
+2024-09-16 22:35:23.113 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.113 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:23.113 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000016 (mean)
+2024-09-16 22:35:23.113 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000013 (mean)
+2024-09-16 22:35:23.115 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.115 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.115 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000258 (mean)
+2024-09-16 22:35:23.116 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000255 (mean)
+2024-09-16 22:35:23.118 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.118 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.118 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000008 (mean)
+2024-09-16 22:35:23.118 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000009 (mean)
+2024-09-16 22:35:23.120 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.120 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.120 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000936 (mean)
+2024-09-16 22:35:23.120 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000935 (mean)
+2024-09-16 22:35:23.122 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.123 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.123 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.082340 (mean)
+2024-09-16 22:35:23.123 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.082584 (mean)
+2024-09-16 22:35:23.125 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.125 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.126 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000184 (mean)
+2024-09-16 22:35:23.126 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000185 (mean)
+2024-09-16 22:35:23.127 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.127 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.128 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000190 (mean)
+2024-09-16 22:35:23.128 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000189 (mean)
+2024-09-16 22:35:23.130 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.130 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.131 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000193 (mean)
+2024-09-16 22:35:23.131 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000195 (mean)
+2024-09-16 22:35:23.132 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.132 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.7.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.132 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.128918 (mean)
+2024-09-16 22:35:23.132 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.129646 (mean)
+2024-09-16 22:35:23.135 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.135 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:23.135 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000028 (mean)
+2024-09-16 22:35:23.135 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000023 (mean)
+2024-09-16 22:35:23.137 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.137 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.137 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000059 (mean)
+2024-09-16 22:35:23.137 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000063 (mean)
+2024-09-16 22:35:23.139 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.139 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.140 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000277 (mean)
+2024-09-16 22:35:23.140 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000274 (mean)
+2024-09-16 22:35:23.142 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.142 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.142 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000159 (mean)
+2024-09-16 22:35:23.142 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000160 (mean)
+2024-09-16 22:35:23.144 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.144 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.144 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.113156 (mean)
+2024-09-16 22:35:23.145 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.113425 (mean)
+2024-09-16 22:35:23.147 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.147 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.148 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000268 (mean)
+2024-09-16 22:35:23.148 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000265 (mean)
+2024-09-16 22:35:23.149 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.149 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.150 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000116 (mean)
+2024-09-16 22:35:23.150 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000116 (mean)
+2024-09-16 22:35:23.152 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.152 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.153 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000087 (mean)
+2024-09-16 22:35:23.153 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000085 (mean)
+2024-09-16 22:35:23.154 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.154 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.8.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.154 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.157446 (mean)
+2024-09-16 22:35:23.154 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.158160 (mean)
+2024-09-16 22:35:23.156 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.156 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:23.157 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000006 (mean)
+2024-09-16 22:35:23.157 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000010 (mean)
+2024-09-16 22:35:23.159 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.159 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.159 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000116 (mean)
+2024-09-16 22:35:23.159 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000117 (mean)
+2024-09-16 22:35:23.161 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.161 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.161 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000031 (mean)
+2024-09-16 22:35:23.162 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000032 (mean)
+2024-09-16 22:35:23.164 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.164 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.164 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.001805 (mean)
+2024-09-16 22:35:23.164 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.001804 (mean)
+2024-09-16 22:35:23.166 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.166 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.166 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.104508 (mean)
+2024-09-16 22:35:23.166 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.104718 (mean)
+2024-09-16 22:35:23.168 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.169 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.169 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000424 (mean)
+2024-09-16 22:35:23.170 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000424 (mean)
+2024-09-16 22:35:23.171 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.171 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.172 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000008 (mean)
+2024-09-16 22:35:23.172 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000009 (mean)
+2024-09-16 22:35:23.173 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.173 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.174 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000050 (mean)
+2024-09-16 22:35:23.174 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000050 (mean)
+2024-09-16 22:35:23.176 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.176 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.9.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.176 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.197396 (mean)
+2024-09-16 22:35:23.176 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.198198 (mean)
+2024-09-16 22:35:23.178 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.178 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:23.178 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000055 (mean)
+2024-09-16 22:35:23.179 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000057 (mean)
+2024-09-16 22:35:23.181 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.181 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.181 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000076 (mean)
+2024-09-16 22:35:23.181 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000074 (mean)
+2024-09-16 22:35:23.183 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.183 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.183 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000560 (mean)
+2024-09-16 22:35:23.183 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000565 (mean)
+2024-09-16 22:35:23.185 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.186 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.186 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000939 (mean)
+2024-09-16 22:35:23.186 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000942 (mean)
+2024-09-16 22:35:23.188 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.188 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.188 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.125742 (mean)
+2024-09-16 22:35:23.188 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.125970 (mean)
+2024-09-16 22:35:23.190 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.190 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.191 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000245 (mean)
+2024-09-16 22:35:23.191 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000246 (mean)
+2024-09-16 22:35:23.193 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.193 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.194 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000172 (mean)
+2024-09-16 22:35:23.194 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000170 (mean)
+2024-09-16 22:35:23.195 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.195 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.196 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000124 (mean)
+2024-09-16 22:35:23.196 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000123 (mean)
+2024-09-16 22:35:23.198 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.198 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.10.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.198 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.253282 (mean)
+2024-09-16 22:35:23.198 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.253029 (mean)
+2024-09-16 22:35:23.200 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.200 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.q.weight:
+2024-09-16 22:35:23.200 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000108 (mean)
+2024-09-16 22:35:23.200 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000111 (mean)
+2024-09-16 22:35:23.202 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.203 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.k.weight:
+2024-09-16 22:35:23.203 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000072 (mean)
+2024-09-16 22:35:23.203 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000070 (mean)
+2024-09-16 22:35:23.205 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.205 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.v.weight:
+2024-09-16 22:35:23.205 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000416 (mean)
+2024-09-16 22:35:23.205 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000426 (mean)
+2024-09-16 22:35:23.207 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.207 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.SelfAttention.o.weight:
+2024-09-16 22:35:23.208 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000342 (mean)
+2024-09-16 22:35:23.208 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000347 (mean)
+2024-09-16 22:35:23.210 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.210 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.0.layer_norm.weight:
+2024-09-16 22:35:23.210 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.135115 (mean)
+2024-09-16 22:35:23.210 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.135469 (mean)
+2024-09-16 22:35:23.212 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.212 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight:
+2024-09-16 22:35:23.213 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: -0.000654 (mean)
+2024-09-16 22:35:23.213 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: -0.000649 (mean)
+2024-09-16 22:35:23.215 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.215 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight:
+2024-09-16 22:35:23.216 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000141 (mean)
+2024-09-16 22:35:23.216 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000142 (mean)
+2024-09-16 22:35:23.217 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.217 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight:
+2024-09-16 22:35:23.218 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.000018 (mean)
+2024-09-16 22:35:23.218 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.000018 (mean)
+2024-09-16 22:35:23.219 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.220 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.block.11.layer.1.layer_norm.weight:
+2024-09-16 22:35:23.220 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.430620 (mean)
+2024-09-16 22:35:23.220 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.427517 (mean)
+2024-09-16 22:35:23.222 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.222 | INFO     | retrieval.model_ewc:log_ewc_components:392 - Parameter encoder.encoder.final_layer_norm.weight:
+2024-09-16 22:35:23.222 | INFO     | retrieval.model_ewc:log_ewc_components:393 -   Current value: 0.113507 (mean)
+2024-09-16 22:35:23.222 | INFO     | retrieval.model_ewc:log_ewc_components:394 -   Previous value: 0.113505 (mean)
+2024-09-16 22:35:23.224 | INFO     | retrieval.model_ewc:log_ewc_components:395 -   Fisher info: 0.000000 (mean)
+2024-09-16 22:35:23.224 | INFO     | __main__:main:1547 - hit the barrier after training
+2024-09-16 22:35:23.225 | INFO     | __main__:main:1553 - Finished progressive training at epoch 9
+2024-09-16 22:35:23.225 | INFO     | __main__:main:1553 - Finished progressive training at epoch 9
+2024-09-16 22:35:23.225 | INFO     | __main__:main:1553 - Finished progressive training at epoch 9
+2024-09-16 22:35:23.225 | INFO     | __main__:main:1553 - Finished progressive training at epoch 9
+2024-09-16 22:35:23.226 | INFO     | __main__:find_latest_checkpoint:516 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10
+_val=70.61.ckpt
+2024-09-16 22:35:23.226 | INFO     | __main__:find_latest_checkpoint:516 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10
+_val=70.61.ckpt
+2024-09-16 22:35:23.226 | INFO     | __main__:find_latest_checkpoint:516 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10
+_val=70.61.ckpt
+2024-09-16 22:35:23.226 | INFO     | __main__:main:1560 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10_val=70.61.ckpt
+2024-09-16 22:35:23.226 | INFO     | __main__:find_latest_checkpoint:516 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10
+_val=70.61.ckpt
+2024-09-16 22:35:23.226 | INFO     | __main__:main:1560 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10_val=70.61.ckpt
+2024-09-16 22:35:23.226 | INFO     | __main__:main:1560 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10_val=70.61.ckpt
+2024-09-16 22:35:23.226 | INFO     | __main__:main:1560 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10_val=70.61.ckpt
+2024-09-16 22:35:24.856 | INFO     | __main__:main:1569 - Testing...
+2024-09-16 22:35:24.858 | INFO     | retrieval.main:run_cli:60 - PID: 1355112
+[rank: 2] Seed set to 3407
+2024-09-16 22:35:25.065 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random
+2024-09-16 22:35:25.065 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+2024-09-16 22:35:25.571 | INFO     | __main__:main:1569 - Testing...
+2024-09-16 22:35:25.573 | INFO     | retrieval.main:run_cli:60 - PID: 1353370
+2024-09-16 22:35:25.742 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+[rank: 0] Seed set to 3407
+2024-09-16 22:35:25.772 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random
+2024-09-16 22:35:25.773 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+2024-09-16 22:35:25.839 | INFO     | __main__:main:1569 - Testing...
+2024-09-16 22:35:25.840 | INFO     | retrieval.main:run_cli:60 - PID: 1355113
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and
+ will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+[rank: 3] Seed set to 3407
+2024-09-16 22:35:26.034 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random
+2024-09-16 22:35:26.034 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+2024-09-16 22:35:26.250 | INFO     | __main__:main:1569 - Testing...
+2024-09-16 22:35:26.251 | INFO     | retrieval.main:run_cli:60 - PID: 1355111
+2024-09-16 22:35:26.338 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+[rank: 1] Seed set to 3407
+2024-09-16 22:35:26.446 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random
+2024-09-16 22:35:26.446 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+2024-09-16 22:35:26.527 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+2024-09-16 22:35:27.004 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command wi
+th `srun` like so: srun python main.py predict --config retrieval/confs/cli_lean4_r ...
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+[rank: 2] Seed set to 3407
+[rank: 3] Seed set to 3407
+[rank: 1] Seed set to 3407
+2024-09-16 22:35:36.649 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149285
+2024-09-16 22:35:36.666 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2294
+2024-09-16 22:35:38.608 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149285
+2024-09-16 22:35:38.717 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149285
+2024-09-16 22:35:38.728 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2294
+2024-09-16 22:35:39.268 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149285
+2024-09-16 22:35:39.280 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2294
+2024-09-16 22:35:40.822 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2294
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10_val=70.61.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10_val=70.61.ckpt
+2024-09-16 22:35:43.316 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: True
+2024-09-16 22:35:43.319 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|                                                                                                      | 0/2027 [00:00<?, ?it/s]2024-09-16 22:35:43.384 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: True
+2024-09-16 22:35:43.385 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|                                                                                              | 2/2027 [00:00<02:31, 13.40it/s]2024-09-16 22:35:43.508 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: True
+2024-09-16 22:35:43.510 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+Predicting: |                                                                                                 | 0/? [00:00<?, ?it/s]2024-09-16 22:35:43.774 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: True
+2024-09-16 22:35:43.775 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|███████████████████████████████████████████████████████████████████████████████████████████| 2027/2027 [09:18<00:00,  3.63it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████| 2027/2027 [09:22<00:00,  3.60it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████| 2027/2027 [09:23<00:00,  3.60it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████| 2027/2027 [09:25<00:00,  3.59it/s]
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/loops/prediction_loop.py:255: predict returned None if it was on purpose, ignore this warning...
+Predicting DataLoader 0: 100%|████████████████████████████████████████████████████████████████████████| 9/9 [00:21<00:00,  0.41it/s]2024-09-16 22:45:28.335 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-16 22:45:28.433 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test_pickle_0.pkl
+2024-09-16 22:45:28.433 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-16 22:45:28.962 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-16 22:45:29.051 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test_pickle_1.pkl
+2024-09-16 22:45:29.051 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-16 22:45:30.747 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-16 22:45:30.747 | INFO     | retrieval.model:on_predict_epoch_end:503 - About to construct predictions map
+2024-09-16 22:45:30.834 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test_pickle_2.pkl
+2024-09-16 22:45:30.834 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-16 22:45:30.838 | INFO     | retrieval.model:on_predict_epoch_end:523 - Retrieval predictions saved to test_pickle_3.pkl
+2024-09-16 22:45:30.838 | INFO     | retrieval.model:on_predict_epoch_end:562 - About to call barrier
+2024-09-16 22:45:30.838 | INFO     | retrieval.model:on_predict_epoch_end:566 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|████████████████████████████████████████████████████████████████████████| 9/9 [00:24<00:00,  0.37it/s]
+2024-09-16 22:45:31.706 | INFO     | retrieval.main:run_cli:60 - PID: 1355111
+2024-09-16 22:45:31.711 | INFO     | retrieval.main:run_cli:60 - PID: 1355113
+2024-09-16 22:45:31.798 | INFO     | retrieval.main:run_cli:60 - PID: 1355112
+[rank: 1] Seed set to 3407
+2024-09-16 22:45:31.980 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random
+2024-09-16 22:45:31.980 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/corpus.jsonl
+[rank: 3] Seed set to 3407
+2024-09-16 22:45:31.984 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random
+2024-09-16 22:45:31.984 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/corpus.jsonl
+[rank: 2] Seed set to 3407
+2024-09-16 22:45:32.050 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random
+2024-09-16 22:45:32.050 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/corpus.jsonl
+2024-09-16 22:45:32.502 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/corpus.jsonl
+2024-09-16 22:45:32.553 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/corpus.jsonl
+2024-09-16 22:45:32.583 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/corpus.jsonl
+2024-09-16 22:45:41.690 | INFO     | __main__:main:1591 - Loaded the predictions pickle files
+2024-09-16 22:45:41.734 | INFO     | __main__:main:1594 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random/test.json
+100%|████████████████████████████████████████████████████████████████████████████████████████| 1444/1444 [00:00<00:00, 37058.00it/s]
+2024-09-16 22:45:41.774 | INFO     | __main__:main:1596 - R@1 = 26.783366888157307 %, R@10 = 68.88467893457913 %, MRR = 0.5847327648318404
+2024-09-16 22:45:41.775 | INFO     | retrieval.main:run_cli:60 - PID: 1353370
+[rank: 0] Seed set to 3407
+2024-09-16 22:45:42.064 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random
+2024-09-16 22:45:42.064 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/corpus.jsonl
+2024-09-16 22:45:42.661 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/corpus.jsonl
+[rank: 3] Seed set to 3407
+[rank: 2] Seed set to 3407
+[rank: 1] Seed set to 3407
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+2024-09-16 22:45:52.023 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random/cache_train/cached_dat
+a.pkl
+Training dataset size: 194165
+2024-09-16 22:45:52.050 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random/cache_pred/cached_data
+.pkl
+Testing dataset size: 2966
+2024-09-16 22:45:54.099 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random/cache_train/cached_dat
+a.pkl
+Training dataset size: 194165
+2024-09-16 22:45:54.118 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random/cache_pred/cached_data
+.pkl
+Testing dataset size: 2966
+2024-09-16 22:45:56.371 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random/cache_train/cached_dat
+a.pkl
+Training dataset size: 194165
+2024-09-16 22:45:56.398 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random/cache_pred/cached_data
+.pkl
+Testing dataset size: 2966
+2024-09-16 22:45:56.485 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random/cache_train/cached_dat
+a.pkl
+Training dataset size: 194165
+2024-09-16 22:45:56.509 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random/cache_pred/cached_data
+.pkl
+Testing dataset size: 2966
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10_val=70.61.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_ewc/merged_with_new_lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58e7882f564669f_lambda_0.1_epoch=8-Recall@10_val=70.61.ckpt
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+2024-09-16 22:45:59.381 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: True
+2024-09-16 22:45:59.382 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|                                                                                              | 2/1803 [00:00<02:05, 14.37it/s]2024-09-16 22:45:59.528 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: True
+2024-09-16 22:45:59.529 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+  0%|                                                                                                      | 0/1803 [00:00<?, ?it/s]2024-09-16 22:45:59.642 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: True
+2024-09-16 22:45:59.643 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+Predicting: |                                                                                                 | 0/? [00:00<?, ?it/s]2024-09-16 22:45:59.953 | INFO     | retrieval.model:on_predict_start:400 - Embeddings staled on predict start: True
+2024-09-16 22:45:59.954 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|███████████████████████████████████████████████████████████████████████████████████████████| 1803/1803 [09:36<00:00,  3.13it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████| 1803/1803 [09:40<00:00,  3.10it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████| 1803/1803 [09:41<00:00,  3.10it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████| 1803/1803 [09:42<00:00,  3.09it/s]
+Predicting DataLoader 0:  42%|███████████████████████████████████████████████████████████████████████████████████████                                                                                                                          | 5/12 [00:14<00:20,  0.35it/s]

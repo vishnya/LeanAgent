@@ -1,0 +1,881 @@
+2024-10-16 19:25:20.900 | INFO     | retrieval.model:validation_step:370 - Recall@35_val: 79.16666666666666
+2024-10-16 19:25:20.901 | INFO     | retrieval.model:validation_step:370 - Recall@36_val: 79.16666666666666
+2024-10-16 19:25:20.902 | INFO     | retrieval.model:validation_step:370 - Recall@37_val: 79.16666666666666
+2024-10-16 19:25:20.902 | INFO     | retrieval.model:validation_step:370 - Recall@38_val: 79.16666666666666
+2024-10-16 19:25:20.903 | INFO     | retrieval.model:validation_step:370 - Recall@39_val: 79.16666666666666
+2024-10-16 19:25:20.904 | INFO     | retrieval.model:validation_step:370 - Recall@40_val: 79.16666666666666
+2024-10-16 19:25:20.904 | INFO     | retrieval.model:validation_step:370 - Recall@41_val: 79.16666666666666
+2024-10-16 19:25:20.905 | INFO     | retrieval.model:validation_step:370 - Recall@42_val: 79.16666666666666
+2024-10-16 19:25:20.906 | INFO     | retrieval.model:validation_step:370 - Recall@43_val: 79.16666666666666
+2024-10-16 19:25:20.906 | INFO     | retrieval.model:validation_step:370 - Recall@44_val: 79.16666666666666
+2024-10-16 19:25:20.907 | INFO     | retrieval.model:validation_step:370 - Recall@45_val: 79.16666666666666
+2024-10-16 19:25:20.908 | INFO     | retrieval.model:validation_step:370 - Recall@46_val: 79.16666666666666
+2024-10-16 19:25:20.908 | INFO     | retrieval.model:validation_step:370 - Recall@47_val: 79.16666666666666
+2024-10-16 19:25:20.909 | INFO     | retrieval.model:validation_step:370 - Recall@48_val: 79.16666666666666
+2024-10-16 19:25:20.910 | INFO     | retrieval.model:validation_step:370 - Recall@49_val: 79.16666666666666
+2024-10-16 19:25:20.911 | INFO     | retrieval.model:validation_step:370 - Recall@50_val: 79.16666666666666
+2024-10-16 19:25:20.911 | INFO     | retrieval.model:validation_step:370 - Recall@51_val: 79.16666666666666
+2024-10-16 19:25:20.912 | INFO     | retrieval.model:validation_step:370 - Recall@52_val: 79.16666666666666
+2024-10-16 19:25:20.913 | INFO     | retrieval.model:validation_step:370 - Recall@53_val: 79.16666666666666
+2024-10-16 19:25:20.913 | INFO     | retrieval.model:validation_step:370 - Recall@54_val: 79.16666666666666
+2024-10-16 19:25:20.914 | INFO     | retrieval.model:validation_step:370 - Recall@55_val: 79.16666666666666
+2024-10-16 19:25:20.915 | INFO     | retrieval.model:validation_step:370 - Recall@56_val: 79.16666666666666
+2024-10-16 19:25:20.915 | INFO     | retrieval.model:validation_step:370 - Recall@57_val: 79.16666666666666
+2024-10-16 19:25:20.916 | INFO     | retrieval.model:validation_step:370 - Recall@58_val: 79.16666666666666
+2024-10-16 19:25:20.917 | INFO     | retrieval.model:validation_step:370 - Recall@59_val: 79.16666666666666
+2024-10-16 19:25:20.917 | INFO     | retrieval.model:validation_step:370 - Recall@60_val: 79.16666666666666
+2024-10-16 19:25:20.918 | INFO     | retrieval.model:validation_step:370 - Recall@61_val: 79.16666666666666
+2024-10-16 19:25:20.919 | INFO     | retrieval.model:validation_step:370 - Recall@62_val: 79.16666666666666
+2024-10-16 19:25:20.919 | INFO     | retrieval.model:validation_step:370 - Recall@63_val: 79.16666666666666
+2024-10-16 19:25:20.920 | INFO     | retrieval.model:validation_step:370 - Recall@64_val: 79.16666666666666
+2024-10-16 19:25:20.921 | INFO     | retrieval.model:validation_step:370 - Recall@65_val: 79.16666666666666
+2024-10-16 19:25:20.921 | INFO     | retrieval.model:validation_step:370 - Recall@66_val: 79.16666666666666
+2024-10-16 19:25:20.922 | INFO     | retrieval.model:validation_step:370 - Recall@67_val: 79.16666666666666
+2024-10-16 19:25:20.923 | INFO     | retrieval.model:validation_step:370 - Recall@68_val: 79.16666666666666
+2024-10-16 19:25:20.923 | INFO     | retrieval.model:validation_step:370 - Recall@69_val: 79.16666666666666
+2024-10-16 19:25:20.924 | INFO     | retrieval.model:validation_step:370 - Recall@70_val: 79.16666666666666
+2024-10-16 19:25:20.925 | INFO     | retrieval.model:validation_step:370 - Recall@71_val: 79.16666666666666
+2024-10-16 19:25:20.925 | INFO     | retrieval.model:validation_step:370 - Recall@72_val: 79.16666666666666
+2024-10-16 19:25:20.926 | INFO     | retrieval.model:validation_step:370 - Recall@73_val: 79.16666666666666
+2024-10-16 19:25:20.927 | INFO     | retrieval.model:validation_step:370 - Recall@74_val: 79.16666666666666
+2024-10-16 19:25:20.928 | INFO     | retrieval.model:validation_step:370 - Recall@75_val: 79.16666666666666
+2024-10-16 19:25:20.928 | INFO     | retrieval.model:validation_step:370 - Recall@76_val: 79.16666666666666
+2024-10-16 19:25:20.929 | INFO     | retrieval.model:validation_step:370 - Recall@77_val: 79.16666666666666
+2024-10-16 19:25:20.930 | INFO     | retrieval.model:validation_step:370 - Recall@78_val: 79.16666666666666
+2024-10-16 19:25:20.930 | INFO     | retrieval.model:validation_step:370 - Recall@79_val: 79.16666666666666
+2024-10-16 19:25:20.931 | INFO     | retrieval.model:validation_step:370 - Recall@80_val: 79.16666666666666
+2024-10-16 19:25:20.932 | INFO     | retrieval.model:validation_step:370 - Recall@81_val: 79.16666666666666
+2024-10-16 19:25:20.932 | INFO     | retrieval.model:validation_step:370 - Recall@82_val: 79.16666666666666
+2024-10-16 19:25:20.933 | INFO     | retrieval.model:validation_step:370 - Recall@83_val: 79.16666666666666
+2024-10-16 19:25:20.934 | INFO     | retrieval.model:validation_step:370 - Recall@84_val: 79.16666666666666
+2024-10-16 19:25:20.934 | INFO     | retrieval.model:validation_step:370 - Recall@85_val: 79.16666666666666
+2024-10-16 19:25:20.935 | INFO     | retrieval.model:validation_step:370 - Recall@86_val: 79.16666666666666
+2024-10-16 19:25:20.936 | INFO     | retrieval.model:validation_step:370 - Recall@87_val: 79.16666666666666
+2024-10-16 19:25:20.937 | INFO     | retrieval.model:validation_step:370 - Recall@88_val: 79.16666666666666
+2024-10-16 19:25:20.937 | INFO     | retrieval.model:validation_step:370 - Recall@89_val: 79.16666666666666
+2024-10-16 19:25:20.938 | INFO     | retrieval.model:validation_step:370 - Recall@90_val: 79.16666666666666
+2024-10-16 19:25:20.939 | INFO     | retrieval.model:validation_step:370 - Recall@91_val: 79.16666666666666
+2024-10-16 19:25:20.939 | INFO     | retrieval.model:validation_step:370 - Recall@92_val: 79.16666666666666
+2024-10-16 19:25:20.940 | INFO     | retrieval.model:validation_step:370 - Recall@93_val: 79.16666666666666
+2024-10-16 19:25:20.941 | INFO     | retrieval.model:validation_step:370 - Recall@94_val: 79.16666666666666
+2024-10-16 19:25:20.941 | INFO     | retrieval.model:validation_step:370 - Recall@95_val: 79.16666666666666
+2024-10-16 19:25:20.942 | INFO     | retrieval.model:validation_step:370 - Recall@96_val: 79.16666666666666
+2024-10-16 19:25:20.943 | INFO     | retrieval.model:validation_step:370 - Recall@97_val: 79.16666666666666
+2024-10-16 19:25:20.943 | INFO     | retrieval.model:validation_step:370 - Recall@98_val: 79.16666666666666
+2024-10-16 19:25:20.944 | INFO     | retrieval.model:validation_step:370 - Recall@99_val: 79.16666666666666
+2024-10-16 19:25:20.945 | INFO     | retrieval.model:validation_step:370 - Recall@100_val: 79.16666666666666
+2024-10-16 19:25:20.946 | INFO     | retrieval.model:validation_step:379 - MRR: 0.520734126984127
+2024-10-16 19:25:20.946 | INFO     | retrieval.model:validation_step:387 - End of validation_step
+2024-10-16 19:25:21.279 | INFO     | retrieval.model:validation_step:370 - Recall@1_val: 13.888888888888888
+2024-10-16 19:25:21.281 | INFO     | retrieval.model:validation_step:370 - Recall@2_val: 30.0
+2024-10-16 19:25:21.282 | INFO     | retrieval.model:validation_step:370 - Recall@3_val: 56.666666666666664
+2024-10-16 19:25:21.282 | INFO     | retrieval.model:validation_step:370 - Recall@4_val: 60.0
+2024-10-16 19:25:21.283 | INFO     | retrieval.model:validation_step:370 - Recall@5_val: 60.0
+2024-10-16 19:25:21.284 | INFO     | retrieval.model:validation_step:370 - Recall@6_val: 62.222222222222214
+2024-10-16 19:25:21.284 | INFO     | retrieval.model:validation_step:370 - Recall@7_val: 64.44444444444444
+2024-10-16 19:25:21.285 | INFO     | retrieval.model:validation_step:370 - Recall@8_val: 67.77777777777777
+2024-10-16 19:25:21.286 | INFO     | retrieval.model:validation_step:370 - Recall@9_val: 67.77777777777777
+2024-10-16 19:25:21.287 | INFO     | retrieval.model:validation_step:370 - Recall@10_val: 76.11111111111111
+2024-10-16 19:25:21.287 | INFO     | retrieval.model:validation_step:370 - Recall@11_val: 76.11111111111111
+2024-10-16 19:25:21.288 | INFO     | retrieval.model:validation_step:370 - Recall@12_val: 76.11111111111111
+2024-10-16 19:25:21.288 | INFO     | retrieval.model:validation_step:370 - Recall@13_val: 76.11111111111111
+2024-10-16 19:25:21.289 | INFO     | retrieval.model:validation_step:370 - Recall@14_val: 76.11111111111111
+2024-10-16 19:25:21.290 | INFO     | retrieval.model:validation_step:370 - Recall@15_val: 76.11111111111111
+2024-10-16 19:25:21.290 | INFO     | retrieval.model:validation_step:370 - Recall@16_val: 76.11111111111111
+2024-10-16 19:25:21.291 | INFO     | retrieval.model:validation_step:370 - Recall@17_val: 76.11111111111111
+2024-10-16 19:25:21.292 | INFO     | retrieval.model:validation_step:370 - Recall@18_val: 76.11111111111111
+2024-10-16 19:25:21.292 | INFO     | retrieval.model:validation_step:370 - Recall@19_val: 76.11111111111111
+2024-10-16 19:25:21.293 | INFO     | retrieval.model:validation_step:370 - Recall@20_val: 76.11111111111111
+2024-10-16 19:25:21.293 | INFO     | retrieval.model:validation_step:370 - Recall@21_val: 82.77777777777777
+2024-10-16 19:25:21.294 | INFO     | retrieval.model:validation_step:370 - Recall@22_val: 82.77777777777777
+2024-10-16 19:25:21.295 | INFO     | retrieval.model:validation_step:370 - Recall@23_val: 82.77777777777777
+2024-10-16 19:25:21.295 | INFO     | retrieval.model:validation_step:370 - Recall@24_val: 82.77777777777777
+2024-10-16 19:25:21.296 | INFO     | retrieval.model:validation_step:370 - Recall@25_val: 82.77777777777777
+2024-10-16 19:25:21.297 | INFO     | retrieval.model:validation_step:370 - Recall@26_val: 82.77777777777777
+2024-10-16 19:25:21.298 | INFO     | retrieval.model:validation_step:370 - Recall@27_val: 82.77777777777777
+2024-10-16 19:25:21.299 | INFO     | retrieval.model:validation_step:370 - Recall@28_val: 82.77777777777777
+2024-10-16 19:25:21.299 | INFO     | retrieval.model:validation_step:370 - Recall@29_val: 82.77777777777777
+2024-10-16 19:25:21.300 | INFO     | retrieval.model:validation_step:370 - Recall@30_val: 82.77777777777777
+2024-10-16 19:25:21.301 | INFO     | retrieval.model:validation_step:370 - Recall@31_val: 82.77777777777777
+2024-10-16 19:25:21.301 | INFO     | retrieval.model:validation_step:370 - Recall@32_val: 82.77777777777777
+2024-10-16 19:25:21.302 | INFO     | retrieval.model:validation_step:370 - Recall@33_val: 82.77777777777777
+2024-10-16 19:25:21.303 | INFO     | retrieval.model:validation_step:370 - Recall@34_val: 82.77777777777777
+2024-10-16 19:25:21.303 | INFO     | retrieval.model:validation_step:370 - Recall@35_val: 82.77777777777777
+2024-10-16 19:25:21.304 | INFO     | retrieval.model:validation_step:370 - Recall@36_val: 82.77777777777777
+2024-10-16 19:25:21.305 | INFO     | retrieval.model:validation_step:370 - Recall@37_val: 82.77777777777777
+2024-10-16 19:25:21.305 | INFO     | retrieval.model:validation_step:370 - Recall@38_val: 82.77777777777777
+2024-10-16 19:25:21.306 | INFO     | retrieval.model:validation_step:370 - Recall@39_val: 82.77777777777777
+2024-10-16 19:25:21.307 | INFO     | retrieval.model:validation_step:370 - Recall@40_val: 82.77777777777777
+2024-10-16 19:25:21.307 | INFO     | retrieval.model:validation_step:370 - Recall@41_val: 82.77777777777777
+2024-10-16 19:25:21.308 | INFO     | retrieval.model:validation_step:370 - Recall@42_val: 82.77777777777777
+2024-10-16 19:25:21.309 | INFO     | retrieval.model:validation_step:370 - Recall@43_val: 82.77777777777777
+2024-10-16 19:25:21.310 | INFO     | retrieval.model:validation_step:370 - Recall@44_val: 82.77777777777777
+2024-10-16 19:25:21.310 | INFO     | retrieval.model:validation_step:370 - Recall@45_val: 82.77777777777777
+2024-10-16 19:25:21.311 | INFO     | retrieval.model:validation_step:370 - Recall@46_val: 82.77777777777777
+2024-10-16 19:25:21.312 | INFO     | retrieval.model:validation_step:370 - Recall@47_val: 82.77777777777777
+2024-10-16 19:25:21.312 | INFO     | retrieval.model:validation_step:370 - Recall@48_val: 82.77777777777777
+2024-10-16 19:25:21.313 | INFO     | retrieval.model:validation_step:370 - Recall@49_val: 82.77777777777777
+2024-10-16 19:25:21.314 | INFO     | retrieval.model:validation_step:370 - Recall@50_val: 82.77777777777777
+2024-10-16 19:25:21.314 | INFO     | retrieval.model:validation_step:370 - Recall@51_val: 82.77777777777777
+2024-10-16 19:25:21.315 | INFO     | retrieval.model:validation_step:370 - Recall@52_val: 82.77777777777777
+2024-10-16 19:25:21.316 | INFO     | retrieval.model:validation_step:370 - Recall@53_val: 82.77777777777777
+2024-10-16 19:25:21.317 | INFO     | retrieval.model:validation_step:370 - Recall@54_val: 82.77777777777777
+2024-10-16 19:25:21.317 | INFO     | retrieval.model:validation_step:370 - Recall@55_val: 82.77777777777777
+2024-10-16 19:25:21.318 | INFO     | retrieval.model:validation_step:370 - Recall@56_val: 82.77777777777777
+2024-10-16 19:25:21.319 | INFO     | retrieval.model:validation_step:370 - Recall@57_val: 82.77777777777777
+2024-10-16 19:25:21.320 | INFO     | retrieval.model:validation_step:370 - Recall@58_val: 82.77777777777777
+2024-10-16 19:25:21.320 | INFO     | retrieval.model:validation_step:370 - Recall@59_val: 82.77777777777777
+2024-10-16 19:25:21.321 | INFO     | retrieval.model:validation_step:370 - Recall@60_val: 82.77777777777777
+2024-10-16 19:25:21.322 | INFO     | retrieval.model:validation_step:370 - Recall@61_val: 82.77777777777777
+2024-10-16 19:25:21.323 | INFO     | retrieval.model:validation_step:370 - Recall@62_val: 82.77777777777777
+2024-10-16 19:25:21.323 | INFO     | retrieval.model:validation_step:370 - Recall@63_val: 82.77777777777777
+2024-10-16 19:25:21.324 | INFO     | retrieval.model:validation_step:370 - Recall@64_val: 82.77777777777777
+2024-10-16 19:25:21.325 | INFO     | retrieval.model:validation_step:370 - Recall@65_val: 82.77777777777777
+2024-10-16 19:25:21.326 | INFO     | retrieval.model:validation_step:370 - Recall@66_val: 82.77777777777777
+2024-10-16 19:25:21.326 | INFO     | retrieval.model:validation_step:370 - Recall@67_val: 82.77777777777777
+2024-10-16 19:25:21.327 | INFO     | retrieval.model:validation_step:370 - Recall@68_val: 82.77777777777777
+2024-10-16 19:25:21.328 | INFO     | retrieval.model:validation_step:370 - Recall@69_val: 82.77777777777777
+2024-10-16 19:25:21.329 | INFO     | retrieval.model:validation_step:370 - Recall@70_val: 82.77777777777777
+2024-10-16 19:25:21.329 | INFO     | retrieval.model:validation_step:370 - Recall@71_val: 82.77777777777777
+2024-10-16 19:25:21.330 | INFO     | retrieval.model:validation_step:370 - Recall@72_val: 84.44444444444444
+2024-10-16 19:25:21.331 | INFO     | retrieval.model:validation_step:370 - Recall@73_val: 84.44444444444444
+2024-10-16 19:25:21.332 | INFO     | retrieval.model:validation_step:370 - Recall@74_val: 84.44444444444444
+2024-10-16 19:25:21.332 | INFO     | retrieval.model:validation_step:370 - Recall@75_val: 84.44444444444444
+2024-10-16 19:25:21.333 | INFO     | retrieval.model:validation_step:370 - Recall@76_val: 84.44444444444444
+2024-10-16 19:25:21.334 | INFO     | retrieval.model:validation_step:370 - Recall@77_val: 84.44444444444444
+2024-10-16 19:25:21.335 | INFO     | retrieval.model:validation_step:370 - Recall@78_val: 84.44444444444444
+2024-10-16 19:25:21.335 | INFO     | retrieval.model:validation_step:370 - Recall@79_val: 84.44444444444444
+2024-10-16 19:25:21.336 | INFO     | retrieval.model:validation_step:370 - Recall@80_val: 84.44444444444444
+2024-10-16 19:25:21.337 | INFO     | retrieval.model:validation_step:370 - Recall@81_val: 84.44444444444444
+2024-10-16 19:25:21.338 | INFO     | retrieval.model:validation_step:370 - Recall@82_val: 84.44444444444444
+2024-10-16 19:25:21.338 | INFO     | retrieval.model:validation_step:370 - Recall@83_val: 84.44444444444444
+2024-10-16 19:25:21.339 | INFO     | retrieval.model:validation_step:370 - Recall@84_val: 84.44444444444444
+2024-10-16 19:25:21.340 | INFO     | retrieval.model:validation_step:370 - Recall@85_val: 84.44444444444444
+2024-10-16 19:25:21.341 | INFO     | retrieval.model:validation_step:370 - Recall@86_val: 84.44444444444444
+2024-10-16 19:25:21.342 | INFO     | retrieval.model:validation_step:370 - Recall@87_val: 84.44444444444444
+2024-10-16 19:25:21.343 | INFO     | retrieval.model:validation_step:370 - Recall@88_val: 84.44444444444444
+2024-10-16 19:25:21.343 | INFO     | retrieval.model:validation_step:370 - Recall@89_val: 84.44444444444444
+2024-10-16 19:25:21.344 | INFO     | retrieval.model:validation_step:370 - Recall@90_val: 84.44444444444444
+2024-10-16 19:25:21.345 | INFO     | retrieval.model:validation_step:370 - Recall@91_val: 84.44444444444444
+2024-10-16 19:25:21.346 | INFO     | retrieval.model:validation_step:370 - Recall@92_val: 84.44444444444444
+2024-10-16 19:25:21.347 | INFO     | retrieval.model:validation_step:370 - Recall@93_val: 84.44444444444444
+2024-10-16 19:25:21.348 | INFO     | retrieval.model:validation_step:370 - Recall@94_val: 84.44444444444444
+2024-10-16 19:25:21.348 | INFO     | retrieval.model:validation_step:370 - Recall@95_val: 84.44444444444444
+2024-10-16 19:25:21.349 | INFO     | retrieval.model:validation_step:370 - Recall@96_val: 84.44444444444444
+2024-10-16 19:25:21.350 | INFO     | retrieval.model:validation_step:370 - Recall@97_val: 84.44444444444444
+2024-10-16 19:25:21.350 | INFO     | retrieval.model:validation_step:370 - Recall@98_val: 84.44444444444444
+2024-10-16 19:25:21.351 | INFO     | retrieval.model:validation_step:370 - Recall@99_val: 84.44444444444444
+2024-10-16 19:25:21.352 | INFO     | retrieval.model:validation_step:370 - Recall@100_val: 84.44444444444444
+2024-10-16 19:25:21.352 | INFO     | retrieval.model:validation_step:379 - MRR: 0.45984126984126983
+2024-10-16 19:25:21.353 | INFO     | retrieval.model:validation_step:387 - End of validation_step
+2024-10-16 19:25:21.736 | INFO     | retrieval.model:validation_step:370 - Recall@1_val: 19.65811965811966
+2024-10-16 19:25:21.737 | INFO     | retrieval.model:validation_step:370 - Recall@2_val: 29.914529914529915
+2024-10-16 19:25:21.738 | INFO     | retrieval.model:validation_step:370 - Recall@3_val: 33.76068376068376
+2024-10-16 19:25:21.739 | INFO     | retrieval.model:validation_step:370 - Recall@4_val: 39.1025641025641
+2024-10-16 19:25:21.740 | INFO     | retrieval.model:validation_step:370 - Recall@5_val: 44.871794871794876
+2024-10-16 19:25:21.740 | INFO     | retrieval.model:validation_step:370 - Recall@6_val: 47.43589743589743
+2024-10-16 19:25:21.741 | INFO     | retrieval.model:validation_step:370 - Recall@7_val: 50.0
+2024-10-16 19:25:21.742 | INFO     | retrieval.model:validation_step:370 - Recall@8_val: 50.854700854700866
+2024-10-16 19:25:21.743 | INFO     | retrieval.model:validation_step:370 - Recall@9_val: 51.4957264957265
+2024-10-16 19:25:21.743 | INFO     | retrieval.model:validation_step:370 - Recall@10_val: 51.4957264957265
+2024-10-16 19:25:21.744 | INFO     | retrieval.model:validation_step:370 - Recall@11_val: 51.4957264957265
+2024-10-16 19:25:21.745 | INFO     | retrieval.model:validation_step:370 - Recall@12_val: 51.4957264957265
+2024-10-16 19:25:21.746 | INFO     | retrieval.model:validation_step:370 - Recall@13_val: 58.760683760683754
+2024-10-16 19:25:21.747 | INFO     | retrieval.model:validation_step:370 - Recall@14_val: 58.760683760683754
+2024-10-16 19:25:21.747 | INFO     | retrieval.model:validation_step:370 - Recall@15_val: 60.04273504273504
+2024-10-16 19:25:21.748 | INFO     | retrieval.model:validation_step:370 - Recall@16_val: 60.04273504273504
+2024-10-16 19:25:21.749 | INFO     | retrieval.model:validation_step:370 - Recall@17_val: 60.68376068376068
+2024-10-16 19:25:21.749 | INFO     | retrieval.model:validation_step:370 - Recall@18_val: 61.96581196581196
+2024-10-16 19:25:21.750 | INFO     | retrieval.model:validation_step:370 - Recall@19_val: 62.82051282051282
+2024-10-16 19:25:21.751 | INFO     | retrieval.model:validation_step:370 - Recall@20_val: 62.82051282051282
+2024-10-16 19:25:21.751 | INFO     | retrieval.model:validation_step:370 - Recall@21_val: 63.67521367521367
+2024-10-16 19:25:21.752 | INFO     | retrieval.model:validation_step:370 - Recall@22_val: 65.17094017094016
+2024-10-16 19:25:21.753 | INFO     | retrieval.model:validation_step:370 - Recall@23_val: 65.17094017094016
+2024-10-16 19:25:21.754 | INFO     | retrieval.model:validation_step:370 - Recall@24_val: 66.45299145299145
+2024-10-16 19:25:21.754 | INFO     | retrieval.model:validation_step:370 - Recall@25_val: 67.3076923076923
+2024-10-16 19:25:21.755 | INFO     | retrieval.model:validation_step:370 - Recall@26_val: 67.3076923076923
+2024-10-16 19:25:21.756 | INFO     | retrieval.model:validation_step:370 - Recall@27_val: 68.58974358974358
+2024-10-16 19:25:21.757 | INFO     | retrieval.model:validation_step:370 - Recall@28_val: 68.58974358974358
+2024-10-16 19:25:21.757 | INFO     | retrieval.model:validation_step:370 - Recall@29_val: 68.58974358974358
+2024-10-16 19:25:21.758 | INFO     | retrieval.model:validation_step:370 - Recall@30_val: 68.58974358974358
+2024-10-16 19:25:21.759 | INFO     | retrieval.model:validation_step:370 - Recall@31_val: 68.58974358974358
+2024-10-16 19:25:21.759 | INFO     | retrieval.model:validation_step:370 - Recall@32_val: 68.58974358974358
+2024-10-16 19:25:21.760 | INFO     | retrieval.model:validation_step:370 - Recall@33_val: 68.58974358974358
+2024-10-16 19:25:21.761 | INFO     | retrieval.model:validation_step:370 - Recall@34_val: 68.58974358974358
+2024-10-16 19:25:21.761 | INFO     | retrieval.model:validation_step:370 - Recall@35_val: 71.15384615384615
+2024-10-16 19:25:21.762 | INFO     | retrieval.model:validation_step:370 - Recall@36_val: 71.15384615384615
+2024-10-16 19:25:21.763 | INFO     | retrieval.model:validation_step:370 - Recall@37_val: 73.71794871794872
+2024-10-16 19:25:21.763 | INFO     | retrieval.model:validation_step:370 - Recall@38_val: 73.71794871794872
+2024-10-16 19:25:21.764 | INFO     | retrieval.model:validation_step:370 - Recall@39_val: 73.71794871794872
+2024-10-16 19:25:21.765 | INFO     | retrieval.model:validation_step:370 - Recall@40_val: 73.71794871794872
+2024-10-16 19:25:21.765 | INFO     | retrieval.model:validation_step:370 - Recall@41_val: 73.71794871794872
+2024-10-16 19:25:21.766 | INFO     | retrieval.model:validation_step:370 - Recall@42_val: 73.71794871794872
+2024-10-16 19:25:21.767 | INFO     | retrieval.model:validation_step:370 - Recall@43_val: 73.71794871794872
+2024-10-16 19:25:21.767 | INFO     | retrieval.model:validation_step:370 - Recall@44_val: 73.71794871794872
+2024-10-16 19:25:21.768 | INFO     | retrieval.model:validation_step:370 - Recall@45_val: 74.57264957264957
+2024-10-16 19:25:21.769 | INFO     | retrieval.model:validation_step:370 - Recall@46_val: 74.57264957264957
+2024-10-16 19:25:21.770 | INFO     | retrieval.model:validation_step:370 - Recall@47_val: 74.57264957264957
+2024-10-16 19:25:21.771 | INFO     | retrieval.model:validation_step:370 - Recall@48_val: 74.57264957264957
+2024-10-16 19:25:21.771 | INFO     | retrieval.model:validation_step:370 - Recall@49_val: 74.57264957264957
+2024-10-16 19:25:21.772 | INFO     | retrieval.model:validation_step:370 - Recall@50_val: 74.57264957264957
+2024-10-16 19:25:21.773 | INFO     | retrieval.model:validation_step:370 - Recall@51_val: 74.57264957264957
+2024-10-16 19:25:21.774 | INFO     | retrieval.model:validation_step:370 - Recall@52_val: 74.57264957264957
+2024-10-16 19:25:21.774 | INFO     | retrieval.model:validation_step:370 - Recall@53_val: 74.57264957264957
+2024-10-16 19:25:21.775 | INFO     | retrieval.model:validation_step:370 - Recall@54_val: 74.57264957264957
+2024-10-16 19:25:21.776 | INFO     | retrieval.model:validation_step:370 - Recall@55_val: 74.57264957264957
+2024-10-16 19:25:21.776 | INFO     | retrieval.model:validation_step:370 - Recall@56_val: 74.57264957264957
+2024-10-16 19:25:21.777 | INFO     | retrieval.model:validation_step:370 - Recall@57_val: 74.57264957264957
+2024-10-16 19:25:21.778 | INFO     | retrieval.model:validation_step:370 - Recall@58_val: 74.57264957264957
+2024-10-16 19:25:21.779 | INFO     | retrieval.model:validation_step:370 - Recall@59_val: 74.57264957264957
+2024-10-16 19:25:21.780 | INFO     | retrieval.model:validation_step:370 - Recall@60_val: 75.85470085470085
+2024-10-16 19:25:21.781 | INFO     | retrieval.model:validation_step:370 - Recall@61_val: 75.85470085470085
+2024-10-16 19:25:21.781 | INFO     | retrieval.model:validation_step:370 - Recall@62_val: 75.85470085470085
+2024-10-16 19:25:21.782 | INFO     | retrieval.model:validation_step:370 - Recall@63_val: 75.85470085470085
+2024-10-16 19:25:21.783 | INFO     | retrieval.model:validation_step:370 - Recall@64_val: 75.85470085470085
+2024-10-16 19:25:21.784 | INFO     | retrieval.model:validation_step:370 - Recall@65_val: 76.70940170940172
+2024-10-16 19:25:21.784 | INFO     | retrieval.model:validation_step:370 - Recall@66_val: 76.70940170940172
+2024-10-16 19:25:21.785 | INFO     | retrieval.model:validation_step:370 - Recall@67_val: 77.56410256410257
+2024-10-16 19:25:21.786 | INFO     | retrieval.model:validation_step:370 - Recall@68_val: 77.56410256410257
+2024-10-16 19:25:21.786 | INFO     | retrieval.model:validation_step:370 - Recall@69_val: 77.56410256410257
+2024-10-16 19:25:21.787 | INFO     | retrieval.model:validation_step:370 - Recall@70_val: 77.56410256410257
+2024-10-16 19:25:21.788 | INFO     | retrieval.model:validation_step:370 - Recall@71_val: 77.56410256410257
+2024-10-16 19:25:21.788 | INFO     | retrieval.model:validation_step:370 - Recall@72_val: 77.56410256410257
+2024-10-16 19:25:21.789 | INFO     | retrieval.model:validation_step:370 - Recall@73_val: 77.56410256410257
+2024-10-16 19:25:21.790 | INFO     | retrieval.model:validation_step:370 - Recall@74_val: 77.56410256410257
+2024-10-16 19:25:21.791 | INFO     | retrieval.model:validation_step:370 - Recall@75_val: 77.56410256410257
+2024-10-16 19:25:21.792 | INFO     | retrieval.model:validation_step:370 - Recall@76_val: 77.56410256410257
+2024-10-16 19:25:21.793 | INFO     | retrieval.model:validation_step:370 - Recall@77_val: 77.56410256410257
+2024-10-16 19:25:21.793 | INFO     | retrieval.model:validation_step:370 - Recall@78_val: 77.56410256410257
+2024-10-16 19:25:21.794 | INFO     | retrieval.model:validation_step:370 - Recall@79_val: 77.56410256410257
+2024-10-16 19:25:21.795 | INFO     | retrieval.model:validation_step:370 - Recall@80_val: 77.56410256410257
+2024-10-16 19:25:21.795 | INFO     | retrieval.model:validation_step:370 - Recall@81_val: 77.56410256410257
+2024-10-16 19:25:21.796 | INFO     | retrieval.model:validation_step:370 - Recall@82_val: 77.56410256410257
+2024-10-16 19:25:21.797 | INFO     | retrieval.model:validation_step:370 - Recall@83_val: 78.84615384615384
+2024-10-16 19:25:21.798 | INFO     | retrieval.model:validation_step:370 - Recall@84_val: 78.84615384615384
+2024-10-16 19:25:21.798 | INFO     | retrieval.model:validation_step:370 - Recall@85_val: 78.84615384615384
+2024-10-16 19:25:21.799 | INFO     | retrieval.model:validation_step:370 - Recall@86_val: 78.84615384615384
+2024-10-16 19:25:21.800 | INFO     | retrieval.model:validation_step:370 - Recall@87_val: 79.48717948717949
+2024-10-16 19:25:21.801 | INFO     | retrieval.model:validation_step:370 - Recall@88_val: 79.48717948717949
+2024-10-16 19:25:21.802 | INFO     | retrieval.model:validation_step:370 - Recall@89_val: 79.48717948717949
+2024-10-16 19:25:21.803 | INFO     | retrieval.model:validation_step:370 - Recall@90_val: 79.48717948717949
+2024-10-16 19:25:21.803 | INFO     | retrieval.model:validation_step:370 - Recall@91_val: 79.48717948717949
+2024-10-16 19:25:21.804 | INFO     | retrieval.model:validation_step:370 - Recall@92_val: 79.48717948717949
+2024-10-16 19:25:21.805 | INFO     | retrieval.model:validation_step:370 - Recall@93_val: 79.48717948717949
+2024-10-16 19:25:21.806 | INFO     | retrieval.model:validation_step:370 - Recall@94_val: 79.48717948717949
+2024-10-16 19:25:21.806 | INFO     | retrieval.model:validation_step:370 - Recall@95_val: 79.48717948717949
+2024-10-16 19:25:21.807 | INFO     | retrieval.model:validation_step:370 - Recall@96_val: 79.48717948717949
+2024-10-16 19:25:21.808 | INFO     | retrieval.model:validation_step:370 - Recall@97_val: 79.48717948717949
+2024-10-16 19:25:21.808 | INFO     | retrieval.model:validation_step:370 - Recall@98_val: 79.48717948717949
+2024-10-16 19:25:21.809 | INFO     | retrieval.model:validation_step:370 - Recall@99_val: 79.48717948717949
+2024-10-16 19:25:21.810 | INFO     | retrieval.model:validation_step:370 - Recall@100_val: 79.48717948717949
+2024-10-16 19:25:21.811 | INFO     | retrieval.model:validation_step:379 - MRR: 0.4176361227980661
+2024-10-16 19:25:21.811 | INFO     | retrieval.model:validation_step:387 - End of validation_step
+                                                                                                                                                                                                                        2
+024-10-16 19:25:21.817 | INFO     | retrieval.model:validation_step:316 - Inside validation_step██████████████████████████████████████████████████████████████████████████████▋          | 14/15 [00:47<00:03,  0.30it/s]
+2024-10-16 19:25:21.840 | INFO     | retrieval.model:validation_step:320 - Embeddings staled validation step: False
+2024-10-16 19:25:22.908 | INFO     | retrieval.model:validation_step:370 - Recall@1_val: 10.416666666666666
+2024-10-16 19:25:22.914 | INFO     | retrieval.model:validation_step:370 - Recall@2_val: 25.416666666666664
+2024-10-16 19:25:22.915 | INFO     | retrieval.model:validation_step:370 - Recall@3_val: 25.416666666666664
+2024-10-16 19:25:22.915 | INFO     | retrieval.model:validation_step:370 - Recall@4_val: 40.416666666666664
+2024-10-16 19:25:22.916 | INFO     | retrieval.model:validation_step:370 - Recall@5_val: 44.58333333333333
+2024-10-16 19:25:22.917 | INFO     | retrieval.model:validation_step:370 - Recall@6_val: 44.58333333333333
+2024-10-16 19:25:22.917 | INFO     | retrieval.model:validation_step:370 - Recall@7_val: 44.58333333333333
+2024-10-16 19:25:22.918 | INFO     | retrieval.model:validation_step:370 - Recall@8_val: 51.24999999999999
+2024-10-16 19:25:22.919 | INFO     | retrieval.model:validation_step:370 - Recall@9_val: 51.24999999999999
+2024-10-16 19:25:22.920 | INFO     | retrieval.model:validation_step:370 - Recall@10_val: 51.24999999999999
+2024-10-16 19:25:22.920 | INFO     | retrieval.model:validation_step:370 - Recall@11_val: 51.24999999999999
+2024-10-16 19:25:22.921 | INFO     | retrieval.model:validation_step:370 - Recall@12_val: 51.24999999999999
+2024-10-16 19:25:22.922 | INFO     | retrieval.model:validation_step:370 - Recall@13_val: 55.41666666666667
+2024-10-16 19:25:22.922 | INFO     | retrieval.model:validation_step:370 - Recall@14_val: 55.41666666666667
+2024-10-16 19:25:22.923 | INFO     | retrieval.model:validation_step:370 - Recall@15_val: 55.41666666666667
+2024-10-16 19:25:22.924 | INFO     | retrieval.model:validation_step:370 - Recall@16_val: 67.91666666666667
+2024-10-16 19:25:22.925 | INFO     | retrieval.model:validation_step:370 - Recall@17_val: 74.16666666666667
+2024-10-16 19:25:22.926 | INFO     | retrieval.model:validation_step:370 - Recall@18_val: 74.16666666666667
+2024-10-16 19:25:22.926 | INFO     | retrieval.model:validation_step:370 - Recall@19_val: 74.16666666666667
+2024-10-16 19:25:22.927 | INFO     | retrieval.model:validation_step:370 - Recall@20_val: 74.16666666666667
+2024-10-16 19:25:22.928 | INFO     | retrieval.model:validation_step:370 - Recall@21_val: 74.16666666666667
+2024-10-16 19:25:22.929 | INFO     | retrieval.model:validation_step:370 - Recall@22_val: 74.16666666666667
+2024-10-16 19:25:22.929 | INFO     | retrieval.model:validation_step:370 - Recall@23_val: 74.16666666666667
+2024-10-16 19:25:22.930 | INFO     | retrieval.model:validation_step:370 - Recall@24_val: 76.66666666666666
+2024-10-16 19:25:22.931 | INFO     | retrieval.model:validation_step:370 - Recall@25_val: 76.66666666666666
+2024-10-16 19:25:22.931 | INFO     | retrieval.model:validation_step:370 - Recall@26_val: 76.66666666666666
+2024-10-16 19:25:22.932 | INFO     | retrieval.model:validation_step:370 - Recall@27_val: 76.66666666666666
+2024-10-16 19:25:22.933 | INFO     | retrieval.model:validation_step:370 - Recall@28_val: 76.66666666666666
+2024-10-16 19:25:22.933 | INFO     | retrieval.model:validation_step:370 - Recall@29_val: 76.66666666666666
+2024-10-16 19:25:22.934 | INFO     | retrieval.model:validation_step:370 - Recall@30_val: 76.66666666666666
+2024-10-16 19:25:22.935 | INFO     | retrieval.model:validation_step:370 - Recall@31_val: 76.66666666666666
+2024-10-16 19:25:22.935 | INFO     | retrieval.model:validation_step:370 - Recall@32_val: 76.66666666666666
+2024-10-16 19:25:22.936 | INFO     | retrieval.model:validation_step:370 - Recall@33_val: 76.66666666666666
+2024-10-16 19:25:22.937 | INFO     | retrieval.model:validation_step:370 - Recall@34_val: 80.83333333333333
+2024-10-16 19:25:22.938 | INFO     | retrieval.model:validation_step:370 - Recall@35_val: 80.83333333333333
+2024-10-16 19:25:22.938 | INFO     | retrieval.model:validation_step:370 - Recall@36_val: 80.83333333333333
+2024-10-16 19:25:22.939 | INFO     | retrieval.model:validation_step:370 - Recall@37_val: 80.83333333333333
+2024-10-16 19:25:22.940 | INFO     | retrieval.model:validation_step:370 - Recall@38_val: 80.83333333333333
+2024-10-16 19:25:22.940 | INFO     | retrieval.model:validation_step:370 - Recall@39_val: 80.83333333333333
+2024-10-16 19:25:22.941 | INFO     | retrieval.model:validation_step:370 - Recall@40_val: 80.83333333333333
+2024-10-16 19:25:22.942 | INFO     | retrieval.model:validation_step:370 - Recall@41_val: 80.83333333333333
+2024-10-16 19:25:22.942 | INFO     | retrieval.model:validation_step:370 - Recall@42_val: 80.83333333333333
+2024-10-16 19:25:22.943 | INFO     | retrieval.model:validation_step:370 - Recall@43_val: 80.83333333333333
+2024-10-16 19:25:22.944 | INFO     | retrieval.model:validation_step:370 - Recall@44_val: 80.83333333333333
+2024-10-16 19:25:22.944 | INFO     | retrieval.model:validation_step:370 - Recall@45_val: 80.83333333333333
+2024-10-16 19:25:22.945 | INFO     | retrieval.model:validation_step:370 - Recall@46_val: 80.83333333333333
+2024-10-16 19:25:22.946 | INFO     | retrieval.model:validation_step:370 - Recall@47_val: 80.83333333333333
+2024-10-16 19:25:22.946 | INFO     | retrieval.model:validation_step:370 - Recall@48_val: 80.83333333333333
+2024-10-16 19:25:22.947 | INFO     | retrieval.model:validation_step:370 - Recall@49_val: 80.83333333333333
+2024-10-16 19:25:22.948 | INFO     | retrieval.model:validation_step:370 - Recall@50_val: 80.83333333333333
+2024-10-16 19:25:22.948 | INFO     | retrieval.model:validation_step:370 - Recall@51_val: 80.83333333333333
+2024-10-16 19:25:22.949 | INFO     | retrieval.model:validation_step:370 - Recall@52_val: 80.83333333333333
+2024-10-16 19:25:22.950 | INFO     | retrieval.model:validation_step:370 - Recall@53_val: 80.83333333333333
+2024-10-16 19:25:22.950 | INFO     | retrieval.model:validation_step:370 - Recall@54_val: 80.83333333333333
+2024-10-16 19:25:22.951 | INFO     | retrieval.model:validation_step:370 - Recall@55_val: 80.83333333333333
+2024-10-16 19:25:22.952 | INFO     | retrieval.model:validation_step:370 - Recall@56_val: 80.83333333333333
+2024-10-16 19:25:22.952 | INFO     | retrieval.model:validation_step:370 - Recall@57_val: 80.83333333333333
+2024-10-16 19:25:22.953 | INFO     | retrieval.model:validation_step:370 - Recall@58_val: 80.83333333333333
+2024-10-16 19:25:22.954 | INFO     | retrieval.model:validation_step:370 - Recall@59_val: 80.83333333333333
+2024-10-16 19:25:22.954 | INFO     | retrieval.model:validation_step:370 - Recall@60_val: 80.83333333333333
+2024-10-16 19:25:22.955 | INFO     | retrieval.model:validation_step:370 - Recall@61_val: 80.83333333333333
+2024-10-16 19:25:22.956 | INFO     | retrieval.model:validation_step:370 - Recall@62_val: 80.83333333333333
+2024-10-16 19:25:22.956 | INFO     | retrieval.model:validation_step:370 - Recall@63_val: 80.83333333333333
+2024-10-16 19:25:22.957 | INFO     | retrieval.model:validation_step:370 - Recall@64_val: 80.83333333333333
+2024-10-16 19:25:22.958 | INFO     | retrieval.model:validation_step:370 - Recall@65_val: 80.83333333333333
+2024-10-16 19:25:22.958 | INFO     | retrieval.model:validation_step:370 - Recall@66_val: 80.83333333333333
+2024-10-16 19:25:22.959 | INFO     | retrieval.model:validation_step:370 - Recall@67_val: 80.83333333333333
+2024-10-16 19:25:22.960 | INFO     | retrieval.model:validation_step:370 - Recall@68_val: 80.83333333333333
+2024-10-16 19:25:22.960 | INFO     | retrieval.model:validation_step:370 - Recall@69_val: 80.83333333333333
+2024-10-16 19:25:22.961 | INFO     | retrieval.model:validation_step:370 - Recall@70_val: 80.83333333333333
+2024-10-16 19:25:22.962 | INFO     | retrieval.model:validation_step:370 - Recall@71_val: 80.83333333333333
+2024-10-16 19:25:22.962 | INFO     | retrieval.model:validation_step:370 - Recall@72_val: 80.83333333333333
+2024-10-16 19:25:22.963 | INFO     | retrieval.model:validation_step:370 - Recall@73_val: 80.83333333333333
+2024-10-16 19:25:22.964 | INFO     | retrieval.model:validation_step:370 - Recall@74_val: 80.83333333333333
+2024-10-16 19:25:22.964 | INFO     | retrieval.model:validation_step:370 - Recall@75_val: 80.83333333333333
+2024-10-16 19:25:22.965 | INFO     | retrieval.model:validation_step:370 - Recall@76_val: 80.83333333333333
+2024-10-16 19:25:22.966 | INFO     | retrieval.model:validation_step:370 - Recall@77_val: 80.83333333333333
+2024-10-16 19:25:22.966 | INFO     | retrieval.model:validation_step:370 - Recall@78_val: 80.83333333333333
+2024-10-16 19:25:22.967 | INFO     | retrieval.model:validation_step:370 - Recall@79_val: 80.83333333333333
+2024-10-16 19:25:22.968 | INFO     | retrieval.model:validation_step:370 - Recall@80_val: 80.83333333333333
+2024-10-16 19:25:22.969 | INFO     | retrieval.model:validation_step:370 - Recall@81_val: 80.83333333333333
+2024-10-16 19:25:22.969 | INFO     | retrieval.model:validation_step:370 - Recall@82_val: 80.83333333333333
+2024-10-16 19:25:22.970 | INFO     | retrieval.model:validation_step:370 - Recall@83_val: 80.83333333333333
+2024-10-16 19:25:22.971 | INFO     | retrieval.model:validation_step:370 - Recall@84_val: 80.83333333333333
+2024-10-16 19:25:22.971 | INFO     | retrieval.model:validation_step:370 - Recall@85_val: 80.83333333333333
+2024-10-16 19:25:22.972 | INFO     | retrieval.model:validation_step:370 - Recall@86_val: 80.83333333333333
+2024-10-16 19:25:22.973 | INFO     | retrieval.model:validation_step:370 - Recall@87_val: 80.83333333333333
+2024-10-16 19:25:22.973 | INFO     | retrieval.model:validation_step:370 - Recall@88_val: 80.83333333333333
+2024-10-16 19:25:22.974 | INFO     | retrieval.model:validation_step:370 - Recall@89_val: 80.83333333333333
+2024-10-16 19:25:22.975 | INFO     | retrieval.model:validation_step:370 - Recall@90_val: 80.83333333333333
+2024-10-16 19:25:22.975 | INFO     | retrieval.model:validation_step:370 - Recall@91_val: 93.33333333333333
+2024-10-16 19:25:22.976 | INFO     | retrieval.model:validation_step:370 - Recall@92_val: 93.33333333333333
+2024-10-16 19:25:22.977 | INFO     | retrieval.model:validation_step:370 - Recall@93_val: 93.33333333333333
+2024-10-16 19:25:22.978 | INFO     | retrieval.model:validation_step:370 - Recall@94_val: 93.33333333333333
+2024-10-16 19:25:22.978 | INFO     | retrieval.model:validation_step:370 - Recall@95_val: 93.33333333333333
+2024-10-16 19:25:22.979 | INFO     | retrieval.model:validation_step:370 - Recall@96_val: 93.33333333333333
+2024-10-16 19:25:22.980 | INFO     | retrieval.model:validation_step:370 - Recall@97_val: 93.33333333333333
+2024-10-16 19:25:22.980 | INFO     | retrieval.model:validation_step:370 - Recall@98_val: 93.33333333333333
+2024-10-16 19:25:22.981 | INFO     | retrieval.model:validation_step:370 - Recall@99_val: 93.33333333333333
+2024-10-16 19:25:22.982 | INFO     | retrieval.model:validation_step:370 - Recall@100_val: 93.33333333333333
+2024-10-16 19:25:22.982 | INFO     | retrieval.model:validation_step:379 - MRR: 0.4404361263736264
+2024-10-16 19:25:22.983 | INFO     | retrieval.model:validation_step:387 - End of validation_step
+Epoch 1: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13336/13336 [1:46:35<00:00,  2.09it/s, v_num=13]
+Epoch 1, global step 5667: 'Recall@10_val' reached 58.42636 (best 72.99026), saving model to '/data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2
+147_lambda_0.1_epoch=1-Recall@10_val=58.43.ckpt' as top 2
+`Trainer.fit` stopped: `max_epochs=2` reached.
+Epoch 1: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13336/13336 [1:47:08<00:00,  2.07it/s, v_num=13]
+2024-10-16 19:25:59.384 | INFO     | __main__:main:1606 - hit the barrier after training
+2024-10-16 19:25:59.413 | INFO     | __main__:main:1606 - hit the barrier after training
+2024-10-16 19:25:59.511 | INFO     | __main__:main:1606 - hit the barrier after training
+2024-10-16 19:26:00.208 | INFO     | __main__:main:1606 - hit the barrier after training
+2024-10-16 19:26:00.209 | INFO     | __main__:main:1612 - Finished progressive training at epoch 2
+2024-10-16 19:26:00.209 | INFO     | __main__:main:1612 - Finished progressive training at epoch 2
+2024-10-16 19:26:00.209 | INFO     | __main__:main:1612 - Finished progressive training at epoch 2
+2024-10-16 19:26:00.209 | INFO     | __main__:main:1612 - Finished progressive training at epoch 2
+2024-10-16 19:26:00.210 | INFO     | __main__:find_latest_checkpoint:579 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b
+054bfa17e2147_lambda_0.1_epoch=1-Recall@10_val=58.43.ckpt
+2024-10-16 19:26:00.210 | INFO     | __main__:find_latest_checkpoint:579 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b
+054bfa17e2147_lambda_0.1_epoch=1-Recall@10_val=58.43.ckpt
+2024-10-16 19:26:00.210 | INFO     | __main__:find_latest_checkpoint:579 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b
+054bfa17e2147_lambda_0.1_epoch=1-Recall@10_val=58.43.ckpt
+2024-10-16 19:26:00.210 | INFO     | __main__:find_latest_checkpoint:579 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b
+054bfa17e2147_lambda_0.1_epoch=1-Recall@10_val=58.43.ckpt
+2024-10-16 19:26:00.210 | INFO     | __main__:main:1619 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_
+0.1_epoch=1-Recall@10_val=58.43.ckpt
+2024-10-16 19:26:00.210 | INFO     | __main__:main:1619 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_
+0.1_epoch=1-Recall@10_val=58.43.ckpt
+2024-10-16 19:26:00.210 | INFO     | __main__:main:1619 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_
+0.1_epoch=1-Recall@10_val=58.43.ckpt
+2024-10-16 19:26:00.210 | INFO     | __main__:main:1619 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_
+0.1_epoch=1-Recall@10_val=58.43.ckpt
+2024-10-16 19:26:08.961 | INFO     | __main__:main:1628 - Testing...
+2024-10-16 19:26:08.965 | INFO     | retrieval.main:run_cli:60 - PID: 230991
+2024-10-16 19:26:09.044 | INFO     | __main__:main:1628 - Testing...
+2024-10-16 19:26:09.044 | INFO     | retrieval.main:run_cli:60 - PID: 240568
+2024-10-16 19:26:09.045 | INFO     | __main__:main:1628 - Testing...
+2024-10-16 19:26:09.045 | INFO     | retrieval.main:run_cli:60 - PID: 240566
+2024-10-16 19:26:09.048 | INFO     | __main__:main:1628 - Testing...
+2024-10-16 19:26:09.049 | INFO     | retrieval.main:run_cli:60 - PID: 240567
+[rank: 0] Seed set to 3407
+[rank: 1] Seed set to 3407
+[rank: 3] Seed set to 3407
+[rank: 2] Seed set to 3407
+2024-10-16 19:26:09.349 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random
+2024-10-16 19:26:09.350 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744/corpus.jsonl
+2024-10-16 19:26:09.397 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random
+2024-10-16 19:26:09.397 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744/corpus.jsonl
+2024-10-16 19:26:09.406 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random
+2024-10-16 19:26:09.406 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744/corpus.jsonl
+2024-10-16 19:26:09.423 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random
+2024-10-16 19:26:09.423 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6
+2655744/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 19:26:30.840 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149285
+2024-10-16 19:26:30.862 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2294
+2024-10-16 19:26:31.548 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149285
+2024-10-16 19:26:31.549 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149285
+2024-10-16 19:26:31.565 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2294
+2024-10-16 19:26:31.566 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2294
+2024-10-16 19:26:32.277 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149285
+2024-10-16 19:26:32.298 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6e
+b9c916e62655744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2294
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=1-Recall@10_val=58.43.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147_lambda_0.1_epoch=1-Recall@10_val=58.43.ckpt
+2024-10-16 19:26:36.004 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 19:26:36.029 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                                                                                                                                           | 0/2027 [00:00<?, ?it/s]
+2024-10-16 19:26:36.093 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 19:26:36.105 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                                                                                                                                           | 0/2027 [00:00<?, ?it/s]
+2024-10-16 19:26:36.119 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 19:26:36.120 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                                                                                                                                      | 0/? [00:00<?, ?it/s]
+2024-10-16 19:26:36.473 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 19:26:36.474 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  7%|████████████▏                                                                                                                                                7%|████████████▎
+                                                                                                         7%|████████████▎
+                                                                    | 141/2027 [00:49<16:50,  1.87it/s]
+  7%|████████████▏                                                                7%|████████████▎
+                         7%|████████████▍                                                                                                                                                7%|████████████▍
+                                                                                                                                                    | 142/2027 [00:49<16:53,  1.86it/s]
+  7%|████████████▎                                                                7%|████████████▍
+                         7%|████████████▍                                                                                                                                                7%|████████████▍
+                                                                                                                                                    | 143/2027 [00:50<16:55,  1.86it/s]
+  7%|████████████▍                                                                7%|████████████▍
+                         7%|████████████▌                                                                                                                                                7%|████████████▌
+                                                                                                                                                    | 144/2027 [00:51<16:58,  1.85it/s]
+  7%|████████████▍                                                                7%|████████████▌
+                         7%|████████████▋                                                                                                                                                7%|████████████▋
+                                                                                                                                                    | 145/2027 [00:51<17:01,  1.84it/s]
+  7%|████████████▌                                                                7%|████████████▋
+                         7%|████████████▋                                                                                                                                                7%|████████████▋
+                                                                                                                                                    | 146/2027 [00:52<15:50,  1.98it/s]
+  7%|████████████▋                                                                7%|████████████▋
+                         7%|████████████▊                                                                                                                                                7%|████████████▊
+                                                                                                                                                    | 147/2027 [00:52<16:11,  1.94it/s]
+  7%|████████████▋                                                                7%|████████████▊
+                         7%|████████████▉                                                                                                                                                7%|████████████▉
+                                                                                                                                                    | 148/2027 [00:53<16:27,  1.90it/s]
+  7%|████████████▊                                                                7%|████████████▉
+                         7%|█████████████                                                                                                                                                7%|█████████████
+                                                                                                                                                    | 149/2027 [00:53<16:01,  1.95it/s]
+  7%|████████████▉                                                                7%|█████████████
+                         7%|█████████████                                                                                                                                                7%|█████████████
+                                                                                                                                                    | 150/2027 [00:54<16:17,  1.92it/s]
+  7%|█████████████                                                                7%|█████████████
+                         7%|█████████████▏                                                                                                                                               7%|█████████████▏
+                                                                                                                                                    | 151/2027 [00:54<16:30,  1.89it/s]
+  7%|█████████████                                                                7%|█████████████▏
+                         7%|█████████████▎                                                                                                                                               7%|█████████████▎
+                                                                                                                                                    | 152/2027 [00:55<16:38,  1.88it/s]
+  7%|█████████████▏                                                               7%|█████████████▎
+                         8%|█████████████▎                                                                                                                                               8%|█████████████▎
+                                                                                                                                                    | 153/2027 [00:55<16:46,  1.86it/s]
+  7%|█████████████▎                                                               8%|█████████████▍
+                         8%|█████████████▍                                                                                                                                               8%|█████████████▎
+                                                                                                                                8%|█████████████▍
+                                                                                           | 154/2027 [00:56<13:37,  2.29it/s]
+  8%|█████████████▎                                                               8%|█████████████▌
+                         8%|█████████████▌                                                                                                                                                                   | 155/2027 [
+00:56<14:34,  2.14it/s]
+  8%|█████████████▍                                                               8%|█████████████▌
+                         8%|█████████████▌                                                                                                                                               8%|█████████████▌
+                                                                                                                                                    | 156/2027 [00:57<15:17,  2.04it/s]
+  8%|█████████████▌                                                               8%|█████████████▌
+                         8%|█████████████▋                                                                                                                                               8%|█████████████▋
+                                                                                                                                                    | 157/2027 [00:57<15:47,  1.97it/s]
+  8%|█████████████▌                                                               8%|█████████████▋
+                         8%|█████████████▊                                                                                                                                               8%|█████████████▊
+                                                                                                                                                    | 158/2027 [00:58<16:07,  1.93it/s]
+  8%|█████████████▋                                                               8%|█████████████▊
+                         8%|█████████████▉                                                                                                                                               8%|█████████████▉
+                                                                                                                                                    | 159/2027 [00:58<16:20,  1.90it/s]
+  8%|█████████████▊                                                               8%|█████████████▉
+                         8%|█████████████▉                                                                                                                                               8%|█████████████▉
+                                                                                                                                                    | 160/2027 [00:59<16:30,  1.88it/s]
+  8%|█████████████▉                                                               8%|█████████████▉
+                         8%|██████████████                                                                                                                                               8%|██████████████
+                                                                                                                                                    | 161/2027 [00:59<16:37,  1.87it/s]
+  8%|█████████████▉                                                               8%|██████████████
+                         8%|██████████████▏                                                                                                                                              8%|██████████████▏
+                                                                                                                                                    | 162/2027 [01:00<16:41,  1.86it/s]
+  8%|██████████████                                                               8%|██████████████▏
+                         8%|██████████████▏                                                                                                                                              8%|██████████████▏
+                                                                                                                                                    | 163/2027 [01:00<16:45,  1.85it/s]
+  8%|██████████████▏                                                              8%|██████████████▏
+                         8%|██████████████▎                                                                                                                                              8%|██████████████▎
+                                                                                                                                                    | 164/2027 [01:01<16:47,  1.85it/s]
+  8%|██████████████▏                                                              8%|██████████████▎
+                         8%|██████████████▍                                                                                                                                              8%|██████████████▍
+                                                                                                                                8%|██████████████▌
+                                                                       8%|██████████████▌
+                                  | 167/2027 [01:02<10:13,  3.03it/s]
+  8%|██████████████▎                                                              8%|██████████████▍
+                         8%|██████████████▋                                                                                                                                              8%|██████████████▋
+                                                                                                                                8%|██████████████▌
+                                                                                           | 167/2027 [01:02<10:16,  3.02it/s]
+  8%|██████████████▍                                                              8%|██████████████▋
+                                             | 168/2027 [01:02<09:52,  3.14it/s]
+  8%|██████████████▌                                                              8%|██████████████▊
+                         8%|██████████████▊                                                                                                                                                                  | 169/2027 [
+01:03<11:39,  2.66it/s]
+  8%|██████████████▋                                                              8%|██████████████▊
+                         8%|██████████████▊                                                                                                                                              8%|██████████████▊
+                                                                                                                                                    | 170/2027 [01:03<13:03,  2.37it/s]
+  8%|██████████████▊                                                              8%|██████████████▊
+                         8%|██████████████▉                                                                                                                                              8%|██████████████▉
+                                                                                                                                9%|███████████████
+                                                                       9%|███████████████
+                                  | 173/2027 [01:04<08:57,  3.45it/s]
+  8%|██████████████▊                                                              8%|██████████████▉
+                         9%|███████████████                                                                                                                                              9%|███████████████▏
+                                                                                                                                9%|███████████████▏
+                                                                                           | 174/2027 [01:04<10:50,  2.85it/s]
+  8%|██████████████▉                                                                                                                                              9%|███████████████
+                         9%|███████████████▏                                                                                                                                             9%|███████████████▎
+                                                                                                                                9%|███████████████▎
+                                                                                           | 175/2027 [01:05<12:21,  2.50it/s]
+  9%|███████████████▏                                                             9%|███████████████▎
+                         9%|███████████████▎                                                                                                                                             9%|███████████████▎
+                                                                                                                                                    | 176/2027 [01:05<13:32,  2.28it/s]
+  9%|███████████████▎                                                             9%|███████████████▎
+                         9%|███████████████▍                                                                                                                                             9%|███████████████▍
+                                                                                                                                9%|███████████████▌
+                                                                       9%|███████████████▌
+                                  | 178/2027 [01:06<11:27,  2.69it/s]
+  9%|███████████████▎                                                             9%|███████████████▍
+                         9%|███████████████▋                                                                                                                                             9%|███████████████▋
+                                                                                                                                9%|███████████████▌
+                                                                                           | 178/2027 [01:06<11:30,  2.68it/s]
+  9%|███████████████▍                                                             9%|███████████████▋
+                                             | 179/2027 [01:07<11:08,  2.77it/s]
+  9%|███████████████▌                                                             9%|███████████████▋
+                         9%|███████████████▋                                                                                                                                                                 | 180/2027 [
+01:07<12:35,  2.44it/s]
+  9%|███████████████▋                                                             9%|███████████████▋
+                         9%|███████████████▊                                                                                                                                             9%|███████████████▊
+                                                                                                                                                    | 181/2027 [01:07<13:48,  2.23it/s]
+  9%|███████████████▋                                                             9%|███████████████▊
+                         9%|███████████████▉                                                                                                                                             9%|███████████████▉
+                                                                                                                                                    | 182/2027 [01:08<14:39,  2.10it/s]
+  9%|███████████████▊                                                             9%|███████████████▉
+                         9%|███████████████▉                                                                                                                                             9%|███████████████▉
+                                                                                                                                                    | 183/2027 [01:09<15:16,  2.01it/s]
+  9%|███████████████▉                                                             9%|███████████████▉
+                         9%|████████████████                                                                                                                                             9%|████████████████
+                                                                                                                                                    | 184/2027 [01:09<15:43,  1.95it/s]
+  9%|███████████████▉                                                             9%|████████████████▏
+                         9%|████████████████▏                                                                                                                                            9%|████████████████
+                                                                                                                                9%|████████████████▏
+                                                                                           | 185/2027 [01:10<13:55,  2.21it/s]
+  9%|████████████████                                                             9%|████████████████▏
+                         9%|████████████████▏                                                                                                                                                                | 186/2027 [
+01:10<14:41,  2.09it/s]
+  9%|████████████████▏                                                            9%|████████████████▏
+                         9%|████████████████▎                                                                                                                                            9%|████████████████▎
+                                                                                                                                                    | 187/2027 [01:11<15:17,  2.01it/s]
+  9%|████████████████▏                                                            9%|████████████████▎
+                         9%|████████████████▍                                                                                                                                            9%|████████████████▍
+                                                                                                                                                    | 188/2027 [01:11<15:41,  1.95it/s]
+  9%|████████████████▎                                                            9%|████████████████▍
+                         9%|████████████████▌                                                                                                                                            9%|████████████████▌
+                                                                                                                                                    | 189/2027 [01:12<15:58,  1.92it/s]
+  9%|████████████████▍                                                            9%|████████████████▌
+                         9%|████████████████▌                                                                                                                                            9%|████████████████▌
+                                                                                                                                                    | 190/2027 [01:12<16:10,  1.89it/s]
+  9%|████████████████▌                                                            9%|████████████████▌
+                         9%|████████████████▋                                                                                                                                            9%|████████████████▋
+                                                                                                                                                    | 191/2027 [01:13<16:18,  1.88it/s]
+  9%|████████████████▌                                                            9%|████████████████▋
+                         9%|████████████████▊                                                                                                                                            9%|████████████████▊
+                                                                                                                                                    | 192/2027 [01:13<16:23,  1.87it/s]
+  9%|████████████████▋                                                            9%|████████████████▊
+                        10%|████████████████▊                                                                                                                                           10%|████████████████▊
+                                                                                                                                                    | 193/2027 [01:14<16:27,  1.86it/s]
+  9%|████████████████▊                                                           10%|████████████████▊
+                        10%|████████████████▉                                                                                                                                           10%|████████████████▉
+                                                                                                                                                    | 194/2027 [01:14<16:29,  1.85it/s]
+ 10%|████████████████▊                                                           10%|████████████████▉
+                        10%|█████████████████                                                                                                                                           10%|█████████████████
+                                                                                                                                                    | 195/2027 [01:15<16:31,  1.85it/s]
+ 10%|████████████████▉                                                           10%|█████████████████
+                        10%|█████████████████                                                                                                                                           10%|█████████████████
+                                                                                                                                                    | 196/2027 [01:15<16:32,  1.84it/s]
+ 10%|█████████████████                                                           10%|█████████████████
+                        10%|█████████████████▏                                                                                                                                          10%|█████████████████▏
+                                                                                                                                                    | 197/2027 [01:16<16:34,  1.84it/s]
+ 10%|█████████████████                                                           10%|█████████████████▏
+                        10%|█████████████████▎                                                                                                                                          10%|█████████████████▎
+                                                                                                                                                    | 198/2027 [01:17<16:34,  1.84it/s]
+ 10%|█████████████████▏                                                          10%|█████████████████▎
+                        10%|█████████████████▍                                                                                                                                          10%|█████████████████▍
+                                                                                                                                                    | 199/2027 [01:17<16:33,  1.84it/s]
+ 10%|█████████████████▎                                                          10%|█████████████████▍
+                        10%|█████████████████▍                                                                                                                                          10%|█████████████████▍
+                                                                                                                                                    | 200/2027 [01:18<16:32,  1.84it/s]
+ 10%|█████████████████▍                                                          10%|█████████████████▍
+                        10%|█████████████████▌                                                                                                                                          10%|█████████████████▌
+                                                                                                                                                    | 201/2027 [01:18<16:32,  1.84it/s]
+ 10%|█████████████████▍                                                          10%|█████████████████▌
+                        10%|█████████████████▋                                                                                                                                          10%|█████████████████▋
+                                                                                                                                                    | 202/2027 [01:19<16:31,  1.84it/s]
+ 10%|█████████████████▌                                                          10%|█████████████████▋
+                        10%|█████████████████▋                                                                                                                                          10%|█████████████████▋
+                                                                                                                                                    | 203/2027 [01:19<16:31,  1.84it/s]
+ 10%|█████████████████▋                                                          10%|█████████████████▋
+                        10%|█████████████████▊                                                                                                                                          10%|█████████████████▊
+                                                                                                                                                    | 204/2027 [01:20<16:34,  1.83it/s]
+ 10%|█████████████████▋                                                          10%|█████████████████▊
+                        10%|█████████████████▉                                                                                                                                          10%|█████████████████▉
+                                                                                                                                                    | 205/2027 [01:20<16:32,  1.84it/s]
+ 10%|█████████████████▊                                                          10%|█████████████████▉
+                        10%|█████████████████▉                                                                                                                                          10%|█████████████████▉
+                                                                                                                                                    | 206/2027 [01:21<16:29,  1.84it/s]
+ 10%|█████████████████▉                                                          10%|█████████████████▉
+                        10%|██████████████████                                                                                                                                          10%|██████████████████
+                                                                                                                                                    | 207/2027 [01:21<16:29,  1.84it/s]
+ 10%|█████████████████▉                                                          10%|██████████████████
+                        10%|██████████████████▏                                                                                                                                         10%|██████████████████▏
+                                                                                                                                                    | 208/2027 [01:22<16:30,  1.84it/s]
+ 10%|██████████████████                                                          10%|██████████████████▏
+                        10%|██████████████████▎                                                                                                                                         10%|██████████████████▎
+                                                                                                                                                    | 209/2027 [01:22<16:28,  1.84it/s]
+ 10%|██████████████████▏                                                         10%|██████████████████▎
+                        10%|██████████████████▎                                                                                                                                         10%|██████████████████▎
+                                                                                                                                                    | 210/2027 [01:23<16:29,  1.84it/s]
+ 10%|██████████████████▎                                                         10%|██████████████████▎
+                        10%|██████████████████▍                                                                                                                                         10%|██████████████████▍
+                                                                                                                                                    | 211/2027 [01:24<16:27,  1.84it/s]
+ 10%|██████████████████▎                                                         10%|██████████████████▍
+                        10%|██████████████████▌                                                                                                                                         10%|██████████████████▌
+                                                                                                                                                    | 212/2027 [01:24<16:26,  1.84it/s]
+ 10%|██████████████████▍                                                         10%|██████████████████▌
+                        11%|██████████████████▌                                                                                                                                         11%|██████████████████▌
+                                                                                                                                                    | 213/2027 [01:25<16:27,  1.84it/s]
+ 10%|██████████████████▌                                                         11%|██████████████████▌
+                        11%|██████████████████▋                                                                                                                                         11%|██████████████████▋
+                                                                                                                                                    | 214/2027 [01:25<16:26,  1.84it/s]
+ 11%|██████████████████▌                                                         11%|██████████████████▋
+                        11%|██████████████████▊                                                                                                                                         11%|██████████████████▊
+                                                                                                                                                    | 215/2027 [01:26<16:26,  1.84it/s]
+ 11%|██████████████████▋                                                         11%|██████████████████▊
+                        11%|██████████████████▊                                                                                                                                         11%|██████████████████▊
+                                                                                                                                                    | 216/2027 [01:26<16:25,  1.84it/s]
+ 11%|██████████████████▊                                                         11%|██████████████████▊
+                        11%|██████████████████▉                                                                                                                                         11%|██████████████████▉
+                                                                                                                                                    | 217/2027 [01:27<16:24,  1.84it/s]
+ 11%|██████████████████▊                                                         11%|██████████████████▉
+                        11%|███████████████████                                                                                                                                         11%|███████████████████
+                                                                                                                                                    | 218/2027 [01:27<16:24,  1.84it/s]
+ 11%|██████████████████▉                                                         11%|███████████████████
+                        11%|███████████████████                                                                                                                                         11%|███████████████████
+                                                                                                                                                    | 219/2027 [01:28<16:23,  1.84it/s]
+ 11%|███████████████████                                                         11%|███████████████████▏
+                        11%|███████████████████                                                                                                                                         11%|███████████████████▏
+                                                                                                                                                    | 220/2027 [01:28<16:25,  1.83it/s]
+ 11%|███████████████████                                                         11%|███████████████████▎
+                        11%|███████████████████▏                                                                                                                                        11%|███████████████████▎
+                                                                                                                                                    | 221/2027 [01:29<16:22,  1.84it/s]
+ 11%|███████████████████▏                                                        11%|███████████████████▍
+                        11%|███████████████████▎                                                                                                                                        11%|███████████████████▍
+                                                                                                                                                    | 222/2027 [01:30<16:21,  1.84it/s]
+ 11%|███████████████████▎                                                        11%|███████████████████▍
+                        11%|███████████████████▍                                                                                                                                        11%|███████████████████▍
+                                                                                                                                                    | 223/2027 [01:30<16:20,  1.84it/s]
+ 11%|███████████████████▍                                                        11%|███████████████████▌
+                        11%|███████████████████▍                                                                                                                                        11%|███████████████████▌
+                                                                                                                                                    | 224/2027 [01:31<16:21,  1.84it/s]
+ 11%|███████████████████▍                                                        11%|███████████████████▋
+                        11%|███████████████████▌                                                                                                                                        11%|███████████████████▋
+                                                                                                                                                    | 225/2027 [01:31<16:20,  1.84it/s]
+ 11%|███████████████████▌                                                        11%|███████████████████▋
+                        11%|███████████████████▋                                                                                                                                        11%|███████████████████▋
+                                                                                                                                                    | 226/2027 [01:32<16:20,  1.84it/s]
+ 11%|███████████████████▋                                                        11%|███████████████████▊
+                        11%|███████████████████▋                                                                                                                                        11%|███████████████████▊
+                                                                                                                                                    | 227/2027 [01:32<16:18,  1.84it/s]
+ 11%|███████████████████▋                                                        11%|███████████████████▉
+                        11%|███████████████████▊                                                                                                                                        11%|███████████████████▉
+                                                                                                                                                    | 228/2027 [01:33<16:18,  1.84it/s]
+ 11%|███████████████████▊                                                        11%|███████████████████▉
+                        11%|███████████████████▉                                                                                                                                        11%|███████████████████▉
+                                                                                                                                                    | 229/2027 [01:33<16:17,  1.84it/s]
+ 11%|███████████████████▉                                                        11%|████████████████████
+                        11%|███████████████████▉                                                                                                                                        11%|████████████████████
+                                                                                                                                                    | 230/2027 [01:34<16:17,  1.84it/s]
+ 11%|███████████████████▉                                                        11%|████████████████████▏
+                        11%|████████████████████                                                                                                                                        11%|████████████████████▏
+                                                                                                                                                    | 231/2027 [01:34<16:17,  1.84it/s]
+ 11%|████████████████████                                                        11%|████████████████████▎
+                        11%|████████████████████▏                                                                                                                                       11%|████████████████████▎
+                                                                                                                                                    | 232/2027 [01:35<16:16,  1.84it/s]
+ 11%|████████████████████▏                                                       11%|████████████████████▎
+                        11%|████████████████████▎                                                                                                                                       11%|████████████████████▎
+                                                                                                                               12%|████████████████████▍
+                                                                      12%|████████████████████▍
+                                  | 234/2027 [01:36<13:31,  2.21it/s]
+ 11%|████████████████████▎                                                       11%|████████████████████▎
+                        12%|████████████████████▌                                                                                                                                       12%|████████████████████▌
+                                                                                                                               12%|████████████████████▍
+                                                                      12%|████████████████████▌
+             12%|████████████████████▌                                                                                                                                       12%|████████████████████▋
+                                                                                                                                         | 237/2027 [01:36<09:33,  3.12it/s]
+ 11%|████████████████████▎                                                       12%|████████████████████▋
+                        12%|████████████████████▌                                                                                                                                                            | 235/2027 [
+01:37<13:40,  2.19it/s]
+ 12%|████████████████████▍                                                       12%|████████████████████▌
+                        12%|████████████████████▊                                                                                                                                       12%|████████████████████▋
+                                                                                                                               12%|████████████████████▊
+                                                                                           | 238/2027 [01:37<11:34,  2.58it/s]
+ 12%|████████████████████▌                                                                                                                                       12%|████████████████████▌
+                        12%|████████████████████▊                                                                                                                                                            | 239/2027 [
+01:37<12:55,  2.30it/s]
+ 12%|████████████████████▋                                                       12%|████████████████████▊
+                        12%|████████████████████▊                                                                                                                                       12%|████████████████████▉
+                                                                                                                                                    | 240/2027 [01:38<13:53,  2.14it/s]
+ 12%|████████████████████▊                                                       12%|████████████████████▊
+                        12%|████████████████████▉                                                                                                                                       12%|█████████████████████
+                                                                                                                                                    | 241/2027 [01:39<14:33,  2.04it/s]
+ 12%|████████████████████▊                                                       12%|████████████████████▉
+                        12%|█████████████████████                                                                                                                                       12%|█████████████████████▏
+                                                                                                                                                    | 242/2027 [01:39<15:02,  1.98it/s]
+ 12%|████████████████████▉                                                       12%|█████████████████████
+                        12%|█████████████████████▏                                                                                                                                      12%|█████████████████████▏
+                                                                                                                                                    | 243/2027 [01:40<15:22,  1.93it/s]
+ 12%|█████████████████████                                                       12%|█████████████████████▏
+                        12%|█████████████████████▏                                                                                                                                      12%|█████████████████████▎
+                                                                                                                                                    | 244/2027 [01:40<15:35,  1.91it/s]
+ 12%|█████████████████████▏                                                      12%|█████████████████████▏
+                        12%|█████████████████████▎                                                                                                                                      12%|█████████████████████▍
+                                                                                                                                                    | 245/2027 [01:41<15:44,  1.89it/s]
+ 12%|█████████████████████▏                                                      12%|█████████████████████▎
+                        12%|█████████████████████▍                                                                                                                                      12%|█████████████████████▍
+                                                                                                                                                    | 246/2027 [01:41<15:51,  1.87it/s]
+ 12%|█████████████████████▎                                                      12%|█████████████████████▍
+                        12%|█████████████████████▍                                                                                                                                      12%|█████████████████████▌
+                                                                                                                                                    | 247/2027 [01:42<15:55,  1.86it/s]
+ 12%|█████████████████████▍                                                      12%|█████████████████████▍
+                        12%|█████████████████████▌                                                                                                                                      12%|█████████████████████▋
+                                                                                                                                                    | 248/2027 [01:42<15:58,  1.86it/s]
+ 12%|█████████████████████▍                                                      12%|█████████████████████▋
+                        12%|█████████████████████▌                                                                                                                                      12%|█████████████████████▋
+                                                                                                                               12%|█████████████████████▋
+                                                                      12%|█████████████████████▉
+             12%|█████████████████████▉                                                                                                                                      12%|██████████████████████
+                                                                                                                    13%|██████████████████████▏
+                                                                                | 254/2027 [01:43<05:12,  5.67it/s]
+ 12%|█████████████████████▌                                                      12%|██████████████████████
+                        12%|█████████████████████▋                                                                                                                                      13%|██████████████████████▎
+                                                                                                                               13%|██████████████████████▏
+                                                                      12%|█████████████████████▋
+             13%|██████████████████████▎                                                                                                                                     12%|█████████████████████▉
+                                                                                                                    13%|██████████████████████▍
+                                                           13%|██████████████████████▍
+  12%|██████████████████████                                                                                                                                                           | 253/2027 [01:44<05:49,  5.07it/s
+]
+ 12%|█████████████████████▋                                                      13%|██████████████████████▌
+                        13%|██████████████████████▏                                                                                                                                                          | 254/2027 [
+01:44<05:16,  5.59it/s]
+ 12%|█████████████████████▋                                                      13%|██████████████████████▌
+                        13%|██████████████████████▌                                                                                                                                     13%|██████████████████████▎
+                                                                                                                                                    | 255/2027 [01:44<04:48,  6.14it/s]
+ 12%|█████████████████████▉                                                      13%|██████████████████████▋
+                        13%|██████████████████████▌                                                                                                                                     13%|██████████████████████▋
+                                                                                                                               13%|██████████████████████▍
+                                                                                           | 257/2027 [01:44<04:23,  6.72it/s]
+ 12%|██████████████████████                                                                                                                                      13%|██████████████████████▏
+                        13%|██████████████████████▌                                                                                                                                                          | 258/2027 [
+01:44<04:50,  6.09it/s]
+ 13%|██████████████████████▎                                                     13%|██████████████████████▊
+                        13%|██████████████████████▌                                                                                                                                                          | 259/2027 [
+01:44<04:53,  6.02it/s]
+ 13%|██████████████████████▍                                                     13%|██████████████████████▋
+                        13%|██████████████████████▊                                                                                                                                                          | 261/2027 [
+01:45<07:35,  3.88it/s]
+ 13%|██████████████████████▌                                                     13%|██████████████████████▉
+                        13%|██████████████████████▉                                                                                                                                                          | 262/2027 [
+01:45<08:18,  3.54it/s]
+ 13%|██████████████████████▌                                                                                                                                     13%|██████████████████████▋
+                        13%|██████████████████████▊                                                                                                                                     13%|██████████████████████▉
+                                                                                                                               13%|██████████████████████▉
+                                                                      13%|██████████████████████▉
+                                  | 263/2027 [01:46<10:40,  2.75it/s]
+ 13%|██████████████████████▊                                                     13%|███████████████████████
+                                             | 264/2027 [01:46<12:09,  2.42it/s]
+ 13%|██████████████████████▉                                                     13%|██████████████████████▉
+                        13%|███████████████████████                                                                                                                                     13%|███████████████████████▏
+                                                                                                                               13%|███████████████████████▏
+                                                                                           | 265/2027 [01:46<11:54,  2.46it/s]
+ 13%|██████████████████████▉                                                     13%|███████████████████████
+                        13%|███████████████████████▏                                                                                                                                    13%|███████████████████████▏
+                                                                                                                               13%|███████████████████████▎
+                                                                      13%|███████████████████████▏
+                                  | 266/2027 [01:47<13:07,  2.24it/s]
+ 13%|███████████████████████                                                     13%|███████████████████████▍
+                        13%|███████████████████████▎                                                                                                                                    13%|███████████████████████▍
+                                                                                                                               13%|███████████████████████▌
+                                                                                           | 270/2027 [01:47<06:42,  4.37it/s]
+ 13%|███████████████████████▏                                                    13%|███████████████████████▏
+                        13%|███████████████████████▌                                                                                                                                    13%|███████████████████████▎
+                                                                                                                               13%|███████████████████████▋
+                                                                      13%|███████████████████████▍
+             13%|███████████████████████▊                                                                                                                                    13%|███████████████████████▋
+                                                                                                                                         | 271/2027 [01:48<07:42,  3.80it/s]
+ 13%|███████████████████████▏                                                    13%|███████████████████████▊
+                        13%|███████████████████████▌                                                                                                                                    13%|███████████████████████▊
+                                                                                                                                                    | 273/2027 [01:48<07:08,  4.10it/s]
+ 13%|███████████████████████▎                                                    14%|███████████████████████▉
+                                             | 274/2027 [01:48<06:25,  4.54it/s]
+ 13%|███████████████████████▊                                                                                                                                    13%|███████████████████████▍
+                        13%|███████████████████████▋                                                                                                                                    14%|███████████████████████▉
+                                                                                                                               14%|████████████████████████
+                                                                                           | 275/2027 [01:48<06:17,  4.64it/s]
+ 13%|███████████████████████▌                                                    13%|███████████████████████▊
+                        14%|████████████████████████                                                                                                                                    14%|████████████████████████
+ 16%|████████████████████████████▉                                                                                                                                                    | 331/2027 [02:06<09:32,  2.96it/s]
+ 16%|████████████████████████████▌                                                                                                                                                    | 327/2027 [02:06<09:27,  3.00it/s]

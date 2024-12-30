@@ -1,0 +1,1475 @@
+ata/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random/cache_train/cached_data.pkl
+Training dataset size: 149850
+2024-10-16 04:01:33.796 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_pred/cached_data.pkl
+Testing dataset size: 2022
+2024-10-16 04:01:33.901 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_train/cached_data.pkl
+Training dataset size: 149850
+2024-10-16 04:01:33.918 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_pred/cached_data.pkl
+Testing dataset size: 2022
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+2024-10-16 04:01:36.335 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:01:36.336 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/2027 [00:00<?, ?it/s]2024-10-16 04:01:36.448 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:01:36.449 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/2027 [00:00<?, ?it/s]2024-10-16 04:01:36.533 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:01:36.534 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 04:01:37.550 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:01:37.551 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 2027/2027 [09:17<00:00,  3.63it/s]
+100%|██████████████████████████████████████████████████████████████████| 2027/2027 [09:19<00:00,  3.62it/s]
+100%|██████████████████████████████████████████████████████████████████| 2027/2027 [09:19<00:00,  3.62it/s]
+100%|██████████████████████████████████████████████████████████████████| 2027/2027 [09:23<00:00,  3.60it/s]
+Predicting DataLoader 0:   0%|                                                       | 0/8 [00:00<?, ?it/s]/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/loops/prediction_loop.py:255: predict returned No
+ne if it was on purpose, ignore this warning...
+Predicting DataLoader 0: 100%|███████████████████████████████████████████████| 8/8 [00:23<00:00,  0.34it/s]2024-10-16 04:11:25.174 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:11:25.174 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:11:25.174 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:11:25.174 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:11:25.260 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 04:11:25.260 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:11:25.262 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 04:11:25.262 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:11:25.294 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 04:11:25.295 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:11:25.302 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 04:11:25.302 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:11:25.302 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|███████████████████████████████████████████████| 8/8 [00:23<00:00,  0.33it/s]
+2024-10-16 04:11:26.193 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 04:11:26.208 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+2024-10-16 04:11:26.270 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+[rank: 2] Seed set to 3407
+[rank: 3] Seed set to 3407
+2024-10-16 04:11:26.517 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050f0f6c40804
+1b70205/random
+2024-10-16 04:11:26.518 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050f0f6c408
+041b70205/corpus.jsonl
+[rank: 1] Seed set to 3407
+2024-10-16 04:11:26.573 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050f0f6c40804
+1b70205/random
+2024-10-16 04:11:26.573 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050f0f6c408
+041b70205/corpus.jsonl
+2024-10-16 04:11:26.628 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050f0f6c40804
+1b70205/random
+2024-10-16 04:11:26.628 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050f0f6c408
+041b70205/corpus.jsonl
+2024-10-16 04:11:27.009 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 04:11:27.035 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random/test.json
+100%|███████████████████████████████████████████████████████████████| 1444/1444 [00:00<00:00, 69953.51it/s]
+2024-10-16 04:11:27.056 | INFO     | __main__:main:1801 - R@1 = 32.13522830018083 %, R@10 = 72.90014354492203 %, MRR = 0.6270278239558768
+2024-10-16 04:11:27.058 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 04:11:27.396 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050f0f6c40804
+1b70205/random
+2024-10-16 04:11:27.396 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050f0f6c408
+041b70205/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 04:11:28.085 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050
+f0f6c408041b70205/random/cache_train/cached_data.pkl
+2024-10-16 04:11:28.085 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050
+f0f6c408041b70205/random/cache_train/cached_data.pkl
+Training dataset size: 0
+Training dataset size: 0
+2024-10-16 04:11:28.085 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050
+f0f6c408041b70205/random/cache_train/cached_data.pkl
+2024-10-16 04:11:28.085 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050
+f0f6c408041b70205/random/cache_train/cached_data.pkl
+Training dataset size: 0
+Training dataset size: 0
+2024-10-16 04:11:28.086 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050
+f0f6c408041b70205/random/cache_pred/cached_data.pkl
+2024-10-16 04:11:28.086 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050
+f0f6c408041b70205/random/cache_pred/cached_data.pkl
+Testing dataset size: 0
+Testing dataset size: 0
+2024-10-16 04:11:28.086 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050
+f0f6c408041b70205/random/cache_pred/cached_data.pkl
+2024-10-16 04:11:28.086 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050
+f0f6c408041b70205/random/cache_pred/cached_data.pkl
+Testing dataset size: 0
+Testing dataset size: 0
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:105: Total length of `DataLoader` across ranks is zero. Please make sure this was your intention.
+2024-10-16 04:11:30.431 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+2024-10-16 04:11:30.463 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 04:11:30.522 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+[rank: 3] Seed set to 3407
+2024-10-16 04:11:30.692 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+2024-10-16 04:11:30.692 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jso
+nl
+[rank: 1] Seed set to 3407
+[rank: 2] Seed set to 3407
+2024-10-16 04:11:30.777 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+2024-10-16 04:11:30.777 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jso
+nl
+2024-10-16 04:11:30.821 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+2024-10-16 04:11:30.821 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jso
+nl
+2024-10-16 04:11:30.949 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 04:11:30.953 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050f0f6c408041b70205/random/test.jso
+n
+0it [00:00, ?it/s]
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+2024-10-16 04:11:30.957 | INFO     | __main__:main:1801 - R@1 = nan %, R@10 = nan %, MRR = nan
+2024-10-16 04:11:30.958 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 04:11:31.207 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+2024-10-16 04:11:31.207 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jso
+nl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 04:11:44.260 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/ra
+ndom/cache_train/cached_data.pkl
+Training dataset size: 169404
+2024-10-16 04:11:44.279 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/ra
+ndom/cache_pred/cached_data.pkl
+Testing dataset size: 2742
+2024-10-16 04:11:47.055 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/ra
+ndom/cache_train/cached_data.pkl
+Training dataset size: 169404
+2024-10-16 04:11:47.070 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/ra
+ndom/cache_pred/cached_data.pkl
+Testing dataset size: 2742
+2024-10-16 04:11:49.016 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/ra
+ndom/cache_train/cached_data.pkl
+Training dataset size: 169404
+2024-10-16 04:11:49.050 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/ra
+ndom/cache_pred/cached_data.pkl
+Testing dataset size: 2742
+2024-10-16 04:11:49.593 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/ra
+ndom/cache_train/cached_data.pkl
+Training dataset size: 169404
+2024-10-16 04:11:49.616 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/ra
+ndom/cache_pred/cached_data.pkl
+Testing dataset size: 2742
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 04:11:51.810 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:11:51.810 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/1717 [00:00<?, ?it/s]2024-10-16 04:11:51.937 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:11:51.937 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                     | 2/1717 [00:00<01:54, 14.91it/s]2024-10-16 04:11:52.002 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:11:52.003 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 04:11:53.488 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:11:53.489 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 1717/1717 [09:07<00:00,  3.14it/s]
+100%|██████████████████████████████████████████████████████████████████| 1717/1717 [09:08<00:00,  3.13it/s]
+100%|██████████████████████████████████████████████████████████████████| 1717/1717 [09:09<00:00,  3.12it/s]
+100%|██████████████████████████████████████████████████████████████████| 1717/1717 [09:13<00:00,  3.10it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 11/11 [00:30<00:00,  0.36it/s]2024-10-16 04:21:37.993 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:21:37.993 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:21:37.993 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:21:37.993 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:21:38.090 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 04:21:38.090 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 04:21:38.091 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:21:38.091 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:21:38.129 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 04:21:38.129 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:21:38.140 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 04:21:38.140 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:21:38.141 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 11/11 [00:30<00:00,  0.36it/s]
+2024-10-16 04:21:39.071 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 04:21:39.086 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+2024-10-16 04:21:39.170 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+[rank: 2] Seed set to 3407
+[rank: 1] Seed set to 3407
+2024-10-16 04:21:39.377 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random
+2024-10-16 04:21:39.377 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corp
+us.jsonl
+[rank: 3] Seed set to 3407
+2024-10-16 04:21:39.441 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random
+2024-10-16 04:21:39.442 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corp
+us.jsonl
+2024-10-16 04:21:39.519 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random
+2024-10-16 04:21:39.519 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corp
+us.jsonl
+2024-10-16 04:21:40.216 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 04:21:40.279 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random/test.json
+100%|███████████████████████████████████████████████████████████████| 1486/1486 [00:00<00:00, 30816.99it/s]
+2024-10-16 04:21:40.329 | INFO     | __main__:main:1801 - R@1 = 28.108861422264127 %, R@10 = 66.75250129601513 %, MRR = 0.5778786926949733
+2024-10-16 04:21:40.331 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 04:21:40.719 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random
+2024-10-16 04:21:40.719 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corp
+us.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 04:22:16.131 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_train/cached_data.pkl
+Training dataset size: 361172
+2024-10-16 04:22:16.192 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_pred/cached_data.pkl
+Testing dataset size: 5159
+2024-10-16 04:22:21.322 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_train/cached_data.pkl
+Training dataset size: 361172
+2024-10-16 04:22:21.352 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_pred/cached_data.pkl
+Testing dataset size: 5159
+2024-10-16 04:22:22.012 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_train/cached_data.pkl
+Training dataset size: 361172
+2024-10-16 04:22:22.038 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_pred/cached_data.pkl
+Testing dataset size: 5159
+2024-10-16 04:22:27.144 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_train/cached_data.pkl
+Training dataset size: 361172
+2024-10-16 04:22:27.185 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f
+091/random/cache_pred/cached_data.pkl
+Testing dataset size: 5159
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 04:22:29.801 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:22:29.801 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/2783 [00:00<?, ?it/s]2024-10-16 04:22:29.895 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:22:29.896 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                     | 2/2783 [00:00<02:59, 15.50it/s]2024-10-16 04:22:30.052 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:22:30.052 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 04:22:31.280 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:22:31.280 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 2783/2783 [16:18<00:00,  2.84it/s]
+100%|██████████████████████████████████████████████████████████████████| 2783/2783 [16:20<00:00,  2.84it/s]
+100%|██████████████████████████████████████████████████████████████████| 2783/2783 [16:22<00:00,  2.83it/s]
+100%|██████████████████████████████████████████████████████████████████| 2783/2783 [16:29<00:00,  2.81it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 21/21 [01:08<00:00,  0.31it/s]2024-10-16 04:40:09.303 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:40:09.303 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:40:09.303 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:40:09.303 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:40:09.464 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 04:40:09.465 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:40:09.468 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 04:40:09.468 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:40:09.533 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 04:40:09.533 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:40:09.537 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 04:40:09.537 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:40:09.538 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 21/21 [01:08<00:00,  0.31it/s]
+2024-10-16 04:40:10.625 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+2024-10-16 04:40:10.653 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 04:40:10.657 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+[rank: 3] Seed set to 3407
+[rank: 2] Seed set to 3407
+[rank: 1] Seed set to 3407
+2024-10-16 04:40:10.970 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a
+576389ecf5/random
+2024-10-16 04:40:10.970 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a08441185
+3a576389ecf5/corpus.jsonl
+2024-10-16 04:40:11.004 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a
+576389ecf5/random
+2024-10-16 04:40:11.004 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a08441185
+3a576389ecf5/corpus.jsonl
+2024-10-16 04:40:11.007 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a
+576389ecf5/random
+2024-10-16 04:40:11.007 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a08441185
+3a576389ecf5/corpus.jsonl
+2024-10-16 04:40:11.980 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 04:40:12.085 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/test.json
+100%|███████████████████████████████████████████████████████████████| 2427/2427 [00:00<00:00, 24122.16it/s]
+2024-10-16 04:40:12.187 | INFO     | __main__:main:1801 - R@1 = 23.86543991202399 %, R@10 = 61.09227725284755 %, MRR = 0.52363074315968
+2024-10-16 04:40:12.189 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 04:40:12.614 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a
+576389ecf5/random
+2024-10-16 04:40:12.614 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a08441185
+3a576389ecf5/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 04:40:29.205 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 179212
+2024-10-16 04:40:29.238 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 2749
+2024-10-16 04:40:31.702 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 179212
+2024-10-16 04:40:31.719 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 2749
+2024-10-16 04:40:32.030 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 179212
+2024-10-16 04:40:32.052 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 2749
+2024-10-16 04:40:32.793 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_train/cached_data.pkl
+Training dataset size: 179212
+2024-10-16 04:40:32.810 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a
+084411853a576389ecf5/random/cache_pred/cached_data.pkl
+Testing dataset size: 2749
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 04:40:35.453 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:40:35.453 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/1840 [00:00<?, ?it/s]2024-10-16 04:40:35.517 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:40:35.517 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                     | 2/1840 [00:00<01:50, 16.62it/s]2024-10-16 04:40:35.643 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:40:35.644 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 04:40:37.918 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:40:37.918 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 1840/1840 [09:51<00:00,  3.11it/s]
+100%|██████████████████████████████████████████████████████████████████| 1840/1840 [09:53<00:00,  3.10it/s]
+100%|██████████████████████████████████████████████████████████████████| 1840/1840 [09:54<00:00,  3.10it/s]
+100%|██████████████████████████████████████████████████████████████████| 1840/1840 [09:58<00:00,  3.07it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 11/11 [00:31<00:00,  0.35it/s]2024-10-16 04:51:08.380 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:51:08.380 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:51:08.380 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:51:08.380 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 04:51:08.486 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 04:51:08.486 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:51:08.489 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 04:51:08.490 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:51:08.533 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 04:51:08.533 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:51:08.537 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 04:51:08.537 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 04:51:08.538 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 11/11 [00:31<00:00,  0.34it/s]
+2024-10-16 04:51:09.548 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+2024-10-16 04:51:09.579 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 04:51:09.669 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+[rank: 3] Seed set to 3407
+[rank: 2] Seed set to 3407
+[rank: 1] Seed set to 3407
+2024-10-16 04:51:09.908 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f
+99b21/random
+2024-10-16 04:51:09.909 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef54360
+4f99b21/corpus.jsonl
+2024-10-16 04:51:09.924 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f
+99b21/random
+2024-10-16 04:51:09.925 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef54360
+4f99b21/corpus.jsonl
+2024-10-16 04:51:09.984 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f
+99b21/random
+2024-10-16 04:51:09.984 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef54360
+4f99b21/corpus.jsonl
+2024-10-16 04:51:10.922 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 04:51:10.987 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf5/random/test.
+json
+100%|███████████████████████████████████████████████████████████████| 1577/1577 [00:00<00:00, 35282.73it/s]
+2024-10-16 04:51:11.033 | INFO     | __main__:main:1801 - R@1 = 27.71947167425452 %, R@10 = 70.08334047297764 %, MRR = 0.579783453369536
+2024-10-16 04:51:11.035 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 04:51:11.394 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f
+99b21/random
+2024-10-16 04:51:11.394 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef54360
+4f99b21/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 04:51:12.257 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae2
+1ef543604f99b21/random/cache_train/cached_data.pkl
+2024-10-16 04:51:12.257 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae2
+1ef543604f99b21/random/cache_train/cached_data.pkl
+2024-10-16 04:51:12.257 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae2
+1ef543604f99b21/random/cache_train/cached_data.pkl
+2024-10-16 04:51:12.257 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae2
+1ef543604f99b21/random/cache_train/cached_data.pkl
+Training dataset size: 0
+Training dataset size: 0
+Training dataset size: 0
+Training dataset size: 0
+2024-10-16 04:51:12.258 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae2
+1ef543604f99b21/random/cache_pred/cached_data.pkl
+2024-10-16 04:51:12.258 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae2
+1ef543604f99b21/random/cache_pred/cached_data.pkl
+2024-10-16 04:51:12.258 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae2
+1ef543604f99b21/random/cache_pred/cached_data.pkl
+2024-10-16 04:51:12.258 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae2
+1ef543604f99b21/random/cache_pred/cached_data.pkl
+Testing dataset size: 0
+Testing dataset size: 0
+Testing dataset size: 0
+Testing dataset size: 0
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 04:51:14.484 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 04:51:14.506 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+2024-10-16 04:51:14.564 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+[rank: 2] Seed set to 3407
+2024-10-16 04:51:14.745 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf37/random
+2024-10-16 04:51:14.745 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf37/corpu
+s.jsonl
+[rank: 1] Seed set to 3407
+[rank: 3] Seed set to 3407
+2024-10-16 04:51:14.817 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf37/random
+2024-10-16 04:51:14.817 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf37/corpu
+s.jsonl
+2024-10-16 04:51:14.863 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf37/random
+2024-10-16 04:51:14.864 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf37/corpu
+s.jsonl
+2024-10-16 04:51:15.095 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 04:51:15.101 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/random/test.json
+0it [00:00, ?it/s]
+2024-10-16 04:51:15.102 | INFO     | __main__:main:1801 - R@1 = nan %, R@10 = nan %, MRR = nan
+2024-10-16 04:51:15.103 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 04:51:15.388 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf37/random
+2024-10-16 04:51:15.389 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf37/corpu
+s.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 04:51:28.364 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf
+37/random/cache_train/cached_data.pkl
+Training dataset size: 165310
+2024-10-16 04:51:28.394 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf
+37/random/cache_pred/cached_data.pkl
+Testing dataset size: 2577
+2024-10-16 04:51:30.819 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf
+37/random/cache_train/cached_data.pkl
+Training dataset size: 165310
+2024-10-16 04:51:30.835 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf
+37/random/cache_pred/cached_data.pkl
+Testing dataset size: 2577
+2024-10-16 04:51:31.996 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf
+37/random/cache_train/cached_data.pkl
+Training dataset size: 165310
+2024-10-16 04:51:32.102 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf
+37/random/cache_train/cached_data.pkl
+Training dataset size: 165310
+2024-10-16 04:51:32.118 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf
+37/random/cache_pred/cached_data.pkl
+Testing dataset size: 2577
+2024-10-16 04:51:33.685 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf
+37/random/cache_pred/cached_data.pkl
+Testing dataset size: 2577
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 04:51:36.200 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:51:36.201 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/1709 [00:00<?, ?it/s]2024-10-16 04:51:36.305 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:51:36.306 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                     | 2/1709 [00:00<01:49, 15.55it/s]2024-10-16 04:51:36.413 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:51:36.413 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 04:51:38.726 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 04:51:38.726 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 1709/1709 [09:02<00:00,  3.15it/s]
+100%|██████████████████████████████████████████████████████████████████| 1709/1709 [09:03<00:00,  3.14it/s]
+100%|██████████████████████████████████████████████████████████████████| 1709/1709 [09:04<00:00,  3.14it/s]
+100%|██████████████████████████████████████████████████████████████████| 1709/1709 [09:08<00:00,  3.11it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 11/11 [00:23<00:00,  0.46it/s]2024-10-16 05:01:11.359 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:01:11.360 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:01:11.360 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:01:11.360 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:01:11.458 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 05:01:11.458 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:01:11.465 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 05:01:11.465 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:01:11.496 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 05:01:11.496 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:01:11.499 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 05:01:11.500 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:01:11.500 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 11/11 [00:24<00:00,  0.46it/s]
+2024-10-16 05:01:12.657 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+2024-10-16 05:01:12.681 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 05:01:12.719 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+[rank: 1] Seed set to 3407
+[rank: 2] Seed set to 3407
+2024-10-16 05:01:12.969 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b/random
+2024-10-16 05:01:12.969 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b/corpu
+s.jsonl
+[rank: 3] Seed set to 3407
+2024-10-16 05:01:13.024 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b/random
+2024-10-16 05:01:13.024 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b/corpu
+s.jsonl
+2024-10-16 05:01:13.081 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b/random
+2024-10-16 05:01:13.081 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b/corpu
+s.jsonl
+2024-10-16 05:01:13.741 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 05:01:13.777 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_carleson_bec7808b907190882fa1fa54ce749af297c6cf37/random/test.json
+100%|███████████████████████████████████████████████████████████████| 1477/1477 [00:00<00:00, 40933.96it/s]
+2024-10-16 05:01:13.814 | INFO     | __main__:main:1801 - R@1 = 27.831553893216903 %, R@10 = 67.27282572326664 %, MRR = 0.5771483048087758
+2024-10-16 05:01:13.816 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 05:01:14.088 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b/random
+2024-10-16 05:01:14.088 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b/corpu
+s.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 05:01:27.300 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa
+8b/random/cache_train/cached_data.pkl
+Training dataset size: 140519
+2024-10-16 05:01:27.316 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa
+8b/random/cache_pred/cached_data.pkl
+Testing dataset size: 2020
+2024-10-16 05:01:29.409 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa
+8b/random/cache_train/cached_data.pkl
+Training dataset size: 140519
+2024-10-16 05:01:29.421 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa
+8b/random/cache_pred/cached_data.pkl
+Testing dataset size: 2020
+2024-10-16 05:01:30.193 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa
+8b/random/cache_train/cached_data.pkl
+Training dataset size: 140519
+2024-10-16 05:01:30.213 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa
+8b/random/cache_pred/cached_data.pkl
+Testing dataset size: 2020
+2024-10-16 05:01:30.767 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa
+8b/random/cache_train/cached_data.pkl
+Training dataset size: 140519
+2024-10-16 05:01:30.785 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa
+8b/random/cache_pred/cached_data.pkl
+Testing dataset size: 2020
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 05:01:33.316 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:01:33.317 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/1711 [00:00<?, ?it/s]2024-10-16 05:01:33.416 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:01:33.417 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                     | 2/1711 [00:00<01:50, 15.44it/s]2024-10-16 05:01:33.488 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:01:33.489 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 05:01:34.970 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:01:34.971 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 1711/1711 [09:11<00:00,  3.10it/s]
+100%|██████████████████████████████████████████████████████████████████| 1711/1711 [09:13<00:00,  3.09it/s]
+100%|██████████████████████████████████████████████████████████████████| 1711/1711 [09:14<00:00,  3.09it/s]
+100%|██████████████████████████████████████████████████████████████████| 1711/1711 [09:18<00:00,  3.06it/s]
+Predicting DataLoader 0: 100%|███████████████████████████████████████████████| 8/8 [00:15<00:00,  0.53it/s]2024-10-16 05:11:08.826 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:11:08.907 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 05:11:08.908 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:11:09.664 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:11:09.664 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:11:09.744 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 05:11:09.745 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:11:09.782 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 05:11:09.782 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:11:10.183 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:11:10.293 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 05:11:10.293 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:11:10.293 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|███████████████████████████████████████████████| 8/8 [00:16<00:00,  0.48it/s]
+2024-10-16 05:11:11.316 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 05:11:11.398 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+2024-10-16 05:11:11.408 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+[rank: 2] Seed set to 3407
+2024-10-16 05:11:11.684 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf26144
+5d/random
+2024-10-16 05:11:11.684 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261
+445d/corpus.jsonl
+[rank: 3] Seed set to 3407
+[rank: 1] Seed set to 3407
+2024-10-16 05:11:11.764 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf26144
+5d/random
+2024-10-16 05:11:11.764 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261
+445d/corpus.jsonl
+2024-10-16 05:11:11.788 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf26144
+5d/random
+2024-10-16 05:11:11.788 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261
+445d/corpus.jsonl
+2024-10-16 05:11:12.539 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 05:11:12.573 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b/random/test.json
+100%|███████████████████████████████████████████████████████████████| 1421/1421 [00:00<00:00, 46659.93it/s]
+2024-10-16 05:11:12.605 | INFO     | __main__:main:1801 - R@1 = 29.58888786588429 %, R@10 = 70.67501906899697 %, MRR = 0.6010736357634338
+2024-10-16 05:11:12.606 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 05:11:12.890 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf26144
+5d/random
+2024-10-16 05:11:12.890 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261
+445d/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 05:11:27.893 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046
+c1baf261445d/random/cache_train/cached_data.pkl
+Training dataset size: 166720
+2024-10-16 05:11:27.921 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046
+c1baf261445d/random/cache_pred/cached_data.pkl
+Testing dataset size: 2352
+2024-10-16 05:11:29.576 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046
+c1baf261445d/random/cache_train/cached_data.pkl
+Training dataset size: 166720
+2024-10-16 05:11:29.592 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046
+c1baf261445d/random/cache_pred/cached_data.pkl
+Testing dataset size: 2352
+2024-10-16 05:11:30.764 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046
+c1baf261445d/random/cache_train/cached_data.pkl
+Training dataset size: 166720
+2024-10-16 05:11:30.779 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046
+c1baf261445d/random/cache_pred/cached_data.pkl
+Testing dataset size: 2352
+2024-10-16 05:11:32.587 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046
+c1baf261445d/random/cache_train/cached_data.pkl
+Training dataset size: 166720
+2024-10-16 05:11:32.609 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046
+c1baf261445d/random/cache_pred/cached_data.pkl
+Testing dataset size: 2352
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+2024-10-16 05:11:35.924 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:11:35.928 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/1805 [00:00<?, ?it/s]2024-10-16 05:11:36.031 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:11:36.033 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                     | 2/1805 [00:00<01:52, 16.02it/s]2024-10-16 05:11:36.173 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:11:36.173 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 05:11:38.981 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:11:38.981 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 1805/1805 [09:39<00:00,  3.12it/s]
+100%|██████████████████████████████████████████████████████████████████| 1805/1805 [09:40<00:00,  3.11it/s]
+100%|██████████████████████████████████████████████████████████████████| 1805/1805 [09:41<00:00,  3.10it/s]
+100%|██████████████████████████████████████████████████████████████████| 1805/1805 [09:46<00:00,  3.08it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 10/10 [00:25<00:00,  0.39it/s]2024-10-16 05:21:51.094 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:21:51.094 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:21:51.094 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:21:51.094 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:21:51.191 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 05:21:51.191 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:21:51.195 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 05:21:51.195 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:21:51.233 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 05:21:51.233 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:21:51.242 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 05:21:51.242 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:21:51.243 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 10/10 [00:25<00:00,  0.39it/s]
+2024-10-16 05:21:52.219 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 05:21:52.305 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+2024-10-16 05:21:52.352 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+[rank: 2] Seed set to 3407
+[rank: 3] Seed set to 3407
+2024-10-16 05:21:52.600 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random
+[rank: 1] Seed set to 3407
+2024-10-16 05:21:52.600 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806
+a38/corpus.jsonl
+2024-10-16 05:21:52.663 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random
+2024-10-16 05:21:52.663 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806
+a38/corpus.jsonl
+2024-10-16 05:21:52.697 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random
+2024-10-16 05:21:52.697 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806
+a38/corpus.jsonl
+2024-10-16 05:21:53.487 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 05:21:53.524 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d/random/test.json
+100%|███████████████████████████████████████████████████████████████| 1538/1538 [00:00<00:00, 51417.91it/s]
+2024-10-16 05:21:53.555 | INFO     | __main__:main:1801 - R@1 = 26.698459679353466 %, R@10 = 68.62040054073732 %, MRR = 0.5813766851417068
+2024-10-16 05:21:53.556 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 05:21:53.935 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random
+2024-10-16 05:21:53.935 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806
+a38/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 05:22:26.831 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d51
+8dd58806a38/random/cache_train/cached_data.pkl
+Training dataset size: 357242
+2024-10-16 05:22:26.863 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d51
+8dd58806a38/random/cache_pred/cached_data.pkl
+Testing dataset size: 4860
+2024-10-16 05:22:32.993 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d51
+8dd58806a38/random/cache_train/cached_data.pkl
+Training dataset size: 357242
+2024-10-16 05:22:33.020 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d51
+8dd58806a38/random/cache_pred/cached_data.pkl
+Testing dataset size: 4860
+2024-10-16 05:22:37.942 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d51
+8dd58806a38/random/cache_train/cached_data.pkl
+Training dataset size: 357242
+2024-10-16 05:22:37.980 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d51
+8dd58806a38/random/cache_pred/cached_data.pkl
+Testing dataset size: 4860
+2024-10-16 05:22:38.359 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d51
+8dd58806a38/random/cache_train/cached_data.pkl
+Training dataset size: 357242
+2024-10-16 05:22:38.395 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d51
+8dd58806a38/random/cache_pred/cached_data.pkl
+Testing dataset size: 4860
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 05:22:40.758 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:22:40.760 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                     | 2/2756 [00:00<02:57, 15.54it/s]2024-10-16 05:22:40.977 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:22:40.978 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/2756 [00:00<?, ?it/s]2024-10-16 05:22:41.036 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:22:41.036 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 05:22:42.751 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:22:42.751 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 2756/2756 [16:07<00:00,  2.85it/s]
+100%|██████████████████████████████████████████████████████████████████| 2756/2756 [16:10<00:00,  2.84it/s]
+100%|██████████████████████████████████████████████████████████████████| 2756/2756 [16:12<00:00,  2.84it/s]
+100%|██████████████████████████████████████████████████████████████████| 2756/2756 [16:19<00:00,  2.81it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 19/19 [00:48<00:00,  0.39it/s]2024-10-16 05:39:51.001 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:39:51.002 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:39:51.235 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 05:39:51.235 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:39:51.244 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 05:39:51.245 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:39:56.197 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:39:56.504 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 05:39:56.505 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:40:00.758 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:40:01.043 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 05:40:01.043 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:40:01.044 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 19/19 [00:58<00:00,  0.32it/s]
+2024-10-16 05:40:02.042 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+2024-10-16 05:40:02.110 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 05:40:02.127 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+[rank: 1] Seed set to 3407
+[rank: 2] Seed set to 3407
+[rank: 3] Seed set to 3407
+2024-10-16 05:40:02.412 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/rand
+om
+2024-10-16 05:40:02.412 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/co
+rpus.jsonl
+2024-10-16 05:40:02.456 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/rand
+om
+2024-10-16 05:40:02.456 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/co
+rpus.jsonl
+2024-10-16 05:40:02.460 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/rand
+om
+2024-10-16 05:40:02.460 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/co
+rpus.jsonl
+2024-10-16 05:40:03.513 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 05:40:03.585 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38/random/test.json
+100%|███████████████████████████████████████████████████████████████| 2403/2403 [00:00<00:00, 29493.10it/s]
+2024-10-16 05:40:03.668 | INFO     | __main__:main:1801 - R@1 = 23.848347949136727 %, R@10 = 61.16066403971594 %, MRR = 0.5267464174828629
+2024-10-16 05:40:03.669 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 05:40:03.946 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/rand
+om
+2024-10-16 05:40:03.946 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/co
+rpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 05:40:18.820 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388
+ad3a3/random/cache_train/cached_data.pkl
+Training dataset size: 153140
+2024-10-16 05:40:18.838 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388
+ad3a3/random/cache_pred/cached_data.pkl
+Testing dataset size: 2435
+2024-10-16 05:40:22.076 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388
+ad3a3/random/cache_train/cached_data.pkl
+Training dataset size: 153140
+2024-10-16 05:40:22.102 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388
+ad3a3/random/cache_pred/cached_data.pkl
+Testing dataset size: 2435
+2024-10-16 05:40:23.190 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388
+ad3a3/random/cache_train/cached_data.pkl
+Training dataset size: 153140
+2024-10-16 05:40:23.212 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388
+ad3a3/random/cache_pred/cached_data.pkl
+Testing dataset size: 2435
+2024-10-16 05:40:25.932 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388
+ad3a3/random/cache_train/cached_data.pkl
+Training dataset size: 153140
+2024-10-16 05:40:25.948 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388
+ad3a3/random/cache_pred/cached_data.pkl
+Testing dataset size: 2435
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 05:40:28.320 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:40:28.320 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/1758 [00:00<?, ?it/s]2024-10-16 05:40:28.420 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:40:28.421 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                     | 2/1758 [00:00<01:52, 15.54it/s]2024-10-16 05:40:28.481 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:40:28.481 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 05:40:30.421 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:40:30.421 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 1758/1758 [09:18<00:00,  3.15it/s]
+100%|██████████████████████████████████████████████████████████████████| 1758/1758 [09:19<00:00,  3.14it/s]
+100%|██████████████████████████████████████████████████████████████████| 1758/1758 [09:20<00:00,  3.14it/s]
+100%|██████████████████████████████████████████████████████████████████| 1758/1758 [09:25<00:00,  3.11it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 10/10 [00:23<00:00,  0.42it/s]2024-10-16 05:50:19.431 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:50:19.432 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:50:19.432 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:50:19.432 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 05:50:19.522 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 05:50:19.523 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:50:19.534 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 05:50:19.534 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:50:19.562 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 05:50:19.562 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:50:19.573 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 05:50:19.573 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 05:50:19.573 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 10/10 [00:24<00:00,  0.42it/s]
+2024-10-16 05:50:20.465 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 05:50:20.639 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+2024-10-16 05:50:20.672 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+[rank: 2] Seed set to 3407
+2024-10-16 05:50:20.834 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22a04f2ba808
+1c5fb29413f515a0e52878/random
+2024-10-16 05:50:20.835 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22a04f2ba8
+081c5fb29413f515a0e52878/corpus.jsonl
+[rank: 1] Seed set to 3407
+[rank: 3] Seed set to 3407
+2024-10-16 05:50:21.012 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22a04f2ba808
+1c5fb29413f515a0e52878/random
+2024-10-16 05:50:21.012 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22a04f2ba8
+081c5fb29413f515a0e52878/corpus.jsonl
+2024-10-16 05:50:21.036 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22a04f2ba808
+1c5fb29413f515a0e52878/random
+2024-10-16 05:50:21.037 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22a04f2ba8
+081c5fb29413f515a0e52878/corpus.jsonl
+2024-10-16 05:50:22.098 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 05:50:22.141 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3/random/test.json
+100%|███████████████████████████████████████████████████████████████| 1493/1493 [00:00<00:00, 33682.21it/s]
+2024-10-16 05:50:22.186 | INFO     | __main__:main:1801 - R@1 = 27.058119297083106 %, R@10 = 70.14212076112551 %, MRR = 0.5952202902218386
+2024-10-16 05:50:22.188 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 05:50:22.567 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22a04f2ba808
+1c5fb29413f515a0e52878/random
+2024-10-16 05:50:22.567 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22a04f2ba8
+081c5fb29413f515a0e52878/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 05:50:35.105 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22
+a04f2ba8081c5fb29413f515a0e52878/random/cache_train/cached_data.pkl
+Training dataset size: 165782
+2024-10-16 05:50:35.129 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22
+a04f2ba8081c5fb29413f515a0e52878/random/cache_pred/cached_data.pkl
+Testing dataset size: 2422
+2024-10-16 05:50:37.014 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22
+a04f2ba8081c5fb29413f515a0e52878/random/cache_train/cached_data.pkl
+Training dataset size: 165782
+2024-10-16 05:50:37.028 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22
+a04f2ba8081c5fb29413f515a0e52878/random/cache_pred/cached_data.pkl
+Testing dataset size: 2422
+2024-10-16 05:50:37.072 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22
+a04f2ba8081c5fb29413f515a0e52878/random/cache_train/cached_data.pkl
+Training dataset size: 165782
+2024-10-16 05:50:37.086 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22
+a04f2ba8081c5fb29413f515a0e52878/random/cache_pred/cached_data.pkl
+Testing dataset size: 2422
+2024-10-16 05:50:37.799 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22
+a04f2ba8081c5fb29413f515a0e52878/random/cache_train/cached_data.pkl
+Training dataset size: 165782
+2024-10-16 05:50:37.818 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22
+a04f2ba8081c5fb29413f515a0e52878/random/cache_pred/cached_data.pkl
+Testing dataset size: 2422
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 05:50:40.341 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:50:40.342 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/1714 [00:00<?, ?it/s]2024-10-16 05:50:40.452 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:50:40.454 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                     | 2/1714 [00:00<01:49, 15.66it/s]2024-10-16 05:50:40.590 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:50:40.591 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 05:50:44.007 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 05:50:44.008 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 1714/1714 [09:03<00:00,  3.15it/s]
+100%|██████████████████████████████████████████████████████████████████| 1714/1714 [09:04<00:00,  3.15it/s]
+100%|██████████████████████████████████████████████████████████████████| 1714/1714 [09:05<00:00,  3.14it/s]
+100%|██████████████████████████████████████████████████████████████████| 1714/1714 [09:10<00:00,  3.11it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 10/10 [00:30<00:00,  0.33it/s]2024-10-16 06:00:24.820 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:00:24.820 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:00:24.820 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:00:24.820 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:00:24.916 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 06:00:24.917 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:00:24.919 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 06:00:24.919 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:00:24.956 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 06:00:24.956 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:00:24.969 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 06:00:24.969 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:00:24.969 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 10/10 [00:30<00:00,  0.33it/s]
+2024-10-16 06:00:26.064 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 06:00:26.092 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+2024-10-16 06:00:26.174 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+[rank: 1] Seed set to 3407
+[rank: 2] Seed set to 3407
+2024-10-16 06:00:26.428 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random
+2024-10-16 06:00:26.429 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/corpus.jso
+nl
+2024-10-16 06:00:26.445 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random
+2024-10-16 06:00:26.445 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/corpus.jso
+nl
+[rank: 3] Seed set to 3407
+2024-10-16 06:00:26.546 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random
+2024-10-16 06:00:26.547 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/corpus.jso
+nl
+2024-10-16 06:00:27.385 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 06:00:27.424 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_Formalisation-of-constructable-numbers_01ef1f22a04f2ba8081c5fb29413f515a0e52878/
+random/test.json
+100%|███████████████████████████████████████████████████████████████| 1481/1481 [00:00<00:00, 46574.73it/s]
+2024-10-16 06:00:27.457 | INFO     | __main__:main:1801 - R@1 = 28.197883734314217 %, R@10 = 70.03570250228005 %, MRR = 0.5843950578020449
+2024-10-16 06:00:27.459 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 06:00:27.799 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random
+2024-10-16 06:00:27.799 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/corpus.jso
+nl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 06:00:42.746 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/ra
+ndom/cache_train/cached_data.pkl
+Training dataset size: 156192
+2024-10-16 06:00:42.771 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/ra
+ndom/cache_pred/cached_data.pkl
+Testing dataset size: 2603
+2024-10-16 06:00:44.209 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/ra
+ndom/cache_train/cached_data.pkl
+Training dataset size: 156192
+2024-10-16 06:00:44.224 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/ra
+ndom/cache_pred/cached_data.pkl
+Testing dataset size: 2603
+2024-10-16 06:00:44.296 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/ra
+ndom/cache_train/cached_data.pkl
+Training dataset size: 156192
+2024-10-16 06:00:44.310 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/ra
+ndom/cache_pred/cached_data.pkl
+Testing dataset size: 2603
+2024-10-16 06:00:46.507 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/ra
+ndom/cache_train/cached_data.pkl
+Training dataset size: 156192
+2024-10-16 06:00:46.531 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/ra
+ndom/cache_pred/cached_data.pkl
+Testing dataset size: 2603
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:00:49.052 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 06:00:49.053 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/1795 [00:00<?, ?it/s]2024-10-16 06:00:49.146 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 06:00:49.146 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                     | 2/1795 [00:00<01:50, 16.27it/s]2024-10-16 06:00:49.295 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 06:00:49.296 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 06:00:52.876 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 06:00:52.876 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 1795/1795 [09:43<00:00,  3.08it/s]
+100%|██████████████████████████████████████████████████████████████████| 1795/1795 [09:45<00:00,  3.07it/s]
+100%|██████████████████████████████████████████████████████████████████| 1795/1795 [09:45<00:00,  3.06it/s]
+100%|██████████████████████████████████████████████████████████████████| 1795/1795 [09:50<00:00,  3.04it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 11/11 [00:27<00:00,  0.40it/s]2024-10-16 06:11:10.862 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:11:10.863 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:11:10.863 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:11:10.863 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:11:10.957 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 06:11:10.957 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:11:10.958 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 06:11:10.958 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:11:10.997 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 06:11:10.997 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:11:11.000 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 06:11:11.000 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:11:11.000 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 11/11 [00:27<00:00,  0.40it/s]
+2024-10-16 06:11:12.070 | INFO     | retrieval.main:run_cli:60 - PID: 3381454
+2024-10-16 06:11:12.073 | INFO     | retrieval.main:run_cli:60 - PID: 3381453
+2024-10-16 06:11:12.138 | INFO     | retrieval.main:run_cli:60 - PID: 3381452
+[rank: 2] Seed set to 3407
+[rank: 3] Seed set to 3407
+[rank: 1] Seed set to 3407
+2024-10-16 06:11:12.454 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a97/random
+2024-10-16 06:11:12.454 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a97/corpus
+.jsonl
+2024-10-16 06:11:12.465 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a97/random
+2024-10-16 06:11:12.465 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a97/corpus
+.jsonl
+2024-10-16 06:11:12.505 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a97/random
+2024-10-16 06:11:12.505 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a97/corpus
+.jsonl
+2024-10-16 06:11:13.627 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 06:11:13.689 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147/random/test.json
+100%|███████████████████████████████████████████████████████████████| 1501/1501 [00:00<00:00, 27270.42it/s]
+2024-10-16 06:11:13.745 | INFO     | __main__:main:1801 - R@1 = 27.67752721066611 %, R@10 = 69.60052936231874 %, MRR = 0.5844545461905422
+2024-10-16 06:11:13.746 | INFO     | retrieval.main:run_cli:60 - PID: 3364910
+[rank: 0] Seed set to 3407
+2024-10-16 06:11:14.131 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a97/random
+2024-10-16 06:11:14.132 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a97/corpus
+.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 06:11:26.827 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a9
+7/random/cache_train/cached_data.pkl
+Training dataset size: 150553
+2024-10-16 06:11:26.851 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a9
+7/random/cache_pred/cached_data.pkl
+Testing dataset size: 2391
+2024-10-16 06:11:28.082 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a9
+7/random/cache_train/cached_data.pkl
+Training dataset size: 150553
+2024-10-16 06:11:28.095 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a9
+7/random/cache_pred/cached_data.pkl
+Testing dataset size: 2391
+2024-10-16 06:11:28.158 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a9
+7/random/cache_train/cached_data.pkl
+Training dataset size: 150553
+2024-10-16 06:11:28.959 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a9
+7/random/cache_train/cached_data.pkl
+Training dataset size: 150553
+2024-10-16 06:11:28.977 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a9
+7/random/cache_pred/cached_data.pkl
+Testing dataset size: 2391
+2024-10-16 06:11:29.475 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a9
+7/random/cache_pred/cached_data.pkl
+Testing dataset size: 2391
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:11:32.015 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 06:11:32.015 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                             | 0/1994 [00:00<?, ?it/s]2024-10-16 06:11:32.056 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 06:11:32.057 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|                                                                     | 2/1994 [00:00<02:32, 13.06it/s]2024-10-16 06:11:32.189 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 06:11:32.190 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |                                                                        | 0/? [00:00<?, ?it/s]2024-10-16 06:11:35.806 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-10-16 06:11:35.807 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+100%|██████████████████████████████████████████████████████████████████| 1994/1994 [09:22<00:00,  3.55it/s]
+100%|██████████████████████████████████████████████████████████████████| 1994/1994 [09:23<00:00,  3.54it/s]
+100%|██████████████████████████████████████████████████████████████████| 1994/1994 [09:24<00:00,  3.53it/s]
+100%|██████████████████████████████████████████████████████████████████| 1994/1994 [09:29<00:00,  3.50it/s]
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 10/10 [00:27<00:00,  0.37it/s]2024-10-16 06:21:32.760 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:21:32.760 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:21:32.760 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:21:32.760 | INFO     | retrieval.model:on_predict_epoch_end:501 - About to construct predictions map
+2024-10-16 06:21:32.855 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_3.pkl
+2024-10-16 06:21:32.855 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:21:32.856 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_1.pkl
+2024-10-16 06:21:32.857 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:21:32.897 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_2.pkl
+2024-10-16 06:21:32.897 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:21:32.899 | INFO     | retrieval.model:on_predict_epoch_end:521 - Retrieval predictions saved to test_pickle_0.pkl
+2024-10-16 06:21:32.899 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-10-16 06:21:32.900 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|█████████████████████████████████████████████| 10/10 [00:27<00:00,  0.37it/s]
+2024-10-16 06:21:33.964 | INFO     | __main__:main:1914 - Finished processing the repository
+2024-10-16 06:21:33.965 | INFO     | __main__:main:1916 - current epoch: 12
+2024-10-16 06:21:33.965 | INFO     | __main__:main:1588 - length of lean_git_repos: 12
+2024-10-16 06:21:33.965 | INFO     | __main__:main:1589 - i: 1
+2024-10-16 06:21:33.965 | INFO     | __main__:main:1616 - All GPUs
+2024-10-16 06:21:33.968 | INFO     | __main__:find_latest_checkpoint:705 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984ef
+fa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:21:33.968 | INFO     | __main__:main:1623 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch
+=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:21:33.968 | INFO     | __main__:main:1629 - Inside train_test_fisher
+2024-10-16 06:21:33.968 | INFO     | __main__:main:1630 - Starting training at epoch 12
+[rank: 1] Seed set to 3407
+2024-10-16 06:21:33.996 | INFO     | __main__:main:1914 - Finished processing the repository
+2024-10-16 06:21:33.997 | INFO     | __main__:main:1916 - current epoch: 12
+2024-10-16 06:21:33.997 | INFO     | __main__:main:1588 - length of lean_git_repos: 12
+2024-10-16 06:21:33.998 | INFO     | __main__:main:1589 - i: 1
+2024-10-16 06:21:33.998 | INFO     | __main__:main:1616 - All GPUs
+2024-10-16 06:21:34.000 | INFO     | __main__:find_latest_checkpoint:705 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984ef
+fa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:21:34.000 | INFO     | __main__:main:1623 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch
+=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:21:34.000 | INFO     | __main__:main:1629 - Inside train_test_fisher
+2024-10-16 06:21:34.000 | INFO     | __main__:main:1630 - Starting training at epoch 12
+[rank: 3] Seed set to 3407
+2024-10-16 06:21:34.012 | INFO     | __main__:main:1914 - Finished processing the repository
+2024-10-16 06:21:34.013 | INFO     | __main__:main:1916 - current epoch: 12
+2024-10-16 06:21:34.013 | INFO     | __main__:main:1588 - length of lean_git_repos: 12
+2024-10-16 06:21:34.013 | INFO     | __main__:main:1589 - i: 1
+2024-10-16 06:21:34.013 | INFO     | __main__:main:1616 - All GPUs
+2024-10-16 06:21:34.015 | INFO     | __main__:find_latest_checkpoint:705 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984ef
+fa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:21:34.015 | INFO     | __main__:main:1623 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch
+=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:21:34.015 | INFO     | __main__:main:1629 - Inside train_test_fisher
+2024-10-16 06:21:34.015 | INFO     | __main__:main:1630 - Starting training at epoch 12
+[rank: 2] Seed set to 3407
+2024-10-16 06:21:35.733 | INFO     | __main__:main:1796 - Loaded the predictions pickle files
+2024-10-16 06:21:35.779 | INFO     | __main__:main:1799 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_coxeter_96af8aee7943ca8685ed1b00cc83a559ea389a97/random/test.json
+100%|███████████████████████████████████████████████████████████████| 1425/1425 [00:00<00:00, 39807.67it/s]
+2024-10-16 06:21:35.816 | INFO     | __main__:main:1801 - R@1 = 28.095230610402556 %, R@10 = 69.93685816957405 %, MRR = 0.6042678754291771
+2024-10-16 06:21:35.817 | INFO     | __main__:main:1816 - Average R@1 = nan %, R@10 = nan %, MRR = nan
+2024-10-16 06:21:35.818 | INFO     | __main__:main:1852 - Starting the prover
+2024-10-16 06:21:35.818 | INFO     | prover.proof_search:__init__:407 - Inside __init__
+2024-10-16 06:21:35.818 | INFO     | prover.proof_search:__init__:412 - ckpt_path is not None
+2024-10-16 06:21:35.818 | INFO     | prover.proof_search:__init__:427 - Using RAG
+2024-10-16 06:21:35.819 | INFO     | prover.proof_search:find_latest_checkpoint:380 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf6
+57674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-10-16 06:21:36.724 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lamb
+da_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:21:36.724 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lamb
+da_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:21:39.038 | INFO     | __main__:main:1654 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_ep
+och=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:21:39.040 | INFO     | __main__:main:1654 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_ep
+och=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:21:39.058 | INFO     | __main__:main:1654 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_ep
+och=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:21:39.132 | INFO     | __main__:main:1712 - right before barrier for data module
+2024-10-16 06:21:39.132 | INFO     | __main__:main:1712 - right before barrier for data module
+2024-10-16 06:21:39.133 | INFO     | __main__:main:1712 - right before barrier for data module
+2024-10-16 06:21:40.520 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:191: Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.encoder.em
+bed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'retriever.encoder.e
+ncoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.0.layer.1.
+DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.layer_norm.weight', 'retriever
+.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAtt
+ention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.
+encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.k.wei
+ght', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.2.laye
+r.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.2.layer.1.layer_norm.weight', 'retri
+ever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.3.layer.0.Sel
+fAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.enco
+der.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k
+.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.
+layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'r
+etriever.encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0
+.SelfAttention.o.weight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.
+encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttenti
+on.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.bloc
+k.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight'
+, 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.lay
+er.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retrie
+ver.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.7.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAtt
+ention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.
+block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.wei
+ght', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.9
+.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight', 're
+triever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.S
+elfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.encoder
+.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.10.layer.1.l
+ayer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder
+.encoder.block.11.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDen
+se.wi_1.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:195: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'state_dict
+', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-10-16 06:21:41.156 | INFO     | prover.proof_search:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-10-16 06:21:41.158 | INFO     | prover.proof_search:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-10-16 06:21:41.158 | INFO     | prover.proof_search:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050f0f6c
+408041b70205/corpus.jsonl
+2024-10-16 06:21:41.159 | INFO     | prover.proof_search:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_hairy-ball-theorem-lean_fa500d7d2e58580bac7c050f0f6c4
+08041b70205/corpus.jsonl
+2024-10-16 06:21:41.159 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+0it [00:00, ?it/s]
+2024-10-16 06:21:41.160 | INFO     | prover.proof_search:__init__:459 - Finished reindexing!
+2024-10-16 06:21:41.160 | INFO     | prover.proof_search:__init__:470 - Launching 4 workers with 4 GPUs.
+2024-10-16 06:21:53,064 INFO worker.py:1777 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+2024-10-16 06:22:28.025 | INFO     | __main__:load_encountered_theorems:984 - The file encountered_theorems_PT_single_repo_no_ewc_curriculum_full.pkl does not exist. Starting with an empty set.
+2024-10-16 06:22:28.026 | INFO     | __main__:save_progress:965 - Saving encountered theorems...
+2024-10-16 06:22:28.027 | INFO     | __main__:prove_sorry_theorems:1061 - Finished attempting to prove sorry theorems
+(pid=3463082) [2024-10-16 06:22:30,811] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=3463082) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+ module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+ default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by th
+e user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimen
+tal feature.
+(ProverActor pid=3463082)   return torch.load(io.BytesIO(b))
+2024-10-16 06:27:59.821 | INFO     | __main__:main:1891 - Finished searching for proofs of sorry theorems
+2024-10-16 06:27:59.822 | INFO     | __main__:main:1894 - Shutting down Ray after proving
+(pid=3463609) [2024-10-16 06:22:38,707] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect) [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplicat
+ion, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)
+(ProverActor pid=3463609) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle
+ module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the
+ default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by th
+e user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimen
+tal feature. [repeated 3x across cluster]
+(ProverActor pid=3463609)   return torch.load(io.BytesIO(b)) [repeated 3x across cluster]
+2024-10-16 06:28:02.487 | INFO     | __main__:main:1914 - Finished processing the repository
+2024-10-16 06:28:02.488 | INFO     | __main__:main:1916 - current epoch: 12
+2024-10-16 06:28:02.489 | INFO     | __main__:main:1588 - length of lean_git_repos: 12
+2024-10-16 06:28:02.489 | INFO     | __main__:main:1589 - i: 1
+2024-10-16 06:28:02.489 | INFO     | __main__:main:1595 - Main process
+2024-10-16 06:28:02.489 | INFO     | __main__:main:1596 - Using lambda = 0.1
+2024-10-16 06:28:02.489 | INFO     | __main__:main:1597 - Processing https://github.com/lecopivo/SciLean
+2024-10-16 06:28:02.489 | INFO     | __main__:main:1604 - Adding repo to repos_for_merged_dataset
+2024-10-16 06:28:02.490 | INFO     | dynamic_database:generate_merged_dataset:415 - Merging selected repositories in the database:
+2024-10-16 06:28:02.490 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-10-16 06:28:52.641 | WARNING  | dynamic_database:safe_remove_dir_path:377 - /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744 already exists. Removi
+ng it now.
+2024-10-16 06:29:17.403 | INFO     | dynamic_database:generate_merged_dataset:439 - Exported proofs to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744
+2024-10-16 06:29:17.905 | INFO     | dynamic_database:generate_merged_dataset:442 - Merged and exported corpus to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c91
+6e62655744
+2024-10-16 06:29:17.918 | INFO     | dynamic_database:generate_merged_dataset:445 - Exported traced files to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744
+2024-10-16 06:29:17.920 | INFO     | dynamic_database:generate_merged_dataset:448 - Exported metadata to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4
+2024-10-16 06:29:17.933 | INFO     | __main__:main:1616 - All GPUs
+2024-10-16 06:29:17.935 | INFO     | __main__:find_latest_checkpoint:705 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984ef
+fa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:29:17.935 | INFO     | __main__:main:1623 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch
+=10-Recall@10_val=68.69.ckpt
+2024-10-16 06:29:17.935 | INFO     | __main__:main:1629 - Inside train_test_fisher
+2024-10-16 06:29:17.935 | INFO     | __main__:main:1630 - Starting training at epoch 12
+[rank: 0] Seed set to 3407
+2024-10-16 06:29:19.498 | INFO     | __main__:main:1654 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_ep
+och=10-Recall@10_val=68.69.ckpt
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prep
+end your python command with `srun` like so: srun python main.py predict --config retrieval/confs/cli_lean4_r ...
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-10-16 06:29:19.601 | INFO     | __main__:main:1712 - right before barrier for data module
+2024-10-16 06:29:19.601 | INFO     | __main__:main:1727 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random
+2024-10-16 06:29:19.601 | INFO     | __main__:main:1727 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random
+2024-10-16 06:29:19.601 | INFO     | __main__:main:1727 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random
+2024-10-16 06:29:19.601 | INFO     | __main__:main:1727 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744/random
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 69356/69356 [00:09<00:00, 7335.86it/s]
+ 37%|█████████████████████████████████████████████████████████████████████████▍                                                                                                                             | 25601/69356 [00:03<00:05, 7606.99it/s]
+2024-10-16 06:29:39.502 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random/cache_train/cached_data.pkl
+Training dataset size: 149845
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1444/1444 [00:00<00:00, 7759.21it/s]
+2024-10-16 06:29:39.737 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random/cache_val/cached_data.pkl
+Validation dataset size: 2240
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1444/1444 [00:00<00:00, 9792.66it/s]
+2024-10-16 06:29:39.925 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random/cache_pred/cached_data.pkl
+Testing dataset size: 2022
+2024-10-16 06:29:39.926 | INFO     | __main__:main:1741 - Training dataset size after load: 149845
+2024-10-16 06:29:39.926 | INFO     | __main__:main:1742 - Validation dataset size after load: 2240
+2024-10-16 06:29:39.926 | INFO     | __main__:main:1743 - Testing dataset size after load: 2022
+2024-10-16 06:29:39.926 | INFO     | __main__:main:1745 - Starting progressive training from epoch 12 to 13
+2024-10-16 06:29:39.926 | INFO     | __main__:main:1748 - hit the barrier before training
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 69356/69356 [00:08<00:00, 8268.42it/s]
+ 28%|███████████████████████████████████████████████████████▊                                                                                                                                               | 19464/69356 [00:04<00:10, 4576.81it/s]
+2024-10-16 06:29:45.257 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random/cache_train/cached_data.pkl
+Training dataset size: 149845
+2024-10-16 06:29:45.269 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_val/cached_data.pkl
+Validation dataset size: 2240
+2024-10-16 06:29:45.279 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_pred/cached_data.pkl
+Testing dataset size: 2022
+2024-10-16 06:29:45.279 | INFO     | __main__:main:1741 - Training dataset size after load: 149845
+2024-10-16 06:29:45.279 | INFO     | __main__:main:1742 - Validation dataset size after load: 2240
+2024-10-16 06:29:45.279 | INFO     | __main__:main:1743 - Testing dataset size after load: 2022
+2024-10-16 06:29:45.279 | INFO     | __main__:main:1745 - Starting progressive training from epoch 12 to 13
+2024-10-16 06:29:45.279 | INFO     | __main__:main:1748 - hit the barrier before training
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 69356/69356 [00:18<00:00, 3760.99it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 69356/69356 [00:18<00:00, 3781.07it/s]
+2024-10-16 06:29:59.780 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random/cache_train/cached_data.pkl
+Training dataset size: 149845
+2024-10-16 06:29:59.797 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_val/cached_data.pkl
+Validation dataset size: 2240
+2024-10-16 06:29:59.811 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_pred/cached_data.pkl
+Testing dataset size: 2022
+2024-10-16 06:29:59.812 | INFO     | __main__:main:1741 - Training dataset size after load: 149845
+2024-10-16 06:29:59.812 | INFO     | __main__:main:1742 - Validation dataset size after load: 2240
+2024-10-16 06:29:59.812 | INFO     | __main__:main:1743 - Testing dataset size after load: 2022
+2024-10-16 06:29:59.812 | INFO     | __main__:main:1745 - Starting progressive training from epoch 12 to 13
+2024-10-16 06:29:59.812 | INFO     | __main__:main:1748 - hit the barrier before training
+2024-10-16 06:30:00.258 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e626
+55744/random/cache_train/cached_data.pkl
+Training dataset size: 149845
+2024-10-16 06:30:00.276 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_val/cached_data.pkl
+Validation dataset size: 2240
+2024-10-16 06:30:00.290 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_pred/cached_data.pkl
+Testing dataset size: 2022
+2024-10-16 06:30:00.291 | INFO     | __main__:main:1741 - Training dataset size after load: 149845
+2024-10-16 06:30:00.291 | INFO     | __main__:main:1742 - Validation dataset size after load: 2240
+2024-10-16 06:30:00.291 | INFO     | __main__:main:1743 - Testing dataset size after load: 2022
+2024-10-16 06:30:00.291 | INFO     | __main__:main:1745 - Starting progressive training from epoch 12 to 13
+2024-10-16 06:30:00.291 | INFO     | __main__:main:1748 - hit the barrier before training
+2024-10-16 06:30:00.774 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_train/cached_data.pkl
+2024-10-16 06:30:00.794 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_train/cached_data.pkl
+Training dataset size: 149845
+Training dataset size: 149845
+2024-10-16 06:30:00.899 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_val/cached_data.pkl
+Validation dataset size: 2240
+2024-10-16 06:30:00.903 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_val/cached_data.pkl
+Validation dataset size: 2240
+2024-10-16 06:30:00.917 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_pred/cached_data.pkl
+Testing dataset size: 2022
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:654: Checkpoint directory /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full exists and is not emp
+ty.
+2024-10-16 06:30:00.928 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_pred/cached_data.pkl
+Testing dataset size: 2022
+2024-10-16 06:30:03.376 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_train/cached_data.pkl
+Training dataset size: 149845
+2024-10-16 06:30:03.460 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_val/cached_data.pkl
+Validation dataset size: 2240
+2024-10-16 06:30:03.473 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_pred/cached_data.pkl
+Testing dataset size: 2022
+2024-10-16 06:30:04.280 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_train/cached_data.pkl
+Training dataset size: 149845
+2024-10-16 06:30:04.386 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_val/cached_data.pkl
+Validation dataset size: 2240
+2024-10-16 06:30:04.404 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full/merged_with_new_SciLean_22d53b2f4e3db2a172e71da6eb9c916e6265574
+4/random/cache_pred/cached_data.pkl
+Testing dataset size: 2022
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+2024-10-16 06:30:05.507 | INFO     | common:get_optimizers:448 - Optimizing with AdamW
+2024-10-16 06:30:05.508 | INFO     | common:get_optimizers:448 - Optimizing with AdamW
+2024-10-16 06:30:05.510 | INFO     | common:get_optimizers:448 - Optimizing with AdamW
+2024-10-16 06:30:05.510 | INFO     | common:get_optimizers:448 - Optimizing with AdamW
+
+  | Name    | Type           | Params | Mode
+---------------------------------------------------
+0 | encoder | T5EncoderModel | 217 M  | train
+---------------------------------------------------
+217 M     Trainable params
+0         Non-trainable params
+217 M     Total params
+870.630   Total estimated model params size (MB)
+235       Modules in train mode
+0         Modules in eval mode
+Restored all states from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full/merged_with_new_LeanAPAP_951c660a8d7ba8e39f906fdf657674a984effa8b_lambda_0.1_epoch=10-Recall@10_val=68.69.ckpt
+Epoch 11:   1%|█▋                                                                                                                                                                                  | 87/9365 [00:36<1:05:40,  2.35it/s, v_num=17102]
+Epoch 11:   1%|█▊                                                                                                                                                                                  | 96/9365 [00:40<1:04:25,  2.40it/s, v_num=17102]

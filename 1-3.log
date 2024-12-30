@@ -1,0 +1,69 @@
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+[31mCould not terminate `[1m/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py[22m[26m` due to (pid=599766, name='python3')[39m
+Did not find any active Ray processes.
+Running main3_more_sorries.py
+[2024-09-17 19:52:22,190] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-17 19:52:27.260 | INFO     | __main__:main:1507 - Running progressive training
+2024-09-17 19:52:27.261 | INFO     | __main__:main:1513 - Configuring LeanDojo...
+2024-09-17 19:52:27.264 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 19:52:27.264 | INFO     | __main__:main:1515 - LeanDojo configured
+2024-09-17 19:52:27.265 | INFO     | __main__:main:1520 - Starting the main process
+2024-09-17 19:52:27.266 | INFO     | __main__:main:1528 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 19:52:57.898 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 19:52:57.899 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 19:53:02.594 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 19:53:02.595 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 19:53:07.942 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 19:53:07.942 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 19:53:13.943 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 19:53:13.944 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 19:53:20.557 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 19:53:20.557 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 19:53:22.325 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 19:53:22.326 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 19:53:22.927 | INFO     | __main__:main:1530 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 19:53:22.928 | INFO     | __main__:main:1537 - Found 100 repositories
+2024-09-17 19:53:22.928 | INFO     | __main__:main:1540 - Starting curriculum learning
+2024-09-17 19:53:23.583 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-09-17 19:53:41.303 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0
+2024-09-17 19:53:58.418 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc2
+2024-09-17 19:54:16.129 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-17 19:54:33.185 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-17 19:54:50.556 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc3
+2024-09-17 19:55:10.186 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-17 19:55:28.934 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc1
+2024-09-17 19:55:46.546 | INFO     | __main__:main:1626 - Processing https://github.com/AntoineChambert-Loir/DividedPowers4
+2024-09-17 19:55:46.546 | INFO     | __main__:add_repo_to_database:1194 - Processing https://github.com/AntoineChambert-Loir/DividedPowers4.git
+2024-09-17 19:55:46.819 | INFO     | __main__:get_compatible_commit:596 - Latest commit: ae18da87ec72a86c73ffb737abc12af6a6b0aa13
+2024-09-17 19:55:46.819 | INFO     | __main__:get_compatible_commit:599 - Creating LeanGitRepo for https://github.com/AntoineChambert-Loir/DividedPowers4
+2024-09-17 19:55:46.819 | INFO     | __main__:get_compatible_commit:601 - Getting config for https://github.com/AntoineChambert-Loir/DividedPowers4.git
+2024-09-17 19:55:46.819 | INFO     | __main__:get_compatible_commit:608 - Searching for compatible commit for https://github.com/AntoineChambert-Loir/DividedPowers4.git
+2024-09-17 19:55:46.823 | INFO     | __main__:get_compatible_commit:614 - Already in a Git repository
+2024-09-17 19:55:46.824 | INFO     | __main__:get_compatible_commit:624 - Fetching commits for https://github.com/AntoineChambert-Loir/DividedPowers4.git
+2024-09-17 19:55:48.434 | INFO     | __main__:get_compatible_commit:628 - Fetched commits for https://github.com/AntoineChambert-Loir/DividedPowers4.git
+2024-09-17 19:55:48.439 | INFO     | __main__:get_compatible_commit:634 - Getting list of commits for https://github.com/AntoineChambert-Loir/DividedPowers4.git
+2024-09-17 19:55:48.448 | INFO     | __main__:get_compatible_commit:639 - Found 552 commits for https://github.com/AntoineChambert-Loir/DividedPowers4.git
+2024-09-17 19:55:53.435 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-17 19:56:10.285 | INFO     | __main__:get_compatible_commit:646 - Found compatible commit bdb6e8207b1e9a92e2245f975f5b5c7a669e13b7 for https://github.com/AntoineChambert-Loir/DividedPowers4.git
+2024-09-17 19:56:10.286 | INFO     | __main__:add_repo_to_database:1214 - Found compatible commit bdb6e8207b1e9a92e2245f975f5b5c7a669e13b7 for https://github.com/AntoineChambert-Loir/DividedPowers4.git
+2024-09-17 19:56:10.286 | INFO     | __main__:add_repo_to_database:1215 - Lean version: v4.8.0-rc2
+2024-09-17 19:56:10.287 | INFO     | __main__:add_repo_to_database:1220 - Generating benchmark at /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/DividedPowers4_bdb6e8207b1e9a92e2245f975f5b5c7a669e13b7
+2024-09-17 19:56:10.287 | INFO     | generate_benchmark_lean4:main:354 - Generating dataset to go into /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/DividedPowers4_bdb6e8207b1e9a92e2245f975f5b5c7a669e13b7
+2024-09-17 19:56:10.287 | INFO     | generate_benchmark_lean4:main:361 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0-rc2\n'}
+2024-09-17 19:56:10.288 | INFO     | generate_benchmark_lean4:main:363 - lean version v: v4.8.0-rc2
+2024-09-17 19:56:10.288 | INFO     | generate_benchmark_lean4:main:364 - is supported: True
+2024-09-17 19:56:10.288 | INFO     | generate_benchmark_lean4:main:373 - lean path1 /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:56:10.289 | INFO     | generate_benchmark_lean4:main:374 - lean path2 /.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:56:10.289 | INFO     | generate_benchmark_lean4:main:375 - lean path3 ~/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:56:10.290 | INFO     | generate_benchmark_lean4:main:379 - Lean toolchain path 2 does not exist: /.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:56:10.291 | INFO     | generate_benchmark_lean4:main:381 - Lean toolchain path 3 does not exist: ~/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:56:10.291 | INFO     | generate_benchmark_lean4:main:384 - Switched to Lean toolchain at: /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-17 19:56:10.355 | INFO     | generate_benchmark_lean4:main:386 - lean --version: Lean (version 4.8.0-rc2, x86_64-unknown-linux-gnu, commit 873ef2d894af, Release)
+
+2024-09-17 19:56:10.355 | INFO     | generate_benchmark_lean4:main:387 - repo: LeanGitRepo(url='https://github.com/AntoineChambert-Loir/DividedPowers4', commit='bdb6e8207b1e9a92e2245f975f5b5c7a669e13b7')
+2024-09-17 19:56:10.356 | INFO     | generate_benchmark_lean4:main:389 - Configuring LeanDojo again...
+2024-09-17 19:56:10.365 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 19:56:10.365 | INFO     | generate_benchmark_lean4:main:391 - LeanDojo configured
+2024-09-17 19:56:10.366 | INFO     | generate_benchmark_lean4:main:394 - Tracing the repo...

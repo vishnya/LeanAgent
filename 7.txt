@@ -1,0 +1,451 @@
+(base) yingzi_ma@cais-login-0:~/lean_project/ReProver$ srun --partition=compute --gpus=4 --nodes=1 --time=2-00:00:00 --pty /bin/bash
+srun: job 104152 queued and waiting for resources
+srun: job 104152 has been allocated resources
+(base) yingzi_ma@compute-permanent-node-352:~/lean_project/ReProver$ bash run_code_reprover_finetune_all_5.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2812072.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810787.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2811711.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810786.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810777.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810784.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810775.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2812073.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2811714.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2812232.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810790.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2811716.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810774.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810793.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2811715.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2811713.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_GCS.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2811710.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2811709.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_RAYLET.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2812205.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2811707.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810780.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810785.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2811712.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_AUTOSCALER.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810789.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2812229.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810792.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2811708.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810791.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810788.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810783.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810794.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2810279.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-11-25_06-26-03_575423_2809735/logs/events/event_CORE_WORKER_2812074.log': Permission denied
+Stopping ray
+Did not find any active Ray processes.
+kill: (6948): Operation not permitted
+kill: (7263): Operation not permitted
+kill: (1999912): Operation not permitted
+kill: (1999931): Operation not permitted
+kill: (1999932): Operation not permitted
+kill: (1999933): Operation not permitted
+kill: (1999940): Operation not permitted
+kill: (2000795): Operation not permitted
+kill: (2000814): Operation not permitted
+kill: (2000815): Operation not permitted
+kill: (2000816): Operation not permitted
+kill: (2000823): Operation not permitted
+kill: (2001533): Operation not permitted
+kill: (2001557): Operation not permitted
+kill: (2001558): Operation not permitted
+kill: (2001559): Operation not permitted
+kill: (2001566): Operation not permitted
+kill: (4146851): No such process
+Tue Nov 26 21:09:53 2024
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:50:00.0 Off |                    0 |
+| N/A   38C    P0             87W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          On  |   00000000:53:00.0 Off |                    0 |
+| N/A   39C    P0             89W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100-SXM4-80GB          On  |   00000000:8C:00.0 Off |                    0 |
+| N/A   40C    P0             87W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100-SXM4-80GB          On  |   00000000:91:00.0 Off |                    0 |
+| N/A   38C    P0             89W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Running reprover_finetune_all_5.py
+[2024-11-26 21:10:02,447] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-11-26 21:10:06.811 | INFO     | __main__:main:1368 - Running progressive training
+2024-11-26 21:10:06.812 | INFO     | __main__:main:1374 - Configuring LeanDojo...
+2024-11-26 21:10:06.814 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-11-26 21:10:06.814 | INFO     | __main__:main:1376 - LeanDojo configured
+2024-11-26 21:10:06.814 | INFO     | __main__:main:1381 - Starting the main process
+2024-11-26 21:10:06.815 | INFO     | __main__:main:1389 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_merge_all_no_ewc_full_reprover_finetune_all_5.json
+2024-11-26 21:12:06.052 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-11-26 21:12:06.052 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-11-26 21:12:22.638 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ahhwuhu/zeta_3_irrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-11-26 21:12:22.638 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ahhwuhu/zeta_3_irrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-11-26 21:12:40.763 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-11-26 21:12:40.763 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-11-26 21:12:42.828 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-11-26 21:12:42.828 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-11-26 21:13:03.158 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-11-26 21:13:03.159 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-11-26 21:13:05.115 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-11-26 21:13:05.116 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-11-26 21:13:07.041 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-11-26 21:13:07.041 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-11-26 21:13:30.410 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f5
+15a0e52878)
+2024-11-26 21:13:30.410 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f515a0e528
+78)
+2024-11-26 21:13:32.420 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-11-26 21:13:32.420 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-11-26 21:13:34.398 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-11-26 21:13:34.399 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-11-26 21:13:36.174 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-11-26 21:13:36.174 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-11-26 21:14:03.169 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/corent1234/hairy-ball-theorem-lean (commit: fa500d7d2e58580bac7c050f0f6c408041b70205)
+2024-11-26 21:14:03.169 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/corent1234/hairy-ball-theorem-lean (commit: fa500d7d2e58580bac7c050f0f6c408041b70205)
+2024-11-26 21:14:05.082 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-11-26 21:14:05.082 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-11-26 21:14:06.986 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-11-26 21:14:06.986 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-11-26 21:14:08.872 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-11-26 21:14:08.872 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-11-26 21:14:10.627 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/google-deepmind/debate (commit: de3a6e500ae1a65dfeea2f91ef519ebad9704be0)
+2024-11-26 21:14:10.627 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/google-deepmind/debate (commit: de3a6e500ae1a65dfeea2f91ef519ebad9704be0)
+2024-11-26 21:14:42.103 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-11-26 21:14:42.103 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-11-26 21:14:42.876 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-11-26 21:14:42.876 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-11-26 21:14:43.538 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-11-26 21:14:43.539 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-11-26 21:14:44.058 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/m4lvin/lean4-pdl (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-11-26 21:14:44.059 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/m4lvin/lean4-pdl (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-11-26 21:14:44.440 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-11-26 21:14:44.441 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-11-26 21:14:44.753 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-11-26 21:14:44.753 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-11-26 21:14:44.905 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-11-26 21:14:44.905 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-11-26 21:14:47.964 | INFO     | __main__:main:1391 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_merge_all_no_ewc_full_reprover_finetune_all_5.json
+2024-11-26 21:14:47.966 | INFO     | __main__:main:1398 - Found 23 repositories
+2024-11-26 21:14:47.966 | INFO     | __main__:main:1489 - Starting without curriculum learning
+2024-11-26 21:14:47.968 | INFO     | __main__:get_sanitized_repo_info:1602 - Replacing zeta
+2024-11-26 21:14:48.234 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-11-26 21:15:11.029 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+Following Github server redirection from /repos/mo271/formal_book to /repositories/537006181
+2024-11-26 21:15:34.693 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-11-26 21:15:58.895 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-11-26 21:16:22.649 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0-rc2
+2024-11-26 21:16:48.112 | INFO     | __main__:main:1617 - length of lean_git_repos: 23
+2024-11-26 21:16:48.112 | INFO     | __main__:main:1618 - i: 0
+2024-11-26 21:16:48.112 | INFO     | __main__:main:1624 - Main process
+2024-11-26 21:16:48.112 | INFO     | __main__:main:1625 - Using lambda = 0.1
+2024-11-26 21:16:48.112 | INFO     | __main__:main:1626 - Processing https://github.com/dwrensha/compfiles
+2024-11-26 21:16:48.112 | INFO     | __main__:main:1652 - Repo already in repos_for_merged_dataset
+2024-11-26 21:16:48.115 | INFO     | dynamic_database:generate_merged_dataset:415 - Merging selected repositories in the database:
+2024-11-26 21:16:48.115 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-11-26 21:16:48.115 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-11-26 21:16:48.115 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-11-26 21:16:48.115 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-11-26 21:16:48.115 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-11-26 21:16:48.115 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/google-deepmind/debate (commit: de3a6e500ae1a65dfeea2f91ef519ebad9704be0)
+2024-11-26 21:16:48.115 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-11-26 21:16:48.115 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/m4lvin/lean4-pdl (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/corent1234/hairy-ball-theorem-lean (commit: fa500d7d2e58580bac7c050f0f6c408041b70205)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/ahhwuhu/zeta_3_irrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-11-26 21:16:48.116 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f515a0e52878)
+2024-11-26 21:29:52.359 | WARNING  | dynamic_database:safe_remove_dir_path:377 - /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles_f99bf6f2928d47dd1a445b4
+14b3a723c2665f091 already exists. Removing it now.
+2024-11-26 21:31:05.631 | INFO     | dynamic_database:generate_merged_dataset:439 - Exported proofs to /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles_f
+99bf6f2928d47dd1a445b414b3a723c2665f091
+2024-11-26 21:31:08.561 | INFO     | dynamic_database:generate_merged_dataset:442 - Merged and exported corpus to /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_
+compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091
+2024-11-26 21:31:08.589 | INFO     | dynamic_database:generate_merged_dataset:445 - Exported traced files to /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compf
+iles_f99bf6f2928d47dd1a445b414b3a723c2665f091
+2024-11-26 21:31:08.624 | INFO     | dynamic_database:generate_merged_dataset:448 - Exported metadata to /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091
+2024-11-26 21:31:08.727 | INFO     | __main__:main:1676 - All GPUs
+2024-11-26 21:31:08.728 | INFO     | __main__:find_latest_checkpoint:627 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168
+ac2bf835a77ef68bbe069194c5.ckpt
+2024-11-26 21:31:08.728 | INFO     | __main__:main:1683 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069
+194c5.ckpt
+2024-11-26 21:31:08.728 | INFO     | __main__:main:1689 - Inside train_test_fisher
+2024-11-26 21:31:08.728 | INFO     | __main__:main:1690 - Starting training at epoch 0
+[rank: 0] Seed set to 3407
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_merge_all_
+no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-11-26 21:31:11.860 | INFO     | __main__:main:1714 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe
+069194c5.ckpt
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to r
+un Lightning on SLURM, prepend your python command with `srun` like so: srun python reprover_finetune_all_5.py ...
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-11-26 21:31:11.970 | INFO     | __main__:main:1772 - right before barrier for data module
+2024-11-26 21:31:11.970 | INFO     | __main__:main:1787 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c266
+5f091/random
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 259596/259596 [01:10<00:00, 3665.62it/s]
+2024-11-26 21:32:57.950 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compf
+iles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 639354
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5408/5408 [00:00<00:00, 6060.04it/s]
+2024-11-26 21:32:59.074 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compf
+iles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_val/cached_data.pkl
+Validation dataset size: 11356
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5408/5408 [00:00<00:00, 6173.41it/s]
+2024-11-26 21:33:00.179 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compf
+iles_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 11288
+2024-11-26 21:33:00.179 | INFO     | __main__:main:1801 - Training dataset size after load: 639354
+2024-11-26 21:33:00.180 | INFO     | __main__:main:1802 - Validation dataset size after load: 11356
+2024-11-26 21:33:00.180 | INFO     | __main__:main:1803 - Testing dataset size after load: 11288
+2024-11-26 21:33:00.180 | INFO     | __main__:main:1805 - Starting progressive training from epoch 0 to 5
+2024-11-26 21:33:00.180 | INFO     | __main__:main:1808 - hit the barrier before training
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+[2024-11-26 21:33:06,728] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-26 21:33:06,730] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-26 21:33:06,731] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-11-26 21:33:10.671 | INFO     | __main__:main:1368 - Running progressive training
+2024-11-26 21:33:10.671 | INFO     | __main__:main:1374 - Configuring LeanDojo...
+2024-11-26 21:33:10.674 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-11-26 21:33:10.674 | INFO     | __main__:main:1376 - LeanDojo configured
+2024-11-26 21:33:10.675 | INFO     | __main__:main:1398 - Found 23 repositories
+2024-11-26 21:33:10.675 | INFO     | __main__:main:1489 - Starting without curriculum learning
+2024-11-26 21:33:10.675 | INFO     | __main__:get_sanitized_repo_info:1602 - Replacing zeta
+2024-11-26 21:33:10.682 | INFO     | __main__:main:1368 - Running progressive training
+2024-11-26 21:33:10.682 | INFO     | __main__:main:1374 - Configuring LeanDojo...
+2024-11-26 21:33:10.687 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-11-26 21:33:10.687 | INFO     | __main__:main:1376 - LeanDojo configured
+2024-11-26 21:33:10.687 | INFO     | __main__:main:1398 - Found 23 repositories
+2024-11-26 21:33:10.687 | INFO     | __main__:main:1489 - Starting without curriculum learning
+2024-11-26 21:33:10.688 | INFO     | __main__:get_sanitized_repo_info:1602 - Replacing zeta
+2024-11-26 21:33:10.717 | INFO     | __main__:main:1368 - Running progressive training
+2024-11-26 21:33:10.717 | INFO     | __main__:main:1374 - Configuring LeanDojo...
+2024-11-26 21:33:10.720 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-11-26 21:33:10.721 | INFO     | __main__:main:1376 - LeanDojo configured
+2024-11-26 21:33:10.721 | INFO     | __main__:main:1398 - Found 23 repositories
+2024-11-26 21:33:10.721 | INFO     | __main__:main:1489 - Starting without curriculum learning
+2024-11-26 21:33:10.721 | INFO     | __main__:get_sanitized_repo_info:1602 - Replacing zeta
+2024-11-26 21:33:10.906 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-11-26 21:33:10.933 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-11-26 21:33:10.960 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-11-26 21:33:33.088 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-11-26 21:33:33.535 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-11-26 21:33:33.721 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+Following Github server redirection from /repos/mo271/formal_book to /repositories/537006181
+2024-11-26 21:33:56.832 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+Following Github server redirection from /repos/mo271/formal_book to /repositories/537006181
+2024-11-26 21:33:57.029 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+Following Github server redirection from /repos/mo271/formal_book to /repositories/537006181
+2024-11-26 21:33:57.604 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-11-26 21:34:21.029 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-11-26 21:34:21.422 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-11-26 21:34:21.554 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-11-26 21:34:44.158 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0-rc2
+2024-11-26 21:34:44.711 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0-rc2
+2024-11-26 21:34:44.830 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0-rc2
+2024-11-26 21:35:09.432 | INFO     | __main__:main:1617 - length of lean_git_repos: 23
+2024-11-26 21:35:09.432 | INFO     | __main__:main:1618 - i: 0
+2024-11-26 21:35:09.432 | INFO     | __main__:main:1676 - All GPUs
+2024-11-26 21:35:09.433 | INFO     | __main__:find_latest_checkpoint:627 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168
+ac2bf835a77ef68bbe069194c5.ckpt
+2024-11-26 21:35:09.433 | INFO     | __main__:main:1683 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069
+194c5.ckpt
+2024-11-26 21:35:09.433 | INFO     | __main__:main:1689 - Inside train_test_fisher
+2024-11-26 21:35:09.433 | INFO     | __main__:main:1690 - Starting training at epoch 0
+[rank: 2] Seed set to 3407
+2024-11-26 21:35:10.246 | INFO     | __main__:main:1617 - length of lean_git_repos: 23
+2024-11-26 21:35:10.246 | INFO     | __main__:main:1618 - i: 0
+2024-11-26 21:35:10.247 | INFO     | __main__:main:1676 - All GPUs
+2024-11-26 21:35:10.247 | INFO     | __main__:find_latest_checkpoint:627 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168
+ac2bf835a77ef68bbe069194c5.ckpt
+2024-11-26 21:35:10.247 | INFO     | __main__:main:1683 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069
+194c5.ckpt
+2024-11-26 21:35:10.247 | INFO     | __main__:main:1689 - Inside train_test_fisher
+2024-11-26 21:35:10.247 | INFO     | __main__:main:1690 - Starting training at epoch 0
+[rank: 3] Seed set to 3407
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_merge_all_
+no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-11-26 21:35:10.756 | INFO     | __main__:main:1617 - length of lean_git_repos: 23
+2024-11-26 21:35:10.757 | INFO     | __main__:main:1618 - i: 0
+2024-11-26 21:35:10.757 | INFO     | __main__:main:1676 - All GPUs
+2024-11-26 21:35:10.758 | INFO     | __main__:find_latest_checkpoint:627 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168
+ac2bf835a77ef68bbe069194c5.ckpt
+2024-11-26 21:35:10.759 | INFO     | __main__:main:1683 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069
+194c5.ckpt
+2024-11-26 21:35:10.759 | INFO     | __main__:main:1689 - Inside train_test_fisher
+2024-11-26 21:35:10.759 | INFO     | __main__:main:1690 - Starting training at epoch 0
+[rank: 1] Seed set to 3407
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_merge_all_
+no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_merge_all_
+no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-11-26 21:35:13.007 | INFO     | __main__:main:1714 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe
+069194c5.ckpt
+2024-11-26 21:35:13.148 | INFO     | __main__:main:1772 - right before barrier for data module
+2024-11-26 21:35:13.149 | INFO     | __main__:main:1787 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c266
+5f091/random
+2024-11-26 21:35:13.782 | INFO     | __main__:main:1714 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe
+069194c5.ckpt
+2024-11-26 21:35:13.852 | INFO     | __main__:main:1772 - right before barrier for data module
+2024-11-26 21:35:13.852 | INFO     | __main__:main:1787 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c266
+5f091/random
+2024-11-26 21:35:14.439 | INFO     | __main__:main:1714 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe
+069194c5.ckpt
+2024-11-26 21:35:14.546 | INFO     | __main__:main:1772 - right before barrier for data module
+2024-11-26 21:35:14.547 | INFO     | __main__:main:1787 - Data path: /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c266
+5f091/random
+2024-11-26 21:35:57.813 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 639354
+2024-11-26 21:35:57.877 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_val/cached_data.pkl
+Validation dataset size: 11356
+2024-11-26 21:35:57.951 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 11288
+2024-11-26 21:35:57.951 | INFO     | __main__:main:1801 - Training dataset size after load: 639354
+2024-11-26 21:35:57.951 | INFO     | __main__:main:1802 - Validation dataset size after load: 11356
+2024-11-26 21:35:57.952 | INFO     | __main__:main:1803 - Testing dataset size after load: 11288
+2024-11-26 21:35:57.952 | INFO     | __main__:main:1805 - Starting progressive training from epoch 0 to 5
+2024-11-26 21:35:57.952 | INFO     | __main__:main:1808 - hit the barrier before training
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/4
+2024-11-26 21:35:58.960 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 639354
+2024-11-26 21:35:59.025 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_val/cached_data.pkl
+Validation dataset size: 11356
+2024-11-26 21:35:59.099 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 11288
+2024-11-26 21:35:59.099 | INFO     | __main__:main:1801 - Training dataset size after load: 639354
+2024-11-26 21:35:59.099 | INFO     | __main__:main:1802 - Validation dataset size after load: 11356
+2024-11-26 21:35:59.100 | INFO     | __main__:main:1803 - Testing dataset size after load: 11288
+2024-11-26 21:35:59.100 | INFO     | __main__:main:1805 - Starting progressive training from epoch 0 to 5
+2024-11-26 21:35:59.100 | INFO     | __main__:main:1808 - hit the barrier before training
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+2024-11-26 21:35:59.924 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 639354
+2024-11-26 21:35:59.989 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_val/cached_data.pkl
+Validation dataset size: 11356
+2024-11-26 21:36:00.067 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 11288
+2024-11-26 21:36:00.068 | INFO     | __main__:main:1801 - Training dataset size after load: 639354
+2024-11-26 21:36:00.068 | INFO     | __main__:main:1802 - Validation dataset size after load: 11356
+2024-11-26 21:36:00.068 | INFO     | __main__:main:1803 - Testing dataset size after load: 11288
+2024-11-26 21:36:00.068 | INFO     | __main__:main:1805 - Starting progressive training from epoch 0 to 5
+2024-11-26 21:36:00.068 | INFO     | __main__:main:1808 - hit the barrier before training
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+
+NCCL version 2.20.5+cuda12.4
+2024-11-26 21:36:05.177 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 639354
+2024-11-26 21:36:06.017 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_val/cached_data.pkl
+Validation dataset size: 11356
+2024-11-26 21:36:06.185 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 11288
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:654: Checkpoint directory /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprove
+r_finetune_all_5 exists and is not empty.
+2024-11-26 21:36:20.294 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 639354
+2024-11-26 21:36:20.774 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_val/cached_data.pkl
+Validation dataset size: 11356
+2024-11-26 21:36:20.865 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 11288
+2024-11-26 21:36:21.336 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 639354
+2024-11-26 21:36:21.855 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_val/cached_data.pkl
+Validation dataset size: 11356
+2024-11-26 21:36:21.961 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 11288
+2024-11-26 21:36:28.678 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_train/cached_data.pkl
+Training dataset size: 639354
+2024-11-26 21:36:29.308 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_val/cached_data.pkl
+Validation dataset size: 11356
+2024-11-26 21:36:29.428 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_merge_all_no_ewc_full_reprover_finetune_all_5/merged_with_new_compfiles
+_f99bf6f2928d47dd1a445b414b3a723c2665f091/random/cache_pred/cached_data.pkl
+Testing dataset size: 11288
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_merge_all_
+no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_merge_all_
+no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_merge_all_
+no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_merge_all_
+no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+2024-11-26 21:36:30.588 | INFO     | common:get_optimizers:448 - Optimizing with AdamW
+2024-11-26 21:36:30.590 | INFO     | common:get_optimizers:448 - Optimizing with AdamW
+2024-11-26 21:36:30.591 | INFO     | common:get_optimizers:448 - Optimizing with AdamW
+2024-11-26 21:36:30.591 | INFO     | common:get_optimizers:448 - Optimizing with AdamW
+
+  | Name    | Type           | Params | Mode
+---------------------------------------------------
+0 | encoder | T5EncoderModel | 217 M  | train
+---------------------------------------------------
+217 M     Trainable params
+0         Non-trainable params
+217 M     Total params
+870.630   Total estimated model params size (MB)
+235       Modules in train mode
+0         Modules in eval mode
+Restored all states from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_merge_all_no_ewc_full_reprover_finetune_all_5/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+Epoch 0:   9%|█████████████▍                                                                                                                                            | 3492/39959 [21:24<3:43:35,  2.72it/s, v_num=31]

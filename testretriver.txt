@@ -1,0 +1,1600 @@
+(base) yingzi_ma@cais-login-0:~/lean_project/ReProver$ srun --partition=compute --gpus=4 --nodes=1 --time=2-00:00:00 --pty /bin/bash
+srun: job 32682 queued and waiting for resources
+srun: job 32682 has been allocated resources
+(base) yingzi_ma@compute-permanent-node-
+(base) yingzi_ma@compute-permanent-node-
+(base) yingzi_ma@compute-permanent-node-
+(base) yingzi_ma@compute-permanent-node-845:~/lean_pr
+(base) yingzi_ma@compute-permanent-node-845:~/lean_project/ReProver$ bash run_code3.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554726.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555540.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554723.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554719.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554720.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555544.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554727.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554730.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554722.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554721.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555541.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554724.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_GCS.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555546.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554715.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555547.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555542.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_RAYLET.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554729.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554725.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555543.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554718.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554716.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_AUTOSCALER.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554717.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555545.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554728.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554593.log': Permission denied
+Stopping ray
+Could not terminate `/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py` due to (pid=4060727, name='python3')
+Did not find any active Ray processes.
+Running main3.py
+[2024-09-16 03:34:30,102] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-16 03:34:35.247 | INFO     | __main__:main:1239 - Running progressive training
+2024-09-16 03:34:35.247 | INFO     | __main__:main:1245 - Configuring LeanDojo...
+2024-09-16 03:34:35.250 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-16 03:34:35.250 | INFO     | __main__:main:1247 - LeanDojo configured
+2024-09-16 03:34:35.250 | INFO     | __main__:main:1252 - Starting the main process
+2024-09-16 03:34:35.250 | INFO     | __main__:main:1260 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum.json
+2024-09-16 03:35:41.824 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-16 03:35:41.825 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-16 03:35:49.491 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-16 03:35:49.491 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-16 03:35:58.317 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-16 03:35:58.318 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-16 03:36:00.303 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-16 03:36:00.303 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-16 03:36:11.620 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-16 03:36:11.620 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-16 03:36:22.272 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-16 03:36:22.272 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-16 03:36:24.186 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 03:36:24.186 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 03:36:24.324 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-16 03:36:24.324 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-16 03:36:36.482 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 03:36:36.483 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 03:36:38.326 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 03:36:38.326 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 03:36:38.680 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 03:36:38.680 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 03:36:39.281 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 03:36:39.282 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 03:36:39.422 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 03:36:39.422 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 03:36:39.508 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 03:36:39.508 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 03:36:40.215 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 03:36:40.215 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 03:36:40.504 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 03:36:40.504 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 03:36:56.279 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 03:36:56.279 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 03:36:58.003 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 03:36:58.003 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 03:36:59.491 | INFO     | __main__:main:1262 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum.json
+2024-09-16 03:36:59.492 | INFO     | __main__:main:1269 - Found 15 repositories
+2024-09-16 03:36:59.492 | INFO     | __main__:main:1272 - Starting curriculum learning
+Ready to calculate difficulties of all theorems
+Starting lecopivo/SciLean
+2024-09-16 03:36:59.765 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-16 03:36:59.766 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+Finished lecopivo/SciLean
+Starting ImperialCollegeLondon/FLT
+2024-09-16 03:37:00.051 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-16 03:37:00.051 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+Finished ImperialCollegeLondon/FLT
+Starting teorth/pfr
+2024-09-16 03:37:00.337 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-16 03:37:00.338 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+Finished teorth/pfr
+Starting AlexKontorovich/PrimeNumberTheoremAnd
+2024-09-16 03:37:00.645 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-16 03:37:00.646 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+Finished AlexKontorovich/PrimeNumberTheoremAnd
+Starting dwrensha/compfiles
+2024-09-16 03:37:01.147 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-16 03:37:01.147 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+Finished dwrensha/compfiles
+Starting google-deepmind/debate
+2024-09-16 03:37:01.404 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-16 03:37:01.405 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+Finished google-deepmind/debate
+Starting avigad/mathematics_in_lean_source
+2024-09-16 03:37:01.710 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 03:37:01.710 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+Finished avigad/mathematics_in_lean_source
+Starting digama0/lean4lean
+2024-09-16 03:37:01.720 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-16 03:37:01.720 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+Finished digama0/lean4lean
+Starting eric-wieser/lean-matrix-cookbook
+2024-09-16 03:37:01.975 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 03:37:01.975 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+Finished eric-wieser/lean-matrix-cookbook
+Starting yuma-mizuno/lean-math-workshop
+2024-09-16 03:37:02.270 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 03:37:02.270 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+Finished yuma-mizuno/lean-math-workshop
+Starting loganrjmurphy/LeanEuclid
+2024-09-16 03:37:02.321 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 03:37:02.321 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+Finished loganrjmurphy/LeanEuclid
+Starting FormalizedFormalLogic/Foundation
+2024-09-16 03:37:02.410 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 03:37:02.410 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+Finished FormalizedFormalLogic/Foundation
+Starting leanprover-community/lean-auto
+2024-09-16 03:37:02.417 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 03:37:02.417 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+Finished leanprover-community/lean-auto
+Starting nomeata/loogle
+2024-09-16 03:37:02.420 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 03:37:02.420 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+Finished nomeata/loogle
+Starting leanprover-community/con-nf
+2024-09-16 03:37:02.526 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 03:37:02.526 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+Finished leanprover-community/con-nf
+Starting siddhartha-gadgil/Saturn
+2024-09-16 03:37:02.563 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 03:37:02.564 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+Finished siddhartha-gadgil/Saturn
+Starting leanprover-community/flt-regular
+2024-09-16 03:37:03.067 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 03:37:03.068 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+Finished leanprover-community/flt-regular
+Starting rami3l/plfl
+2024-09-16 03:37:03.337 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 03:37:03.338 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+Finished rami3l/plfl
+Ready to categorize theorems
+Starting lecopivo/SciLean
+Finished lecopivo/SciLean
+Starting ImperialCollegeLondon/FLT
+Finished ImperialCollegeLondon/FLT
+Starting teorth/pfr
+Finished teorth/pfr
+Starting AlexKontorovich/PrimeNumberTheoremAnd
+Finished AlexKontorovich/PrimeNumberTheoremAnd
+Starting dwrensha/compfiles
+Finished dwrensha/compfiles
+Starting google-deepmind/debate
+Finished google-deepmind/debate
+Starting avigad/mathematics_in_lean_source
+Finished avigad/mathematics_in_lean_source
+Starting digama0/lean4lean
+Finished digama0/lean4lean
+Starting eric-wieser/lean-matrix-cookbook
+Finished eric-wieser/lean-matrix-cookbook
+Starting yuma-mizuno/lean-math-workshop
+Finished yuma-mizuno/lean-math-workshop
+Starting loganrjmurphy/LeanEuclid
+Finished loganrjmurphy/LeanEuclid
+Starting FormalizedFormalLogic/Foundation
+Finished FormalizedFormalLogic/Foundation
+Starting leanprover-community/lean-auto
+Finished leanprover-community/lean-auto
+Starting nomeata/loogle
+Finished nomeata/loogle
+Starting leanprover-community/con-nf
+Finished leanprover-community/con-nf
+Starting siddhartha-gadgil/Saturn
+Finished siddhartha-gadgil/Saturn
+Starting leanprover-community/flt-regular
+Finished leanprover-community/flt-regular
+Starting rami3l/plfl
+Finished rami3l/plfl
+Distributed theorems with no proofs
+Starting lecopivo/SciLean
+Finished lecopivo/SciLean
+Starting ImperialCollegeLondon/FLT
+Finished ImperialCollegeLondon/FLT
+Starting teorth/pfr
+Finished teorth/pfr
+Starting AlexKontorovich/PrimeNumberTheoremAnd
+Finished AlexKontorovich/PrimeNumberTheoremAnd
+Starting dwrensha/compfiles
+Finished dwrensha/compfiles
+Starting google-deepmind/debate
+Finished google-deepmind/debate
+Starting avigad/mathematics_in_lean_source
+Finished avigad/mathematics_in_lean_source
+Starting digama0/lean4lean
+Finished digama0/lean4lean
+Starting eric-wieser/lean-matrix-cookbook
+Finished eric-wieser/lean-matrix-cookbook
+Starting yuma-mizuno/lean-math-workshop
+Finished yuma-mizuno/lean-math-workshop
+Starting loganrjmurphy/LeanEuclid
+Finished loganrjmurphy/LeanEuclid
+Starting FormalizedFormalLogic/Foundation
+Finished FormalizedFormalLogic/Foundation
+Starting leanprover-community/lean-auto
+Finished leanprover-community/lean-auto
+Starting nomeata/loogle
+Finished nomeata/loogle
+Starting leanprover-community/con-nf
+Finished leanprover-community/con-nf
+Starting siddhartha-gadgil/Saturn
+Finished siddhartha-gadgil/Saturn
+Starting leanprover-community/flt-regular
+Finished leanprover-community/flt-regular
+Starting rami3l/plfl
+Finished rami3l/plfl
+Sorted repositories. Saving now...
+Summary of theorem difficulties by URL:
+
+URL: https://github.com/dwrensha/compfiles
+  Easy: 41337 theorems
+    - Subgroup.disjoint_iff_mul_eq_one (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Subgroup.disjoint_def (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Subgroup.inf_subgroupOf_inf_normal_of_left (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+  Medium: 39980 theorems
+    - ConjClasses.mem_noncenter (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - Subgroup.disjoint_def' (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - Subgroup.SubgroupNormal.mem_comm (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 7.39)
+  Hard: 40069 theorems
+    - IsConj.normalClosure_eq_top_of (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 3269017.37)
+    - Subgroup.mul_injective_of_disjoint (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 54.60)
+    - Subgroup.commute_of_normal_of_disjoint (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 59874.14)
+  Hard (No proof): 5 theorems
+    - Imo2008P5.claim (File: Compfiles/Imo2008P5.lean, Difficulty: inf)
+    - Imo2008P5.even_subsets_card (File: Compfiles/Imo2008P5.lean, Difficulty: inf)
+    - Imo2009P6.imo2009_p6_aux1 (File: Compfiles/Imo2009P6.lean, Difficulty: inf)
+
+URL: https://github.com/leanprover-community/flt-regular
+  Easy: 41125 theorems
+    - Subgroup.disjoint_iff_mul_eq_one (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Subgroup.disjoint_def' (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - Subgroup.disjoint_def (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+  Medium: 39832 theorems
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 7.39)
+    - List.dropSlice_eq (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+    - List.get_attach (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+  Hard: 40051 theorems
+    - ConjClasses.mem_noncenter (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - IsConj.normalClosure_eq_top_of (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 3269017.37)
+    - Subgroup.mul_injective_of_disjoint (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 54.60)
+  Hard (No proof): 0 theorems
+
+URL: https://github.com/avigad/mathematics_in_lean_source
+  Easy: 28595 theorems
+    - Subgroup.disjoint_iff_mul_eq_one (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Subgroup.disjoint_def' (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - Subgroup.disjoint_def (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+  Medium: 26031 theorems
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 7.39)
+    - List.dropSlice_eq (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+    - List.get_attach (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+  Hard: 24245 theorems
+    - ConjClasses.mem_noncenter (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - IsConj.normalClosure_eq_top_of (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 3269017.37)
+    - List.disjoint_pmap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 54.60)
+  Hard (No proof): 15 theorems
+    - Cantor (File: MIL/C04_Sets_and_Functions/S02_Functions.lean, Difficulty: inf)
+    - C03S01.Subset.trans (File: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean, Difficulty: inf)
+    - cauchySeq_of_le_geometric_two' (File: MIL/C09_Topology/S02_Metric_Spaces.lean, Difficulty: inf)
+
+URL: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd
+  Easy: 28313 theorems
+    - ConjClasses.mem_noncenter (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - Subgroup.disjoint_iff_mul_eq_one (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Subgroup.disjoint_def (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+  Medium: 26018 theorems
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 7.39)
+    - Subgroup.disjoint_def' (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - List.dropSlice_eq (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+  Hard: 24789 theorems
+    - IsConj.normalClosure_eq_top_of (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 3269017.37)
+    - Subgroup.mul_injective_of_disjoint (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 54.60)
+    - List.disjoint_pmap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 54.60)
+  Hard (No proof): 27 theorems
+    - auto_cheby (File: PrimeNumberTheoremAnd/Wiener.lean, Difficulty: inf)
+    - crude_upper_bound (File: PrimeNumberTheoremAnd/Wiener.lean, Difficulty: inf)
+    - limiting_fourier_variant (File: PrimeNumberTheoremAnd/Wiener.lean, Difficulty: inf)
+
+URL: https://github.com/yuma-mizuno/lean-math-workshop
+  Easy: 28096 theorems
+    - Subgroup.disjoint_iff_mul_eq_one (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Subgroup.disjoint_def' (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - Subgroup.disjoint_def (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+  Medium: 25424 theorems
+    - Subgroup.SubgroupNormal.mem_comm (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 7.39)
+    - Subgroup.subgroupOf_sup (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 20.09)
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 7.39)
+  Hard: 23422 theorems
+    - ConjClasses.mem_noncenter (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - IsConj.normalClosure_eq_top_of (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 3269017.37)
+    - Subgroup.mul_injective_of_disjoint (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 54.60)
+  Hard (No proof): 0 theorems
+
+URL: https://github.com/ImperialCollegeLondon/FLT
+  Easy: 27564 theorems
+    - Subgroup.disjoint_iff_mul_eq_one (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Subgroup.disjoint_def' (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - Subgroup.disjoint_def (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+  Medium: 24960 theorems
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 7.39)
+    - List.dropSlice_eq (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+    - List.disjoint_toFinset_iff_disjoint (File: .lake/packages/mathlib/Mathlib/Data/Finset/Basic.lean, Difficulty: N/A)
+  Hard: 22556 theorems
+    - ConjClasses.mem_noncenter (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - IsConj.normalClosure_eq_top_of (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 3269017.37)
+    - List.disjoint_pmap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 54.60)
+  Hard (No proof): 2 theorems
+    - Hurwitz.canonicalForm (File: FLT/AutomorphicRepresentation/Example.lean, Difficulty: inf)
+    - Hurwitz.exists_near (File: FLT/AutomorphicRepresentation/Example.lean, Difficulty: inf)
+
+URL: https://github.com/teorth/pfr
+  Easy: 26897 theorems
+    - Subgroup.disjoint_iff_mul_eq_one (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Subgroup.disjoint_def (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Equiv.Finset.union_symm_inr (File: .lake/packages/mathlib/Mathlib/Data/Finset/Basic.lean, Difficulty: N/A)
+  Medium: 24498 theorems
+    - ConjClasses.mem_noncenter (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 7.39)
+    - List.disjoint_toFinset_iff_disjoint (File: .lake/packages/mathlib/Mathlib/Data/Finset/Basic.lean, Difficulty: N/A)
+  Hard: 22875 theorems
+    - IsConj.normalClosure_eq_top_of (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 3269017.37)
+    - Subgroup.mul_injective_of_disjoint (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 54.60)
+    - List.disjoint_pmap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 54.60)
+  Hard (No proof): 36 theorems
+    - cor_multiDist_chainRule (File: PFR/MoreRuzsaDist.lean, Difficulty: inf)
+    - iter_multiDist_chainRule' (File: PFR/MoreRuzsaDist.lean, Difficulty: inf)
+    - iter_multiDist_chainRule (File: PFR/MoreRuzsaDist.lean, Difficulty: inf)
+
+URL: https://github.com/lecopivo/SciLean
+  Easy: 26295 theorems
+    - ConjClasses.mem_noncenter (File: .lake/packages/mathlib/Mathlib/GroupTheory/Subgroup/Basic.lean, Difficulty: N/A)
+    - List.forall_map_iff (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2.72)
+    - List.forall_iff_forall_mem (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2.72)
+  Medium: 23918 theorems
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 7.39)
+    - List.dropSlice_eq (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+    - List.get_attach (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+  Hard: 21759 theorems
+    - List.disjoint_pmap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 54.60)
+    - List.sizeOf_dropSlice_lt (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 8886110.52)
+    - List.mem_map_swap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 54.60)
+  Hard (No proof): 272 theorems
+    - IndexType.sum.arg_f.revDerivProjUpdate_rule (File: SciLean/Core/FunctionTransformations/RevDeriv.lean, Difficulty: inf)
+    - IndexType.sum.arg_f.revDerivProj_rule (File: SciLean/Core/FunctionTransformations/RevDeriv.lean, Difficulty: inf)
+    - SciLean.SciLean.cderiv.arg_dx.cderiv_rule_at (File: SciLean/Core/FunctionTransformations/CDeriv.lean, Difficulty: inf)
+
+URL: https://github.com/rami3l/plfl
+  Easy: 26280 theorems
+    - ConjClasses.mem_noncenter (File: .lake/packages/mathlib/Mathlib/GroupTheory/Subgroup/Basic.lean, Difficulty: N/A)
+    - Subgroup.disjoint_iff_mul_eq_one (File: .lake/packages/mathlib/Mathlib/GroupTheory/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Subgroup.disjoint_def' (File: .lake/packages/mathlib/Mathlib/GroupTheory/Subgroup/Basic.lean, Difficulty: N/A)
+  Medium: 23663 theorems
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 7.39)
+    - List.dropSlice_eq (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+    - List.get_attach (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+  Hard: 21325 theorems
+    - List.disjoint_pmap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 54.60)
+    - IsConj.normalClosure_eq_top_of (File: .lake/packages/mathlib/Mathlib/GroupTheory/Subgroup/Basic.lean, Difficulty: 3269017.37)
+    - List.sizeOf_dropSlice_lt (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 8886110.52)
+  Hard (No proof): 0 theorems
+
+URL: https://github.com/google-deepmind/debate
+  Easy: 25505 theorems
+    - Subgroup.disjoint_iff_mul_eq_one (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Subgroup.disjoint_def' (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - Subgroup.disjoint_def (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+  Medium: 22721 theorems
+    - Subgroup.SubgroupNormal.mem_comm (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 7.39)
+    - Subgroup.subgroupOf_sup (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 20.09)
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 7.39)
+  Hard: 20614 theorems
+    - ConjClasses.mem_noncenter (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - IsConj.normalClosure_eq_top_of (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 3269017.37)
+    - Subgroup.mul_injective_of_disjoint (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 54.60)
+  Hard (No proof): 0 theorems
+
+URL: https://github.com/eric-wieser/lean-matrix-cookbook
+  Easy: 25084 theorems
+    - Subgroup.disjoint_iff_mul_eq_one (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - Subgroup.disjoint_def (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 2.72)
+    - List.forall_map_iff (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2.72)
+  Medium: 22398 theorems
+    - ConjClasses.mem_noncenter (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - Subgroup.disjoint_def' (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: N/A)
+    - Subgroup.SubgroupNormal.mem_comm (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 7.39)
+  Hard: 20096 theorems
+    - IsConj.normalClosure_eq_top_of (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 3269017.37)
+    - Subgroup.mul_injective_of_disjoint (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 54.60)
+    - Subgroup.commute_of_normal_of_disjoint (File: .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean, Difficulty: 59874.14)
+  Hard (No proof): 7 theorems
+    - MatrixCookbook.eq_446 (File: MatrixCookbook/9SpecialMatrices.lean, Difficulty: inf)
+    - MatrixCookbook.eq_533 (File: MatrixCookbook/10FunctionsAndOperators.lean, Difficulty: inf)
+    - MatrixCookbook.eq_259 (File: MatrixCookbook/4ComplexMatrices.lean, Difficulty: inf)
+
+URL: https://github.com/leanprover-community/con-nf
+  Easy: 11212 theorems
+    - List.forall_map_iff (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2.72)
+    - List.forall_iff_forall_mem (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2.72)
+    - Subgroup.disjoint_iff_mul_eq_one (File: .lake/packages/mathlib/Mathlib/GroupTheory/Subgroup/Basic.lean, Difficulty: 2.72)
+  Medium: 9696 theorems
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 7.39)
+    - List.dropSlice_eq (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+    - List.get_attach (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+  Hard: 8581 theorems
+    - List.disjoint_pmap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 54.60)
+    - List.sizeOf_dropSlice_lt (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 8886110.52)
+    - List.mem_map_swap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 54.60)
+  Hard (No proof): 0 theorems
+
+URL: https://github.com/FormalizedFormalLogic/Foundation
+  Easy: 9750 theorems
+    - List.nthLe_attach (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: N/A)
+    - List.forall_map_iff (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2.72)
+    - List.forall_iff_forall_mem (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2.72)
+  Medium: 8057 theorems
+    - List.dropSlice_eq (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+    - List.get_attach (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+    - List.ilast'_mem (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+  Hard: 7240 theorems
+    - List.disjoint_pmap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2980.96)
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2980.96)
+    - List.sizeOf_dropSlice_lt (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 8886110.52)
+  Hard (No proof): 0 theorems
+
+URL: https://github.com/loganrjmurphy/LeanEuclid
+  Easy: 6243 theorems
+    - List.mem_merge_right (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: N/A)
+    - List.cons_merge_cons_neg (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 2.72)
+    - List.cons_merge_cons_pos (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 2.72)
+  Medium: 4918 theorems
+    - List.mem_merge_left (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: N/A)
+    - List.merge_loop_nil_right (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 20.09)
+    - List.indexOf_cons (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 7.39)
+  Hard: 4262 theorems
+    - List.lt_antisymm' (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 8103.08)
+    - List.lt_trans' (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 54.60)
+    - List.lt_irrefl' (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 148.41)
+  Hard (No proof): 0 theorems
+
+URL: https://github.com/siddhartha-gadgil/Saturn
+  Easy: 4268 theorems
+    - List.forall_map_iff (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2.72)
+    - List.forall_iff_forall_mem (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2.72)
+    - List.zipRight_eq_zipRight' (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 2.72)
+  Medium: 3500 theorems
+    - List.disjoint_map (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 7.39)
+    - List.dropSlice_eq (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+    - List.get_attach (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 20.09)
+  Hard: 3214 theorems
+    - List.disjoint_pmap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 54.60)
+    - List.sizeOf_dropSlice_lt (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 59874.14)
+    - List.mem_map_swap (File: .lake/packages/mathlib/Mathlib/Data/List/Basic.lean, Difficulty: 54.60)
+  Hard (No proof): 0 theorems
+
+URL: https://github.com/digama0/lean4lean
+  Easy: 899 theorems
+    - List.cons_merge_cons_neg (File: .lake/packages/std/Std/Data/List/Lemmas.lean, Difficulty: 2.72)
+    - List.cons_merge_cons_pos (File: .lake/packages/std/Std/Data/List/Lemmas.lean, Difficulty: 2.72)
+    - List.merge_loop_nil_left (File: .lake/packages/std/Std/Data/List/Lemmas.lean, Difficulty: 2.72)
+  Medium: 726 theorems
+    - List.mem_merge_left (File: .lake/packages/std/Std/Data/List/Lemmas.lean, Difficulty: N/A)
+    - List.nil_merge (File: .lake/packages/std/Std/Data/List/Lemmas.lean, Difficulty: N/A)
+    - List.merge_loop_nil_right (File: .lake/packages/std/Std/Data/List/Lemmas.lean, Difficulty: 20.09)
+  Hard: 930 theorems
+    - List.lt_antisymm' (File: .lake/packages/std/Std/Data/List/Lemmas.lean, Difficulty: 8103.08)
+    - List.lt_trans' (File: .lake/packages/std/Std/Data/List/Lemmas.lean, Difficulty: 54.60)
+    - List.lt_irrefl' (File: .lake/packages/std/Std/Data/List/Lemmas.lean, Difficulty: 148.41)
+  Hard (No proof): 4 theorems
+    - Lean4Lean.NormalEq.trans (File: Lean4Lean/Theory/Typing/ParallelReduction.lean, Difficulty: inf)
+    - Lean4Lean.VEnv.IsDefEqU.weakN_iff (File: Lean4Lean/Theory/Typing/UniqueTyping.lean, Difficulty: inf)
+    - Lean4Lean.VEnv.IsDefEq.induction1 (File: Lean4Lean/Theory/Typing/Stratified.lean, Difficulty: inf)
+
+URL: https://github.com/nomeata/loogle
+  Easy: 303 theorems
+    - List.cons_merge_cons_neg (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 2.72)
+    - List.cons_merge_cons_pos (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 2.72)
+    - List.merge_loop_nil_left (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 2.72)
+  Medium: 244 theorems
+    - List.mem_merge_left (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: N/A)
+    - List.merge_loop_nil_right (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 20.09)
+    - List.indexOf_cons (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 7.39)
+  Hard: 254 theorems
+    - List.lt_antisymm' (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 8103.08)
+    - List.lt_trans' (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 54.60)
+    - List.lt_irrefl' (File: .lake/packages/batteries/Batteries/Data/List/Lemmas.lean, Difficulty: 148.41)
+  Hard (No proof): 0 theorems
+
+URL: https://github.com/leanprover-community/lean-auto
+  Easy: 139 theorems
+    - Auto.Embedding.Lam.LamWF.interp_bvar (File: Auto/Embedding/LamBase.lean, Difficulty: N/A)
+    - Auto.Embedding.Lam.LamWF.interp_substWF (File: Auto/Embedding/LamBase.lean, Difficulty: N/A)
+    - Auto.Embedding.Lam.LamTerm.beq_def (File: Auto/Embedding/LamBase.lean, Difficulty: N/A)
+  Medium: 294 theorems
+    - Auto.Embedding.Lam.LamWF.interp_insertEVarAt_eIdx (File: Auto/Embedding/LamBase.lean, Difficulty: 20.09)
+    - Auto.Embedding.Lam.LamWF.interp_app (File: Auto/Embedding/LamBase.lean, Difficulty: N/A)
+    - Auto.Embedding.Lam.LamWF.interp_lam (File: Auto/Embedding/LamBase.lean, Difficulty: N/A)
+  Hard: 568 theorems
+    - Auto.Embedding.Lam.LamTerm.forallEFBody_forallEFTys_eq (File: Auto/Embedding/LamBase.lean, Difficulty: 29048849665247.43)
+    - Auto.Embedding.Lam.LamWF.interp_lctxIrrelevance (File: Auto/Embedding/LamBase.lean, Difficulty: 42012104037905144311971840.00)
+    - Auto.Embedding.Lam.LamWF.interp_eVarIrrelevance (File: Auto/Embedding/LamBase.lean, Difficulty: 310429793570191987473121280.00)
+  Hard (No proof): 0 theorems
+
+Overall Statistics:
+Easy: 357905 theorems (36.08%)
+Medium: 326878 theorems (32.95%)
+Hard: 306850 theorems (30.93%)
+Hard (No proof): 368 theorems (0.04%)
+
+Percentile thresholds: Easy <= 2.72, Medium <= 20.09, Hard > 20.09
+2024-09-16 03:38:49.915 | INFO     | __main__:main:1335 - Finding compatible repositories...
+2024-09-16 03:38:50.207 | INFO     | __main__:get_compatible_commit:340 - Latest commit: 9450a97f0f95d15cc8536dd9c12f28189f7d5d4b
+2024-09-16 03:38:50.207 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/dwrensha/compfiles
+2024-09-16 03:38:50.626 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-09-16 03:39:06.925 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/dwrensha/compfiles.git
+2024-09-16 03:39:06.925 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/dwrensha/compfiles.git
+2024-09-16 03:39:06.933 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:39:06.935 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/dwrensha/compfiles.git
+2024-09-16 03:39:08.360 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/dwrensha/compfiles.git
+2024-09-16 03:39:08.365 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/dwrensha/compfiles.git
+2024-09-16 03:39:08.387 | INFO     | __main__:get_compatible_commit:383 - Found 2071 commits for https://github.com/dwrensha/compfiles.git
+2024-09-16 03:39:11.655 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0
+2024-09-16 03:39:28.106 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc3
+2024-09-16 03:39:44.426 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-16 03:40:05.559 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc1
+2024-09-16 03:40:23.959 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0
+2024-09-16 03:40:40.741 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc2
+2024-09-16 03:41:10.736 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc1
+2024-09-16 03:41:43.578 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0
+2024-09-16 03:41:59.909 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc3
+2024-09-16 03:42:18.142 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc2
+2024-09-16 03:42:38.127 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc1
+2024-09-16 03:42:59.854 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-09-16 03:43:16.723 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit f99bf6f2928d47dd1a445b414b3a723c2665f091 for https://github.com/dwrensha/compfiles.git
+2024-09-16 03:43:17.032 | INFO     | __main__:get_compatible_commit:340 - Latest commit: 85e46f5e18856cc13195e3cc9d6774ba95487d03
+2024-09-16 03:43:17.033 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/leanprover-community/flt-regular
+2024-09-16 03:43:17.441 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/leanprover-community/flt-regular.git
+2024-09-16 03:43:17.442 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/leanprover-community/flt-regular.git
+2024-09-16 03:43:17.445 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:43:17.447 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/leanprover-community/flt-regular.git
+2024-09-16 03:43:18.660 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/leanprover-community/flt-regular.git
+2024-09-16 03:43:18.664 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/leanprover-community/flt-regular.git
+2024-09-16 03:43:18.678 | INFO     | __main__:get_compatible_commit:383 - Found 404 commits for https://github.com/leanprover-community/flt-regular.git
+2024-09-16 03:43:35.473 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-16 03:43:51.493 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4 for https://github.com/leanprover-community/flt-regular.git
+2024-09-16 03:43:51.778 | INFO     | __main__:get_compatible_commit:340 - Latest commit: dd607c678b229e26cd6c8dbe43e56f5455b39210
+2024-09-16 03:43:51.778 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/avigad/mathematics_in_lean_source
+2024-09-16 03:43:52.161 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-16 03:43:52.161 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-16 03:43:52.165 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:43:52.166 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-16 03:43:53.631 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-16 03:43:53.636 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-16 03:43:53.651 | INFO     | __main__:get_compatible_commit:383 - Found 535 commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-16 03:44:01.841 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit 5297e0fb051367c48c0a084411853a576389ecf5 for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-16 03:44:02.169 | INFO     | __main__:get_compatible_commit:340 - Latest commit: c3568e886ba4bedfb9aa416e586a2e51e03ca38b
+2024-09-16 03:44:02.170 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/AlexKontorovich/PrimeNumberTheoremAnd
+2024-09-16 03:44:02.500 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+2024-09-16 03:44:02.500 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+2024-09-16 03:44:02.504 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:44:02.506 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+2024-09-16 03:44:03.795 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+2024-09-16 03:44:03.800 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+2024-09-16 03:44:03.820 | INFO     | __main__:get_compatible_commit:383 - Found 1408 commits for https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+2024-09-16 03:44:05.796 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit 89bf7b5e3a226525e8580bae21ef543604f99b21 for https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+2024-09-16 03:44:06.090 | INFO     | __main__:get_compatible_commit:340 - Latest commit: 204831b880903afe6854aa633af3cbfb1ace863d
+2024-09-16 03:44:06.090 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/yuma-mizuno/lean-math-workshop
+2024-09-16 03:44:06.515 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/yuma-mizuno/lean-math-workshop.git
+2024-09-16 03:44:06.516 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/yuma-mizuno/lean-math-workshop.git
+2024-09-16 03:44:06.519 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:44:06.521 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/yuma-mizuno/lean-math-workshop.git
+2024-09-16 03:44:07.608 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/yuma-mizuno/lean-math-workshop.git
+2024-09-16 03:44:07.614 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/yuma-mizuno/lean-math-workshop.git
+2024-09-16 03:44:07.628 | INFO     | __main__:get_compatible_commit:383 - Found 210 commits for https://github.com/yuma-mizuno/lean-math-workshop.git
+2024-09-16 03:44:08.240 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit 5acd4b933d47fd6c1032798a6046c1baf261445d for https://github.com/yuma-mizuno/lean-math-workshop.git
+2024-09-16 03:44:08.552 | INFO     | __main__:get_compatible_commit:340 - Latest commit: 55961739bbd957678f48ad588ffe64987ed0c111
+2024-09-16 03:44:08.552 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/ImperialCollegeLondon/FLT
+2024-09-16 03:44:09.038 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/ImperialCollegeLondon/FLT.git
+2024-09-16 03:44:09.039 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/ImperialCollegeLondon/FLT.git
+2024-09-16 03:44:09.045 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:44:09.047 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/ImperialCollegeLondon/FLT.git
+2024-09-16 03:44:11.173 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/ImperialCollegeLondon/FLT.git
+2024-09-16 03:44:11.178 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/ImperialCollegeLondon/FLT.git
+2024-09-16 03:44:11.196 | INFO     | __main__:get_compatible_commit:383 - Found 793 commits for https://github.com/ImperialCollegeLondon/FLT.git
+2024-09-16 03:44:43.140 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit b208a302cdcbfadce33d8165f0b054bfa17e2147 for https://github.com/ImperialCollegeLondon/FLT.git
+2024-09-16 03:44:43.427 | INFO     | __main__:get_compatible_commit:340 - Latest commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a
+2024-09-16 03:44:43.427 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/rami3l/plfl
+2024-09-16 03:44:43.847 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-16 03:45:00.100 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/rami3l/plfl.git
+2024-09-16 03:45:00.100 | INFO     | __main__:get_compatible_commit:349 - Latest commit compatible for url https://github.com/rami3l/plfl.git
+2024-09-16 03:45:00.395 | INFO     | __main__:get_compatible_commit:340 - Latest commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3
+2024-09-16 03:45:00.395 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/google-deepmind/debate
+2024-09-16 03:45:00.836 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/google-deepmind/debate.git
+2024-09-16 03:45:00.837 | INFO     | __main__:get_compatible_commit:349 - Latest commit compatible for url https://github.com/google-deepmind/debate.git
+2024-09-16 03:45:01.109 | INFO     | __main__:get_compatible_commit:340 - Latest commit: 4a4aed723b1c725a62031c5389991eeecc9c5301
+2024-09-16 03:45:01.109 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/eric-wieser/lean-matrix-cookbook
+2024-09-16 03:45:01.439 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-16 03:45:01.440 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-16 03:45:01.447 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:45:01.449 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-16 03:45:02.500 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-16 03:45:02.505 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-16 03:45:02.519 | INFO     | __main__:get_compatible_commit:383 - Found 125 commits for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-16 03:45:02.910 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit f15a149d321ac99ff9b9c024b58e7882f564669f for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-16 03:45:03.171 | INFO     | __main__:get_compatible_commit:340 - Latest commit: f34ed7c9f2804570ef21faf6852638603af00aad
+2024-09-16 03:45:03.171 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/leanprover-community/con-nf
+2024-09-16 03:45:03.584 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/leanprover-community/con-nf.git
+2024-09-16 03:45:03.585 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/leanprover-community/con-nf.git
+2024-09-16 03:45:03.592 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:45:03.594 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/leanprover-community/con-nf.git
+2024-09-16 03:45:05.305 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/leanprover-community/con-nf.git
+2024-09-16 03:45:05.310 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/leanprover-community/con-nf.git
+2024-09-16 03:45:05.332 | INFO     | __main__:get_compatible_commit:383 - Found 1203 commits for https://github.com/leanprover-community/con-nf.git
+2024-09-16 03:45:20.592 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit 00bdc85ba7d486a9e544a0806a1018dd06fa3856 for https://github.com/leanprover-community/con-nf.git
+2024-09-16 03:45:20.927 | INFO     | __main__:get_compatible_commit:340 - Latest commit: 85d130df9ed20bc4d55ed5eacf48193b7f28df7b
+2024-09-16 03:45:20.927 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/FormalizedFormalLogic/Foundation
+2024-09-16 03:45:21.474 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-16 03:45:21.474 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-16 03:45:21.478 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:45:21.479 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-16 03:45:23.255 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-16 03:45:23.260 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-16 03:45:23.275 | INFO     | __main__:get_compatible_commit:383 - Found 573 commits for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-16 03:45:47.356 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0-rc2
+2024-09-16 03:46:03.521 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit d5fe5d057a90a0703a745cdc318a1b6621490c21 for https://github.com/FormalizedFormalLogic/Foundation.git
+2024-09-16 03:46:03.829 | INFO     | __main__:get_compatible_commit:340 - Latest commit: f1912c3090eb82820575758efc31e40b9db86bb8
+2024-09-16 03:46:03.829 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/loganrjmurphy/LeanEuclid
+2024-09-16 03:46:04.175 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/loganrjmurphy/LeanEuclid.git
+2024-09-16 03:46:04.176 | INFO     | __main__:get_compatible_commit:349 - Latest commit compatible for url https://github.com/loganrjmurphy/LeanEuclid.git
+2024-09-16 03:46:04.449 | INFO     | __main__:get_compatible_commit:340 - Latest commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a
+2024-09-16 03:46:04.449 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/siddhartha-gadgil/Saturn
+2024-09-16 03:46:04.868 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/siddhartha-gadgil/Saturn.git
+2024-09-16 03:46:04.869 | INFO     | __main__:get_compatible_commit:349 - Latest commit compatible for url https://github.com/siddhartha-gadgil/Saturn.git
+2024-09-16 03:46:05.148 | INFO     | __main__:get_compatible_commit:340 - Latest commit: 84d98396593219c7645f23d527b96bf49e8e0bc0
+2024-09-16 03:46:05.148 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/digama0/lean4lean
+2024-09-16 03:46:05.543 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/digama0/lean4lean.git
+2024-09-16 03:46:05.544 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/digama0/lean4lean.git
+2024-09-16 03:46:05.547 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:46:05.548 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/digama0/lean4lean.git
+2024-09-16 03:46:06.635 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/digama0/lean4lean.git
+2024-09-16 03:46:06.639 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/digama0/lean4lean.git
+2024-09-16 03:46:06.653 | INFO     | __main__:get_compatible_commit:383 - Found 53 commits for https://github.com/digama0/lean4lean.git
+2024-09-16 03:46:07.983 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-16 03:46:24.037 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit 05b1f4a68c5facea96a5ee51c6a56fef21276e0f for https://github.com/digama0/lean4lean.git
+2024-09-16 03:46:24.313 | INFO     | __main__:get_compatible_commit:340 - Latest commit: 7eaed1d5ef13b7c81d71fa1f0116c93c83cc0b0c
+2024-09-16 03:46:24.313 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/nomeata/loogle
+2024-09-16 03:46:24.692 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/nomeata/loogle.git
+2024-09-16 03:46:24.692 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/nomeata/loogle.git
+2024-09-16 03:46:24.696 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:46:24.697 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/nomeata/loogle.git
+2024-09-16 03:46:25.813 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/nomeata/loogle.git
+2024-09-16 03:46:25.818 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/nomeata/loogle.git
+2024-09-16 03:46:25.830 | INFO     | __main__:get_compatible_commit:383 - Found 245 commits for https://github.com/nomeata/loogle.git
+2024-09-16 03:46:30.627 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit 387ab85308ce817bb95cc99730025eb44cb8a9ab for https://github.com/nomeata/loogle.git
+2024-09-16 03:46:30.927 | INFO     | __main__:get_compatible_commit:340 - Latest commit: f339b7d3ffd61737fd2417809e61493fa7854693
+2024-09-16 03:46:30.927 | INFO     | __main__:get_compatible_commit:343 - Creating LeanGitRepo for https://github.com/leanprover-community/lean-auto
+2024-09-16 03:46:31.330 | INFO     | __main__:get_compatible_commit:345 - Getting config for https://github.com/leanprover-community/lean-auto.git
+2024-09-16 03:46:31.330 | INFO     | __main__:get_compatible_commit:352 - Searching for compatible commit for https://github.com/leanprover-community/lean-auto.git
+2024-09-16 03:46:31.334 | INFO     | __main__:get_compatible_commit:358 - Already in a Git repository
+2024-09-16 03:46:31.335 | INFO     | __main__:get_compatible_commit:368 - Fetching commits for https://github.com/leanprover-community/lean-auto.git
+2024-09-16 03:46:32.639 | INFO     | __main__:get_compatible_commit:372 - Fetched commits for https://github.com/leanprover-community/lean-auto.git
+2024-09-16 03:46:32.644 | INFO     | __main__:get_compatible_commit:378 - Getting list of commits for https://github.com/leanprover-community/lean-auto.git
+2024-09-16 03:46:32.660 | INFO     | __main__:get_compatible_commit:383 - Found 535 commits for https://github.com/leanprover-community/lean-auto.git
+2024-09-16 03:46:33.718 | INFO     | __main__:get_compatible_commit:390 - Found compatible commit 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025 for https://github.com/leanprover-community/lean-auto.git
+2024-09-16 03:46:34.560 | INFO     | __main__:main:1338 - Finished finding compatible repositories
+(base) yingzi_ma@compute-permanent-node-845:~/lean_project/ReProver$ bash run_code3.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554726.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555540.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554723.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554719.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554720.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555544.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554727.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554730.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554722.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554721.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555541.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554724.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_GCS.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555546.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554715.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555547.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555542.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_RAYLET.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554729.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554725.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555543.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554718.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554716.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_AUTOSCALER.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554717.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555545.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554728.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554593.log': Permission denied
+Stopping ray
+Could not terminate `/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py` due to (pid=4060727, name='python3')
+Did not find any active Ray processes.
+Running main3.py
+[2024-09-16 04:02:15,985] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-16 04:02:19.618 | INFO     | __main__:main:1239 - Running progressive training
+2024-09-16 04:02:19.618 | INFO     | __main__:main:1245 - Configuring LeanDojo...
+2024-09-16 04:02:19.621 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-16 04:02:19.621 | INFO     | __main__:main:1247 - LeanDojo configured
+2024-09-16 04:02:19.621 | INFO     | __main__:main:1252 - Starting the main process
+2024-09-16 04:02:19.621 | INFO     | __main__:main:1260 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum.json
+2024-09-16 04:03:25.446 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-16 04:03:25.446 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-16 04:03:33.063 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-16 04:03:33.063 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-16 04:03:41.835 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-16 04:03:41.835 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-16 04:03:43.838 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-16 04:03:43.838 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-16 04:03:55.057 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-16 04:03:55.057 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-16 04:04:05.650 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-16 04:04:05.650 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-16 04:04:07.600 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 04:04:07.600 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 04:04:07.741 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-16 04:04:07.741 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-16 04:04:19.837 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 04:04:19.837 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 04:04:21.734 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 04:04:21.735 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 04:04:22.106 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 04:04:22.106 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 04:04:22.733 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 04:04:22.733 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 04:04:22.880 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 04:04:22.880 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 04:04:22.968 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 04:04:22.968 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 04:04:23.688 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 04:04:23.688 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 04:04:23.979 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 04:04:23.979 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 04:04:39.763 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 04:04:39.763 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 04:04:41.531 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 04:04:41.531 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 04:04:43.019 | INFO     | __main__:main:1262 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum.json
+2024-09-16 04:04:43.021 | INFO     | __main__:main:1269 - Found 15 repositories
+2024-09-16 04:04:43.021 | INFO     | __main__:main:1272 - Starting curriculum learning
+Ready to calculate difficulties of all theorems
+Starting lecopivo/SciLean
+2024-09-16 04:04:43.296 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-16 04:04:43.296 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+Finished lecopivo/SciLean
+Starting ImperialCollegeLondon/FLT
+2024-09-16 04:04:43.583 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-16 04:04:43.583 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+Finished ImperialCollegeLondon/FLT
+Starting teorth/pfr
+2024-09-16 04:04:43.871 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-16 04:04:43.871 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+Finished teorth/pfr
+Starting AlexKontorovich/PrimeNumberTheoremAnd
+2024-09-16 04:04:44.181 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-16 04:04:44.182 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+Finished AlexKontorovich/PrimeNumberTheoremAnd
+Starting dwrensha/compfiles
+2024-09-16 04:04:44.689 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-16 04:04:44.689 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+Finished dwrensha/compfiles
+Starting google-deepmind/debate
+2024-09-16 04:04:44.948 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-16 04:04:44.948 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+Finished google-deepmind/debate
+Starting avigad/mathematics_in_lean_source
+2024-09-16 04:04:45.259 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 04:04:45.259 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+Finished avigad/mathematics_in_lean_source
+Starting digama0/lean4lean
+2024-09-16 04:04:45.270 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-16 04:04:45.270 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+Finished digama0/lean4lean
+Starting eric-wieser/lean-matrix-cookbook
+2024-09-16 04:04:45.526 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 04:04:45.526 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+Finished eric-wieser/lean-matrix-cookbook
+Starting yuma-mizuno/lean-math-workshop
+2024-09-16 04:04:45.823 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 04:04:45.823 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+Finished yuma-mizuno/lean-math-workshop
+Starting loganrjmurphy/LeanEuclid
+2024-09-16 04:04:45.874 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 04:04:45.874 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+Finished loganrjmurphy/LeanEuclid
+Starting FormalizedFormalLogic/Foundation
+2024-09-16 04:04:45.963 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 04:04:45.963 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+Finished FormalizedFormalLogic/Foundation
+Starting leanprover-community/lean-auto
+2024-09-16 04:04:45.970 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 04:04:45.970 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+Finished leanprover-community/lean-auto
+Starting nomeata/loogle
+2024-09-16 04:04:45.973 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 04:04:45.973 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+Finished nomeata/loogle
+Starting leanprover-community/con-nf
+2024-09-16 04:04:46.079 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 04:04:46.079 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+Finished leanprover-community/con-nf
+Starting siddhartha-gadgil/Saturn
+2024-09-16 04:04:46.118 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 04:04:46.118 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+Finished siddhartha-gadgil/Saturn
+Starting leanprover-community/flt-regular
+2024-09-16 04:04:46.622 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 04:04:46.622 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+Finished leanprover-community/flt-regular
+Starting rami3l/plfl
+2024-09-16 04:04:46.893 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 04:04:46.893 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+Finished rami3l/plfl
+Ready to categorize theorems
+Starting lecopivo/SciLean
+Finished lecopivo/SciLean
+Starting ImperialCollegeLondon/FLT
+Finished ImperialCollegeLondon/FLT
+Starting teorth/pfr
+Finished teorth/pfr
+Starting AlexKontorovich/PrimeNumberTheoremAnd
+Finished AlexKontorovich/PrimeNumberTheoremAnd
+Starting dwrensha/compfiles
+Finished dwrensha/compfiles
+Starting google-deepmind/debate
+Finished google-deepmind/debate
+Starting avigad/mathematics_in_lean_source
+Finished avigad/mathematics_in_lean_source
+Starting digama0/lean4lean
+Finished digama0/lean4lean
+Starting eric-wieser/lean-matrix-cookbook
+Finished eric-wieser/lean-matrix-cookbook
+Starting yuma-mizuno/lean-math-workshop
+Finished yuma-mizuno/lean-math-workshop
+Starting loganrjmurphy/LeanEuclid
+Finished loganrjmurphy/LeanEuclid
+Starting FormalizedFormalLogic/Foundation
+Finished FormalizedFormalLogic/Foundation
+Starting leanprover-community/lean-auto
+Finished leanprover-community/lean-auto
+Starting nomeata/loogle
+Finished nomeata/loogle
+Starting leanprover-community/con-nf
+Finished leanprover-community/con-nf
+Starting siddhartha-gadgil/Saturn
+Finished siddhartha-gadgil/Saturn
+Starting leanprover-community/flt-regular
+Finished leanprover-community/flt-regular
+Starting rami3l/plfl
+Finished rami3l/plfl
+Distributed theorems with no proofs
+Starting lecopivo/SciLean
+Finished lecopivo/SciLean
+Starting ImperialCollegeLondon/FLT
+Finished ImperialCollegeLondon/FLT
+Starting teorth/pfr
+Finished teorth/pfr
+Starting AlexKontorovich/PrimeNumberTheoremAnd
+Finished AlexKontorovich/PrimeNumberTheoremAnd
+Starting dwrensha/compfiles
+Finished dwrensha/compfiles
+Starting google-deepmind/debate
+Finished google-deepmind/debate
+Starting avigad/mathematics_in_lean_source
+Finished avigad/mathematics_in_lean_source
+Starting digama0/lean4lean
+Finished digama0/lean4lean
+Starting eric-wieser/lean-matrix-cookbook
+Finished eric-wieser/lean-matrix-cookbook
+Starting yuma-mizuno/lean-math-workshop
+Finished yuma-mizuno/lean-math-workshop
+Starting loganrjmurphy/LeanEuclid
+Finished loganrjmurphy/LeanEuclid
+Starting FormalizedFormalLogic/Foundation
+Finished FormalizedFormalLogic/Foundation
+Starting leanprover-community/lean-auto
+Finished leanprover-community/lean-auto
+Starting nomeata/loogle
+Finished nomeata/loogle
+Starting leanprover-community/con-nf
+Finished leanprover-community/con-nf
+Starting siddhartha-gadgil/Saturn
+Finished siddhartha-gadgil/Saturn
+Starting leanprover-community/flt-regular
+Finished leanprover-community/flt-regular
+Starting rami3l/plfl
+Finished rami3l/plfl
+Sorted repositories. Saving now...
+^Z
+[1]+  Stopped                 bash run_code3.sh
+(base) yingzi_ma@compute-permanent-node-845:~/lean_project/ReProver$ bash run_code3_all_sorries.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554726.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555540.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554723.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554719.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554720.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555544.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554727.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554730.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554722.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554721.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555541.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554724.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_GCS.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555546.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554715.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555547.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555542.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_RAYLET.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554729.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554725.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555543.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554718.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554716.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_AUTOSCALER.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554717.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_555545.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554728.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-08-15_18-46-05_429391_554139/logs/events/event_CORE_WORKER_554593.log': Permission denied
+Stopping ray
+Could not terminate `/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py` due to (pid=4060727, name='python3')
+Did not find any active Ray processes.
+Running main3_all_sorries.py
+[2024-09-16 04:12:04,057] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-16 04:12:07.516 | INFO     | __main__:main:1241 - Running retrieval baseline
+2024-09-16 04:12:07.516 | INFO     | __main__:main:1244 - Configuring LeanDojo...
+2024-09-16 04:12:07.519 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-16 04:12:07.519 | INFO     | __main__:main:1246 - LeanDojo configured
+2024-09-16 04:12:07.519 | INFO     | __main__:main:1251 - Starting the main process
+2024-09-16 04:12:07.519 | INFO     | __main__:main:1259 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_full.json
+2024-09-16 04:13:14.383 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-16 04:13:14.383 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-16 04:13:22.209 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-16 04:13:22.209 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-16 04:13:31.194 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-16 04:13:31.194 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-16 04:13:33.248 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-16 04:13:33.248 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-16 04:13:44.710 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-16 04:13:44.710 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-16 04:13:55.476 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-16 04:13:55.476 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-16 04:13:57.428 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 04:13:57.428 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 04:13:57.569 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-16 04:13:57.569 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-16 04:14:09.843 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 04:14:09.843 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-16 04:14:11.707 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 04:14:11.708 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-16 04:14:12.065 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 04:14:12.065 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-16 04:14:12.675 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 04:14:12.675 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-16 04:14:12.820 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 04:14:12.820 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-16 04:14:12.907 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 04:14:12.907 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-16 04:14:13.624 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 04:14:13.624 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-16 04:14:13.916 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 04:14:13.916 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-16 04:14:29.753 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 04:14:29.753 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-16 04:14:31.495 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 04:14:31.495 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-16 04:14:33.016 | INFO     | __main__:main:1261 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_full.json
+2024-09-16 04:14:33.017 | INFO     | __main__:main:1268 - Found 14 repositories
+2024-09-16 04:14:33.017 | INFO     | __main__:main:1271 - Starting curriculum learning
+2024-09-16 04:14:33.437 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-09-16 04:14:50.439 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-16 04:15:08.622 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-16 04:15:25.407 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-16 04:15:43.664 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0-rc2
+2024-09-16 04:16:01.185 | INFO     | __main__:main:1356 - length of lean_git_repos: 14
+2024-09-16 04:16:01.185 | INFO     | __main__:main:1357 - i: 0
+2024-09-16 04:16:01.186 | INFO     | __main__:main:1363 - Main process
+2024-09-16 04:16:01.186 | INFO     | __main__:main:1364 - Using lambda = 0.0
+2024-09-16 04:16:01.186 | INFO     | __main__:main:1365 - Processing https://github.com/dwrensha/compfiles
+2024-09-16 04:16:01.186 | INFO     | __main__:main:1372 - Adding repo to repos_for_merged_dataset
+2024-09-16 04:16:01.186 | INFO     | __main__:main:1384 - All GPUs
+2024-09-16 04:16:01.186 | INFO     | __main__:main:1622 - Starting the prover
+2024-09-16 04:16:01.186 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-16 04:16:01.186 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-16 04:16:01.186 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module impli
+citly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the defau
+lt value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by t
+he user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this e
+xperimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-16 04:16:02.149 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/ReProver/retriever_random.ckpt
+2024-09-16 04:16:02.149 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/ReProver/retriever_random.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint retriever_random.ckpt`
+2024-09-16 04:16:04.686 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.enc
+oder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'retri
+ever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.enc
+oder.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.la
+yer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.enco
+der.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseR
+eluDense.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.en
+coder.encoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.lay
+er_norm.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retri
+ever.encoder.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.S
+elfAttention.v.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever
+.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0
+.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.la
+yer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retr
+iever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.
+DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.l
+ayer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight'
+, 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7
+.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'ret
+riever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.
+block.7.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight
+', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.bloc
+k.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weig
+ht', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.b
+lock.9.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.
+wo.weight', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encod
+er.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.
+wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.enco
+der.encoder.block.11.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.S
+elfAttention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 're
+triever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'sta
+te_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-16 04:16:05.462 | INFO     | prover.proof_search_all_sorries:__init__:452 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-16 04:16:05.463 | INFO     | prover.proof_search_all_sorries:__init__:453 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-16 04:16:05.463 | INFO     | prover.proof_search_all_sorries:__init__:456 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a
+723c2665f091/corpus.jsonl
+2024-09-16 04:16:05.463 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091/corpus.jsonl
+2024-09-16 04:16:24.300 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-16 04:16:24.300 | INFO     | prover.proof_search_all_sorries:__init__:458 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a7
+23c2665f091/corpus.jsonl
+2024-09-16 04:16:24.300 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5566/5566 [09:01<00:00, 10.29it/s]
+2024-09-16 04:25:25.486 | INFO     | prover.proof_search_all_sorries:__init__:460 - Finished reindexing!
+2024-09-16 04:25:25.486 | INFO     | prover.proof_search_all_sorries:__init__:471 - Launching 4 workers with 4 GPUs.
+2024-09-16 04:25:29,726 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=1524715) [2024-09-16 04:26:30,345] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1524715) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1524715)   return torch.load(io.BytesIO(b))
+(pid=1524932) [2024-09-16 04:27:05,144] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1524932) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1524932)   return torch.load(io.BytesIO(b))
+(pid=1525530) [2024-09-16 04:27:37,656] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1525530) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1525530)   return torch.load(io.BytesIO(b))
+2024-09-16 04:28:05.384 | INFO     | __main__:prove_sorry_theorems:852 - Found 5 sorry theorems to prove
+Processing theorems from dwrensha/compfiles:   0%|                                                                                                                                                                | 0/5 [00:00<?, ?theorem/s]
+2024-09-16 04:28:05.385 | INFO     | __main__:prove_sorry_theorems:865 - Skipping already encountered theorem: Imo2008P5.even_subsets_card
+2024-09-16 04:28:05.385 | INFO     | __main__:prove_sorry_theorems:865 - Skipping already encountered theorem: Bulgaria1998P6.lemma_1'
+2024-09-16 04:28:05.385 | INFO     | __main__:prove_sorry_theorems:865 - Skipping already encountered theorem: Imo2009P6.imo2009_p6_aux1
+2024-09-16 04:28:05.385 | INFO     | __main__:prove_sorry_theorems:865 - Skipping already encountered theorem: Imo2001P1.lemma1
+2024-09-16 04:28:05.385 | INFO     | __main__:prove_sorry_theorems:865 - Skipping already encountered theorem: Imo2008P5.claim
+Processing theorems from dwrensha/compfiles: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 9370.65theorem/s]
+2024-09-16 04:28:05.386 | INFO     | __main__:save_progress:807 - Saving encountered theorems...
+2024-09-16 04:28:05.388 | INFO     | __main__:prove_sorry_theorems:903 - Finished attempting to prove sorry theorems
+(pid=1526024) [2024-09-16 04:28:12,327] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1526024) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1526024)   return torch.load(io.BytesIO(b))
+2024-09-16 04:32:45.763 | INFO     | __main__:main:1661 - Finished searching for proofs of sorry theorems
+2024-09-16 04:32:45.765 | INFO     | __main__:main:1664 - Shutting down Ray after proving
+2024-09-16 04:32:49.322 | INFO     | __main__:main:1684 - Finished processing the repository
+2024-09-16 04:32:49.323 | INFO     | __main__:main:1686 - current epoch: 1
+2024-09-16 04:32:49.323 | INFO     | __main__:main:1356 - length of lean_git_repos: 14
+2024-09-16 04:32:49.323 | INFO     | __main__:main:1357 - i: 1
+2024-09-16 04:32:49.323 | INFO     | __main__:main:1363 - Main process
+2024-09-16 04:32:49.323 | INFO     | __main__:main:1364 - Using lambda = 0.0
+2024-09-16 04:32:49.323 | INFO     | __main__:main:1365 - Processing https://github.com/avigad/mathematics_in_lean_source
+2024-09-16 04:32:49.323 | INFO     | __main__:main:1372 - Adding repo to repos_for_merged_dataset
+2024-09-16 04:32:49.323 | INFO     | __main__:main:1384 - All GPUs
+2024-09-16 04:32:49.324 | INFO     | __main__:main:1622 - Starting the prover
+2024-09-16 04:32:49.324 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-16 04:32:49.324 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-16 04:32:49.324 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module impli
+citly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the defau
+lt value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by t
+he user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this e
+xperimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-16 04:32:49.567 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/ReProver/retriever_random.ckpt
+2024-09-16 04:32:49.567 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/ReProver/retriever_random.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint retriever_random.ckpt`
+2024-09-16 04:32:50.956 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.enc
+oder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'retri
+ever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.enc
+oder.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.la
+yer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.enco
+der.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseR
+eluDense.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.en
+coder.encoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.lay
+er_norm.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retri
+ever.encoder.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.S
+elfAttention.v.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever
+.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0
+.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.la
+yer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retr
+iever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.
+DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.l
+ayer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight'
+, 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7
+.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'ret
+riever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.
+block.7.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight
+', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.bloc
+k.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weig
+ht', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.b
+lock.9.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.
+wo.weight', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encod
+er.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.
+wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.enco
+der.encoder.block.11.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.S
+elfAttention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 're
+triever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'sta
+te_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-16 04:32:51.312 | INFO     | prover.proof_search_all_sorries:__init__:452 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-16 04:32:51.313 | INFO     | prover.proof_search_all_sorries:__init__:453 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-16 04:32:51.313 | INFO     | prover.proof_search_all_sorries:__init__:456 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051
+367c48c0a084411853a576389ecf5/corpus.jsonl
+2024-09-16 04:32:51.313 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf
+5/corpus.jsonl
+2024-09-16 04:32:58.544 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-16 04:32:58.545 | INFO     | prover.proof_search_all_sorries:__init__:458 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_mathematics_in_lean_source_5297e0fb0513
+67c48c0a084411853a576389ecf5/corpus.jsonl
+2024-09-16 04:32:58.545 | INFO     | retrieval.model:reindex_corpus:286 - Re-indexing the retrieval corpus
+ 15%|██████████████████████████████▏                                                                                                                                                      15%|██████████████████████████████▎
+                                                                                                                                      15%|██████████████████████████████▎
+                                                                                  15%|██████████████████████████████▍
+                              16%|██████████████████████████████▌                                                                                                                                                      16%|██████████████████
+████████████▋                                                                                                                                                      16%|██████████████████████████████▊
+                                                                                                               16%|██████████████████████████████▉
+                                                           16%|███████████████████████████████
+       16%|███████████████████████████████                                                                                                                                                      16%|███████████████████████████████▏
+                                                                                                                                            16%|███████████████████████████████▍
+                                                                                        16%|███████████████████████████████▍
+                                    16%|███████████████████████████████▌                                                                                                                                                     16%|████████████
+███████████████████▋                                                                                                                                                     16%|███████████████████████████████▊
+                                                                                                                     16%|███████████████████████████████▉
+                                                                 16%|███████████████████████████████▉
+             16%|████████████████████████████████                                                                                                                                                     16%|████████████████████████████████▏
+                                                                                                                                                  16%|████████████████████████████████▏
+                                                                                              16%|████████████████████████████████▎
+                                          16%|████████████████████████████████▍                                                                                                                                                    17%|██████
+██████████████████████████▌                                                                                                                                                    17%|████████████████████████████████▋
+                                                                                                                           17%|████████████████████████████████▊
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3679/3679 [05:38<00:00, 10.88it/s]
+2024-09-16 04:38:36.840 | INFO     | prover.proof_search_all_sorries:__init__:460 - Finished reindexing!
+2024-09-16 04:38:36.841 | INFO     | prover.proof_search_all_sorries:__init__:471 - Launching 4 workers with 4 GPUs.
+2024-09-16 04:38:40,521 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=1563743) [2024-09-16 04:39:18,666] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1563743) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1563743)   return torch.load(io.BytesIO(b))
+(pid=1563992) [2024-09-16 04:39:29,402] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1563992) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1563992)   return torch.load(io.BytesIO(b))
+(pid=1564171) [2024-09-16 04:39:41,256] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-16 04:39:44.782 | INFO     | __main__:prove_sorry_theorems:852 - Found 15 sorry theorems to prove
+Processing theorems from avigad/mathematics_in_lean_source:   0%|                                                                                                                                                | 0/15 [00:00<?, ?theorem/s]
+2024-09-16 04:39:44.783 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for cauchySeq_of_le_geometric_two'
+2024-09-16 04:39:44.784 | INFO     | __main__:prove_sorry_theorems:876 - Position: (423, 1)
+2024-09-16 04:39:44.784 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S06.convergesTo_mul_const
+2024-09-16 04:39:44.784 | INFO     | __main__:prove_sorry_theorems:876 - Position: (199, 1)
+2024-09-16 04:39:44.784 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S06.convergesTo_add
+2024-09-16 04:39:44.784 | INFO     | __main__:prove_sorry_theorems:876 - Position: (143, 1)
+2024-09-16 04:39:44.784 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S05.MyAbs.abs_lt
+2024-09-16 04:39:44.785 | INFO     | __main__:prove_sorry_theorems:876 - Position: (196, 1)
+2024-09-16 04:39:44.785 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for Cantor
+2024-09-16 04:39:44.785 | INFO     | __main__:prove_sorry_theorems:876 - Position: (673, 1)
+2024-09-16 04:39:44.785 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S06.exists_abs_le_of_convergesTo
+2024-09-16 04:39:44.785 | INFO     | __main__:prove_sorry_theorems:876 - Position: (239, 1)
+2024-09-16 04:39:44.785 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S05.MyAbs.le_abs_self
+2024-09-16 04:39:44.785 | INFO     | __main__:prove_sorry_theorems:876 - Position: (157, 1)
+2024-09-16 04:39:44.785 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for MyRing.two_mul
+2024-09-16 04:39:44.785 | INFO     | __main__:prove_sorry_theorems:876 - Position: (407, 1)
+2024-09-16 04:39:44.786 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S04.aux
+2024-09-16 04:39:44.786 | INFO     | __main__:prove_sorry_theorems:876 - Position: (246, 1)
+2024-09-16 04:39:44.786 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for MyRing.self_sub
+2024-09-16 04:39:44.786 | INFO     | __main__:prove_sorry_theorems:876 - Position: (382, 1)
+2024-09-16 04:39:44.786 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S01.Subset.trans
+2024-09-16 04:39:44.786 | INFO     | __main__:prove_sorry_theorems:876 - Position: (506, 1)
+2024-09-16 04:39:44.786 | INFO     | __main__:prove_sorry_theorems:875 - Searching for proof for C03S01.my_lemma3
+2024-09-16 04:39:44.786 | INFO     | __main__:prove_sorry_theorems:876 - Position: (99, 1)
+2024-09-16 04:39:44.786 | INFO     | prover.proof_search_all_sorries:search_unordered:514 - Distributed
+(ProverActor pid=1563743) 2024-09-16 04:39:44.798 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411853
+a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S05_Disjunction.lean'), full_name='C03S05.MyAbs.abs_lt')
+(ProverActor pid=1564171) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1564171)   return torch.load(io.BytesIO(b))
+(pid=1564335) [2024-09-16 04:39:52,487] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1564171) 2024-09-16 04:39:55.414 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411853
+a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S06_Sequences_and_Convergence.lean'), full_name='C03S06.convergesTo_mul_const') [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log dedupli
+cation, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)
+(ProverActor pid=1564335) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1564335)   return torch.load(io.BytesIO(b))
+(ProverActor pid=1564335) 2024-09-16 04:40:08.540 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411853
+a576389ecf5'), file_path=PosixPath('MIL/C09_Topology/S02_Metric_Spaces.lean'), full_name="cauchySeq_of_le_geometric_two'")
+(ProverActor pid=1563992) 2024-09-16 04:50:42.592 | INFO     | prover.proof_search_all_sorries:_best_first_search:163 - Hit the resource limit (timeout or max_expansions).
+(ProverActor pid=1563743) 2024-09-16 04:50:46.296 | INFO     | prover.proof_search_all_sorries:_best_first_search:149 - 3124216.716973097
+(ProverActor pid=1563743) 2024-09-16 04:50:46.296 | INFO     | prover.proof_search_all_sorries:_best_first_search:150 - 3123616.71928993
+(ProverActor pid=1563743) 2024-09-16 04:50:46.296 | INFO     | prover.proof_search_all_sorries:_best_first_search:151 - 599.9982323399745
+(ProverActor pid=1563743) 2024-09-16 04:50:46.296 | INFO     | prover.proof_search_all_sorries:_best_first_search:152 - 600
+(ProverActor pid=1564335) 2024-09-16 04:50:52.282 | INFO     | prover.proof_search_all_sorries:_best_first_search:163 - Hit the resource limit (timeout or max_expansions). [repeated 3x across cluster]
+(ProverActor pid=1564335) 2024-09-16 04:50:52.282 | INFO     | prover.proof_search_all_sorries:_best_first_search:152 - 600 [repeated 4x across cluster]
+(ProverActor pid=1563992) 2024-09-16 04:50:52.530 | INFO     | prover.proof_search_all_sorries:search:128 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c
+48c0a084411853a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S06_Sequences_and_Convergence.lean'), full_name='C03S06.convergesTo_add'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=332.55647324351594, environment_time=266.8251
+30012352, total_time=600.6861254111864, num_total_nodes=5566, num_searched_nodes=162)
+(ProverActor pid=1563992) 2024-09-16 04:50:52.536 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411853
+a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S06_Sequences_and_Convergence.lean'), full_name='C03S06.exists_abs_le_of_convergesTo')
+(ProverActor pid=1564171) 2024-09-16 04:50:52.484 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411853
+a576389ecf5'), file_path=PosixPath('MIL/C04_Sets_and_Functions/S02_Functions.lean'), full_name='Cantor')
+(ProverActor pid=1564335) 2024-09-16 04:51:04.647 | INFO     | prover.proof_search_all_sorries:search:128 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c
+48c0a084411853a576389ecf5'), file_path=PosixPath('MIL/C09_Topology/S02_Metric_Spaces.lean'), full_name="cauchySeq_of_le_geometric_two'"), status=<Status.OPEN: 'Open'>, proof=None, actor_time=121.425405127462, environment_time=448.9309307
+835065, total_time=600.9954073932022, num_total_nodes=1187, num_searched_nodes=36)
+(ProverActor pid=1564335) 2024-09-16 04:51:04.653 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411853
+a576389ecf5'), file_path=PosixPath('MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean'), full_name='MyRing.two_mul')
+(ProverActor pid=1563743) 2024-09-16 04:50:57.089 | INFO     | prover.proof_search_all_sorries:search:128 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c
+48c0a084411853a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S05_Disjunction.lean'), full_name='C03S05.MyAbs.abs_lt'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=56.39344293856993, environment_time=489.8185450513847, total_t
+ime=600.9984962567687, num_total_nodes=895, num_searched_nodes=21) [repeated 2x across cluster]
+(ProverActor pid=1563743) 2024-09-16 04:50:57.094 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411853
+a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S05_Disjunction.lean'), full_name='C03S05.MyAbs.le_abs_self')
+(ProverActor pid=1563743) 2024-09-16 04:51:50.377 | INFO     | prover.proof_search_all_sorries:_best_first_search:171 - Found a proof!
+(ProverActor pid=1563743) 2024-09-16 04:52:04.121 | INFO     | prover.proof_search_all_sorries:search:128 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c
+48c0a084411853a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S05_Disjunction.lean'), full_name='C03S05.MyAbs.le_abs_self'), status=<Status.PROVED: 'Proved'>, proof=['rw [le_abs]', 'simp'], actor_time=6.54887854680419, environment_time
+=2.6455204146914184, total_time=10.197789669036865, num_total_nodes=87, num_searched_nodes=3)
+(ProverActor pid=1563743) 2024-09-16 04:52:04.126 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411853
+a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S04_Conjunction_and_Iff.lean'), full_name='C03S04.aux')
+(ProverActor pid=1564335) 2024-09-16 04:52:07.128 | INFO     | prover.proof_search_all_sorries:_best_first_search:171 - Found a proof!
+(ProverActor pid=1564335) 2024-09-16 04:52:19.918 | INFO     | prover.proof_search_all_sorries:search:128 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c
+48c0a084411853a576389ecf5'), file_path=PosixPath('MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean'), full_name='MyRing.two_mul'), status=<Status.PROVED: 'Proved'>, proof=['nontriviality R', 'abel', 'simp'], actor_time=
+11.65486250212416, environment_time=5.192544385325164, total_time=17.857804200146347, num_total_nodes=166, num_searched_nodes=6)
+(ProverActor pid=1564335) 2024-09-16 04:52:19.924 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411853
+a576389ecf5'), file_path=PosixPath('MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean'), full_name='MyRing.self_sub')
+(ProverActor pid=1563743) 2024-09-16 04:52:59.375 | INFO     | prover.proof_search_all_sorries:_best_first_search:171 - Found a proof!
+(ProverActor pid=1563743) 2024-09-16 04:53:12.248 | INFO     | prover.proof_search_all_sorries:search:128 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c
+48c0a084411853a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S04_Conjunction_and_Iff.lean'), full_name='C03S04.aux'), status=<Status.PROVED: 'Proved'>, proof=['contrapose! h', 'positivity'], actor_time=4.30783975450322, environment_ti
+me=0.8833575276657939, total_time=6.193362078163773, num_total_nodes=45, num_searched_nodes=2)
+(ProverActor pid=1563743) 2024-09-16 04:53:12.253 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411853
+a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean'), full_name='C03S01.Subset.trans')
+(ProverActor pid=1564335) 2024-09-16 04:53:14.468 | INFO     | prover.proof_search_all_sorries:_best_first_search:171 - Found a proof!
+(ProverActor pid=1564335) 2024-09-16 04:53:27.411 | INFO     | prover.proof_search_all_sorries:search:128 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c
+48c0a084411853a576389ecf5'), file_path=PosixPath('MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean'), full_name='MyRing.self_sub'), status=<Status.PROVED: 'Proved'>, proof=['simp [sub_eq_add_neg]'], actor_time=1.9208393
+399603665, environment_time=0.012737595941871405, total_time=2.9339742166921496, num_total_nodes=2, num_searched_nodes=1)
+(ProverActor pid=1564335) 2024-09-16 04:53:27.417 | INFO     | prover.proof_search_all_sorries:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c48c0a084411853
+a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean'), full_name='C03S01.my_lemma3')
+(ProverActor pid=1563743) 2024-09-16 04:54:04.413 | INFO     | prover.proof_search_all_sorries:_best_first_search:171 - Found a proof!
+(ProverActor pid=1563743) 2024-09-16 04:54:18.610 | INFO     | prover.proof_search_all_sorries:search:128 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c
+48c0a084411853a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean'), full_name='C03S01.Subset.trans'), status=<Status.PROVED: 'Proved'>, proof=['exact Set.Subset.trans'], actor_time=2.22267
+47502572834, environment_time=0.0048689208924770355, total_time=3.2278334479779005, num_total_nodes=2, num_searched_nodes=1)
+(ProverActor pid=1564335) 2024-09-16 04:54:20.811 | INFO     | prover.proof_search_all_sorries:_best_first_search:171 - Found a proof!
+(ProverActor pid=1564335) 2024-09-16 04:54:32.158 | INFO     | prover.proof_search_all_sorries:search:128 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c
+48c0a084411853a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean'), full_name='C03S01.my_lemma3'), status=<Status.PROVED: 'Proved'>, proof=['apply C03S01.my_lemma'], actor_time=1.676735117
+1001792, environment_time=0.0061746141873300076, total_time=2.683324590791017, num_total_nodes=2, num_searched_nodes=1)
+(ProverActor pid=1563992) 2024-09-16 05:01:39.048 | INFO     | prover.proof_search_all_sorries:_best_first_search:149 - 3124869.469399355
+(ProverActor pid=1563992) 2024-09-16 05:01:39.049 | INFO     | prover.proof_search_all_sorries:_best_first_search:150 - 3124269.472419336
+(ProverActor pid=1563992) 2024-09-16 05:01:39.049 | INFO     | prover.proof_search_all_sorries:_best_first_search:151 - 599.9974572020583
+(ProverActor pid=1563992) 2024-09-16 05:01:39.049 | INFO     | prover.proof_search_all_sorries:_best_first_search:152 - 600
+(ProverActor pid=1563992) 2024-09-16 05:01:39.049 | INFO     | prover.proof_search_all_sorries:_best_first_search:163 - Hit the resource limit (timeout or max_expansions).
+(ProverActor pid=1564171) 2024-09-16 05:01:52.600 | INFO     | prover.proof_search_all_sorries:search:128 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c
+48c0a084411853a576389ecf5'), file_path=PosixPath('MIL/C04_Sets_and_Functions/S02_Functions.lean'), full_name='Cantor'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=501.6368091846816, environment_time=96.72416117461398, total_tim
+e=600.996142742224, num_total_nodes=8642, num_searched_nodes=358)
+(ProverActor pid=1564171) 2024-09-16 05:01:42.675 | INFO     | prover.proof_search_all_sorries:_best_first_search:152 - 600 [repeated 4x across cluster]
+(ProverActor pid=1564171) 2024-09-16 05:01:42.676 | INFO     | prover.proof_search_all_sorries:_best_first_search:163 - Hit the resource limit (timeout or max_expansions).
+2024-09-16 05:01:54.042 | INFO     | __main__:process_theorem_batch:798 - No proof found for C03S06.convergesTo_mul_const
+2024-09-16 05:01:54.042 | INFO     | __main__:process_theorem_batch:798 - No proof found for C03S06.convergesTo_add
+2024-09-16 05:01:54.042 | INFO     | __main__:process_theorem_batch:798 - No proof found for C03S05.MyAbs.abs_lt
+2024-09-16 05:01:54.042 | INFO     | __main__:process_theorem_batch:798 - No proof found for cauchySeq_of_le_geometric_two'
+2024-09-16 05:01:54.042 | INFO     | __main__:process_theorem_batch:784 - Proof found for C03S05.MyAbs.le_abs_self
+2024-09-16 05:01:54.045 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.045 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.045 | INFO     | __main__:process_theorem_batch:796 - Updated theorem C03S05.MyAbs.le_abs_self in the database
+2024-09-16 05:01:54.045 | INFO     | __main__:process_theorem_batch:784 - Proof found for MyRing.two_mul
+2024-09-16 05:01:54.046 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.046 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.046 | INFO     | __main__:process_theorem_batch:796 - Updated theorem MyRing.two_mul in the database
+2024-09-16 05:01:54.046 | INFO     | __main__:process_theorem_batch:784 - Proof found for C03S04.aux
+2024-09-16 05:01:54.047 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.047 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.047 | INFO     | __main__:process_theorem_batch:796 - Updated theorem C03S04.aux in the database
+2024-09-16 05:01:54.047 | INFO     | __main__:process_theorem_batch:784 - Proof found for MyRing.self_sub
+2024-09-16 05:01:54.048 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.048 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.048 | INFO     | __main__:process_theorem_batch:796 - Updated theorem MyRing.self_sub in the database
+2024-09-16 05:01:54.048 | INFO     | __main__:process_theorem_batch:784 - Proof found for C03S01.Subset.trans
+2024-09-16 05:01:54.049 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.049 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.049 | INFO     | __main__:process_theorem_batch:796 - Updated theorem C03S01.Subset.trans in the database
+2024-09-16 05:01:54.049 | INFO     | __main__:process_theorem_batch:784 - Proof found for C03S01.my_lemma3
+2024-09-16 05:01:54.050 | INFO     | dynamic_database:update_repository:614 - Attempting to update repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.050 | INFO     | dynamic_database:update_repository:618 - Updated repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-16 05:01:54.050 | INFO     | __main__:process_theorem_batch:796 - Updated theorem C03S01.my_lemma3 in the database
+2024-09-16 05:01:54.050 | INFO     | __main__:process_theorem_batch:798 - No proof found for Cantor
+2024-09-16 05:01:54.050 | INFO     | __main__:process_theorem_batch:798 - No proof found for C03S06.exists_abs_le_of_convergesTo
+Processing theorems from avigad/mathematics_in_lean_source:  80%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▏                          | 12/15 [22:09<05:32, 110.77s/theorem]
+2024-09-16 05:01:54.051 | INFO     | __main__:save_progress:807 - Saving encountered theorems...
+2024-09-16 05:01:54.053 | INFO     | __main__:prove_sorry_theorems:903 - Finished attempting to prove sorry theorems
+(ProverActor pid=1563992) 2024-09-16 05:01:54.040 | INFO     | prover.proof_search_all_sorries:search:128 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/avigad/mathematics_in_lean_source', commit='5297e0fb051367c
+48c0a084411853a576389ecf5'), file_path=PosixPath('MIL/C03_Logic/S06_Sequences_and_Convergence.lean'), full_name='C03S06.exists_abs_le_of_convergesTo'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=389.7761033056304, environment_t
+ime=150.49608738115057, total_time=600.9976941682398, num_total_nodes=6144, num_searched_nodes=193)
+2024-09-16 05:03:56.788 | INFO     | __main__:main:1661 - Finished searching for proofs of sorry theorems
+2024-09-16 05:03:56.790 | INFO     | __main__:main:1664 - Shutting down Ray after proving
+2024-09-16 05:03:59.250 | INFO     | __main__:main:1684 - Finished processing the repository
+2024-09-16 05:03:59.250 | INFO     | __main__:main:1686 - current epoch: 2
+2024-09-16 05:03:59.250 | INFO     | __main__:main:1356 - length of lean_git_repos: 14
+2024-09-16 05:03:59.251 | INFO     | __main__:main:1357 - i: 2
+2024-09-16 05:03:59.251 | INFO     | __main__:main:1363 - Main process
+2024-09-16 05:03:59.251 | INFO     | __main__:main:1364 - Using lambda = 0.0
+2024-09-16 05:03:59.251 | INFO     | __main__:main:1365 - Processing https://github.com/AlexKontorovich/PrimeNumberTheoremAnd
+2024-09-16 05:03:59.251 | INFO     | __main__:main:1372 - Adding repo to repos_for_merged_dataset
+2024-09-16 05:03:59.251 | INFO     | __main__:main:1384 - All GPUs
+2024-09-16 05:03:59.251 | INFO     | __main__:main:1622 - Starting the prover
+2024-09-16 05:03:59.251 | INFO     | prover.proof_search_all_sorries:__init__:407 - Inside __init__
+2024-09-16 05:03:59.251 | INFO     | prover.proof_search_all_sorries:__init__:412 - ckpt_path is not None
+2024-09-16 05:03:59.251 | INFO     | prover.proof_search_all_sorries:__init__:427 - Using RAG
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../model_lightning.ckpt`
+2024-09-16 05:03:59.666 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/ReProver/retriever_random.ckpt
+2024-09-16 05:03:59.667 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/ReProver/retriever_random.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint retriever_random.ckpt`
+2024-09-16 05:04:01.046 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+2024-09-16 05:04:01.404 | INFO     | prover.proof_search_all_sorries:__init__:452 - Loaded model from /data/yingzi_ma/lean_project/model_lightning.ckpt
+2024-09-16 05:04:01.405 | INFO     | prover.proof_search_all_sorries:__init__:453 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-16 05:04:01.405 | INFO     | prover.proof_search_all_sorries:__init__:456 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525
+e8580bae21ef543604f99b21/corpus.jsonl
+2024-09-16 05:04:01.405 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/cor
+pus.jsonl
+2024-09-16 05:04:01.406 | INFO     | __main__:main:2066 - An error occurred: [Errno 2] No such file or directory: '/data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226
+525e8580bae21ef543604f99b21/corpus.jsonl'
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main3_all_sorries.py", line 1640, in main
+    prover = DistributedProver(
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search_all_sorries.py", line 457, in __init__
+    tac_gen.retriever.load_corpus(indexed_corpus_path)
+  File "/data/yingzi_ma/lean_project/ReProver/retrieval/model.py", line 156, in load_corpus
+    self.corpus = Corpus(path)
+  File "/data/yingzi_ma/lean_project/ReProver/common.py", line 214, in __init__
+    for line in open(jsonl_path):
+FileNotFoundError: [Errno 2] No such file or directory: '/data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/merged_with_new_PrimeNumberTheoremAnd_89bf7b5e3a226525e8580bae21ef543604f99b21/corpus.jsonl'
+(base) yingzi_ma@compute-permanent-node-845:~/lean_project/ReProver$

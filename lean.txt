@@ -1,0 +1,1760 @@
+2024-09-08 20:38:21.115 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 20:38:21.115 | INFO     | __main__:main:1355 - i: 1
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1577/1577 [00:00<00:00, 25147.39it/s]
+2024-09-08 20:38:21.115 | INFO     | __main__:main:1395 - All GPUs
+2024-09-08 20:38:21.115 | INFO     | __main__:main:1582 - R@1 = 0.13015873015873014 %, R@10 = 0.1983265191598525 %, MRR = 0.005119695584789352
+2024-09-08 20:38:21.116 | INFO     | __main__:main:1595 - Average R@1 = nan %, R@10 = nan %, MRR = nan
+2024-09-08 20:38:21.116 | INFO     | __main__:find_latest_checkpoint:515 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a268
+7_lambda_0.1_epoch=0-Recall@10_val=0.00.ckpt
+2024-09-08 20:38:21.116 | INFO     | __main__:main:1402 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch=0-
+Recall@10_val=0.00.ckpt
+2024-09-08 20:38:21.117 | INFO     | __main__:main:1408 - Inside train_test_fisher
+2024-09-08 20:38:21.117 | INFO     | __main__:main:1409 - Starting training at epoch 1
+[rank: 2] Seed set to 3407
+2024-09-08 20:38:21.118 | INFO     | __main__:main:1633 - Starting the prover
+2024-09-08 20:38:21.118 | INFO     | prover.proof_search:__init__:407 - Inside __init__
+2024-09-08 20:38:21.119 | INFO     | prover.proof_search:__init__:412 - ckpt_path is not None
+2024-09-08 20:38:21.119 | INFO     | prover.proof_search:__init__:427 - Using RAG
+2024-09-08 20:38:21.119 | INFO     | prover.proof_search:find_latest_checkpoint:380 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c
+6aee013a2687_lambda_0.1_epoch=0-Recall@10_val=0.00.ckpt
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1577/1577 [00:00<00:00, 24206.82it/s]
+2024-09-08 20:38:21.178 | INFO     | __main__:main:1582 - R@1 = 0.13015873015873014 %, R@10 = 0.1983265191598525 %, MRR = 0.005119695584789352
+2024-09-08 20:38:21.179 | INFO     | __main__:main:1595 - Average R@1 = nan %, R@10 = nan %, MRR = nan
+2024-09-08 20:38:21.179 | INFO     | __main__:main:1686 - Finished processing the repository
+2024-09-08 20:38:21.179 | INFO     | __main__:main:1688 - current epoch: 1
+2024-09-08 20:38:21.179 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 20:38:21.179 | INFO     | __main__:main:1355 - i: 1
+2024-09-08 20:38:21.179 | INFO     | __main__:main:1395 - All GPUs
+2024-09-08 20:38:21.180 | INFO     | __main__:find_latest_checkpoint:515 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a268
+7_lambda_0.1_epoch=0-Recall@10_val=0.00.ckpt
+2024-09-08 20:38:21.181 | INFO     | __main__:main:1402 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch=0-
+Recall@10_val=0.00.ckpt
+2024-09-08 20:38:21.181 | INFO     | __main__:main:1408 - Inside train_test_fisher
+2024-09-08 20:38:21.181 | INFO     | __main__:main:1409 - Starting training at epoch 1
+[rank: 3] Seed set to 3407
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../kaiyuy_leandojo-lean4-retriever-tacgen-byt5-s
+mall/model_lightning.ckpt`
+2024-09-08 20:38:21.574 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_
+0.1_epoch=0-Recall@10_val=0.00.ckpt
+2024-09-08 20:38:21.574 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_
+0.1_epoch=0-Recall@10_val=0.00.ckpt
+2024-09-08 20:38:23.627 | INFO     | __main__:main:1433 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch
+=0-Recall@10_val=0.00.ckpt
+2024-09-08 20:38:23.732 | INFO     | __main__:main:1492 - right before barrier for data module
+2024-09-08 20:38:23.735 | INFO     | __main__:main:1433 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch
+=0-Recall@10_val=0.00.ckpt
+2024-09-08 20:38:23.775 | INFO     | __main__:main:1492 - right before barrier for data module
+2024-09-08 20:38:23.987 | INFO     | __main__:main:1577 - Loaded the predictions pickle files
+2024-09-08 20:38:24.020 | INFO     | __main__:main:1580 - Evaluating on /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf5/random/tes
+t.json
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1577/1577 [00:00<00:00, 25298.59it/s]
+2024-09-08 20:38:24.084 | INFO     | __main__:main:1582 - R@1 = 0.13015873015873014 %, R@10 = 0.1983265191598525 %, MRR = 0.005119695584789352
+2024-09-08 20:38:24.084 | INFO     | __main__:main:1595 - Average R@1 = nan %, R@10 = nan %, MRR = nan
+2024-09-08 20:38:24.084 | INFO     | __main__:main:1686 - Finished processing the repository
+2024-09-08 20:38:24.084 | INFO     | __main__:main:1688 - current epoch: 1
+2024-09-08 20:38:24.084 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 20:38:24.084 | INFO     | __main__:main:1355 - i: 1
+2024-09-08 20:38:24.084 | INFO     | __main__:main:1395 - All GPUs
+2024-09-08 20:38:24.085 | INFO     | __main__:find_latest_checkpoint:515 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a268
+7_lambda_0.1_epoch=0-Recall@10_val=0.00.ckpt
+2024-09-08 20:38:24.086 | INFO     | __main__:main:1402 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch=0-
+Recall@10_val=0.00.ckpt
+2024-09-08 20:38:24.086 | INFO     | __main__:main:1408 - Inside train_test_fisher
+2024-09-08 20:38:24.086 | INFO     | __main__:main:1409 - Starting training at epoch 1
+[rank: 1] Seed set to 3407
+2024-09-08 20:38:24.380 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.enc
+oder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'retri
+ever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.enc
+oder.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.la
+yer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.enco
+der.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseR
+eluDense.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.en
+coder.encoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.lay
+er_norm.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retri
+ever.encoder.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.S
+elfAttention.v.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever
+.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0
+.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.la
+yer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retr
+iever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.
+DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.l
+ayer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight'
+, 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7
+.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'ret
+riever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.
+block.7.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight
+', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.bloc
+k.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weig
+ht', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.b
+lock.9.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.
+wo.weight', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encod
+er.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.
+wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.enco
+der.encoder.block.11.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.S
+elfAttention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 're
+triever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'sta
+te_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-08 20:38:25.497 | INFO     | prover.proof_search:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt
+2024-09-08 20:38:25.498 | INFO     | prover.proof_search:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-08 20:38:25.498 | INFO     | prover.proof_search:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpu
+s.jsonl
+2024-09-08 20:38:25.499 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-08 20:38:25.968 | INFO     | __main__:main:1433 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch
+=0-Recall@10_val=0.00.ckpt
+2024-09-08 20:38:26.069 | INFO     | __main__:main:1492 - right before barrier for data module
+2024-09-08 20:38:31.311 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-08 20:38:31.311 | INFO     | prover.proof_search:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus
+.jsonl
+2024-09-08 20:38:31.311 | INFO     | prover.proof_search:__init__:471 - Launching 4 workers with 4 GPUs.
+2024-09-08 20:38:34,458 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=1728338) [2024-09-08 20:39:08,018] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1728338) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1728338)   return torch.load(io.BytesIO(b))
+(pid=1728492) [2024-09-08 20:39:16,574] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1728492) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1728492)   return torch.load(io.BytesIO(b))
+2024-09-08 20:39:25.318 | INFO     | __main__:load_encountered_theorems:788 - The file encountered_theorems_retrieval_single_repo_no_ewc_pfr.pkl does not exist. Starting with an empty set.
+2024-09-08 20:39:25.318 | INFO     | __main__:prove_sorry_theorems:814 - Found 37 sorry theorems to prove
+Processing theorems from teorth/pfr:   0%|                                                                                                                                                                       | 0/37 [00:00<?, ?theorem/s]
+2024-09-08 20:39:25.319 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for iter_multiDist_chainRule
+2024-09-08 20:39:25.319 | INFO     | __main__:prove_sorry_theorems:838 - Position: (973, 1)
+2024-09-08 20:39:25.319 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for condRho_minus_le
+2024-09-08 20:39:25.319 | INFO     | __main__:prove_sorry_theorems:838 - Position: (95, 1)
+2024-09-08 20:39:25.319 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for phi_min_exists
+2024-09-08 20:39:25.319 | INFO     | __main__:prove_sorry_theorems:838 - Position: (128, 1)
+2024-09-08 20:39:25.319 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for condRho_of_translate
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:838 - Position: (89, 1)
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for condRho_sum_le
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:838 - Position: (156, 1)
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for multiDist_nonneg
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:838 - Position: (765, 1)
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for I_one_le
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:838 - Position: (137, 1)
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for dist_add_dist_eq
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:838 - Position: (140, 1)
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for rho_of_translate
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:838 - Position: (58, 1)
+2024-09-08 20:39:25.320 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for rho_continuous
+2024-09-08 20:39:25.321 | INFO     | __main__:prove_sorry_theorems:838 - Position: (62, 1)
+2024-09-08 20:39:25.321 | INFO     | prover.proof_search:search_unordered:514 - Distributed
+(ProverActor pid=1728338) 2024-09-08 20:39:25.330 | INFO     | prover.proof_search:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixPath(
+'PFR/RhoFunctional.lean'), full_name='condRho_of_translate')
+(pid=1728655) [2024-09-08 20:39:26,557] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1728492) 2024-09-08 20:39:30.025 | INFO     | prover.proof_search:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixPath(
+'PFR/RhoFunctional.lean'), full_name='phi_min_exists')
+(ProverActor pid=1728655) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1728655)   return torch.load(io.BytesIO(b))
+(pid=1728821) [2024-09-08 20:39:34,040] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1728655) 2024-09-08 20:39:38.011 | INFO     | prover.proof_search:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixPath(
+'PFR/RhoFunctional.lean'), full_name='condRho_minus_le')
+(ProverActor pid=1728821) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1728821)   return torch.load(io.BytesIO(b))
+(ProverActor pid=1728821) 2024-09-08 20:39:46.873 | INFO     | prover.proof_search:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixPath(
+'PFR/MoreRuzsaDist.lean'), full_name='iter_multiDist_chainRule')
+(ProverActor pid=1728821) 2024-09-08 20:40:04.592 | INFO     | lean_dojo.utils:execute:88 -
+(ProverActor pid=1728821) 2024-09-08 20:40:04.592 | ERROR    | lean_dojo.utils:execute:89 - info: downloading component 'lean'
+(ProverActor pid=1728821) info: installing component 'lean'
+(ProverActor pid=1728821) error: could not remove 'temp toolchain directory' directory: '/data/yingzi_ma/.elan/toolchains/leanprover--lean4---v4.8.tmp'
+(ProverActor pid=1728821) info: caused by: Directory not empty (os error 39)
+(ProverActor pid=1728821)
+(ProverActor pid=1728492)
+Processing theorems from teorth/pfr:  24%|██████████████████████████████████████▋                                                                                                                        | 9/37 [00:41<02:09,  4.61s/theorem]
+2024-09-08 20:40:06.831 | INFO     | __main__:main:1690 - An error occurred: ray::ProverActor.search() (pid=1728821, ip=10.0.5.88, actor_id=234a4b7c3e0976d03d28b66201000000, repr=<prover.proof_search.ProverActor object at 0x7a176b667730>
+)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search.py", line 332, in search
+    return self.prover.search(repo, thm, pos)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search.py", line 96, in search
+    with Dojo(thm, self.timeout, additional_imports=imps) as (
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 255, in __enter__
+    raise ex
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 197, in __enter__
+    self.container.run(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/container.py", line 194, in run
+    execute(cmd, capture_output=capture_output)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/utils.py", line 90, in execute
+    raise ex
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/utils.py", line 85, in execute
+    res = subprocess.run(cmd, shell=True, capture_output=capture_output, check=True)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'lake build Lean4Repl' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 1664, in main
+    prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_merged_dataset)
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 851, in prove_sorry_theorems
+    process_theorem_batch(theorem_batch, positions_batch, repo, db, prover, dynamic_database_json_path)
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 742, in process_theorem_batch
+    results = prover.search_unordered(LeanGitRepo(repo.url, repo.commit), lean_dojo_theorems, positions_batch)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search.py", line 515, in search_unordered
+    results = list(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/util/actor_pool.py", line 170, in get_generator
+    yield self.get_next_unordered()
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/util/actor_pool.py", line 370, in get_next_unordered
+    return ray.get(future)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/worker.py", line 2661, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/worker.py", line 871, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(CalledProcessError): ray::ProverActor.search() (pid=1728821, ip=10.0.5.88, actor_id=234a4b7c3e0976d03d28b66201000000, repr=<prover.proof_search.ProverActor object at 0x7a176b667730>)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search.py", line 332, in search
+    return self.prover.search(repo, thm, pos)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search.py", line 96, in search
+    with Dojo(thm, self.timeout, additional_imports=imps) as (
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 255, in __enter__
+    raise ex
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 197, in __enter__
+    self.container.run(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/container.py", line 194, in run
+    execute(cmd, capture_output=capture_output)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/utils.py", line 90, in execute
+    raise ex
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/utils.py", line 85, in execute
+    res = subprocess.run(cmd, shell=True, capture_output=capture_output, check=True)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'lake build Lean4Repl' returned non-zero exit status 1.
+(ProverActor pid=1728821) 2024-09-08 20:40:06.832 | INFO     | prover.proof_search:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixPath(
+'PFR/RhoFunctional.lean'), full_name='condRho_sum_le')
+(ProverActor pid=1728492) 2024-09-08 20:40:05.482 | INFO     | lean_dojo.utils:execute:88 -
+(ProverActor pid=1728492) 2024-09-08 20:40:05.577 | ERROR    | lean_dojo.utils:execute:89 - info: downloading component 'lean'
+(ProverActor pid=1728492) info: installing component 'lean'
+(ProverActor pid=1728492) error: could not remove 'temp toolchain directory' directory: '/data/yingzi_ma/.elan/toolchains/leanprover--lean4---v4.8.tmp'
+(ProverActor pid=1728492) info: caused by: Directory not empty (os error 39)
+[rank0]:[W908 20:40:14.465529720 ProcessGroupNCCL.cpp:1168] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure t
+hat any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warnin
+g has only been added since PyTorch 2.4 (function operator())
+(base) yingzi_ma@compute-permanent-node-345:~/lean_project/ReProver$ clear
+(base) yingzi_ma@compute-permanent-node-345:~/lean_project/ReProver$ bash run_code.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Did not find any active Ray processes.
+[2024-09-08 21:20:53,288] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-08 21:20:57.257 | INFO     | __main__:main:1189 - Running progressive training
+2024-09-08 21:20:57.257 | INFO     | __main__:main:1195 - Configuring LeanDojo...
+2024-09-08 21:20:57.260 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-08 21:20:57.260 | INFO     | __main__:main:1197 - LeanDojo configured
+2024-09-08 21:20:57.260 | INFO     | __main__:main:1202 - Starting the main process
+2024-09-08 21:20:57.260 | INFO     | __main__:main:1205 - Initializing new database at /data/yingzi_ma/lean_project/dynamic_database_retrieval_single_repo_no_ewc_pfr.json
+2024-09-08 21:20:57.261 | INFO     | __main__:main:1219 - Found 15 repositories
+2024-09-08 21:20:57.261 | INFO     | __main__:main:1310 - Starting without curriculum learning
+2024-09-08 21:20:57.583 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-08 21:21:13.390 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-08 21:21:28.522 | INFO     | __main__:main:1333 - Finding compatible repositories...
+2024-09-08 21:21:28.844 | INFO     | __main__:get_compatible_commit:322 - Latest commit: a9e8f49d818ffebad821d11100736088166009c3
+2024-09-08 21:21:28.844 | INFO     | __main__:get_compatible_commit:325 - Creating LeanGitRepo for https://github.com/avigad/mathematics_in_lean_source
+2024-09-08 21:21:29.033 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-09-08 21:21:43.955 | INFO     | __main__:get_compatible_commit:327 - Getting config for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:21:43.955 | INFO     | __main__:get_compatible_commit:334 - Searching for compatible commit for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:21:43.963 | INFO     | __main__:get_compatible_commit:340 - Already in a Git repository
+2024-09-08 21:21:43.964 | INFO     | __main__:get_compatible_commit:350 - Fetching commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:21:58.680 | INFO     | __main__:get_compatible_commit:354 - Fetched commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:21:58.684 | INFO     | __main__:get_compatible_commit:360 - Getting list of commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:21:58.692 | INFO     | __main__:get_compatible_commit:365 - Found 533 commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:21:59.510 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0
+2024-09-08 21:22:15.179 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc3
+2024-09-08 21:22:31.125 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0
+2024-09-08 21:22:47.714 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc2
+2024-09-08 21:23:07.034 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-08 21:23:22.373 | INFO     | __main__:get_compatible_commit:372 - Found compatible commit 5297e0fb051367c48c0a084411853a576389ecf5 for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:23:22.375 | INFO     | __main__:main:1336 - Finished finding compatible repositories
+2024-09-08 21:23:22.376 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 21:23:22.376 | INFO     | __main__:main:1355 - i: 0
+2024-09-08 21:23:22.376 | INFO     | __main__:main:1361 - Main process
+2024-09-08 21:23:22.376 | INFO     | __main__:main:1362 - Using lambda = 0.1
+2024-09-08 21:23:22.376 | INFO     | __main__:main:1363 - Processing https://github.com/teorth/pfr
+2024-09-08 21:23:22.376 | INFO     | __main__:add_repo_to_database:888 - Processing https://github.com/teorth/pfr.git
+2024-09-08 21:23:22.376 | INFO     | __main__:add_repo_to_database:908 - Found compatible commit fa398a5b853c7e94e3294c45e50c6aee013a2687 for https://github.com/teorth/pfr.git
+2024-09-08 21:23:22.376 | INFO     | __main__:add_repo_to_database:909 - Lean version: v4.8.0-rc1
+2024-09-08 21:23:22.376 | INFO     | __main__:add_repo_to_database:914 - Generating benchmark at /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+2024-09-08 21:23:22.376 | INFO     | generate_benchmark_lean4:main:354 - Generating dataset to go into /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+2024-09-08 21:23:22.376 | INFO     | generate_benchmark_lean4:main:361 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0-rc1\n'}
+2024-09-08 21:23:22.376 | INFO     | generate_benchmark_lean4:main:363 - lean version v: v4.8.0-rc1
+2024-09-08 21:23:22.377 | INFO     | generate_benchmark_lean4:main:364 - is supported: True
+2024-09-08 21:23:22.377 | INFO     | generate_benchmark_lean4:main:373 - lean path1 /data/yingzi_ma/lean_project/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:23:22.377 | INFO     | generate_benchmark_lean4:main:374 - lean path2 /.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:23:22.377 | INFO     | generate_benchmark_lean4:main:375 - lean path3 ~/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:23:22.377 | INFO     | generate_benchmark_lean4:main:377 - Lean toolchain path 1 does not exist: /data/yingzi_ma/lean_project/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:23:22.377 | INFO     | generate_benchmark_lean4:main:379 - Lean toolchain path 2 does not exist: /.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:23:22.377 | INFO     | generate_benchmark_lean4:main:381 - Lean toolchain path 3 does not exist: ~/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:23:22.377 | INFO     | generate_benchmark_lean4:main:384 - Switched to Lean toolchain at: /data/yingzi_ma/lean_project/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:23:22.453 | INFO     | generate_benchmark_lean4:main:386 - lean --version: Lean (version 4.8.0-rc1, x86_64-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-09-08 21:23:22.453 | INFO     | generate_benchmark_lean4:main:387 - repo: LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687')
+2024-09-08 21:23:22.454 | INFO     | generate_benchmark_lean4:main:389 - Configuring LeanDojo again...
+2024-09-08 21:23:22.459 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-08 21:23:22.459 | INFO     | generate_benchmark_lean4:main:391 - LeanDojo configured
+2024-09-08 21:23:22.459 | INFO     | generate_benchmark_lean4:main:394 - Tracing the repo...
+2024-09-08 21:23:22.489 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced repo is available in the cache.
+2024-09-08 21:23:22.489 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /data/yingzi_ma/lean_project/.cache/lean_dojo/teorth-pfr-fa398a5b853c7e94e3294c45e50c6aee013a2687/pfr
+2024-09-08 21:23:24.227 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1123 - Loading 2890 traced XML files from /data/yingzi_ma/lean_project/.cache/lean_dojo/teorth-pfr-fa398a5b853c7e94e3294c45e50c6aee013a2687/pfr wit
+h 31 workers
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2890/2890 [06:08<00:00,  7.85it/s]
+2024-09-08 21:29:32.396 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687')
+2024-09-08 21:29:33.796 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.6.0-rc1
+2024-09-08 21:29:50.440 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-08 21:30:06.212 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-08 21:30:07.330 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-08 21:30:10.800 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for doc-gen4 main
+2024-09-08 21:30:11.458 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/YaelDillies/LeanAPAP', commit='d93d0087274a32c8e7c1ec2ecacddc2e21906be8')
+2024-09-08 21:30:12.806 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0
+2024-09-08 21:30:28.994 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/mathlib4.git") failed. Retrying...
+2024-09-08 21:30:30.106 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/mathlib4.git") failed. Retrying...
+2024-09-08 21:30:33.324 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='3fecb249afcf5ba40efe0a3f92f69e2460f142c7'
+)
+2024-09-08 21:30:33.708 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='1b0072fea2aa6a0ef8ef8b506ec5223b184cb4d0')
+2024-09-08 21:30:34.263 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc1
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-09-08 21:30:51.836 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-06-05
+2024-09-08 21:30:53.297 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an unsupported Lean version: fbb3
+055f82ff9a4bc82f6722f6e73225617342fd
+2024-09-08 21:30:53.297 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='1b0072fea2aa6a0ef8ef8b506ec5223b184cb4d0')
+2024-09-08 21:31:05.487 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1009 - Checking the sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), de
+pendencies={'lean4': LeanGitRepo(url='https://github.com/leanprover/lean4', commit='e9e858a4484905a0bfe97c4f05c3924ead02eed8'), 'batteries': LeanGitRepo(url='https://github.com/leanprover-community/batteries', commit='8feac540abb781cb134
+9688c816dc02fae66b49c'), 'Qq': LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='2c8ae451ce9ffc83554322b14437159c1a9703f9'), 'aesop': LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='e291aa
+4de57079b3d2199b9eb7b4b00922b85a7c'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='eb08eee94098fe530ccd6d8751a86fe405473d4c'), 'Cli': LeanGitRepo(url='https://github.com/mhuisi/lean4-cl
+i', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca'), 'LeanAPAP': LeanGitRepo(url='https://github.com/YaelDillies/LeanAPAP', commit='d93d0087274a32c8e7c1ec2ecacddc2e21906be8'), 'importGraph': LeanGitRepo(url='https://github.com/leanpro
+ver-community/import-graph', commit='fb7841a6f4fb389ec0e47dd4677844d49906af3c'), 'mathlib': LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='3fecb249afcf5ba40efe0a3f92f69e2460f142c7'), '«doc-gen4»': LeanGitRepo
+(url='https://github.com/leanprover/doc-gen4', commit='1b0072fea2aa6a0ef8ef8b506ec5223b184cb4d0'), 'MD4Lean': LeanGitRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f325c7e9d619bb56fb005'), 'UnicodeBasic': LeanG
+itRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='7afce91e4fcee25c1ed06dca8d71b82bed396776'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQuery', commit='0a294fe9bf23b396c5cc955054c50b9b652ec5ad')
+}, root_dir=PosixPath('/data/yingzi_ma/lean_project/.cache/lean_dojo/teorth-pfr-fa398a5b853c7e94e3294c45e50c6aee013a2687/pfr'))
+2024-09-08 21:31:27.018 | INFO     | generate_benchmark_lean4:main:396 - Successfully traced the repo
+2024-09-08 21:31:32.759 | INFO     | generate_benchmark_lean4:split_data:133 - 74306 theorems in total
+2024-09-08 21:31:32.759 | INFO     | generate_benchmark_lean4:split_data:138 - 74306 theorems in total, with 1486 for validation and 1486 for testing
+2024-09-08 21:31:32.760 | INFO     | generate_benchmark_lean4:split_randomly:81 - Splitting the theorems randomly
+2024-09-08 21:31:32.785 | INFO     | generate_benchmark_lean4:split_by_premise:95 - Splitting the theorems by premises
+2024-09-08 21:31:37.653 | INFO     | generate_benchmark_lean4:main:402 - Successfully split the data
+2024-09-08 21:31:50.778 | INFO     | generate_benchmark_lean4:export_proofs:202 - 71334 theorems and 121886 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2
+687/random/train.json
+2024-09-08 21:31:51.168 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1486 theorems and 2642 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+/random/val.json
+2024-09-08 21:31:51.434 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1486 theorems and 2495 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+/random/test.json
+2024-09-08 21:32:03.813 | INFO     | generate_benchmark_lean4:export_proofs:202 - 71334 theorems and 119648 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2
+687/novel_premises/train.json
+2024-09-08 21:32:04.266 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1486 theorems and 3704 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+/novel_premises/val.json
+2024-09-08 21:32:04.598 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1486 theorems and 3671 tactics saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+/novel_premises/test.json
+2024-09-08 21:32:04.599 | INFO     | generate_benchmark_lean4:export_proofs:206 - 148612 theorems saved in total
+2024-09-08 21:32:04.600 | INFO     | generate_benchmark_lean4:export_data:323 - Successfully exported the proofs
+2024-09-08 21:32:19.401 | INFO     | generate_benchmark_lean4:export_premises:229 - 109855 theorems/definitions from 2890 files saved to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e
+50c6aee013a2687/corpus.jsonl
+2024-09-08 21:32:19.417 | INFO     | generate_benchmark_lean4:export_data:327 - Successfully exported the premises
+2024-09-08 21:32:19.420 | INFO     | generate_benchmark_lean4:export_data:335 - Successfully exported the metadata
+2024-09-08 21:32:19.420 | INFO     | generate_benchmark_lean4:main:404 - Successfully exported the data
+2024-09-08 21:32:19.470 | INFO     | __main__:add_repo_to_database:922 - Finished generating benchmark at /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1486/1486 [00:00<00:00, 64597.98it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 71334/71334 [00:01<00:00, 57399.73it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1486/1486 [00:00<00:00, 58040.49it/s]
+2024-09-08 21:32:22.609 | INFO     | __main__:add_repo_to_database:947 - Before adding new repo:
+2024-09-08 21:32:22.609 | INFO     | dynamic_database:print_database_contents:624 - Current database contents:
+2024-09-08 21:32:22.609 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-08 21:32:22.609 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-08 21:32:22.609 | INFO     | __main__:add_repo_to_database:950 - After adding new repo:
+2024-09-08 21:32:22.609 | INFO     | dynamic_database:print_database_contents:624 - Current database contents:
+2024-09-08 21:32:22.609 | INFO     | dynamic_database:print_database_contents:626 -   - https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-08 21:32:29.516 | INFO     | __main__:main:1384 - Adding repo to repos_for_merged_dataset
+2024-09-08 21:32:29.527 | INFO     | dynamic_database:generate_merged_dataset:415 - Merging selected repositories in the database:
+2024-09-08 21:32:29.527 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-08 21:33:22.856 | WARNING  | dynamic_database:safe_remove_dir_path:377 - /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687 already exists. Removing
+ it now.
+2024-09-08 21:34:50.049 | INFO     | dynamic_database:generate_merged_dataset:439 - Exported proofs to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+2024-09-08 21:34:50.417 | INFO     | dynamic_database:generate_merged_dataset:442 - Merged and exported corpus to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee
+013a2687
+2024-09-08 21:34:50.437 | INFO     | dynamic_database:generate_merged_dataset:445 - Exported traced files to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2
+687
+2024-09-08 21:34:50.442 | INFO     | dynamic_database:generate_merged_dataset:448 - Exported metadata to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+2024-09-08 21:34:50.453 | INFO     | __main__:main:1395 - All GPUs
+2024-09-08 21:34:50.457 | INFO     | __main__:find_latest_checkpoint:515 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:34:50.458 | INFO     | __main__:main:1402 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:34:50.458 | INFO     | __main__:main:1408 - Inside train_test_fisher
+2024-09-08 21:34:50.458 | INFO     | __main__:main:1409 - Starting training at epoch 0
+[rank: 0] Seed set to 3407
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module impli
+citly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the defau
+lt value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by t
+he user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this e
+xperimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_retrieval_single_repo_no_ewc_pfr/
+mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-09-08 21:34:54.016 | INFO     | __main__:main:1433 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLUR
+M, prepend your python command with `srun` like so: srun python main.py ...
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+`Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+2024-09-08 21:34:54.317 | INFO     | __main__:main:1492 - right before barrier for data module
+2024-09-08 21:34:54.317 | INFO     | __main__:main:1507 - Data path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be dep
+racted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+2024-09-08 21:34:54.430 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 71334/71334 [00:10<00:00, 6796.27it/s
+]
+2024-09-08 21:35:16.087 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2
+687/random/cache_train/cached_data.pkl
+Training dataset size: 169436
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1486/1486 [00:00<00:00, 8901.25it/s
+]
+2024-09-08 21:35:16.304 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2
+687/random/cache_val/cached_data.pkl
+Validation dataset size: 2352
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1486/1486 [00:00<00:00, 7799.38it/s
+]
+2024-09-08 21:35:16.557 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2
+687/random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+2024-09-08 21:35:16.558 | INFO     | __main__:main:1521 - Training dataset size after load: 169436
+2024-09-08 21:35:16.558 | INFO     | __main__:main:1522 - Validation dataset size after load: 2352
+2024-09-08 21:35:16.558 | INFO     | __main__:main:1523 - Testing dataset size after load: 2837
+2024-09-08 21:35:16.558 | INFO     | __main__:main:1525 - Starting progressive training from epoch 0 to 1
+2024-09-08 21:35:16.558 | INFO     | __main__:main:1528 - hit the barrier before training
+[rank: 0] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+[2024-09-08 21:35:26,998] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-09-08 21:35:26,998] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-09-08 21:35:26,998] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-08 21:35:35.018 | INFO     | __main__:main:1189 - Running progressive training
+2024-09-08 21:35:35.018 | INFO     | __main__:main:1189 - Running progressive training
+2024-09-08 21:35:35.018 | INFO     | __main__:main:1189 - Running progressive training
+2024-09-08 21:35:35.018 | INFO     | __main__:main:1195 - Configuring LeanDojo...
+2024-09-08 21:35:35.018 | INFO     | __main__:main:1195 - Configuring LeanDojo...
+2024-09-08 21:35:35.018 | INFO     | __main__:main:1195 - Configuring LeanDojo...
+2024-09-08 21:35:35.021 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-08 21:35:35.021 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-08 21:35:35.021 | INFO     | __main__:main:1197 - LeanDojo configured
+2024-09-08 21:35:35.021 | INFO     | __main__:main:1197 - LeanDojo configured
+2024-09-08 21:35:35.021 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-08 21:35:35.021 | INFO     | __main__:main:1219 - Found 15 repositories
+2024-09-08 21:35:35.021 | INFO     | __main__:main:1219 - Found 15 repositories
+2024-09-08 21:35:35.021 | INFO     | __main__:main:1197 - LeanDojo configured
+2024-09-08 21:35:35.021 | INFO     | __main__:main:1310 - Starting without curriculum learning
+2024-09-08 21:35:35.021 | INFO     | __main__:main:1310 - Starting without curriculum learning
+2024-09-08 21:35:35.021 | INFO     | __main__:main:1219 - Found 15 repositories
+2024-09-08 21:35:35.021 | INFO     | __main__:main:1310 - Starting without curriculum learning
+2024-09-08 21:36:04.107 | INFO     | __main__:main:1689 - An error occurred: Failed to read repository information after multiple attempts
+2024-09-08 21:36:04.107 | INFO     | __main__:main:1689 - An error occurred: Failed to read repository information after multiple attempts
+2024-09-08 21:36:04.107 | INFO     | __main__:main:1689 - An error occurred: Failed to read repository information after multiple attempts
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 1342, in main
+    with open(repo_info_file, 'r') as f:
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 1342, in main
+    with open(repo_info_file, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/repo_info_compatible.json'
+FileNotFoundError: [Errno 2] No such file or directory: '/data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/repo_info_compatible.json'
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 1342, in main
+    with open(repo_info_file, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/repo_info_compatible.json'
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 1347, in main
+    raise Exception("Failed to read repository information after multiple attempts")
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 1347, in main
+    raise Exception("Failed to read repository information after multiple attempts")
+
+During handling of the above exception, another exception occurred:
+
+Exception: Failed to read repository information after multiple attempts
+Exception: Failed to read repository information after multiple attempts
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 1347, in main
+    raise Exception("Failed to read repository information after multiple attempts")
+Exception: Failed to read repository information after multiple attempts
+^Z
+[8]+  Stopped                 bash run_code.sh
+(base) yingzi_ma@compute-permanent-node-345:~/lean_project/ReProver$ bash run_code.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Did not find any active Ray processes.
+^Z
+[9]+  Stopped                 bash run_code.sh
+(base) yingzi_ma@compute-permanent-node-345:~/lean_project/ReProver$ bash run_code.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Did not find any active Ray processes.
+[2024-09-08 21:38:53,538] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-08 21:39:00.852 | INFO     | __main__:main:1189 - Running progressive training
+2024-09-08 21:39:00.852 | INFO     | __main__:main:1195 - Configuring LeanDojo...
+2024-09-08 21:39:00.855 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-08 21:39:00.855 | INFO     | __main__:main:1197 - LeanDojo configured
+2024-09-08 21:39:00.855 | INFO     | __main__:main:1202 - Starting the main process
+2024-09-08 21:39:00.855 | INFO     | __main__:main:1210 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_retrieval_single_repo_no_ewc_pfr.json
+2024-09-08 21:39:09.362 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-08 21:39:09.363 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-08 21:39:09.469 | INFO     | __main__:main:1212 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_retrieval_single_repo_no_ewc_pfr.json
+2024-09-08 21:39:09.470 | INFO     | __main__:main:1219 - Found 15 repositories
+2024-09-08 21:39:09.470 | INFO     | __main__:main:1310 - Starting without curriculum learning
+2024-09-08 21:39:09.786 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-08 21:39:25.515 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-08 21:39:40.696 | INFO     | __main__:main:1333 - Finding compatible repositories...
+2024-09-08 21:39:41.008 | INFO     | __main__:get_compatible_commit:322 - Latest commit: a9e8f49d818ffebad821d11100736088166009c3
+2024-09-08 21:39:41.008 | INFO     | __main__:get_compatible_commit:325 - Creating LeanGitRepo for https://github.com/avigad/mathematics_in_lean_source
+2024-09-08 21:39:41.197 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-09-08 21:39:56.474 | INFO     | __main__:get_compatible_commit:327 - Getting config for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:39:56.475 | INFO     | __main__:get_compatible_commit:334 - Searching for compatible commit for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:39:56.500 | INFO     | __main__:get_compatible_commit:340 - Already in a Git repository
+2024-09-08 21:39:56.503 | INFO     | __main__:get_compatible_commit:350 - Fetching commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:40:00.331 | INFO     | __main__:get_compatible_commit:354 - Fetched commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:40:00.344 | INFO     | __main__:get_compatible_commit:360 - Getting list of commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:40:00.366 | INFO     | __main__:get_compatible_commit:365 - Found 533 commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:40:01.241 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0
+2024-09-08 21:40:16.999 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc3
+2024-09-08 21:40:32.681 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0
+2024-09-08 21:40:49.379 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc2
+2024-09-08 21:41:08.119 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-08 21:41:23.171 | INFO     | __main__:get_compatible_commit:372 - Found compatible commit 5297e0fb051367c48c0a084411853a576389ecf5 for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:41:23.176 | INFO     | __main__:main:1336 - Finished finding compatible repositories
+2024-09-08 21:41:23.177 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 21:41:23.177 | INFO     | __main__:main:1355 - i: 0
+2024-09-08 21:41:23.177 | INFO     | __main__:main:1361 - Main process
+2024-09-08 21:41:23.177 | INFO     | __main__:main:1362 - Using lambda = 0.1
+2024-09-08 21:41:23.177 | INFO     | __main__:main:1363 - Processing https://github.com/teorth/pfr
+2024-09-08 21:41:23.177 | INFO     | __main__:add_repo_to_database:888 - Processing https://github.com/teorth/pfr.git
+2024-09-08 21:41:23.177 | INFO     | __main__:add_repo_to_database:908 - Found compatible commit fa398a5b853c7e94e3294c45e50c6aee013a2687 for https://github.com/teorth/pfr.git
+2024-09-08 21:41:23.178 | INFO     | __main__:add_repo_to_database:909 - Lean version: v4.8.0-rc1
+2024-09-08 21:41:23.178 | INFO     | __main__:add_repo_to_database:914 - Generating benchmark at /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+2024-09-08 21:41:23.178 | INFO     | generate_benchmark_lean4:main:354 - Generating dataset to go into /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+2024-09-08 21:41:23.178 | INFO     | generate_benchmark_lean4:main:361 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0-rc1\n'}
+2024-09-08 21:41:23.178 | INFO     | generate_benchmark_lean4:main:363 - lean version v: v4.8.0-rc1
+2024-09-08 21:41:23.178 | INFO     | generate_benchmark_lean4:main:364 - is supported: True
+2024-09-08 21:41:23.178 | INFO     | generate_benchmark_lean4:main:373 - lean path1 /data/yingzi_ma/lean_project/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:41:23.178 | INFO     | generate_benchmark_lean4:main:374 - lean path2 /.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:41:23.178 | INFO     | generate_benchmark_lean4:main:375 - lean path3 ~/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:41:23.179 | INFO     | generate_benchmark_lean4:main:377 - Lean toolchain path 1 does not exist: /data/yingzi_ma/lean_project/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:41:23.179 | INFO     | generate_benchmark_lean4:main:379 - Lean toolchain path 2 does not exist: /.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:41:23.180 | INFO     | generate_benchmark_lean4:main:381 - Lean toolchain path 3 does not exist: ~/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:41:23.180 | INFO     | generate_benchmark_lean4:main:384 - Switched to Lean toolchain at: /data/yingzi_ma/lean_project/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-08 21:41:23.231 | INFO     | generate_benchmark_lean4:main:386 - lean --version: Lean (version 4.8.0-rc1, x86_64-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-09-08 21:41:23.231 | INFO     | generate_benchmark_lean4:main:387 - repo: LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687')
+2024-09-08 21:41:23.231 | INFO     | generate_benchmark_lean4:main:389 - Configuring LeanDojo again...
+2024-09-08 21:41:23.246 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-08 21:41:23.246 | INFO     | generate_benchmark_lean4:main:391 - LeanDojo configured
+2024-09-08 21:41:23.246 | INFO     | generate_benchmark_lean4:main:394 - Tracing the repo...
+2024-09-08 21:41:23.253 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced repo is available in the cache.
+2024-09-08 21:41:23.253 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /data/yingzi_ma/lean_project/.cache/lean_dojo/teorth-pfr-fa398a5b853c7e94e3294c45e50c6aee013a2687/pfr
+2024-09-08 21:41:27.329 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1123 - Loading 2890 traced XML files from /data/yingzi_ma/lean_project/.cache/lean_dojo/teorth-pfr-fa398a5b853c7e94e3294c45e50c6aee013a2687/pfr wit
+h 31 workers
+ 27%|████████████████████▌                                                        | 772/2890 [00:46<01:27, 24.21it/s]^Z
+[10]+  Stopped                 bash run_code.sh
+(base) yingzi_ma@compute-permanent-node-345:~/lean_project/ReProver$ bash run_code.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Did not find any active Ray processes.
+[2024-09-08 21:42:41,799] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-08 21:42:48.125 | INFO     | __main__:main:1189 - Running progressive training
+2024-09-08 21:42:48.125 | INFO     | __main__:main:1195 - Configuring LeanDojo...
+2024-09-08 21:42:48.128 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-08 21:42:48.128 | INFO     | __main__:main:1197 - LeanDojo configured
+2024-09-08 21:42:48.128 | INFO     | __main__:main:1202 - Starting the main process
+2024-09-08 21:42:48.128 | INFO     | __main__:main:1210 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_retrieval_single_repo_no_ewc_pfr.json
+2024-09-08 21:42:56.572 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-08 21:42:56.572 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-08 21:42:56.678 | INFO     | __main__:main:1212 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_retrieval_single_repo_no_ewc_pfr.json
+2024-09-08 21:42:56.679 | INFO     | __main__:main:1219 - Found 15 repositories
+2024-09-08 21:42:56.679 | INFO     | __main__:main:1310 - Starting without curriculum learning
+2024-09-08 21:42:56.875 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-08 21:43:12.777 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-08 21:43:28.192 | INFO     | __main__:main:1333 - Finding compatible repositories...
+2024-09-08 21:43:28.492 | INFO     | __main__:get_compatible_commit:322 - Latest commit: a9e8f49d818ffebad821d11100736088166009c3
+2024-09-08 21:43:28.492 | INFO     | __main__:get_compatible_commit:325 - Creating LeanGitRepo for https://github.com/avigad/mathematics_in_lean_source
+2024-09-08 21:43:28.520 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-09-08 21:43:43.634 | INFO     | __main__:get_compatible_commit:327 - Getting config for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:43:43.635 | INFO     | __main__:get_compatible_commit:334 - Searching for compatible commit for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:43:43.652 | INFO     | __main__:get_compatible_commit:340 - Already in a Git repository
+2024-09-08 21:43:43.654 | INFO     | __main__:get_compatible_commit:350 - Fetching commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:43:46.955 | INFO     | __main__:get_compatible_commit:354 - Fetched commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:43:46.968 | INFO     | __main__:get_compatible_commit:360 - Getting list of commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:43:46.988 | INFO     | __main__:get_compatible_commit:365 - Found 533 commits for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:43:47.094 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0
+2024-09-08 21:44:02.360 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc3
+2024-09-08 21:44:17.873 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0
+2024-09-08 21:44:33.452 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc2
+2024-09-08 21:44:49.960 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-08 21:45:05.363 | INFO     | __main__:get_compatible_commit:372 - Found compatible commit 5297e0fb051367c48c0a084411853a576389ecf5 for https://github.com/avigad/mathematics_in_lean_source.git
+2024-09-08 21:45:05.368 | INFO     | __main__:main:1336 - Finished finding compatible repositories
+2024-09-08 21:45:05.368 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 21:45:05.368 | INFO     | __main__:main:1355 - i: 0
+2024-09-08 21:45:05.368 | INFO     | __main__:main:1361 - Main process
+2024-09-08 21:45:05.369 | INFO     | __main__:main:1362 - Using lambda = 0.1
+2024-09-08 21:45:05.369 | INFO     | __main__:main:1363 - Processing https://github.com/teorth/pfr
+2024-09-08 21:45:05.369 | INFO     | __main__:main:1384 - Adding repo to repos_for_merged_dataset
+2024-09-08 21:45:05.369 | INFO     | __main__:main:1396 - All GPUs
+2024-09-08 21:45:05.370 | INFO     | __main__:find_latest_checkpoint:515 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:45:05.370 | INFO     | __main__:main:1403 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:45:05.370 | INFO     | __main__:main:1409 - Inside train_test_fisher
+2024-09-08 21:45:05.370 | INFO     | __main__:main:1410 - Starting training at epoch 0
+[rank: 0] Seed set to 3407
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module impli
+citly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the defau
+lt value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by t
+he user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this e
+xperimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_retrieval_single_repo_no_ewc_pfr/
+mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-09-08 21:45:10.100 | INFO     | __main__:main:1434 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLUR
+M, prepend your python command with `srun` like so: srun python main.py ...
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+`Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+2024-09-08 21:45:10.304 | INFO     | __main__:main:1493 - right before barrier for data module
+2024-09-08 21:45:10.305 | INFO     | __main__:main:1508 - Data path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be dep
+racted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+2024-09-08 21:45:10.407 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-08 21:45:20.540 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:45:20.557 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_val/cached_data.pkl
+Validation dataset size: 2352
+2024-09-08 21:45:20.572 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+2024-09-08 21:45:20.572 | INFO     | __main__:main:1522 - Training dataset size after load: 169436
+2024-09-08 21:45:20.572 | INFO     | __main__:main:1523 - Validation dataset size after load: 2352
+2024-09-08 21:45:20.572 | INFO     | __main__:main:1524 - Testing dataset size after load: 2837
+2024-09-08 21:45:20.572 | INFO     | __main__:main:1526 - Starting progressive training from epoch 0 to 1
+2024-09-08 21:45:20.572 | INFO     | __main__:main:1529 - hit the barrier before training
+[rank: 0] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+[2024-09-08 21:45:27,638] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-09-08 21:45:27,638] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-09-08 21:45:27,638] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-08 21:45:33.048 | INFO     | __main__:main:1189 - Running progressive training
+2024-09-08 21:45:33.048 | INFO     | __main__:main:1189 - Running progressive training
+2024-09-08 21:45:33.048 | INFO     | __main__:main:1189 - Running progressive training
+2024-09-08 21:45:33.049 | INFO     | __main__:main:1195 - Configuring LeanDojo...
+2024-09-08 21:45:33.049 | INFO     | __main__:main:1195 - Configuring LeanDojo...
+2024-09-08 21:45:33.049 | INFO     | __main__:main:1195 - Configuring LeanDojo...
+2024-09-08 21:45:33.051 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-08 21:45:33.051 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-08 21:45:33.051 | INFO     | __main__:main:1197 - LeanDojo configured
+2024-09-08 21:45:33.052 | INFO     | __main__:main:1197 - LeanDojo configured
+2024-09-08 21:45:33.052 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-08 21:45:33.052 | INFO     | __main__:main:1219 - Found 15 repositories
+2024-09-08 21:45:33.052 | INFO     | __main__:main:1219 - Found 15 repositories
+2024-09-08 21:45:33.052 | INFO     | __main__:main:1197 - LeanDojo configured
+2024-09-08 21:45:33.052 | INFO     | __main__:main:1310 - Starting without curriculum learning
+2024-09-08 21:45:33.052 | INFO     | __main__:main:1310 - Starting without curriculum learning
+2024-09-08 21:45:33.052 | INFO     | __main__:main:1219 - Found 15 repositories
+2024-09-08 21:45:33.052 | INFO     | __main__:main:1310 - Starting without curriculum learning
+2024-09-08 21:45:33.409 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-08 21:45:33.409 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-08 21:45:33.409 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-08 21:45:48.889 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-08 21:45:48.953 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-08 21:45:49.315 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-08 21:46:03.992 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 21:46:03.993 | INFO     | __main__:main:1355 - i: 0
+2024-09-08 21:46:03.993 | INFO     | __main__:main:1396 - All GPUs
+2024-09-08 21:46:03.994 | INFO     | __main__:find_latest_checkpoint:515 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:46:03.994 | INFO     | __main__:main:1403 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:46:03.994 | INFO     | __main__:main:1409 - Inside train_test_fisher
+2024-09-08 21:46:03.994 | INFO     | __main__:main:1410 - Starting training at epoch 0
+[rank: 3] Seed set to 3407
+2024-09-08 21:46:04.037 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 21:46:04.037 | INFO     | __main__:main:1355 - i: 0
+2024-09-08 21:46:04.037 | INFO     | __main__:main:1396 - All GPUs
+2024-09-08 21:46:04.037 | INFO     | __main__:find_latest_checkpoint:515 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:46:04.037 | INFO     | __main__:main:1403 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:46:04.038 | INFO     | __main__:main:1409 - Inside train_test_fisher
+2024-09-08 21:46:04.038 | INFO     | __main__:main:1410 - Starting training at epoch 0
+[rank: 2] Seed set to 3407
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module impli
+citly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the defau
+lt value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by t
+he user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this e
+xperimental feature.
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module impli
+citly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the defau
+lt value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by t
+he user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this e
+xperimental feature.
+2024-09-08 21:46:04.761 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 21:46:04.761 | INFO     | __main__:main:1355 - i: 0
+2024-09-08 21:46:04.761 | INFO     | __main__:main:1396 - All GPUs
+2024-09-08 21:46:04.762 | INFO     | __main__:find_latest_checkpoint:515 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:46:04.762 | INFO     | __main__:main:1403 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:46:04.762 | INFO     | __main__:main:1409 - Inside train_test_fisher
+2024-09-08 21:46:04.762 | INFO     | __main__:main:1410 - Starting training at epoch 0
+[rank: 1] Seed set to 3407
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module impli
+citly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the defau
+lt value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by t
+he user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this e
+xperimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_retrieval_single_repo_no_ewc_pfr/
+mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_retrieval_single_repo_no_ewc_pfr/
+mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_retrieval_single_repo_no_ewc_pfr/
+mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-09-08 21:46:08.538 | INFO     | __main__:main:1434 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:46:08.714 | INFO     | __main__:main:1493 - right before barrier for data module
+2024-09-08 21:46:08.715 | INFO     | __main__:main:1508 - Data path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be dep
+racted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+2024-09-08 21:46:08.825 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-08 21:46:08.903 | INFO     | __main__:main:1434 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:46:08.989 | INFO     | __main__:main:1493 - right before barrier for data module
+2024-09-08 21:46:08.989 | INFO     | __main__:main:1508 - Data path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be dep
+racted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+2024-09-08 21:46:09.089 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-08 21:46:10.044 | INFO     | __main__:main:1434 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+2024-09-08 21:46:10.197 | INFO     | __main__:main:1493 - right before barrier for data module
+2024-09-08 21:46:10.197 | INFO     | __main__:main:1508 - Data path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be dep
+racted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+2024-09-08 21:46:10.297 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-08 21:46:18.940 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:46:18.954 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_val/cached_data.pkl
+Validation dataset size: 2352
+2024-09-08 21:46:18.971 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+2024-09-08 21:46:18.971 | INFO     | __main__:main:1522 - Training dataset size after load: 169436
+2024-09-08 21:46:18.971 | INFO     | __main__:main:1523 - Validation dataset size after load: 2352
+2024-09-08 21:46:18.971 | INFO     | __main__:main:1524 - Testing dataset size after load: 2837
+2024-09-08 21:46:18.971 | INFO     | __main__:main:1526 - Starting progressive training from epoch 0 to 1
+2024-09-08 21:46:18.972 | INFO     | __main__:main:1529 - hit the barrier before training
+[rank: 2] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/4
+2024-09-08 21:46:19.444 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:46:19.455 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_val/cached_data.pkl
+Validation dataset size: 2352
+2024-09-08 21:46:19.469 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+2024-09-08 21:46:19.469 | INFO     | __main__:main:1522 - Training dataset size after load: 169436
+2024-09-08 21:46:19.469 | INFO     | __main__:main:1523 - Validation dataset size after load: 2352
+2024-09-08 21:46:19.469 | INFO     | __main__:main:1524 - Testing dataset size after load: 2837
+2024-09-08 21:46:19.469 | INFO     | __main__:main:1526 - Starting progressive training from epoch 0 to 1
+2024-09-08 21:46:19.469 | INFO     | __main__:main:1529 - hit the barrier before training
+[rank: 3] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/4
+2024-09-08 21:46:20.173 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:46:20.186 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_val/cached_data.pkl
+Validation dataset size: 2352
+2024-09-08 21:46:20.201 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+2024-09-08 21:46:20.201 | INFO     | __main__:main:1522 - Training dataset size after load: 169436
+2024-09-08 21:46:20.201 | INFO     | __main__:main:1523 - Validation dataset size after load: 2352
+2024-09-08 21:46:20.201 | INFO     | __main__:main:1524 - Testing dataset size after load: 2837
+2024-09-08 21:46:20.201 | INFO     | __main__:main:1526 - Starting progressive training from epoch 0 to 1
+2024-09-08 21:46:20.201 | INFO     | __main__:main:1529 - hit the barrier before training
+[rank: 1] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+
+NCCL version 2.20.5+cuda12.4
+2024-09-08 21:46:27.077 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:46:27.168 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_val/cached_data.pkl
+Validation dataset size: 2352
+2024-09-08 21:46:27.186 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:653: Checkpoint directory /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr exists and is not e
+mpty.
+2024-09-08 21:46:27.231 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:46:27.312 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_val/cached_data.pkl
+Validation dataset size: 2352
+2024-09-08 21:46:27.329 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+2024-09-08 21:46:27.485 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:46:27.571 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_val/cached_data.pkl
+Validation dataset size: 2352
+2024-09-08 21:46:27.591 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+2024-09-08 21:46:27.596 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:46:27.675 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_val/cached_data.pkl
+Validation dataset size: 2352
+2024-09-08 21:46:27.691 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module impli
+citly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the defau
+lt value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by t
+he user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this e
+xperimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_retrieval_single_repo_no_ewc_pfr/
+mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_retrieval_single_repo_no_ewc_pfr/
+mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_retrieval_single_repo_no_ewc_pfr/
+mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_retrieval_single_repo_no_ewc_pfr/
+mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+2024-09-08 21:46:28.616 | INFO     | common:get_optimizers:445 - Optimizing with AdamW
+2024-09-08 21:46:28.619 | INFO     | common:get_optimizers:445 - Optimizing with AdamW
+2024-09-08 21:46:28.619 | INFO     | common:get_optimizers:445 - Optimizing with AdamW
+2024-09-08 21:46:28.620 | INFO     | common:get_optimizers:445 - Optimizing with AdamW
+
+  | Name    | Type           | Params
+-------------------------------------------
+0 | encoder | T5EncoderModel | 217 M
+-------------------------------------------
+217 M     Trainable params
+0         Non-trainable params
+217 M     Total params
+870.630   Total estimated model params size (MB)
+Restored all states from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt
+Epoch 0: 100%|████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  0.78it/s, v_num=171082024-09-08 21:46:32.013 | INFO     | retrieval.model:validation_step:325 - Inside validation_step 0/? [00:00<?, ?it/s]
+2024-09-08 21:46:32.094 | INFO     | retrieval.model:validation_step:329 - Embeddings staled validation step: False
+                                                                                                                    2024-09-08 21:46:32.133 | INFO     | retrieval.model:validation_step:325 - Inside validation_step 0/1 [00:00<?, ?it/s]
+2024-09-08 21:46:32.165 | INFO     | retrieval.model:validation_step:329 - Embeddings staled validation step: False
+2024-09-08 21:46:32.225 | INFO     | retrieval.model:validation_step:325 - Inside validation_step
+2024-09-08 21:46:32.270 | INFO     | retrieval.model:validation_step:329 - Embeddings staled validation step: False
+2024-09-08 21:46:32.315 | INFO     | retrieval.model:validation_step:325 - Inside validation_step
+2024-09-08 21:46:32.346 | INFO     | retrieval.model:validation_step:329 - Embeddings staled validation step: False
+2024-09-08 21:46:35.363 | INFO     | retrieval.model:validation_step:379 - Recall@1_val: 0.0
+2024-09-08 21:46:35.365 | INFO     | retrieval.model:validation_step:379 - Recall@2_val: 0.0
+2024-09-08 21:46:35.367 | INFO     | retrieval.model:validation_step:379 - Recall@3_val: 0.0
+2024-09-08 21:46:35.370 | INFO     | retrieval.model:validation_step:379 - Recall@4_val: 0.0
+2024-09-08 21:46:35.372 | INFO     | retrieval.model:validation_step:379 - Recall@5_val: 0.0
+2024-09-08 21:46:35.374 | INFO     | retrieval.model:validation_step:379 - Recall@6_val: 0.0
+2024-09-08 21:46:35.377 | INFO     | retrieval.model:validation_step:379 - Recall@7_val: 0.0
+2024-09-08 21:46:35.379 | INFO     | retrieval.model:validation_step:379 - Recall@8_val: 0.0
+2024-09-08 21:46:35.382 | INFO     | retrieval.model:validation_step:379 - Recall@9_val: 0.0
+2024-09-08 21:46:35.384 | INFO     | retrieval.model:validation_step:379 - Recall@10_val: 0.0
+2024-09-08 21:46:35.387 | INFO     | retrieval.model:validation_step:379 - Recall@11_val: 0.0
+2024-09-08 21:46:35.389 | INFO     | retrieval.model:validation_step:379 - Recall@12_val: 0.0
+2024-09-08 21:46:35.391 | INFO     | retrieval.model:validation_step:379 - Recall@13_val: 0.0
+2024-09-08 21:46:35.394 | INFO     | retrieval.model:validation_step:379 - Recall@14_val: 0.0
+2024-09-08 21:46:35.396 | INFO     | retrieval.model:validation_step:379 - Recall@15_val: 0.0
+2024-09-08 21:46:35.399 | INFO     | retrieval.model:validation_step:379 - Recall@16_val: 0.0
+2024-09-08 21:46:35.400 | INFO     | retrieval.model:validation_step:379 - Recall@1_val: 0.0
+2024-09-08 21:46:35.401 | INFO     | retrieval.model:validation_step:379 - Recall@17_val: 0.0
+2024-09-08 21:46:35.402 | INFO     | retrieval.model:validation_step:379 - Recall@2_val: 0.0
+2024-09-08 21:46:35.404 | INFO     | retrieval.model:validation_step:379 - Recall@18_val: 0.0
+2024-09-08 21:46:35.404 | INFO     | retrieval.model:validation_step:379 - Recall@3_val: 0.0
+2024-09-08 21:46:35.406 | INFO     | retrieval.model:validation_step:379 - Recall@19_val: 0.0
+2024-09-08 21:46:35.407 | INFO     | retrieval.model:validation_step:379 - Recall@4_val: 0.0
+2024-09-08 21:46:35.408 | INFO     | retrieval.model:validation_step:379 - Recall@20_val: 0.0
+2024-09-08 21:46:35.409 | INFO     | retrieval.model:validation_step:379 - Recall@5_val: 0.0
+2024-09-08 21:46:35.411 | INFO     | retrieval.model:validation_step:379 - Recall@21_val: 0.0
+2024-09-08 21:46:35.411 | INFO     | retrieval.model:validation_step:379 - Recall@6_val: 0.0
+2024-09-08 21:46:35.413 | INFO     | retrieval.model:validation_step:379 - Recall@22_val: 0.0
+2024-09-08 21:46:35.414 | INFO     | retrieval.model:validation_step:379 - Recall@7_val: 0.0
+2024-09-08 21:46:35.416 | INFO     | retrieval.model:validation_step:379 - Recall@23_val: 2.0408163265306123
+2024-09-08 21:46:35.416 | INFO     | retrieval.model:validation_step:379 - Recall@8_val: 0.0
+2024-09-08 21:46:35.418 | INFO     | retrieval.model:validation_step:379 - Recall@24_val: 2.0408163265306123
+2024-09-08 21:46:35.419 | INFO     | retrieval.model:validation_step:379 - Recall@9_val: 0.0
+2024-09-08 21:46:35.421 | INFO     | retrieval.model:validation_step:379 - Recall@25_val: 2.0408163265306123
+2024-09-08 21:46:35.421 | INFO     | retrieval.model:validation_step:379 - Recall@10_val: 0.0
+2024-09-08 21:46:35.423 | INFO     | retrieval.model:validation_step:379 - Recall@26_val: 2.7210884353741496
+2024-09-08 21:46:35.424 | INFO     | retrieval.model:validation_step:379 - Recall@11_val: 0.0
+2024-09-08 21:46:35.425 | INFO     | retrieval.model:validation_step:379 - Recall@27_val: 3.401360544217687
+2024-09-08 21:46:35.426 | INFO     | retrieval.model:validation_step:379 - Recall@12_val: 0.0
+2024-09-08 21:46:35.428 | INFO     | retrieval.model:validation_step:379 - Recall@1_val: 0.0
+2024-09-08 21:46:35.428 | INFO     | retrieval.model:validation_step:379 - Recall@28_val: 3.401360544217687
+2024-09-08 21:46:35.428 | INFO     | retrieval.model:validation_step:379 - Recall@13_val: 0.0
+2024-09-08 21:46:35.430 | INFO     | retrieval.model:validation_step:379 - Recall@29_val: 3.401360544217687
+2024-09-08 21:46:35.430 | INFO     | retrieval.model:validation_step:379 - Recall@2_val: 0.2272727272727273
+2024-09-08 21:46:35.431 | INFO     | retrieval.model:validation_step:379 - Recall@14_val: 0.0
+2024-09-08 21:46:35.432 | INFO     | retrieval.model:validation_step:379 - Recall@3_val: 0.2272727272727273
+2024-09-08 21:46:35.433 | INFO     | retrieval.model:validation_step:379 - Recall@30_val: 3.401360544217687
+2024-09-08 21:46:35.433 | INFO     | retrieval.model:validation_step:379 - Recall@15_val: 0.0
+2024-09-08 21:46:35.435 | INFO     | retrieval.model:validation_step:379 - Recall@4_val: 0.2272727272727273
+2024-09-08 21:46:35.435 | INFO     | retrieval.model:validation_step:379 - Recall@31_val: 3.401360544217687
+2024-09-08 21:46:35.436 | INFO     | retrieval.model:validation_step:379 - Recall@16_val: 0.0
+2024-09-08 21:46:35.437 | INFO     | retrieval.model:validation_step:379 - Recall@5_val: 0.2272727272727273
+2024-09-08 21:46:35.438 | INFO     | retrieval.model:validation_step:379 - Recall@32_val: 3.401360544217687
+2024-09-08 21:46:35.438 | INFO     | retrieval.model:validation_step:379 - Recall@17_val: 0.0
+2024-09-08 21:46:35.439 | INFO     | retrieval.model:validation_step:379 - Recall@6_val: 0.2272727272727273
+2024-09-08 21:46:35.440 | INFO     | retrieval.model:validation_step:379 - Recall@33_val: 3.401360544217687
+2024-09-08 21:46:35.441 | INFO     | retrieval.model:validation_step:379 - Recall@18_val: 0.0
+2024-09-08 21:46:35.442 | INFO     | retrieval.model:validation_step:379 - Recall@7_val: 0.2272727272727273
+2024-09-08 21:46:35.442 | INFO     | retrieval.model:validation_step:379 - Recall@34_val: 3.401360544217687
+2024-09-08 21:46:35.443 | INFO     | retrieval.model:validation_step:379 - Recall@19_val: 0.0
+2024-09-08 21:46:35.444 | INFO     | retrieval.model:validation_step:379 - Recall@8_val: 0.2272727272727273
+2024-09-08 21:46:35.445 | INFO     | retrieval.model:validation_step:379 - Recall@35_val: 3.401360544217687
+2024-09-08 21:46:35.445 | INFO     | retrieval.model:validation_step:379 - Recall@20_val: 0.0
+2024-09-08 21:46:35.447 | INFO     | retrieval.model:validation_step:379 - Recall@9_val: 0.2272727272727273
+2024-09-08 21:46:35.447 | INFO     | retrieval.model:validation_step:379 - Recall@36_val: 3.401360544217687
+2024-09-08 21:46:35.448 | INFO     | retrieval.model:validation_step:379 - Recall@21_val: 0.0
+2024-09-08 21:46:35.449 | INFO     | retrieval.model:validation_step:379 - Recall@10_val: 0.2272727272727273
+2024-09-08 21:46:35.450 | INFO     | retrieval.model:validation_step:379 - Recall@37_val: 3.401360544217687
+2024-09-08 21:46:35.450 | INFO     | retrieval.model:validation_step:379 - Recall@22_val: 0.0
+2024-09-08 21:46:35.451 | INFO     | retrieval.model:validation_step:379 - Recall@11_val: 0.2272727272727273
+2024-09-08 21:46:35.452 | INFO     | retrieval.model:validation_step:379 - Recall@38_val: 3.401360544217687
+2024-09-08 21:46:35.453 | INFO     | retrieval.model:validation_step:379 - Recall@23_val: 0.0
+2024-09-08 21:46:35.454 | INFO     | retrieval.model:validation_step:379 - Recall@12_val: 0.2272727272727273
+2024-09-08 21:46:35.455 | INFO     | retrieval.model:validation_step:379 - Recall@39_val: 3.401360544217687
+2024-09-08 21:46:35.455 | INFO     | retrieval.model:validation_step:379 - Recall@24_val: 0.0
+2024-09-08 21:46:35.456 | INFO     | retrieval.model:validation_step:379 - Recall@13_val: 0.2272727272727273
+2024-09-08 21:46:35.457 | INFO     | retrieval.model:validation_step:379 - Recall@40_val: 3.401360544217687
+2024-09-08 21:46:35.458 | INFO     | retrieval.model:validation_step:379 - Recall@25_val: 0.0
+2024-09-08 21:46:35.459 | INFO     | retrieval.model:validation_step:379 - Recall@14_val: 0.2272727272727273
+2024-09-08 21:46:35.459 | INFO     | retrieval.model:validation_step:379 - Recall@41_val: 3.401360544217687
+2024-09-08 21:46:35.460 | INFO     | retrieval.model:validation_step:379 - Recall@26_val: 0.0
+2024-09-08 21:46:35.461 | INFO     | retrieval.model:validation_step:379 - Recall@15_val: 0.2272727272727273
+2024-09-08 21:46:35.462 | INFO     | retrieval.model:validation_step:379 - Recall@42_val: 3.401360544217687
+2024-09-08 21:46:35.462 | INFO     | retrieval.model:validation_step:379 - Recall@27_val: 0.0
+2024-09-08 21:46:35.464 | INFO     | retrieval.model:validation_step:379 - Recall@16_val: 0.2272727272727273
+2024-09-08 21:46:35.464 | INFO     | retrieval.model:validation_step:379 - Recall@43_val: 3.401360544217687
+2024-09-08 21:46:35.465 | INFO     | retrieval.model:validation_step:379 - Recall@28_val: 0.0
+2024-09-08 21:46:35.466 | INFO     | retrieval.model:validation_step:379 - Recall@17_val: 0.2272727272727273
+2024-09-08 21:46:35.467 | INFO     | retrieval.model:validation_step:379 - Recall@44_val: 3.401360544217687
+2024-09-08 21:46:35.467 | INFO     | retrieval.model:validation_step:379 - Recall@29_val: 0.0
+2024-09-08 21:46:35.468 | INFO     | retrieval.model:validation_step:379 - Recall@18_val: 0.2272727272727273
+2024-09-08 21:46:35.469 | INFO     | retrieval.model:validation_step:379 - Recall@45_val: 3.401360544217687
+2024-09-08 21:46:35.470 | INFO     | retrieval.model:validation_step:379 - Recall@30_val: 0.0
+2024-09-08 21:46:35.471 | INFO     | retrieval.model:validation_step:379 - Recall@19_val: 0.2272727272727273
+2024-09-08 21:46:35.472 | INFO     | retrieval.model:validation_step:379 - Recall@46_val: 3.401360544217687
+2024-09-08 21:46:35.472 | INFO     | retrieval.model:validation_step:379 - Recall@31_val: 0.0
+2024-09-08 21:46:35.473 | INFO     | retrieval.model:validation_step:379 - Recall@20_val: 0.2272727272727273
+2024-09-08 21:46:35.474 | INFO     | retrieval.model:validation_step:379 - Recall@47_val: 3.401360544217687
+2024-09-08 21:46:35.475 | INFO     | retrieval.model:validation_step:379 - Recall@32_val: 0.0
+2024-09-08 21:46:35.476 | INFO     | retrieval.model:validation_step:379 - Recall@21_val: 0.2272727272727273
+2024-09-08 21:46:35.476 | INFO     | retrieval.model:validation_step:379 - Recall@48_val: 3.401360544217687
+2024-09-08 21:46:35.477 | INFO     | retrieval.model:validation_step:379 - Recall@33_val: 0.0
+2024-09-08 21:46:35.478 | INFO     | retrieval.model:validation_step:379 - Recall@22_val: 0.2272727272727273
+2024-09-08 21:46:35.479 | INFO     | retrieval.model:validation_step:379 - Recall@49_val: 3.401360544217687
+2024-09-08 21:46:35.479 | INFO     | retrieval.model:validation_step:379 - Recall@34_val: 0.0
+2024-09-08 21:46:35.481 | INFO     | retrieval.model:validation_step:379 - Recall@23_val: 1.3636363636363635
+2024-09-08 21:46:35.481 | INFO     | retrieval.model:validation_step:379 - Recall@50_val: 3.401360544217687
+2024-09-08 21:46:35.482 | INFO     | retrieval.model:validation_step:379 - Recall@35_val: 0.0
+2024-09-08 21:46:35.483 | INFO     | retrieval.model:validation_step:379 - Recall@24_val: 1.3636363636363635
+2024-09-08 21:46:35.484 | INFO     | retrieval.model:validation_step:379 - Recall@51_val: 3.401360544217687
+2024-09-08 21:46:35.484 | INFO     | retrieval.model:validation_step:379 - Recall@36_val: 0.0
+2024-09-08 21:46:35.486 | INFO     | retrieval.model:validation_step:379 - Recall@25_val: 1.3636363636363635
+2024-09-08 21:46:35.486 | INFO     | retrieval.model:validation_step:379 - Recall@52_val: 3.401360544217687
+2024-09-08 21:46:35.487 | INFO     | retrieval.model:validation_step:379 - Recall@37_val: 0.0
+2024-09-08 21:46:35.488 | INFO     | retrieval.model:validation_step:379 - Recall@26_val: 1.3636363636363635
+2024-09-08 21:46:35.489 | INFO     | retrieval.model:validation_step:379 - Recall@53_val: 3.401360544217687
+2024-09-08 21:46:35.489 | INFO     | retrieval.model:validation_step:379 - Recall@38_val: 0.0
+2024-09-08 21:46:35.490 | INFO     | retrieval.model:validation_step:379 - Recall@27_val: 2.5
+2024-09-08 21:46:35.491 | INFO     | retrieval.model:validation_step:379 - Recall@54_val: 3.401360544217687
+2024-09-08 21:46:35.492 | INFO     | retrieval.model:validation_step:379 - Recall@39_val: 0.0
+2024-09-08 21:46:35.493 | INFO     | retrieval.model:validation_step:379 - Recall@28_val: 2.5
+2024-09-08 21:46:35.493 | INFO     | retrieval.model:validation_step:379 - Recall@55_val: 3.401360544217687
+2024-09-08 21:46:35.494 | INFO     | retrieval.model:validation_step:379 - Recall@40_val: 1.3565891472868215
+2024-09-08 21:46:35.495 | INFO     | retrieval.model:validation_step:379 - Recall@29_val: 2.5
+2024-09-08 21:46:35.496 | INFO     | retrieval.model:validation_step:379 - Recall@56_val: 3.401360544217687
+2024-09-08 21:46:35.496 | INFO     | retrieval.model:validation_step:379 - Recall@41_val: 1.3565891472868215
+2024-09-08 21:46:35.498 | INFO     | retrieval.model:validation_step:379 - Recall@30_val: 2.5
+2024-09-08 21:46:35.498 | INFO     | retrieval.model:validation_step:379 - Recall@57_val: 3.401360544217687
+2024-09-08 21:46:35.499 | INFO     | retrieval.model:validation_step:379 - Recall@42_val: 1.3565891472868215
+2024-09-08 21:46:35.500 | INFO     | retrieval.model:validation_step:379 - Recall@31_val: 2.5
+2024-09-08 21:46:35.501 | INFO     | retrieval.model:validation_step:379 - Recall@58_val: 3.401360544217687
+2024-09-08 21:46:35.501 | INFO     | retrieval.model:validation_step:379 - Recall@43_val: 1.3565891472868215
+2024-09-08 21:46:35.502 | INFO     | retrieval.model:validation_step:379 - Recall@32_val: 2.5
+2024-09-08 21:46:35.503 | INFO     | retrieval.model:validation_step:379 - Recall@59_val: 3.401360544217687
+2024-09-08 21:46:35.504 | INFO     | retrieval.model:validation_step:379 - Recall@44_val: 1.3565891472868215
+2024-09-08 21:46:35.505 | INFO     | retrieval.model:validation_step:379 - Recall@33_val: 2.5
+2024-09-08 21:46:35.506 | INFO     | retrieval.model:validation_step:379 - Recall@60_val: 3.401360544217687
+2024-09-08 21:46:35.506 | INFO     | retrieval.model:validation_step:379 - Recall@45_val: 1.3565891472868215
+2024-09-08 21:46:35.507 | INFO     | retrieval.model:validation_step:379 - Recall@34_val: 2.5
+2024-09-08 21:46:35.508 | INFO     | retrieval.model:validation_step:379 - Recall@61_val: 3.401360544217687
+2024-09-08 21:46:35.509 | INFO     | retrieval.model:validation_step:379 - Recall@46_val: 1.3565891472868215
+2024-09-08 21:46:35.510 | INFO     | retrieval.model:validation_step:379 - Recall@35_val: 2.5
+2024-09-08 21:46:35.510 | INFO     | retrieval.model:validation_step:379 - Recall@62_val: 3.401360544217687
+2024-09-08 21:46:35.511 | INFO     | retrieval.model:validation_step:379 - Recall@47_val: 1.3565891472868215
+2024-09-08 21:46:35.512 | INFO     | retrieval.model:validation_step:379 - Recall@36_val: 2.5
+2024-09-08 21:46:35.513 | INFO     | retrieval.model:validation_step:379 - Recall@63_val: 3.401360544217687
+2024-09-08 21:46:35.513 | INFO     | retrieval.model:validation_step:379 - Recall@48_val: 1.3565891472868215
+2024-09-08 21:46:35.515 | INFO     | retrieval.model:validation_step:379 - Recall@37_val: 2.5
+2024-09-08 21:46:35.515 | INFO     | retrieval.model:validation_step:379 - Recall@64_val: 3.401360544217687
+2024-09-08 21:46:35.516 | INFO     | retrieval.model:validation_step:379 - Recall@49_val: 1.3565891472868215
+2024-09-08 21:46:35.517 | INFO     | retrieval.model:validation_step:379 - Recall@38_val: 2.5
+2024-09-08 21:46:35.518 | INFO     | retrieval.model:validation_step:379 - Recall@65_val: 3.401360544217687
+2024-09-08 21:46:35.518 | INFO     | retrieval.model:validation_step:379 - Recall@50_val: 1.3565891472868215
+2024-09-08 21:46:35.519 | INFO     | retrieval.model:validation_step:379 - Recall@39_val: 2.5
+2024-09-08 21:46:35.520 | INFO     | retrieval.model:validation_step:379 - Recall@66_val: 3.401360544217687
+2024-09-08 21:46:35.521 | INFO     | retrieval.model:validation_step:379 - Recall@51_val: 1.3565891472868215
+2024-09-08 21:46:35.522 | INFO     | retrieval.model:validation_step:379 - Recall@40_val: 2.5
+2024-09-08 21:46:35.523 | INFO     | retrieval.model:validation_step:379 - Recall@67_val: 3.401360544217687
+2024-09-08 21:46:35.523 | INFO     | retrieval.model:validation_step:379 - Recall@52_val: 1.3565891472868215
+2024-09-08 21:46:35.524 | INFO     | retrieval.model:validation_step:379 - Recall@41_val: 2.5
+2024-09-08 21:46:35.525 | INFO     | retrieval.model:validation_step:379 - Recall@68_val: 3.401360544217687
+2024-09-08 21:46:35.526 | INFO     | retrieval.model:validation_step:379 - Recall@53_val: 1.3565891472868215
+2024-09-08 21:46:35.527 | INFO     | retrieval.model:validation_step:379 - Recall@42_val: 2.5
+2024-09-08 21:46:35.527 | INFO     | retrieval.model:validation_step:379 - Recall@69_val: 3.401360544217687
+2024-09-08 21:46:35.528 | INFO     | retrieval.model:validation_step:379 - Recall@54_val: 1.3565891472868215
+2024-09-08 21:46:35.529 | INFO     | retrieval.model:validation_step:379 - Recall@43_val: 2.5
+2024-09-08 21:46:35.530 | INFO     | retrieval.model:validation_step:379 - Recall@70_val: 3.401360544217687
+2024-09-08 21:46:35.530 | INFO     | retrieval.model:validation_step:379 - Recall@55_val: 1.3565891472868215
+2024-09-08 21:46:35.532 | INFO     | retrieval.model:validation_step:379 - Recall@44_val: 2.5
+2024-09-08 21:46:35.532 | INFO     | retrieval.model:validation_step:379 - Recall@71_val: 3.401360544217687
+2024-09-08 21:46:35.533 | INFO     | retrieval.model:validation_step:379 - Recall@56_val: 1.3565891472868215
+2024-09-08 21:46:35.534 | INFO     | retrieval.model:validation_step:379 - Recall@45_val: 2.5
+2024-09-08 21:46:35.535 | INFO     | retrieval.model:validation_step:379 - Recall@72_val: 3.401360544217687
+2024-09-08 21:46:35.535 | INFO     | retrieval.model:validation_step:379 - Recall@57_val: 1.3565891472868215
+2024-09-08 21:46:35.536 | INFO     | retrieval.model:validation_step:379 - Recall@46_val: 2.5
+2024-09-08 21:46:35.537 | INFO     | retrieval.model:validation_step:379 - Recall@73_val: 3.401360544217687
+2024-09-08 21:46:35.538 | INFO     | retrieval.model:validation_step:379 - Recall@58_val: 1.3565891472868215
+2024-09-08 21:46:35.539 | INFO     | retrieval.model:validation_step:379 - Recall@47_val: 2.5
+2024-09-08 21:46:35.540 | INFO     | retrieval.model:validation_step:379 - Recall@74_val: 3.401360544217687
+2024-09-08 21:46:35.540 | INFO     | retrieval.model:validation_step:379 - Recall@59_val: 1.3565891472868215
+2024-09-08 21:46:35.541 | INFO     | retrieval.model:validation_step:379 - Recall@48_val: 2.5
+2024-09-08 21:46:35.542 | INFO     | retrieval.model:validation_step:379 - Recall@75_val: 3.401360544217687
+2024-09-08 21:46:35.543 | INFO     | retrieval.model:validation_step:379 - Recall@60_val: 1.3565891472868215
+2024-09-08 21:46:35.544 | INFO     | retrieval.model:validation_step:379 - Recall@49_val: 2.5
+2024-09-08 21:46:35.544 | INFO     | retrieval.model:validation_step:379 - Recall@76_val: 3.401360544217687
+2024-09-08 21:46:35.545 | INFO     | retrieval.model:validation_step:379 - Recall@61_val: 1.3565891472868215
+2024-09-08 21:46:35.546 | INFO     | retrieval.model:validation_step:379 - Recall@50_val: 2.5
+2024-09-08 21:46:35.547 | INFO     | retrieval.model:validation_step:379 - Recall@77_val: 3.401360544217687
+2024-09-08 21:46:35.547 | INFO     | retrieval.model:validation_step:379 - Recall@62_val: 1.3565891472868215
+2024-09-08 21:46:35.549 | INFO     | retrieval.model:validation_step:379 - Recall@51_val: 2.5
+2024-09-08 21:46:35.549 | INFO     | retrieval.model:validation_step:379 - Recall@78_val: 3.401360544217687
+2024-09-08 21:46:35.550 | INFO     | retrieval.model:validation_step:379 - Recall@63_val: 1.3565891472868215
+2024-09-08 21:46:35.551 | INFO     | retrieval.model:validation_step:379 - Recall@52_val: 2.5
+2024-09-08 21:46:35.552 | INFO     | retrieval.model:validation_step:379 - Recall@79_val: 3.401360544217687
+2024-09-08 21:46:35.552 | INFO     | retrieval.model:validation_step:379 - Recall@64_val: 1.3565891472868215
+2024-09-08 21:46:35.553 | INFO     | retrieval.model:validation_step:379 - Recall@53_val: 2.5
+2024-09-08 21:46:35.554 | INFO     | retrieval.model:validation_step:379 - Recall@80_val: 3.401360544217687
+2024-09-08 21:46:35.555 | INFO     | retrieval.model:validation_step:379 - Recall@65_val: 1.3565891472868215
+2024-09-08 21:46:35.556 | INFO     | retrieval.model:validation_step:379 - Recall@54_val: 2.5
+2024-09-08 21:46:35.556 | INFO     | retrieval.model:validation_step:379 - Recall@81_val: 3.401360544217687
+2024-09-08 21:46:35.557 | INFO     | retrieval.model:validation_step:379 - Recall@66_val: 1.3565891472868215
+2024-09-08 21:46:35.558 | INFO     | retrieval.model:validation_step:379 - Recall@55_val: 2.5
+2024-09-08 21:46:35.559 | INFO     | retrieval.model:validation_step:379 - Recall@82_val: 3.401360544217687
+2024-09-08 21:46:35.560 | INFO     | retrieval.model:validation_step:379 - Recall@67_val: 1.3565891472868215
+2024-09-08 21:46:35.561 | INFO     | retrieval.model:validation_step:379 - Recall@56_val: 2.5
+2024-09-08 21:46:35.561 | INFO     | retrieval.model:validation_step:379 - Recall@83_val: 3.401360544217687
+2024-09-08 21:46:35.562 | INFO     | retrieval.model:validation_step:379 - Recall@68_val: 1.3565891472868215
+2024-09-08 21:46:35.563 | INFO     | retrieval.model:validation_step:379 - Recall@57_val: 2.5
+2024-09-08 21:46:35.564 | INFO     | retrieval.model:validation_step:379 - Recall@84_val: 3.401360544217687
+2024-09-08 21:46:35.564 | INFO     | retrieval.model:validation_step:379 - Recall@69_val: 1.3565891472868215
+2024-09-08 21:46:35.566 | INFO     | retrieval.model:validation_step:379 - Recall@58_val: 2.5
+2024-09-08 21:46:35.566 | INFO     | retrieval.model:validation_step:379 - Recall@85_val: 3.401360544217687
+2024-09-08 21:46:35.567 | INFO     | retrieval.model:validation_step:379 - Recall@70_val: 1.3565891472868215
+2024-09-08 21:46:35.568 | INFO     | retrieval.model:validation_step:379 - Recall@59_val: 2.5
+2024-09-08 21:46:35.569 | INFO     | retrieval.model:validation_step:379 - Recall@86_val: 3.401360544217687
+2024-09-08 21:46:35.569 | INFO     | retrieval.model:validation_step:379 - Recall@71_val: 1.3565891472868215
+2024-09-08 21:46:35.570 | INFO     | retrieval.model:validation_step:379 - Recall@60_val: 2.5
+2024-09-08 21:46:35.571 | INFO     | retrieval.model:validation_step:379 - Recall@87_val: 3.401360544217687
+2024-09-08 21:46:35.572 | INFO     | retrieval.model:validation_step:379 - Recall@72_val: 1.3565891472868215
+2024-09-08 21:46:35.573 | INFO     | retrieval.model:validation_step:379 - Recall@61_val: 2.5
+2024-09-08 21:46:35.574 | INFO     | retrieval.model:validation_step:379 - Recall@73_val: 1.3565891472868215
+2024-09-08 21:46:35.574 | INFO     | retrieval.model:validation_step:379 - Recall@88_val: 3.401360544217687
+2024-09-08 21:46:35.575 | INFO     | retrieval.model:validation_step:379 - Recall@62_val: 2.5
+2024-09-08 21:46:35.576 | INFO     | retrieval.model:validation_step:379 - Recall@89_val: 3.401360544217687
+2024-09-08 21:46:35.577 | INFO     | retrieval.model:validation_step:379 - Recall@74_val: 1.3565891472868215
+2024-09-08 21:46:35.578 | INFO     | retrieval.model:validation_step:379 - Recall@63_val: 2.5
+2024-09-08 21:46:35.578 | INFO     | retrieval.model:validation_step:379 - Recall@90_val: 3.401360544217687
+2024-09-08 21:46:35.579 | INFO     | retrieval.model:validation_step:379 - Recall@75_val: 1.3565891472868215
+2024-09-08 21:46:35.580 | INFO     | retrieval.model:validation_step:379 - Recall@64_val: 2.5
+2024-09-08 21:46:35.581 | INFO     | retrieval.model:validation_step:379 - Recall@91_val: 3.401360544217687
+2024-09-08 21:46:35.581 | INFO     | retrieval.model:validation_step:379 - Recall@76_val: 1.3565891472868215
+2024-09-08 21:46:35.583 | INFO     | retrieval.model:validation_step:379 - Recall@65_val: 2.5
+2024-09-08 21:46:35.583 | INFO     | retrieval.model:validation_step:379 - Recall@92_val: 3.401360544217687
+2024-09-08 21:46:35.584 | INFO     | retrieval.model:validation_step:379 - Recall@77_val: 1.3565891472868215
+2024-09-08 21:46:35.585 | INFO     | retrieval.model:validation_step:379 - Recall@66_val: 2.5
+2024-09-08 21:46:35.586 | INFO     | retrieval.model:validation_step:379 - Recall@93_val: 3.401360544217687
+2024-09-08 21:46:35.586 | INFO     | retrieval.model:validation_step:379 - Recall@78_val: 1.3565891472868215
+2024-09-08 21:46:35.587 | INFO     | retrieval.model:validation_step:379 - Recall@67_val: 2.5
+2024-09-08 21:46:35.588 | INFO     | retrieval.model:validation_step:379 - Recall@94_val: 3.401360544217687
+2024-09-08 21:46:35.589 | INFO     | retrieval.model:validation_step:379 - Recall@79_val: 1.3565891472868215
+2024-09-08 21:46:35.590 | INFO     | retrieval.model:validation_step:379 - Recall@68_val: 2.5
+2024-09-08 21:46:35.591 | INFO     | retrieval.model:validation_step:379 - Recall@95_val: 3.401360544217687
+2024-09-08 21:46:35.591 | INFO     | retrieval.model:validation_step:379 - Recall@80_val: 1.3565891472868215
+2024-09-08 21:46:35.592 | INFO     | retrieval.model:validation_step:379 - Recall@69_val: 2.5
+2024-09-08 21:46:35.593 | INFO     | retrieval.model:validation_step:379 - Recall@96_val: 3.401360544217687
+2024-09-08 21:46:35.594 | INFO     | retrieval.model:validation_step:379 - Recall@81_val: 1.3565891472868215
+2024-09-08 21:46:35.595 | INFO     | retrieval.model:validation_step:379 - Recall@70_val: 2.5
+2024-09-08 21:46:35.595 | INFO     | retrieval.model:validation_step:379 - Recall@97_val: 3.401360544217687
+2024-09-08 21:46:35.596 | INFO     | retrieval.model:validation_step:379 - Recall@82_val: 1.3565891472868215
+2024-09-08 21:46:35.597 | INFO     | retrieval.model:validation_step:379 - Recall@71_val: 2.5
+2024-09-08 21:46:35.598 | INFO     | retrieval.model:validation_step:379 - Recall@98_val: 3.401360544217687
+2024-09-08 21:46:35.598 | INFO     | retrieval.model:validation_step:379 - Recall@83_val: 1.3565891472868215
+2024-09-08 21:46:35.600 | INFO     | retrieval.model:validation_step:379 - Recall@72_val: 2.5
+2024-09-08 21:46:35.600 | INFO     | retrieval.model:validation_step:379 - Recall@99_val: 3.401360544217687
+2024-09-08 21:46:35.601 | INFO     | retrieval.model:validation_step:379 - Recall@84_val: 1.3565891472868215
+2024-09-08 21:46:35.602 | INFO     | retrieval.model:validation_step:379 - Recall@73_val: 2.5
+2024-09-08 21:46:35.603 | INFO     | retrieval.model:validation_step:379 - Recall@100_val: 3.401360544217687
+2024-09-08 21:46:35.603 | INFO     | retrieval.model:validation_step:379 - Recall@85_val: 1.3565891472868215
+2024-09-08 21:46:35.604 | INFO     | retrieval.model:validation_step:379 - Recall@74_val: 2.5
+2024-09-08 21:46:35.605 | INFO     | retrieval.model:validation_step:388 - MRR: 0.0016722408026755853
+2024-09-08 21:46:35.606 | INFO     | retrieval.model:validation_step:379 - Recall@86_val: 1.3565891472868215
+2024-09-08 21:46:35.607 | INFO     | retrieval.model:validation_step:379 - Recall@75_val: 2.5
+2024-09-08 21:46:35.608 | INFO     | retrieval.model:validation_step:396 - End of validation_step
+2024-09-08 21:46:35.608 | INFO     | retrieval.model:validation_step:379 - Recall@87_val: 1.3565891472868215
+2024-09-08 21:46:35.609 | INFO     | retrieval.model:validation_step:379 - Recall@76_val: 2.5
+2024-09-08 21:46:35.611 | INFO     | retrieval.model:validation_step:379 - Recall@88_val: 1.3565891472868215
+2024-09-08 21:46:35.612 | INFO     | retrieval.model:validation_step:379 - Recall@77_val: 2.5
+2024-09-08 21:46:35.613 | INFO     | retrieval.model:validation_step:379 - Recall@89_val: 1.3565891472868215
+2024-09-08 21:46:35.614 | INFO     | retrieval.model:validation_step:379 - Recall@78_val: 2.5
+2024-09-08 21:46:35.615 | INFO     | retrieval.model:validation_step:379 - Recall@90_val: 1.3565891472868215
+2024-09-08 21:46:35.617 | INFO     | retrieval.model:validation_step:379 - Recall@79_val: 2.5
+2024-09-08 21:46:35.618 | INFO     | retrieval.model:validation_step:379 - Recall@91_val: 1.3565891472868215
+2024-09-08 21:46:35.619 | INFO     | retrieval.model:validation_step:379 - Recall@80_val: 2.5
+2024-09-08 21:46:35.620 | INFO     | retrieval.model:validation_step:379 - Recall@92_val: 1.3565891472868215
+2024-09-08 21:46:35.621 | INFO     | retrieval.model:validation_step:379 - Recall@81_val: 2.5
+2024-09-08 21:46:35.623 | INFO     | retrieval.model:validation_step:379 - Recall@93_val: 1.3565891472868215
+2024-09-08 21:46:35.624 | INFO     | retrieval.model:validation_step:379 - Recall@82_val: 2.5
+2024-09-08 21:46:35.625 | INFO     | retrieval.model:validation_step:379 - Recall@94_val: 1.3565891472868215
+2024-09-08 21:46:35.626 | INFO     | retrieval.model:validation_step:379 - Recall@83_val: 2.5
+2024-09-08 21:46:35.628 | INFO     | retrieval.model:validation_step:379 - Recall@95_val: 1.3565891472868215
+2024-09-08 21:46:35.629 | INFO     | retrieval.model:validation_step:379 - Recall@84_val: 2.5
+2024-09-08 21:46:35.630 | INFO     | retrieval.model:validation_step:379 - Recall@96_val: 1.3565891472868215
+2024-09-08 21:46:35.631 | INFO     | retrieval.model:validation_step:379 - Recall@85_val: 2.5
+2024-09-08 21:46:35.632 | INFO     | retrieval.model:validation_step:379 - Recall@97_val: 1.3565891472868215
+2024-09-08 21:46:35.634 | INFO     | retrieval.model:validation_step:379 - Recall@86_val: 2.5
+2024-09-08 21:46:35.635 | INFO     | retrieval.model:validation_step:379 - Recall@98_val: 1.3565891472868215
+2024-09-08 21:46:35.636 | INFO     | retrieval.model:validation_step:379 - Recall@87_val: 2.5
+2024-09-08 21:46:35.637 | INFO     | retrieval.model:validation_step:379 - Recall@99_val: 1.3565891472868215
+2024-09-08 21:46:35.639 | INFO     | retrieval.model:validation_step:379 - Recall@88_val: 2.5
+2024-09-08 21:46:35.640 | INFO     | retrieval.model:validation_step:379 - Recall@100_val: 1.3565891472868215
+2024-09-08 21:46:35.641 | INFO     | retrieval.model:validation_step:379 - Recall@89_val: 2.5
+2024-09-08 21:46:35.642 | INFO     | retrieval.model:validation_step:388 - MRR: 0.0011627906976744186
+2024-09-08 21:46:35.643 | INFO     | retrieval.model:validation_step:379 - Recall@90_val: 2.5
+2024-09-08 21:46:35.645 | INFO     | retrieval.model:validation_step:396 - End of validation_step
+2024-09-08 21:46:35.646 | INFO     | retrieval.model:validation_step:379 - Recall@91_val: 2.5
+2024-09-08 21:46:35.648 | INFO     | retrieval.model:validation_step:379 - Recall@92_val: 2.5
+2024-09-08 21:46:35.651 | INFO     | retrieval.model:validation_step:379 - Recall@93_val: 2.5
+2024-09-08 21:46:35.653 | INFO     | retrieval.model:validation_step:379 - Recall@94_val: 2.5
+2024-09-08 21:46:35.655 | INFO     | retrieval.model:validation_step:379 - Recall@95_val: 2.5
+2024-09-08 21:46:35.658 | INFO     | retrieval.model:validation_step:379 - Recall@96_val: 2.5
+2024-09-08 21:46:35.660 | INFO     | retrieval.model:validation_step:379 - Recall@97_val: 2.5
+2024-09-08 21:46:35.663 | INFO     | retrieval.model:validation_step:379 - Recall@98_val: 2.5
+2024-09-08 21:46:35.665 | INFO     | retrieval.model:validation_step:379 - Recall@99_val: 2.5
+2024-09-08 21:46:35.668 | INFO     | retrieval.model:validation_step:379 - Recall@100_val: 2.5
+2024-09-08 21:46:35.670 | INFO     | retrieval.model:validation_step:388 - MRR: 0.013193529497877322
+2024-09-08 21:46:35.672 | INFO     | retrieval.model:validation_step:396 - End of validation_step
+2024-09-08 21:46:36.032 | INFO     | retrieval.model:validation_step:379 - Recall@1_val: 0.0
+2024-09-08 21:46:36.041 | INFO     | retrieval.model:validation_step:379 - Recall@2_val: 0.0
+2024-09-08 21:46:36.045 | INFO     | retrieval.model:validation_step:379 - Recall@3_val: 0.0
+2024-09-08 21:46:36.050 | INFO     | retrieval.model:validation_step:379 - Recall@4_val: 0.0
+2024-09-08 21:46:36.054 | INFO     | retrieval.model:validation_step:379 - Recall@5_val: 0.0
+2024-09-08 21:46:36.059 | INFO     | retrieval.model:validation_step:379 - Recall@6_val: 0.0
+2024-09-08 21:46:36.064 | INFO     | retrieval.model:validation_step:379 - Recall@7_val: 0.0
+2024-09-08 21:46:36.068 | INFO     | retrieval.model:validation_step:379 - Recall@8_val: 0.0
+2024-09-08 21:46:36.073 | INFO     | retrieval.model:validation_step:379 - Recall@9_val: 0.0
+2024-09-08 21:46:36.078 | INFO     | retrieval.model:validation_step:379 - Recall@10_val: 0.0
+2024-09-08 21:46:36.082 | INFO     | retrieval.model:validation_step:379 - Recall@11_val: 0.0
+2024-09-08 21:46:36.087 | INFO     | retrieval.model:validation_step:379 - Recall@12_val: 0.0
+2024-09-08 21:46:36.092 | INFO     | retrieval.model:validation_step:379 - Recall@13_val: 0.0
+2024-09-08 21:46:36.097 | INFO     | retrieval.model:validation_step:379 - Recall@14_val: 0.0
+2024-09-08 21:46:36.101 | INFO     | retrieval.model:validation_step:379 - Recall@15_val: 0.0
+2024-09-08 21:46:36.106 | INFO     | retrieval.model:validation_step:379 - Recall@16_val: 0.0
+2024-09-08 21:46:36.111 | INFO     | retrieval.model:validation_step:379 - Recall@17_val: 0.0
+2024-09-08 21:46:36.115 | INFO     | retrieval.model:validation_step:379 - Recall@18_val: 0.0
+2024-09-08 21:46:36.120 | INFO     | retrieval.model:validation_step:379 - Recall@19_val: 0.0
+2024-09-08 21:46:36.125 | INFO     | retrieval.model:validation_step:379 - Recall@20_val: 0.0
+2024-09-08 21:46:36.129 | INFO     | retrieval.model:validation_step:379 - Recall@21_val: 0.0
+2024-09-08 21:46:36.134 | INFO     | retrieval.model:validation_step:379 - Recall@22_val: 0.0
+2024-09-08 21:46:36.139 | INFO     | retrieval.model:validation_step:379 - Recall@23_val: 1.1111111111111112
+2024-09-08 21:46:36.143 | INFO     | retrieval.model:validation_step:379 - Recall@24_val: 1.1111111111111112
+2024-09-08 21:46:36.148 | INFO     | retrieval.model:validation_step:379 - Recall@25_val: 1.1111111111111112
+2024-09-08 21:46:36.153 | INFO     | retrieval.model:validation_step:379 - Recall@26_val: 2.6666666666666665
+2024-09-08 21:46:36.158 | INFO     | retrieval.model:validation_step:379 - Recall@27_val: 2.6666666666666665
+2024-09-08 21:46:36.162 | INFO     | retrieval.model:validation_step:379 - Recall@28_val: 2.6666666666666665
+2024-09-08 21:46:36.167 | INFO     | retrieval.model:validation_step:379 - Recall@29_val: 2.6666666666666665
+2024-09-08 21:46:36.172 | INFO     | retrieval.model:validation_step:379 - Recall@30_val: 2.6666666666666665
+2024-09-08 21:46:36.176 | INFO     | retrieval.model:validation_step:379 - Recall@31_val: 2.6666666666666665
+2024-09-08 21:46:36.181 | INFO     | retrieval.model:validation_step:379 - Recall@32_val: 2.6666666666666665
+2024-09-08 21:46:36.186 | INFO     | retrieval.model:validation_step:379 - Recall@33_val: 2.6666666666666665
+2024-09-08 21:46:36.190 | INFO     | retrieval.model:validation_step:379 - Recall@34_val: 2.6666666666666665
+2024-09-08 21:46:36.195 | INFO     | retrieval.model:validation_step:379 - Recall@35_val: 2.6666666666666665
+2024-09-08 21:46:36.200 | INFO     | retrieval.model:validation_step:379 - Recall@36_val: 2.6666666666666665
+2024-09-08 21:46:36.204 | INFO     | retrieval.model:validation_step:379 - Recall@37_val: 2.6666666666666665
+2024-09-08 21:46:36.209 | INFO     | retrieval.model:validation_step:379 - Recall@38_val: 2.6666666666666665
+2024-09-08 21:46:36.214 | INFO     | retrieval.model:validation_step:379 - Recall@39_val: 2.6666666666666665
+2024-09-08 21:46:36.218 | INFO     | retrieval.model:validation_step:379 - Recall@40_val: 2.6666666666666665
+2024-09-08 21:46:36.223 | INFO     | retrieval.model:validation_step:379 - Recall@41_val: 2.6666666666666665
+2024-09-08 21:46:36.228 | INFO     | retrieval.model:validation_step:379 - Recall@42_val: 2.6666666666666665
+2024-09-08 21:46:36.233 | INFO     | retrieval.model:validation_step:379 - Recall@43_val: 2.6666666666666665
+2024-09-08 21:46:36.237 | INFO     | retrieval.model:validation_step:379 - Recall@44_val: 2.6666666666666665
+2024-09-08 21:46:36.242 | INFO     | retrieval.model:validation_step:379 - Recall@45_val: 2.6666666666666665
+2024-09-08 21:46:36.247 | INFO     | retrieval.model:validation_step:379 - Recall@46_val: 2.6666666666666665
+2024-09-08 21:46:36.251 | INFO     | retrieval.model:validation_step:379 - Recall@47_val: 2.6666666666666665
+2024-09-08 21:46:36.256 | INFO     | retrieval.model:validation_step:379 - Recall@48_val: 2.6666666666666665
+2024-09-08 21:46:36.261 | INFO     | retrieval.model:validation_step:379 - Recall@49_val: 2.6666666666666665
+2024-09-08 21:46:36.265 | INFO     | retrieval.model:validation_step:379 - Recall@50_val: 2.6666666666666665
+2024-09-08 21:46:36.270 | INFO     | retrieval.model:validation_step:379 - Recall@51_val: 2.6666666666666665
+2024-09-08 21:46:36.275 | INFO     | retrieval.model:validation_step:379 - Recall@52_val: 2.6666666666666665
+2024-09-08 21:46:36.279 | INFO     | retrieval.model:validation_step:379 - Recall@53_val: 2.6666666666666665
+2024-09-08 21:46:36.284 | INFO     | retrieval.model:validation_step:379 - Recall@54_val: 2.6666666666666665
+2024-09-08 21:46:36.289 | INFO     | retrieval.model:validation_step:379 - Recall@55_val: 2.6666666666666665
+2024-09-08 21:46:36.294 | INFO     | retrieval.model:validation_step:379 - Recall@56_val: 2.6666666666666665
+2024-09-08 21:46:36.298 | INFO     | retrieval.model:validation_step:379 - Recall@57_val: 2.6666666666666665
+2024-09-08 21:46:36.303 | INFO     | retrieval.model:validation_step:379 - Recall@58_val: 2.6666666666666665
+2024-09-08 21:46:36.308 | INFO     | retrieval.model:validation_step:379 - Recall@59_val: 2.6666666666666665
+2024-09-08 21:46:36.312 | INFO     | retrieval.model:validation_step:379 - Recall@60_val: 2.6666666666666665
+2024-09-08 21:46:36.317 | INFO     | retrieval.model:validation_step:379 - Recall@61_val: 2.6666666666666665
+2024-09-08 21:46:36.322 | INFO     | retrieval.model:validation_step:379 - Recall@62_val: 2.6666666666666665
+2024-09-08 21:46:36.326 | INFO     | retrieval.model:validation_step:379 - Recall@63_val: 2.6666666666666665
+2024-09-08 21:46:36.331 | INFO     | retrieval.model:validation_step:379 - Recall@64_val: 2.6666666666666665
+2024-09-08 21:46:36.336 | INFO     | retrieval.model:validation_step:379 - Recall@65_val: 2.6666666666666665
+2024-09-08 21:46:36.340 | INFO     | retrieval.model:validation_step:379 - Recall@66_val: 2.6666666666666665
+2024-09-08 21:46:36.345 | INFO     | retrieval.model:validation_step:379 - Recall@67_val: 2.6666666666666665
+2024-09-08 21:46:36.350 | INFO     | retrieval.model:validation_step:379 - Recall@68_val: 2.6666666666666665
+2024-09-08 21:46:36.354 | INFO     | retrieval.model:validation_step:379 - Recall@69_val: 2.6666666666666665
+2024-09-08 21:46:36.359 | INFO     | retrieval.model:validation_step:379 - Recall@70_val: 2.6666666666666665
+2024-09-08 21:46:36.364 | INFO     | retrieval.model:validation_step:379 - Recall@71_val: 2.6666666666666665
+2024-09-08 21:46:36.369 | INFO     | retrieval.model:validation_step:379 - Recall@72_val: 2.6666666666666665
+2024-09-08 21:46:36.373 | INFO     | retrieval.model:validation_step:379 - Recall@73_val: 2.6666666666666665
+2024-09-08 21:46:36.378 | INFO     | retrieval.model:validation_step:379 - Recall@74_val: 2.6666666666666665
+2024-09-08 21:46:36.383 | INFO     | retrieval.model:validation_step:379 - Recall@75_val: 2.6666666666666665
+2024-09-08 21:46:36.388 | INFO     | retrieval.model:validation_step:379 - Recall@76_val: 2.6666666666666665
+2024-09-08 21:46:36.392 | INFO     | retrieval.model:validation_step:379 - Recall@77_val: 2.6666666666666665
+2024-09-08 21:46:36.397 | INFO     | retrieval.model:validation_step:379 - Recall@78_val: 2.6666666666666665
+2024-09-08 21:46:36.401 | INFO     | retrieval.model:validation_step:379 - Recall@79_val: 2.6666666666666665
+2024-09-08 21:46:36.406 | INFO     | retrieval.model:validation_step:379 - Recall@80_val: 2.6666666666666665
+2024-09-08 21:46:36.411 | INFO     | retrieval.model:validation_step:379 - Recall@81_val: 2.6666666666666665
+2024-09-08 21:46:36.415 | INFO     | retrieval.model:validation_step:379 - Recall@82_val: 2.6666666666666665
+2024-09-08 21:46:36.420 | INFO     | retrieval.model:validation_step:379 - Recall@83_val: 2.6666666666666665
+2024-09-08 21:46:36.425 | INFO     | retrieval.model:validation_step:379 - Recall@84_val: 2.6666666666666665
+2024-09-08 21:46:36.430 | INFO     | retrieval.model:validation_step:379 - Recall@85_val: 2.6666666666666665
+2024-09-08 21:46:36.434 | INFO     | retrieval.model:validation_step:379 - Recall@86_val: 2.6666666666666665
+2024-09-08 21:46:36.439 | INFO     | retrieval.model:validation_step:379 - Recall@87_val: 2.6666666666666665
+2024-09-08 21:46:36.444 | INFO     | retrieval.model:validation_step:379 - Recall@88_val: 2.6666666666666665
+2024-09-08 21:46:36.448 | INFO     | retrieval.model:validation_step:379 - Recall@89_val: 2.6666666666666665
+2024-09-08 21:46:36.453 | INFO     | retrieval.model:validation_step:379 - Recall@90_val: 2.6666666666666665
+2024-09-08 21:46:36.458 | INFO     | retrieval.model:validation_step:379 - Recall@91_val: 2.6666666666666665
+2024-09-08 21:46:36.462 | INFO     | retrieval.model:validation_step:379 - Recall@92_val: 2.6666666666666665
+2024-09-08 21:46:36.467 | INFO     | retrieval.model:validation_step:379 - Recall@93_val: 2.6666666666666665
+2024-09-08 21:46:36.472 | INFO     | retrieval.model:validation_step:379 - Recall@94_val: 2.6666666666666665
+2024-09-08 21:46:36.476 | INFO     | retrieval.model:validation_step:379 - Recall@95_val: 2.6666666666666665
+2024-09-08 21:46:36.481 | INFO     | retrieval.model:validation_step:379 - Recall@96_val: 2.6666666666666665
+2024-09-08 21:46:36.486 | INFO     | retrieval.model:validation_step:379 - Recall@97_val: 2.6666666666666665
+2024-09-08 21:46:36.491 | INFO     | retrieval.model:validation_step:379 - Recall@98_val: 2.6666666666666665
+2024-09-08 21:46:36.495 | INFO     | retrieval.model:validation_step:379 - Recall@99_val: 2.6666666666666665
+2024-09-08 21:46:36.500 | INFO     | retrieval.model:validation_step:379 - Recall@100_val: 2.6666666666666665
+2024-09-08 21:46:36.505 | INFO     | retrieval.model:validation_step:388 - MRR: 0.0026755852842809363
+2024-09-08 21:46:36.509 | INFO     | retrieval.model:validation_step:396 - End of validation_step
+Epoch 0: 100%|████████████████████████████████████████████████████████████| 2/2 [00:09<00:00,  0.21it/s, v_num=17108][rank: 0] Metric Recall@10_val improved. New best score: 0.056
+[rank: 2] Metric Recall@10_val improved. New best score: 0.056
+[rank: 1] Metric Recall@10_val improved. New best score: 0.056
+[rank: 3] Metric Recall@10_val improved. New best score: 0.056
+Epoch 0, global step 1: 'Recall@10_val' reached 0.05556 (best 0.05556), saving model to '/data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_ep
+och=0-Recall@10_val=0.06.ckpt' as top 1
+`Trainer.fit` stopped: `max_epochs=1` reached.
+Epoch 0: 100%|████████████████████████████████████████████████████████████| 2/2 [00:12<00:00,  0.16it/s, v_num=17108]
+2024-09-08 21:46:43.892 | INFO     | __main__:main:1532 - hit the barrier after training
+2024-09-08 21:46:43.929 | INFO     | __main__:main:1532 - hit the barrier after training
+2024-09-08 21:46:43.939 | INFO     | __main__:main:1532 - hit the barrier after training
+2024-09-08 21:46:43.976 | INFO     | __main__:main:1532 - hit the barrier after training
+2024-09-08 21:46:43.979 | INFO     | __main__:main:1538 - Finished progressive training at epoch 1
+2024-09-08 21:46:43.979 | INFO     | __main__:main:1538 - Finished progressive training at epoch 1
+2024-09-08 21:46:43.980 | INFO     | __main__:main:1538 - Finished progressive training at epoch 1
+2024-09-08 21:46:43.981 | INFO     | __main__:main:1538 - Finished progressive training at epoch 1
+2024-09-08 21:46:46.634 | INFO     | __main__:main:1557 - Testing...
+2024-09-08 21:46:46.643 | INFO     | retrieval.main:run_cli:60 - PID: 1736426
+2024-09-08 21:46:46.667 | INFO     | __main__:main:1557 - Testing...
+2024-09-08 21:46:46.670 | INFO     | retrieval.main:run_cli:60 - PID: 1736428
+2024-09-08 21:46:46.813 | INFO     | __main__:main:1557 - Testing...
+2024-09-08 21:46:46.813 | INFO     | retrieval.main:run_cli:60 - PID: 1736427
+[rank: 1] Seed set to 3407
+2024-09-08 21:46:46.869 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+2024-09-08 21:46:46.870 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.j
+sonl
+[rank: 3] Seed set to 3407
+2024-09-08 21:46:46.876 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+2024-09-08 21:46:46.876 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.j
+sonl
+2024-09-08 21:46:46.937 | INFO     | __main__:main:1557 - Testing...
+2024-09-08 21:46:46.940 | INFO     | retrieval.main:run_cli:60 - PID: 1735822
+[rank: 2] Seed set to 3407
+2024-09-08 21:46:47.016 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+2024-09-08 21:46:47.016 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.j
+sonl
+[rank: 0] Seed set to 3407
+2024-09-08 21:46:47.141 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random
+2024-09-08 21:46:47.141 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.j
+sonl
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be dep
+racted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+2024-09-08 21:46:47.528 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-08 21:46:47.530 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-08 21:46:47.547 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-08 21:46:47.652 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLUR
+M, prepend your python command with `srun` like so: srun python main.py predict --config retrieval/confs/cli_lean4_r ...
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Seed set to 3407
+[rank: 2] Seed set to 3407
+[rank: 3] Seed set to 3407
+[rank: 1] Seed set to 3407
+2024-09-08 21:46:58.978 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:46:58.998 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+2024-09-08 21:46:59.556 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:46:59.571 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+2024-09-08 21:46:59.646 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:46:59.660 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+2024-09-08 21:47:00.630 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_train/cached_data.pkl
+Training dataset size: 169436
+2024-09-08 21:47:00.646 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/
+random/cache_pred/cached_data.pkl
+Testing dataset size: 2837
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch=0-Recall@10_val=0.06.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch=0-Recall@10_val=0.06.ckpt
+2024-09-08 21:47:06.308 | INFO     | retrieval.model:on_predict_start:407 - Embeddings staled on predict start: True
+2024-09-08 21:47:06.349 | INFO     | retrieval.model:on_predict_start:407 - Embeddings staled on predict start: True
+2024-09-08 21:47:06.492 | INFO     | retrieval.model:on_predict_start:407 - Embeddings staled on predict start: True
+Predicting: |                                                                                  | 0/? [00:00<?, ?it/s]2024-09-08 21:47:06.633 | INFO     | retrieval.model:on_predict_start:407 - Embeddings staled on predict start: True
+Predicting DataLoader 0:   0%|                                                                                                                                                                                         | 0/12 [00:00<?, ?it/s
+]/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/loops/prediction_loop.py:255: predict returned None if it was on purpose, ignore this warning...
+Predicting DataLoader 0: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 12/12 [00:38<00:00,  0.31it/s
+]2024-09-08 21:47:45.759 | INFO     | retrieval.model:on_predict_epoch_end:517 - About to construct predictions map
+2024-09-08 21:47:45.768 | INFO     | retrieval.model:on_predict_epoch_end:517 - About to construct predictions map
+2024-09-08 21:47:45.768 | INFO     | retrieval.model:on_predict_epoch_end:517 - About to construct predictions map
+2024-09-08 21:47:45.768 | INFO     | retrieval.model:on_predict_epoch_end:517 - About to construct predictions map
+2024-09-08 21:47:45.772 | INFO     | retrieval.model:on_predict_epoch_end:537 - Retrieval predictions saved to test_pickle_0.pkl
+2024-09-08 21:47:45.772 | INFO     | retrieval.model:on_predict_epoch_end:576 - About to call barrier
+2024-09-08 21:47:45.782 | INFO     | retrieval.model:on_predict_epoch_end:537 - Retrieval predictions saved to test_pickle_2.pkl
+2024-09-08 21:47:45.782 | INFO     | retrieval.model:on_predict_epoch_end:576 - About to call barrier
+2024-09-08 21:47:45.783 | INFO     | retrieval.model:on_predict_epoch_end:537 - Retrieval predictions saved to test_pickle_1.pkl
+2024-09-08 21:47:45.783 | INFO     | retrieval.model:on_predict_epoch_end:576 - About to call barrier
+2024-09-08 21:47:45.789 | INFO     | retrieval.model:on_predict_epoch_end:537 - Retrieval predictions saved to test_pickle_3.pkl
+2024-09-08 21:47:45.789 | INFO     | retrieval.model:on_predict_epoch_end:576 - About to call barrier
+2024-09-08 21:47:45.790 | INFO     | retrieval.model:on_predict_epoch_end:580 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 12/12 [00:38<00:00,  0.31it/s
+]
+2024-09-08 21:47:46.528 | INFO     | __main__:main:1686 - Finished processing the repository
+2024-09-08 21:47:46.529 | INFO     | __main__:main:1688 - current epoch: 1
+2024-09-08 21:47:46.529 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 21:47:46.529 | INFO     | __main__:main:1355 - i: 1
+2024-09-08 21:47:46.529 | INFO     | __main__:main:1396 - All GPUs
+2024-09-08 21:47:46.533 | INFO     | __main__:find_latest_checkpoint:515 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a268
+7_lambda_0.1_epoch=0-Recall@10_val=0.06.ckpt
+2024-09-08 21:47:46.533 | INFO     | __main__:main:1403 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch=0-
+Recall@10_val=0.06.ckpt
+2024-09-08 21:47:46.534 | INFO     | __main__:main:1409 - Inside train_test_fisher
+2024-09-08 21:47:46.534 | INFO     | __main__:main:1410 - Starting training at epoch 1
+[rank: 1] Seed set to 3407
+2024-09-08 21:47:46.561 | INFO     | __main__:main:1686 - Finished processing the repository
+2024-09-08 21:47:46.561 | INFO     | __main__:main:1688 - current epoch: 1
+2024-09-08 21:47:46.562 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 21:47:46.562 | INFO     | __main__:main:1355 - i: 1
+2024-09-08 21:47:46.562 | INFO     | __main__:main:1396 - All GPUs
+2024-09-08 21:47:46.563 | INFO     | __main__:find_latest_checkpoint:515 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a268
+7_lambda_0.1_epoch=0-Recall@10_val=0.06.ckpt
+2024-09-08 21:47:46.564 | INFO     | __main__:main:1403 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch=0-
+Recall@10_val=0.06.ckpt
+2024-09-08 21:47:46.564 | INFO     | __main__:main:1409 - Inside train_test_fisher
+2024-09-08 21:47:46.564 | INFO     | __main__:main:1410 - Starting training at epoch 1
+[rank: 2] Seed set to 3407
+2024-09-08 21:47:46.590 | INFO     | __main__:main:1686 - Finished processing the repository
+2024-09-08 21:47:46.591 | INFO     | __main__:main:1688 - current epoch: 1
+2024-09-08 21:47:46.591 | INFO     | __main__:main:1354 - length of lean_git_repos: 2
+2024-09-08 21:47:46.591 | INFO     | __main__:main:1355 - i: 1
+2024-09-08 21:47:46.591 | INFO     | __main__:main:1396 - All GPUs
+2024-09-08 21:47:46.593 | INFO     | __main__:find_latest_checkpoint:515 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a268
+7_lambda_0.1_epoch=0-Recall@10_val=0.06.ckpt
+2024-09-08 21:47:46.593 | INFO     | __main__:main:1403 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch=0-
+Recall@10_val=0.06.ckpt
+2024-09-08 21:47:46.593 | INFO     | __main__:main:1409 - Inside train_test_fisher
+2024-09-08 21:47:46.593 | INFO     | __main__:main:1410 - Starting training at epoch 1
+[rank: 3] Seed set to 3407
+2024-09-08 21:47:46.708 | INFO     | __main__:main:1579 - Loaded the predictions pickle files
+2024-09-08 21:47:46.750 | INFO     | __main__:main:1582 - Evaluating on /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/random/test.json
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1486/1486 [00:00<00:00, 21826.44it/s
+]
+2024-09-08 21:47:46.820 | INFO     | __main__:main:1584 - R@1 = 0.0 %, R@10 = 0.22446689113355783 %, MRR = 0.003444090075449079
+2024-09-08 21:47:46.822 | INFO     | __main__:main:1597 - Average R@1 = 0.0 %, R@10 = 0.22446689113355783 %, MRR = 0.003444090075449079
+2024-09-08 21:47:46.824 | INFO     | __main__:main:1633 - Starting the prover
+2024-09-08 21:47:46.824 | INFO     | prover.proof_search:__init__:407 - Inside __init__
+2024-09-08 21:47:46.824 | INFO     | prover.proof_search:__init__:412 - ckpt_path is not None
+2024-09-08 21:47:46.824 | INFO     | prover.proof_search:__init__:427 - Using RAG
+2024-09-08 21:47:46.824 | INFO     | prover.proof_search:find_latest_checkpoint:380 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c
+6aee013a2687_lambda_0.1_epoch=0-Recall@10_val=0.06.ckpt
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../kaiyuy_leandojo-lean4-retriever-tacgen-byt5-s
+mall/model_lightning.ckpt`
+2024-09-08 21:47:47.874 | INFO     | generator.model:__init__:124 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_
+0.1_epoch=0-Recall@10_val=0.06.ckpt
+2024-09-08 21:47:47.875 | INFO     | generator.model:__init__:138 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_
+0.1_epoch=0-Recall@10_val=0.06.ckpt
+2024-09-08 21:47:48.833 | INFO     | __main__:main:1434 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch
+=0-Recall@10_val=0.06.ckpt
+2024-09-08 21:47:48.955 | INFO     | __main__:main:1493 - right before barrier for data module
+2024-09-08 21:47:49.447 | INFO     | __main__:main:1434 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch
+=0-Recall@10_val=0.06.ckpt
+2024-09-08 21:47:49.459 | INFO     | __main__:main:1434 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687_lambda_0.1_epoch
+=0-Recall@10_val=0.06.ckpt
+2024-09-08 21:47:49.498 | INFO     | __main__:main:1493 - right before barrier for data module
+2024-09-08 21:47:49.499 | INFO     | __main__:main:1493 - right before barrier for data module
+2024-09-08 21:47:51.470 | INFO     | generator.model:__init__:151 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'retriever.encoder.enc
+oder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.v.weight', 'retri
+ever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retriever.encoder.encoder.block.0.layer.0.layer_norm.weight', 'retriever.encoder.enc
+oder.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.la
+yer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.enco
+der.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseR
+eluDense.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.en
+coder.encoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.lay
+er_norm.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retri
+ever.encoder.encoder.block.2.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.S
+elfAttention.v.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retriever
+.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.0
+.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.la
+yer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retr
+iever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.
+DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 're
+triever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.l
+ayer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.6.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight'
+, 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7
+.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'ret
+riever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.
+block.7.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.v.weight
+', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.bloc
+k.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weig
+ht', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.b
+lock.9.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.
+wo.weight', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encod
+er.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.
+wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.enco
+der.encoder.block.11.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.S
+elfAttention.o.weight', 'retriever.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 're
+triever.encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_step', 'epoch', 'sta
+te_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-08 21:47:52.514 | INFO     | prover.proof_search:__init__:451 - Loaded model from /data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt
+2024-09-08 21:47:52.515 | INFO     | prover.proof_search:__init__:452 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-08 21:47:52.516 | INFO     | prover.proof_search:__init__:455 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpu
+s.jsonl
+2024-09-08 21:47:52.516 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus.jsonl
+2024-09-08 21:48:02.173 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-08 21:48:02.174 | INFO     | prover.proof_search:__init__:457 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/corpus
+.jsonl
+2024-09-08 21:48:02.174 | INFO     | prover.proof_search:__init__:471 - Launching 4 workers with 4 GPUs.
+2024-09-08 21:48:06,887 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+2024-09-08 21:49:04.281 | INFO     | __main__:load_encountered_theorems:788 - The file encountered_theorems_retrieval_single_repo_no_ewc_pfr.pkl does not exist. Starting with an empty set.
+2024-09-08 21:49:04.281 | INFO     | __main__:prove_sorry_theorems:814 - Found 37 sorry theorems to prove
+Processing theorems from teorth/pfr:   0%|                                                                                                                                                                        | 0/37 [00:00<?, ?theorem/s
+]2024-09-08 21:49:04.282 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for iter_multiDist_chainRule
+2024-09-08 21:49:04.282 | INFO     | __main__:prove_sorry_theorems:838 - Position: (973, 1)
+2024-09-08 21:49:04.282 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for condRho_minus_le
+2024-09-08 21:49:04.282 | INFO     | __main__:prove_sorry_theorems:838 - Position: (95, 1)
+2024-09-08 21:49:04.282 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for phi_min_exists
+2024-09-08 21:49:04.283 | INFO     | __main__:prove_sorry_theorems:838 - Position: (128, 1)
+2024-09-08 21:49:04.283 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for condRho_of_translate
+2024-09-08 21:49:04.283 | INFO     | __main__:prove_sorry_theorems:838 - Position: (89, 1)
+2024-09-08 21:49:04.283 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for condRho_sum_le
+2024-09-08 21:49:04.283 | INFO     | __main__:prove_sorry_theorems:838 - Position: (156, 1)
+2024-09-08 21:49:04.283 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for multiDist_nonneg
+2024-09-08 21:49:04.283 | INFO     | __main__:prove_sorry_theorems:838 - Position: (765, 1)
+2024-09-08 21:49:04.283 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for I_one_le
+2024-09-08 21:49:04.283 | INFO     | __main__:prove_sorry_theorems:838 - Position: (137, 1)
+2024-09-08 21:49:04.283 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for dist_add_dist_eq
+2024-09-08 21:49:04.284 | INFO     | __main__:prove_sorry_theorems:838 - Position: (140, 1)
+2024-09-08 21:49:04.284 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for rho_of_translate
+2024-09-08 21:49:04.284 | INFO     | __main__:prove_sorry_theorems:838 - Position: (58, 1)
+2024-09-08 21:49:04.284 | INFO     | __main__:prove_sorry_theorems:837 - Searching for proof for rho_continuous
+2024-09-08 21:49:04.284 | INFO     | __main__:prove_sorry_theorems:838 - Position: (62, 1)
+2024-09-08 21:49:04.284 | INFO     | prover.proof_search:search_unordered:514 - Distributed
+(pid=1768810) [2024-09-08 21:49:28,211] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(pid=1768946) [2024-09-08 21:49:33,859] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect) [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log ded
+uplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)
+(pid=1769217) [2024-09-08 21:49:40,010] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1768946) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1768946)   return torch.load(io.BytesIO(b))
+(ProverActor pid=1768810) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature. [repeated 2x across cluster]
+(ProverActor pid=1768810)   return torch.load(io.BytesIO(b)) [repeated 2x across cluster]
+(ProverActor pid=1769074) 2024-09-08 21:50:23.461 | INFO     | prover.proof_search:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixPath(
+'PFR/RhoFunctional.lean'), full_name='condRho_minus_le')
+(ProverActor pid=1769217) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a futur
+e release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explici
+tly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issu
+es related to this experimental feature.
+(ProverActor pid=1769217)   return torch.load(io.BytesIO(b))
+(ProverActor pid=1768946) 2024-09-08 21:50:27.321 | INFO     | prover.proof_search:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixPath(
+'PFR/RhoFunctional.lean'), full_name='phi_min_exists')
+(ProverActor pid=1769217) 2024-09-08 21:50:40.283 | INFO     | prover.proof_search:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixPath(
+'PFR/MoreRuzsaDist.lean'), full_name='iter_multiDist_chainRule')
+(ProverActor pid=1768810) 2024-09-08 21:50:41.785 | INFO     | prover.proof_search:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixPath(
+'PFR/RhoFunctional.lean'), full_name='condRho_of_translate')
+(ProverActor pid=1768810) 2024-09-08 21:52:00.941 | INFO     | lean_dojo.utils:execute:88 -
+(ProverActor pid=1768810) 2024-09-08 21:52:00.941 | ERROR    | lean_dojo.utils:execute:89 - error: toolchain 'leanprover/lean4:v4.8.0-rc1' is not installed
+(ProverActor pid=1768810)
+(ProverActor pid=1768946)
+(ProverActor pid=1769074) 2024-09-08 21:52:07.383 | INFO     | lean_dojo.utils:execute:88 -  [repeated 2x across cluster]
+(ProverActor pid=1768946) 2024-09-08 21:52:05.475 | ERROR    | lean_dojo.utils:execute:89 - error: toolchain 'leanprover/lean4:v4.8.0-rc1' is not installed
+(ProverActor pid=1769074) 2024-09-08 21:52:07.468 | ERROR    | lean_dojo.utils:execute:89 - error: toolchain 'leanprover/lean4:v4.8.0-rc1' is not installed
+(ProverActor pid=1769074)
+Processing theorems from teorth/pfr:  24%|██████████████████████████████████████▉                                                                                                                         | 9/37 [03:06<09:40, 20.74s/theorem
+]
+2024-09-08 21:52:10.903 | INFO     | __main__:main:1690 - An error occurred: ray::ProverActor.search() (pid=1768946, ip=10.0.5.88, actor_id=3c764fc1fcee53f0dd4b863501000000, repr=<prover.proof_search.ProverActor object at 0x780fb3e57b20>
+)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search.py", line 332, in search
+    return self.prover.search(repo, thm, pos)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search.py", line 96, in search
+    with Dojo(thm, self.timeout, additional_imports=imps) as (
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 255, in __enter__
+    raise ex
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 197, in __enter__
+    self.container.run(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/container.py", line 194, in run
+    execute(cmd, capture_output=capture_output)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/utils.py", line 90, in execute
+    raise ex
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/utils.py", line 85, in execute
+    res = subprocess.run(cmd, shell=True, capture_output=capture_output, check=True)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'lake build Lean4Repl' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 1664, in main
+    prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_merged_dataset)
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 851, in prove_sorry_theorems
+    process_theorem_batch(theorem_batch, positions_batch, repo, db, prover, dynamic_database_json_path)
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 742, in process_theorem_batch
+    results = prover.search_unordered(LeanGitRepo(repo.url, repo.commit), lean_dojo_theorems, positions_batch)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search.py", line 515, in search_unordered
+    results = list(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/util/actor_pool.py", line 170, in get_generator
+    yield self.get_next_unordered()
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/util/actor_pool.py", line 370, in get_next_unordered
+    return ray.get(future)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/worker.py", line 2661, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/ray/_private/worker.py", line 871, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(CalledProcessError): ray::ProverActor.search() (pid=1768946, ip=10.0.5.88, actor_id=3c764fc1fcee53f0dd4b863501000000, repr=<prover.proof_search.ProverActor object at 0x780fb3e57b20>)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search.py", line 332, in search
+    return self.prover.search(repo, thm, pos)
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search.py", line 96, in search
+    with Dojo(thm, self.timeout, additional_imports=imps) as (
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 255, in __enter__
+    raise ex
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 197, in __enter__
+    self.container.run(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/container.py", line 194, in run
+    execute(cmd, capture_output=capture_output)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/utils.py", line 90, in execute
+    raise ex
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/utils.py", line 85, in execute
+    res = subprocess.run(cmd, shell=True, capture_output=capture_output, check=True)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'lake build Lean4Repl' returned non-zero exit status 1.
+(ProverActor pid=1768946) 2024-09-08 21:52:10.943 | INFO     | prover.proof_search:search:81 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'), file_path=PosixPath(
+'PFR/RhoFunctional.lean'), full_name='condRho_sum_le')
+[rank0]:[W908 21:52:17.441025381 ProcessGroupNCCL.cpp:1168] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure t
+hat any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warnin
+g has only been added since PyTorch 2.4 (function operator())
+(base) yingzi_ma@compute-permanent-node-345:~/lean_project/ReProver$

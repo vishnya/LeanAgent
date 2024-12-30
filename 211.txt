@@ -1,0 +1,1066 @@
+2024-11-03 22:06:01.947 | INFO     | retrieval.model:on_predict_epoch_end:560 - About to call barrier
+2024-11-03 22:06:01.948 | INFO     | retrieval.model:on_predict_epoch_end:564 - All GPUs have completed their predictions and saved the data.
+Predicting DataLoader 0: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2
+/2 [00:02<00:00,  0.80it/s]
+2024-11-03 22:06:02.497 | INFO     | retrieval.main:run_cli:60 - PID: 2079452
+2024-11-03 22:06:02.664 | INFO     | retrieval.main:run_cli:60 - PID: 2079454
+2024-11-03 22:06:02.681 | INFO     | retrieval.main:run_cli:60 - PID: 2079453
+[rank: 1] Seed set to 3407
+2024-11-03 22:06:02.888 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c3090eb828205
+75758efc31e40b9db86bb8/random
+2024-11-03 22:06:02.888 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c3090eb8282
+0575758efc31e40b9db86bb8/corpus.jsonl
+[rank: 3] Seed set to 3407
+[rank: 2] Seed set to 3407
+2024-11-03 22:06:03.008 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c3090eb828205
+75758efc31e40b9db86bb8/random
+2024-11-03 22:06:03.008 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c3090eb8282
+0575758efc31e40b9db86bb8/corpus.jsonl
+2024-11-03 22:06:03.008 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c3090eb828205
+75758efc31e40b9db86bb8/random
+2024-11-03 22:06:03.008 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c3090eb8282
+0575758efc31e40b9db86bb8/corpus.jsonl
+2024-11-03 22:06:03.188 | INFO     | __main__:main:1818 - Loaded the predictions pickle files
+2024-11-03 22:06:03.194 | INFO     | __main__:main:1821 - Evaluating on /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_lean4-pdl_c7f649fe3c4891cf1a01c120e82ebc5f6199856e/r
+andom/test.json
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 411/411 [
+00:00<00:00, 125180.37it/s]
+2024-11-03 22:06:03.198 | INFO     | __main__:main:1823 - R@1 = 28.65474472617329 %, R@10 = 77.37303591470257 %, MRR = 0.6020753449533798
+2024-11-03 22:06:03.199 | INFO     | retrieval.main:run_cli:60 - PID: 2077421
+[rank: 0] Seed set to 3407
+2024-11-03 22:06:03.457 | INFO     | retrieval.main:before_instantiate_classes:33 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c3090eb828205
+75758efc31e40b9db86bb8/random
+2024-11-03 22:06:03.457 | INFO     | retrieval.main:before_instantiate_classes:34 - Corpus path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c3090eb8282
+0575758efc31e40b9db86bb8/corpus.jsonl
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-11-03 22:06:06.242 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c30
+90eb82820575758efc31e40b9db86bb8/random/cache_train/cached_data.pkl
+Training dataset size: 17726
+2024-11-03 22:06:06.245 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c30
+90eb82820575758efc31e40b9db86bb8/random/cache_pred/cached_data.pkl
+Testing dataset size: 225
+2024-11-03 22:06:06.626 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c30
+90eb82820575758efc31e40b9db86bb8/random/cache_train/cached_data.pkl
+Training dataset size: 17726
+2024-11-03 22:06:06.628 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c30
+90eb82820575758efc31e40b9db86bb8/random/cache_pred/cached_data.pkl
+Testing dataset size: 225
+2024-11-03 22:06:06.736 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c30
+90eb82820575758efc31e40b9db86bb8/random/cache_train/cached_data.pkl
+Training dataset size: 17726
+2024-11-03 22:06:06.738 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c30
+90eb82820575758efc31e40b9db86bb8/random/cache_pred/cached_data.pkl
+Testing dataset size: 225
+2024-11-03 22:06:06.858 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c30
+90eb82820575758efc31e40b9db86bb8/random/cache_train/cached_data.pkl
+Training dataset size: 17726
+2024-11-03 22:06:06.860 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_LeanEuclid_f1912c30
+90eb82820575758efc31e40b9db86bb8/random/cache_pred/cached_data.pkl
+Testing dataset size: 225
+Restoring states from the checkpoint path at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b_lambda_0.1_epoch=23-Rec
+all@10_val=63.58.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_PutnamBench_14ea70715649764b046183d4417d50bd9cf6cd0b_lambda_0.1_epoch=23-Reca
+ll@10_val=63.58.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+2024-11-03 22:06:09.300 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-11-03 22:06:09.301 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|
+   | 0/634 [00:00<?, ?it/s]2024-11-03 22:06:09.306 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-11-03 22:06:09.307 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+  0%|
+   | 0/634 [00:00<?, ?it/s]2024-11-03 22:06:09.343 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-11-03 22:06:09.344 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+Predicting: |
+     | 0/? [00:00<?, ?it/s]2024-11-03 22:06:10.230 | INFO     | retrieval.model:on_predict_start:398 - Embeddings staled on predict start: True
+2024-11-03 22:06:10.230 | INFO     | retrieval.model:reindex_corpus:284 - Re-indexing the retrieval corpus
+ 24%|████████████████████████████████████████████████▊                                                                                                                                                            | 151/6
+34 [00:52<04:22,  1.84it/s]^Z4%|████████████████████████████████████████████████▏
+                    | 149/634 [00:50<04:21,  1.86it/s]
+[3]+  Stopped                 bash run_code3full.sh
+(ReProver) yingzi_ma@compute-permanent-node-587:~/lean_project/ReProver$ bash run_code3full.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446163.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446186.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446159.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446118.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446277.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446312.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446219.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446098.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446122.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446093.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446310.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446220.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446258.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446192.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446333.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446308.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446142.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446155.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446311.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446143.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446194.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446193.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446249.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446088.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446332.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446262.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446316.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446235.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3460080.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446230.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446280.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446320.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446175.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446119.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446185.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446301.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446226.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446287.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446197.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446187.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446276.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446244.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446290.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446128.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446145.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446228.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446285.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446330.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446179.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446237.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446201.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446146.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446184.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446307.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446125.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446199.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446291.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446261.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446264.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446268.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446299.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446212.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446215.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446113.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446086.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446117.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446242.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446147.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3460423.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446210.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446336.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446115.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446109.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446238.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446204.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446221.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446270.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446300.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446302.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446222.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446161.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446114.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446279.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446140.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446214.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446243.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446263.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446135.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446266.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446091.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446239.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446293.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446108.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446139.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446129.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446278.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446255.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446240.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446245.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_GCS.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446241.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446288.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446234.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446313.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446141.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446131.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3460294.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446164.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446182.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446337.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446286.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446149.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446085.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446100.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446124.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446101.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446223.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446156.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446169.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446137.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446283.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446217.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446292.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_RAYLET.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446092.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446094.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446252.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446178.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446136.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446304.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446257.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446232.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446289.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446106.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446246.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446195.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446144.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446102.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446107.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446325.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446297.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446225.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446205.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446154.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446174.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446229.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446206.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446112.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446189.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446188.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446167.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446296.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446254.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446150.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446231.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446267.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446218.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446260.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3444576.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446104.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446318.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446157.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446127.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446265.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446282.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446172.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446126.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446208.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446171.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446134.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446180.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446224.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446303.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446097.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446162.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446251.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446170.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446323.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446322.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446181.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446183.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446196.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446227.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446153.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446269.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446256.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446121.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_AUTOSCALER.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446329.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446306.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446334.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446105.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446130.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446158.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446335.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446103.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446095.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446331.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446089.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446173.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446324.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446177.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446211.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446087.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446166.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446111.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446274.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446191.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446096.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446120.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446295.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446083.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446138.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446099.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446248.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446253.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446209.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446133.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446259.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446090.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446250.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446200.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446207.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446319.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446275.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446326.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446327.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446084.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446328.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446168.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446233.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446298.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446271.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446132.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446236.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446305.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446123.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446273.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446321.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446281.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446110.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446190.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446247.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446202.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446176.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3459758.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446284.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446165.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446152.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446309.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446148.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446160.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446216.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446203.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446151.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446317.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446315.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446272.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446213.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446314.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446116.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446198.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_06-33-00_116302_3444576/logs/events/event_CORE_WORKER_3446294.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213636.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213564.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213501.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213426.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213526.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213592.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213626.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213518.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3227461.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213418.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213413.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213616.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213527.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213514.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213576.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213625.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213569.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213621.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213568.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213422.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213583.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213580.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213624.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213419.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3227587.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213555.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213494.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213483.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213465.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213556.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213633.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213432.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213587.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213517.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213497.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213442.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213593.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213537.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213589.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213552.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213411.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213603.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213511.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213563.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213420.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213601.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213629.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213403.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213597.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213515.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213495.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213470.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213516.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213623.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213460.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213548.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213614.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213602.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213459.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213539.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213572.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213503.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213642.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213617.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213519.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213573.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213449.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213542.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213462.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213591.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213406.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213436.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213421.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213550.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213585.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213452.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213472.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213478.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213567.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213434.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213488.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213611.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213448.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213504.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213456.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213582.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213595.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213581.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213528.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213455.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213544.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213500.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213637.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213622.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213485.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213474.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213590.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213512.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213479.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213428.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213606.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213524.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_GCS.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213535.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213534.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213647.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213492.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213395.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213546.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213612.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213600.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213554.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213630.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213506.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213643.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213531.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213463.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213632.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213417.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213475.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213405.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213445.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213639.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213441.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_RAYLET.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213627.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213396.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213575.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213547.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213469.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213502.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213414.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213558.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213648.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213609.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213605.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3227072.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213481.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213561.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213416.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213484.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213645.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213557.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213435.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213560.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213618.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213530.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213545.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213508.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213433.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213477.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213404.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213480.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213446.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213594.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213410.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213522.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213430.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213464.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213577.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213450.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213424.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213486.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213543.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213540.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213466.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213482.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213507.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213491.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213453.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213631.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213649.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213613.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213398.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213604.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213615.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213533.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213468.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213520.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_AUTOSCALER.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213476.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213538.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213578.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213641.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213439.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213451.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213437.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213646.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213447.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213409.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213423.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213566.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213607.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213559.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213493.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213415.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213402.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213523.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213458.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3211951.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213412.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213408.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213634.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213496.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213571.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213553.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213619.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213438.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213562.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213610.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213427.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213461.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213513.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213579.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213431.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213509.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213467.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213444.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213588.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213440.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213498.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213529.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213399.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213551.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213429.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213473.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213425.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213521.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213397.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213510.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213596.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213532.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213407.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213505.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213644.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213608.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213454.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213570.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213400.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213635.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213499.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213457.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213638.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213574.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213443.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213628.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213536.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213489.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213598.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213565.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213620.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213525.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213599.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213584.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213471.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213490.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213640.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213401.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213487.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213549.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213541.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3213586.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-50-45_595520_3211951/logs/events/event_CORE_WORKER_3227724.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234007.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233892.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234074.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234069.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233912.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234056.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233952.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233874.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233922.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234026.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234072.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233877.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233987.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233876.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233959.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233849.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234012.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233913.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233923.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233839.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234025.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234010.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234000.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233859.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233950.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234050.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233917.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233888.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233982.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234059.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233956.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233855.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233939.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233885.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233984.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234019.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233962.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233958.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233868.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233947.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233903.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233995.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233851.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234027.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233840.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233882.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233918.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233883.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234009.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234005.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233861.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233890.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233929.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234055.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233864.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234053.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233999.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233848.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233953.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234070.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234001.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233996.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234052.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234071.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233967.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233862.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233968.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233941.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233926.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3247515.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233921.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233869.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233835.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233925.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234020.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234066.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234039.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233935.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233873.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233933.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234058.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233845.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233931.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233870.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233884.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233886.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233836.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234032.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233980.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233992.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234029.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233927.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233936.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233843.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233934.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234041.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3248152.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233831.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233971.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234057.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233997.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233904.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233919.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233994.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_GCS.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233914.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233976.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233955.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234033.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233985.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234061.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233991.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233902.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233961.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233838.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234064.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234081.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233900.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233891.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233847.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234067.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233998.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_RAYLET.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234054.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233846.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233970.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3232386.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234008.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233975.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233973.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234078.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233850.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234080.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233865.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234018.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233906.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233863.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234075.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233887.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234045.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233920.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233954.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233872.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233937.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233932.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234076.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233990.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233897.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233829.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233878.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233853.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233942.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234024.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233901.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233924.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233974.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233899.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234017.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233938.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233880.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233858.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233844.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234036.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234044.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234048.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233972.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233833.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233945.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3247900.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233949.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234077.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233837.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233856.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234030.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233960.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234043.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234038.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233963.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234016.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_AUTOSCALER.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234051.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233830.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233989.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234063.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234062.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234049.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233983.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233854.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233969.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233860.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233908.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233879.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233857.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233852.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233977.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233966.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233946.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233905.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234040.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234002.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233871.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233893.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233898.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233895.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234003.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234022.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233943.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234073.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234082.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233965.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233981.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234035.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233828.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233867.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233841.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233834.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234060.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233979.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233875.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234006.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233832.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233842.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234011.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233915.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234034.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233951.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234079.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234023.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233948.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3248027.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233940.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233896.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234013.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233881.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234031.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233889.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234004.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233866.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234037.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233944.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234015.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233930.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233978.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234028.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234042.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233928.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233909.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233957.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233910.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233993.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233988.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233911.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233986.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233916.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234021.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233907.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233964.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3233894.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234068.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234014.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234065.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234046.log': Permission denied
+rm: cannot remove '/tmp/ray/session_2024-09-03_00-58-56_766704_3232386/logs/events/event_CORE_WORKER_3234047.log': Permission denied
+Stopping ray
+Did not find any active Ray processes.
+kill: (6948): Operation not permitted
+kill: (7260): Operation not permitted
+kill: (2084298): No such process
+kill: (2246982): Operation not permitted
+kill: (3939868): Operation not permitted
+kill: (3939886): Operation not permitted
+kill: (3939887): Operation not permitted
+kill: (3939888): Operation not permitted
+kill: (3939895): Operation not permitted
+kill: (3940650): Operation not permitted
+kill: (3940670): Operation not permitted
+kill: (3940671): Operation not permitted
+kill: (3940672): Operation not permitted
+kill: (3940679): Operation not permitted
+kill: (3941333): Operation not permitted
+kill: (3941353): Operation not permitted
+kill: (3941354): Operation not permitted
+kill: (3941355): Operation not permitted
+kill: (3941362): Operation not permitted
+Sun Nov  3 22:07:47 2024
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:15:00.0 Off |                    0 |
+| N/A   43C    P0             92W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          On  |   00000000:50:00.0 Off |                    0 |
+| N/A   43C    P0             92W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100-SXM4-80GB          On  |   00000000:53:00.0 Off |                    0 |
+| N/A   48C    P0             93W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100-SXM4-80GB          On  |   00000000:D6:00.0 Off |                    0 |
+| N/A   46C    P0             95W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Running main3full.py
+[2024-11-03 22:07:54,059] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-11-03 22:07:57.096 | INFO     | __main__:main:1457 - Running progressive training
+2024-11-03 22:07:57.096 | INFO     | __main__:main:1463 - Configuring LeanDojo...
+2024-11-03 22:07:57.099 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-11-03 22:07:57.099 | INFO     | __main__:main:1465 - LeanDojo configured
+2024-11-03 22:07:57.099 | INFO     | __main__:main:1470 - Starting the main process
+2024-11-03 22:07:57.099 | INFO     | __main__:main:1478 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_full2.json
+2024-11-03 22:09:30.398 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-11-03 22:09:30.398 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-11-03 22:09:41.999 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ahhwuhu/zeta_3_irrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-11-03 22:09:42.000 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ahhwuhu/zeta_3_irrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-11-03 22:09:53.850 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-11-03 22:09:53.850 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-11-03 22:09:55.819 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-11-03 22:09:55.819 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-11-03 22:10:08.860 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-11-03 22:10:08.860 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-11-03 22:10:10.603 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-11-03 22:10:10.604 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-11-03 22:10:12.321 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-11-03 22:10:12.321 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-11-03 22:10:26.915 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f5
+15a0e52878)
+2024-11-03 22:10:26.915 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f515a0e528
+78)
+2024-11-03 22:10:28.705 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-11-03 22:10:28.705 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-11-03 22:10:30.472 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-11-03 22:10:30.472 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-11-03 22:10:32.094 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-11-03 22:10:32.095 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-11-03 22:10:48.669 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/corent1234/hairy-ball-theorem-lean (commit: fa500d7d2e58580bac7c050f0f6c408041b70205)
+2024-11-03 22:10:48.669 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/corent1234/hairy-ball-theorem-lean (commit: fa500d7d2e58580bac7c050f0f6c408041b70205)
+2024-11-03 22:10:50.383 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-11-03 22:10:50.383 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-11-03 22:10:52.103 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-11-03 22:10:52.103 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-11-03 22:10:53.785 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-11-03 22:10:53.785 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-11-03 22:10:55.342 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/google-deepmind/debate (commit: de3a6e500ae1a65dfeea2f91ef519ebad9704be0)
+2024-11-03 22:10:55.342 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/google-deepmind/debate (commit: de3a6e500ae1a65dfeea2f91ef519ebad9704be0)
+2024-11-03 22:11:14.168 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-11-03 22:11:14.168 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-11-03 22:11:14.863 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-11-03 22:11:14.864 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-11-03 22:11:15.456 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-11-03 22:11:15.456 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-11-03 22:11:15.924 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/m4lvin/lean4-pdl (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-11-03 22:11:15.924 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/m4lvin/lean4-pdl (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-11-03 22:11:16.274 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-11-03 22:11:16.274 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-11-03 22:11:16.556 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-11-03 22:11:16.556 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-11-03 22:11:16.692 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-11-03 22:11:16.693 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-11-03 22:11:19.991 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/Adarsh321123/PutnamBench (commit: 14ea70715649764b046183d4417d50bd9cf6cd0b)
+2024-11-03 22:11:19.991 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/Adarsh321123/PutnamBench (commit: 14ea70715649764b046183d4417d50bd9cf6cd0b)
+2024-11-03 22:11:22.162 | INFO     | __main__:main:1480 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_full2.json
+2024-11-03 22:11:22.164 | INFO     | __main__:main:1487 - Found 23 repositories
+2024-11-03 22:11:22.164 | INFO     | __main__:main:1490 - Starting curriculum learning
+2024-11-03 22:11:22.566 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.13.0
+2024-11-03 22:11:41.329 | INFO     | __main__:main:1522 - Processing https://github.com/teorth/equational_theories
+2024-11-03 22:11:41.329 | INFO     | __main__:add_repo_to_database:1084 - Processing https://github.com/teorth/equational_theories.git
+2024-11-03 22:11:41.630 | INFO     | __main__:get_compatible_commit:498 - Latest commit: f0c97cc8a4f2e3292100fddf7d0ee2817588ecab
+2024-11-03 22:11:41.630 | INFO     | __main__:get_compatible_commit:501 - Creating LeanGitRepo for https://github.com/teorth/equational_theories
+2024-11-03 22:11:41.630 | INFO     | __main__:get_compatible_commit:503 - Getting config for https://github.com/teorth/equational_theories.git
+2024-11-03 22:11:41.630 | INFO     | __main__:get_compatible_commit:510 - Searching for compatible commit for https://github.com/teorth/equational_theories.git
+2024-11-03 22:11:41.633 | INFO     | __main__:get_compatible_commit:516 - Already in a Git repository
+2024-11-03 22:11:41.635 | INFO     | __main__:get_compatible_commit:526 - Fetching commits for https://github.com/teorth/equational_theories.git
+2024-11-03 22:11:44.595 | INFO     | __main__:get_compatible_commit:530 - Fetched commits for https://github.com/teorth/equational_theories.git
+2024-11-03 22:11:44.601 | INFO     | __main__:get_compatible_commit:536 - Getting list of commits for https://github.com/teorth/equational_theories.git
+2024-11-03 22:11:44.620 | INFO     | __main__:get_compatible_commit:541 - Found 1169 commits for https://github.com/teorth/equational_theories.git
+2024-11-03 22:11:45.610 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.13.0-rc3
+2024-11-03 22:13:46.326 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-11-03 22:16:21.341 | INFO     | __main__:get_compatible_commit:554 - Error in get_compatible_commit: No compatible commit found
+2024-11-03 22:16:21.341 | INFO     | __main__:add_repo_to_database:1162 - Failed to find a compatible commit for https://github.com/teorth/equational_theories.git
+2024-11-03 22:16:21.341 | INFO     | __main__:main:1526 - Successfully added 23 repositories to the database
+2024-11-03 22:16:21.342 | INFO     | __main__:main:1611 - length of lean_git_repos: 1
+2024-11-03 22:16:21.342 | INFO     | __main__:main:1612 - i: 0
+2024-11-03 22:16:21.342 | INFO     | __main__:main:1618 - Main process
+2024-11-03 22:16:21.342 | INFO     | __main__:main:1619 - Using lambda = 0.1
+2024-11-03 22:16:21.343 | INFO     | __main__:main:1620 - Processing https://github.com/teorth/equational_theories
+2024-11-03 22:16:21.343 | INFO     | __main__:main:1627 - Adding repo to repos_for_merged_dataset
+2024-11-03 22:16:21.343 | INFO     | dynamic_database:generate_merged_dataset:415 - Merging selected repositories in the database:
+2024-11-03 22:16:21.343 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/teorth/equational_theories (commit: f0c97cc8a4f2e3292100fddf7d0ee2817588ecab)
+2024-11-03 22:16:21.343 | WARNING  | dynamic_database:safe_remove_dir_path:377 - /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_equational_theories_f0c97cc8a4f2e3292100fdd
+f7d0ee2817588ecab already exists. Removing it now.
+2024-11-03 22:16:21.372 | INFO     | dynamic_database:generate_merged_dataset:439 - Exported proofs to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_equational_theories_f
+0c97cc8a4f2e3292100fddf7d0ee2817588ecab
+2024-11-03 22:16:21.373 | INFO     | dynamic_database:generate_merged_dataset:442 - Merged and exported corpus to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_equational
+_theories_f0c97cc8a4f2e3292100fddf7d0ee2817588ecab
+2024-11-03 22:16:21.374 | INFO     | dynamic_database:generate_merged_dataset:445 - Exported traced files to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_equational_theo
+ries_f0c97cc8a4f2e3292100fddf7d0ee2817588ecab
+2024-11-03 22:16:21.375 | INFO     | dynamic_database:generate_merged_dataset:448 - Exported metadata to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_equational_theories
+_f0c97cc8a4f2e3292100fddf7d0ee2817588ecab
+2024-11-03 22:16:21.375 | INFO     | __main__:main:1639 - All GPUs
+2024-11-03 22:16:21.376 | INFO     | __main__:find_latest_checkpoint:705 - Using the latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_PutnamBench_14ea7
+0715649764b046183d4417d50bd9cf6cd0b_lambda_0.1_epoch=23-Recall@10_val=63.58.ckpt
+2024-11-03 22:16:21.376 | INFO     | __main__:main:1646 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_PutnamBench_14ea70715649764b046183d441
+7d50bd9cf6cd0b_lambda_0.1_epoch=23-Recall@10_val=63.58.ckpt
+2024-11-03 22:16:21.376 | INFO     | __main__:main:1652 - Inside train_test_fisher
+2024-11-03 22:16:21.376 | INFO     | __main__:main:1653 - Starting training at epoch 24
+[rank: 0] Seed set to 3407
+2024-11-03 22:16:24.009 | INFO     | __main__:main:1677 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_PutnamBench_14ea70715649764b046183d
+4417d50bd9cf6cd0b_lambda_0.1_epoch=23-Recall@10_val=63.58.ckpt
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to r
+un Lightning on SLURM, prepend your python command with `srun` like so: srun python main3full.py ...
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-11-03 22:16:24.111 | INFO     | __main__:main:1735 - right before barrier for data module
+2024-11-03 22:16:24.111 | INFO     | __main__:main:1750 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_equational_theories_f0c97cc8a4f2e3292100fddf7d0ee281758
+8ecab/random
+0it [00:00, ?it/s]
+2024-11-03 22:16:24.220 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_equational_theo
+ries_f0c97cc8a4f2e3292100fddf7d0ee2817588ecab/random/cache_train/cached_data.pkl
+Training dataset size: 0
+0it [00:00, ?it/s]
+2024-11-03 22:16:24.222 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_equational_theo
+ries_f0c97cc8a4f2e3292100fddf7d0ee2817588ecab/random/cache_val/cached_data.pkl
+Validation dataset size: 0
+0it [00:00, ?it/s]
+2024-11-03 22:16:24.225 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_full2/merged_with_new_equational_theo
+ries_f0c97cc8a4f2e3292100fddf7d0ee2817588ecab/random/cache_pred/cached_data.pkl
+Testing dataset size: 0
+2024-11-03 22:16:24.225 | INFO     | __main__:main:1764 - Training dataset size after load: 0
+2024-11-03 22:16:24.225 | INFO     | __main__:main:1765 - Validation dataset size after load: 0
+2024-11-03 22:16:24.226 | INFO     | __main__:main:1766 - Testing dataset size after load: 0
+2024-11-03 22:16:24.226 | INFO     | __main__:main:1768 - Starting progressive training from epoch 24 to 25
+2024-11-03 22:16:24.226 | INFO     | __main__:main:1771 - hit the barrier before training
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+^Z
+[4]+  Stopped                 bash run_code3full.sh
+(ReProver) yingzi_ma@compute-permanent-node-587:~/lean_project/ReProver$

@@ -1,0 +1,110 @@
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+[31mCould not terminate `[1m/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py[22m[26m` due to (pid=2527733, name='python3')[39m
+Did not find any active Ray processes.
+Running main3_more_sorries.py
+[2024-09-17 20:48:27,704] [WARNING] [real_accelerator.py:162:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+[2024-09-17 20:48:27,705] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+WARNING 09-17 20:48:29 _custom_ops.py:18] Failed to import from vllm._C with ImportError('libcuda.so.1: cannot open shared object file: No such file or directory')
+2024-09-17 20:48:33.222 | INFO     | __main__:main:1602 - Running progressive training
+2024-09-17 20:48:33.222 | INFO     | __main__:main:1608 - Configuring LeanDojo...
+2024-09-17 20:48:33.225 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 20:48:33.225 | INFO     | __main__:main:1610 - LeanDojo configured
+2024-09-17 20:48:33.225 | INFO     | __main__:main:1615 - Starting the main process
+2024-09-17 20:48:33.226 | INFO     | __main__:main:1623 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 20:49:07.818 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 20:49:07.819 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 20:49:16.849 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 20:49:16.849 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 20:49:23.563 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 20:49:23.563 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 20:49:25.620 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 20:49:25.620 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 20:49:32.995 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 20:49:32.995 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 20:49:40.971 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 20:49:40.971 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 20:49:41.640 | INFO     | __main__:main:1625 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 20:49:41.640 | INFO     | __main__:main:1632 - Found 100 repositories
+2024-09-17 20:49:41.641 | INFO     | __main__:main:1635 - Starting curriculum learning
+2024-09-17 20:49:41.937 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0
+2024-09-17 20:49:58.907 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-09-17 20:50:16.156 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.5.0-rc1
+2024-09-17 20:50:33.235 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc2
+2024-09-17 20:50:50.336 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-17 20:51:07.075 | INFO     | __main__:main:2509 - An error occurred: object of type 'LeanGitRepo' has no len()
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main3_more_sorries.py", line 1728, in main
+    for i in range(len(lean_git_repos)):
+TypeError: object of type 'LeanGitRepo' has no len()
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+[31mCould not terminate `[1m/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py[22m[26m` due to (pid=2527733, name='python3')[39m
+Did not find any active Ray processes.
+Running main3_more_sorries.py
+[2024-09-17 20:55:02,043] [WARNING] [real_accelerator.py:162:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+[2024-09-17 20:55:02,045] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+WARNING 09-17 20:55:04 _custom_ops.py:18] Failed to import from vllm._C with ImportError('libcuda.so.1: cannot open shared object file: No such file or directory')
+2024-09-17 20:55:07.821 | INFO     | __main__:main:1602 - Running progressive training
+2024-09-17 20:55:07.821 | INFO     | __main__:main:1608 - Configuring LeanDojo...
+2024-09-17 20:55:07.824 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 20:55:07.824 | INFO     | __main__:main:1610 - LeanDojo configured
+2024-09-17 20:55:07.824 | INFO     | __main__:main:1615 - Starting the main process
+2024-09-17 20:55:07.826 | INFO     | __main__:main:1623 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 20:55:40.474 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 20:55:40.474 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 20:55:49.180 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 20:55:49.180 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 20:55:55.630 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 20:55:55.630 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 20:55:57.634 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 20:55:57.634 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 20:56:04.787 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 20:56:04.787 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 20:56:12.885 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 20:56:12.886 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 20:56:13.548 | INFO     | __main__:main:1625 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 20:56:13.549 | INFO     | __main__:main:1632 - Found 100 repositories
+2024-09-17 20:56:13.549 | INFO     | __main__:main:1635 - Starting curriculum learning
+2024-09-17 20:56:13.975 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-17 20:56:30.525 | INFO     | __main__:main:1735 - Processing https://github.com/Timeroot/Lean-QuantumInfo
+2024-09-17 20:56:30.526 | INFO     | __main__:add_repo_to_database:1289 - Processing https://github.com/Timeroot/Lean-QuantumInfo.git
+2024-09-17 20:56:30.841 | INFO     | __main__:get_compatible_commit:691 - Latest commit: 608ffd765bc8ecc68ff65026725e45c2fc5a75c9
+2024-09-17 20:56:30.841 | INFO     | __main__:get_compatible_commit:694 - Creating LeanGitRepo for https://github.com/Timeroot/Lean-QuantumInfo
+2024-09-17 20:56:30.841 | INFO     | __main__:get_compatible_commit:696 - Getting config for https://github.com/Timeroot/Lean-QuantumInfo.git
+2024-09-17 20:56:30.841 | INFO     | __main__:get_compatible_commit:703 - Searching for compatible commit for https://github.com/Timeroot/Lean-QuantumInfo.git
+2024-09-17 20:56:30.846 | INFO     | __main__:get_compatible_commit:709 - Already in a Git repository
+2024-09-17 20:56:30.848 | INFO     | __main__:get_compatible_commit:719 - Fetching commits for https://github.com/Timeroot/Lean-QuantumInfo.git
+2024-09-17 20:56:32.677 | INFO     | __main__:get_compatible_commit:723 - Fetched commits for https://github.com/Timeroot/Lean-QuantumInfo.git
+2024-09-17 20:56:32.683 | INFO     | __main__:get_compatible_commit:729 - Getting list of commits for https://github.com/Timeroot/Lean-QuantumInfo.git
+2024-09-17 20:56:32.719 | INFO     | __main__:get_compatible_commit:734 - Found 24 commits for https://github.com/Timeroot/Lean-QuantumInfo.git
+2024-09-17 20:56:34.992 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+2024-09-17 20:56:51.530 | INFO     | __main__:get_compatible_commit:741 - Found compatible commit a60acc94c71d9ef3382a03f60367553207b396e1 for https://github.com/Timeroot/Lean-QuantumInfo.git
+2024-09-17 20:56:51.530 | INFO     | __main__:add_repo_to_database:1309 - Found compatible commit a60acc94c71d9ef3382a03f60367553207b396e1 for https://github.com/Timeroot/Lean-QuantumInfo.git
+2024-09-17 20:56:51.530 | INFO     | __main__:add_repo_to_database:1310 - Lean version: v4.8.0-rc1
+2024-09-17 20:56:51.531 | INFO     | __main__:add_repo_to_database:1315 - Generating benchmark at /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/Lean-QuantumInfo_a60acc94c71d9ef3382a03f60367553207b396e1
+2024-09-17 20:56:51.531 | INFO     | generate_benchmark_lean4:main:354 - Generating dataset to go into /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/Lean-QuantumInfo_a60acc94c71d9ef3382a03f60367553207b396e1
+2024-09-17 20:56:51.531 | INFO     | generate_benchmark_lean4:main:361 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0-rc1\n'}
+2024-09-17 20:56:51.531 | INFO     | generate_benchmark_lean4:main:363 - lean version v: v4.8.0-rc1
+2024-09-17 20:56:51.531 | INFO     | generate_benchmark_lean4:main:364 - is supported: True
+2024-09-17 20:56:51.531 | INFO     | generate_benchmark_lean4:main:373 - lean path1 /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-17 20:56:51.531 | INFO     | generate_benchmark_lean4:main:374 - lean path2 /.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-17 20:56:51.531 | INFO     | generate_benchmark_lean4:main:375 - lean path3 ~/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-17 20:56:51.563 | INFO     | generate_benchmark_lean4:main:379 - Lean toolchain path 2 does not exist: /.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-17 20:56:51.563 | INFO     | generate_benchmark_lean4:main:381 - Lean toolchain path 3 does not exist: ~/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-17 20:56:51.564 | INFO     | generate_benchmark_lean4:main:384 - Switched to Lean toolchain at: /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-17 20:56:51.624 | INFO     | generate_benchmark_lean4:main:386 - lean --version: Lean (version 4.8.0-rc1, x86_64-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-09-17 20:56:51.624 | INFO     | generate_benchmark_lean4:main:387 - repo: LeanGitRepo(url='https://github.com/Timeroot/Lean-QuantumInfo', commit='a60acc94c71d9ef3382a03f60367553207b396e1')
+2024-09-17 20:56:51.624 | INFO     | generate_benchmark_lean4:main:389 - Configuring LeanDojo again...
+2024-09-17 20:56:51.633 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 20:56:51.633 | INFO     | generate_benchmark_lean4:main:391 - LeanDojo configured
+2024-09-17 20:56:51.633 | INFO     | generate_benchmark_lean4:main:394 - Tracing the repo...
+2024-09-18 05:22:07.998 | INFO     | lean_dojo.data_extraction.trace:get_traced_repo_path:79 - Tracing LeanGitRepo(url='https://github.com/Timeroot/Lean-QuantumInfo', commit='a60acc94c71d9ef3382a03f60367553207b396e1')
+2024-09-18 05:22:08.001 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:81 - Working in the temporary directory /tmp/tmpr9eq0liq
+2024-09-18 05:22:08.564 | DEBUG    | lean_dojo.data_extraction.lean:clone_and_checkout:479 - Cloning LeanGitRepo(url='https://github.com/Timeroot/Lean-QuantumInfo', commit='a60acc94c71d9ef3382a03f60367553207b396e1')
+2024-09-18 05:22:09.301 | DEBUG    | lean_dojo.data_extraction.trace:_trace:33 - Tracing LeanGitRepo(url='https://github.com/Timeroot/Lean-QuantumInfo', commit='a60acc94c71d9ef3382a03f60367553207b396e1')
+2024-09-18 05:22:09.313 | DEBUG    | lean_dojo.container:run:184 - NUM_PROCS=32 python build_lean4_repo.py Lean-QuantumInfo
+2024-09-18 05:22:09.629 | INFO     | __main__:main:165 - Building Lean-QuantumInfo

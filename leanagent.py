@@ -123,6 +123,12 @@ class LeanAgent:
             return "22d53b2f4e3db2a172e71da6eb9c916e62655744", Pos(222, 1)
         elif "FormalBook" in repo_url:
             return "6fbe8c2985008c0bfb30050750a71b90388ad3a3", Pos(222, 1)
+        elif "hairy" in repo_url:
+            return "a778826d19c8a7ddf1d26beeea628c45450612e6", Pos(222, 1)
+        elif "pfr" in repo_url:
+            return "861715b9bf9482d2442760169cb2a3ff54091f75", Pos(222, 1)
+        elif "coxeter" in repo_url:
+            return "96af8aee7943ca8685ed1b00cc83a559ea389a97", Pos(222, 1)
         return None, None
 
 def format_proof(proof):
@@ -147,16 +153,44 @@ def main():
     # agent = LeanAgent()
     # agent.prove_theorem(
     #     repo_url="https://github.com/lecopivo/SciLean",
+    #     file_path="SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean",
+    #     theorem_name="SciLean.ContCDiffMapFD_eta"
+    # )
+
+    # agent = LeanAgent()
+    # agent.prove_theorem(
+    #     repo_url="https://github.com/mo271/formal_book",
+    #     file_path="FormalBook/Chapter_06.lean",
+    #     theorem_name="wedderburn"
+    # )
+
+    # agent = LeanAgent()
+    # agent.prove_theorem(
+    #     repo_url="https://github.com/corent1234/hairy-ball-theorem-lean",
+    #     file_path="HairyBallTheoremLean.lean",
+    #     theorem_name="HairyBallDiff"
+    # )
+
+    # agent = LeanAgent()
+    # agent.prove_theorem(
+    #     repo_url="https://github.com/NUS-Math-Formalization/coxeter",
+    #     file_path="Coxeter/StrongExchange.lean",
+    #     theorem_name="CoxeterSystem.Presentation.invmap.of_eq"
+    # )
+
+    agent = LeanAgent()
+    agent.prove_theorem(
+        repo_url="https://github.com/teorth/pfr",
+        file_path="PFR/MultiTauFunctional.lean",
+        theorem_name="multiTau_min_sum_le"
+    )
+
+    # baseline_agent = LeanAgent(use_baseline=True)
+    # baseline_agent.prove_theorem(
+    #     repo_url="https://github.com/lecopivo/SciLean",
     #     file_path="SciLean/Core/FloatAsReal.lean",
     #     theorem_name="SciLean.re_float"
     # )
-
-    baseline_agent = LeanAgent(use_baseline=True)
-    baseline_agent.prove_theorem(
-        repo_url="https://github.com/lecopivo/SciLean",
-        file_path="SciLean/Core/FloatAsReal.lean",
-        theorem_name="SciLean.re_float"
-    )
 
     # print("\nDemo: Continuously Generalizable")
     # result = agent.prove_theorem(

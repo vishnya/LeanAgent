@@ -1,0 +1,378 @@
+
+Proved sorry theorems only in first database: 2
+
+Theorem: SciLean.ContCDiffMapFD_eta
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+Proof:
+  simp only [DFunLike.ext_iff]
+  aesop
+
+
+Theorem: SciLean.ite_pull_ennreal_toReal
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem ite_pull_ennreal_toReal (c : Prop) [Decidable c] (x y : ENNReal)  :
+    (if c then x else y).toReal
+    =
+    (if c then x.toReal else y.toReal) :=
+Proof:
+  split_ifs <;> rfl
+
+
+
+Proved sorry theorems only in first database: 2
+
+Theorem: SciLean.ite_pull_ennreal_toReal
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem ite_pull_ennreal_toReal (c : Prop) [Decidable c] (x y : ENNReal)  :
+    (if c then x else y).toReal
+    =
+    (if c then x.toReal else y.toReal) :=
+Proof:
+  split_ifs <;> rfl
+
+
+Theorem: SciLean.ContCDiffMapFD_eta
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+Proof:
+  simp only [DFunLike.ext_iff]
+  aesop
+
+
+Proved sorry theorems only in first database: 5
+
+Theorem: SciLean.ContCDiffMapFD_eta
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+Proof:
+  simp only [DFunLike.ext_iff]
+  aesop
+
+
+Theorem: Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple'
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.Bijective_rule_simple'
+  : Bijective (fun xy : X×Y => (xy.2, xy.1))
+  :=
+Proof:
+  constructor <;> intro h
+  all_goals aesop
+
+
+Theorem: SciLean.CDifferentiable.id_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiable.id_rule
+  : CDifferentiable K (fun x : X => x)
+  :=
+Proof:
+  intro x
+  unfold SciLean.CDifferentiableAt
+  tauto
+
+
+Theorem: SciLean.ArrayType.ext
+File path: SciLean/Data/ArrayType/Basic.lean
+Theorem statement: theorem ext (x y : Cont) : (∀ i, x[i] = y[i]) → x = y :=
+Proof:
+  intro h
+  apply SciLean.ArrayType.get_injective
+  simp only [h]
+
+
+Theorem: Function.Bijective.Equiv.invFun.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Equiv.invFun.arg_a0.Bijective_rule (f : Y ≃ Z) (g : X → Z) (hf : Bijective g)
+  : Bijective (fun x => f.invFun (g x)) :=
+Proof:
+  convert hf
+  simp [hf]
+  exact f.symm.bijective.comp hf
+
+
+Proved sorry theorems only in first database: 2
+
+Theorem: SciLean.ContCDiffMapFD_eta
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+Proof:
+  simp only [DFunLike.ext_iff]
+  aesop
+
+
+Theorem: Function.invFun.id_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem id_rule
+  : invFun (fun (x : X) => x)
+    =
+    fun x => x :=
+Proof:
+  apply Function.invFun_comp
+  exact Function.injective_id
+
+
+
+Proved sorry theorems only in first database: 4
+
+Theorem: SciLean.re_float
+File path: SciLean/Core/FloatAsReal.lean
+Theorem statement: theorem re_float  (a : Float)
+  : RCLike.re a = a :=
+Proof:
+  exact RCLike.re_eq_self_of_le le_rfl
+
+
+Theorem: SciLean.ContCDiffMapFD_eta
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+Proof:
+  simp only [DFunLike.ext_iff]
+  aesop
+
+
+Theorem: SciLean.ite_pull_ennreal_toReal
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem ite_pull_ennreal_toReal (c : Prop) [Decidable c] (x y : ENNReal)  :
+    (if c then x else y).toReal
+    =
+    (if c then x.toReal else y.toReal) :=
+Proof:
+  split_ifs <;> rfl
+
+
+Theorem: SciLean.ArrayType.ext
+File path: SciLean/Data/ArrayType/Basic.lean
+Theorem statement: theorem ext (x y : Cont) : (∀ i, x[i] = y[i]) → x = y :=
+Proof:
+  intro h
+  apply SciLean.ArrayType.get_injective
+  simp only [h]
+
+
+
+Proved sorry theorems only in first database: 6
+
+Theorem: SciLean.ArrayType.ext
+File path: SciLean/Data/ArrayType/Basic.lean
+Theorem statement: theorem ext (x y : Cont) : (∀ i, x[i] = y[i]) → x = y :=
+Proof:
+  intro h
+  apply SciLean.ArrayType.get_injective
+  simp only [h]
+
+
+Theorem: SciLean.ContCDiffMapFD_eta
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+Proof:
+  simp only [DFunLike.ext_iff]
+  aesop
+
+
+Theorem: SciLean.scalar_max_zero_one
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_max_zero_one  : max (0 : R) (1 : R) = 1 :=
+Proof:
+  rw [max_comm]
+  simp
+
+
+Theorem: SciLean.norm₂_scalar
+File path: SciLean/Core/Objects/SemiInnerProductSpace.lean
+Theorem statement: theorem norm₂_scalar {R} [RealScalar R] (x : R) :
+  ‖x‖₂[R] = Scalar.abs x :=
+Proof:
+  rw [SciLean.scalar_norm]
+
+
+Theorem: Function.invFun.id_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem id_rule
+  : invFun (fun (x : X) => x)
+    =
+    fun x => x :=
+Proof:
+  apply Function.invFun_comp
+  exact Function.injective_id
+
+
+Theorem: SciLean.Distribution.action_iteD
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.action_iteD (A : Set X) (t e : 𝒟'(X,Y)) (φ : 𝒟 X) :
+   iteD A t e φ =
+        t.extAction (fun x => if x ∈ A then φ x else 0) (fun y ⊸ fun r ⊸ r • y) +
+        e.extAction (fun x => if x ∉ A then φ x else 0) (fun y ⊸ fun r ⊸ r • y) :=
+Proof:
+  aesop
+
+
+Proved sorry theorems only in first database: 6
+
+Theorem: MyRing.add_left_cancel
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem add_left_cancel {a b c : R} (h : a + b = a + c) : b = c :=
+Proof:
+  simpa using h
+
+
+Theorem: C03S05.MyAbs.abs_lt
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+Proof:
+  cases x
+  exact abs_lt
+
+
+Theorem: absorb1
+File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+Theorem statement: theorem absorb1 : x ⊓ (x ⊔ y) = x :=
+Proof:
+  simp
+
+
+Theorem: MyGroup.mul_inv_rev
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem mul_inv_rev (a b : G) : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+Proof:
+  simp
+
+
+Theorem: MyRing.self_sub
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem self_sub (a : R) : a - a = 0 :=
+Proof:
+  simp
+
+
+Theorem: MyRing.add_neg_cancel_right
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem add_neg_cancel_right (a b : R) : a + b + -b = a :=
+Proof:
+  simp
+
+
+
+Proved sorry theorems only in first database: 7
+
+Theorem: Function.Bijective.Equiv.invFun.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Equiv.invFun.arg_a0.Bijective_rule (f : Y ≃ Z) (g : X → Z) (hf : Bijective g)
+  : Bijective (fun x => f.invFun (g x)) :=
+Proof:
+  convert hf
+  simp [hf]
+  exact f.symm.bijective.comp hf
+
+
+Theorem: SciLean.Measure.prod_volume
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem Measure.prod_volume {X Y} [MeasureSpace X] [MeasureSpace Y]  :
+    (Measure.prod (volume : Measure X) (volume : Measure Y)) = volume :=
+Proof:
+  rfl
+
+
+Theorem: Function.Bijective.Equiv.toFun.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Equiv.toFun.arg_a0.Bijective_rule (f : Y ≃ Z) (g : X → Y) (hf : Bijective g)
+  : Bijective (fun x => f (g x)) :=
+Proof:
+  inhabit Z
+  exact f.bijective.comp hf
+
+
+Theorem: SciLean.ContCDiffMapFD_eta
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+Proof:
+  simp only [DFunLike.ext_iff]
+  aesop
+
+
+Theorem: Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.Bijective_rule_simple
+  : Bijective (fun xy : X×Y => (xy.1, xy.2))
+  :=
+Proof:
+  simp
+  exact Function.bijective_id
+
+
+Theorem: SciLean.CDifferentiable.id_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiable.id_rule
+  : CDifferentiable K (fun x : X => x)
+  :=
+Proof:
+  intro x
+  unfold SciLean.CDifferentiableAt
+  tauto
+
+
+Theorem: SciLean.ArrayType.ext
+File path: SciLean/Data/ArrayType/Basic.lean
+Theorem statement: theorem ext (x y : Cont) : (∀ i, x[i] = y[i]) → x = y :=
+Proof:
+  intro h
+  apply SciLean.ArrayType.get_injective
+  simp only [h]
+
+
+
+Proved sorry theorems only in first database: 2
+
+Theorem: SciLean.norm₂_scalar
+File path: SciLean/Core/Objects/SemiInnerProductSpace.lean
+Theorem statement: theorem norm₂_scalar {R} [RealScalar R] (x : R) :
+  ‖x‖₂[R] = Scalar.abs x :=
+Proof:
+  rw [SciLean.scalar_norm]
+
+
+Theorem: SciLean.ContCDiffMapFD_eta
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+Proof:
+  simp only [DFunLike.ext_iff]
+  aesop
+
+
+
+Proved sorry theorems only in first database: 4
+
+Theorem: SciLean.ContCDiffMapFD_eta
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+Proof:
+  simp only [DFunLike.ext_iff]
+  aesop
+
+
+Theorem: SciLean.ArrayType.ext
+File path: SciLean/Data/ArrayType/Basic.lean
+Theorem statement: theorem ext (x y : Cont) : (∀ i, x[i] = y[i]) → x = y :=
+Proof:
+  intro h
+  apply SciLean.ArrayType.get_injective
+  simp only [h]
+
+
+Theorem: Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple'
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.Bijective_rule_simple'
+  : Bijective (fun xy : X×Y => (xy.2, xy.1))
+  :=
+Proof:
+  constructor <;> intro h
+  all_goals aesop
+
+
+Theorem: SciLean.Distribution.action_iteD
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.action_iteD (A : Set X) (t e : 𝒟'(X,Y)) (φ : 𝒟 X) :
+   iteD A t e φ =
+        t.extAction (fun x => if x ∈ A then φ x else 0) (fun y ⊸ fun r ⊸ r • y) +
+        e.extAction (fun x => if x ∉ A then φ x else 0) (fun y ⊸ fun r ⊸ r • y) :=
+Proof:
+  aesop

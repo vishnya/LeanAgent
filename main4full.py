@@ -151,7 +151,7 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_no_ewc_curriculum
 # TODO: do we still need this?
 load_dotenv()
 
-repos_for_merged_dataset = [("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"), ("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"), ("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd", "29baddd685660b5fedd7bd67f9916ae24253d566"), ("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d"), ("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"),("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"),("https://github.com/google-deepmind/debate", "7fb39251b705797ee54e08c96177fabd29a5b5a3"),("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"),("https://github.com/leanprover-community/con-nf", "00bdc85ba7d486a9e544a0806a1018dd06fa3856"), ("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21"), ("https://github.com/siddhartha-gadgil/Saturn", "3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"), ("https://github.com/loganrjmurphy/LeanEuclid", "f1912c3090eb82820575758efc31e40b9db86bb8")]
+repos_for_merged_dataset = [("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"), ("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"), ("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd", "29baddd685660b5fedd7bd67f9916ae24253d566"), ("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d"), ("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"),("https://github.com/ahhwuhu/zeta_3_irrational", "914712200e463cfc97fe37e929d518dd58806a38"), ("https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers", "01ef1f22a04f2ba8081c5fb29413f515a0e52878"), ("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"), ("https://github.com/fpvandoorn/carleson", "bec7808b907190882fa1fa54ce749af297c6cf37"), ("https://github.com/YaelDillies/LeanAPAP","951c660a8d7ba8e39f906fdf657674a984effa8b"), ("https://github.com/mo271/formal_book", "6fbe8c2985008c0bfb30050750a71b90388ad3a3"), ("https://github.com/corent1234/hairy-ball-theorem-lean", "fa500d7d2e58580bac7c050f0f6c408041b70205")]
 repos_for_proving = []
 
 # TODO: automate this
@@ -398,10 +398,10 @@ def find_and_save_compatible_commits(repo_info_file, lean_git_repos):
         sha = None
         v = None
         if "debate" in url:
-            sha = "7fb39251b705797ee54e08c96177fabd29a5b5a3"
+            sha = "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"
             v = "v4.8.0"
         elif "hairy-ball-theorem-lean" in url:
-            sha = "a778826d19c8a7ddf1d26beeea628c45450612e6"
+            sha = "fa500d7d2e58580bac7c050f0f6c408041b70205"
             v = "v4.7.0"
         elif "compfiles" in url:
             sha = "f99bf6f2928d47dd1a445b414b3a723c2665f091"
@@ -968,10 +968,10 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     sha = None
     v = None
     if "debate" in url:
-        sha = "7fb39251b705797ee54e08c96177fabd29a5b5a3"
+        sha = "de3a6e500ae1a65dfeea2f91ef519ebad9704be0"
         v = "v4.8.0"
     elif "hairy" in url:
-        sha = "a778826d19c8a7ddf1d26beeea628c45450612e6"
+        sha = "fa500d7d2e58580bac7c050f0f6c408041b70205"
         v = "v4.7.0"
     elif "compfiles" in url:
         sha = "f99bf6f2928d47dd1a445b414b3a723c2665f091"
@@ -1306,7 +1306,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 0
+        current_epoch = 12
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False
@@ -1455,7 +1455,16 @@ def main():
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
 
-                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_compfiles_f99bf6f2928d47dd1a445b414b3a723c2665f091", [("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38", [("https://github.com/ahhwuhu/zeta_3_irrational", "914712200e463cfc97fe37e929d518dd58806a38")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_mathematics_in_lean_source_5297e0fb051367c48c0a084411853a576389ecf5", [("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_PrimeNumberTheoremAnd_29baddd685660b5fedd7bd67f9916ae24253d566", [("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",  "29baddd685660b5fedd7bd67f9916ae24253d566")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_lean-math-workshop_5acd4b933d47fd6c1032798a6046c1baf261445d", [("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147", [("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_formal_book_6fbe8c2985008c0bfb30050750a71b90388ad3a3", [("https://github.com/mo271/formal_book", "6fbe8c2985008c0bfb30050750a71b90388ad3a3")])
+                        # db.generate_merged_dataset(Path(RAID_DIR) / DATA_DIR / f"merged_with_new_Formalisation-of-constructable-numbers_01ef1f22a04f2ba8081c5fb29413f515a0e52878", [("https://github.com/Louis-Le-Grand/Formalisation-of-constructable-numbers", "01ef1f22a04f2ba8081c5fb29413f515a0e52878")])
+                        if "SciLean" not in repo.url:
+                            db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
                     
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
@@ -1619,72 +1628,57 @@ def main():
 
                         best_model.eval()
 
-                        logger.info("Testing...")
-                        total_R1, total_R10, total_MRR = [], [], []
-                        dataset_path = RAID_DIR + "/" + DATA_DIR
-                        testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
-                        if is_main_process:
-                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-                                f.write("\n\n\n")
-                                f.write(f"Results for {dir_name} with lambda = {lambda_value}")
-                        for data_path in testing_paths:
-                            # TODO: remove this for tests that do not use merged dataset
-                            if "merged" not in data_path:
-                                continue
-                            if "cookbook" in repo.url and "cookbook" in data_path:
-                                continue
-                            if "cookbook" in repo.url and "FLT" in data_path:
-                                continue
-                            if "cookbook" in repo.url and "debate" in data_path:
-                                continue
-                            if "cookbook" in repo.url and "PrimeNumberTheoremAnd" in data_path:
-                                continue
-                            if "cookbook" in repo.url and "SciLean" in data_path:
-                                continue
-                            # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
-                            run_cli(best_model_path, data_path)
+                        if "SciLean" not in repo.url:
+                            logger.info("Testing...")
+                            total_R1, total_R10, total_MRR = [], [], []
+                            dataset_path = RAID_DIR + "/" + DATA_DIR
+                            testing_paths = [os.path.join(dataset_path, d) for d in os.listdir(dataset_path)]
                             if is_main_process:
-                                num_gpus = 4 # TODO: change for GPU
-                                preds_map = {}
-                                for gpu_id in range(num_gpus):
-                                    with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
-                                        preds = pickle.load(f)
-                                        preds_map.update(preds)
-
-                                logger.info("Loaded the predictions pickle files")
-                                data_path = os.path.join(data_path, "random", "test.json")
-                                data = json.load(open(data_path))
-                                logger.info(f"Evaluating on {data_path}")
-                                R1, R10, MRR = _eval(data, preds_map)
-                                logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-                                total_R1.append(R1)
-                                total_R10.append(R10)
-                                total_MRR.append(MRR)
                                 with open(EVAL_RESULTS_FILE_PATH, "a") as f:
                                     f.write("\n\n\n")
-                                    f.write(f"Intermediate results for {data_path}")
+                                    f.write(f"Results for {dir_name} with lambda = {lambda_value}")
+                            for data_path in testing_paths:
+                                # TODO: remove this for tests that do not use merged dataset
+                                if "merged" not in data_path:
+                                    continue
+                                # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
+                                run_cli(best_model_path, data_path)
+                                if is_main_process:
+                                    num_gpus = 4 # TODO: change for GPU
+                                    preds_map = {}
+                                    for gpu_id in range(num_gpus):
+                                        with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
+                                            preds = pickle.load(f)
+                                            preds_map.update(preds)
+
+                                    logger.info("Loaded the predictions pickle files")
+                                    data_path = os.path.join(data_path, "random", "test.json")
+                                    data = json.load(open(data_path))
+                                    logger.info(f"Evaluating on {data_path}")
+                                    R1, R10, MRR = _eval(data, preds_map)
+                                    logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+                                    total_R1.append(R1)
+                                    total_R10.append(R10)
+                                    total_MRR.append(MRR)
+                                    with open(EVAL_RESULTS_FILE_PATH, "a") as f:
+                                        f.write("\n\n\n")
+                                        f.write(f"Intermediate results for {data_path}")
+                                        f.write("\n\n\n")
+                                        f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+
+                            if is_main_process:
+                                avg_R1 = np.mean(total_R1)
+                                avg_R10 = np.mean(total_R10)
+                                avg_MRR = np.mean(total_MRR)
+
+                                logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+
+                                if not os.path.exists(EVAL_RESULTS_FILE_PATH):
+                                    open(EVAL_RESULTS_FILE_PATH, 'w').close()
+
+                                with open(EVAL_RESULTS_FILE_PATH, "a") as f:
                                     f.write("\n\n\n")
-                                    f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
-
-                        if is_main_process:
-                            if "cookbook" in repo.url:
-                                total_R10.append(58.9416477035174)
-                                total_R10.append(59.10945966438392)
-                                total_R10.append(55.50730835841573)
-                                total_R10.append(58.701211714197974)
-                                total_R10.append(56.076343902903346)
-                            avg_R1 = np.mean(total_R1)
-                            avg_R10 = np.mean(total_R10)
-                            avg_MRR = np.mean(total_MRR)
-
-                            logger.info(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
-
-                            if not os.path.exists(EVAL_RESULTS_FILE_PATH):
-                                open(EVAL_RESULTS_FILE_PATH, 'w').close()
-
-                            with open(EVAL_RESULTS_FILE_PATH, "a") as f:
-                                f.write("\n\n\n")
-                                f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
+                                    f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                     else:
                         model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
                         if result is None:
@@ -1712,7 +1706,7 @@ def main():
                             print(f"An error occurred during fisher: {str(e)}")
                             print(traceback.format_exc())
 
-                    if "lean4lean" in repo.url and is_main_process:
+                    if is_main_process:
                         logger.info("Starting the prover")
                         # Set up the prover
                         use_vllm = False

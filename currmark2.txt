@@ -1,0 +1,1852 @@
+ormalabstracts
+Cloning https://github.com/formalabstracts/formalabstracts.git
+Repo name: formalabstracts/formalabstracts
+2024-09-10 20:35:30.076 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/formalabstracts/formalabstracts/b0173da1af45421239d44492eeecd54bf65ee0f6/lean-toolchain failed. Retry
+ing...
+2024-09-10 20:35:31.102 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/formalabstracts/formalabstracts/b0173da1af45421239d44492eeecd54bf65ee0f6/lean-toolchain failed. Retry
+ing...
+2024-09-10 20:35:33.127 | INFO     | __main__:search_github_repositories:448 - Failed to clone formalabstra
+cts/formalabstracts because of HTTP Error 404: Not Found
+2024-09-10 20:35:33.128 | INFO     | __main__:search_github_repositories:432 - Processing ImperialCollegeLo
+ndon/M40001_lean
+Cloning https://github.com/ImperialCollegeLondon/M40001_lean.git
+Repo name: ImperialCollegeLondon/M40001_lean
+2024-09-10 20:35:33.838 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/ImperialCollegeLondon/M40001_lean/8cc4a60897dabdd5bc0d116144776f3286fde70c/lean-toolchain failed. Ret
+rying...
+2024-09-10 20:35:34.862 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/ImperialCollegeLondon/M40001_lean/8cc4a60897dabdd5bc0d116144776f3286fde70c/lean-toolchain failed. Ret
+rying...
+2024-09-10 20:35:36.888 | INFO     | __main__:search_github_repositories:448 - Failed to clone ImperialColl
+egeLondon/M40001_lean because of HTTP Error 404: Not Found
+2024-09-10 20:35:36.889 | INFO     | __main__:search_github_repositories:432 - Processing teorth/pfr
+Cloning https://github.com/teorth/pfr.git
+Repo name: teorth/pfr
+2024-09-10 20:35:37.620 | INFO     | __main__:search_github_repositories:432 - Processing kmill/lean4-raytr
+acer
+2024-09-10 20:35:37.620 | INFO     | __main__:search_github_repositories:450 - Skipping kmill/lean4-raytrac
+er since it is a known repository
+2024-09-10 20:35:37.620 | INFO     | __main__:search_github_repositories:432 - Processing AlexKontorovich/P
+rimeNumberTheoremAnd
+Cloning https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+Repo name: AlexKontorovich/PrimeNumberTheoremAnd
+2024-09-10 20:35:38.332 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.8.0-rc2
+2024-09-10 20:35:54.293 | INFO     | __main__:search_github_repositories:432 - Processing ImperialCollegeLo
+ndon/formalising-mathematics-2022
+Cloning https://github.com/ImperialCollegeLondon/formalising-mathematics-2022.git
+Repo name: ImperialCollegeLondon/formalising-mathematics-2022
+2024-09-10 20:35:55.190 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/ImperialCollegeLondon/formalising-mathematics-2022/a1686aaa72a3c387d3a9bb68e5d15764246cb58b/lean-tool
+chain failed. Retrying...
+2024-09-10 20:35:56.216 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/ImperialCollegeLondon/formalising-mathematics-2022/a1686aaa72a3c387d3a9bb68e5d15764246cb58b/lean-tool
+chain failed. Retrying...
+2024-09-10 20:35:58.242 | INFO     | __main__:search_github_repositories:448 - Failed to clone ImperialColl
+egeLondon/formalising-mathematics-2022 because of HTTP Error 404: Not Found
+2024-09-10 20:35:58.242 | INFO     | __main__:search_github_repositories:432 - Processing flypitch/flypitch
+Cloning https://github.com/flypitch/flypitch.git
+Repo name: flypitch/flypitch
+2024-09-10 20:35:58.922 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/flypitch/flypitch/d72904c17fbb874f01ffe168667ba12663a7b853/lean-toolchain failed. Retrying...
+2024-09-10 20:35:59.947 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/flypitch/flypitch/d72904c17fbb874f01ffe168667ba12663a7b853/lean-toolchain failed. Retrying...
+2024-09-10 20:36:01.974 | INFO     | __main__:search_github_repositories:448 - Failed to clone flypitch/fly
+pitch because of HTTP Error 404: Not Found
+2024-09-10 20:36:01.975 | INFO     | __main__:search_github_repositories:432 - Processing leanprover-commun
+ity/lean-perfectoid-spaces
+Cloning https://github.com/leanprover-community/lean-perfectoid-spaces.git
+Repo name: leanprover-community/lean-perfectoid-spaces
+2024-09-10 20:36:02.739 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/leanprover-community/lean-perfectoid-spaces/95a6520ce578b30a80b4c36e36ab2d559a842690/lean-toolchain f
+ailed. Retrying...
+2024-09-10 20:36:03.765 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/leanprover-community/lean-perfectoid-spaces/95a6520ce578b30a80b4c36e36ab2d559a842690/lean-toolchain f
+ailed. Retrying...
+2024-09-10 20:36:05.790 | INFO     | __main__:search_github_repositories:448 - Failed to clone leanprover-c
+ommunity/lean-perfectoid-spaces because of HTTP Error 404: Not Found
+2024-09-10 20:36:05.791 | INFO     | __main__:search_github_repositories:432 - Processing argumentcomputer/
+yatima
+2024-09-10 20:36:05.791 | INFO     | __main__:search_github_repositories:450 - Skipping argumentcomputer/ya
+tima since it is a known repository
+2024-09-10 20:36:05.791 | INFO     | __main__:search_github_repositories:432 - Processing jesse-michael-han
+/lean-gptf
+Cloning https://github.com/jesse-michael-han/lean-gptf.git
+Repo name: jesse-michael-han/lean-gptf
+2024-09-10 20:36:06.496 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/jesse-michael-han/lean-gptf/e2adeef81f6cf089cde493fa1b7f4af5d53c747a/lean-toolchain failed. Retrying.
+..
+2024-09-10 20:36:07.521 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/jesse-michael-han/lean-gptf/e2adeef81f6cf089cde493fa1b7f4af5d53c747a/lean-toolchain failed. Retrying.
+..
+2024-09-10 20:36:09.547 | INFO     | __main__:search_github_repositories:448 - Failed to clone jesse-michae
+l-han/lean-gptf because of HTTP Error 404: Not Found
+2024-09-10 20:36:09.547 | INFO     | __main__:search_github_repositories:432 - Processing leanprover/verso
+2024-09-10 20:36:09.548 | INFO     | __main__:search_github_repositories:450 - Skipping leanprover/verso si
+nce it is a known repository
+2024-09-10 20:36:09.548 | INFO     | __main__:search_github_repositories:432 - Processing TwoFX/sudoku
+Cloning https://github.com/TwoFX/sudoku.git
+Repo name: TwoFX/sudoku
+2024-09-10 20:36:10.189 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/TwoFX/sudoku/1c02dbefebb4ed670ff3786ae1dcabab5470d806/lean-toolchain failed. Retrying...
+2024-09-10 20:36:11.215 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/TwoFX/sudoku/1c02dbefebb4ed670ff3786ae1dcabab5470d806/lean-toolchain failed. Retrying...
+2024-09-10 20:36:13.241 | INFO     | __main__:search_github_repositories:448 - Failed to clone TwoFX/sudoku
+ because of HTTP Error 404: Not Found
+2024-09-10 20:36:13.242 | INFO     | __main__:search_github_repositories:432 - Processing ImperialCollegeLo
+ndon/formalising-mathematics-2024
+2024-09-10 20:36:13.242 | INFO     | __main__:search_github_repositories:450 - Skipping ImperialCollegeLond
+on/formalising-mathematics-2024 since it is a known repository
+2024-09-10 20:36:13.242 | INFO     | __main__:search_github_repositories:432 - Processing leanprover-commun
+ity/ProofWidgets4
+2024-09-10 20:36:13.242 | INFO     | __main__:search_github_repositories:450 - Skipping leanprover-communit
+y/ProofWidgets4 since it is a known repository
+2024-09-10 20:36:13.242 | INFO     | __main__:search_github_repositories:432 - Processing leanprover-commun
+ity/NNG4
+2024-09-10 20:36:13.242 | INFO     | __main__:search_github_repositories:450 - Skipping leanprover-communit
+y/NNG4 since it is a known repository
+2024-09-10 20:36:13.242 | INFO     | __main__:search_github_repositories:432 - Processing cmu-l3/llmlean
+2024-09-10 20:36:13.242 | INFO     | __main__:search_github_repositories:450 - Skipping cmu-l3/llmlean sinc
+e it is a known repository
+2024-09-10 20:36:13.242 | INFO     | __main__:search_github_repositories:432 - Processing leanprover/lake
+2024-09-10 20:36:13.243 | INFO     | __main__:search_github_repositories:450 - Skipping leanprover/lake sin
+ce it is a known repository
+2024-09-10 20:36:13.243 | INFO     | __main__:search_github_repositories:432 - Processing blanchette/logica
+l_verification_2020
+Cloning https://github.com/blanchette/logical_verification_2020.git
+Repo name: blanchette/logical_verification_2020
+2024-09-10 20:36:13.999 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/blanchette/logical_verification_2020/7a9f4bd73498189d9beb5d4591e0f2b3ca316111/lean-toolchain failed.
+Retrying...
+2024-09-10 20:36:15.024 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/blanchette/logical_verification_2020/7a9f4bd73498189d9beb5d4591e0f2b3ca316111/lean-toolchain failed.
+Retrying...
+2024-09-10 20:36:17.051 | INFO     | __main__:search_github_repositories:448 - Failed to clone blanchette/l
+ogical_verification_2020 because of HTTP Error 404: Not Found
+2024-09-10 20:36:17.051 | INFO     | __main__:search_github_repositories:432 - Processing ufmg-smite/lean-s
+mt
+2024-09-10 20:36:17.052 | INFO     | __main__:search_github_repositories:450 - Skipping ufmg-smite/lean-smt
+ since it is a known repository
+2024-09-10 20:36:17.052 | INFO     | __main__:search_github_repositories:432 - Processing dwrensha/compfile
+s
+Cloning https://github.com/dwrensha/compfiles.git
+Repo name: dwrensha/compfiles
+2024-09-10 20:36:17.760 | INFO     | __main__:search_github_repositories:432 - Processing PatrickMassot/Gli
+mpseOfLean
+2024-09-10 20:36:17.760 | INFO     | __main__:search_github_repositories:450 - Skipping PatrickMassot/Glimp
+seOfLean since it is a known repository
+2024-09-10 20:36:17.761 | INFO     | __main__:search_github_repositories:432 - Processing zhangir-azerbayev
+/ProofNet
+Cloning https://github.com/zhangir-azerbayev/ProofNet.git
+Repo name: zhangir-azerbayev/ProofNet
+2024-09-10 20:36:18.453 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/zhangir-azerbayev/ProofNet/02b47219879da3a4fcb4d6ad5f2f29f384cf2de0/lean-toolchain failed. Retrying..
+.
+2024-09-10 20:36:19.478 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/zhangir-azerbayev/ProofNet/02b47219879da3a4fcb4d6ad5f2f29f384cf2de0/lean-toolchain failed. Retrying..
+.
+2024-09-10 20:36:21.506 | INFO     | __main__:search_github_repositories:448 - Failed to clone zhangir-azer
+bayev/ProofNet because of HTTP Error 404: Not Found
+2024-09-10 20:36:21.506 | INFO     | __main__:search_github_repositories:432 - Processing google-deepmind/d
+ebate
+Cloning https://github.com/google-deepmind/debate.git
+Repo name: google-deepmind/debate
+2024-09-10 20:36:22.242 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.8.0
+2024-09-10 20:36:38.156 | INFO     | __main__:search_github_repositories:432 - Processing blanchette/logica
+l_verification_2023
+Cloning https://github.com/blanchette/logical_verification_2023.git
+Repo name: blanchette/logical_verification_2023
+2024-09-10 20:36:38.852 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/blanchette/logical_verification_2023/0b9ca22d512230ca1932f08ebb459f676438c64d/lean-toolchain failed.
+Retrying...
+2024-09-10 20:36:39.878 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/blanchette/logical_verification_2023/0b9ca22d512230ca1932f08ebb459f676438c64d/lean-toolchain failed.
+Retrying...
+2024-09-10 20:36:41.905 | INFO     | __main__:search_github_repositories:448 - Failed to clone blanchette/l
+ogical_verification_2023 because of HTTP Error 404: Not Found
+2024-09-10 20:36:41.905 | INFO     | __main__:search_github_repositories:432 - Processing teorth/symmetric_
+project
+2024-09-10 20:36:41.905 | INFO     | __main__:search_github_repositories:450 - Skipping teorth/symmetric_pr
+oject since it is a known repository
+2024-09-10 20:36:41.905 | INFO     | __main__:search_github_repositories:432 - Processing cedar-policy/ceda
+r-spec
+Cloning https://github.com/cedar-policy/cedar-spec.git
+Repo name: cedar-policy/cedar-spec
+2024-09-10 20:36:42.731 | INFO     | __main__:search_github_repositories:448 - Failed to clone cedar-policy
+/cedar-spec because of Invalid Lean 4 version: cedar-lean/lean-toolchain
+2024-09-10 20:36:42.731 | INFO     | __main__:search_github_repositories:432 - Processing avigad/lamr
+2024-09-10 20:36:42.731 | INFO     | __main__:search_github_repositories:450 - Skipping avigad/lamr since i
+t is a known repository
+2024-09-10 20:36:42.731 | INFO     | __main__:search_github_repositories:432 - Processing ImperialCollegeLo
+ndon/real-number-game
+Cloning https://github.com/ImperialCollegeLondon/real-number-game.git
+Repo name: ImperialCollegeLondon/real-number-game
+2024-09-10 20:36:43.546 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/ImperialCollegeLondon/real-number-game/f9dcb7d9255a79b57e62038228a23346c2dc301b/lean-toolchain failed
+. Retrying...
+2024-09-10 20:36:44.571 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/ImperialCollegeLondon/real-number-game/f9dcb7d9255a79b57e62038228a23346c2dc301b/lean-toolchain failed
+. Retrying...
+2024-09-10 20:36:46.598 | INFO     | __main__:search_github_repositories:448 - Failed to clone ImperialColl
+egeLondon/real-number-game because of HTTP Error 404: Not Found
+2024-09-10 20:36:46.598 | INFO     | __main__:search_github_repositories:432 - Processing avigad/mathematic
+s_in_lean_source
+Cloning https://github.com/avigad/mathematics_in_lean_source.git
+Repo name: avigad/mathematics_in_lean_source
+2024-09-10 20:36:47.243 | INFO     | __main__:search_github_repositories:432 - Processing gebner/hott3
+Cloning https://github.com/gebner/hott3.git
+Repo name: gebner/hott3
+2024-09-10 20:36:48.109 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/gebner/hott3/7ead7a8a2503049eacd45cbff6587802bae2add2/lean-toolchain failed. Retrying...
+2024-09-10 20:36:49.135 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/gebner/hott3/7ead7a8a2503049eacd45cbff6587802bae2add2/lean-toolchain failed. Retrying...
+2024-09-10 20:36:51.186 | INFO     | __main__:search_github_repositories:448 - Failed to clone gebner/hott3
+ because of HTTP Error 404: Not Found
+2024-09-10 20:36:51.186 | INFO     | __main__:search_github_repositories:432 - Processing leanprover-commun
+ity/quote4
+2024-09-10 20:36:51.186 | INFO     | __main__:search_github_repositories:450 - Skipping leanprover-communit
+y/quote4 since it is a known repository
+2024-09-10 20:36:51.187 | INFO     | __main__:search_github_repositories:432 - Processing leanprover-commun
+ity/lean4-samples
+Cloning https://github.com/leanprover-community/lean4-samples.git
+Repo name: leanprover-community/lean4-samples
+2024-09-10 20:36:51.867 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/leanprover-community/lean4-samples/c3690b7a51667cfe74a64a49b0057dbc42d8716a/lean-toolchain failed. Re
+trying...
+2024-09-10 20:36:52.892 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/leanprover-community/lean4-samples/c3690b7a51667cfe74a64a49b0057dbc42d8716a/lean-toolchain failed. Re
+trying...
+2024-09-10 20:36:54.918 | INFO     | __main__:search_github_repositories:448 - Failed to clone leanprover-c
+ommunity/lean4-samples because of HTTP Error 404: Not Found
+2024-09-10 20:36:54.919 | INFO     | __main__:search_github_repositories:432 - Processing jldodds/coq-lean-
+cheatsheet
+Cloning https://github.com/jldodds/coq-lean-cheatsheet.git
+Repo name: jldodds/coq-lean-cheatsheet
+2024-09-10 20:36:55.611 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/jldodds/coq-lean-cheatsheet/69ad5987ec59ee7c9806855b2bb9de73c096c617/lean-toolchain failed. Retrying.
+..
+2024-09-10 20:36:56.636 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/jldodds/coq-lean-cheatsheet/69ad5987ec59ee7c9806855b2bb9de73c096c617/lean-toolchain failed. Retrying.
+..
+2024-09-10 20:36:58.663 | INFO     | __main__:search_github_repositories:448 - Failed to clone jldodds/coq-
+lean-cheatsheet because of HTTP Error 404: Not Found
+2024-09-10 20:36:58.663 | INFO     | __main__:search_github_repositories:432 - Processing digama0/lean4lean
+Cloning https://github.com/digama0/lean4lean.git
+Repo name: digama0/lean4lean
+2024-09-10 20:36:59.367 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.10.0-rc2
+2024-09-10 20:37:15.308 | INFO     | __main__:search_github_repositories:432 - Processing eric-wieser/lean-
+matrix-cookbook
+Cloning https://github.com/eric-wieser/lean-matrix-cookbook.git
+Repo name: eric-wieser/lean-matrix-cookbook
+2024-09-10 20:37:15.983 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.9.0-rc1
+2024-09-10 20:37:31.685 | INFO     | __main__:search_github_repositories:432 - Processing yuma-mizuno/lean-
+math-workshop
+Cloning https://github.com/yuma-mizuno/lean-math-workshop.git
+Repo name: yuma-mizuno/lean-math-workshop
+2024-09-10 20:37:32.369 | INFO     | __main__:search_github_repositories:432 - Processing loganrjmurphy/Lea
+nEuclid
+Cloning https://github.com/loganrjmurphy/LeanEuclid.git
+Repo name: loganrjmurphy/LeanEuclid
+2024-09-10 20:37:33.148 | INFO     | __main__:search_github_repositories:432 - Processing FormalizedFormalL
+ogic/Foundation
+Cloning https://github.com/FormalizedFormalLogic/Foundation.git
+Repo name: FormalizedFormalLogic/Foundation
+2024-09-10 20:37:33.859 | INFO     | __main__:search_github_repositories:432 - Processing leanprover-commun
+ity/repl
+2024-09-10 20:37:33.859 | INFO     | __main__:search_github_repositories:450 - Skipping leanprover-communit
+y/repl since it is a known repository
+2024-09-10 20:37:33.859 | INFO     | __main__:search_github_repositories:432 - Processing leanprover-commun
+ity/iris-lean
+2024-09-10 20:37:33.859 | INFO     | __main__:search_github_repositories:450 - Skipping leanprover-communit
+y/iris-lean since it is a known repository
+2024-09-10 20:37:33.859 | INFO     | __main__:search_github_repositories:432 - Processing leanprover-commun
+ity/lftcm2020
+Cloning https://github.com/leanprover-community/lftcm2020.git
+Repo name: leanprover-community/lftcm2020
+2024-09-10 20:37:34.618 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/leanprover-community/lftcm2020/64d1861d32d4bb38a65994f7c47d96892333130f/lean-toolchain failed. Retryi
+ng...
+2024-09-10 20:37:35.642 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/leanprover-community/lftcm2020/64d1861d32d4bb38a65994f7c47d96892333130f/lean-toolchain failed. Retryi
+ng...
+2024-09-10 20:37:37.668 | INFO     | __main__:search_github_repositories:448 - Failed to clone leanprover-c
+ommunity/lftcm2020 because of HTTP Error 404: Not Found
+2024-09-10 20:37:37.669 | INFO     | __main__:search_github_repositories:432 - Processing leanprover-commun
+ity/lean-auto
+Cloning https://github.com/leanprover-community/lean-auto.git
+Repo name: leanprover-community/lean-auto
+2024-09-10 20:37:38.398 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.11.0
+2024-09-10 20:37:54.019 | INFO     | __main__:search_github_repositories:432 - Processing leanprover/doc-ge
+n4
+2024-09-10 20:37:54.019 | INFO     | __main__:search_github_repositories:450 - Skipping leanprover/doc-gen4
+ since it is a known repository
+2024-09-10 20:37:54.019 | INFO     | __main__:search_github_repositories:432 - Processing aripiprazole/rinh
+a
+2024-09-10 20:37:54.019 | INFO     | __main__:search_github_repositories:450 - Skipping aripiprazole/rinha
+since it is a known repository
+2024-09-10 20:37:54.019 | INFO     | __main__:search_github_repositories:432 - Processing leanprover/lean4-
+cli
+2024-09-10 20:37:54.019 | INFO     | __main__:search_github_repositories:450 - Skipping leanprover/lean4-cl
+i since it is a known repository
+2024-09-10 20:37:54.019 | INFO     | __main__:search_github_repositories:432 - Processing leanprover/LeanIn
+k
+2024-09-10 20:37:54.019 | INFO     | __main__:search_github_repositories:450 - Skipping leanprover/LeanInk
+since it is a known repository
+2024-09-10 20:37:54.019 | INFO     | __main__:search_github_repositories:432 - Processing emilyriehl/yoneda
+Cloning https://github.com/emilyriehl/yoneda.git
+Repo name: emilyriehl/yoneda
+2024-09-10 20:37:54.730 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/emilyriehl/yoneda/2677941b4908168c63ff3ca87fa369690761d98a/lean-toolchain failed. Retrying...
+2024-09-10 20:37:55.756 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/emilyriehl/yoneda/2677941b4908168c63ff3ca87fa369690761d98a/lean-toolchain failed. Retrying...
+2024-09-10 20:37:57.783 | INFO     | __main__:search_github_repositories:448 - Failed to clone emilyriehl/y
+oneda because of HTTP Error 404: Not Found
+2024-09-10 20:37:57.783 | INFO     | __main__:search_github_repositories:432 - Processing PatrickMassot/lea
+n-verbose
+Cloning https://github.com/PatrickMassot/lean-verbose.git
+Repo name: PatrickMassot/lean-verbose
+2024-09-10 20:37:58.521 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/PatrickMassot/lean-verbose/eefa06d2a5ed81eb73eceaa0f8029c1d6f2d0023/lean-toolchain failed. Retrying..
+.
+2024-09-10 20:37:59.560 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/PatrickMassot/lean-verbose/eefa06d2a5ed81eb73eceaa0f8029c1d6f2d0023/lean-toolchain failed. Retrying..
+.
+2024-09-10 20:38:01.587 | INFO     | __main__:search_github_repositories:448 - Failed to clone PatrickMasso
+t/lean-verbose because of HTTP Error 404: Not Found
+2024-09-10 20:38:01.587 | INFO     | __main__:search_github_repositories:432 - Processing nomeata/loogle
+Cloning https://github.com/nomeata/loogle.git
+Repo name: nomeata/loogle
+2024-09-10 20:38:02.292 | INFO     | __main__:search_github_repositories:432 - Processing leanprover/SampCe
+rt
+2024-09-10 20:38:02.292 | INFO     | __main__:search_github_repositories:450 - Skipping leanprover/SampCert
+ since it is a known repository
+2024-09-10 20:38:02.292 | INFO     | __main__:search_github_repositories:432 - Processing ImperialCollegeLo
+ndon/group-theory-game
+Cloning https://github.com/ImperialCollegeLondon/group-theory-game.git
+Repo name: ImperialCollegeLondon/group-theory-game
+2024-09-10 20:38:03.040 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/ImperialCollegeLondon/group-theory-game/152ec4a92ad67b6174a3d240c63fa56a6df6017e/lean-toolchain faile
+d. Retrying...
+2024-09-10 20:38:04.065 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/ImperialCollegeLondon/group-theory-game/152ec4a92ad67b6174a3d240c63fa56a6df6017e/lean-toolchain faile
+d. Retrying...
+2024-09-10 20:38:06.091 | INFO     | __main__:search_github_repositories:448 - Failed to clone ImperialColl
+egeLondon/group-theory-game because of HTTP Error 404: Not Found
+2024-09-10 20:38:06.092 | INFO     | __main__:search_github_repositories:432 - Processing ImperialCollegeLo
+ndon/M4P33
+Cloning https://github.com/ImperialCollegeLondon/M4P33.git
+Repo name: ImperialCollegeLondon/M4P33
+2024-09-10 20:38:06.819 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/ImperialCollegeLondon/M4P33/1a179372db71ad6802d11eacbc1f02f327d55f8f/lean-toolchain failed. Retrying.
+..
+2024-09-10 20:38:07.845 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubuserconten
+t.com/ImperialCollegeLondon/M4P33/1a179372db71ad6802d11eacbc1f02f327d55f8f/lean-toolchain failed. Retrying.
+..
+2024-09-10 20:38:09.871 | INFO     | __main__:search_github_repositories:448 - Failed to clone ImperialColl
+egeLondon/M4P33 because of HTTP Error 404: Not Found
+2024-09-10 20:38:09.872 | INFO     | __main__:search_github_repositories:432 - Processing leanprover-commun
+ity/con-nf
+Cloning https://github.com/leanprover-community/con-nf.git
+Repo name: leanprover-community/con-nf
+2024-09-10 20:38:10.663 | INFO     | __main__:main:1235 - Processing https://github.com/lecopivo/SciLean
+2024-09-10 20:38:10.663 | INFO     | __main__:add_repo_to_database:895 - Processing https://github.com/leco
+pivo/SciLean.git
+2024-09-10 20:38:10.663 | INFO     | __main__:add_repo_to_database:915 - Found compatible commit 22d53b2f4e
+3db2a172e71da6eb9c916e62655744 for https://github.com/lecopivo/SciLean.git
+2024-09-10 20:38:10.663 | INFO     | __main__:add_repo_to_database:916 - Lean version: v4.7.0
+2024-09-10 20:38:10.929 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.7.0
+2024-09-10 20:38:26.652 | INFO     | __main__:add_repo_to_database:921 - Generating benchmark at /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/SciLean_22d53b2f4e3db2a172e71da6eb9c916e626557
+44
+2024-09-10 20:38:26.652 | INFO     | generate_benchmark_lean4:main:354 - Generating dataset to go into /dat
+a/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/SciLean_22d53b2f4e3db2a172e71da6eb9c916e
+62655744
+2024-09-10 20:38:26.652 | INFO     | generate_benchmark_lean4:main:361 - lean toolchain version: {'content'
+: 'leanprover/lean4:v4.7.0\n'}
+2024-09-10 20:38:26.652 | INFO     | generate_benchmark_lean4:main:363 - lean version v: v4.7.0
+2024-09-10 20:38:26.652 | INFO     | generate_benchmark_lean4:main:364 - is supported: True
+2024-09-10 20:38:26.652 | INFO     | generate_benchmark_lean4:main:373 - lean path1 /data/yingzi_ma/.elan/t
+oolchains/leanprover--lean4---4.7.0
+2024-09-10 20:38:26.652 | INFO     | generate_benchmark_lean4:main:374 - lean path2 /.elan/toolchains/leanp
+rover--lean4---4.7.0
+2024-09-10 20:38:26.652 | INFO     | generate_benchmark_lean4:main:375 - lean path3 ~/.elan/toolchains/lean
+prover--lean4---4.7.0
+2024-09-10 20:38:26.653 | INFO     | generate_benchmark_lean4:main:379 - Lean toolchain path 2 does not exi
+st: /.elan/toolchains/leanprover--lean4---4.7.0
+2024-09-10 20:38:26.654 | INFO     | generate_benchmark_lean4:main:381 - Lean toolchain path 3 does not exi
+st: ~/.elan/toolchains/leanprover--lean4---4.7.0
+2024-09-10 20:38:26.654 | INFO     | generate_benchmark_lean4:main:384 - Switched to Lean toolchain at: /da
+ta/yingzi_ma/.elan/toolchains/leanprover--lean4---4.7.0
+2024-09-10 20:38:26.713 | INFO     | generate_benchmark_lean4:main:386 - lean --version: Lean (version 4.7.
+0, x86_64-unknown-linux-gnu, commit 6fce8f7d5cd1, Release)
+
+2024-09-10 20:38:26.713 | INFO     | generate_benchmark_lean4:main:387 - repo: LeanGitRepo(url='https://git
+hub.com/lecopivo/SciLean', commit='22d53b2f4e3db2a172e71da6eb9c916e62655744')
+2024-09-10 20:38:26.713 | INFO     | generate_benchmark_lean4:main:389 - Configuring LeanDojo again...
+2024-09-10 20:38:26.719 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working dire
+ctory: /data/yingzi_ma/lean_project/ReProver
+2024-09-10 20:38:26.719 | INFO     | generate_benchmark_lean4:main:391 - LeanDojo configured
+2024-09-10 20:38:26.719 | INFO     | generate_benchmark_lean4:main:394 - Tracing the repo...
+2024-09-10 20:38:26.721 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced r
+epo is available in the cache.
+2024-09-10 20:38:26.722 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo fr
+om /data/yingzi_ma/lean_project/.cache/lean_dojo/lecopivo-SciLean-22d53b2f4e3db2a172e71da6eb9c916e62655744/
+SciLean
+2024-09-10 20:38:27.963 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1123 - Loading 28
+54 traced XML files from /data/yingzi_ma/lean_project/.cache/lean_dojo/lecopivo-SciLean-22d53b2f4e3db2a172e
+71da6eb9c916e62655744/SciLean with 31 workers
+ 29%|███████████████████████████████████████████████████████████▏
+                                                                                                      | 828
+ 29%|██████████████████████████████████████████████████████████▋
+                                                                                                    | 829/2
+ 29%|███████████████████████████████████████████████████████████▎
+                                                                                                      | 830
+ 29%|███████████████████████████████████████████████████████████▍
+                                                                                                      | 831
+ 29%|███████████████████████████████████████████████████████████▌
+                                                                                                      | 833
+ 29%|███████████████████████████████████████████████████████████▊
+                                                                                                      | 836
+ 29%|███████████████████████████████████████████████████████████▉
+                                                                                                      | 838
+ 29%|████████████████████████████████████████████████████████████
+                                                                                                      | 840
+ 30%|████████████████████████████████████████████████████████████▏
+                                                                                                      | 842
+ 30%|████████████████████████████████████████████████████████████▎
+                                                                                                      | 844
+ 30%|████████████████████████████████████████████████████████████▍
+                                                                                                      | 846
+ 30%|████████████████████████████████████████████████████████████▋
+                                                                                                      | 849
+ 30%|████████████████████████████████████████████████████████████▉
+                                                                                                      | 853
+ 30%|█████████████████████████████████████████████████████████████▏
+                                                                                                      | 856
+ 30%|█████████████████████████████████████████████████████████████▍
+                                                                                                      | 860
+ 30%|█████████████████████████████████████████████████████████████▋
+                                                                                                      | 863
+ 30%|█████████████████████████████████████████████████████████████▊
+                                                                                                      | 865
+ 30%|█████████████████████████████████████████████████████████████▉
+                                                                                                      | 867
+ 30%|██████████████████████████████████████████████████████████████
+                                                                                                      | 869
+ 31%|██████████████████████████████████████████████████████████████▍
+                                                                                                      | 873
+ 31%|██████████████████████████████████████████████████████████████▌
+                                                                                                      | 876
+ 31%|██████████████████████████████████████████████████████████████▊
+                                                                                                      | 878
+ 31%|███████████████████████████████████████████████████████████████
+                                                                                                      | 882
+ 31%|███████████████████████████████████████████████████████████████▏
+                                                                                                      | 884
+ 31%|███████████████████████████████████████████████████████████████▎
+                                                                                                      | 886
+ 31%|███████████████████████████████████████████████████████████████▍
+                                                                                                      | 888
+ 31%|███████████████████████████████████████████████████████████████▌
+                                                                                                      | 890
+ 31%|███████████████████████████████████████████████████████████████▊
+                                                                                                      | 892
+ 31%|███████████████████████████████████████████████████████████████▉
+                                                                                                      | 895
+ 31%|████████████████████████████████████████████████████████████████
+                                                                                                      | 897
+ 31%|████████████████████████████████████████████████████████████████▎
+                                                                                                      | 899
+ 32%|████████████████████████████████████████████████████████████████▍
+                                                                                                      | 901
+ 32%|████████████████████████████████████████████████████████████████▌
+                                                                                                      | 903
+ 32%|████████████████████████████████████████████████████████████████▋
+                                                                                                      | 905
+ 32%|████████████████████████████████████████████████████████████████▊
+                                                                                                      | 907
+ 32%|████████████████████████████████████████████████████████████████▉
+                                                                                                      | 909
+ 32%|█████████████████████████████████████████████████████████████████
+                                                                                                      | 911
+ 32%|█████████████████████████████████████████████████████████████████▎
+                                                                                                      | 913
+ 32%|█████████████████████████████████████████████████████████████████▍
+                                                                                                      | 915
+ 32%|█████████████████████████████████████████████████████████████████▌
+                                                                                                      | 917
+ 32%|█████████████████████████████████████████████████████████████████▋
+                                                                                                      | 919
+ 32%|█████████████████████████████████████████████████████████████████▊
+                                                                                                      | 921
+ 32%|█████████████████████████████████████████████████████████████████▉
+                                                                                                      | 923
+ 32%|██████████████████████████████████████████████████████████████████▎
+                                                                                                      | 927
+ 33%|██████████████████████████████████████████████████████████████████▍
+                                                                                                      | 930
+ 33%|██████████████████████████████████████████████████████████████████▌
+                                                                                                      | 932
+ 33%|██████████████████████████████████████████████████████████████████▊
+                                                                                                      | 934
+ 33%|██████████████████████████████████████████████████████████████████▉
+                                                                                                      | 936
+ 33%|███████████████████████████████████████████████████████████████████
+                                                                                                      | 938
+ 33%|███████████████████████████████████████████████████████████████████▎
+                                                                                                      | 941
+ 33%|███████████████████████████████████████████████████████████████████▍
+                                                                                                      | 943
+ 33%|███████████████████████████████████████████████████████████████████▌
+                                                                                                      | 945
+ 33%|███████████████████████████████████████████████████████████████████▋
+                                                                                                      | 947
+ 33%|███████████████████████████████████████████████████████████████████▉
+                                                                                                      | 950
+ 33%|████████████████████████████████████████████████████████████████████▏
+                                                                                                      | 954
+ 33%|████████████████████████████████████████████████████████████████████▎
+                                                                                                      | 956
+ 34%|████████████████████████████████████████████████████████████████████▍
+                                                                                                      | 958
+ 34%|████████████████████████████████████████████████████████████████████▌
+                                                                                                      | 960
+ 34%|████████████████████████████████████████████████████████████████████▊
+                                                                                                      | 963
+ 34%|█████████████████████████████████████████████████████████████████████
+                                                                                                      | 966
+ 34%|█████████████████████████████████████████████████████████████████████▏
+                                                                                                      | 968
+ 34%|█████████████████████████████████████████████████████████████████████▎
+                                                                                                      | 970
+ 34%|█████████████████████████████████████████████████████████████████████▍
+                                                                                                      | 972
+ 34%|█████████████████████████████████████████████████████████████████████▌
+                                                                                                      | 973
+ 34%|█████████████████████████████████████████████████████████████████████▊
+                                                                                                      | 976
+ 34%|█████████████████████████████████████████████████████████████████████▉
+                                                                                                      | 978
+ 34%|██████████████████████████████████████████████████████████████████████
+                                                                                                      | 980
+ 34%|██████████████████████████████████████████████████████████████████████
+                                                                                                      | 980
+ 34%|█████████████████████████████████████████████████████████████████████▍
+                                                                                                    | 981/2
+ 34%|██████████████████████████████████████████████████████████████████████▏
+                                                                                                      | 982
+ 34%|██████████████████████████████████████████████████████████████████████▎
+                                                                                                      | 984
+ 35%|██████████████████████████████████████████████████████████████████████▍
+                                                                                                      | 986
+ 35%|██████████████████████████████████████████████████████████████████████▌
+                                                                                                      | 988
+ 35%|██████████████████████████████████████████████████████████████████████▋
+                                                                                                      | 989
+ 35%|██████████████████████████████████████████████████████████████████████▊
+                                                                                                      | 991
+ 35%|██████████████████████████████████████████████████████████████████████▉
+                                                                                                      | 992
+ 35%|██████████████████████████████████████████████████████████████████████▉
+                                                                                                      | 993
+ 35%|███████████████████████████████████████████████████████████████████████
+                                                                                                      | 995
+ 35%|███████████████████████████████████████████████████████████████████████▏
+                                                                                                      | 996
+ 35%|███████████████████████████████████████████████████████████████████████▎
+                                                                                                      | 997
+ 35%|███████████████████████████████████████████████████████████████████████▍
+                                                                                                      | 999
+ 35%|███████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1000
+ 35%|███████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1002
+ 35%|███████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1004
+ 35%|███████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1005
+ 35%|███████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1008
+ 35%|███████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1011
+ 35%|████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1013
+ 36%|████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1015
+ 36%|████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1017
+ 36%|████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1019
+ 36%|████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1020
+ 36%|████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1021
+ 36%|████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1023
+ 36%|████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1026
+ 36%|█████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1028
+ 36%|█████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1029
+ 36%|█████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1032
+ 36%|█████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1034
+ 36%|█████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1036
+ 36%|█████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1038
+ 36%|█████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1040
+ 37%|██████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1042
+ 37%|██████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1043
+ 37%|██████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1044
+ 37%|██████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1046
+ 37%|██████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1048
+ 37%|██████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1049
+ 37%|██████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1050
+ 37%|██████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1051
+ 37%|██████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1053
+ 37%|███████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1055
+ 37%|███████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1059
+ 37%|███████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1061
+ 37%|███████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1063
+ 37%|███████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1065
+ 37%|████████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1070
+ 38%|████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1072
+ 38%|████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1074
+ 38%|████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1075
+ 38%|████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1077
+ 38%|████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1079
+ 38%|████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1081
+ 38%|█████████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1083
+ 38%|█████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1086
+ 38%|█████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1088
+ 38%|█████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1090
+ 38%|█████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1093
+ 38%|█████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1096
+ 39%|██████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1099
+ 39%|██████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1101
+ 39%|██████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1103
+ 39%|██████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1105
+ 39%|██████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1107
+ 39%|██████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1109
+ 39%|██████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1110
+ 39%|███████████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1112
+ 39%|███████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1114
+ 39%|███████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1115
+ 39%|███████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1116
+ 39%|███████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1118
+ 39%|███████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1120
+ 39%|███████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1121
+ 39%|███████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1124
+ 39%|███████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1124
+ 39%|███████████████████████████████████████████████████████████████████████████████▎
+                                                                                                   | 1127/2
+ 40%|████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1130
+ 40%|████████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1132
+ 40%|████████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1134
+ 40%|████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1137
+ 40%|█████████████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1139
+ 40%|█████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1142
+ 40%|█████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1144
+ 40%|█████████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1146
+ 40%|█████████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1148
+ 40%|█████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1152
+ 40%|██████████████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1154
+ 41%|██████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1158
+ 41%|██████████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1162
+ 41%|██████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1164
+ 41%|██████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1166
+ 41%|███████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1169
+ 41%|███████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1173
+ 41%|███████████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1177
+ 41%|███████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1180
+ 41%|████████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1183
+ 42%|████████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1185
+ 42%|████████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1187
+ 42%|████████████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1189
+ 42%|████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1193
+ 42%|████████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1195
+ 42%|█████████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1197
+ 42%|█████████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1200
+ 42%|█████████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1202
+ 42%|█████████████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1204
+ 42%|█████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1206
+ 42%|█████████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1208
+ 43%|██████████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1214
+ 43%|██████████████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1217
+ 43%|██████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1220
+ 43%|██████████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1223
+ 43%|███████████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1228
+ 43%|███████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1235
+ 43%|████████████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1240
+ 44%|████████████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1244
+ 44%|████████████████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1247
+ 44%|████████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1249
+ 44%|████████████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1251
+ 44%|█████████████████████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1253
+ 44%|█████████████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1254
+ 44%|█████████████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1255
+ 44%|█████████████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1256
+ 44%|█████████████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1257
+ 44%|█████████████████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1260
+ 44%|█████████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1262
+ 44%|█████████████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1264
+ 44%|██████████████████████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1266
+ 44%|██████████████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1268
+ 44%|██████████████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1269
+ 45%|██████████████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1271
+ 45%|██████████████████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1273
+ 45%|██████████████████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1274
+ 45%|██████████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1276
+ 45%|██████████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1277
+ 45%|██████████████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1278
+ 45%|██████████████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1279
+ 45%|███████████████████████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1281
+ 45%|███████████████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1284
+ 45%|███████████████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1286
+ 45%|███████████████████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1288
+ 45%|███████████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1290
+ 45%|███████████████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1293
+ 45%|████████████████████████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1295
+ 45%|████████████████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1296
+ 45%|████████████████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1298
+ 46%|████████████████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1299
+ 46%|████████████████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1300
+ 46%|████████████████████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1301
+ 46%|████████████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1304
+ 46%|████████████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1305
+ 46%|████████████████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1307
+ 46%|█████████████████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1314
+ 46%|██████████████████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1324
+ 47%|██████████████████████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1330
+ 47%|██████████████████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1335
+ 47%|███████████████████████████████████████████████████████████████████████████████████████████████▌
+                                                                                                     | 1344
+ 47%|████████████████████████████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1350
+ 48%|████████████████████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1356
+ 48%|████████████████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1361
+ 48%|█████████████████████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1366
+ 48%|█████████████████████████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1374
+ 48%|██████████████████████████████████████████████████████████████████████████████████████████████████
+                                                                                                     | 1379
+ 48%|██████████████████████████████████████████████████████████████████████████████████████████████████▍
+                                                                                                     | 1384
+ 49%|██████████████████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1390
+ 49%|███████████████████████████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1401
+ 49%|████████████████████████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1408
+ 49%|████████████████████████████████████████████████████████████████████████████████████████████████████▏
+                                                                                                     | 1408
+ 50%|████████████████████████████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1415
+ 50%|████████████████████████████████████████████████████████████████████████████████████████████████████▊
+                                                                                                     | 1418
+ 50%|█████████████████████████████████████████████████████████████████████████████████████████████████████▎
+                                                                                                     | 1424
+ 50%|█████████████████████████████████████████████████████████████████████████████████████████████████████▋
+                                                                                                     | 1429
+ 50%|█████████████████████████████████████████████████████████████████████████████████████████████████████▉
+                                                                                                     | 1433
+ 50%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+▏                                                                                                    | 1437
+ 50%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+▍                                                                                                    | 1440
+ 51%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+▊                                                                                                    | 1445
+ 51%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█                                                                                                    | 1449
+ 51%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█▎                                                                                                   | 1453
+ 51%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█▊                                                                                                   | 1459
+ 51%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██                                                                                                   | 1463
+ 51%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██▍                                                                                                  | 1468
+ 52%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██▊                                                                                                  | 1473
+ 52%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███▏                                                                                                 | 1478
+ 52%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███▍                                                                                                 | 1482
+ 52%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███▋                                                                                                 | 1485
+ 52%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███▉                                                                                                 | 1489
+ 52%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████                                                                                                 | 1492
+ 52%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████▎                                                                                                | 1495
+ 52%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████▌                                                                                                | 1498
+ 53%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████▋                                                                                                | 1500
+ 53%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████▊                                                                                                | 1502
+ 53%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████▉                                                                                                | 1504
+ 53%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████▏                                                                                               | 1507
+ 53%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████▎                                                                                               | 1509
+ 53%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████▍                                                                                               | 1511
+ 53%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████▌                                                                                               | 1513
+ 53%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████▊                                                                                               | 1515
+ 53%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████▉                                                                                               | 1518
+ 53%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████                                                                                               | 1520
+ 53%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████▍                                                                                              | 1525
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████▊                                                                                              | 1529
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████▉                                                                                              | 1532
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████▏                                                                                             | 1535
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████▎                                                                                             | 1537
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████▍                                                                                             | 1539
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████▌                                                                                             | 1541
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████▊                                                                                             | 1543
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████▉                                                                                             | 1545
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████                                                                                             | 1548
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████▏                                                                                            | 1550
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████▍                                                                                            | 1553
+ 54%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████▌                                                                                            | 1555
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████▋                                                                                            | 1557
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████▉                                                                                            | 1559
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████                                                                                            | 1561
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████▏                                                                                           | 1563
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████▎                                                                                           | 1565
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████▌                                                                                           | 1568
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████▋                                                                                           | 1571
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████▉                                                                                           | 1573
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████                                                                                           | 1575
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████▏                                                                                          | 1577
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████▎                                                                                          | 1579
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████▍                                                                                          | 1581
+ 55%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████▌                                                                                          | 1583
+ 56%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████▋                                                                                          | 1585
+ 56%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████▉                                                                                          | 1587
+ 56%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████                                                                                          | 1589
+ 56%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████▎                                                                                         | 1593
+ 56%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████▍                                                                                         | 1595
+ 56%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████▌                                                                                         | 1597
+ 56%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████▊                                                                                         | 1600
+ 56%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████▉                                                                                         | 1602
+ 56%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████▎                                                                                        | 1608
+ 56%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████▋                                                                                        | 1612
+ 57%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████▊                                                                                        | 1615
+ 57%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████                                                                                        | 1618
+ 57%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████▎                                                                                       | 1621
+ 57%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████▋                                                                                       | 1626
+ 57%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████▊                                                                                       | 1629
+ 57%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████                                                                                       | 1631
+ 57%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████▏                                                                                      | 1634
+ 57%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████▎                                                                                      | 1636
+ 57%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████▌                                                                                      | 1638
+ 57%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████▋                                                                                      | 1641
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████▊                                                                                      | 1643
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████                                                                                      | 1646
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████▏                                                                                     | 1648
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████▎                                                                                     | 1650
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████▌                                                                                     | 1652
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████▋                                                                                     | 1654
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████▊                                                                                     | 1656
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████                                                                                     | 1659
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████▏                                                                                    | 1661
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████▎                                                                                    | 1663
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████▌                                                                                    | 1667
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████▊                                                                                    | 1670
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████▉                                                                                    | 1673
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████▏                                                                                   | 1676
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████▎                                                                                   | 1678
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████▍                                                                                   | 1680
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████▋                                                                                   | 1683
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████▊                                                                                   | 1685
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████▉                                                                                   | 1687
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████▏                                                                                  | 1689
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████▎                                                                                  | 1691
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████▎                                                                                  | 1692
+ 59%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████▋                                                                                  | 1697
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████▉                                                                                  | 1700
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████                                                                                  | 1702
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████▎                                                                                 | 1705
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████▍                                                                                 | 1708
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████▋                                                                                 | 1710
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████▊                                                                                 | 1712
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████▉                                                                                 | 1714
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████▉                                                                                 | 1715
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████▏                                                                                | 1717
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████▏                                                                                | 1718
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████▎                                                                                | 1719
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████▍                                                                                | 1721
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████▌                                                                                | 1723
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████▋                                                                                | 1725
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████▉                                                                                | 1729
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████                                                                                | 1731
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████▎                                                                               | 1733
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████▍                                                                               | 1735
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████▌                                                                               | 1737
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████▌                                                                               | 1738
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████▊                                                                               | 1741
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████▉                                                                               | 1743
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████▎                                                                              | 1747
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████▎                                                                              | 1747
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████                                                                              | 1748/2
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████▌                                                                              | 1751
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████▊                                                                              | 1754
+ 62%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████▉                                                                              | 1757
+ 62%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████▏                                                                             | 1760
+ 62%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████▌                                                                             | 1765
+ 62%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████▉                                                                             | 1770
+ 62%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████▎                                                                            | 1775
+ 62%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████▍                                                                            | 1778
+ 63%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████▉                                                                            | 1784
+ 63%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████▎                                                                           | 1790
+ 63%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████▌                                                                           | 1794
+ 63%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████▊                                                                           | 1797
+ 63%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████                                                                           | 1800
+ 63%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████▏                                                                          | 1802
+ 63%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████▎                                                                          | 1804
+ 63%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████▍                                                                          | 1806
+ 63%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████▌                                                                          | 1808
+ 63%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████▋                                                                          | 1809
+ 63%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████▊                                                                          | 1811
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████                                                                          | 1814
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████▏                                                                         | 1816
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████▎                                                                         | 1818
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████▍                                                                         | 1820
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████▌                                                                         | 1822
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████▋                                                                         | 1823
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████▋                                                                         | 1824
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████▉                                                                         | 1826
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████                                                                         | 1828
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████                                                                         | 1829
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████▏                                                                        | 1830
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████▍                                                                        | 1833
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████▌                                                                        | 1836
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████▋                                                                        | 1838
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████▉                                                                        | 1840
+ 65%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████                                                                        | 1842
+ 65%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████▏                                                                       | 1844
+ 65%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████▏                                                                       | 1845
+ 65%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████▎                                                                       | 1846
+ 65%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████▎                                                                       | 1847
+ 65%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████▌                                                                       | 1849
+ 65%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████▌                                                                       | 1850
+ 65%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████                                                                       | 1857
+ 65%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████▌                                                                      | 1864
+ 66%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████                                                                      | 1871
+ 66%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████▎                                                                     | 1875
+ 66%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████▋                                                                     | 1879
+ 66%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████▉                                                                     | 1883
+ 66%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████▏                                                                    | 1887
+ 66%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████▌                                                                    | 1891
+ 66%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████▊                                                                    | 1895
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████                                                                    | 1898
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████▏                                                                   | 1901
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████▌                                                                   | 1906
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████▊                                                                   | 1909
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████▉                                                                   | 1912
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████▍                                                                  | 1919
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████▊                                                                  | 1923
+ 68%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████▏                                                                 | 1929
+ 68%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████▍                                                                 | 1933
+ 68%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████▊                                                                 | 1937
+ 68%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████▉                                                                 | 1940
+ 68%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████▎                                                                | 1944
+ 68%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████▍                                                                | 1947
+ 68%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████▋                                                                | 1950
+ 68%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████▉                                                                | 1953
+ 69%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████▏                                                               | 1957
+ 69%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████▋                                                               | 1964
+ 69%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████▉                                                               | 1967
+ 69%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████                                                               | 1970
+ 69%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████▎                                                              | 1973
+ 69%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████▊                                                              | 1979
+ 70%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████                                                              | 1984
+ 70%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████▍                                                             | 1988
+ 70%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████▉                                                             | 1995
+ 70%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████▎                                                            | 2000
+ 70%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████▋                                                            | 2006
+ 70%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████                                                            | 2011
+ 71%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████▎                                                           | 2015
+ 71%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████▋                                                           | 2020
+ 71%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████▉                                                           | 2023
+ 71%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████▎                                                          | 2029
+ 71%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████▉                                                          | 2037
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████▏                                                         | 2042
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████▌                                                         | 2046
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████▊                                                         | 2050
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████                                                         | 2053
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████▏                                                        | 2056
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████▍                                                        | 2059
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████▋                                                        | 2062
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████▉                                                        | 2065
+ 73%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████▏                                                       | 2070
+ 73%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████▌                                                       | 2074
+ 73%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████                                                       | 2081
+ 73%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████▎                                                      | 2085
+ 73%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████▌                                                      | 2089
+ 73%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████▊                                                      | 2093
+ 73%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████▏                                                     | 2097
+ 74%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████▎                                                     | 2100
+ 74%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████▌                                                     | 2103
+ 74%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████▉                                                     | 2108
+ 74%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████▏                                                    | 2112
+ 74%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████▌                                                    | 2116
+ 74%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████▉                                                    | 2122
+ 74%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████▏                                                   | 2126
+ 75%|███████████████████████████████████████████████████████████████████ 88%|██████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████████████████████████
+ 88%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████▌                       | 2524
+ 89%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████▊                       | 2528
+ 89%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████▉                       | 2530
+ 89%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████▏                      | 2533
+ 89%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████▍                      | 2537
+ 89%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████▌                      | 2539
+ 89%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████▉                      | 2543
+ 89%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████▏                     | 2547
+ 89%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████▎                     | 2549
+ 89%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████▍                     | 2551
+ 90%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████▋                     | 2555
+ 90%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████▉                     | 2558
+ 90%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████                     | 2560
+ 90%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████▍                    | 2565
+ 90%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████▋                    | 2568
+ 90%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████                    | 2574
+ 90%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████▎                   | 2578
+ 90%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████▋                   | 2582
+ 91%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████▎                  | 2592
+ 91%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████▋                  | 2597
+ 91%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████                  | 2602
+ 91%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████▍                 | 2607
+ 92%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████▊                 | 2612
+ 92%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████▎                | 2619
+ 92%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████▉                | 2628
+ 92%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████████▎               | 2634
+ 93%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████████▊               | 2641
+ 93%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████████▎              | 2647
+ 93%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████████▊              | 2655
+ 93%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████▎             | 2661
+ 94%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████▉             | 2671
+ 94%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████▍            | 2678
+ 94%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████▉            | 2685
+ 94%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████████████▍           | 2691
+ 95%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████████████▉           | 2698
+ 95%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████████████▎          | 2703
+ 95%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████████████▋          | 2709
+ 95%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████████          | 2714
+ 95%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████████▍         | 2719
+ 95%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████████▋         | 2723
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████████▉         | 2727
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████▋        | 2738
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████████████████▏       | 2744
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████████████████▌       | 2749
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████████████████▊       | 2753
+ 97%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████████████████       | 2756
+ 97%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████████████████▎      | 2760
+ 97%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████████████████▌      | 2764
+ 97%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████████████      | 2770
+ 97%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████████████▎     | 2774
+ 97%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████████████▌     | 2778
+ 97%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████████████▊     | 2781
+ 98%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████     | 2785
+ 98%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████▍    | 2789
+ 98%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████▋    | 2793
+ 98%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████▊    | 2796
+ 98%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████████████████████▎   | 2802
+ 98%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████████████████████▋   | 2807
+ 99%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████████████████████   | 2812
+ 99%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████████████████████▍  | 2818
+ 99%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+██████████████████████████████████████████████████████████████████████████████████████████████████▊  | 2824
+ 99%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████████████████▎ | 2831
+ 99%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+███████████████████████████████████████████████████████████████████████████████████████████████████▋ | 2836
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████▏| 2843
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████▌| 2848
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████▉| 2853
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████
+█████████████████████████████████████████████████████████████████████████████████████████████████████| 2854
+/2854 [05:48<00:00,  8.20it/s]
+2024-09-10 20:44:16.063 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/lecopivo/SciLean', commit='22d53b2f4e3db2a172e71da6eb9c916
+e62655744')
+Following Github server redirection from /repos/leanprover/std4 to /repositories/529900532
+2024-09-10 20:44:17.653 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.6.0-rc1
+2024-09-10 20:44:34.795 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.7.0-rc1
+2024-09-10 20:44:51.298 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.0.0
+2024-09-10 20:45:07.552 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='ht
+tps://github.com/leanprover/lean4-cli', commit='be8fa79a28b8b6897dce0713ef50e89c4a0f6ef5') relies on an uns
+upported Lean version: ec941735c80dc54c53948e30c428905b6600f95a
+2024-09-10 20:45:07.919 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://g
+ithub.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-10 20:45:09.041 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://g
+ithub.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-10 20:45:11.659 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for doc-gen4 master
+2024-09-10 20:45:13.819 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for mathlib4 lecopivo/fun_trans
+2024-09-10 20:45:52.683 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.8.0-rc1
+2024-09-10 20:46:09.195 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for LeanColls main
+2024-09-10 20:46:09.907 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.11.0-rc1
+2024-09-10 20:46:25.521 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='1b0072fea2aa6a0ef8ef8b506ec5
+223b184cb4d0')
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-09-10 20:46:27.625 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4-nightly nightly-2024-06-05
+2024-09-10 20:46:29.112 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='ht
+tps://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an unsuppo
+rted Lean version: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-09-10 20:46:29.112 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='38c48f2b8bdad62921
+aa9cef072bd05ce8625d0e')
+2024-09-10 20:46:30.498 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://g
+ithub.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-10 20:46:31.611 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://g
+ithub.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-10 20:46:34.045 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for doc-gen4 main
+2024-09-10 20:46:34.211 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for batteries main
+2024-09-10 20:46:44.291 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for quote4 master
+2024-09-10 20:46:44.635 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for aesop master
+2024-09-10 20:46:45.070 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for ProofWidgets4 v0.0.35
+2024-09-10 20:46:45.756 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4-cli main
+2024-09-10 20:46:46.372 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for lean4 v4.9.0
+2024-09-10 20:47:02.535 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commi
+t hash for import-graph main
+2024-09-10 20:47:03.185 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='1b0072fea2aa6a0ef8ef8b506ec5
+223b184cb4d0')
+2024-09-10 20:47:03.185 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/leanprover/std4', commit='46fed98b5cac2b1ea64e363b420c382e
+d1af0d85')
+2024-09-10 20:47:03.415 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='2c8ae451ce9ffc835543
+22b14437159c1a9703f9')
+2024-09-10 20:47:03.599 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='e5e4f1e9385f5a636cd95
+f7b5833d9ba7907115c')
+2024-09-10 20:47:04.310 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='fe1eff53bd083
+8c657aa6126fe4dd75ad9939d9a')
+2024-09-10 20:47:04.786 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b3632c84a09350
+b675ef3e347d0')
+2024-09-10 20:47:04.994 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='fb7841a6f4fb38
+9ec0e47dd4677844d49906af3c')
+2024-09-10 20:47:05.242 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/lecopivo/LeanColls', commit='417d8a6b4e8b1de6f42ee2c3e916a
+eb25495dfd6')
+2024-09-10 20:47:18.680 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1009 - Checking the
+ sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/lecopivo/SciLean', commit='22d53b2f4e3db2a17
+2e71da6eb9c916e62655744'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanprover/lean4', co
+mmit='daa22187642d4cf6954c39a23eab20d8a8675416'), 'std': LeanGitRepo(url='https://github.com/leanprover/std
+4', commit='3025cb124492b423070f20cf0a70636f757d117f'), 'Qq': LeanGitRepo(url='https://github.com/leanprove
+r-community/quote4', commit='01ad33937acd996ee99eb74eefb39845e4e4b9f5'), 'aesop': LeanGitRepo(url='https://
+github.com/leanprover-community/aesop', commit='0444234b4216e944d5be2ce42a25d7410c67876f'), 'proofwidgets':
+ LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='a96aee5245720f588876021b6
+a0aa73efee49c76'), 'Cli': LeanGitRepo(url='https://github.com/leanprover/lean4-cli', commit='2cf1030dc2ae6b
+3632c84a09350b675ef3e347d0'), '«doc-gen4»': LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commi
+t='1b0072fea2aa6a0ef8ef8b506ec5223b184cb4d0'), 'MD4Lean': LeanGitRepo(url='https://github.com/acmepjz/md4le
+an', commit='5e95f4776be5e048364f325c7e9d619bb56fb005'), 'UnicodeBasic': LeanGitRepo(url='https://github.co
+m/fgdorais/lean4-unicode-basic', commit='7afce91e4fcee25c1ed06dca8d71b82bed396776'), 'BibtexQuery': LeanGit
+Repo(url='https://github.com/dupuisf/BibtexQuery', commit='0a294fe9bf23b396c5cc955054c50b9b652ec5ad'), 'mat
+hlib': LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='faf7c200e4b9b8220bec3e33
+b01f8494b7a7e1e5'), 'batteries': LeanGitRepo(url='https://github.com/leanprover-community/batteries', commi
+t='dc167d260ff7ee9849b436037add06bed15104be'), 'importGraph': LeanGitRepo(url='https://github.com/leanprove
+r-community/import-graph', commit='57bd2065f1dbea5e9235646fb836c7cea9ab03b6'), 'leancolls': LeanGitRepo(url
+='https://github.com/lecopivo/LeanColls', commit='417d8a6b4e8b1de6f42ee2c3e916aeb25495dfd6')}, root_dir=Pos
+ixPath('/data/yingzi_ma/lean_project/.cache/lean_dojo/lecopivo-SciLean-22d53b2f4e3db2a172e71da6eb9c916e6265
+5744/SciLean'))
+2024-09-10 20:47:29.659 | INFO     | generate_benchmark_lean4:main:396 - Successfully traced the repo
+2024-09-10 20:47:29.660 | WARNING  | generate_benchmark_lean4:safe_remove_dir:281 - /data/yingzi_ma/lean_pr
+oject/datasets_PT_single_repo_no_ewc_curriculum/SciLean_22d53b2f4e3db2a172e71da6eb9c916e62655744 already ex
+ists. Removing it now.
+2024-09-10 20:47:35.380 | INFO     | generate_benchmark_lean4:split_data:133 - 72244 theorems in total
+2024-09-10 20:47:35.380 | INFO     | generate_benchmark_lean4:split_data:138 - 72244 theorems in total, wit
+h 1444 for validation and 1444 for testing
+2024-09-10 20:47:35.380 | INFO     | generate_benchmark_lean4:split_randomly:81 - Splitting the theorems ra
+ndomly
+2024-09-10 20:47:35.402 | INFO     | generate_benchmark_lean4:split_by_premise:95 - Splitting the theorems
+by premises
+2024-09-10 20:47:39.963 | INFO     | generate_benchmark_lean4:main:402 - Successfully split the data
+2024-09-10 20:47:51.806 | INFO     | generate_benchmark_lean4:export_proofs:202 - 69356 theorems and 107119
+ tactics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/SciLean_22d53b2f4e
+3db2a172e71da6eb9c916e62655744/random/train.json
+2024-09-10 20:47:52.154 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1444 theorems and 2220 ta
+ctics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/SciLean_22d53b2f4e3db
+2a172e71da6eb9c916e62655744/random/val.json
+2024-09-10 20:47:52.401 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1444 theorems and 2278 ta
+ctics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/SciLean_22d53b2f4e3db
+2a172e71da6eb9c916e62655744/random/test.json
+2024-09-10 20:48:03.405 | INFO     | generate_benchmark_lean4:export_proofs:202 - 69356 theorems and 102505
+ tactics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/SciLean_22d53b2f4e
+3db2a172e71da6eb9c916e62655744/novel_premises/train.json
+2024-09-10 20:48:03.938 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1444 theorems and 4867 ta
+ctics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/SciLean_22d53b2f4e3db
+2a172e71da6eb9c916e62655744/novel_premises/val.json
+2024-09-10 20:48:04.325 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1444 theorems and 4245 ta
+ctics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/SciLean_22d53b2f4e3db
+2a172e71da6eb9c916e62655744/novel_premises/test.json
+2024-09-10 20:48:04.326 | INFO     | generate_benchmark_lean4:export_proofs:206 - 144488 theorems saved in
+total
+2024-09-10 20:48:04.328 | INFO     | generate_benchmark_lean4:export_data:323 - Successfully exported the p
+roofs
+2024-09-10 20:48:18.679 | INFO     | generate_benchmark_lean4:export_premises:229 - 129711 theorems/definit
+ions from 2854 files saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/SciLea
+n_22d53b2f4e3db2a172e71da6eb9c916e62655744/corpus.jsonl
+2024-09-10 20:48:18.691 | INFO     | generate_benchmark_lean4:export_data:327 - Successfully exported the p
+remises
+2024-09-10 20:48:18.692 | INFO     | generate_benchmark_lean4:export_data:335 - Successfully exported the m
+etadata
+2024-09-10 20:48:18.692 | INFO     | generate_benchmark_lean4:main:404 - Successfully exported the data
+2024-09-10 20:48:18.741 | INFO     | __main__:add_repo_to_database:929 - Finished generating benchmark at /
+data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/SciLean_22d53b2f4e3db2a172e71da6eb9c9
+16e62655744
+100%|█████████████████████████████████████████████████████████████| 69356/69356 [00:01<00:00, 61453.15it/s]
+100%|███████████████████████████████████████████████████████████████| 1444/1444 [00:00<00:00, 58077.70it/s]
+100%|███████████████████████████████████████████████████████████████| 1444/1444 [00:00<00:00, 67983.42it/s]
+2024-09-10 20:48:21.610 | INFO     | __main__:add_repo_to_database:954 - Before adding new repo:
+2024-09-10 20:48:21.610 | INFO     | dynamic_database:print_database_contents:624 - Current database conten
+ts:
+2024-09-10 20:48:21.611 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: ht
+tps://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-10 20:48:21.611 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://gi
+thub.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-10 20:48:21.611 | INFO     | __main__:add_repo_to_database:957 - After adding new repo:
+2024-09-10 20:48:21.611 | INFO     | dynamic_database:print_database_contents:624 - Current database conten
+ts:
+2024-09-10 20:48:21.611 | INFO     | dynamic_database:print_database_contents:626 -   - https://github.com/
+lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-10 20:48:28.074 | INFO     | __main__:main:1238 - Successfully added repo https://github.com/lecopi
+vo/SciLean
+2024-09-10 20:48:28.074 | INFO     | __main__:main:1235 - Processing https://github.com/ImperialCollegeLond
+on/FLT
+2024-09-10 20:48:28.074 | INFO     | __main__:add_repo_to_database:895 - Processing https://github.com/Impe
+rialCollegeLondon/FLT.git
+2024-09-10 20:48:28.409 | INFO     | __main__:get_compatible_commit:323 - Latest commit: d9238121e80ba04e85
+0331a91845ad9f9e133213
+2024-09-10 20:48:28.409 | INFO     | __main__:get_compatible_commit:326 - Creating LeanGitRepo for https://
+github.com/ImperialCollegeLondon/FLT
+2024-09-10 20:48:28.409 | INFO     | __main__:get_compatible_commit:328 - Getting config for https://github
+.com/ImperialCollegeLondon/FLT.git
+2024-09-10 20:48:28.409 | INFO     | __main__:get_compatible_commit:335 - Searching for compatible commit f
+or https://github.com/ImperialCollegeLondon/FLT.git
+2024-09-10 20:48:28.412 | INFO     | __main__:get_compatible_commit:341 - Already in a Git repository
+2024-09-10 20:48:28.414 | INFO     | __main__:get_compatible_commit:351 - Fetching commits for https://gith
+ub.com/ImperialCollegeLondon/FLT.git
+2024-09-10 20:48:39.948 | INFO     | __main__:get_compatible_commit:355 - Fetched commits for https://githu
+b.com/ImperialCollegeLondon/FLT.git
+2024-09-10 20:48:39.953 | INFO     | __main__:get_compatible_commit:361 - Getting list of commits for https
+://github.com/ImperialCollegeLondon/FLT.git
+2024-09-10 20:48:39.964 | INFO     | __main__:get_compatible_commit:366 - Found 791 commits for https://git
+hub.com/ImperialCollegeLondon/FLT.git
+2024-09-10 20:49:10.825 | INFO     | __main__:get_compatible_commit:373 - Found compatible commit b208a302c
+dcbfadce33d8165f0b054bfa17e2147 for https://github.com/ImperialCollegeLondon/FLT.git
+2024-09-10 20:49:10.826 | INFO     | __main__:add_repo_to_database:915 - Found compatible commit b208a302cd
+cbfadce33d8165f0b054bfa17e2147 for https://github.com/ImperialCollegeLondon/FLT.git
+2024-09-10 20:49:10.826 | INFO     | __main__:add_repo_to_database:916 - Lean version: v4.8.0-rc2
+2024-09-10 20:49:10.826 | INFO     | __main__:add_repo_to_database:921 - Generating benchmark at /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147
+2024-09-10 20:49:10.826 | INFO     | generate_benchmark_lean4:main:354 - Generating dataset to go into /dat
+a/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/FLT_b208a302cdcbfadce33d8165f0b054bfa17e
+2147
+2024-09-10 20:49:10.826 | INFO     | generate_benchmark_lean4:main:361 - lean toolchain version: {'content'
+: 'leanprover/lean4:v4.8.0-rc2\n'}
+2024-09-10 20:49:10.826 | INFO     | generate_benchmark_lean4:main:363 - lean version v: v4.8.0-rc2
+2024-09-10 20:49:10.826 | INFO     | generate_benchmark_lean4:main:364 - is supported: True
+2024-09-10 20:49:10.827 | INFO     | generate_benchmark_lean4:main:373 - lean path1 /data/yingzi_ma/.elan/t
+oolchains/leanprover--lean4---4.8.0-rc2
+2024-09-10 20:49:10.827 | INFO     | generate_benchmark_lean4:main:374 - lean path2 /.elan/toolchains/leanp
+rover--lean4---4.8.0-rc2
+2024-09-10 20:49:10.827 | INFO     | generate_benchmark_lean4:main:375 - lean path3 ~/.elan/toolchains/lean
+prover--lean4---4.8.0-rc2
+2024-09-10 20:49:10.827 | INFO     | generate_benchmark_lean4:main:379 - Lean toolchain path 2 does not exi
+st: /.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-10 20:49:10.828 | INFO     | generate_benchmark_lean4:main:381 - Lean toolchain path 3 does not exi
+st: ~/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-10 20:49:10.828 | INFO     | generate_benchmark_lean4:main:384 - Switched to Lean toolchain at: /da
+ta/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc2
+2024-09-10 20:49:10.891 | INFO     | generate_benchmark_lean4:main:386 - lean --version: Lean (version 4.8.
+0-rc2, x86_64-unknown-linux-gnu, commit 873ef2d894af, Release)
+
+2024-09-10 20:49:10.891 | INFO     | generate_benchmark_lean4:main:387 - repo: LeanGitRepo(url='https://git
+hub.com/ImperialCollegeLondon/FLT', commit='b208a302cdcbfadce33d8165f0b054bfa17e2147')
+2024-09-10 20:49:10.891 | INFO     | generate_benchmark_lean4:main:389 - Configuring LeanDojo again...
+2024-09-10 20:49:10.896 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working dire
+ctory: /data/yingzi_ma/lean_project/ReProver
+2024-09-10 20:49:10.896 | INFO     | generate_benchmark_lean4:main:391 - LeanDojo configured
+2024-09-10 20:49:10.896 | INFO     | generate_benchmark_lean4:main:394 - Tracing the repo...
+2024-09-10 20:49:10.899 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced r
+epo is available in the cache.
+2024-09-10 20:49:10.899 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo fr
+om /data/yingzi_ma/lean_project/.cache/lean_dojo/ImperialCollegeLondon-FLT-b208a302cdcbfadce33d8165f0b054bf
+a17e2147/FLT
+2024-09-10 20:49:13.839 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1123 - Loading 30
+90 traced XML files from /data/yingzi_ma/lean_project/.cache/lean_dojo/ImperialCollegeLondon-FLT-b208a302cd
+cbfadce33d8165f0b054bfa17e2147/FLT with 31 workers
+100%|██████████████████████████████████████████████████████████████████| 3090/3090 [07:21<00:00,  7.00it/s]
+2024-09-10 20:56:35.384 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/ImperialCollegeLondon/FLT', commit='b208a302cdcbfadce33d81
+65f0b054bfa17e2147')
+2024-09-10 20:56:36.343 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://g
+ithub.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-10 20:56:37.456 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://g
+ithub.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-10 20:56:41.118 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='077376e6ffae88973f
+0ffaabb3de463523be6875')
+2024-09-10 20:56:41.891 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/PatrickMassot/checkdecls', commit='11fa569b1b52f987dc5dcea
+97fd80eaff95c2fce')
+2024-09-10 20:56:42.125 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dep
+endencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='1b0072fea2aa6a0ef8ef8b506ec5
+223b184cb4d0')
+2024-09-10 20:56:54.890 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1009 - Checking the
+ sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/ImperialCollegeLondon/FLT', commit='b208a302
+cdcbfadce33d8165f0b054bfa17e2147'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanprover/l
+ean4', commit='e9e858a4484905a0bfe97c4f05c3924ead02eed8'), 'batteries': LeanGitRepo(url='https://github.com
+/leanprover-community/batteries', commit='46fed98b5cac2b1ea64e363b420c382ed1af0d85'), 'Qq': LeanGitRepo(url
+='https://github.com/leanprover-community/quote4', commit='2c8ae451ce9ffc83554322b14437159c1a9703f9'), 'aes
+op': LeanGitRepo(url='https://github.com/leanprover-community/aesop', commit='bea1488cd9a74883511471a6d3fa9
+54a3ac40809'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', com
+mit='eb08eee94098fe530ccd6d8751a86fe405473d4c'), 'Cli': LeanGitRepo(url='https://github.com/mhuisi/lean4-cl
+i', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca'), 'mathlib': LeanGitRepo(url='https://github.com/lean
+prover-community/mathlib4', commit='077376e6ffae88973f0ffaabb3de463523be6875'), 'importGraph': LeanGitRepo(
+url='https://github.com/leanprover-community/import-graph', commit='fb7841a6f4fb389ec0e47dd4677844d49906af3
+c'), 'checkdecls': LeanGitRepo(url='https://github.com/PatrickMassot/checkdecls', commit='11fa569b1b52f987d
+c5dcea97fd80eaff95c2fce'), '«doc-gen4»': LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='
+1b0072fea2aa6a0ef8ef8b506ec5223b184cb4d0'), 'MD4Lean': LeanGitRepo(url='https://github.com/acmepjz/md4lean'
+, commit='5e95f4776be5e048364f325c7e9d619bb56fb005'), 'UnicodeBasic': LeanGitRepo(url='https://github.com/f
+gdorais/lean4-unicode-basic', commit='7afce91e4fcee25c1ed06dca8d71b82bed396776'), 'BibtexQuery': LeanGitRep
+o(url='https://github.com/dupuisf/BibtexQuery', commit='0a294fe9bf23b396c5cc955054c50b9b652ec5ad')}, root_d
+ir=PosixPath('/data/yingzi_ma/lean_project/.cache/lean_dojo/ImperialCollegeLondon-FLT-b208a302cdcbfadce33d8
+165f0b054bfa17e2147/FLT'))
+2024-09-10 20:57:06.893 | INFO     | generate_benchmark_lean4:main:396 - Successfully traced the repo
+2024-09-10 20:57:06.894 | WARNING  | generate_benchmark_lean4:safe_remove_dir:281 - /data/yingzi_ma/lean_pr
+oject/datasets_PT_single_repo_no_ewc_curriculum/FLT_b208a302cdcbfadce33d8165f0b054bfa17e2147 already exists
+. Removing it now.
+2024-09-10 20:57:13.216 | INFO     | generate_benchmark_lean4:split_data:133 - 75082 theorems in total
+2024-09-10 20:57:13.217 | INFO     | generate_benchmark_lean4:split_data:138 - 75082 theorems in total, wit
+h 1501 for validation and 1501 for testing
+2024-09-10 20:57:13.217 | INFO     | generate_benchmark_lean4:split_randomly:81 - Splitting the theorems ra
+ndomly
+2024-09-10 20:57:13.242 | INFO     | generate_benchmark_lean4:split_by_premise:95 - Splitting the theorems
+by premises
+2024-09-10 20:57:18.017 | INFO     | generate_benchmark_lean4:main:402 - Successfully split the data
+2024-09-10 20:57:30.329 | INFO     | generate_benchmark_lean4:export_proofs:202 - 72080 theorems and 112451
+ tactics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/FLT_b208a302cdcbfa
+dce33d8165f0b054bfa17e2147/random/train.json
+2024-09-10 20:57:30.696 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1501 theorems and 2383 ta
+ctics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/FLT_b208a302cdcbfadce
+33d8165f0b054bfa17e2147/random/val.json
+2024-09-10 20:57:30.934 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1501 theorems and 2159 ta
+ctics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/FLT_b208a302cdcbfadce
+33d8165f0b054bfa17e2147/random/test.json
+2024-09-10 20:57:42.434 | INFO     | generate_benchmark_lean4:export_proofs:202 - 72080 theorems and 108993
+ tactics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/FLT_b208a302cdcbfa
+dce33d8165f0b054bfa17e2147/novel_premises/train.json
+2024-09-10 20:57:42.928 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1501 theorems and 4102 ta
+ctics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/FLT_b208a302cdcbfadce
+33d8165f0b054bfa17e2147/novel_premises/val.json
+2024-09-10 20:57:43.300 | INFO     | generate_benchmark_lean4:export_proofs:202 - 1501 theorems and 3898 ta
+ctics saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/FLT_b208a302cdcbfadce
+33d8165f0b054bfa17e2147/novel_premises/test.json
+2024-09-10 20:57:43.301 | INFO     | generate_benchmark_lean4:export_proofs:206 - 150164 theorems saved in
+total
+2024-09-10 20:57:43.303 | INFO     | generate_benchmark_lean4:export_data:323 - Successfully exported the p
+roofs
+2024-09-10 20:57:58.716 | INFO     | generate_benchmark_lean4:export_premises:229 - 114830 theorems/definit
+ions from 3090 files saved to /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/FLT_b2
+08a302cdcbfadce33d8165f0b054bfa17e2147/corpus.jsonl
+2024-09-10 20:57:58.729 | INFO     | generate_benchmark_lean4:export_data:327 - Successfully exported the p
+remises
+2024-09-10 20:57:58.731 | INFO     | generate_benchmark_lean4:export_data:335 - Successfully exported the m
+etadata
+2024-09-10 20:57:58.731 | INFO     | generate_benchmark_lean4:main:404 - Successfully exported the data
+2024-09-10 20:57:58.781 | INFO     | __main__:add_repo_to_database:929 - Finished generating benchmark at /
+data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/FLT_b208a302cdcbfadce33d8165f0b054bfa
+17e2147
+100%|███████████████████████████████████████████████████████████████| 1501/1501 [00:00<00:00, 67028.48it/s]
+100%|█████████████████████████████████████████████████████████████| 72080/72080 [00:01<00:00, 60754.90it/s]
+100%|███████████████████████████████████████████████████████████████| 1501/1501 [00:00<00:00, 63580.23it/s]
+2024-09-10 20:58:51.927 | INFO     | __main__:add_repo_to_database:954 - Before adding new repo:
+2024-09-10 20:58:51.928 | INFO     | dynamic_database:print_database_contents:624 - Current database conten
+ts:
+2024-09-10 20:58:51.928 | INFO     | dynamic_database:print_database_contents:626 -   - https://github.com/
+lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-10 20:58:51.928 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: ht
+tps://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-10 20:58:51.928 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://gi
+thub.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-10 20:58:51.928 | INFO     | __main__:add_repo_to_database:957 - After adding new repo:
+2024-09-10 20:58:51.928 | INFO     | dynamic_database:print_database_contents:624 - Current database conten
+ts:
+2024-09-10 20:58:51.928 | INFO     | dynamic_database:print_database_contents:626 -   - https://github.com/
+lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-10 20:58:51.928 | INFO     | dynamic_database:print_database_contents:626 -   - https://github.com/
+ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-10 20:59:05.053 | INFO     | __main__:main:1238 - Successfully added repo https://github.com/Imperi
+alCollegeLondon/FLT
+2024-09-10 20:59:05.053 | INFO     | __main__:main:1235 - Processing https://github.com/teorth/pfr
+2024-09-10 20:59:05.053 | INFO     | __main__:add_repo_to_database:895 - Processing https://github.com/teor
+th/pfr.git
+2024-09-10 20:59:05.053 | INFO     | __main__:add_repo_to_database:915 - Found compatible commit fa398a5b85
+3c7e94e3294c45e50c6aee013a2687 for https://github.com/teorth/pfr.git
+2024-09-10 20:59:05.053 | INFO     | __main__:add_repo_to_database:916 - Lean version: v4.8.0-rc1
+2024-09-10 20:59:05.246 | INFO     | __main__:add_repo_to_database:921 - Generating benchmark at /data/ying
+zi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+2024-09-10 20:59:05.246 | INFO     | generate_benchmark_lean4:main:354 - Generating dataset to go into /dat
+a/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum/pfr_fa398a5b853c7e94e3294c45e50c6aee013a
+2687
+2024-09-10 20:59:05.246 | INFO     | generate_benchmark_lean4:main:361 - lean toolchain version: {'content'
+: 'leanprover/lean4:v4.8.0-rc1\n'}
+2024-09-10 20:59:05.246 | INFO     | generate_benchmark_lean4:main:363 - lean version v: v4.8.0-rc1
+2024-09-10 20:59:05.246 | INFO     | generate_benchmark_lean4:main:364 - is supported: True
+2024-09-10 20:59:05.246 | INFO     | generate_benchmark_lean4:main:373 - lean path1 /data/yingzi_ma/.elan/t
+oolchains/leanprover--lean4---4.8.0-rc1
+2024-09-10 20:59:05.246 | INFO     | generate_benchmark_lean4:main:374 - lean path2 /.elan/toolchains/leanp
+rover--lean4---4.8.0-rc1
+2024-09-10 20:59:05.246 | INFO     | generate_benchmark_lean4:main:375 - lean path3 ~/.elan/toolchains/lean
+prover--lean4---4.8.0-rc1
+2024-09-10 20:59:05.247 | INFO     | generate_benchmark_lean4:main:379 - Lean toolchain path 2 does not exi
+st: /.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-10 20:59:05.248 | INFO     | generate_benchmark_lean4:main:381 - Lean toolchain path 3 does not exi
+st: ~/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-10 20:59:05.248 | INFO     | generate_benchmark_lean4:main:384 - Switched to Lean toolchain at: /da
+ta/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-10 20:59:05.280 | INFO     | generate_benchmark_lean4:main:386 - lean --version: Lean (version 4.8.
+0-rc1, x86_64-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-09-10 20:59:05.280 | INFO     | generate_benchmark_lean4:main:387 - repo: LeanGitRepo(url='https://git
+hub.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687')
+2024-09-10 20:59:05.280 | INFO     | generate_benchmark_lean4:main:389 - Configuring LeanDojo again...
+2024-09-10 20:59:05.286 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working dire
+ctory: /data/yingzi_ma/lean_project/ReProver
+2024-09-10 20:59:05.286 | INFO     | generate_benchmark_lean4:main:391 - LeanDojo configured
+2024-09-10 20:59:05.286 | INFO     | generate_benchmark_lean4:main:394 - Tracing the repo...
+2024-09-10 20:59:05.288 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced r
+epo is available in the cache.
+2024-09-10 20:59:05.289 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo fr
+om /data/yingzi_ma/lean_project/.cache/lean_dojo/teorth-pfr-fa398a5b853c7e94e3294c45e50c6aee013a2687/pfr
+2024-09-10 20:59:07.765 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1123 - Loading 28
+90 traced XML files from /data/yingzi_ma/lean_project/.cache/lean_dojo/teorth-pfr-fa398a5b853c7e94e3294c45e
+50c6aee013a2687/pfr with 31 workers
+ 43%|████████████████████████████▎                                     | 1239/2890 [02:37<02:48,  9.79it/s]

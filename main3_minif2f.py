@@ -92,10 +92,10 @@ repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR
 # ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc.pkl"
 
 DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum"
-CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum"
-EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum.txt"
-DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_curriculum_full.json"
-PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum_minif2f.log"
+CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum_with_14_full"
+EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum_with_14_full.txt"
+DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_curriculum_full_minif2f_14.json"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum_minif2f_14.log"
 ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curriculum_full_minif2f.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_ewc"
@@ -1223,7 +1223,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 16
+        current_epoch = 24
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False

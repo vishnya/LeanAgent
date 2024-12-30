@@ -1,0 +1,385 @@
+(base) yingzi_ma@cais-login-0:~/lean_project/ReProver$ ssh compute-permanent-node-794
+Last login: Sun Sep  1 19:14:44 2024 from 10.0.0.241
+(base) yingzi_ma@compute-permanent-node-794:~$ cd lean_project/
+(base) yingzi_ma@compute-permanent-node-794:~/lean_project$ cd ReProver
+(base) yingzi_ma@compute-permanent-node-794:~/lean_project/ReProver$ bash run_code.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+[2024-09-01 19:16:55,110] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-01 19:16:57.398 | INFO     | __main__:main:1198 - Running retrieval baseline
+2024-09-01 19:16:57.398 | INFO     | __main__:main:1201 - Configuring LeanDojo...
+2024-09-01 19:16:57.401 | INFO     | generate_benchmark_lean4:configure_leandojo:317 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-01 19:16:57.401 | INFO     | __main__:main:1203 - LeanDojo configured
+2024-09-01 19:16:59.303 | INFO     | __main__:search_github_repositories:383 - Processing leanprover/lean4
+2024-09-01 19:16:59.303 | INFO     | __main__:search_github_repositories:401 - Skipping leanprover/lean4 since it is a known repository
+2024-09-01 19:16:59.304 | INFO     | __main__:search_github_repositories:383 - Processing leanprover-community/mathlib3
+Cloning https://github.com/leanprover-community/mathlib3.git
+Repo name: leanprover-community/mathlib3
+2024-09-01 19:17:00.143 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/mathlib3/65a1391a0106c9204fe45bc73a039f056558cb83/lean-toolchain failed. Retrying..
+.
+2024-09-01 19:17:01.172 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/mathlib3/65a1391a0106c9204fe45bc73a039f056558cb83/lean-toolchain failed. Retrying..
+.
+2024-09-01 19:17:03.202 | INFO     | __main__:search_github_repositories:399 - Failed to clone leanprover-community/mathlib3 because of HTTP Error 404: Not Found
+2024-09-01 19:17:03.202 | INFO     | __main__:search_github_repositories:383 - Processing leanprover-community/mathlib4
+Cloning https://github.com/leanprover-community/mathlib4.git
+Repo name: leanprover-community/mathlib4
+2024-09-01 19:17:03.936 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc3
+2024-09-01 19:17:19.626 | INFO     | __main__:search_github_repositories:383 - Processing uwdb/Cosette
+Cloning https://github.com/uwdb/Cosette.git
+Repo name: uwdb/Cosette
+2024-09-01 19:17:20.156 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/uwdb/Cosette/c16b48ec7d278c717a9f1da3684f69621b3863f2/lean-toolchain failed. Retrying...
+2024-09-01 19:17:21.184 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/uwdb/Cosette/c16b48ec7d278c717a9f1da3684f69621b3863f2/lean-toolchain failed. Retrying...
+2024-09-01 19:17:23.214 | INFO     | __main__:search_github_repositories:399 - Failed to clone uwdb/Cosette because of HTTP Error 404: Not Found
+2024-09-01 19:17:23.216 | INFO     | __main__:search_github_repositories:383 - Processing AndrasKovacs/smalltt
+Cloning https://github.com/AndrasKovacs/smalltt.git
+Repo name: AndrasKovacs/smalltt
+2024-09-01 19:17:23.725 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/AndrasKovacs/smalltt/b5fc9b3747dcbf8c71ca9f976afb7b574b630996/lean-toolchain failed. Retrying...
+2024-09-01 19:17:24.768 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/AndrasKovacs/smalltt/b5fc9b3747dcbf8c71ca9f976afb7b574b630996/lean-toolchain failed. Retrying...
+2024-09-01 19:17:26.812 | INFO     | __main__:search_github_repositories:399 - Failed to clone AndrasKovacs/smalltt because of HTTP Error 404: Not Found
+2024-09-01 19:17:26.813 | INFO     | __main__:search_github_repositories:383 - Processing dselsam/certigrad
+Cloning https://github.com/dselsam/certigrad.git
+Repo name: dselsam/certigrad
+2024-09-01 19:17:27.321 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/dselsam/certigrad/c9a06e93f1ec58196d6d3b8563b29868d916727f/lean-toolchain failed. Retrying...
+2024-09-01 19:17:28.351 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/dselsam/certigrad/c9a06e93f1ec58196d6d3b8563b29868d916727f/lean-toolchain failed. Retrying...
+2024-09-01 19:17:30.382 | INFO     | __main__:search_github_repositories:399 - Failed to clone dselsam/certigrad because of HTTP Error 404: Not Found
+2024-09-01 19:17:30.383 | INFO     | __main__:search_github_repositories:383 - Processing Kha/electrolysis
+Cloning https://github.com/Kha/electrolysis.git
+Repo name: Kha/electrolysis
+2024-09-01 19:17:30.902 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Kha/electrolysis/bd4655d91ca65856fb8373637ce3e7b17ee3a190/lean-toolchain failed. Retrying...
+2024-09-01 19:17:31.932 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Kha/electrolysis/bd4655d91ca65856fb8373637ce3e7b17ee3a190/lean-toolchain failed. Retrying...
+2024-09-01 19:17:33.962 | INFO     | __main__:search_github_repositories:399 - Failed to clone Kha/electrolysis because of HTTP Error 404: Not Found
+2024-09-01 19:17:33.963 | INFO     | __main__:search_github_repositories:383 - Processing ImperialCollegeLondon/formalising-mathematics
+Cloning https://github.com/ImperialCollegeLondon/formalising-mathematics.git
+Repo name: ImperialCollegeLondon/formalising-mathematics
+2024-09-01 19:17:34.518 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/formalising-mathematics/d81ad67e36774eb68f242bcc1b88d33dacfd87bf/lean-toolchain fa
+iled. Retrying...
+2024-09-01 19:17:35.547 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/formalising-mathematics/d81ad67e36774eb68f242bcc1b88d33dacfd87bf/lean-toolchain fa
+iled. Retrying...
+2024-09-01 19:17:37.577 | INFO     | __main__:search_github_repositories:399 - Failed to clone ImperialCollegeLondon/formalising-mathematics because of HTTP Error 404: Not Found
+2024-09-01 19:17:37.577 | INFO     | __main__:search_github_repositories:383 - Processing lecopivo/SciLean
+Cloning https://github.com/lecopivo/SciLean.git
+Repo name: lecopivo/SciLean
+2024-09-01 19:17:38.075 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-01 19:17:53.505 | INFO     | __main__:search_github_repositories:383 - Processing ImperialCollegeLondon/natural_number_game
+Cloning https://github.com/ImperialCollegeLondon/natural_number_game.git
+Repo name: ImperialCollegeLondon/natural_number_game
+2024-09-01 19:17:54.084 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/natural_number_game/6b30156c5025760d1ed8753de3b44a075e2f8a51/lean-toolchain failed
+. Retrying...
+2024-09-01 19:17:55.127 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/natural_number_game/6b30156c5025760d1ed8753de3b44a075e2f8a51/lean-toolchain failed
+. Retrying...
+2024-09-01 19:17:57.172 | INFO     | __main__:search_github_repositories:399 - Failed to clone ImperialCollegeLondon/natural_number_game because of HTTP Error 404: Not Found
+2024-09-01 19:17:57.173 | INFO     | __main__:search_github_repositories:383 - Processing leanprover-community/batteries
+2024-09-01 19:17:57.173 | INFO     | __main__:search_github_repositories:401 - Skipping leanprover-community/batteries since it is a known repository
+2024-09-01 19:17:57.173 | INFO     | __main__:search_github_repositories:383 - Processing kbuzzard/xena
+Cloning https://github.com/kbuzzard/xena.git
+Repo name: kbuzzard/xena
+2024-09-01 19:17:57.716 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kbuzzard/xena/936b113e4741ab2a3d9d9883d31cbe5ac5669bbb/lean-toolchain failed. Retrying...
+2024-09-01 19:17:58.760 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kbuzzard/xena/936b113e4741ab2a3d9d9883d31cbe5ac5669bbb/lean-toolchain failed. Retrying...
+2024-09-01 19:18:00.803 | INFO     | __main__:search_github_repositories:399 - Failed to clone kbuzzard/xena because of HTTP Error 404: Not Found
+2024-09-01 19:18:00.804 | INFO     | __main__:search_github_repositories:383 - Processing leanprover-community/lean4-metaprogramming-book
+2024-09-01 19:18:00.804 | INFO     | __main__:search_github_repositories:401 - Skipping leanprover-community/lean4-metaprogramming-book since it is a known repository
+2024-09-01 19:18:00.804 | INFO     | __main__:search_github_repositories:383 - Processing ImperialCollegeLondon/FLT
+Cloning https://github.com/ImperialCollegeLondon/FLT.git
+Repo name: ImperialCollegeLondon/FLT
+2024-09-01 19:18:01.373 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc1
+2024-09-01 19:18:17.318 | INFO     | __main__:search_github_repositories:383 - Processing leanprover-community/tutorials
+Cloning https://github.com/leanprover-community/tutorials.git
+Repo name: leanprover-community/tutorials
+2024-09-01 19:18:17.886 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/tutorials/cf6d067632cedda813d880eaf730324d021c653e/lean-toolchain failed. Retrying.
+..
+2024-09-01 19:18:18.932 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/tutorials/cf6d067632cedda813d880eaf730324d021c653e/lean-toolchain failed. Retrying.
+..
+2024-09-01 19:18:20.975 | INFO     | __main__:search_github_repositories:399 - Failed to clone leanprover-community/tutorials because of HTTP Error 404: Not Found
+2024-09-01 19:18:20.976 | INFO     | __main__:search_github_repositories:383 - Processing leanprover-community/aesop
+2024-09-01 19:18:20.977 | INFO     | __main__:search_github_repositories:401 - Skipping leanprover-community/aesop since it is a known repository
+2024-09-01 19:18:20.977 | INFO     | __main__:search_github_repositories:383 - Processing leanprover-community/lean-liquid
+Cloning https://github.com/leanprover-community/lean-liquid.git
+Repo name: leanprover-community/lean-liquid
+2024-09-01 19:18:21.553 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/lean-liquid/087fffad55dc1dd8d54ab35c9816926a45b8c0fd/lean-toolchain failed. Retryin
+g...
+2024-09-01 19:18:22.595 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/lean-liquid/087fffad55dc1dd8d54ab35c9816926a45b8c0fd/lean-toolchain failed. Retryin
+g...
+2024-09-01 19:18:24.639 | INFO     | __main__:search_github_repositories:399 - Failed to clone leanprover-community/lean-liquid because of HTTP Error 404: Not Found
+2024-09-01 19:18:24.640 | INFO     | __main__:search_github_repositories:383 - Processing openai/lean-gym
+Cloning https://github.com/openai/lean-gym.git
+Repo name: openai/lean-gym
+2024-09-01 19:18:25.250 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/openai/lean-gym/1585ac4d2e56a1ceb72243ce859645b9d0069d34/lean-toolchain failed. Retrying...
+2024-09-01 19:18:26.279 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/openai/lean-gym/1585ac4d2e56a1ceb72243ce859645b9d0069d34/lean-toolchain failed. Retrying...
+2024-09-01 19:18:28.311 | INFO     | __main__:search_github_repositories:399 - Failed to clone openai/lean-gym because of HTTP Error 404: Not Found
+2024-09-01 19:18:28.311 | INFO     | __main__:search_github_repositories:383 - Processing formalabstracts/formalabstracts
+Cloning https://github.com/formalabstracts/formalabstracts.git
+Repo name: formalabstracts/formalabstracts
+2024-09-01 19:18:28.838 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/formalabstracts/formalabstracts/b0173da1af45421239d44492eeecd54bf65ee0f6/lean-toolchain failed. Retrying
+...
+2024-09-01 19:18:29.882 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/formalabstracts/formalabstracts/b0173da1af45421239d44492eeecd54bf65ee0f6/lean-toolchain failed. Retrying
+...
+2024-09-01 19:18:31.922 | INFO     | __main__:search_github_repositories:399 - Failed to clone formalabstracts/formalabstracts because of HTTP Error 404: Not Found
+2024-09-01 19:18:31.923 | INFO     | __main__:search_github_repositories:383 - Processing ImperialCollegeLondon/M40001_lean
+Cloning https://github.com/ImperialCollegeLondon/M40001_lean.git
+Repo name: ImperialCollegeLondon/M40001_lean
+2024-09-01 19:18:32.509 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/M40001_lean/8cc4a60897dabdd5bc0d116144776f3286fde70c/lean-toolchain failed. Retryi
+ng...
+2024-09-01 19:18:33.536 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/M40001_lean/8cc4a60897dabdd5bc0d116144776f3286fde70c/lean-toolchain failed. Retryi
+ng...
+2024-09-01 19:18:35.572 | INFO     | __main__:search_github_repositories:399 - Failed to clone ImperialCollegeLondon/M40001_lean because of HTTP Error 404: Not Found
+2024-09-01 19:18:35.573 | INFO     | __main__:search_github_repositories:383 - Processing teorth/pfr
+Cloning https://github.com/teorth/pfr.git
+Repo name: teorth/pfr
+2024-09-01 19:18:36.079 | INFO     | __main__:search_github_repositories:383 - Processing AlexKontorovich/PrimeNumberTheoremAnd
+Cloning https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+Repo name: AlexKontorovich/PrimeNumberTheoremAnd
+2024-09-01 19:18:36.578 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc2
+2024-09-01 19:18:52.259 | INFO     | __main__:search_github_repositories:383 - Processing kmill/lean4-raytracer
+Cloning https://github.com/kmill/lean4-raytracer.git
+Repo name: kmill/lean4-raytracer
+2024-09-01 19:18:52.793 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+Found 6 repositories
+Using lambda = 0.0
+Using lambda = 0.0
+Using lambda = 0.0
+Using lambda = 0.0
+Processing /data/yingzi_ma/lean_project/repos_new/teorth/pfr
+2024-09-01 19:19:08.316 | INFO     | __main__:retrieve_proof:1008 - Processing https://github.com/teorth/pfr.git
+2024-09-01 19:19:08.637 | INFO     | __main__:get_compatible_commit:306 - Latest commit: 8c01cbdc177f408d64abd494a50678008df1d961
+2024-09-01 19:19:08.637 | INFO     | __main__:get_compatible_commit:309 - Creating LeanGitRepo for https://github.com/teorth/pfr
+2024-09-01 19:19:08.637 | INFO     | __main__:get_compatible_commit:311 - Getting config for https://github.com/teorth/pfr.git
+2024-09-01 19:19:08.637 | INFO     | __main__:get_compatible_commit:318 - Searching for compatible commit for https://github.com/teorth/pfr.git
+2024-09-01 19:19:08.641 | INFO     | __main__:get_compatible_commit:324 - Already in a Git repository
+2024-09-01 19:19:08.642 | INFO     | __main__:get_compatible_commit:334 - Fetching commits for https://github.com/teorth/pfr.git
+2024-09-01 19:19:10.145 | INFO     | __main__:get_compatible_commit:338 - Fetched commits for https://github.com/teorth/pfr.git
+2024-09-01 19:19:10.149 | INFO     | __main__:get_compatible_commit:344 - Getting list of commits for https://github.com/teorth/pfr.git
+2024-09-01 19:19:10.185 | INFO     | __main__:get_compatible_commit:349 - Found 1532 commits for https://github.com/teorth/pfr.git
+2024-09-01 19:19:11.121 | INFO     | __main__:get_compatible_commit:356 - Found compatible commit fa398a5b853c7e94e3294c45e50c6aee013a2687 for https://github.com/teorth/pfr.git
+2024-09-01 19:19:11.121 | INFO     | __main__:retrieve_proof:1024 - Found compatible commit fa398a5b853c7e94e3294c45e50c6aee013a2687 for https://github.com/teorth/pfr.git
+2024-09-01 19:19:11.121 | INFO     | __main__:retrieve_proof:1025 - Lean version: v4.8.0-rc1
+2024-09-01 19:19:11.121 | INFO     | __main__:retrieve_proof:1030 - Generating benchmark at /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+2024-09-01 19:19:11.121 | INFO     | generate_benchmark_lean4:main:324 - Generating dataset to go into /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a268
+7
+2024-09-01 19:19:11.121 | INFO     | generate_benchmark_lean4:main:331 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0-rc1\n'}
+2024-09-01 19:19:11.121 | INFO     | generate_benchmark_lean4:main:333 - lean version v: v4.8.0-rc1
+2024-09-01 19:19:11.121 | INFO     | generate_benchmark_lean4:main:334 - is supported: True
+2024-09-01 19:19:11.122 | INFO     | generate_benchmark_lean4:main:344 - lean path1 /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-01 19:19:11.122 | INFO     | generate_benchmark_lean4:main:345 - lean path2 /.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-01 19:19:11.122 | INFO     | generate_benchmark_lean4:main:346 - lean path3 ~/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-01 19:19:11.122 | INFO     | generate_benchmark_lean4:main:350 - Lean toolchain path 2 does not exist: /.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-01 19:19:11.122 | INFO     | generate_benchmark_lean4:main:352 - Lean toolchain path 3 does not exist: ~/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-01 19:19:11.123 | INFO     | generate_benchmark_lean4:main:355 - Switched to Lean toolchain at: /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0-rc1
+2024-09-01 19:19:11.170 | INFO     | generate_benchmark_lean4:main:357 - lean --version: Lean (version 4.8.0-rc1, x86_64-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-09-01 19:19:11.170 | INFO     | generate_benchmark_lean4:main:358 - repo: LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687')
+2024-09-01 19:19:11.170 | INFO     | generate_benchmark_lean4:main:360 - Configuring LeanDojo again...
+2024-09-01 19:19:11.177 | INFO     | generate_benchmark_lean4:configure_leandojo:317 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-01 19:19:11.177 | INFO     | generate_benchmark_lean4:main:362 - LeanDojo configured
+2024-09-01 19:19:11.177 | INFO     | generate_benchmark_lean4:main:365 - Tracing the repo...
+2024-09-01 19:19:11.180 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced repo is available in the cache.
+2024-09-01 19:19:11.180 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /data/yingzi_ma/lean_project/.cache/lean_dojo/teorth-pfr-fa398a5b853c7e94e3294c45e50c6aee013a2687/pfr
+2024-09-01 19:19:12.991 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1123 - Loading 2890 traced XML files from /data/yingzi_ma/lean_project/.cache/lean_dojo/teorth-pfr-fa398a5b853c7e94e3294c45e50c
+6aee013a2687/pfr with 31 workers
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2890/2890 [08:26<00:00,  5.71it/s]
+2024-09-01 19:27:39.390 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687
+')
+2024-09-01 19:27:40.602 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.6.0-rc1
+2024-09-01 19:27:57.692 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-01 19:28:13.961 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-01 19:28:15.114 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/import-graph.git") failed. Retrying...
+2024-09-01 19:28:18.509 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for doc-gen4 main
+2024-09-01 19:28:18.972 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/YaelDillies/LeanAPAP', commit='5f68f1ec1cca9b4d984d4295ac4d0a
+f24c3307c4')
+2024-09-01 19:28:19.058 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0
+2024-09-01 19:28:34.385 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0
+2024-09-01 19:28:50.653 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/mathlib4.git") failed. Retrying...
+2024-09-01 19:28:51.757 | DEBUG    | lean_dojo.data_extraction.lean:url_to_repo:70 - url_to_repo("https://github.com/leanprover-community/mathlib4.git") failed. Retrying...
+2024-09-01 19:28:54.299 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='06d443eab23c40af08453
+ebbcf97bd546f793a46')
+2024-09-01 19:28:54.345 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='83f718b9055972dce4f92f5b3917426
+b91a0d2fe')
+2024-09-01 19:28:54.760 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc1
+Following Github server redirection from /repos/mhuisi/lean4-cli to /repositories/341363356
+2024-09-01 19:29:11.698 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-06-05
+2024-09-01 19:29:13.339 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca') relies on an unsupporte
+d Lean version: fbb3055f82ff9a4bc82f6722f6e73225617342fd
+2024-09-01 19:29:13.339 | DEBUG    | lean_dojo.data_extraction.lean:get_dependencies:499 - Querying the dependencies of LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='83f718b9055972dce4f92f5b3917426
+b91a0d2fe')
+2024-09-01 19:29:32.970 | DEBUG    | lean_dojo.data_extraction.traced_data:check_sanity:1009 - Checking the sanity of TracedRepo(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e5
+0c6aee013a2687'), dependencies={'lean4': LeanGitRepo(url='https://github.com/leanprover/lean4', commit='0edf1bac392f7e2fe0266b28b51c498306363a84'), 'batteries': LeanGitRepo(url='https://github.com/leanprover-community
+/batteries', commit='a7fd140a94bbbfa40cf10839227bbb9e8492be2d'), 'Qq': LeanGitRepo(url='https://github.com/leanprover-community/quote4', commit='d38fb94558af9957b8f479e350841ce65a1ec42c'), 'aesop': LeanGitRepo(url='ht
+tps://github.com/leanprover-community/aesop', commit='6c89b6765913a0d727c1066493c3f5dc51c9713e'), 'proofwidgets': LeanGitRepo(url='https://github.com/leanprover-community/ProofWidgets4', commit='a96aee5245720f58887602
+1b6a0aa73efee49c76'), 'Cli': LeanGitRepo(url='https://github.com/mhuisi/lean4-cli', commit='bf066c328bcff19aa93adf4d24c4e896c0d4eaca'), 'LeanAPAP': LeanGitRepo(url='https://github.com/YaelDillies/LeanAPAP', commit='5f
+68f1ec1cca9b4d984d4295ac4d0af24c3307c4'), 'importGraph': LeanGitRepo(url='https://github.com/leanprover-community/import-graph', commit='0a756018b736ef4f4bc3c9a45fc03cf97a0b1a0c'), 'mathlib': LeanGitRepo(url='https://
+github.com/leanprover-community/mathlib4', commit='06d443eab23c40af08453ebbcf97bd546f793a46'), '«doc-gen4»': LeanGitRepo(url='https://github.com/leanprover/doc-gen4', commit='83f718b9055972dce4f92f5b3917426b91a0d2fe')
+, 'MD4Lean': LeanGitRepo(url='https://github.com/acmepjz/md4lean', commit='5e95f4776be5e048364f325c7e9d619bb56fb005'), 'UnicodeBasic': LeanGitRepo(url='https://github.com/fgdorais/lean4-unicode-basic', commit='9447739
+fe9714f8a091192bad5cd5e7b5a8ae1e4'), 'BibtexQuery': LeanGitRepo(url='https://github.com/dupuisf/BibtexQuery', commit='c138ab5c566c4268798b24bfcbea2f4c42413cdd')}, root_dir=PosixPath('/data/yingzi_ma/lean_project/.cach
+e/lean_dojo/teorth-pfr-fa398a5b853c7e94e3294c45e50c6aee013a2687/pfr'))
+2024-09-01 19:29:48.293 | INFO     | generate_benchmark_lean4:main:367 - Successfully traced the repo
+2024-09-01 19:29:48.294 | WARNING  | generate_benchmark_lean4:main:372 - /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687 already exists. Using it ins
+tead.
+2024-09-01 19:29:48.294 | INFO     | __main__:retrieve_proof:1038 - Finished generating benchmark at /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687
+2024-09-01 19:29:56.972 | INFO     | dynamic_database:add_repository:583 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-01 19:29:56.972 | INFO     | dynamic_database:add_repository:586 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 71334/71334 [00:01<00:00, 36201.52it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1486/1486 [00:00<00:00, 37015.01it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1486/1486 [00:00<00:00, 39166.83it/s]
+2024-09-01 19:30:02.257 | INFO     | __main__:retrieve_proof:1076 - Before adding new repo:
+2024-09-01 19:30:02.258 | INFO     | dynamic_database:print_database_contents:607 - Current database contents:
+2024-09-01 19:30:02.258 | INFO     | dynamic_database:print_database_contents:609 -   - https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-01 19:30:02.258 | INFO     | dynamic_database:add_repository:583 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-01 19:30:02.258 | INFO     | dynamic_database:add_repository:588 - Repository 'https://github.com/teorth/pfr' with commit 'fa398a5b853c7e94e3294c45e50c6aee013a2687' already exists in the database.
+2024-09-01 19:30:02.258 | INFO     | __main__:retrieve_proof:1079 - After adding new repo:
+2024-09-01 19:30:02.258 | INFO     | dynamic_database:print_database_contents:607 - Current database contents:
+2024-09-01 19:30:02.258 | INFO     | dynamic_database:print_database_contents:609 -   - https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-01 19:30:13.543 | INFO     | __main__:retrieve_proof:1088 - Adding repo to repos_for_merged_dataset
+2024-09-01 19:30:13.544 | INFO     | dynamic_database:generate_merged_dataset:399 - Merging selected repositories in the database:
+2024-09-01 19:30:13.545 | INFO     | dynamic_database:generate_merged_dataset:401 -   - https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-01 19:31:34.431 | WARNING  | dynamic_database:generate_merged_dataset:418 - /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687 a
+lready exists. Removing it now.
+2024-09-01 19:31:52.307 | INFO     | dynamic_database:generate_merged_dataset:422 - Exported proofs to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c4
+5e50c6aee013a2687
+2024-09-01 19:31:52.893 | INFO     | dynamic_database:generate_merged_dataset:425 - Merged and exported corpus to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c
+7e94e3294c45e50c6aee013a2687
+2024-09-01 19:31:52.905 | INFO     | dynamic_database:generate_merged_dataset:428 - Exported traced files to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e
+3294c45e50c6aee013a2687
+2024-09-01 19:31:52.907 | INFO     | dynamic_database:generate_merged_dataset:431 - Exported metadata to /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294
+c45e50c6aee013a2687
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more
+details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be load
+ed via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of
+the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../kaiyuy_leandojo-lean4-ret
+riever-tacgen-byt5-small/model_lightning.ckpt`
+2024-09-01 19:31:54.949 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckp
+t
+2024-09-01 19:31:54.949 | INFO     | generator.model:__init__:123 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckp
+t
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_full_merge
+_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-09-01 19:31:58.990 | INFO     | __main__:main:1241 - An error occurred: Error while deserializing header: MetadataIncompleteBuffer
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 1221, in main
+    proofs = retrieve_proof(run_progressive_training, use_fisher, single_repo, dynamic_database_json_path, lean_git_repo, repo_no_dir, lean_git_repo.commit, lambda_value, current_epoch, epochs_per_repo)
+  File "/data/yingzi_ma/lean_project/ReProver/main.py", line 1120, in retrieve_proof
+    prover = DistributedProver(
+  File "/data/yingzi_ma/lean_project/ReProver/prover/proof_search.py", line 364, in __init__
+    tac_gen = RetrievalAugmentedGenerator.load(
+  File "/data/yingzi_ma/lean_project/ReProver/generator/model.py", line 142, in load
+    return load_checkpoint(cls, ckpt_path, device, freeze, config)
+  File "/data/yingzi_ma/lean_project/ReProver/common.py", line 482, in load_checkpoint
+    model = model_cls.load_from_checkpoint(ckpt_path, strict=False, **config).to(device)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/utilities/model_helpers.py", line 125, in wrapper
+    return self.method(cls, *args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1581, in load_from_checkpoint
+    loaded = _load_from_checkpoint(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py", line 91, in _load_from_checkpoint
+    model = _load_state(cls, checkpoint, strict=strict, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py", line 158, in _load_state
+    obj = cls(**_cls_kwargs)
+  File "/data/yingzi_ma/lean_project/ReProver/generator/model.py", line 129, in __init__
+    self.generator = T5ForConditionalGeneration.from_pretrained(model_name)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3735, in from_pretrained
+    with safe_open(resolved_archive_file, framework="pt") as f:
+safetensors_rust.SafetensorError: Error while deserializing header: MetadataIncompleteBuffer
+(base) yingzi_ma@compute-permanent-node-794:~/lean_project/ReProver$ python fix_safetensors.py
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/fix_safetensors.py", line 1, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+(base) yingzi_ma@compute-permanent-node-794:~/lean_project/ReProver$ conda activate ReProver
+(ReProver) yingzi_ma@compute-permanent-node-794:~/lean_project/ReProver$ python fix_safetensors.py
+[2024-09-01 19:45:16,133] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more
+details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be load
+ed via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of
+the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_full_merge
+_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-09-01 19:45:19.230 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckp
+t
+2024-09-01 19:45:19.230 | INFO     | generator.model:__init__:123 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckp
+t
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_full_merge
+_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-09-01 19:45:23.234 | ERROR    | __main__:<module>:36 - Error loading model
+Traceback (most recent call last):
+
+> File "/data/yingzi_ma/lean_project/ReProver/fix_safetensors.py", line 29, in <module>
+    model = RetrievalAugmentedGenerator.load(
+            │                           └ <classmethod(<function RetrievalAugmentedGenerator.load at 0x766f80b63640>)>
+            └ <class 'generator.model.RetrievalAugmentedGenerator'>
+
+  File "/data/yingzi_ma/lean_project/ReProver/generator/model.py", line 142, in load
+    return load_checkpoint(cls, ckpt_path, device, freeze, config)
+           │               │    │          │       │       └ {'model_name': 'kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small', 'lr': 0.001, 'warmup_steps': 1000, 'num_beams': 5, 'eval_...
+           │               │    │          │       └ False
+           │               │    │          └ device(type='cuda')
+           │               │    └ '/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt'
+           │               └ <class 'generator.model.RetrievalAugmentedGenerator'>
+           └ <function load_checkpoint at 0x766f80b61d80>
+
+  File "/data/yingzi_ma/lean_project/ReProver/common.py", line 482, in load_checkpoint
+    model = model_cls.load_from_checkpoint(ckpt_path, strict=False, **config).to(device)
+            │         │                    │                          │          └ device(type='cuda')
+            │         │                    │                          └ {'model_name': 'kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small', 'lr': 0.001, 'warmup_steps': 1000, 'num_beams': 5, 'eval_...
+            │         │                    └ '/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt'
+            │         └ <pytorch_lightning.utilities.model_helpers._restricted_classmethod_impl object at 0x766f8d2e6d70>
+            └ <class 'generator.model.RetrievalAugmentedGenerator'>
+
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/utilities/model_helpers.py", line 125, in wrapper
+    return self.method(cls, *args, **kwargs)
+           │    │      │     │       └ {'strict': False, 'model_name': 'kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small', 'lr': 0.001, 'warmup_steps': 1000, 'num_...
+           │    │      │     └ ('/data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt',)
+           │    │      └ <class 'generator.model.RetrievalAugmentedGenerator'>
+           │    └ <function LightningModule.load_from_checkpoint at 0x766f8d3244c0>
+           └ <pytorch_lightning.utilities.model_helpers._restricted_classmethod_impl object at 0x766f8d2e6d70>
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1581, in load_from_checkpoint
+    loaded = _load_from_checkpoint(
+             └ <function _load_from_checkpoint at 0x766f8d516e60>
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py", line 91, in _load_from_checkpoint
+    model = _load_state(cls, checkpoint, strict=strict, **kwargs)
+            │           │    │                  │         └ {'model_name': 'kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small', 'lr': 0.001, 'warmup_steps': 1000, 'num_beams': 5, 'eval_...
+            │           │    │                  └ False
+            │           │    └ OrderedDict([('encoder.shared.weight', tensor([[ 3.8438,  9.0625, -2.2812,  ...,  4.1250,  0.4355, -1.9844],
+            │           │              [-0.8695...
+            │           └ <class 'generator.model.RetrievalAugmentedGenerator'>
+            └ <function _load_state at 0x766f8d530160>
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py", line 158, in _load_state
+    obj = cls(**_cls_kwargs)
+          │     └ {'model_name': 'kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small', 'lr': 0.001, 'warmup_steps': 1000, 'num_beams': 5, 'eval_...
+          └ <class 'generator.model.RetrievalAugmentedGenerator'>
+
+  File "/data/yingzi_ma/lean_project/ReProver/generator/model.py", line 129, in __init__
+    self.generator = T5ForConditionalGeneration.from_pretrained(model_name)
+    │                │                          │               └ 'kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small'
+    │                │                          └ <classmethod(<function PreTrainedModel.from_pretrained at 0x766f8bf424d0>)>
+    │                └ <class 'transformers.models.t5.modeling_t5.T5ForConditionalGeneration'>
+    └ RetrievalAugmentedGenerator(
+        (retriever): PremiseRetriever(
+          (encoder): T5EncoderModel(
+            (shared): Embedding(384, 1...
+
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3735, in from_pretrained
+    with safe_open(resolved_archive_file, framework="pt") as f:
+         │         └ '/data/yingzi_ma/.cache/huggingface/hub/models--kaiyuy--leandojo-lean4-retriever-tacgen-byt5-small/snapshots/ecace32f4ff71b46...
+         └ <class 'builtins.safe_open'>
+
+safetensors_rust.SafetensorError: Error while deserializing header: MetadataIncompleteBuffer
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/fix_safetensors.py", line 29, in <module>
+    model = RetrievalAugmentedGenerator.load(
+  File "/data/yingzi_ma/lean_project/ReProver/generator/model.py", line 142, in load
+    return load_checkpoint(cls, ckpt_path, device, freeze, config)
+  File "/data/yingzi_ma/lean_project/ReProver/common.py", line 482, in load_checkpoint
+    model = model_cls.load_from_checkpoint(ckpt_path, strict=False, **config).to(device)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/utilities/model_helpers.py", line 125, in wrapper
+    return self.method(cls, *args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1581, in load_from_checkpoint
+    loaded = _load_from_checkpoint(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py", line 91, in _load_from_checkpoint
+    model = _load_state(cls, checkpoint, strict=strict, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py", line 158, in _load_state
+    obj = cls(**_cls_kwargs)
+  File "/data/yingzi_ma/lean_project/ReProver/generator/model.py", line 129, in __init__
+    self.generator = T5ForConditionalGeneration.from_pretrained(model_name)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3735, in from_pretrained
+    with safe_open(resolved_archive_file, framework="pt") as f:
+safetensors_rust.SafetensorError: Error while deserializing header: MetadataIncompleteBuffer
+(ReProver) yingzi_ma@compute-permanent-node-794:~/lean_project/ReProver$

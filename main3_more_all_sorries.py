@@ -93,9 +93,9 @@ repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR
 
 DATA_DIR = "datasets_PT_single_repo_no_ewc_curriculum_sorries"
 CHECKPOINT_DIR = "checkpoints_PT_single_repo_no_ewc_curriculum_sorries"
-EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum_sorries.txt"
-DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_curriculum_sorries_full.json"
-PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum_sorries.log"
+EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_single_repo_no_ewc_curriculum_sorries_new.txt"
+DB_FILE_NAME = "dynamic_database_PT_single_repo_no_ewc_curriculum_sorries_with_14_full.json"
+PROOF_LOG_FILE_NAME = "proof_logs/proof_log_PT_single_repo_no_ewc_curriculum_sorries_with_14_full.log"
 ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_single_repo_no_ewc_curriculum_sorries_full.pkl"
 
 # DATA_DIR = "datasets_PT_single_repo_ewc"
@@ -1793,7 +1793,7 @@ def main():
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
 
-                        # db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
+                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
                     
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
@@ -2008,7 +2008,7 @@ def main():
                                 f.write("\n\n\n")
                                 f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                     else:
-                        model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum_sorries/merged_with_new_lean4-pdl_c7f649fe3c4891cf1a01c120e82ebc5f6199856e_lambda_0.1_epoch=7-Recall@10_val=72.15.ckpt"
+                        model_checkpoint_path = f"{RAID_DIR}/checkpoints_PT_single_repo_no_ewc_curriculum_sorries_with_14/merged_with_new_lean4-pdl_c7f649fe3c4891cf1a01c120e82ebc5f6199856e_lambda_0.1_epoch=23-Recall@10_val=76.02.ckpt"
                         if result is None:
                             logger.info(f"Skipping repository {repo.url} due to preprocessing issues")
                             continue

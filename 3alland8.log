@@ -1,0 +1,4403 @@
+2024-09-25 01:15:45.939 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-25 01:15:45.939 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-25 01:15:54.645 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-25 01:15:54.645 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-25 01:16:04.529 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-25 01:16:04.529 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-25 01:16:15.768 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-25 01:16:15.768 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-25 01:16:30.050 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-25 01:16:30.050 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-25 01:16:31.887 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-25 01:16:31.887 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-25 01:16:45.682 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-25 01:16:45.683 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-25 01:16:45.846 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-25 01:16:45.846 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-25 01:16:47.748 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-25 01:16:47.748 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-25 01:17:03.574 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-25 01:17:03.574 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-25 01:17:03.967 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-25 01:17:03.967 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-25 01:17:04.637 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-25 01:17:04.638 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-25 01:17:04.800 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-25 01:17:04.800 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-25 01:17:04.899 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-25 01:17:04.899 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+2024-09-25 01:17:05.703 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-25 01:17:05.703 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-25 01:17:06.033 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-25 01:17:06.033 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-25 01:17:24.843 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-25 01:17:24.844 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+2024-09-25 01:17:27.146 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-25 01:17:27.146 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+2024-09-25 01:18:30.111 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-25 01:18:30.111 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+2024-09-25 01:18:32.171 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-25 01:18:32.171 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+2024-09-25 01:18:34.249 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-25 01:18:34.250 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-25 01:18:56.825 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-25 01:18:56.825 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+2024-09-25 01:18:58.660 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-25 01:18:58.660 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+2024-09-25 01:19:00.917 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-25 01:19:00.918 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-25 01:19:01.082 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-25 01:19:01.082 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-25 01:19:02.907 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-25 01:19:02.908 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+2024-09-25 01:19:05.067 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-25 01:19:05.067 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-25 01:19:05.484 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-25 01:19:05.484 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-25 01:19:06.157 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-25 01:19:06.158 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+2024-09-25 01:19:06.318 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-25 01:19:06.318 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+2024-09-25 01:19:07.120 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-25 01:19:07.120 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+2024-09-25 01:19:31.447 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 89bf7b5e3a226525e8580bae21ef543604f99b21)
+2024-09-25 01:19:31.448 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 89bf7b5e3a226525e8580bae21ef543604f99b21)
+2024-09-25 01:19:31.783 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+2024-09-25 01:19:31.783 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+================================================================================
+
+Proved sorry theorems only in first database: 1
+
+Theorem: condRho_of_translate
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma condRho_of_translate {Ω S : Type*} [MeasureSpace Ω] (X : Ω → G) (Y : Ω → S) (A : Finset G) (s:G) : condRho (fun ω ↦ X ω + s) Y A = condRho X Y A :=
+Proof:
+  simp only [condRho, rho_of_translate]
+
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+================================================================================
+
+Proved sorry theorems only in first database: 7
+
+Theorem: Function.Bijective.Equiv.invFun.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Equiv.invFun.arg_a0.Bijective_rule (f : Y ≃ Z) (g : X → Z) (hf : Bijective g)
+  : Bijective (fun x => f.invFun (g x)) :=
+Proof:
+  convert hf
+  simp [hf]
+  exact f.symm.bijective.comp hf
+
+
+Theorem: SciLean.Measure.prod_volume
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem Measure.prod_volume {X Y} [MeasureSpace X] [MeasureSpace Y]  :
+    (Measure.prod (volume : Measure X) (volume : Measure Y)) = volume :=
+Proof:
+  rfl
+
+
+Theorem: Function.Bijective.Equiv.toFun.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Equiv.toFun.arg_a0.Bijective_rule (f : Y ≃ Z) (g : X → Y) (hf : Bijective g)
+  : Bijective (fun x => f (g x)) :=
+Proof:
+  inhabit Z
+  exact f.bijective.comp hf
+
+
+Theorem: SciLean.ContCDiffMapFD_eta
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+Proof:
+  simp only [DFunLike.ext_iff]
+  aesop
+
+
+Theorem: Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.Bijective_rule_simple
+  : Bijective (fun xy : X×Y => (xy.1, xy.2))
+  :=
+Proof:
+  simp
+  exact Function.bijective_id
+
+
+Theorem: SciLean.CDifferentiable.id_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiable.id_rule
+  : CDifferentiable K (fun x : X => x)
+  :=
+Proof:
+  intro x
+  unfold SciLean.CDifferentiableAt
+  tauto
+
+
+Theorem: SciLean.ArrayType.ext
+File path: SciLean/Data/ArrayType/Basic.lean
+Theorem statement: theorem ext (x y : Cont) : (∀ i, x[i] = y[i]) → x = y :=
+Proof:
+  intro h
+  apply SciLean.ArrayType.get_injective
+  simp only [h]
+
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 20
+
+Theorem: SciLean.ContCDiffAt.id_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem ContCDiffAt.id_rule (x : X) :
+    ContCDiffAt K n (fun x : X => x) x :=
+
+Proof:
+  unfold SciLean.ContCDiffAt
+  tauto
+Proofs are identical in both databases.
+
+
+Theorem: SciLean.scalar_min_zero_one
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_min_zero_one  : min (0 : R) (1 : R) = 0 :=
+
+Proof:
+  rw [min_comm]
+  simp
+Proofs are identical in both databases.
+
+
+Theorem: Function.invFun.id_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem id_rule
+  : invFun (fun (x : X) => x)
+    =
+    fun x => x :=
+
+Proof:
+  apply Function.invFun_comp
+  exact Function.injective_id
+Proofs differ:
+Proof in second database:
+  ext x
+  apply Function.leftInverse_invFun
+  exact Function.injective_id
+
+
+Theorem: SciLean.CDifferentiableAt.id_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiableAt.id_rule (x : X)
+  : CDifferentiableAt K (fun x : X => x) x
+  :=
+
+Proof:
+  unfold SciLean.CDifferentiableAt
+  tauto
+Proofs differ:
+Proof in second database:
+  unfold SciLean.CDifferentiableAt
+  intro c hc hcx
+  simpa using hcx
+
+
+Theorem: SciLean.scalar_max_zero_one
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_max_zero_one  : max (0 : R) (1 : R) = 1 :=
+
+Proof:
+  rw [max_comm]
+  simp
+Proofs are identical in both databases.
+
+
+Theorem: SciLean.re_float
+File path: SciLean/Core/FloatAsReal.lean
+Theorem statement: theorem re_float  (a : Float)
+  : RCLike.re a = a :=
+
+Proof:
+  exact RCLike.re_eq_self_of_le le_rfl
+Proofs differ:
+Proof in second database:
+  rw [RCLike.ext_iff]
+  exact ⟨rfl, rfl⟩
+
+
+Theorem: SciLean.CDifferentiableAt.comp_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiableAt.comp_rule
+  (f : Y → Z) (g : X → Y) (x : X)
+  (hf : CDifferentiableAt K f (g x)) (hg : CDifferentiableAt K g x)
+  : CDifferentiableAt K (fun x => f (g x)) x
+  :=
+
+Proof:
+  rw [CDifferentiableAt] at *
+  aesop
+Proofs are identical in both databases.
+
+
+Theorem: SciLean.ContCDiffMap.zero_apply
+File path: SciLean/Core/FunctionSpaces/ContCDiffMap.lean
+Theorem statement: theorem ContCDiffMap.zero_apply : (0 : X ⟿[K,n] Y) x = 0 :=
+
+Proof:
+  rfl
+Proofs are identical in both databases.
+
+
+Theorem: IsLinearMap.isLinearMap_apply
+File path: SciLean/Core/FunctionPropositions/IsLinearMap.lean
+Theorem statement: theorem isLinearMap_apply (i : ι) : IsLinearMap R (fun f : (i : ι) → E i ↦ f i) :=
+
+Proof:
+  constructor
+  all_goals aesop
+Proofs are identical in both databases.
+
+
+Theorem: IsAffineMap.IsAffineMap_apply
+File path: SciLean/Core/FunctionPropositions/IsAffineMap.lean
+Theorem statement: theorem IsAffineMap_apply (i : ι) : IsAffineMap R (fun f : (i : ι) → E i ↦ f i) :=
+
+Proof:
+  constructor
+  constructor
+  simp
+  simp
+Proofs are identical in both databases.
+
+
+Theorem: IsLinearMap.isLinearMap_const_zero
+File path: SciLean/Core/FunctionPropositions/IsLinearMap.lean
+Theorem statement: theorem isLinearMap_const_zero
+  : IsLinearMap R (fun _ : X => (0 : Y))
+  :=
+
+Proof:
+  constructor
+  all_goals aesop
+Proofs are identical in both databases.
+
+
+Theorem: SciLean.ite_pull_measureOf
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem ite_pull_measureOf {X} [MeasurableSpace X] (c : Prop) [Decidable c] (μ ν : Measure X) (A : Set X) :
+    (if c then μ else ν) A
+    =
+    (if c then μ A else ν A) :=
+
+Proof:
+  split_ifs <;> rfl
+Proofs are identical in both databases.
+
+
+Theorem: SciLean.Distribution.action_iteD
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.action_iteD (A : Set X) (t e : 𝒟'(X,Y)) (φ : 𝒟 X) :
+   iteD A t e φ =
+        t.extAction (fun x => if x ∈ A then φ x else 0) (fun y ⊸ fun r ⊸ r • y) +
+        e.extAction (fun x => if x ∉ A then φ x else 0) (fun y ⊸ fun r ⊸ r • y) :=
+
+Proof:
+  aesop
+Proofs are identical in both databases.
+
+
+Theorem: SciLean.SmoothLinearMap.zero_apply
+File path: SciLean/Core/FunctionSpaces/SmoothLinearMap.lean
+Theorem statement: theorem SmoothLinearMap.zero_apply : (0 : X⊸[K]Y) x = 0 :=
+
+Proof:
+  rfl
+Proofs are identical in both databases.
+
+
+Theorem: Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple'
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.Bijective_rule_simple'
+  : Bijective (fun xy : X×Y => (xy.2, xy.1))
+  :=
+
+Proof:
+  constructor <;> intro h
+  all_goals aesop
+Proofs are identical in both databases.
+
+
+Theorem: SciLean.scalar_div_one
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_div_one (x : R) : x / 1 = x :=
+
+Proof:
+  simp
+Proofs are identical in both databases.
+
+
+Theorem: SciLean.norm₂_scalar
+File path: SciLean/Core/Objects/SemiInnerProductSpace.lean
+Theorem statement: theorem norm₂_scalar {R} [RealScalar R] (x : R) :
+  ‖x‖₂[R] = Scalar.abs x :=
+
+Proof:
+  rw [SciLean.scalar_norm]
+Proofs are identical in both databases.
+
+
+Theorem: SciLean.ite_pull_ennreal_toReal
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem ite_pull_ennreal_toReal (c : Prop) [Decidable c] (x y : ENNReal)  :
+    (if c then x else y).toReal
+    =
+    (if c then x.toReal else y.toReal) :=
+
+Proof:
+  split_ifs <;> rfl
+Proofs are identical in both databases.
+
+
+Theorem: SciLean.ContCDiffMapFD.zero_apply
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD.zero_apply : (0 : X ⟿FD[K,n] Y) x = 0 :=
+
+Proof:
+  rfl
+Proofs are identical in both databases.
+
+
+Theorem: SciLean.ContCDiffAt.comp_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem ContCDiffAt.comp_rule (x : X)
+    (f : Y → Z) (g : X → Y)
+    (hf : ContCDiffAt K n f (g x)) (hg : ContCDiffAt K n g x) :
+    ContCDiffAt K n (fun x => f (g x)) x :=
+
+Proof:
+  rw [ContCDiffAt] at *
+  aesop
+Proofs are identical in both databases.
+
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+================================================================================
+
+Proved sorry theorems only in first database: 5
+
+Theorem: absorb2
+File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+Theorem statement: theorem absorb2 : x ⊔ x ⊓ y = x :=
+Proof:
+  simp
+
+
+Theorem: MyGroup.mul_right_inv
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem mul_right_inv (a : G) : a * a⁻¹ = 1 :=
+Proof:
+  simp
+
+
+Theorem: MyRing.neg_eq_of_add_eq_zero
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem neg_eq_of_add_eq_zero {a b : R} (h : a + b = 0) : -a = b :=
+Proof:
+  rw [add_eq_zero_iff_eq_neg] at h
+  simp [h]
+
+
+Theorem: C03S05.MyAbs.abs_lt
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+Proof:
+  cases x
+  exact abs_lt
+
+
+Theorem: C03S04.aux
+File path: MIL/C03_Logic/S04_Conjunction_and_Iff.lean
+Theorem statement: None
+Proof:
+  nlinarith
+
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 16
+
+Theorem: MyGroup.mul_inv_rev
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem mul_inv_rev (a b : G) : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+
+Proof:
+  simp
+Proofs are identical in both databases.
+
+
+Theorem: MyRing.neg_neg
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem neg_neg (a : R) : - -a = a :=
+
+Proof:
+  simp
+Proofs are identical in both databases.
+
+
+Theorem: C03S01.Subset.trans
+File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+Theorem statement: theorem Subset.trans : r ⊆ s → s ⊆ t → r ⊆ t :=
+
+Proof:
+  exact Set.Subset.trans
+Proofs are identical in both databases.
+
+
+Theorem: C03S05.MyAbs.le_abs_self
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem le_abs_self (x : ℝ) : x ≤ |x| :=
+
+Proof:
+  rw [le_abs]
+  simp
+Proofs differ:
+Proof in second database:
+  cases x
+  simp [abs]
+
+
+Theorem: C03S05.MyAbs.neg_le_abs_self
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem neg_le_abs_self (x : ℝ) : -x ≤ |x| :=
+
+Proof:
+  simpa using C03S05.MyAbs.le_abs_self (-x)
+Proofs are identical in both databases.
+
+
+Theorem: absorb1
+File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+Theorem statement: theorem absorb1 : x ⊓ (x ⊔ y) = x :=
+
+Proof:
+  simp
+Proofs are identical in both databases.
+
+
+Theorem: MyRing.self_sub
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem self_sub (a : R) : a - a = 0 :=
+
+Proof:
+  simp
+Proofs are identical in both databases.
+
+
+Theorem: MyGroup.mul_one
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem mul_one (a : G) : a * 1 = a :=
+
+Proof:
+  simp
+Proofs are identical in both databases.
+
+
+Theorem: MyRing.add_right_cancel
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem add_right_cancel {a b c : R} (h : a + b = c + b) : a = c :=
+
+Proof:
+  simpa using h
+Proofs are identical in both databases.
+
+
+Theorem: MyRing.add_neg_cancel_right
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem add_neg_cancel_right (a b : R) : a + b + -b = a :=
+
+Proof:
+  simp
+Proofs are identical in both databases.
+
+
+Theorem: C03S01.my_lemma3
+File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+Theorem statement: theorem my_lemma3 :
+    ∀ {x y ε : ℝ}, 0 < ε → ε ≤ 1 → |x| < ε → |y| < ε → |x * y| < ε :=
+
+Proof:
+  apply C03S01.my_lemma
+Proofs are identical in both databases.
+
+
+Theorem: MyRing.eq_neg_of_add_eq_zero
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem eq_neg_of_add_eq_zero {a b : R} (h : a + b = 0) : a = -b :=
+
+Proof:
+  rwa [eq_neg_iff_add_eq_zero]
+Proofs are identical in both databases.
+
+
+Theorem: MyRing.add_left_cancel
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem add_left_cancel {a b c : R} (h : a + b = a + c) : b = c :=
+
+Proof:
+  simpa using h
+Proofs are identical in both databases.
+
+
+Theorem: MyRing.two_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem two_mul (a : R) : 2 * a = a + a :=
+
+Proof:
+  rw [← one_add_one_eq_two]
+  simp [add_mul]
+Proofs differ:
+Proof in second database:
+  rw [← one_add_one_eq_two]
+  rw [add_mul, one_mul]
+
+
+Theorem: MyRing.zero_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem zero_mul (a : R) : 0 * a = 0 :=
+
+Proof:
+  rw [MulZeroClass.zero_mul]
+Proofs are identical in both databases.
+
+
+Theorem: C03S05.MyAbs.abs_add
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_add (x y : ℝ) : |x + y| ≤ |x| + |y| :=
+
+Proof:
+  apply abs_add_le
+Proofs are identical in both databases.
+
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 89bf7b5e3a226525e8580bae21ef543604f99b21)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Proved sorry theorems for repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+================================================================================
+
+Proved sorry theorems only in first database: 0
+
+Proved sorry theorems only in second database: 0
+
+Common Proved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/leanprover-community/con-nf (commit: 00bdc85ba7d486a9e544a0806a1018dd06fa3856)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/nomeata/loogle (commit: 387ab85308ce817bb95cc99730025eb44cb8a9ab)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 4
+
+Theorem: Lean4Lean.VEnv.IsDefEq.induction1
+File path: Lean4Lean/Theory/Typing/Stratified.lean
+Theorem statement: theorem IsDefEq.induction1
+    (defEq : List VExpr → VExpr → VExpr → VExpr → Prop)
+    (hasType : List VExpr → VExpr → VExpr → Prop)
+    (hty : ∀ {Γ e A}, HasType1 env U defEq Γ e A → hasType Γ e A)
+    (hdf : ∀ {Γ e1 e2 A}, IsDefEq1 env U hasType defEq Γ e1 e2 A → defEq Γ e1 e2 A)
+    (H : env.IsDefEq U Γ e1 e2 A) :
+    HasType1 env U defEq Γ e1 A ∧
+    HasType1 env U defEq Γ e2 A ∧
+    IsDefEq1 env U hasType defEq Γ e1 e2 A :=
+
+
+
+Theorem: Lean4Lean.VEnv.IsDefEqU.weakN_iff
+File path: Lean4Lean/Theory/Typing/UniqueTyping.lean
+Theorem statement: theorem IsDefEqU.weakN_iff (W : Ctx.LiftN n k Γ Γ') :
+    env.IsDefEqU U Γ' (e1.liftN n k) (e2.liftN n k) ↔ env.IsDefEqU U Γ e1 e2 :=
+
+
+
+Theorem: Lean4Lean.NormalEq.trans
+File path: Lean4Lean/Theory/Typing/ParallelReduction.lean
+Theorem statement: theorem NormalEq.trans
+    (H1 : NormalEq TY Γ e1 e2) (H2 : NormalEq TY Γ e2 e3) :
+    NormalEq TY Γ e1 e3 :=
+
+
+
+Theorem: Lean4Lean.VEnv.IsDefEq.inductionU1
+File path: Lean4Lean/Theory/Typing/StratifiedUntyped.lean
+Theorem statement: theorem IsDefEq.inductionU1
+    (defEq : List VExpr → VExpr → VExpr → Prop)
+    (hasType : List VExpr → VExpr → VExpr → Prop)
+    (hty : ∀ {Γ e A}, HasTypeU1 env U defEq Γ e A → hasType Γ e A)
+    (hdf : ∀ {Γ e1 e2 A1 A2},
+      HasTypeU1 env U defEq Γ e1 A1 → HasTypeU1 env U defEq Γ e2 A2 →
+      IsDefEqU1 env U hasType Γ e1 e2 → defEq Γ e1 e2)
+    (H : env.IsDefEq U Γ e1 e2 A) :
+    HasTypeU1 env U defEq Γ e1 A ∧
+    HasTypeU1 env U defEq Γ e2 A ∧
+    IsDefEqU1 env U hasType Γ e1 e2 :=
+
+
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/rami3l/plfl (commit: 1a25fc310d8fb0c6e21ab9e385cc7dac0c31f77a)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/ImperialCollegeLondon/FLT (commit: b208a302cdcbfadce33d8165f0b054bfa17e2147)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 2
+
+Theorem: Hurwitz.canonicalForm
+File path: FLT/AutomorphicRepresentation/Example.lean
+Theorem statement: lemma canonicalForm (z : D^) : ∃ (N : ℕ+) (z' : 𝓞^), z = j₁ ((N⁻¹ : ℚ) ⊗ₜ 1 : D) * j₂ z' :=
+
+
+
+Theorem: Hurwitz.exists_near
+File path: FLT/AutomorphicRepresentation/Example.lean
+Theorem statement: lemma exists_near (z : ℍ) : ∃ q : 𝓞, dist z (toQuaternion q) < 1 :=
+
+
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/FormalizedFormalLogic/Foundation (commit: d5fe5d057a90a0703a745cdc318a1b6621490c21)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 1
+
+Theorem: condRho_of_translate
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma condRho_of_translate {Ω S : Type*} [MeasureSpace Ω] (X : Ω → G) (Y : Ω → S) (A : Finset G) (s:G) : condRho (fun ω ↦ X ω + s) Y A = condRho X Y A :=
+
+
+Common Unproved sorry theorems: 36
+
+Theorem: condRho_sum_le'
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma condRho_sum_le' {Ω': Type uG} [MeasureSpace Ω'] (Y₁ Y₂ Y₃ Y₄ : Ω' → G) (hindep: iIndepFun (fun _ ↦ hGm) ![Y₁, Y₂, Y₃, Y₄]) :
+  let S := Y₁ + Y₂ + Y₃ + Y₄
+  let T₁ := Y₁ + Y₂
+  let T₂ := Y₁ + Y₃
+  let T₃ := Y₂ + Y₃
+  condRho T₁ T₂ A + condRho T₂ T₁ A + condRho T₁ T₃ A + condRho T₃ T₁ A + condRho T₂ T₃ A + condRho T₃ T₂ A - 3*(rho Y₁ A + rho Y₂ A + rho Y₃ A + rho Y₄ A)/2 ≤ d[ Y₁ # Y₂ ] + d[ Y₁ # Y₃ ] + d[ Y₁ # Y₄ ] + d[ Y₂ # Y₃ ] + d[ Y₂ # Y₄ ] + d[ Y₃ # Y₄ ] :=
+
+
+
+Theorem: multiDist_nonneg
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma multiDist_nonneg {m : ℕ} {Ω : Fin m → Type*} (hΩ : (i : Fin m) → MeasureSpace (Ω i))
+    (X : (i : Fin m) → (Ω i) → G) : D[X ; hΩ] ≥ 0 :=
+
+
+
+Theorem: multiTau_min_exists
+File path: PFR/MultiTauFunctional.lean
+Theorem statement: lemma multiTau_min_exists {G Ω₀ : Type u} [MeasureableFinGroup G] [MeasureSpace Ω₀] (p : multiRefPackage G Ω₀) : ∃ (Ω : Fin p.m → Type u) (hΩ : ∀ i, MeasureSpace (Ω i)) (X : ∀ i, Ω i → G), multiTauMinimizes p Ω hΩ X :=
+
+
+
+Theorem: rho_continuous
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma rho_continuous [TopologicalSpace G] [DiscreteTopology G] [BorelSpace G] : Continuous
+      (fun (μ: ProbabilityMeasure G) ↦ @rho G _ hGm G ⟨ μ ⟩ id A) :=
+
+
+
+Theorem: condRho_le
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma condRho_le {Ω S : Type*} [MeasureSpace Ω] [MeasurableSpace S] (X : Ω → G) (Z : Ω → S) (A : Finset G) : condRho X Z A ≤ rho X A + (H[ X ] - H[ X | Z ]) / 2 :=
+
+
+
+Theorem: iter_multiDist_chainRule
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma iter_multiDist_chainRule {m:ℕ} (G : Fin (m+1) → Type*) (hG: ∀ i, MeasurableSpace (G i)) (hGs: ∀ i, MeasurableSingletonClass (G i)) (hGa: ∀ i, AddCommGroup (G i)) (hGsub: ∀ i, MeasurableSub₂ (G i)) (hGadd: ∀ i, MeasurableAdd₂ (G i)) (hGcount: ∀ i, Fintype (G i)) (φ: ∀ i, G (i+1) →+ G i) (π: ∀ d, G m →+ G d) (hcomp: ∀ i, i < m → π i = (φ i) ∘ (π (i+1))) {Ω : Type*} (hΩ : MeasureSpace Ω) (X : Fin m → Ω → (G m)) (hindep : iIndepFun (fun _ ↦ (hG m)) X ) : D[X; fun _ ↦ hΩ] = ∑ d ∈ Finset.Iio m, D[ fun i ↦ (π (d+1)) ∘ (X i) | fun i ↦ (π d) ∘ (X i); fun _ ↦ hΩ] + ∑ d ∈ Finset.Iio m, I[ ∑ i, X i : fun ω ↦ (fun i ↦ (π (d+1)) (X i ω)) | ⟨ (π (d+1)) ∘ ∑ i, X i, fun ω ↦ (fun i ↦ (π d) (X i ω))⟩ ] :=
+
+
+
+Theorem: multidist_ruzsa_I
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma multidist_ruzsa_I {m:ℕ} (hm: m ≥ 2) {Ω: Fin m → Type*} (hΩ : (i : Fin m) → MeasureSpace (Ω i))
+    (X : (i : Fin m) → (Ω i) → G): ∑ j, ∑ k, (if j = k then (0:ℝ) else d[X j # X k]) ≤ m * (m-1) * D[X; hΩ] :=
+
+
+
+Theorem: iter_multiDist_chainRule'
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma iter_multiDist_chainRule'  {m:ℕ} (G : Fin (m+1) → Type*) (hG: ∀ i, MeasurableSpace (G i)) (hGs: ∀ i, MeasurableSingletonClass (G i)) (hGa: ∀ i, AddCommGroup (G i)) (hGsub: ∀ i, MeasurableSub₂ (G i)) (hGadd: ∀ i, MeasurableAdd₂ (G i)) (hGcount: ∀ i, Fintype (G i)) (φ: ∀ i, G (i+1) →+ G i) (π: ∀ d, G m →+ G d) (hcomp: ∀ i, i < m → π i = (φ i) ∘ (π (i+1))) {Ω : Type*} (hΩ : MeasureSpace Ω) (X : Fin m → Ω → (G m)) (hindep : iIndepFun (fun _ ↦ (hG m)) X ) : D[X; fun _ ↦ hΩ] ≥ ∑ d ∈ Finset.Iio m, D[ fun i ↦ (π (d+1)) ∘ (X i) | fun i ↦ (π d) ∘ (X i); fun _ ↦ hΩ]  :=
+
+
+
+Theorem: dist_le_of_sum_zero
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma dist_le_of_sum_zero {Ω': Type uG} [MeasureSpace Ω'] (T₁ T₂ T₃ : Ω' → G) (hsum: T₁ + T₂ + T₃ = 0) : d[ X₁ # X₂ ] ≤ 3 * I[T₁ : T₂ | T₃] + (2 * H[T₃] - H[T₁] - H[T₂]) + η * (condRho T₁ T₃ A + condRho T₂ T₃ A - rho X₁ A - rho X₂ A) :=
+
+
+
+Theorem: rho_of_sum_le
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma rho_of_sum_le {Ω : Type*} [MeasureSpace Ω] (X Y : Ω → G) (A : Finset G) (hindep: IndepFun X Y) : rho (X + Y) A ≤ (rho X A + rho Y A + d[ X # Y ]) / 2 :=
+
+
+
+Theorem: condRho_minus_le
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma condRho_minus_le {Ω S : Type*} [MeasureSpace Ω] [MeasurableSpace S] (X : Ω → G) (Z : Ω → S) (A : Finset G) : condRho_minus X Z A ≤ rho_minus X A + H[ X ] - H[ X | Z ] :=
+
+
+
+Theorem: multidist_ruzsa_IV
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma multidist_ruzsa_IV {m:ℕ} (hm: m ≥ 2) {Ω : Type*} (hΩ : MeasureSpace Ω) (X : Fin m → Ω → G)
+    (hindep : iIndepFun (fun _ ↦ hG) X ) : d[ ∑ i, X i # ∑ i, X i ] ≤ 2 * D[X; fun _ ↦ hΩ] :=
+
+
+
+Theorem: condRho_of_sum_le
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma condRho_of_sum_le {Ω : Type*} [MeasureSpace Ω] (X Y : Ω → G) (A : Finset G) (hindep: IndepFun X Y) : condRho X (X + Y) A ≤ (rho X A + rho Y A + d[ X # Y ]) / 2 :=
+
+
+
+Theorem: multidist_eq_zero
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma multidist_eq_zero {m:ℕ} (hm: m ≥ 2) {Ω: Fin m → Type*} (hΩ : (i : Fin m) → MeasureSpace (Ω i)) (X : (i : Fin m) → (Ω i) → G) (hvanish: D[X; hΩ] = 0) : ∀ i, ∃ H : AddSubgroup G, ∃ U : (Ω i) → G, Measurable U ∧ IsUniform H U ∧ d[X i # U] = 0  :=
+
+
+
+Theorem: dist_of_min_eq_zero
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma dist_of_min_eq_zero (hη': η < 1/8) : d[ X₁ # X₂ ] = 0 :=
+
+
+
+Theorem: rho_of_sum
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma rho_of_sum {Ω : Type*} [MeasureSpace Ω] (X Y : Ω → G) (A : Finset G) (hindep: IndepFun X Y) : rho (X+Y) A ≤ rho X A + (H[X+Y] - H[X])/2 :=
+
+
+
+Theorem: multiDist_chainRule
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma multiDist_chainRule (G H: Type*) [hG : MeasurableSpace G] [MeasurableSingletonClass G] [AddCommGroup G] [MeasurableSub₂ G] [MeasurableAdd₂ G] [Countable G] [hH : MeasurableSpace H] [MeasurableSingletonClass H] [AddCommGroup H] [MeasurableSub₂ H] [MeasurableAdd₂ H] [Fintype H] (π: G →+ H) {m : ℕ} {Ω : Type*} (hΩ : MeasureSpace Ω) (X : Fin m → Ω → G) (hindep : iIndepFun (fun _ ↦ hG) X ) : D[X; fun _ ↦ hΩ] = D[X | fun i ↦ π ∘ (X i); fun _ ↦ hΩ] + D[ fun i ↦ π ∘ (X i); fun _ ↦ hΩ] + I[ ∑ i, X i : fun ω ↦ (fun i ↦ π (X i ω)) | π ∘ (∑ i, X i)] :=
+
+
+
+Theorem: multiDist_indep
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma multiDist_indep {m : ℕ} {Ω : Type*} (hΩ : MeasureSpace Ω) (X : Fin m → Ω → G)
+    (hindep : iIndepFun (fun _ ↦ hG) X ) :
+    D[X ; fun _ ↦ hΩ] = H[∑ i, X i] - (∑ i, H[X i]) / m :=
+
+
+
+Theorem: cor_multiDist_chainRule
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma cor_multiDist_chainRule [Fintype G] {m:ℕ} (hm: m ≥ 1) {Ω : Type*} (hΩ : MeasureSpace Ω) (X : Fin (m+1) × Fin (m+1) → Ω → G) (hindep : iIndepFun (fun _ ↦ hG) X) : I[ fun ω ↦ (fun j ↦ ∑ i, X (i, j) ω) : fun ω ↦ (fun i ↦ ∑ j, X (i, j) ω) | ∑ p, X p] ≤ ∑ j, (D[ fun i ↦ X (i, j); fun _ ↦ hΩ] -  D[ fun i ↦ X (i, j) | fun i ↦ ∑ k ∈ Finset.Ici j, X (i, k); fun _ ↦ hΩ]) + D[ fun i ↦ X (i, m); fun _ ↦ hΩ] - D[ fun i ↦ ∑ j, X (i, j); fun _ ↦ hΩ] :=
+
+
+
+Theorem: I_two_le
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma I_two_le : I₂ ≤ 2 * η * d[ X₁ # X₂ ] + (η / (1 - η)) * (2 * η * d[ X₁ # X₂ ] - I₁) :=
+
+
+
+Theorem: rho_of_translate
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma rho_of_translate {Ω : Type*} [MeasureSpace Ω]
+    (X : Ω → G) (A : Finset G) (s:G) : rho (fun ω ↦ X ω + s) A = rho X A :=
+
+
+
+Theorem: phi_min_exists
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma phi_min_exists : ∃ (Ω: Type uG) (_:MeasureSpace Ω) (X Y : Ω → G), phiMinimizes X Y η A :=
+
+
+
+Theorem: rho_plus_of_sum
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma rho_plus_of_sum  {Ω : Type*} [MeasureSpace Ω] (X Y : Ω → G) (A : Finset G) (hindep: IndepFun X Y) : rho_plus (X+Y) A ≤ rho_plus X A + H[X+Y] - H[X] :=
+
+
+
+Theorem: condRho_of_injective
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma condRho_of_injective {Ω S T : Type*} [MeasureSpace Ω] (X : Ω → G) (Y : Ω → S) (A : Finset G) (f: S → T) (hf: Function.Injective f) : condRho X (f ∘ Y) A = condRho X Y A :=
+
+
+
+Theorem: multidist_ruzsa_III
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma multidist_ruzsa_III {m:ℕ} (hm: m ≥ 2) {Ω: Fin m → Type*} (hΩ : (i : Fin m) → MeasureSpace (Ω i))
+    (X : (i : Fin m) → (Ω i) → G) (hident: ∀ j k, IdentDistrib (X j) (X k)): ∀ i, D[X; hΩ] ≤ m * d[X i # X i] :=
+
+
+
+Theorem: condRho_sum_le
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma condRho_sum_le {Ω': Type uG} [MeasureSpace Ω'] (Y₁ Y₂ Y₃ Y₄ : Ω' → G) (hindep: iIndepFun (fun _ ↦ hGm) ![Y₁, Y₂, Y₃, Y₄]) :
+  let S := Y₁ + Y₂ + Y₃ + Y₄
+  let T₁ := Y₁ + Y₂
+  let T₂ := Y₁ + Y₃
+  condRho T₁ T₂ A + condRho T₂ T₁ A - (rho Y₁ A + rho Y₂ A + rho Y₃ A + rho Y₄ A)/2 ≤ (d[ Y₁ # Y₂ ] + d[ Y₃ # Y₄ ] + d[ Y₁ # Y₃ ] + d[ Y₂ # Y₄ ]) / 2 :=
+
+
+
+Theorem: condRho_plus_le
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma condRho_plus_le {Ω S : Type*} [MeasureSpace Ω] [MeasurableSpace S] (X : Ω → G) (Z : Ω → S) (A : Finset G) : condRho_plus X Z A ≤ rho_plus X A :=
+
+
+
+Theorem: condMultiDist_eq
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma condMultiDist_eq {m : ℕ} {Ω : Type*} (hΩ : MeasureSpace Ω) (hprob: IsProbabilityMeasure hΩ.volume) {S: Type*} [Fintype S] [hS: MeasurableSpace S] [MeasurableSingletonClass S]
+    (X : (i : Fin m) → Ω → G) (Y : (i : Fin m) → Ω → S) (hY : (i:Fin m) →  Measurable (Y i)) (hindep: ProbabilityTheory.iIndepFun (fun _ ↦ hG.prod hS) (fun i ↦ ⟨ X i, Y i ⟩) ): D[ X | Y ; fun _ ↦ hΩ] =  H[ fun ω ↦ ∑ i, X i ω | fun ω ↦ (fun i ↦ Y i ω)] - (m:ℝ)⁻¹ * ∑ i, H[X i | Y i] :=
+
+
+
+Theorem: rho_of_subgroup
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma rho_of_subgroup (H: AddSubgroup G)  {Ω : Type*} [MeasureSpace Ω] (U : Ω → G) (hunif: IsUniform H U) (A : Finset G) (r:ℝ) (hr: rho U A ≤ r) : ∃ t:G, Nat.card ((A:Set G) ∩ ((t +ᵥ H.carrier)) : Set G) ≤ 2^(-r) * (Nat.card A * Nat.card H)^(1/2) ∧ Nat.card A ≤ 2^(2*r) * Nat.card H ∧ Nat.card H ≤ 2^(2*r) * Nat.card A :=
+
+
+
+Theorem: I_one_le
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma I_one_le : I₁ ≤ 2 * η * d[ X₁ # X₂ ] :=
+
+
+
+Theorem: multiTau_continuous
+File path: PFR/MultiTauFunctional.lean
+Theorem statement: lemma multiTau_continuous {G Ω₀ : Type u} [MeasureableFinGroup G] [TopologicalSpace G] [DiscreteTopology G] [BorelSpace G] [MeasureSpace Ω₀] (p : multiRefPackage G Ω₀) : Continuous
+      (fun (μ : Fin p.m → ProbabilityMeasure G) ↦ multiTau p (fun _ ↦ G) (fun i ↦ ⟨ μ i ⟩) (fun _ ↦ id)) :=
+
+
+
+Theorem: multidist_ruzsa_II
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma multidist_ruzsa_II {m:ℕ} (hm: m ≥ 2) {Ω: Fin m → Type*} (hΩ : (i : Fin m) → MeasureSpace (Ω i))
+    (X : (i : Fin m) → (Ω i) → G): ∑ j, d[X j # X j] ≤ 2 * m * D[X; hΩ] :=
+
+
+
+Theorem: rho_minus_of_sum
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma rho_minus_of_sum  {Ω : Type*} [MeasureSpace Ω] (X Y : Ω → G) (A : Finset G) (hindep: IndepFun X Y) : rho_minus (X+Y) A ≤ rho_minus X A :=
+
+
+
+Theorem: dist_add_dist_eq
+File path: PFR/RhoFunctional.lean
+Theorem statement: lemma dist_add_dist_eq : d[ X₁ # X₁ ] + d[ X₂ # X₂ ] = 2 * d[ X₁ # X₂ ] + (I₂ - I₁) :=
+
+
+
+Theorem: cond_multiDist_chainRule
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma cond_multiDist_chainRule (G H: Type*) [hG : MeasurableSpace G] [MeasurableSingletonClass G] [AddCommGroup G] [MeasurableSub₂ G] [MeasurableAdd₂ G] [Countable G] [hH : MeasurableSpace H] [MeasurableSingletonClass H] [AddCommGroup H] [MeasurableSub₂ H] [MeasurableAdd₂ H] [Fintype H] (π: G →+ H) {S : Type*} [Fintype S] [hS: MeasurableSpace S] {m : ℕ} {Ω : Type*} (hΩ : MeasureSpace Ω) (X : Fin m → Ω → G) (Y : Fin m → Ω → S) (hindep : iIndepFun (fun _ ↦ (hG.prod hS)) (fun i ↦ ⟨ X i, Y i ⟩) ) : D[X | Y; fun _ ↦ hΩ] = D[X | fun i ↦ ⟨ π ∘ (X i), Y i ⟩; fun _ ↦ hΩ] + D[ fun i ↦ π ∘ (X i) | Y; fun _ ↦ hΩ] + I[ ∑ i, X i : fun ω ↦ (fun i ↦ π (X i ω)) | ⟨ π ∘ (∑ i, X i), fun ω ↦ (fun i ↦ Y i ω)⟩] :=
+
+
+
+Theorem: ent_of_sum_le_ent_of_sum
+File path: PFR/MoreRuzsaDist.lean
+Theorem statement: lemma ent_of_sum_le_ent_of_sum [IsProbabilityMeasure μ] {I : Type*} {s t : Finset I} (hdisj : Disjoint s t)
+    (hs : Finset.Nonempty s) (ht : Finset.Nonempty t) (X : I → Ω → G) (hX : (i : I) → Measurable (X i))
+    (hX' : (i : I) → FiniteRange (X i)) (hindep : iIndepFun (fun (i : I) ↦ hG) X μ ) (f : I → I)
+    (hf : Finset.image f t ⊆ s) :
+    H[∑ i in t, X i; μ] ≤ H[∑ i in s, X i; μ] + ∑ i in t, (H[X i - X (f i); μ] - H[X (f i); μ]) :=
+
+
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/leanprover-community/lean-auto (commit: 0f5f39a0336e36ae4ba8ab45b27865ebd9f8f025)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/google-deepmind/debate (commit: 7fb39251b705797ee54e08c96177fabd29a5b5a3)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/eric-wieser/lean-matrix-cookbook (commit: f15a149d321ac99ff9b9c024b58e7882f564669f)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 7
+
+Theorem: MatrixCookbook.eq_257
+File path: MatrixCookbook/4ComplexMatrices.lean
+Theorem statement: theorem eq_257 (h : IsUnit E)  :
+    (A.map (↑) + B.map (· • I))⁻¹ =
+      (1 - t • I : ℂ) • ((E + F * E⁻¹ * F)⁻¹.map (↑) * (1 - (F * E⁻¹).map (· • I))) :=
+
+
+
+Theorem: MatrixCookbook.eq_533
+File path: MatrixCookbook/10FunctionsAndOperators.lean
+Theorem statement: lemma eq_533 (A : Matrix m n ℝ) : ‖A‖ = sSup { ‖A.mulVec x‖ | (x) (hx : ‖x‖ = 1)} :=
+
+
+
+Theorem: MatrixCookbook.eq_160
+File path: MatrixCookbook/3Inverses.lean
+Theorem statement: theorem eq_160 (b c : n → ℂ) :
+    (A + col b * row c)⁻¹ = A⁻¹ - (1 + c ⬝ᵥ A⁻¹.mulVec b)⁻¹ • A⁻¹ * (col b * row c) * A⁻¹ :=
+
+
+
+Theorem: MatrixCookbook.eq_258
+File path: MatrixCookbook/4ComplexMatrices.lean
+Theorem statement: theorem eq_258 (h : IsUnit E) :
+    (A.map (↑) + B.map (· • I))⁻¹ =
+      (E + F * E⁻¹ * F)⁻¹.map (↑) *
+        ((1 - t • (F * E⁻¹).map (↑)) - (t • 1 + (F * E⁻¹)).map (· • I)) :=
+
+
+
+Theorem: MatrixCookbook.eq_446
+File path: MatrixCookbook/9SpecialMatrices.lean
+Theorem statement: theorem eq_446 (A : Matrix l m R) (B : Matrix n p R) (k i j l) :
+    A k i * B j l = (A * stdBasisMatrix i j (1 : R) * B) k l :=
+
+
+
+Theorem: MatrixCookbook.eq_259
+File path: MatrixCookbook/4ComplexMatrices.lean
+Theorem statement: theorem eq_259 (h : IsUnit E) :
+    (A.map (↑) + B.map (· • I))⁻¹ =
+      ((E + F * E⁻¹ * F)⁻¹ * (1 - t • (F * E⁻¹))).map (↑) -
+       ((E + F * E⁻¹ * F)⁻¹ * (t • 1 + (F * E⁻¹))).map (· • I) :=
+
+
+
+Theorem: MatrixCookbook.eq_256
+File path: MatrixCookbook/4ComplexMatrices.lean
+Theorem statement: theorem eq_256 (h : IsUnit E)  :
+    (A.map (↑) + B.map (· • I))⁻¹ =
+      (1 - t • I : ℂ) • ((E + F * E⁻¹ * F)⁻¹.map (↑) - ((E + F * E⁻¹ * F)⁻¹ * F * E).map (· • I))⁻¹ :=
+
+
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/leanprover-community/flt-regular (commit: 359ab563c7ba5d775c1878ac7b3d0c4095b37ec4)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/lecopivo/SciLean (commit: 22d53b2f4e3db2a172e71da6eb9c916e62655744)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 7
+
+Theorem: Function.Bijective.Equiv.invFun.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Equiv.invFun.arg_a0.Bijective_rule (f : Y ≃ Z) (g : X → Z) (hf : Bijective g)
+  : Bijective (fun x => f.invFun (g x)) :=
+
+
+Theorem: SciLean.Measure.prod_volume
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem Measure.prod_volume {X Y} [MeasureSpace X] [MeasureSpace Y]  :
+    (Measure.prod (volume : Measure X) (volume : Measure Y)) = volume :=
+
+
+Theorem: Function.Bijective.Equiv.toFun.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Equiv.toFun.arg_a0.Bijective_rule (f : Y ≃ Z) (g : X → Y) (hf : Bijective g)
+  : Bijective (fun x => f (g x)) :=
+
+
+Theorem: SciLean.ContCDiffMapFD_eta
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+
+
+Theorem: Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.Bijective_rule_simple
+  : Bijective (fun xy : X×Y => (xy.1, xy.2))
+  :=
+
+
+Theorem: SciLean.CDifferentiable.id_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiable.id_rule
+  : CDifferentiable K (fun x : X => x)
+  :=
+
+
+Theorem: SciLean.ArrayType.ext
+File path: SciLean/Data/ArrayType/Basic.lean
+Theorem statement: theorem ext (x y : Cont) : (∀ i, x[i] = y[i]) → x = y :=
+
+
+Common Unproved sorry theorems: 267
+
+Theorem: SciLean.DualBasis.dualProj.arg_x.ContCDiff_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem DualBasis.dualProj.arg_x.ContCDiff_rule (i : IX)
+  : ContCDiff K n (fun x : X => ℼ' i x) :=
+
+
+
+Theorem: LeanColls.Indexed.set.arg_contelem.IsLinearMap_rule_simple
+File path: SciLean/Data/ArrayType/Properties.lean
+Theorem statement: theorem LeanColls.Indexed.set.arg_contelem.IsLinearMap_rule_simple (idx : Idx) :
+    IsLinearMap R (fun ((cont,elem) : Cont×Elem) => Indexed.set cont idx elem) :=
+
+
+
+Theorem: SciLean.IndexType.sum.arg_f.CDifferentiableAt_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem IndexType.sum.arg_f.CDifferentiableAt_rule
+  (f : X → ι → Y) (x : X) (hf : ∀ i, CDifferentiableAt K (fun x => f x i) x)
+  : CDifferentiableAt K (fun x => ∑ i, f x i) x :=
+
+
+
+Theorem: SciLean.ContCDiffMapFD_apply_CDifferentiableAt
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_apply_CDifferentiableAt (f : W → X ⟿FD[K,∞] Y) (g : W → X) (w : W)
+    (hf : CDifferentiableAt K f w) (hg : CDifferentiableAt K g w) : CDifferentiableAt K (fun w => f w (g w)) w :=
+
+
+
+Theorem: SciLean.proj_zero
+File path: SciLean/Core/Objects/FinVec.lean
+Theorem statement: theorem proj_zero (i : ι)
+  : ℼ i (0 : X) = 0 :=
+
+
+
+Theorem: SciLean.BasisDuality.toDual.arg_x.IsLinearMap_rule
+File path: SciLean/Core/FunctionPropositions/IsLinearMap.lean
+Theorem statement: theorem BasisDuality.toDual.arg_x.IsLinearMap_rule :
+    IsLinearMap K (fun x : X => BasisDuality.toDual x) :=
+
+
+
+Theorem: SciLean.semiAdjoint.starRingEnd.arg_a0.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem starRingEnd.arg_a0.semiAdjoint_rule
+  (f : X → K)
+  : semiAdjoint K (fun x => conj (f x))
+    =
+    fun z => semiAdjoint K f z :=
+
+
+
+Theorem: SciLean.Prod.fst.arg_self.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem Prod.fst.arg_self.CDifferentiable_rule
+  (f : X → Y×Z) (hf : CDifferentiable K f)
+  : CDifferentiable K (fun x => (f x).1)  :=
+
+
+
+Theorem: SciLean.semiAdjoint.HSMul.hSMul.arg_a0.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem HSMul.hSMul.arg_a0.semiAdjoint_rule
+  {Y : Type _} [SemiHilbert K Y]
+  (y' : Y) (f : X → K) (hf : HasSemiAdjoint K f)
+  : semiAdjoint K (fun x => f x • y')
+    =
+    fun y => semiAdjoint K (fun x => f x) ⟪y',y⟫[K] :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.Inner.inner.arg_a1.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem Inner.inner.arg_a1.HasSemiAdjoint_rule
+  (f : X → Y) (_ : HasSemiAdjoint K f) (y : Y)
+  : HasSemiAdjoint K fun x => ⟪y, f x⟫[K] :=
+
+
+
+Theorem: GetElem.getElem.arg_cont.revCDerivProj_rule
+File path: SciLean/Data/ArrayType/Properties.lean
+Theorem statement: theorem GetElem.getElem.arg_cont.revCDerivProj_rule
+  {J ElemJ} [StructType Elem J ElemJ] [IndexType J] [LawfulIndexType J] [DecidableEq J]
+  [∀ j, SemiInnerProductSpace K (ElemJ j)] [SemiInnerProductSpaceStruct K Elem J ElemJ]
+  (f : X → Cont) (idx : Idx)
+  (hf : HasAdjDiff K f)
+  : revDerivProj K J (fun x => (f x)[idx])
+    =
+    fun x =>
+      let ydf := revDerivProj K (Idx×J) f x
+      (ydf.1[idx],
+       fun j delem => ydf.2 (idx,j) delem) :=
+
+
+
+Theorem: SciLean.inner_basis_dualProj
+File path: SciLean/Core/Objects/FinVec.lean
+Theorem statement: theorem inner_basis_dualProj (i : ι) (x : X)
+  : ⟪x, ⅇ i⟫[K] = ℼ' i x :=
+
+
+
+Theorem: SciLean.BasisDuality.toDual.arg_x.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem BasisDuality.toDual.arg_x.CDifferentiable_rule
+  : CDifferentiable K (fun x : X => BasisDuality.toDual x) :=
+
+
+
+Theorem: SciLean.DualBasis.dualProj.arg_x.IsLinearMap_rule
+File path: SciLean/Core/FunctionPropositions/IsLinearMap.lean
+Theorem statement: theorem DualBasis.dualProj.arg_x.IsLinearMap_rule (i : IX) :
+    IsLinearMap K (fun x : X => ℼ' i x) :=
+
+
+
+Theorem: SciLean.scalar_sqrt_zero
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_sqrt_zero  : Scalar.sqrt (0 : R) = 0 :=
+
+
+
+Theorem: SciLean.Measure.prod_restrict
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem Measure.prod_restrict {X Y} [MeasurableSpace X] [MeasurableSpace Y]
+    (μ : Measure X) (ν : Measure Y) (A : Set X) (B : Set Y) :
+    (Measure.prod (μ.restrict A) (ν.restrict B)) = (μ.prod ν).restrict (A ×ˢ B) :=
+
+
+
+Theorem: SciLean.parDistribDeriv.comp_rule
+File path: SciLean/Core/Distribution/ParametricDistribDeriv.lean
+Theorem statement: theorem parDistribDeriv.comp_rule
+    (f : Y → 𝒟'(Z,U)) (g : X → Y)
+    (hf : DistribDifferentiable f) (hg : CDifferentiable R g) :
+    parDistribDeriv (fun x => f (g x))
+    =
+    fun x dx =>
+      let ydy := fwdDeriv R g x dx
+      parDistribDeriv f ydy.1 ydy.2 :=
+
+
+
+Theorem: Function.invFun.Equiv.toFun.arg_a0.invFun_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem Equiv.toFun.arg_a0.invFun_rule (f : Y ≃ Z) (g : X → Y) (hf : Bijective g)
+  : Function.invFun (fun x => f (g x))
+    =
+    fun z => Function.invFun g (f.invFun z) :=
+
+
+
+Theorem: SciLean.Neg.neg.arg_a0.ContCDiff_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem Neg.neg.arg_a0.ContCDiff_rule
+    (f : X → Y) (hf : ContCDiff K n f) :
+    ContCDiff K n (fun x => - f x) :=
+
+
+
+Theorem: SciLean.parametric_inverse_affine
+File path: SciLean/Core/Integral/PlaneDecomposition.lean
+Theorem statement: theorem parametric_inverse_affine {n} (f : X → R) (c : R) (hf : IsAffineMap R f)
+    (hn : n + 1 = card ι := by first | assumption | infer_var) :
+    let u  := ∇ f 0
+    let dec := planeDecomposition (R:=R) u hn
+    ParametricInverseAt f c
+      (I:=Unit)
+      (p:=fun _ y t => dec (t,y))
+      (g:=fun _ _ => (c - f 0) / ‖u‖₂)
+      (dom := fun _ => ⊤) :=
+
+
+
+Theorem: SciLean.cintegral.arg_f.parDistribDeriv_rule
+File path: SciLean/Core/Distribution/ParametricDistribDeriv.lean
+Theorem statement: theorem cintegral.arg_f.parDistribDeriv_rule (f : W → X → Y → Z) :
+    parDistribDeriv (fun w => (fun x => ∫' y, f w x y).toDistribution (R:=R))
+    =
+    fun w dw =>
+      let Tf := (fun w => (fun x => (fun y => f w x y).toDistribution (R:=R)).toDistribution (R:=R))
+      parDistribDeriv Tf w dw |>.postComp (fun T ⊸ T.extAction (fun _ => (1:R)) (fun z ⊸ fun r ⊸ r • z)) :=
+
+
+
+Theorem: Function.invFun.Inv.inv.arg_a0.invFun_rule_field
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem Inv.inv.arg_a0.invFun_rule_field
+  [Field Y]
+  (f : X → Y) (hf : Bijective f) (hf' : ∀ x, f x ≠ 0)
+  : invFun (fun x => (f x)⁻¹)
+    =
+    fun y =>
+      invFun f (y⁻¹)
+  :=
+
+
+
+Theorem: SciLean.cderiv.pi_rule_at
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem cderiv.pi_rule_at
+  (f : X → (i : ι) → E i) (x : X) (hf : ∀ i, CDifferentiableAt K (f · i) x)
+  : (cderiv K fun (x : X) (i : ι) => f x i) x
+    =
+    fun dx => fun i =>
+      cderiv K (f · i) x dx
+  :=
+
+
+
+Theorem: SciLean.Diffeomorphism.comp_rule
+File path: SciLean/Core/FunctionPropositions/Diffeomorphism.lean
+Theorem statement: theorem comp_rule
+  (f : Y → Z) (g : X → Y)
+  (hf : Diffeomorphism K f) (hg : Diffeomorphism K g)
+  : Diffeomorphism K (fun x => f (g x))
+  :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.Inner.inner.arg_a0.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem Inner.inner.arg_a0.HasSemiAdjoint_rule
+  (f : X → Y) (_ : HasSemiAdjoint K f) (y : Y)
+  : HasSemiAdjoint K fun x => ⟪f x, y⟫[K] :=
+
+
+
+Theorem: SciLean.jacobian.comp_rule
+File path: SciLean/Core/Integral/Jacobian.lean
+Theorem statement: theorem jacobian.comp_rule (f : U → V) (g : U → U)
+    (hf : HasAdjDiff R f) (hg : HasAdjDiff R g) :
+    jacobian R (fun x => f (g x))
+    =
+    fun x => jacobian R f x * jacobian R g x :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.Finset.sum.arg_f.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem Finset.sum.arg_f.HasSemiAdjoint_rule {ι : Type _} [Fintype ι]
+  (f : X → ι → Y) (_ : ∀ i, HasSemiAdjoint K fun x : X => f x i) (A : Finset ι)
+  : HasSemiAdjoint K fun x => ∑ i in A, f x i :=
+
+
+
+Theorem: Function.Bijective.HMul.hMul.arg_a1.Bijective_rule_field
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HMul.hMul.arg_a1.Bijective_rule_field
+  [Field Y]
+  (y : Y) (f : X → Y) (hf : Bijective f) (hy : y ≠ 0)
+  : Bijective (fun x => y * f x)
+  :=
+
+
+
+Theorem: SciLean.DualBasis.dualProj.arg_x.IsAffineMap_rule
+File path: SciLean/Core/FunctionPropositions/IsAffineMap.lean
+Theorem statement: theorem DualBasis.dualProj.arg_x.IsAffineMap_rule (i : IX) :
+    IsAffineMap K (fun x : X => ℼ' i x) :=
+
+
+
+Theorem: SciLean.Distribution.extAction_iteD'
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.extAction_iteD' (A B : Set X) (t e : 𝒟'(X,U)) (φ : X → V) (L : U ⊸ V ⊸ W) :
+    ((iteD A t e).restrict B).extAction φ L =
+        (t.restrict B).extAction (fun x => if x ∈ A then φ x else 0) L +
+        (e.restrict B).extAction (fun x => if x ∉ A then φ x else 0) L :=
+
+
+
+Theorem: SciLean.BasisDuality.fromDual.arg_x.ContCDiff_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem BasisDuality.fromDual.arg_x.ContCDiff_rule
+  : ContCDiff K n (fun x : X => BasisDuality.fromDual x) :=
+
+
+
+Theorem: SciLean.semiAdjoint.HMul.hMul.arg_a0.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem HMul.hMul.arg_a0.semiAdjoint_rule
+  (c : K) (f : X → K) (hf : HasSemiAdjoint K f)
+  : semiAdjoint K (fun x => f x * c)
+    =
+    fun y => conj c • semiAdjoint K (fun x => f x) y :=
+
+
+
+Theorem: Function.invFun.comp_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem comp_rule
+  (f : Y → Z) (g : X → Y)
+  (hf : Bijective f) (hg : Bijective g)
+  : invFun (fun x => f (g x))
+    =
+    fun z =>
+      let y := invFun f z
+      let x := invFun g y
+      x :=
+
+
+
+Theorem: SciLean.Neg.neg.arg_a0.cderiv_rule'
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem Neg.neg.arg_a0.cderiv_rule' (x : X) (f : X → Y) :
+    (cderiv K fun x => - f x) x
+    =
+    fun dx => - cderiv K f x dx :=
+
+
+
+Theorem: SciLean.cintegral.arg_f.cderiv_rule
+File path: SciLean/Core/Integral/CIntegral.lean
+Theorem statement: theorem cintegral.arg_f.cderiv_rule
+    (f : X → β → Z) (μ : Measure β) (hf : ∀ y, CDifferentiable R (f · y)) :
+    (cderiv R  fun x => ∫' y, f x y ∂μ)
+    =
+    fun x dx => ∫' y, cderiv R (f · y) x dx ∂μ :=
+
+
+
+Theorem: SciLean.Rand.E_smul
+File path: SciLean/Core/Rand/Rand.lean
+Theorem statement: theorem E_smul (r : Rand X) (φ : X → ℝ) (y : Y) :
+    r.𝔼 (fun x' => φ x' • y) = r.𝔼 φ • y :=
+
+
+
+Theorem: SciLean.gaussian.arg_μx.cderiv_rule
+File path: SciLean/Core/Functions/Gaussian.lean
+Theorem statement: theorem gaussian.arg_μx.cderiv_rule
+    (μ : W → U) (σ : R) (x : W → U)
+    (hμ : CDifferentiable R μ) (hx : CDifferentiable R x) :
+    fwdDeriv R (fun w => gaussian (μ w) σ (x w))
+    =
+    fun w dw =>
+      let μdμ := fwdDeriv R μ w dw
+      let xdx := fwdDeriv R x w dw
+      let xdx' := σ⁻¹ • (xdx - μdμ)
+      let g := gaussian μdμ.1 σ xdx.1
+      (g, - ⟪xdx'.1, xdx'.2⟫ * g) :=
+
+
+
+Theorem: SciLean.Distribution.extAction_iteD
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.extAction_iteD (A : Set X) (t e : 𝒟'(X,U)) (φ : X → V) (L : U ⊸ V ⊸ W) :
+    (iteD A t e).extAction φ L =
+        t.extAction (fun x => if x ∈ A then φ x else 0) L +
+        e.extAction (fun x => if x ∉ A then φ x else 0) L :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.const_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem const_rule : HasSemiAdjoint K (fun _ : X => (0:Y)) :=
+
+
+
+Theorem: SciLean.BasisDuality.fromDual.arg_x.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem BasisDuality.fromDual.arg_x.CDifferentiable_rule
+  : CDifferentiable K (fun x : X => BasisDuality.fromDual x) :=
+
+
+
+Theorem: SciLean.HSMul.hSMul.arg_a1.ContCDiffAt_rule_int
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem HSMul.hSMul.arg_a1.ContCDiffAt_rule_int
+    (c : ℤ) (f : X → Y) (x) (hf : ContCDiffAt K n f x) :
+    ContCDiffAt K n (fun x => c • f x) x :=
+
+
+
+Theorem: SciLean.HSMul.hSMul.arg_a1.CDifferentiable_rule_int
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem HSMul.hSMul.arg_a1.CDifferentiable_rule_int
+    (c : ℤ) (f : X → Y) (hf : CDifferentiable K f) : CDifferentiable K fun x => c • f x :=
+
+
+
+Theorem: SciLean.cintegral.arg_f.CDifferentiable_rule
+File path: SciLean/Core/Integral/CIntegral.lean
+Theorem statement: theorem cintegral.arg_f.CDifferentiable_rule
+    (f : X → β → Z) (μ : Measure β) (hf : ∀ x, CDifferentiable R (f · x)) :
+    CDifferentiable R (fun x => ∫' y, f x y ∂μ) :=
+
+
+
+Theorem: SciLean.Rand.swap_bind
+File path: SciLean/Core/Rand/Rand.lean
+Theorem statement: theorem swap_bind (f : X → Y → Z) (x : Rand X) (y : Rand Y) :
+    (do let x' ← x; let y' ← y; pure (f x' y'))
+    =
+    (do let y' ← y; let x' ← x; pure (f x' y')) :=
+
+
+
+Theorem: SciLean.scalar_norm
+File path: SciLean/Core/Objects/SemiInnerProductSpace.lean
+Theorem statement: theorem scalar_norm {R} [RealScalar R] (r : R) : ‖r‖₂[R] = Scalar.abs r :=
+
+
+
+Theorem: SciLean.cderiv.pi_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem cderiv.pi_rule
+  (f : X → (i : ι) → E i) (hf : ∀ i, CDifferentiable K (f · i))
+  : (cderiv K fun (x : X) (i : ι) => f x i)
+    =
+    fun x => fun dx => fun i =>
+      cderiv K (f · i) x dx
+  :=
+
+
+
+Theorem: SciLean.semiAdjoint.comp_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem comp_rule
+  (f : Y → Z) (g : X → Y) (hf : HasSemiAdjoint K f) (hg : HasSemiAdjoint K g) :
+    semiAdjoint K (fun x => f (g x))
+    =
+    fun z =>
+      let y := semiAdjoint K f z
+      let x := semiAdjoint K g y
+      x :=
+
+
+
+Theorem: SciLean.semiAdjoint.let_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem let_rule
+    (f : X → Y → Z) (g : X → Y)
+    (hf : HasSemiAdjoint K ↿f) (hg : HasSemiAdjoint K g) :
+    semiAdjoint K (fun x => let y := g x; f x y)
+    =
+    fun z =>
+      let xy := semiAdjoint K (fun xy : X×Y => f xy.1 xy.2) z
+      let x' := semiAdjoint K g xy.2
+      xy.1 + x' :=
+
+
+
+Theorem: SciLean.semiAdjoint.Prod.fst.arg_self.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem Prod.fst.arg_self.semiAdjoint_rule
+  (f : X → Y×Z) (hf : SciLean.HasSemiAdjoint K f)
+  : semiAdjoint K (fun x => (f x).1)
+    =
+    (fun y => semiAdjoint K (fun x => f x) (y,0)) :=
+
+
+
+Theorem: SciLean.scalar_abs_zero
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_abs_zero : Scalar.abs (0 : R) = 0 :=
+
+
+
+Theorem: SciLean.revDerivUpdate.pi_rule
+File path: SciLean/Core/FunctionTransformations/RevDeriv.lean
+Theorem statement: theorem pi_rule
+    (f :  X → (i : I) → EI i) (hf : ∀ i, HasAdjDiff K (f · i)) :
+    (revDerivUpdate K fun (x : X) (i : I) => f x i)
+    =
+    fun x =>
+      let xdf := fun i => revDerivUpdate K (f · i) x
+      (fun i => (xdf i).1,
+       fun dy dx =>
+         Fold.fold (IndexType.univ I) (fun dx i => (xdf i).2 (dy i) dx) dx) :=
+
+
+
+Theorem: SciLean.semiAdjoint.id_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem id_rule : semiAdjoint K (fun (x : X) => x) = fun x => x :=
+
+
+
+Theorem: SciLean.odeSolve.arg_ft₀tx₀.fwdDeriv_rule
+File path: SciLean/Modules/DifferentialEquations/OdeSolve.lean
+Theorem statement: theorem odeSolve.arg_ft₀tx₀.fwdDeriv_rule
+  (f : W → R → X → X) (t₀ t : W → R) (x₀ : W → X)
+  (hf : CDifferentiable R (fun (w,t,x) => f w t x))
+  (ht₀ : CDifferentiable R t₀) (ht : CDifferentiable R t)
+  (hx : CDifferentiable R x₀)
+  : fwdDeriv R (fun w => odeSolve (f w) (t₀ w) (t w) (x₀ w))
+    =
+    fun w dw =>
+      let t₀dt₀ := fwdDeriv R t₀ w dw
+      let tdt   := fwdDeriv R t₀ w dw
+      let x₀dx₀ := fwdDeriv R x₀ w dw
+      let Tf := fwdDeriv R (fun wkx : W×R×X => f wkx.1 wkx.2.1 wkx.2.2)
+
+      let F := fun (t : R) (xdx : X×X) =>
+        let x  := xdx.1
+        let dx := xdx.2
+        Tf (w,t,x) (dw,t₀dt₀.2,dx)
+
+      let xdx := odeSolve F (t₀dt₀.1) (tdt.1) x₀dx₀
+
+      (xdx.1, xdx.2 + tdt.2 • f w tdt.1 xdx.1) :=
+
+
+
+Theorem: SciLean.HSub.hSub.arg_a1.cderiv_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem HSub.hSub.arg_a1.cderiv_rule
+    (f : X → Y) (y : Y) :
+    (cderiv K fun x => y - f x)
+    =
+    fun x dx =>
+      - cderiv K f x dx :=
+
+
+
+Theorem: SciLean.Rand.mean_add'
+File path: SciLean/Core/Rand/Rand.lean
+Theorem statement: theorem mean_add' (x : Rand X) (x' : X) : x' + x.mean = (x' +  x).mean :=
+
+
+
+Theorem: SciLean.semiAdjoint.Finset.sum.arg_f.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem Finset.sum.arg_f.semiAdjoint_rule {ι : Type _} [Fintype ι]
+  (f : X → ι → Y) (hf : ∀ i, HasSemiAdjoint K (f · i))
+  : semiAdjoint K (fun x => ∑ i, f x i)
+    =
+    (fun y => ∑ i, semiAdjoint K (f · i) y) :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.SciLean.IndexType.sum.arg_f.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem SciLean.IndexType.sum.arg_f.HasSemiAdjoint_rule
+  (f : X → ι → Y) (hf : ∀ i, HasSemiAdjoint K fun x : X => f x i)
+  : HasSemiAdjoint K fun x => ∑ i, f x i :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.apply_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem apply_rule (i : ι) :
+    HasSemiAdjoint K (fun x : (i : ι) → E i => x i) :=
+
+
+
+Theorem: SciLean.cintegral.arg_f.IsLinearMap_rule
+File path: SciLean/Core/Integral/CIntegral.lean
+Theorem statement: theorem cintegral.arg_f.IsLinearMap_rule
+    (f : X → β → Z) (μ : Measure β) (hf : ∀ y, IsLinearMap R (f · y)) :
+    IsLinearMap R (fun x => ∫' y, f x y ∂μ) :=
+
+
+
+Theorem: SciLean.Distribution.indextype_sum_extAction
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.indextype_sum_extAction {I} [IndexType I] (T : I → 𝒟'(X,U)) (φ : X → V) (L : U ⊸ V ⊸ W) :
+    (∑ i, T i).extAction φ L = ∑ i, (T i).extAction φ L :=
+
+
+
+Theorem: SciLean.Distribution.smul_extAction
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.smul_extAction (r : R) (T : 𝒟'(X,U)) (φ : X → V) (L : U ⊸ V ⊸ W)  :
+    (r • T).extAction φ L = r • T.extAction φ L :=
+
+
+
+Theorem: SciLean.HDiv.hDiv.arg_a0a1.cderiv_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem HDiv.hDiv.arg_a0a1.cderiv_rule (f : X → K) (g : X → K)
+    (hf : CDifferentiable K f) (hg : CDifferentiable K g) (hx : ∀ x, g x ≠ 0) :
+    (cderiv K fun x => f x / g x)
+    =
+    fun x =>
+      let k := f x
+      let k' := g x
+      fun dx =>
+        ((cderiv K f x dx) * k' - k * (cderiv K g x dx)) / k'^2 :=
+
+
+
+Theorem: IsLinearMap.sum_push
+File path: SciLean/Core/Meta/GenerateLinearMapSimp.lean
+Theorem statement: theorem _root_.IsLinearMap.sum_push
+  {f : X → Y} (hf : IsLinearMap K f)
+  (ι : Type) [IndexType.{_,u} ι] [IndexType.{_,v} ι] (x : ι → X)
+  : (∑ i, f (x i)) = f (∑ i, x i) :=
+
+
+
+Theorem: SciLean.cderiv.id_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem cderiv.id_rule :
+    (cderiv K fun x : X => x) = fun _ => fun dx => dx :=
+
+
+
+Theorem: SciLean.ContCDiffAt.const_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem ContCDiffAt.const_rule (y : Y) (x : X) :
+    ContCDiffAt K n (fun _ : X => y) x :=
+
+
+
+Theorem: Function.Bijective.HAdd.hAdd.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HAdd.hAdd.arg_a0.Bijective_rule
+  [AddGroup Y]
+  (f : X → Y) (y : Y) (hf : Bijective f)
+  : Bijective fun x => f x + y
+  :=
+
+
+
+Theorem: SciLean.SmoothLinearMap.indextype_sum_apply
+File path: SciLean/Core/FunctionSpaces/SmoothLinearMap.lean
+Theorem statement: theorem SmoothLinearMap.indextype_sum_apply {I} [IndexType I] (f : I → X⊸[K] Y) (x : X) :
+    (∑ i, f i) x = ∑ i, f i x  :=
+
+
+
+Theorem: SciLean.Bind.bind.arg_fx.DistribDifferentiable_rule
+File path: SciLean/Core/Distribution/ParametricDistribDeriv.lean
+Theorem statement: theorem Bind.bind.arg_fx.DistribDifferentiable_rule
+    (f : X → Y → 𝒟'(Z,V)) (g : X → 𝒟'(Y,U)) (L : U ⊸ V ⊸ W)
+    (hf : DistribDifferentiable (fun (x,y) => f x y)) (hg : DistribDifferentiable g) :
+    DistribDifferentiable (fun x => (g x).bind (f x) L) :=
+
+
+
+Theorem: SciLean.ContCDiffMap_eval_CDifferentiable'
+File path: SciLean/Core/FunctionSpaces/ContCDiffMap.lean
+Theorem statement: theorem ContCDiffMap_eval_CDifferentiable' :
+    CDifferentiable K (fun (fx : (X ⟿[K,∞] Y)×X) => fx.1 fx.2) :=
+
+
+
+Theorem: SciLean.DualBasis.dualProj.arg_x.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem DualBasis.dualProj.arg_x.ContCDiffAt_rule (i : IX) (x)
+  : ContCDiffAt K n (fun x : X => ℼ' i x) x :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.Neg.neg.arg_a0.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem Neg.neg.arg_a0.HasSemiAdjoint_rule
+    (f : X → Y) : HasSemiAdjoint K fun x => - f x :=
+
+
+
+Theorem: SciLean.IsContinuousLinearMap.Inner.inner.arg_a0.IsContinuousLinearMap_rule
+File path: SciLean/Core/FunctionPropositions/IsContinuousLinearMap.lean
+Theorem statement: theorem Inner.inner.arg_a0.IsContinuousLinearMap_rule
+  (f : X → Y) (_ : IsContinuousLinearMap K f) (y : Y)
+  : IsContinuousLinearMap K fun x => @inner K _ _ (f x) y :=
+
+
+
+Theorem: Function.Bijective.Neg.neg.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Neg.neg.arg_a0.Bijective_rule
+  [AddGroup Y]
+  (f : X → Y) (hf : Bijective f)
+  : Bijective fun x => - f x
+  :=
+
+
+
+Theorem: SciLean.SciLean.norm₂.arg_x.HasAdjDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/HasAdjDiff.lean
+Theorem statement: theorem SciLean.norm₂.arg_x.HasAdjDiffAt_rule (x : X)
+    (f : X → Y) (hf : HasAdjDiffAt R f x) (hfz : f x ≠ 0) :
+    HasAdjDiffAt R (fun x => ‖f x‖₂[R]) x :=
+
+
+
+Theorem: SciLean.cderiv.arg_f.IsSmoothLinearMap_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem cderiv.arg_f.IsSmoothLinearMap_rule
+    (f : X → Y → Z) (hf : CDifferentiable K (fun (x,y) => f x y)) (hf' : ∀ y, IsLinearMap K (fun x => f x y)) :
+    IsSmoothLinearMap K (fun x => cderiv K (f x ·)) :=
+
+
+
+Theorem: SciLean.HMul.hMul.arg_a0a1.cderiv_rule_at
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem HMul.hMul.arg_a0a1.cderiv_rule_at (x : X) (f g : X → K)
+    (hf : CDifferentiableAt K f x) (hg : CDifferentiableAt K g x) :
+    (cderiv K fun x => f x * g x) x
+    =
+    let fx := f x
+    let gx := g x
+    fun dx =>
+      (cderiv K g x dx) * fx + (cderiv K f x dx) * gx :=
+
+
+
+Theorem: SciLean.semiAdjoint.HDiv.hDiv.arg_a0.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem HDiv.hDiv.arg_a0.semiAdjoint_rule
+  (f : X → K) (c : K)
+  (hf : HasSemiAdjoint K f)
+  : semiAdjoint K (fun x => f x / c)
+    =
+    fun y => (conj c)⁻¹ • semiAdjoint K f y :=
+
+
+
+Theorem: SciLean.SciLean.cderiv.arg_dx.CDifferentiableAt_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem SciLean.cderiv.arg_dx.CDifferentiableAt_rule
+  (f : Y → Z) (g : X → Y) (y : Y) (dx : X)
+  (hf : CDifferentiableAt K f y) (hg : CDifferentiableAt K g dx)
+  : CDifferentiableAt K (fun dx' => cderiv K f y (g dx')) dx :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.Prod.snd.arg_self.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem Prod.snd.arg_self.HasSemiAdjoint_rule
+    (f : X → Y×Z) (hf : HasSemiAdjoint K f) :
+    HasSemiAdjoint K fun (x : X) => (f x).snd :=
+
+
+
+Theorem: SciLean.Basis.proj.arg_x.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem Basis.proj.arg_x.ContCDiffAt_rule (i : IX) (x)
+  : ContCDiffAt K n (fun x : X => ℼ i x) x :=
+
+
+
+Theorem: SciLean.semiAdjoint.Neg.neg.arg_a0.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem Neg.neg.arg_a0.semiAdjoint_rule
+  (f : X → Y)
+  : semiAdjoint K (fun x => - f x)
+    =
+    fun y => - semiAdjoint K f y :=
+
+
+
+Theorem: SciLean.semiAdjoint.Inner.inner.arg_a1.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem Inner.inner.arg_a1.semiAdjoint_rule
+  {Y : Type _} [SemiHilbert K Y]
+  (f : X → Y) (hf : HasSemiAdjoint K f) (y : Y)
+  : semiAdjoint K (fun x => ⟪y, f x⟫[K])
+    =
+    fun z => z • semiAdjoint K f y :=
+
+
+
+Theorem: SciLean.CDifferentiable.comp_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiable.comp_rule
+  (f : Y → Z) (g : X → Y)
+  (hf : CDifferentiable K f) (hg : CDifferentiable K g)
+  : CDifferentiable K (fun x => f (g x))
+  :=
+
+
+
+Theorem: Function.Bijective.HSub.hSub.arg_a1.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HSub.hSub.arg_a1.Bijective_rule
+  [AddGroup Y]
+   (y : Y) (f : X → Y) (hf : Bijective f)
+  : Bijective fun x => y - f x
+  :=
+
+
+
+Theorem: SciLean.Prod.mk.arg_fstsnd.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.ContCDiffAt_rule (x : X)
+  (g : X → Y) (hg : ContCDiffAt K n g x)
+  (f : X → Z) (hf : ContCDiffAt K n f x)
+  : ContCDiffAt K n (fun x => (g x, f x)) x
+  :=
+
+
+
+Theorem: SciLean.Distribution.iteD_same
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.iteD_same (A : Set X) (u : 𝒟'(X,Y)) :
+   iteD A u u = u :=
+
+
+
+Theorem: SciLean.scalar_max_one_zero
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_max_one_zero  : max (1 : R) (0 : R) = 1 :=
+
+
+
+Theorem: SciLean.scalar_abs_one
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_abs_one : Scalar.abs (1 : R) = 1 :=
+
+
+
+Theorem: Function.Bijective.HAdd.hAdd.arg_a1.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HAdd.hAdd.arg_a1.Bijective_rule
+  [AddGroup Y]
+  (y : Y)  (f : X → Y) (hf : Bijective f)
+  : Bijective fun x => y + f x
+  :=
+
+
+
+Theorem: SciLean.cderiv.let_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem cderiv.let_rule
+  (f : X → Y → Z) (g : X → Y)
+  (hf : CDifferentiable K fun xy : X×Y => f xy.1 xy.2) (hg : CDifferentiable K g)
+  : (cderiv K fun x : X =>
+       let y := g x
+       f x y)
+    =
+    fun x =>
+      let y  := g x
+      fun dx =>
+        let dy := cderiv K g x dx
+        let dz := cderiv K (fun xy : X×Y => f xy.1 xy.2) (x,y) (dx, dy)
+        dz :=
+
+
+
+Theorem: SciLean.semiAdjoint.Prod.snd.arg_self.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem Prod.snd.arg_self.semiAdjoint_rule
+  (f : X → Y×Z) (hf : SciLean.HasSemiAdjoint K f)
+  : semiAdjoint K (fun x => (f x).2)
+    =
+    (fun z => semiAdjoint K f (0,z)) :=
+
+
+
+Theorem: SciLean.norm₂_squared_nat
+File path: SciLean/Core/Objects/SemiInnerProductSpace.lean
+Theorem statement: theorem norm₂_squared_nat {R K X : Type _} [Scalar R K] [Norm2 K X] (x : X)
+  : ‖x‖₂[K] ^ 2 = ‖x‖₂²[K] :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.HDiv.hDiv.arg_a0.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem HDiv.hDiv.arg_a0.HasSemiAdjoint_rule
+  (f : X → K) (hf : HasSemiAdjoint K f) (y : K)
+  : HasSemiAdjoint K fun x => f x / y :=
+
+
+
+Theorem: SciLean.Rand.add_as_flip_E
+File path: SciLean/Core/Rand/Distributions/Flip.lean
+Theorem statement: theorem add_as_flip_E {x y : X} (θ : R) (h : θ ∈ Set.Ioo 0 1) :
+    x + y = (flip θ).𝔼 (fun b => if b then θ⁻¹ • x else (1-θ)⁻¹ • y) :=
+
+
+
+Theorem: Set.HSub.hSub.arg_a1.preimage_rule_Ioo
+File path: SciLean/Core/FunctionTransformations/Preimage.lean
+Theorem statement: theorem HSub.hSub.arg_a1.preimage_rule_Ioo (x' a b : R)  :
+    preimage (fun x : R => x' - x) (Ioo a b)
+    =
+    Ioo (x' - b) (x' - a) :=
+
+
+
+Theorem: SciLean.cderiv.comp_rule_at
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem cderiv.comp_rule_at
+  (f : Y → Z) (g : X → Y) (x : X)
+  (hf : CDifferentiableAt K f (g x)) (hg : CDifferentiableAt K g x)
+  : (cderiv K fun x : X => f (g x)) x
+    =
+    let y := g x
+    fun dx =>
+      let dy := cderiv K g x dx
+      let dz := cderiv K f y dy
+      dz :=
+
+
+
+Theorem: SciLean.HDiv.hDiv.arg_a0a1.cderiv_rule_at
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem HDiv.hDiv.arg_a0a1.cderiv_rule_at (x : X) (f : X → K) (g : X → K)
+    (hf : CDifferentiableAt K f x) (hg : CDifferentiableAt K g x) (hx : g x ≠ 0) :
+    (cderiv K fun x => f x / g x) x
+    =
+    let k := f x
+    let k' := g x
+    fun dx =>
+      ((cderiv K f x dx) * k' - k * (cderiv K g x dx)) / k'^2 :=
+
+
+
+Theorem: SciLean.HSub.hSub.arg_a0a1.ContCDiff_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem HSub.hSub.arg_a0a1.ContCDiff_rule
+    (f g : X → Y) (hf : ContCDiff K n f) (hg : ContCDiff K n g) :
+    ContCDiff K n (fun x => f x - g x) :=
+
+
+
+Theorem: SciLean.semiAdjoint.HMul.hMul.arg_a1.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem HMul.hMul.arg_a1.semiAdjoint_rule
+  (c : K) (f : X → K) (hf : HasSemiAdjoint K f)
+  : semiAdjoint K (fun x => c * f x)
+    =
+    fun y => conj c • semiAdjoint K (fun x => f x) y :=
+
+
+
+Theorem: SciLean.CDifferentiableAt.apply_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiableAt.apply_rule
+  (i : ι) (x)
+  : CDifferentiableAt K (fun x : (i : ι) → E i => x i) x :=
+
+
+
+Theorem: SciLean.ContCDiffAt.apply_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem ContCDiffAt.apply_rule
+    (i : ι) (x) : ContCDiffAt K n (fun x : (i : ι) → E i => x i) x :=
+
+
+
+Theorem: Function.invFun.Neg.neg.arg_a0.invFun_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem Neg.neg.arg_a0.invFun_rule
+  [AddGroup Y]
+  (f : X → Y) (hf : Bijective f)
+  : invFun (fun x => - f x)
+    =
+    fun y =>
+      invFun f (-y)
+  :=
+
+
+
+Theorem: SciLean.Function.invFun.arg_a1.cderiv_rule
+File path: SciLean/Core/FunctionPropositions/Diffeomorphism.lean
+Theorem statement: theorem Function.invFun.arg_a1.cderiv_rule
+  (f : Y → Z) (g : X → Z)
+  (hf : Diffeomorphism K f) (hg : CDifferentiable K g)
+  : cderiv K (fun x => invFun f (g x))
+    =
+    fun x dx =>
+      let z := g x
+      let dz := cderiv K g x dx
+      let y := invFun f z
+      let dy := invFun (cderiv K f y) dz
+      dy :=
+
+
+
+Theorem: SciLean.IndexType.sum.arg_f.cderiv_rule_at
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem IndexType.sum.arg_f.cderiv_rule_at
+  (f : X → ι → Y) (x : X) (hf : ∀ i, CDifferentiableAt K (f · i) x)
+  : cderiv K (fun x => ∑ i, f x i) x
+    =
+    fun dx => ∑ i, cderiv K (f · i) x dx :=
+
+
+
+Theorem: SciLean.semiAdjoint.Prod.mk.arg_fstsnd.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.semiAdjoint_rule
+  (g : X → Y) (f : X → Z)
+  (hg : HasSemiAdjoint K g) (hf : HasSemiAdjoint K f)
+  : semiAdjoint K (fun x => (g x, f x))
+    =
+    fun yz =>
+      let x₁ := semiAdjoint K g yz.1
+      let x₂ := semiAdjoint K f yz.2
+      x₁ + x₂ :=
+
+
+
+Theorem: SciLean.HAdd.hAdd.arg_a0a1.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem HAdd.hAdd.arg_a0a1.ContCDiffAt_rule
+    (x : X) (f g : X → Y) (hf : ContCDiffAt K n f x) (hg : ContCDiffAt K n g x) :
+    ContCDiffAt K n (fun x => f x + g x) x :=
+
+
+
+Theorem: SciLean.norm₂.arg_x.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem norm₂.arg_x.ContCDiffAt_rule
+    (f : X → Y) (x : X)
+    (hf : ContCDiffAt R n f x) (hx : f x≠0) :
+    ContCDiffAt R n (fun x => ‖f x‖₂[R]) x :=
+
+
+
+Theorem: SciLean.semiAdjoint.HAdd.hAdd.arg_a0a1.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem HAdd.hAdd.arg_a0a1.semiAdjoint_rule
+  (f g : X → Y) (hf : HasSemiAdjoint K f) (hg : HasSemiAdjoint K g)
+  : semiAdjoint K (fun x => f x + g x)
+    =
+    fun y =>
+      let x₁ := semiAdjoint K f y
+      let x₂ := semiAdjoint K g y
+      x₁ + x₂ :=
+
+
+
+Theorem: SciLean.Inner.inner.arg_a0a1.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem Inner.inner.arg_a0a1.CDifferentiable_rule
+    (f : X → Y) (g : X → Y)
+    (hf : CDifferentiable R f) (hg : CDifferentiable R g) :
+    CDifferentiable R (fun x => ⟪f x, g x⟫[R]) :=
+
+
+
+Theorem: SciLean.norm₂_prod
+File path: SciLean/Core/Objects/SemiInnerProductSpace.lean
+Theorem statement: theorem norm₂_prod {R K X Y} [Scalar R K] [AddCommMonoid K] [Inner K X] [Inner K Y] (x : X) (y : Y) :
+  ‖(x,y)‖₂[K] = Scalar.sqrt (‖x‖₂²[K] + ‖y‖₂²[K]) :=
+
+
+
+Theorem: SciLean.odeSolve.arg_x₀.revCDeriv_rule
+File path: SciLean/Modules/DifferentialEquations/OdeSolve.lean
+Theorem statement: theorem odeSolve.arg_x₀.revCDeriv_rule
+  (f : R → X → X) (t₀ t : R) (x₀ : W → X)
+  (hf : HasAdjDiff R (fun (t,x) => f t x))
+  (hx : HasAdjDiff R x₀)
+  : revDeriv R (fun w => odeSolve f t₀ t (x₀ w))
+    =
+    fun w =>
+      let x₀dx₀ := revDeriv R x₀ w
+      let x := fun s => odeSolve f t₀ s x₀dx₀.1
+      let dfdx := fun s dx' => - gradient R (fun x' => f s x') (x s) dx'
+      (x t,
+       fun dx =>
+         let dx := odeSolve dfdx t₀ t dx
+         x₀dx₀.2 dx) :=
+
+
+
+Theorem: SciLean.IndexType.sum.arg_f.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem IndexType.sum.arg_f.CDifferentiable_rule
+  (f : X → ι → Y) (hf : ∀ i, CDifferentiable K (fun x => f x i))
+  : CDifferentiable K (fun x => ∑ i, f x i) :=
+
+
+
+Theorem: SciLean.Prod.mk.arg_fstsnd.CDifferentiableAt_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.CDifferentiableAt_rule
+  (x : X)
+  (g : X → Y) (hg : CDifferentiableAt K g x)
+  (f : X → Z) (hf : CDifferentiableAt K f x)
+  : CDifferentiableAt K (fun x => (g x, f x)) x
+  :=
+
+
+
+Theorem: LeanColls.Indexed.set.arg_contelem.revCDerivProj_rule
+File path: SciLean/Data/ArrayType/Properties.lean
+Theorem statement: theorem LeanColls.Indexed.set.arg_contelem.revCDerivProj_rule
+    (cont : X → Cont) (idx : Idx) (elem : X → Elem)
+    (hcont : HasAdjDiff K cont) (helem : HasAdjDiff K elem) :
+    revDerivProj K Idx (fun x => Indexed.set (cont x) idx (elem x))
+    =
+    fun x =>
+      let cdc := revDerivProj K Idx cont x
+      let ede := revDeriv K elem x
+      (Indexed.set cdc.1 idx ede.1,
+       fun i delem =>
+         if i = idx then
+           ede.2 delem
+         else
+           cdc.2 i delem) :=
+
+
+
+Theorem: SciLean.BasisDuality.toDual.arg_x.ContCDiff_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem BasisDuality.toDual.arg_x.ContCDiff_rule
+  : ContCDiff K n (fun x : X => BasisDuality.toDual x) :=
+
+
+
+Theorem: Function.Bijective.HVAdd.hVAdd.arg_a1.Bijective_rule_group
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HVAdd.hVAdd.arg_a1.Bijective_rule_group
+  [AddGroup G] [AddAction G Y]
+  (g : G) (f : X → Y) (hf : Bijective f)
+  : Bijective (fun x => g +ᵥ f x)
+  :=
+
+
+
+Theorem: SciLean.HSub.hSub.arg_a0.cderiv_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem HSub.hSub.arg_a0.cderiv_rule
+    (f : X → Y) (y : Y) :
+    (cderiv K fun x => f x - y)
+    =
+    fun x dx =>
+      cderiv K f x dx :=
+
+
+
+Theorem: SciLean.explicitSymplecticEuler_eq_implicitSymplecticEulerV1
+File path: SciLean/Modules/DifferentialEquations/OdeSolvers/Solvers.lean
+Theorem statement: theorem explicitSymplecticEuler_eq_implicitSymplecticEulerV1
+  (T V : X → R)
+  (hT : HasAdjDiff R T) (hV : HasAdjDiff R V)
+  : explicitSymplecticEuler (fun q p => T p + V q)
+    =
+    implicitSymplecticEulerV1 (fun q p => T p + V q) :=
+
+
+
+Theorem: Set.HAdd.hAdd.arg_a1.preimage_rule_Ioo
+File path: SciLean/Core/FunctionTransformations/Preimage.lean
+Theorem statement: theorem HAdd.hAdd.arg_a1.preimage_rule_Ioo (x' a b : R)  :
+    preimage (fun x : R => x' + x) (Ioo a b)
+    =
+    Ioo (a - x') (b - x') :=
+
+
+
+Theorem: Function.invFun.let_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem let_rule
+  (f : X₂ → Y → Z) (g : X₁ → Y) (p₁ : X → X₁) (p₂ : X → X₂)
+  (hf : Bijective (fun xy : X₂×Y => f xy.1 xy.2)) (hg : Bijective g) (hp : Bijective (fun x => (p₁ x, p₂ x)))
+  : invFun (fun x => let y := g (p₁ x); f (p₂ x) y)
+    =
+    fun z =>
+      let x₂y := invFun (fun xy : X₂×Y => f xy.1 xy.2) z
+      let x₁ := invFun g x₂y.2
+      let x := invFun (fun x => (p₁ x, p₂ x)) (x₁,x₂y.1)
+      x :=
+
+
+
+Theorem: Function.invFun.HSub.hSub.arg_a1.invFun_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem HSub.hSub.arg_a1.invFun_rule
+  [AddGroup Y]
+   (y : Y) (f : X → Y) (hf : Bijective f)
+  : invFun (fun x => y - f x )
+    =
+    fun y' =>
+      invFun f (y - y')
+  :=
+
+
+
+Theorem: SciLean.semiAdjoint.HSMul.hSMul.arg_a1.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem HSMul.hSMul.arg_a1.semiAdjoint_rule
+  (c : K) (g : X → Y) (hg : HasSemiAdjoint K g)
+  : semiAdjoint K (fun x => c • g x)
+    =
+    fun y => (conj c) • semiAdjoint K g y :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.SciLean.semiAdjoint.arg_y.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem SciLean.semiAdjoint.arg_y.HasSemiAdjoint_rule
+  (f : X → Y) (a0 : W → Y) (ha0 : HasSemiAdjoint K a0)
+  : HasSemiAdjoint K (fun w => semiAdjoint K f (a0 w)) :=
+
+
+
+Theorem: SciLean.SmoothLinearMap.apply_zero
+File path: SciLean/Core/FunctionSpaces/SmoothLinearMap.lean
+Theorem statement: theorem SmoothLinearMap.apply_zero (f : X ⊸[K] Y) : f 0 = 0 :=
+
+
+
+Theorem: SciLean.Distribution.neg_extAction
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.neg_extAction (T : 𝒟'(X,U)) (φ : X → V) (L : U ⊸ V ⊸ W) :
+    (- T).extAction φ L = - T.extAction φ L :=
+
+
+
+Theorem: SciLean.SmoothLinearMap.fintype_sum_apply
+File path: SciLean/Core/FunctionSpaces/SmoothLinearMap.lean
+Theorem statement: theorem SmoothLinearMap.fintype_sum_apply {I} [Fintype I] (f : I → X⊸[K] Y) (x : X) :
+    (∑ i, f i) x = ∑ i, f i x  :=
+
+
+
+Theorem: SciLean.HAdd.hAdd.arg_a0a1.ContCDiff_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem HAdd.hAdd.arg_a0a1.ContCDiff_rule
+    (f g : X → Y) (hf : ContCDiff K n f) (hg : ContCDiff K n g) :
+    ContCDiff K n (fun x => f x + g x) :=
+
+
+
+Theorem: SciLean.SciLean.semiAdjoint.arg_y.HasAdjDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/HasAdjDiff.lean
+Theorem statement: theorem SciLean.semiAdjoint.arg_y.HasAdjDiffAt_rule (w : W)
+    (f : X → Y) (a0 : W → Y) (hf : CDifferentiable K f) (ha0 : HasAdjDiffAt K a0 w) :
+    HasAdjDiffAt K (fun w => semiAdjoint K f (a0 w)) w :=
+
+
+
+Theorem: SciLean.gaussian.arg_μσx.CDifferentiableAt_rule
+File path: SciLean/Core/Functions/Gaussian.lean
+Theorem statement: theorem gaussian.arg_μσx.CDifferentiableAt_rule (w : W)
+    (μ : W → U) (σ : W → R) (x : W → U)
+    (hμ : CDifferentiableAt R μ w) (hσ : CDifferentiableAt R σ w) (hx : CDifferentiableAt R x w)
+    (hσ' : σ w ≠ 0) :
+    CDifferentiableAt R (fun w => gaussian (μ w) (σ w) (x w)) w :=
+
+
+
+Theorem: SciLean.FwdFDeriv.FinType.sum.arg_f.fwdFDeriv_rule_at
+File path: SciLean/Core/FunctionTransformations/FwdFDeriv.lean
+Theorem statement: theorem FinType.sum.arg_f.fwdFDeriv_rule_at (x : X)
+    (f : X → ι → Y) (hf : ∀ i, DifferentiableAt K (f · i) x) :
+    fwdFDeriv K (fun x => ∑ i, f x i) x
+    =
+    fun dx =>
+      let ydy := fun i => fwdFDeriv K (f · i) x dx
+      ∑ i, ydy i :=
+
+
+
+Theorem: Function.invFun.Inv.inv.arg_a0.invFun_rule_group
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem Inv.inv.arg_a0.invFun_rule_group
+  [Group Y]
+  (f : X → Y) (hf : Bijective f)
+  : invFun (fun x => (f x)⁻¹)
+    =
+    fun y =>
+      invFun f (y⁻¹)
+  :=
+
+
+
+Theorem: SciLean.parDistribFwdDeriv.bind_rule
+File path: SciLean/Core/Distribution/ParametricDistribFwdDeriv.lean
+Theorem statement: theorem bind_rule
+    (f : X → Y → 𝒟'(Z,V)) (g : X → 𝒟'(Y,U)) (L : U ⊸ V ⊸ W)
+    (hf : DistribDifferentiable (fun (x,y) => f x y)) (hg : DistribDifferentiable g) :
+    parDistribFwdDeriv (fun x => (g x).bind (f x) L)
+    =
+    fun x dx =>
+      let ydy := parDistribFwdDeriv g x dx  let zdz := fun y => parDistribFwdDeriv (f · y) x dx ydy.bind zdz (fun (r,dr) ⊸ fun (s,ds) ⊸ (L r s, L r ds + L dr s)) :=
+
+
+
+Theorem: SciLean.ite.arg_chte.cderiv_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem ite.arg_chte.cderiv_rule
+  (c : X → Prop) [dec : ∀ x, Decidable (c x)] (t e : X → Y)
+  (ht : ∀ x ∈ closure c, CDifferentiableAt K t x) (he : ∀ x ∈ (interior c)ᶜ, CDifferentiableAt K e x)
+  (hc : (∀ x, x ∈ frontier c → cderiv K t x = cderiv K e x))
+  : cderiv K (fun x => ite (c x) (t x) (e x))
+    =
+    fun y =>
+      ite (c y) (cderiv K t y) (cderiv K e y) :=
+
+
+
+Theorem: IndexType.sum.arg_f.IsAffineMap_rule
+File path: SciLean/Core/FunctionPropositions/IsAffineMap.lean
+Theorem statement: theorem IndexType.sum.arg_f.IsAffineMap_rule
+  (f : X → ι → Y) (hf : ∀ i, IsAffineMap R (f · i))
+  : IsAffineMap R fun x => ∑ i, f x i :=
+
+
+
+Theorem: SciLean.SciLean.cderiv.arg_dx.cderiv_rule_at
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem SciLean.cderiv.arg_dx.cderiv_rule_at
+  (f : Y → Z) (g : X → Y) (y : Y) (dx : X)
+  (hf : CDifferentiableAt K f y) (hg : CDifferentiableAt K g dx)
+  : cderiv K (fun dx' => cderiv K f y (g dx')) dx
+    =
+    fun ddx =>
+      let ddy := cderiv K g dx ddx
+      cderiv K f y ddy :=
+
+
+
+Theorem: SciLean.CDifferentiable.const_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiable.const_rule (y : Y)
+  : CDifferentiable K (fun _ : X => y)
+  :=
+
+
+
+Theorem: SciLean.ContCDiffMap_apply_CDifferentiable
+File path: SciLean/Core/FunctionSpaces/ContCDiffMap.lean
+Theorem statement: theorem ContCDiffMap_apply_CDifferentiable (f : W → X ⟿[K,∞] Y) (g : W → X)
+    (hf : CDifferentiable K f) (hg : CDifferentiable K g) : CDifferentiable K (fun w => f w (g w)) :=
+
+
+
+Theorem: Function.invFun.HSub.hSub.arg_a0.invFun_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem HSub.hSub.arg_a0.invFun_rule
+  [AddGroup Y]
+  (f : X → Y) (y : Y) (hf : Bijective f)
+  : invFun (fun x => f x - y)
+    =
+    fun y' =>
+      invFun f (y' + y)
+  :=
+
+
+
+Theorem: Function.Bijective.HDiv.hDiv.arg_a0.Bijective_rule_group
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HDiv.hDiv.arg_a0.Bijective_rule_group
+  [Group Y]
+  (f : X → Y) (y : Y)
+  (hf : Bijective f)
+  : Bijective (fun x => f x / y) :=
+
+
+
+Theorem: SciLean.inner_dualBasis_proj
+File path: SciLean/Core/Objects/FinVec.lean
+Theorem statement: theorem inner_dualBasis_proj  (i : ι) (x : X)
+  : ⟪x, ⅇ' i⟫[K] = ℼ i x :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.starRingEnd.arg_a.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem starRingEnd.arg_a.HasSemiAdjoint_rule
+  (f : X → K) (_ : HasSemiAdjoint K f)
+  : HasSemiAdjoint K fun x => conj (f x) :=
+
+
+
+Theorem: SciLean.Inner.inner.arg_a0a1.cderiv_rule_at
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem Inner.inner.arg_a0a1.cderiv_rule_at
+  (f : X → Y) (g : X → Y) (x : X)
+  (hf : CDifferentiableAt R f x) (hg : CDifferentiableAt R g x)
+  : cderiv R (fun x => ⟪f x, g x⟫[R]) x
+    =
+    fun dx =>
+      let y₁ := f x
+      let dy₁ := cderiv R f x dx
+      let y₂ := g x
+      let dy₂ := cderiv R g x dx
+      ⟪dy₁, y₂⟫[R] + ⟪y₁, dy₂⟫[R] :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.comp_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem comp_rule
+    (f : Y → Z) (g : X → Y) (hf : HasSemiAdjoint K f) (hg : HasSemiAdjoint K g) :
+    HasSemiAdjoint K (fun x => f (g x)) :=
+
+
+
+Theorem: Function.Bijective.Inv.inv.arg_a0.Bijective_rule_field
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Inv.inv.arg_a0.Bijective_rule_field
+  [Field Y]
+  (f : X → Y) (hf : Bijective f) (hf' : ∀ x, f x ≠ 0)
+  : Bijective fun x => (f x)⁻¹
+  :=
+
+
+
+Theorem: Function.Bijective.Inv.inv.arg_a0.Bijective_rule_group
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Inv.inv.arg_a0.Bijective_rule_group
+  [Group Y]
+  (f : X → Y) (hf : Bijective f)
+  : Bijective fun x => (f x)⁻¹
+  :=
+
+
+
+Theorem: SciLean.scalar_min_one_zero
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_min_one_zero  : min (1 : R) (0 : R) = 0 :=
+
+
+
+Theorem: SciLean.split_integral_over_set_of_ite
+File path: SciLean/Core/Integral/CIntegral.lean
+Theorem statement: theorem split_integral_over_set_of_ite (φ ψ : X → R) (f g : X → Y) (A : Set X) :
+    (∫' x in A, if ψ x ≤ φ x then f x else g x)
+    =
+    (∫' x in {x' | 0 ≤ φ x' - ψ x'} ∩ A, f x)
+    +
+    (∫' x in {x' | 0 ≤ ψ x' - φ x'} ∩ A, g x) :=
+
+
+
+Theorem: SciLean.BasisDuality.fromDual.arg_x.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem BasisDuality.fromDual.arg_x.ContCDiffAt_rule (x)
+  : ContCDiffAt K n (fun x : X => BasisDuality.fromDual x) x :=
+
+
+
+Theorem: SciLean.Distribution.postComp.arg_T.IsSmoothLinarMap_rule
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.postComp.arg_T.IsSmoothLinarMap_rule (T : W → 𝒟'(X,Y)) (f : Y ⊸ Z)
+    (hT : IsSmoothLinearMap R T) :
+    IsSmoothLinearMap R (fun w => (T w).postComp f) :=
+
+
+
+Theorem: SciLean.Neg.neg.arg_a0.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem Neg.neg.arg_a0.CDifferentiable_rule
+  (f : X → Y) (hf : CDifferentiable K f)
+  : CDifferentiable K (fun x => - f x)  :=
+
+
+
+Theorem: SciLean.SciLean.norm₂.arg_x.cderiv_rule_at
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem SciLean.norm₂.arg_x.cderiv_rule_at
+  (f : X → Y) (x : X)
+  (hf : CDifferentiableAt R f x) (hx : f x≠0)
+  : cderiv R (fun x => ‖f x‖₂[R]) x
+    =
+    fun dx =>
+      let y := f x
+      let dy := cderiv R f x dx
+      ‖y‖₂[R]⁻¹ * ⟪dy,y⟫[R] :=
+
+
+
+Theorem: LeanColls.Indexed.ofFn.arg_cont.semiAdjoint_rule_simple
+File path: SciLean/Data/ArrayType/Properties.lean
+Theorem statement: theorem LeanColls.Indexed.ofFn.arg_cont.semiAdjoint_rule_simple :
+    semiAdjoint K (fun f : Idx → Elem => Indexed.ofFn (C:=Cont) f)
+    =
+    fun (cont : Cont) idx => cont[idx] :=
+
+
+
+Theorem: SciLean.fwdDeriv.IndexType.sum.arg_f.fwdDeriv_rule_at
+File path: SciLean/Core/FunctionTransformations/FwdDeriv.lean
+Theorem statement: theorem IndexType.sum.arg_f.fwdDeriv_rule_at (x : X)
+    (f : X → ι → Y) (hf : ∀ i, CDifferentiableAt K (f · i) x) :
+    fwdDeriv K (fun x => ∑ i, f x i) x
+    =
+    fun dx =>
+      let ydy := fun i => fwdDeriv K (f · i) x dx
+      ∑ i, ydy i :=
+
+
+
+Theorem: IndexType.sum.arg_f.revDerivProj_rule
+File path: SciLean/Core/FunctionTransformations/RevDeriv.lean
+Theorem statement: theorem IndexType.sum.arg_f.revDerivProj_rule [DecidableEq ι]
+    (f : X → ι → Y') (hf : ∀ i, HasAdjDiff K (fun x => f x i)) :
+    revDerivProj K Yi (fun x => ∑ i, f x i)
+    =
+    fun x =>
+      let ydf := revDerivProjUpdate K (ι×Yi) f x
+      (∑ i, ydf.1 i,
+       fun j dy =>
+         Fold.fold (IndexType.univ ι) (fun dx i => ydf.2 (i,j) dy dx) 0) :=
+
+
+
+Theorem: SciLean.Rand.flip.integral
+File path: SciLean/Core/Rand/Distributions/Flip.lean
+Theorem statement: theorem flip.integral (θ : R) (f : Bool → X) :
+    ∫' x, f x ∂(flip θ).ℙ = θ • f true + (1-θ) • f false :=
+
+
+
+Theorem: SciLean.DualBasis.dualProj.arg_x.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem DualBasis.dualProj.arg_x.CDifferentiable_rule (i : IX)
+  : CDifferentiable K (fun x : X => ℼ' i x) :=
+
+
+
+Theorem: SciLean.HAdd.hAdd.arg_a0a1.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem HAdd.hAdd.arg_a0a1.CDifferentiable_rule
+  (f g : X → Y) (hf : CDifferentiable K f) (hg : CDifferentiable K g)
+  : CDifferentiable K (fun x => f x + g x)  :=
+
+
+
+Theorem: Function.invFun.HAdd.hAdd.arg_a0.invFun_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem HAdd.hAdd.arg_a0.invFun_rule
+  [AddGroup Y]
+  (f : X → Y) (y : Y) (hf : Bijective f)
+  : invFun (fun x => f x + y)
+    =
+    fun y' =>
+      invFun f (y' - y)
+  :=
+
+
+
+Theorem: SciLean.FwdFDeriv.HDiv.hDiv.arg_a0a1.fwdFDeriv_rule_at
+File path: SciLean/Core/FunctionTransformations/FwdFDeriv.lean
+Theorem statement: theorem HDiv.hDiv.arg_a0a1.fwdFDeriv_rule_at (x : X)
+    (f : X → K) (g : X → K)
+    (hf : DifferentiableAt K f x) (hg : DifferentiableAt K g x) (hx : g x ≠ 0) :
+    (fwdFDeriv K fun x => f x / g x) x
+    =
+    fun dx =>
+      let ydy := (fwdFDeriv K f x dx)
+      let zdz := (fwdFDeriv K g x dx)
+      (ydy.1 / zdz.1, (ydy.2 * zdz.1 - ydy.1 * zdz.2) / zdz.1^2) :=
+
+
+
+Theorem: Function.Bijective.HMul.hMul.arg_a1.Bijective_rule_group
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HMul.hMul.arg_a1.Bijective_rule_group
+  [Group Y]
+  (y : Y) (f : X → Y) (hf : Bijective f)
+  : Bijective (fun x => y * f x)
+  :=
+
+
+
+Theorem: SciLean.HSMul.hSMul.arg_a1.ContCDiffAt_rule_nat
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem HSMul.hSMul.arg_a1.ContCDiffAt_rule_nat
+    (c : ℕ) (f : X → Y) (x) (hf : ContCDiffAt K n f x) :
+    ContCDiffAt K n (fun x => c • f x) x :=
+
+
+
+Theorem: SciLean.revDerivProjUpdate.pi_rule
+File path: SciLean/Core/FunctionTransformations/RevDeriv.lean
+Theorem statement: theorem pi_rule
+    (f :  X → ι → Y) (hf : ∀ i, HasAdjDiff K (f · i)) :
+    (revDerivProjUpdate K Unit fun (x : X) (i : ι) => f x i)
+    =
+    fun x =>
+      let ydf := fun i => revDerivUpdate K (f · i) x
+      (fun i => (ydf i).1,
+       fun _ df dx =>
+         Fold.fold (IndexType.univ ι) (fun dx i => (ydf i).2 (df i) dx) dx) :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.HSub.hSub.arg_a0a1.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem HSub.hSub.arg_a0a1.HasSemiAdjoint_rule
+    (f g : X → Y) (hf : HasSemiAdjoint K f) (hg : HasSemiAdjoint K g) :
+    HasSemiAdjoint K fun x => f x - g x :=
+
+
+
+Theorem: Function.Bijective.HSMul.hSMul.arg_a1.Bijective_rule_group
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HSMul.hSMul.arg_a1.Bijective_rule_group
+  [Group G] [MulAction G Y]
+  (g : G) (f : X → Y) (hf : Bijective f)
+  : Bijective (fun x => g • f x)
+  :=
+
+
+
+Theorem: SciLean.Distribution.add_extAction
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.add_extAction (T T' : 𝒟'(X,U)) (φ : X → V) (L : U ⊸ V ⊸ W) :
+    ((T + T') : 𝒟'(X,U)).extAction φ L = T.extAction φ L + T'.extAction φ L :=
+
+
+
+Theorem: SciLean.parametric_inverse_affine'
+File path: SciLean/Core/Integral/PlaneDecomposition.lean
+Theorem statement: theorem parametric_inverse_affine' (f : X → R) (c : R) (hf : IsAffineMap R f) :
+    let u  := ∇ f 0
+    let dec := planeDecomposition (n:=card ι - 1) (R:=R) u sorry_proof
+    ParametricInverseAt f c
+      (I:=Unit)
+      (p:=fun _ y t => dec (t,y))
+      (g:=fun _ _ => (c - f 0) / ‖u‖₂)
+      (dom := fun _ => ⊤) :=
+
+
+
+Theorem: SciLean.HAdd.hAdd.arg_a0.cderiv_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem HAdd.hAdd.arg_a0.cderiv_rule
+    (f : X → Y) (y : Y) :
+    (cderiv K fun x => f x + y)
+    =
+    fun x dx =>
+      cderiv K f x dx :=
+
+
+
+Theorem: SciLean.CDifferentiableAt.pi_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiableAt.pi_rule
+  (f : X → (i : ι) → E i) (x : X)
+  (hf : ∀ i, CDifferentiableAt K (f · i) x)
+  : CDifferentiableAt K (fun x i => f x i) x
+  :=
+
+
+
+Theorem: SciLean.HSMul.hSMul.arg_a1.CDifferentiable_rule_nat
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem HSMul.hSMul.arg_a1.CDifferentiable_rule_nat
+    (c : ℕ) (f : X → Y) (hf : CDifferentiable K f) : CDifferentiable K fun x => c • f x :=
+
+
+
+Theorem: SciLean.semiAdjoint.Inner.inner.arg_a0.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem Inner.inner.arg_a0.semiAdjoint_rule
+  {Y : Type _} [SemiHilbert K Y]
+  (f : X → Y) (hf : HasSemiAdjoint K f) (y : Y)
+  : semiAdjoint K (fun x => ⟪f x, y⟫[K])
+    =
+    fun z => (conj z) • semiAdjoint K f y :=
+
+
+
+Theorem: Function.Bijective.HSMul.hSMul.arg_a1.Bijective_rule_field
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HSMul.hSMul.arg_a1.Bijective_rule_field
+  [Field R] [MulAction R Y]
+  (r : R) (f : X → Y) (hf : Bijective f) (hr : r ≠ 0)
+  : Bijective (fun x => r • f x)
+  :=
+
+
+
+Theorem: SciLean.decomposeSolution
+File path: SciLean/Util/SolveFun.lean
+Theorem statement: theorem decomposeSolution {Xs Ys Zs : Type _} [Nonempty Xs] [Nonempty Ys] [Nonempty Zs]
+  (f : Ys → Zs → Xs)  (hf : Function.Bijective (uncurryN 2 f))     (P : Xs → Prop)       (Q₁ : Ys → Zs → Prop) (Q₂ : Ys → Zs → Prop) (equiv : ∀ ys zs, (Q₁ ys zs ∧ Q₂ ys zs) ↔ P (f ys zs))
+  (unique : ∀ ys, HasUniqueSolution (Q₁ ys))
+  : (solve xs, P xs)
+    =
+    let zs' := fun ys => (solve zs, Q₁ ys zs)
+    let ys  := solve ys, Q₂ ys (zs' ys)
+    let zs  := zs' ys
+    f ys zs
+  :=
+
+
+
+Theorem: Function.invFun.Equiv.invFun.arg_a0.invFun_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem Equiv.invFun.arg_a0.invFun_rule (f : Y ≃ Z) (g : X → Z) (hf : Bijective g)
+  : Function.invFun (fun x => f.invFun (g x))
+    =
+    fun z => Function.invFun g (f z) :=
+
+
+
+Theorem: SciLean.Rand.pull_E_affine
+File path: SciLean/Core/Rand/PushPullExpectation.lean
+Theorem statement: theorem pull_E_affine (r : Rand X) (φ : X → Y)
+    (f : Y → Z) (hf : IsAffineMap ℝ f := by fun_prop) :
+    (f (r.𝔼 φ)) = r.𝔼 (fun x => f (φ x)) :=
+
+
+
+Theorem: IsLinearMap.isLinearMap_pi
+File path: SciLean/Core/FunctionPropositions/IsLinearMap.lean
+Theorem statement: theorem isLinearMap_pi (f : X → (i : ι) → E i) (hf : ∀ i, IsLinearMap R (f · i)) :
+    IsLinearMap R (fun x i ↦ f x i) :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.HSMul.hSMul.arg_a0.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem HSMul.hSMul.arg_a0.HasSemiAdjoint_rule
+  {Y : Type _} [SemiHilbert K Y]
+  (f : X → K) (y : Y) (hf : HasSemiAdjoint K f)
+  : HasSemiAdjoint K fun x => f x • y :=
+
+
+
+Theorem: SciLean.fderiv.apply_rule
+File path: SciLean/Core/FunctionTransformations/FDeriv.lean
+Theorem statement: theorem fderiv.apply_rule (i : ι) :
+    (fderiv K fun (x : (i : ι) → E i) => x i)
+    =
+    fun _ => fun dx =>L[K] dx i :=
+
+
+
+Theorem: SciLean.Basis.proj.arg_x.ContCDiff_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem Basis.proj.arg_x.ContCDiff_rule (i : IX)
+  : ContCDiff K n (fun x : X => ℼ i x) :=
+
+
+
+Theorem: SciLean.semiAdjoint.const_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem const_rule : semiAdjoint K (fun (_ : X) => (0 : Y)) = fun x => 0 :=
+
+
+
+Theorem: Set.HAdd.hAdd.arg_a0.preimage_rule_Ioo
+File path: SciLean/Core/FunctionTransformations/Preimage.lean
+Theorem statement: theorem HAdd.hAdd.arg_a0.preimage_rule_Ioo (x' a b : R)  :
+    preimage (fun x : R => x + x') (Ioo a b)
+    =
+    Ioo (a - x') (b - x') :=
+
+
+
+Theorem: SciLean.semiAdjoint.HSub.hSub.arg_a0a1.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem HSub.hSub.arg_a0a1.semiAdjoint_rule
+  (f g : X → Y) (hf : HasSemiAdjoint K f) (hg : HasSemiAdjoint K g)
+  : semiAdjoint K (fun x => f x - g x)
+    =
+    fun y =>
+      let x₁ := semiAdjoint K f y
+      let x₂ := semiAdjoint K g y
+      x₁ - x₂ :=
+
+
+
+Theorem: SciLean.Prod.mk.arg_fstsnd.cderiv_rule_at
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.cderiv_rule_at (x : X)
+    (g : X → Y) (hg : CDifferentiableAt K g x)
+    (f : X → Z) (hf : CDifferentiableAt K f x) :
+    cderiv K (fun x => (g x, f x)) x
+    =
+    fun dx =>
+      (cderiv K g x dx, cderiv K f x dx) :=
+
+
+
+Theorem: SciLean.cderiv.comp_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem cderiv.comp_rule
+  (f : Y → Z) (g : X → Y)
+  (hf : CDifferentiable K f) (hg : CDifferentiable K g)
+  : (cderiv K fun x : X => f (g x))
+    =
+    fun x =>
+      let y := g x
+      fun dx =>
+        let dy := cderiv K g x dx
+        let dz := cderiv K f y dy
+        dz :=
+
+
+
+Theorem: SciLean.BasisDuality.fromDual.arg_x.IsLinearMap_rule
+File path: SciLean/Core/FunctionPropositions/IsLinearMap.lean
+Theorem statement: theorem BasisDuality.fromDual.arg_x.IsLinearMap_rule :
+    IsLinearMap K (fun x : X => BasisDuality.fromDual x) :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.pi_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem pi_rule
+    (f : X → (i : ι) → E i) (hf : ∀ i, HasSemiAdjoint K (f · i)) :
+    HasSemiAdjoint K (fun x i => f x i) :=
+
+
+
+Theorem: Function.Bijective.HSub.hSub.arg_a0.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HSub.hSub.arg_a0.Bijective_rule
+  [AddGroup Y]
+  (f : X → Y) (y : Y) (hf : Bijective f)
+  : Bijective fun x => f x - y
+  :=
+
+
+
+Theorem: SciLean.HAdd.hAdd.arg_a1.cderiv_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem HAdd.hAdd.arg_a1.cderiv_rule
+    (f : X → Y) (y : Y) :
+    (cderiv K fun x => y + f x)
+    =
+    fun x dx =>
+      cderiv K f x dx :=
+
+
+
+Theorem: SciLean.Rand.flip.pdf_wrt_flip
+File path: SciLean/Core/Rand/Distributions/Flip.lean
+Theorem statement: theorem flip.pdf_wrt_flip (θ θ' : R) :
+    (flip θ).pdf R (flip θ').ℙ
+    =
+    fun b => if b then θ / θ' else (1-θ) / (1-θ') :=
+
+
+
+Theorem: SciLean.Basis.proj.arg_x.IsAffineMap_rule
+File path: SciLean/Core/FunctionPropositions/IsAffineMap.lean
+Theorem statement: theorem Basis.proj.arg_x.IsAffineMap_rule (i : IX) :
+    IsAffineMap K (fun x : X => ℼ i x) :=
+
+
+
+Theorem: SciLean.CDifferentiable.pi_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiable.pi_rule
+  (f : X → (i : ι) → E i)
+  (hf : ∀ i, CDifferentiable K (f · i))
+  : CDifferentiable K (fun x i => f x i)
+  :=
+
+
+
+Theorem: SciLean.norm₂_squared
+File path: SciLean/Core/Objects/SemiInnerProductSpace.lean
+Theorem statement: theorem norm₂_squared {R K X : Type _} [Scalar R K] [Norm2 K X] (x : X)
+  : ‖x‖₂[K] ^ (2:K) = ‖x‖₂²[K] :=
+
+
+
+Theorem: SciLean.inner_proj_dualProj
+File path: SciLean/Core/Objects/FinVec.lean
+Theorem statement: theorem inner_proj_dualProj {ι K X} {_ : IndexType ι} [LawfulIndexType ι] [DecidableEq ι] [RCLike K] [FinVec ι K X] (x y : X)
+  : ⟪x, y⟫[K] = ∑ i, ℼ i x * ℼ' i y :=
+
+
+
+Theorem: SciLean.ContCDiffMap_apply_CDifferentiableAt
+File path: SciLean/Core/FunctionSpaces/ContCDiffMap.lean
+Theorem statement: theorem ContCDiffMap_apply_CDifferentiableAt (f : W → X ⟿[K,∞] Y) (g : W → X) (w : W)
+    (hf : CDifferentiableAt K f w) (hg : CDifferentiableAt K g w) : CDifferentiableAt K (fun w => f w (g w)) w :=
+
+
+
+Theorem: Set.HSub.hSub.arg_a0.preimage_rule_Ioo
+File path: SciLean/Core/FunctionTransformations/Preimage.lean
+Theorem statement: theorem HSub.hSub.arg_a0.preimage_rule_Ioo (x' a b : R)  :
+    preimage (fun x : R => x - x') (Ioo a b)
+    =
+    Ioo (a + x') (b + x') :=
+
+
+
+Theorem: IndexType.sum.arg_f.IsLinearMap_rule
+File path: SciLean/Core/FunctionPropositions/IsLinearMap.lean
+Theorem statement: theorem IndexType.sum.arg_f.IsLinearMap_rule
+  (f : X → ι → Y) (hf : ∀ i, IsLinearMap R (f · i))
+  : IsLinearMap R fun x => ∑ i, f x i :=
+
+
+
+Theorem: SciLean.odeSolve.arg_x₀.semiAdjoint_rule
+File path: SciLean/Modules/DifferentialEquations/OdeSolve.lean
+Theorem statement: theorem odeSolve.arg_x₀.semiAdjoint_rule
+  (f : R → X → X) (t₀ t : R) (x₀ : W → X)
+  (hf : ∀ t, HasSemiAdjoint R (f t)) (hx₀ : HasSemiAdjoint R x₀)
+  : semiAdjoint R (fun w => odeSolve f t₀ t (x₀ w))
+    =
+    fun x₀' =>
+      let f' := (fun s y => - semiAdjoint R (f s) y)
+      let y := odeSolve f' t t₀ x₀'
+      semiAdjoint R x₀ y :=
+
+
+
+Theorem: SciLean.toDistribution.linear_parDistribDeriv_rule
+File path: SciLean/Core/Distribution/ParametricDistribDeriv.lean
+Theorem statement: theorem toDistribution.linear_parDistribDeriv_rule (f : W → X → Y) (L : Y → Z)
+    (hL : IsSmoothLinearMap R L) :
+    parDistribDeriv (fun w => (fun x => L (f w x)).toDistribution)
+    =
+    fun w dw =>
+      parDistribDeriv (fun w => (fun x => f w x).toDistribution) w dw |>.postComp (fun y ⊸ L y) :=
+
+
+
+Theorem: SciLean.Distribution.sub_extAction
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.sub_extAction (T T' : 𝒟'(X,U)) (φ : X → V) (L : U ⊸ V ⊸ W) :
+    (T - T').extAction φ L = T.extAction φ L - T'.extAction φ L :=
+
+
+
+Theorem: SciLean.semiAdjoint.SciLean.semiAdjoint.arg_y.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem SciLean.semiAdjoint.arg_y.semiAdjoint_rule
+  (f : X → Y) (a3 : W → Y) (hf : HasSemiAdjoint K f) (ha3 : HasSemiAdjoint K a3)
+  : semiAdjoint K (fun w => semiAdjoint K f (a3 w))
+    =
+    fun x =>
+      let y := f x
+      semiAdjoint K a3 y :=
+
+
+
+Theorem: Function.invFun.Prod.mk.arg_fstsnd.invFun_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.invFun_rule
+  (f : X₁ → Y) (g : X₂ → Z) (p₁ : X → X₁) (p₂ : X → X₂)
+  (hf : Bijective f) (hg : Bijective g) (hp : Bijective (fun x => (p₁ x, p₂ x)))
+  : invFun (fun x : X => (f (p₁ x), g (p₂ x)))
+    =
+    fun yz =>
+      let x₁ := invFun f yz.1
+      let x₂ := invFun g yz.2
+      let x  := invFun (fun x => (p₁ x, p₂ x)) (x₁,x₂)
+      x :=
+
+
+
+Theorem: SciLean.ContCDiffMapFD_eval_CDifferentiable'
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eval_CDifferentiable' :
+    CDifferentiable K (fun (fx : (X ⟿FD[K,∞] Y)×X) => fx.1 fx.2) :=
+
+
+
+Theorem: IsAffineMap.IsAffineMap_comp
+File path: SciLean/Core/FunctionPropositions/IsAffineMap.lean
+Theorem statement: theorem IsAffineMap_comp {f : Y → Z} {g : X → Y}
+    (hf : IsAffineMap R f) (hg : IsAffineMap R g) : IsAffineMap R (fun x ↦ f (g x)) :=
+
+
+
+Theorem: SciLean.cderiv.let_rule_at
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem cderiv.let_rule_at
+  (f : X → Y → Z) (g : X → Y) (x : X)
+  (hf : CDifferentiableAt K ↿f (x, g x))
+  (hg : CDifferentiableAt K g x)
+  : (cderiv K
+      fun x : X =>
+        let y := g x
+        f x y) x
+    =
+    let y  := g x
+    fun dx =>
+      let dy := cderiv K g x dx
+      let dz := cderiv K (fun xy : X×Y => f xy.1 xy.2) (x,y) (dx, dy)
+      dz :=
+
+
+
+Theorem: SciLean.BasisDuality.toDual.arg_x.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem BasisDuality.toDual.arg_x.ContCDiffAt_rule (x)
+  : ContCDiffAt K n (fun x : X => BasisDuality.toDual x) x :=
+
+
+
+Theorem: SciLean.scalar_sqrt_one
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_sqrt_one  : Scalar.sqrt (1 : R) = 1 :=
+
+
+
+Theorem: SciLean.Rand.flip.pdf
+File path: SciLean/Core/Rand/Distributions/Flip.lean
+Theorem statement: theorem flip.pdf (x : R) :
+    (flip x).pdf R .count
+    =
+    fun b =>
+      let x := (x ⊔ 0) ⊓ 1
+      if b then x else (1-x) :=
+
+
+
+Theorem: SciLean.Distribution.fintype_sum_extAction
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Distribution.fintype_sum_extAction {I} [Fintype I] (T : I → 𝒟'(X,U)) (φ : X → V) (L : U ⊸ V ⊸ W) :
+    (∑ i, T i).extAction φ L = ∑ i, (T i).extAction φ L :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.HMul.hMul.arg_a1.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem HMul.hMul.arg_a1.HasSemiAdjoint_rule
+  (y' : K) (f : X → K) (hf : HasSemiAdjoint K f)
+  : HasSemiAdjoint K fun x => y' * f x :=
+
+
+
+Theorem: SciLean.CDifferentiable.apply_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiable.apply_rule (i : ι)
+  : CDifferentiable K (fun x : (i : ι) → E i => x i) :=
+
+
+
+Theorem: SciLean.BasisDuality.toDual.arg_x.IsAffineMap_rule
+File path: SciLean/Core/FunctionPropositions/IsAffineMap.lean
+Theorem statement: theorem BasisDuality.toDual.arg_x.IsAffineMap_rule :
+    IsAffineMap K (fun x : X => BasisDuality.toDual x) :=
+
+
+
+Theorem: SciLean.Rand.bind_E
+File path: SciLean/Core/Rand/Rand.lean
+Theorem statement: theorem bind_E (r : Rand X) (f : X → Rand Y) (φ : Y → Z) :
+    (r >>= f).𝔼 φ = r.𝔼 (fun x' => (f x').𝔼 φ) :=
+
+
+
+Theorem: SciLean.Prod.snd.arg_self.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem Prod.snd.arg_self.ContCDiffAt_rule (x : X)
+    (f : X → Y×Z) (hf : ContCDiffAt K n f x) :
+    ContCDiffAt K n (fun x => (f x).2) x :=
+
+
+
+Theorem: SciLean.approx_consistency
+File path: SciLean/Core/Approx/ApproxSolution.lean
+Theorem statement: theorem approx_consistency {N} {lN : Filter N} [T2Space α] {spec : α → Prop}
+  (approx : ApproxSolution lN spec)
+  : ∀ a, a = (limit n ∈ lN, approx.val n) → spec a :=
+
+
+
+Theorem: IsAffineMap.IsAffineMap_pi
+File path: SciLean/Core/FunctionPropositions/IsAffineMap.lean
+Theorem statement: theorem IsAffineMap_pi (f : X → (i : ι) → E i) (hf : ∀ i, IsAffineMap R (f · i)) :
+    IsAffineMap R (fun x i ↦ f x i) :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.HAdd.hAdd.arg_a0a1.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem HAdd.hAdd.arg_a0a1.HasSemiAdjoint_rule [ContinuousAdd Y]
+    (f g : X → Y) (hf : HasSemiAdjoint K f) (hg : HasSemiAdjoint K g) :
+    HasSemiAdjoint K fun x => f x + g x :=
+
+
+
+Theorem: SciLean.Neg.neg.arg_a0.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem Neg.neg.arg_a0.ContCDiffAt_rule
+    (x : X) (f : X → Y) (hf : ContCDiffAt K n f x) :
+    ContCDiffAt K n (fun x => - f x) x :=
+
+
+
+Theorem: SciLean.inner_dualBasis_basis
+File path: SciLean/Core/Objects/FinVec.lean
+Theorem statement: theorem inner_dualBasis_basis  (i j : ι)
+  : ⟪ⅇ'[X] i, ⅇ j⟫[K] = if i=j then 1 else 0 :=
+
+
+
+Theorem: Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem Prod.mk.arg_fstsnd.Bijective_rule
+  (f : X₁ → Y) (g : X₂ → Z) (p₁ : X → X₁) (p₂ : X → X₂)
+  (hf : Bijective f) (hg : Bijective g) (hp : Bijective (fun x => (p₁ x, p₂ x)))
+  : Bijective (fun x : X => (f (p₁ x), g (p₂ x)))
+  :=
+
+
+
+Theorem: IndexType.sum.arg_f.revDerivProjUpdate_rule
+File path: SciLean/Core/FunctionTransformations/RevDeriv.lean
+Theorem statement: theorem IndexType.sum.arg_f.revDerivProjUpdate_rule [DecidableEq ι]
+    (f : X → ι → Y') (hf : ∀ i, HasAdjDiff K (fun x => f x i)) :
+    revDerivProjUpdate K Yi (fun x => ∑ i, f x i)
+    =
+    fun x =>
+      let ydf := revDerivProjUpdate K (ι×Yi) f x
+      (∑ i, ydf.1 i,
+       fun j dy dx =>
+         Fold.fold (IndexType.univ ι) (fun dx i => ydf.2 (i,j) dy dx) dx) :=
+
+
+
+Theorem: GetElem.getElem.arg_cont.semiAdjoint_rule_simple
+File path: SciLean/Data/ArrayType/Properties.lean
+Theorem statement: theorem GetElem.getElem.arg_cont.semiAdjoint_rule_simple (idx : Idx) :
+    semiAdjoint K (fun cont : Cont => cont[idx])
+    =
+    fun elem => oneHot (X:=Cont) idx elem :=
+
+
+
+Theorem: SciLean.cderiv.apply_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem cderiv.apply_rule (i : ι) :
+    (cderiv K fun (x : (i : ι) → E i) => x i)
+    =
+    fun _ => fun dx => dx i :=
+
+
+
+Theorem: SciLean.scalar_abs_neg
+File path: SciLean/Core/Objects/Scalar.lean
+Theorem statement: theorem scalar_abs_neg (r : R) : Scalar.abs (- r) = Scalar.abs r :=
+
+
+
+Theorem: Function.Bijective.HMul.hMul.arg_a0.Bijective_rule_field
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HMul.hMul.arg_a0.Bijective_rule_field
+  [Field Y]
+  (f : X → Y) (y : Y) (hf : Bijective f) (hy : y ≠ 0)
+  : Bijective (fun x => f x * y)
+  :=
+
+
+
+Theorem: SciLean.decompose_has_unique_solution
+File path: SciLean/Util/SolveFun.lean
+Theorem statement: theorem decompose_has_unique_solution {Xs Ys Zs : Type _} [Nonempty Xs] [Nonempty Ys] [Nonempty Zs]
+  (f : Ys → Zs → Xs)  (hf : Function.Bijective (uncurryN 2 f))     (P : Xs → Prop)       (Q₁ : Ys → Zs → Prop) (Q₂ : Ys → Zs → Prop) (equiv : ∀ ys zs, (Q₁ ys zs ∧ Q₂ ys zs) ↔ P (f ys zs))
+  (unique : ∀ ys, HasUniqueSolution (Q₁ ys))
+  : HasUniqueSolution P
+    ↔
+    HasUniqueSolution fun ys => Q₂ ys (solve zs, Q₁ ys zs)
+  :=
+
+
+
+Theorem: SciLean.cderiv.const_rule
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem cderiv.const_rule (x : X) :
+    (cderiv K fun _ : Y => x) = fun _ => fun dx => 0 :=
+
+
+
+Theorem: LeanColls.Range.fold_def
+File path: .lake/packages/leancolls/LeanColls/Data/Range.lean
+Theorem statement: theorem fold_def (r : Range) (f : β → Nat → β)
+    : fold r f init =
+      Fin.foldl (r.size) (fun acc i => f acc (r.get i)) init
+  :=
+
+
+
+Theorem: SciLean.Function.invFun.arg_f_a1.cderiv_rule
+File path: SciLean/Core/FunctionPropositions/Diffeomorphism.lean
+Theorem statement: theorem Function.invFun.arg_f_a1.cderiv_rule
+  (f : X → Y → Z)
+  (hf : ∀ x, Diffeomorphism K (f x))
+  (hf' : CDifferentiable K (fun xy : X×Y => f xy.1 xy.2))
+  : cderiv K (fun x z => invFun (f x) z)
+    =
+    fun x dx z =>
+      let y := invFun (f x) z
+      let dfdx_y := (cderiv K f x dx) y
+      let df'dy := cderiv K (invFun (f x)) (f x y) (dfdx_y)
+      (-df'dy)
+  :=
+
+
+
+Theorem: SciLean.HSMul.hSMul.arg_a0a1.cderiv_rule_at
+File path: SciLean/Core/FunctionTransformations/CDeriv.lean
+Theorem statement: theorem HSMul.hSMul.arg_a0a1.cderiv_rule_at (x : X) (f : X → K) (g : X → Y)
+    (hf : CDifferentiableAt K f x) (hg : CDifferentiableAt K g x) :
+    (cderiv K fun x => f x • g x) x
+    =
+    let k := f x
+    let y := g x
+    fun dx =>
+      k • (cderiv K g x dx) + (cderiv K f x dx) • y :=
+
+
+
+Theorem: SciLean.IsContinuousLinearMap.isContinuousLinearMap_differentiable
+File path: SciLean/Core/FunctionPropositions/IsContinuousLinearMap.lean
+Theorem statement: theorem isContinuousLinearMap_differentiable (f : X → Y) (hf : IsContinuousLinearMap K f) :
+    Differentiable K f :=
+
+
+
+Theorem: SciLean.Prod.snd.arg_self.ContCDiff_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem Prod.snd.arg_self.ContCDiff_rule
+    (f : X → Y×Z) (hf : ContCDiff K n f) :
+    ContCDiff K n (fun x => (f x).2) :=
+
+
+
+Theorem: SciLean.ContCDiffMapFD_apply_CDifferentiable
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_apply_CDifferentiable (f : W → X ⟿FD[K,∞] Y) (g : W → X)
+    (hf : CDifferentiable K f) (hg : CDifferentiable K g) : CDifferentiable K (fun w => f w (g w)) :=
+
+
+
+Theorem: SciLean.fwdDeriv.IndexType.sum.arg_f.fwdDeriv_rule
+File path: SciLean/Core/FunctionTransformations/FwdDeriv.lean
+Theorem statement: theorem IndexType.sum.arg_f.fwdDeriv_rule
+    (f : X → ι → Y) (hf : ∀ i, CDifferentiable K (f · i)) :
+    fwdDeriv K (fun x => ∑ i, f x i)
+    =
+    fun x dx =>
+      let ydy := fun i => fwdDeriv K (f · i) x dx
+      ∑ i, ydy i :=
+
+
+
+Theorem: Function.invFun.HAdd.hAdd.arg_a1.invFun_rule
+File path: SciLean/Core/FunctionTransformations/InvFun.lean
+Theorem statement: theorem HAdd.hAdd.arg_a1.invFun_rule
+  [AddGroup Y]
+  (y : Y)  (f : X → Y) (hf : Bijective f)
+  : invFun (fun x => y + f x)
+    =
+    fun y' =>
+      invFun f (-y + y')
+  :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.HMul.hMul.arg_a0.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem HMul.hMul.arg_a0.HasSemiAdjoint_rule
+  (f : X → K) (y' : K) (hf : HasSemiAdjoint K f)
+  : HasSemiAdjoint K fun x => f x * y' :=
+
+
+
+Theorem: SciLean.CDifferentiableAt.const_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem CDifferentiableAt.const_rule (y : Y) (x : X)
+  : CDifferentiableAt K (fun _ : X => y) x
+  :=
+
+
+
+Theorem: SciLean.Function.toDistribution_zero
+File path: SciLean/Core/Distribution/Basic.lean
+Theorem statement: theorem Function.toDistribution_zero  :
+    Function.toDistribution (fun (_ : X) => 0) = (0 : 𝒟'(X,Y)) :=
+
+
+
+Theorem: IsLinearMap.sum_pull
+File path: SciLean/Core/Meta/GenerateLinearMapSimp.lean
+Theorem statement: theorem _root_.IsLinearMap.sum_pull
+  {f : X → Y} (hf : IsLinearMap K f)
+  (ι : Type) [IndexType.{_,u} ι] [IndexType.{_,v} ι] (x : ι → X)
+  : f (∑ i, x i) = ∑ i, f (x i) :=
+
+
+
+Theorem: SciLean.HSub.hSub.arg_a0a1.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem HSub.hSub.arg_a0a1.ContCDiffAt_rule
+    (x : X) (f g : X → Y) (hf : ContCDiffAt K n f x) (hg : ContCDiffAt K n g x) :
+    ContCDiffAt K n (fun x => f x - g x) x :=
+
+
+
+Theorem: SciLean.Basis.proj.arg_x.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem Basis.proj.arg_x.CDifferentiable_rule (i : IX)
+  : CDifferentiable K (fun x : X => ℼ i x) :=
+
+
+
+Theorem: Function.Bijective.HDiv.hDiv.arg_a0.Bijective_rule_field
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HDiv.hDiv.arg_a0.Bijective_rule_field
+  [Field Y]
+  (f : X → Y) (y : Y)
+  (hf : Bijective f) (hy : y ≠ 0)
+  : Bijective (fun x => f x / y) :=
+
+
+
+Theorem: SciLean.IsContinuousLinearMap.starRingEnd.arg_a.IsContinuousLinearMap_rule
+File path: SciLean/Core/FunctionPropositions/IsContinuousLinearMap.lean
+Theorem statement: theorem starRingEnd.arg_a.IsContinuousLinearMap_rule
+  (f : X → K) (_ : IsContinuousLinearMap K f)
+  : IsContinuousLinearMap K fun x => conj (f x) :=
+
+
+
+Theorem: Function.Bijective.HMul.hMul.arg_a0.Bijective_rule_group
+File path: SciLean/Core/FunctionPropositions/Bijective.lean
+Theorem statement: theorem HMul.hMul.arg_a0.Bijective_rule_group
+  [Group Y]
+  (f : X → Y) (y : Y) (hf : Bijective f)
+  : Bijective (fun x => f x * y)
+  :=
+
+
+
+Theorem: SciLean.IsContinuousLinearMap.Inner.inner.arg_a1.IsContinuousLinearMap_rule
+File path: SciLean/Core/FunctionPropositions/IsContinuousLinearMap.lean
+Theorem statement: theorem Inner.inner.arg_a1.IsContinuousLinearMap_rule
+  (f : X → Y) (_ : IsContinuousLinearMap K f) (y : Y)
+  : IsContinuousLinearMap K fun x => @inner K _ _ y (f x) :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.HSMul.hSMul.arg_a1.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem HSMul.hSMul.arg_a1.HasSemiAdjoint_rule
+    (c : K) (f : X → Y) (hf : HasSemiAdjoint K f) :
+    HasSemiAdjoint K fun x => c • f x :=
+
+
+
+Theorem: SciLean.Basis.proj.arg_x.IsLinearMap_rule
+File path: SciLean/Core/FunctionPropositions/IsLinearMap.lean
+Theorem statement: theorem Basis.proj.arg_x.IsLinearMap_rule (i : IX) :
+    IsLinearMap K (fun x : X => ℼ i x) :=
+
+
+
+Theorem: SciLean.BasisDuality.fromDual.arg_x.IsAffineMap_rule
+File path: SciLean/Core/FunctionPropositions/IsAffineMap.lean
+Theorem statement: theorem BasisDuality.fromDual.arg_x.IsAffineMap_rule :
+    IsAffineMap K (fun x : X => BasisDuality.fromDual x) :=
+
+
+
+Theorem: SciLean.IndexType.sum.arg_f.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem IndexType.sum.arg_f.ContCDiffAt_rule
+  (f : X → ι → Y) (x : X) (hf : ∀ i, ContCDiffAt K n (fun x => f x i) x)
+  : ContCDiffAt K n (fun x => ∑ i, f x i) x :=
+
+
+
+Theorem: SciLean.SciLean.norm₂.arg_x.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem SciLean.norm₂.arg_x.CDifferentiable_rule
+  (f : X → Y) (hf : CDifferentiable R f) (hx : f x≠0)
+  : CDifferentiable R (fun x => ‖f x‖₂[R]) :=
+
+
+
+Theorem: Set.Neg.neg.arg_a1.preimage_rule_Ioo
+File path: SciLean/Core/FunctionTransformations/Preimage.lean
+Theorem statement: theorem Neg.neg.arg_a1.preimage_rule_Ioo (a b : R)  :
+    preimage (fun x : R => - x) (Ioo a b)
+    =
+    Ioo (-b) (-a) :=
+
+
+
+Theorem: SciLean.ContCDiffAt.pi_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem ContCDiffAt.pi_rule (x : X)
+    (f : X → (i : ι) → E i)
+    (hf : ∀ i, ContCDiffAt K n (f · i) x) :
+    ContCDiffAt K n (fun x i => f x i) x :=
+
+
+
+Theorem: SciLean.HasSemiAdjoint.Prod.fst.arg_self.HasSemiAdjoint_rule
+File path: SciLean/Core/FunctionPropositions/HasSemiAdjoint.lean
+Theorem statement: theorem Prod.fst.arg_self.HasSemiAdjoint_rule
+    (f : X → Y×Z) (hf : HasSemiAdjoint K f) :
+    HasSemiAdjoint K fun (x : X) => (f x).fst :=
+
+
+
+Theorem: SciLean.Inner.inner.arg_a0a1.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem Inner.inner.arg_a0a1.ContCDiffAt_rule
+    (f : X → Y) (g : X → Y) (x : X)
+    (hf : ContCDiffAt R n f x) (hg : ContCDiffAt R n g x) :
+    ContCDiffAt R n (fun x => ⟪f x, g x⟫[R]) x :=
+
+
+
+Theorem: SciLean.Diffeomorphism.id_rule
+File path: SciLean/Core/FunctionPropositions/Diffeomorphism.lean
+Theorem statement: theorem id_rule
+  : Diffeomorphism K (fun x : X => x)
+  :=
+
+
+
+Theorem: SciLean.ContCDiffMapFD_eval_CDifferentiable
+File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+Theorem statement: theorem ContCDiffMapFD_eval_CDifferentiable (h : 0 < n) :
+    CDifferentiable K (fun (fx : (X ⟿FD[K,n] Y)×X) => fx.1 fx.2) :=
+
+
+
+Theorem: SciLean.Prod.snd.arg_self.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem Prod.snd.arg_self.CDifferentiable_rule
+  (f : X → Y×Z) (hf : CDifferentiable K f)
+  : CDifferentiable K (fun x => (f x).2)  :=
+
+
+
+Theorem: SciLean.ContCDiffMap_eval_CDifferentiable
+File path: SciLean/Core/FunctionSpaces/ContCDiffMap.lean
+Theorem statement: theorem ContCDiffMap_eval_CDifferentiable (h : 0 < n) :
+    CDifferentiable K (fun (fx : (X ⟿[K,n] Y)×X) => fx.1 fx.2) :=
+
+
+
+Theorem: SciLean.Prod.fst.arg_self.ContCDiffAt_rule
+File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+Theorem statement: theorem Prod.fst.arg_self.ContCDiffAt_rule (x : X)
+    (f : X → Y×Z) (hf : ContCDiffAt K n f x) :
+    ContCDiffAt K n (fun x => (f x).1) x :=
+
+
+
+Theorem: SciLean.Function.invFun.arg_f.cderiv_rule'
+File path: SciLean/Core/FunctionPropositions/Diffeomorphism.lean
+Theorem statement: theorem Function.invFun.arg_f.cderiv_rule'
+  (f : X → Y → Z) (z : Z)
+  (hf : ∀ x, Diffeomorphism K (f x))
+  (hf' : CDifferentiable K (fun xy : X×Y => f xy.1 xy.2))
+  : cderiv K (fun x => invFun (f x) z)
+    =
+    fun x dx =>
+      let y := invFun (f x) z
+      let dfdx_y := (cderiv K f x dx) y
+      let df'dy := cderiv K (invFun (f x)) (f x y) (dfdx_y)
+      (-df'dy)
+  :=
+
+
+
+Theorem: SciLean.Rand.uniformI.pdf
+File path: SciLean/Core/Rand/Distributions/UniformI.lean
+Theorem statement: theorem uniformI.pdf :
+    (uniformI R).pdf R volume
+    =
+    fun x => if 0 < x ∧ x < 1 then 1 else 0 :=
+
+
+
+Theorem: SciLean.Measure.restrict_restrict
+File path: SciLean/Core/Integral/Common.lean
+Theorem statement: theorem Measure.restrict_restrict {X} [MeasurableSpace X] (μ : Measure X) (A B : Set X) :
+    (μ.restrict A).restrict B = μ.restrict (A ∩ B) :=
+
+
+
+Theorem: SciLean.Rand.mean_add
+File path: SciLean/Core/Rand/Rand.lean
+Theorem statement: theorem mean_add  (x : Rand X) (x' : X) : x.mean + x' = (x  + x').mean :=
+
+
+
+Theorem: SciLean.norm2_scalar
+File path: SciLean/Core/Objects/SemiInnerProductSpace.lean
+Theorem statement: theorem norm2_scalar {R} [RealScalar R] (x : R) :
+  ‖x‖₂²[R] = x^2 :=
+
+
+
+Theorem: SciLean.parametric_inverse_bijection
+File path: SciLean/Core/Integral/ParametricInverse.lean
+Theorem statement: theorem parametric_inverse_bijection [Nonempty X] (f : X → Y) (hf : f.Bijective) (y : Y) :
+    ParametricInverseAt f y
+      (I := Unit) (X₁ := fun _ => Unit)
+      (p := fun _ _ x => x)
+      (g := fun _ _ => f.invFun y)
+      (dom := fun _ => Set.univ) :=
+
+
+
+Theorem: SciLean.HSub.hSub.arg_a0a1.CDifferentiable_rule
+File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+Theorem statement: theorem HSub.hSub.arg_a0a1.CDifferentiable_rule
+  (f g : X → Y) (hf : CDifferentiable K f) (hg : CDifferentiable K g)
+  : CDifferentiable K (fun x => f x - g x)  :=
+
+
+
+Theorem: SciLean.Rand.bind_pdf
+File path: SciLean/Core/Rand/Rand.lean
+Theorem statement: theorem bind_pdf (ν : Measure Y) (x : Rand X) (f : X → Rand Y) :
+    (x >>= f).pdf R ν = fun y => ∫ x', ((f x').pdf R ν y) ∂x.ℙ :=
+
+
+
+Theorem: SciLean.semiAdjoint.IndexType.sum.arg_f.semiAdjoint_rule
+File path: SciLean/Core/FunctionTransformations/SemiAdjoint.lean
+Theorem statement: theorem IndexType.sum.arg_f.semiAdjoint_rule
+  (f : X → ι → Y) (hf : ∀ i, HasSemiAdjoint K (f · i))
+  : semiAdjoint K (fun x => ∑ i, f x i)
+    =
+    (fun y => ∑ i, semiAdjoint K (f · i) y) :=
+
+
+
+Theorem: SciLean.DistribDiffrentiable.comp_rule
+File path: SciLean/Core/Distribution/ParametricDistribDeriv.lean
+Theorem statement: theorem DistribDiffrentiable.comp_rule
+    (f : Y → 𝒟'(Z,U)) (g : X → Y)
+    (hf : DistribDifferentiable f) (hg : CDifferentiable R g) :
+    DistribDifferentiable (fun x => f (g x)) :=
+
+
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 5
+
+Theorem: absorb2
+File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+Theorem statement: theorem absorb2 : x ⊔ x ⊓ y = x :=
+
+
+Theorem: MyGroup.mul_right_inv
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem mul_right_inv (a : G) : a * a⁻¹ = 1 :=
+
+
+Theorem: MyRing.neg_eq_of_add_eq_zero
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem neg_eq_of_add_eq_zero {a b : R} (h : a + b = 0) : -a = b :=
+
+
+Theorem: C03S05.MyAbs.abs_lt
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+
+
+Theorem: C03S04.aux
+File path: MIL/C03_Logic/S04_Conjunction_and_Iff.lean
+Theorem statement: None
+
+
+Common Unproved sorry theorems: 8
+
+Theorem: C03S06.convergesTo_add
+File path: MIL/C03_Logic/S06_Sequences_and_Convergence.lean
+Theorem statement: theorem convergesTo_add {s t : ℕ → ℝ} {a b : ℝ}
+      (cs : ConvergesTo s a) (ct : ConvergesTo t b) :
+    ConvergesTo (fun n ↦ s n + t n) (a + b) :=
+
+
+
+Theorem: C03S06.convergesTo_mul_const
+File path: MIL/C03_Logic/S06_Sequences_and_Convergence.lean
+Theorem statement: theorem convergesTo_mul_const {s : ℕ → ℝ} {a : ℝ} (c : ℝ) (cs : ConvergesTo s a) :
+    ConvergesTo (fun n ↦ c * s n) (c * a) :=
+
+
+
+Theorem: cauchySeq_of_le_geometric_two'
+File path: MIL/C09_Topology/S02_Metric_Spaces.lean
+Theorem statement: theorem cauchySeq_of_le_geometric_two' {u : ℕ → X}
+    (hu : ∀ n : ℕ, dist (u n) (u (n + 1)) ≤ (1 / 2) ^ n) : CauchySeq u :=
+
+
+
+Theorem: C03S06.exists_abs_le_of_convergesTo
+File path: MIL/C03_Logic/S06_Sequences_and_Convergence.lean
+Theorem statement: theorem exists_abs_le_of_convergesTo {s : ℕ → ℝ} {a : ℝ} (cs : ConvergesTo s a) :
+    ∃ N b, ∀ n, N ≤ n → |s n| < b :=
+
+
+
+Theorem: C03S05.MyAbs.lt_abs
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem lt_abs : x < |y| ↔ x < y ∨ x < -y :=
+
+
+
+Theorem: C03S06.aux
+File path: MIL/C03_Logic/S06_Sequences_and_Convergence.lean
+Theorem statement: theorem aux {s t : ℕ → ℝ} {a : ℝ} (cs : ConvergesTo s a) (ct : ConvergesTo t 0) :
+    ConvergesTo (fun n ↦ s n * t n) 0 :=
+
+
+
+Theorem: Cantor
+File path: MIL/C04_Sets_and_Functions/S02_Functions.lean
+Theorem statement: theorem Cantor : ∀ f : α → Set α, ¬Surjective f :=
+
+
+
+Theorem: C03S06.convergesTo_unique
+File path: MIL/C03_Logic/S06_Sequences_and_Convergence.lean
+Theorem statement: theorem convergesTo_unique {s : ℕ → ℝ} {a b : ℝ}
+      (sa : ConvergesTo s a) (sb : ConvergesTo s b) :
+    a = b :=
+
+
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 89bf7b5e3a226525e8580bae21ef543604f99b21)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 24
+
+Theorem: SmoothedChebyshevClose
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: lemma SmoothedChebyshevClose {ψ : ℝ → ℝ} (ε : ℝ) (ε_pos: 0 < ε)
+    (suppΨ : Function.support ψ ⊆ Icc (1 / 2) 2) (Ψnonneg : ∀ x > 0, 0 ≤ ψ x)
+    (mass_one : ∫ x in Ioi 0, ψ x / x = 1) (X : ℝ) :
+    (fun X ↦ ‖SmoothedChebyshev ψ ε X - ChebyshevPsi X‖) =O[atTop]
+      (fun X ↦ ε * X * Real.log X) :=
+
+
+Theorem: pi_asymp
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem pi_asymp :
+    ∃ c : ℝ → ℝ, c =o[atTop] (fun _ ↦ (1:ℝ)) ∧
+    ∀ x : ℝ, Nat.primeCounting ⌊x⌋₊ = (1 + c x) * ∫ t in Set.Icc 2 x, 1 / (log t) ∂ volume :=
+
+
+Theorem: MellinInversion_aux4
+File path: PrimeNumberTheoremAnd/MellinCalculus.lean
+Theorem statement: lemma MellinInversion_aux4 {f : ℝ → ℂ} (σ : ℝ) (σ_ne_zero : σ ≠ 0) (σ_ne_negOne : σ ≠ -1)
+    (fInt : IntegrableOn (fun x ↦ f x * (x : ℂ) ^ (σ : ℂ)) (Ioi 0)) :
+    VerticalIntegral (fun s ↦ ∫ x in Ioi 0, f x * (x : ℂ) ^ (s + 1) / (s * (s + 1))) σ =
+      ∫ x in Ioi 0, VerticalIntegral (fun s ↦ f x * (x : ℂ) ^ (s + 1) / (s * (s + 1))) σ :=
+
+
+Theorem: continuousAt_Smooth1
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: lemma continuousAt_Smooth1 {ψ : ℝ → ℝ} (diffΨ : ContDiff ℝ 1 ψ) (ψpos : ∀ (x : ℝ), 0 ≤ ψ x)
+    (suppΨ : support ψ ⊆ Icc (1 / 2) 2) (mass_one : ∫ (x : ℝ) in Ioi 0, ψ x / x = 1)
+    (ε : ℝ) (εpos : 0 < ε) (y : ℝ) (ypos : 0 < y) :
+    ContinuousAt (fun x ↦ Smooth1 ψ ε x) y :=
+
+
+Theorem: pi_alt
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem pi_alt : ∃ c : ℝ → ℝ, c =o[atTop] (fun _ ↦ (1:ℝ)) ∧
+    ∀ x : ℝ, Nat.primeCounting ⌊x⌋₊ = (1 + c x) * x / log x :=
+
+
+Theorem: prime_between
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem prime_between {ε:ℝ} (hε: 0 < ε): ∀ᶠ x:ℝ in atTop, ∃ p:ℕ, Nat.Prime p ∧
+    x < p ∧ p < (1+ε)* x :=
+
+
+Theorem: pn_pn_plus_one
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem pn_pn_plus_one : ∃ c : ℕ → ℝ, c =o[atTop] (fun _ ↦ (1:ℝ)) ∧
+    ∀ n : ℕ, Nat.nth Nat.Prime (n+1) - Nat.nth Nat.Prime n = (c n) * Nat.nth Nat.Prime n :=
+
+
+Theorem: MellinInversion_aux1
+File path: PrimeNumberTheoremAnd/MellinCalculus.lean
+Theorem statement: lemma MellinInversion_aux1 {f : ℝ → ℂ} {s : ℂ} (s_ne_zero : s ≠ 0)
+    (fDiff : DifferentiableOn ℝ f (Ioi 0))
+    (hfs : Tendsto (fun x ↦ f x * x ^ s) (𝓝[>]0) (𝓝 0))
+    (hfinf : Tendsto (fun x ↦ f x * x ^ s) atTop (𝓝 0)) :
+    ∫ x in Ioi 0, f x * x ^ s / x = - ∫ x in Ioi 0, (deriv f x) * x ^ s / s :=
+
+
+Theorem: mu_pnt_alt
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem mu_pnt_alt : (fun x:ℝ ↦ ∑ n in range ⌊ x ⌋₊, (μ n: ℝ) / n) =o[atTop] (fun x ↦ (1:ℝ)) :=
+
+
+Theorem: SmoothedChebyshevDirichlet
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: theorem SmoothedChebyshevDirichlet {ψ : ℝ → ℝ} (diffΨ : ContDiff ℝ 1 ψ) (ψpos : ∀ x, 0 ≤ ψ x)
+    (suppΨ : Function.support ψ ⊆ Icc (1 / 2) 2) (mass_one: ∫ x in Ioi (0 : ℝ), ψ x / x = 1)
+    (X : ℝ) (X_pos : 0 < X) (ε : ℝ) (εpos: 0 < ε) :
+    SmoothedChebyshev ψ ε X = ∑' n, Λ n * Smooth1 ψ ε (n / X) :=
+
+
+Theorem: vertical_integrable_Smooth1
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: lemma vertical_integrable_Smooth1 {ψ : ℝ → ℝ} (diffΨ : ContDiff ℝ 1 ψ) (ψpos : ∀ (x : ℝ), 0 ≤ ψ x)
+    (suppΨ : support ψ ⊆ Icc (1 / 2) 2) (mass_one : ∫ (x : ℝ) in Ioi 0, ψ x / x = 1)
+    (ε : ℝ) (εpos : 0 < ε) :
+    MeasureTheory.Integrable
+      (fun (y : ℝ) ↦ ∫ (t : ℝ) in Ioi 0, (t : ℂ) ^ (1 + y * I) * (Smooth1 ψ ε t : ℂ)) :=
+
+
+Theorem: MellinInversion_aux2
+File path: PrimeNumberTheoremAnd/MellinCalculus.lean
+Theorem statement: lemma MellinInversion_aux2 {f : ℝ → ℂ} (s : ℂ) (fDiff : DifferentiableOn ℝ f (Ioi 0))
+    (fDiff2 : DifferentiableOn ℝ (deriv f) (Ioi 0))
+    (hfs : Tendsto (fun x ↦ deriv f x * x ^ s) (𝓝[>]0) (𝓝 0))
+    (hfinf : Tendsto (fun x ↦ deriv f x * x ^ s) atTop (𝓝 0)) :
+    ∫ x in Ioi 0, (deriv f x) * x ^ s =
+      -∫ x in Ioi 0, (deriv (deriv f) x) * x ^ (s + 1) / (s + 1) :=
+
+
+Theorem: crude_upper_bound
+File path: PrimeNumberTheoremAnd/Wiener.lean
+Theorem statement: lemma crude_upper_bound
+    (hpos: 0 ≤ f)
+    (hG: ContinuousOn G {s | 1 ≤ s.re})
+    (hG' : Set.EqOn G (fun s ↦ LSeries f s - A / (s - 1)) {s | 1 < s.re})
+    (hf : ∀ (σ' : ℝ), 1 < σ' → Summable (nterm f σ'))
+    (ψ : CS 2 ℂ)
+    (hψpos : ∀ y, 0 ≤ (𝓕 ψ y).re ∧ (𝓕 ψ y).im = 0) :
+    ∃ B : ℝ, ∀ x : ℝ, 0 < x → ‖∑' n, f n / n * 𝓕 ψ (1 / (2 * π) * log (n / x))‖ ≤ B :=
+
+
+Theorem: DerivUpperBnd_aux7
+File path: PrimeNumberTheoremAnd/ZetaBounds.lean
+Theorem statement: theorem DerivUpperBnd_aux7 {A σ t : ℝ} (t_gt : 3 < |t|) (hσ : σ ∈ Icc (1 - A / |t|.log) 2) :
+    let N := ⌊|t|⌋₊;
+    let s := ↑σ + ↑t * I;
+    0 < N → ↑N ≤ |t| → s ≠ 1 → 1 / 2 < σ →
+    ‖s * ∫ (x : ℝ) in Ioi (N : ℝ), (↑⌊x⌋ + 1 / 2 - ↑x) * (x : ℂ) ^ (-s - 1) * -↑x.log‖ ≤
+      2 * |t| * ↑N ^ (-σ) / σ * |t|.log :=
+
+
+Theorem: primorial_bounds
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem primorial_bounds :
+    ∃ E : ℝ → ℝ, E =o[atTop] (fun x ↦ x) ∧
+    ∀ x : ℝ, ∏ p in (filter Nat.Prime (Iic ⌊x⌋₊)), p = exp ( x + E x ) :=
+
+
+Theorem: limiting_fourier_variant
+File path: PrimeNumberTheoremAnd/Wiener.lean
+Theorem statement: lemma limiting_fourier_variant
+    (hpos: 0 ≤ f)
+    (hG: ContinuousOn G {s | 1 ≤ s.re})
+    (hG' : Set.EqOn G (fun s ↦ LSeries f s - A / (s - 1)) {s | 1 < s.re})
+    (hf : ∀ (σ' : ℝ), 1 < σ' → Summable (nterm f σ'))
+    (ψ : CS 2 ℂ)
+    (hψpos : ∀ y, 0 ≤ (𝓕 ψ y).re ∧ (𝓕 ψ y).im = 0)
+    (hx : 1 ≤ x) :
+    ∑' n, f n / n * 𝓕 ψ (1 / (2 * π) * log (n / x)) -
+      A * ∫ u in Set.Ici (-log x), 𝓕 ψ (u / (2 * π)) =
+      ∫ (t : ℝ), (G (1 + t * I)) * (ψ t) * x ^ (t * I) :=
+
+
+Theorem: MediumPNT
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: theorem MediumPNT : ∃ (c : ℝ) (hc : c > 0),
+    (ChebyshevPsi - id) =O[atTop] (fun (x : ℝ) ↦ x * Real.exp (-c * (Real.log x) ^ ((1 : ℝ) / 18))) :=
+
+
+Theorem: integrable_x_mul_Smooth1
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: lemma integrable_x_mul_Smooth1 {ψ : ℝ → ℝ} (diffΨ : ContDiff ℝ 1 ψ) (ψpos : ∀ (x : ℝ), 0 ≤ ψ x)
+    (suppΨ : support ψ ⊆ Icc (1 / 2) 2) (mass_one : ∫ (x : ℝ) in Ioi 0, ψ x / x = 1)
+    (ε : ℝ) (εpos : 0 < ε) :
+    MeasureTheory.IntegrableOn (fun x ↦ x * Smooth1 ψ ε x) (Ioi 0) :=
+
+
+Theorem: ZetaDerivUpperBnd''
+File path: PrimeNumberTheoremAnd/ZetaBounds.lean
+Theorem statement: lemma ZetaDerivUpperBnd'' {A σ : ℝ} (hA : A ∈ Ioc 0 (1 / 2))
+    (σ_le : σ ≤ 2) :
+    (fun (t : ℝ) ↦
+    ‖∑ n in Finset.range (⌊|t|⌋₊ + 1), -1 / (n : ℂ) ^ (σ + t * I) * (Real.log n)‖ +
+      ‖-(⌊|t|⌋₊ : ℂ) ^ (1 - (σ + t * I)) / (1 - (σ + t * I)) ^ 2‖ +
+      ‖(Real.log ⌊|t|⌋₊) * (⌊|t|⌋₊ : ℂ) ^ (1 - (σ + t * I)) / (1 - (σ + t * I))‖ +
+      ‖(Real.log ⌊|t|⌋₊) * (⌊|t|⌋₊ : ℂ) ^ (-(σ + t * I)) / 2‖ +
+      ‖(1 * ∫ (x : ℝ) in Ioi (⌊|t|⌋₊ : ℝ), (⌊x⌋ + 1 / 2 - x) * (x : ℂ) ^ (-(σ + t * I) - 1))‖ +
+      ‖(σ + t * I) * ∫ (x : ℝ) in Ioi (⌊|t|⌋₊ : ℝ),
+        (⌊x⌋ + 1 / 2 - x) * (x : ℂ) ^ (-(σ + t * I) - 1) * -(Real.log x)‖)
+        =O[atTop ⊓ Filter.principal {t : ℝ | |t| < Real.exp (A / (1 - σ))}] fun t ↦ Real.log |t| ^ 2 :=
+
+
+Theorem: auto_cheby
+File path: PrimeNumberTheoremAnd/Wiener.lean
+Theorem statement: lemma auto_cheby (hpos: 0 ≤ f) (hf : ∀ (σ' : ℝ), 1 < σ' → Summable (nterm f σ'))
+    (hG: ContinuousOn G {s | 1 ≤ s.re})
+    (hG' : Set.EqOn G (fun s ↦ LSeries f s - A / (s - 1)) {s | 1 < s.re}) : cheby f :=
+
+
+Theorem: pn_asymptotic
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem pn_asymptotic : ∃ c : ℕ → ℝ, c =o[atTop] (fun _ ↦ (1:ℝ)) ∧
+    ∀ n : ℕ, Nat.nth Nat.Prime n = (1 + c n) * n * log n :=
+
+
+Theorem: lambda_pnt
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem lambda_pnt : (fun x:ℝ ↦ ∑ n in range ⌊ x ⌋₊, (-1)^(Ω n)) =o[atTop] (fun x ↦ x) :=
+
+
+Theorem: MellinInversion_aux3
+File path: PrimeNumberTheoremAnd/MellinCalculus.lean
+Theorem statement: lemma MellinInversion_aux3 {f : ℝ → ℂ} (σ : ℝ) (σ_ne_zero : σ ≠ 0) (σ_ne_negOne : σ ≠ -1)
+    (fInt : IntegrableOn (fun x ↦ f x * (x : ℂ) ^ (σ : ℂ)) (Ioi 0)) :
+    IntegrableOn (fun (⟨x, t⟩ : ℝ × ℝ) ↦ f x * x ^ (σ + t * I) / ((σ + t * I) * ((σ + t * I) + 1)))
+      ((Ioi 0).prod (univ : Set ℝ)) :=
+
+
+Theorem: mu_pnt
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem mu_pnt : (fun x:ℝ ↦ ∑ n in range ⌊ x ⌋₊, μ n) =o[atTop] (fun x ↦ x) :=
+
+
+Common Unproved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+================================================================================
+
+Unproved sorry theorems only in first database: 27
+
+Theorem: SmoothedChebyshevClose
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: lemma SmoothedChebyshevClose {ψ : ℝ → ℝ} (ε : ℝ) (ε_pos: 0 < ε)
+    (suppΨ : Function.support ψ ⊆ Icc (1 / 2) 2) (Ψnonneg : ∀ x > 0, 0 ≤ ψ x)
+    (mass_one : ∫ x in Ioi 0, ψ x / x = 1) (X : ℝ) :
+    (fun X ↦ ‖SmoothedChebyshev ψ ε X - ChebyshevPsi X‖) =O[atTop]
+      (fun X ↦ ε * X * Real.log X) :=
+
+
+Theorem: pi_asymp
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem pi_asymp :
+    ∃ c : ℝ → ℝ, c =o[atTop] (fun _ ↦ (1:ℝ)) ∧
+    ∀ x : ℝ, Nat.primeCounting ⌊x⌋₊ = (1 + c x) * ∫ t in Set.Icc 2 x, 1 / (log t) ∂ volume :=
+
+
+Theorem: MellinInversion_aux4
+File path: PrimeNumberTheoremAnd/MellinCalculus.lean
+Theorem statement: lemma MellinInversion_aux4 {f : ℝ → ℂ} (σ : ℝ) (σ_ne_zero : σ ≠ 0) (σ_ne_negOne : σ ≠ -1)
+    (fInt : IntegrableOn (fun x ↦ f x * (x : ℂ) ^ (σ : ℂ)) (Ioi 0)) :
+    VerticalIntegral (fun s ↦ ∫ x in Ioi 0, f x * (x : ℂ) ^ (s + 1) / (s * (s + 1))) σ =
+      ∫ x in Ioi 0, VerticalIntegral (fun s ↦ f x * (x : ℂ) ^ (s + 1) / (s * (s + 1))) σ :=
+
+
+Theorem: continuousAt_Smooth1
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: lemma continuousAt_Smooth1 {ψ : ℝ → ℝ} (diffΨ : ContDiff ℝ 1 ψ) (ψpos : ∀ (x : ℝ), 0 ≤ ψ x)
+    (suppΨ : support ψ ⊆ Icc (1 / 2) 2) (mass_one : ∫ (x : ℝ) in Ioi 0, ψ x / x = 1)
+    (ε : ℝ) (εpos : 0 < ε) (y : ℝ) (ypos : 0 < y) :
+    ContinuousAt (fun x ↦ Smooth1 ψ ε x) y :=
+
+
+Theorem: chebyshev_asymptotic
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem chebyshev_asymptotic :
+    (fun x ↦ ∑ p in (filter Nat.Prime (range ⌈x⌉₊)), log p) ~[atTop] (fun x ↦ x) :=
+
+
+Theorem: pi_alt
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem pi_alt : ∃ c : ℝ → ℝ, c =o[atTop] (fun _ ↦ (1:ℝ)) ∧
+    ∀ x : ℝ, Nat.primeCounting ⌊x⌋₊ = (1 + c x) * x / log x :=
+
+
+Theorem: prime_between
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem prime_between {ε:ℝ} (hε: 0 < ε): ∀ᶠ x:ℝ in atTop, ∃ p:ℕ, Nat.Prime p ∧
+    x < p ∧ p < (1+ε)* x :=
+
+
+Theorem: pn_pn_plus_one
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem pn_pn_plus_one : ∃ c : ℕ → ℝ, c =o[atTop] (fun _ ↦ (1:ℝ)) ∧
+    ∀ n : ℕ, Nat.nth Nat.Prime (n+1) - Nat.nth Nat.Prime n = (c n) * Nat.nth Nat.Prime n :=
+
+
+Theorem: MellinInversion_aux1
+File path: PrimeNumberTheoremAnd/MellinCalculus.lean
+Theorem statement: lemma MellinInversion_aux1 {f : ℝ → ℂ} {s : ℂ} (s_ne_zero : s ≠ 0)
+    (fDiff : DifferentiableOn ℝ f (Ioi 0))
+    (hfs : Tendsto (fun x ↦ f x * x ^ s) (𝓝[>]0) (𝓝 0))
+    (hfinf : Tendsto (fun x ↦ f x * x ^ s) atTop (𝓝 0)) :
+    ∫ x in Ioi 0, f x * x ^ s / x = - ∫ x in Ioi 0, (deriv f x) * x ^ s / s :=
+
+
+Theorem: mu_pnt_alt
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem mu_pnt_alt : (fun x:ℝ ↦ ∑ n in range ⌊ x ⌋₊, (μ n: ℝ) / n) =o[atTop] (fun x ↦ (1:ℝ)) :=
+
+
+Theorem: SmoothedChebyshevDirichlet
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: theorem SmoothedChebyshevDirichlet {ψ : ℝ → ℝ} (diffΨ : ContDiff ℝ 1 ψ) (ψpos : ∀ x, 0 ≤ ψ x)
+    (suppΨ : Function.support ψ ⊆ Icc (1 / 2) 2) (mass_one: ∫ x in Ioi (0 : ℝ), ψ x / x = 1)
+    (X : ℝ) (X_pos : 0 < X) (ε : ℝ) (εpos: 0 < ε) :
+    SmoothedChebyshev ψ ε X = ∑' n, Λ n * Smooth1 ψ ε (n / X) :=
+
+
+Theorem: vertical_integrable_Smooth1
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: lemma vertical_integrable_Smooth1 {ψ : ℝ → ℝ} (diffΨ : ContDiff ℝ 1 ψ) (ψpos : ∀ (x : ℝ), 0 ≤ ψ x)
+    (suppΨ : support ψ ⊆ Icc (1 / 2) 2) (mass_one : ∫ (x : ℝ) in Ioi 0, ψ x / x = 1)
+    (ε : ℝ) (εpos : 0 < ε) :
+    MeasureTheory.Integrable
+      (fun (y : ℝ) ↦ ∫ (t : ℝ) in Ioi 0, (t : ℂ) ^ (1 + y * I) * (Smooth1 ψ ε t : ℂ)) :=
+
+
+Theorem: MellinInversion_aux2
+File path: PrimeNumberTheoremAnd/MellinCalculus.lean
+Theorem statement: lemma MellinInversion_aux2 {f : ℝ → ℂ} (s : ℂ) (fDiff : DifferentiableOn ℝ f (Ioi 0))
+    (fDiff2 : DifferentiableOn ℝ (deriv f) (Ioi 0))
+    (hfs : Tendsto (fun x ↦ deriv f x * x ^ s) (𝓝[>]0) (𝓝 0))
+    (hfinf : Tendsto (fun x ↦ deriv f x * x ^ s) atTop (𝓝 0)) :
+    ∫ x in Ioi 0, (deriv f x) * x ^ s =
+      -∫ x in Ioi 0, (deriv (deriv f) x) * x ^ (s + 1) / (s + 1) :=
+
+
+Theorem: crude_upper_bound
+File path: PrimeNumberTheoremAnd/Wiener.lean
+Theorem statement: lemma crude_upper_bound
+    (hpos: 0 ≤ f)
+    (hG: ContinuousOn G {s | 1 ≤ s.re})
+    (hG' : Set.EqOn G (fun s ↦ LSeries f s - A / (s - 1)) {s | 1 < s.re})
+    (hf : ∀ (σ' : ℝ), 1 < σ' → Summable (nterm f σ'))
+    (ψ : CS 2 ℂ)
+    (hψpos : ∀ y, 0 ≤ (𝓕 ψ y).re ∧ (𝓕 ψ y).im = 0) :
+    ∃ B : ℝ, ∀ x : ℝ, 0 < x → ‖∑' n, f n / n * 𝓕 ψ (1 / (2 * π) * log (n / x))‖ ≤ B :=
+
+
+Theorem: DerivUpperBnd_aux7
+File path: PrimeNumberTheoremAnd/ZetaBounds.lean
+Theorem statement: theorem DerivUpperBnd_aux7 {A σ t : ℝ} (t_gt : 3 < |t|) (hσ : σ ∈ Icc (1 - A / |t|.log) 2) :
+    let N := ⌊|t|⌋₊;
+    let s := ↑σ + ↑t * I;
+    0 < N → ↑N ≤ |t| → s ≠ 1 → 1 / 2 < σ →
+    ‖s * ∫ (x : ℝ) in Ioi (N : ℝ), (↑⌊x⌋ + 1 / 2 - ↑x) * (x : ℂ) ^ (-s - 1) * -↑x.log‖ ≤
+      2 * |t| * ↑N ^ (-σ) / σ * |t|.log :=
+
+
+Theorem: primorial_bounds_finprod
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem primorial_bounds_finprod :
+    ∃ E : ℝ → ℝ, E =o[atTop] (fun x ↦ x) ∧
+    ∀ x : ℝ, ∏ᶠ (p:ℕ) (_:p ≤ x) (_:Nat.Prime p), p = exp ( x + E x ) :=
+
+
+Theorem: primorial_bounds
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem primorial_bounds :
+    ∃ E : ℝ → ℝ, E =o[atTop] (fun x ↦ x) ∧
+    ∀ x : ℝ, ∏ p in (filter Nat.Prime (range ⌊x⌋₊)), p = exp ( x + E x ) :=
+
+
+Theorem: limiting_fourier_variant
+File path: PrimeNumberTheoremAnd/Wiener.lean
+Theorem statement: lemma limiting_fourier_variant
+    (hpos: 0 ≤ f)
+    (hG: ContinuousOn G {s | 1 ≤ s.re})
+    (hG' : Set.EqOn G (fun s ↦ LSeries f s - A / (s - 1)) {s | 1 < s.re})
+    (hf : ∀ (σ' : ℝ), 1 < σ' → Summable (nterm f σ'))
+    (ψ : CS 2 ℂ)
+    (hψpos : ∀ y, 0 ≤ (𝓕 ψ y).re ∧ (𝓕 ψ y).im = 0)
+    (hx : 1 ≤ x) :
+    ∑' n, f n / n * 𝓕 ψ (1 / (2 * π) * log (n / x)) -
+      A * ∫ u in Set.Ici (-log x), 𝓕 ψ (u / (2 * π)) =
+      ∫ (t : ℝ), (G (1 + t * I)) * (ψ t) * x ^ (t * I) :=
+
+
+Theorem: MediumPNT
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: theorem MediumPNT : ∃ (c : ℝ) (hc : c > 0),
+    (ChebyshevPsi - id) =O[atTop] (fun (x : ℝ) ↦ x * Real.exp (-c * (Real.log x) ^ ((1 : ℝ) / 18))) :=
+
+
+Theorem: integrable_x_mul_Smooth1
+File path: PrimeNumberTheoremAnd/MediumPNT.lean
+Theorem statement: lemma integrable_x_mul_Smooth1 {ψ : ℝ → ℝ} (diffΨ : ContDiff ℝ 1 ψ) (ψpos : ∀ (x : ℝ), 0 ≤ ψ x)
+    (suppΨ : support ψ ⊆ Icc (1 / 2) 2) (mass_one : ∫ (x : ℝ) in Ioi 0, ψ x / x = 1)
+    (ε : ℝ) (εpos : 0 < ε) :
+    MeasureTheory.IntegrableOn (fun x ↦ x * Smooth1 ψ ε x) (Ioi 0) :=
+
+
+Theorem: chebyshev_asymptotic_finsum
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem chebyshev_asymptotic_finsum :
+    (fun x ↦ ∑ᶠ (p:ℕ) (_: p ≤ x) (_: Nat.Prime p), log p) ~[atTop] (fun x ↦ x) :=
+
+
+Theorem: ZetaDerivUpperBnd''
+File path: PrimeNumberTheoremAnd/ZetaBounds.lean
+Theorem statement: lemma ZetaDerivUpperBnd'' {A σ : ℝ} (hA : A ∈ Ioc 0 (1 / 2))
+    (σ_le : σ ≤ 2) :
+    (fun (t : ℝ) ↦
+    ‖∑ n in Finset.range (⌊|t|⌋₊ + 1), -1 / (n : ℂ) ^ (σ + t * I) * (Real.log n)‖ +
+      ‖-(⌊|t|⌋₊ : ℂ) ^ (1 - (σ + t * I)) / (1 - (σ + t * I)) ^ 2‖ +
+      ‖(Real.log ⌊|t|⌋₊) * (⌊|t|⌋₊ : ℂ) ^ (1 - (σ + t * I)) / (1 - (σ + t * I))‖ +
+      ‖(Real.log ⌊|t|⌋₊) * (⌊|t|⌋₊ : ℂ) ^ (-(σ + t * I)) / 2‖ +
+      ‖(1 * ∫ (x : ℝ) in Ioi (⌊|t|⌋₊ : ℝ), (⌊x⌋ + 1 / 2 - x) * (x : ℂ) ^ (-(σ + t * I) - 1))‖ +
+      ‖(σ + t * I) * ∫ (x : ℝ) in Ioi (⌊|t|⌋₊ : ℝ),
+        (⌊x⌋ + 1 / 2 - x) * (x : ℂ) ^ (-(σ + t * I) - 1) * -(Real.log x)‖)
+        =O[atTop ⊓ Filter.principal {t : ℝ | |t| < Real.exp (A / (1 - σ))}] fun t ↦ Real.log |t| ^ 2 :=
+
+
+Theorem: auto_cheby
+File path: PrimeNumberTheoremAnd/Wiener.lean
+Theorem statement: lemma auto_cheby (hpos: 0 ≤ f) (hf : ∀ (σ' : ℝ), 1 < σ' → Summable (nterm f σ'))
+    (hG: ContinuousOn G {s | 1 ≤ s.re})
+    (hG' : Set.EqOn G (fun s ↦ LSeries f s - A / (s - 1)) {s | 1 < s.re}) : cheby f :=
+
+
+Theorem: pn_asymptotic
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem pn_asymptotic : ∃ c : ℕ → ℝ, c =o[atTop] (fun _ ↦ (1:ℝ)) ∧
+    ∀ n : ℕ, Nat.nth Nat.Prime n = (1 + c n) * n * log n :=
+
+
+Theorem: lambda_pnt
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem lambda_pnt : (fun x:ℝ ↦ ∑ n in range ⌊ x ⌋₊, (-1)^(Ω n)) =o[atTop] (fun x ↦ x) :=
+
+
+Theorem: MellinInversion_aux3
+File path: PrimeNumberTheoremAnd/MellinCalculus.lean
+Theorem statement: lemma MellinInversion_aux3 {f : ℝ → ℂ} (σ : ℝ) (σ_ne_zero : σ ≠ 0) (σ_ne_negOne : σ ≠ -1)
+    (fInt : IntegrableOn (fun x ↦ f x * (x : ℂ) ^ (σ : ℂ)) (Ioi 0)) :
+    IntegrableOn (fun (⟨x, t⟩ : ℝ × ℝ) ↦ f x * x ^ (σ + t * I) / ((σ + t * I) * ((σ + t * I) + 1)))
+      ((Ioi 0).prod (univ : Set ℝ)) :=
+
+
+Theorem: mu_pnt
+File path: PrimeNumberTheoremAnd/Consequences.lean
+Theorem statement: theorem mu_pnt : (fun x:ℝ ↦ ∑ n in range ⌊ x ⌋₊, μ n) =o[atTop] (fun x ↦ x) :=
+
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 0
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/dwrensha/compfiles (commit: f99bf6f2928d47dd1a445b414b3a723c2665f091)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 5
+
+Theorem: Bulgaria1998P6.lemma_1'
+File path: Compfiles/Bulgaria1998P6.lean
+Theorem statement: lemma lemma_1'
+    (a b c : ℕ)
+    (ha : 0 < a)
+    (hb : 0 < b)
+    (hc : 0 < c)
+    (h : a^4 = b^4 + c^2) : False :=
+
+
+
+Theorem: Imo2001P1.lemma1
+File path: Compfiles/Imo2001P1.lean
+Theorem statement: lemma lemma1
+    (t : Affine.Triangle ℝ (EuclideanSpace ℝ (Fin 2)))
+    : ∡ t.circumcenter (t.points 2) (t.points 1) =
+      Real.pi - ∡ (t.points 1) (t.points 0) (t.points 2) :=
+
+
+
+Theorem: Imo2008P5.claim
+File path: Compfiles/Imo2008P5.lean
+Theorem statement: lemma claim (n k : ℕ) (hn : 0 < n) (hnk : n ≤ k) (he : Even (k - n))
+    (f : {b : Sequence n k // MSequence n k b }) :
+    Set.ncard {g | ψ n k g = f} = 2^(k - n) :=
+
+
+
+Theorem: Imo2008P5.even_subsets_card
+File path: Compfiles/Imo2008P5.lean
+Theorem statement: lemma even_subsets_card {α : Type} [Fintype α] :
+    Fintype.card {s : Finset α // Even (Finset.card s) } = 2^(Fintype.card α - 1) :=
+
+
+
+Theorem: Imo2009P6.imo2009_p6_aux1
+File path: Compfiles/Imo2009P6.lean
+Theorem statement: theorem imo2009_p6_aux1 (n : ℕ) (hn : 0 < n)
+    (a : Fin n → ℤ)
+    (ainj : a.Injective)
+    (apos : ∀ i, 0 < a i)
+    (asorted : ∀ i j, i < j → a i < a j)
+    (M : Finset ℤ)
+    (Mpos : ∀ m ∈ M, 0 < m)
+    (Mcard : M.card ≤ n - 1)
+    (hM : ∑ i, a i ∉ M)
+    : ∃ p : Equiv.Perm (Fin n),
+          ∀ i : Fin n, ∑ j ∈ Finset.filter (· ≤ i) Finset.univ, a (p j) ∉ M :=
+
+
+
+================================================================================
+Comparing Unproved sorry theorems for repository: https://github.com/siddhartha-gadgil/Saturn (commit: 3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a)
+================================================================================
+
+Unproved sorry theorems only in first database: 0
+
+Unproved sorry theorems only in second database: 0
+
+Common Unproved sorry theorems: 0

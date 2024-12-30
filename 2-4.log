@@ -1,0 +1,117 @@
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+[31mCould not terminate `[1m/usr/bin/python3 /usr/local/bin/user_traffic_monitor.py[22m[26m` due to (pid=2527733, name='python3')[39m
+Did not find any active Ray processes.
+Running main3_more_sorries.py
+[2024-09-17 20:47:17,533] [WARNING] [real_accelerator.py:162:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+[2024-09-17 20:47:17,534] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+WARNING 09-17 20:47:19 _custom_ops.py:18] Failed to import from vllm._C with ImportError('libcuda.so.1: cannot open shared object file: No such file or directory')
+2024-09-17 20:47:23.202 | INFO     | __main__:main:1602 - Running progressive training
+2024-09-17 20:47:23.202 | INFO     | __main__:main:1608 - Configuring LeanDojo...
+2024-09-17 20:47:23.205 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 20:47:23.205 | INFO     | __main__:main:1610 - LeanDojo configured
+2024-09-17 20:47:23.205 | INFO     | __main__:main:1615 - Starting the main process
+2024-09-17 20:47:23.206 | INFO     | __main__:main:1623 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 20:47:56.750 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 20:47:56.750 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/apnelson1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-17 20:48:05.602 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 20:48:05.602 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-17 20:48:12.085 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 20:48:12.086 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-17 20:48:13.999 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 20:48:13.999 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-17 20:48:21.225 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 20:48:21.226 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-17 20:48:29.375 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 20:48:29.375 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-17 20:48:30.054 | INFO     | __main__:main:1625 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_single_repo_no_ewc_curriculum_sorries.json
+2024-09-17 20:48:30.055 | INFO     | __main__:main:1632 - Found 100 repositories
+2024-09-17 20:48:30.056 | INFO     | __main__:main:1635 - Starting curriculum learning
+2024-09-17 20:48:30.294 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0
+2024-09-17 20:48:47.105 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-09-17 20:49:04.061 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.5.0-rc1
+2024-09-17 20:49:21.023 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc2
+2024-09-17 20:49:37.921 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0-rc2
+2024-09-17 20:49:54.363 | INFO     | __main__:main:1729 - Processing https://github.com/jjdishere/neukirch
+2024-09-17 20:49:54.363 | INFO     | __main__:add_repo_to_database:1289 - Processing https://github.com/jjdishere/neukirch.git
+2024-09-17 20:49:54.673 | INFO     | __main__:get_compatible_commit:691 - Latest commit: 8fdb75f7ebab8a20eea902058956d7dece648959
+2024-09-17 20:49:54.674 | INFO     | __main__:get_compatible_commit:694 - Creating LeanGitRepo for https://github.com/jjdishere/neukirch
+2024-09-17 20:49:54.674 | INFO     | __main__:get_compatible_commit:696 - Getting config for https://github.com/jjdishere/neukirch.git
+2024-09-17 20:49:54.674 | INFO     | __main__:get_compatible_commit:700 - Latest commit compatible for url https://github.com/jjdishere/neukirch.git
+2024-09-17 20:49:54.674 | INFO     | __main__:add_repo_to_database:1309 - Found compatible commit 8fdb75f7ebab8a20eea902058956d7dece648959 for https://github.com/jjdishere/neukirch.git
+2024-09-17 20:49:54.674 | INFO     | __main__:add_repo_to_database:1310 - Lean version: v4.5.0-rc1
+2024-09-17 20:49:54.675 | INFO     | __main__:add_repo_to_database:1315 - Generating benchmark at /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/neukirch_8fdb75f7ebab8a20eea902058956d7dece648959
+2024-09-17 20:49:54.675 | INFO     | generate_benchmark_lean4:main:354 - Generating dataset to go into /data/yingzi_ma/lean_project/datasets_PT_single_repo_no_ewc_curriculum_sorries/neukirch_8fdb75f7ebab8a20eea902058956d7dece648959
+2024-09-17 20:49:54.675 | INFO     | generate_benchmark_lean4:main:361 - lean toolchain version: {'content': 'leanprover/lean4:v4.5.0-rc1\n'}
+2024-09-17 20:49:54.675 | INFO     | generate_benchmark_lean4:main:363 - lean version v: v4.5.0-rc1
+2024-09-17 20:49:54.675 | INFO     | generate_benchmark_lean4:main:364 - is supported: True
+2024-09-17 20:49:54.675 | INFO     | generate_benchmark_lean4:main:373 - lean path1 /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.5.0-rc1
+2024-09-17 20:49:54.675 | INFO     | generate_benchmark_lean4:main:374 - lean path2 /.elan/toolchains/leanprover--lean4---4.5.0-rc1
+2024-09-17 20:49:54.676 | INFO     | generate_benchmark_lean4:main:375 - lean path3 ~/.elan/toolchains/leanprover--lean4---4.5.0-rc1
+2024-09-17 20:49:54.676 | INFO     | generate_benchmark_lean4:main:377 - Lean toolchain path 1 does not exist: /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.5.0-rc1
+2024-09-17 20:49:54.676 | INFO     | generate_benchmark_lean4:main:379 - Lean toolchain path 2 does not exist: /.elan/toolchains/leanprover--lean4---4.5.0-rc1
+2024-09-17 20:49:54.677 | INFO     | generate_benchmark_lean4:main:381 - Lean toolchain path 3 does not exist: ~/.elan/toolchains/leanprover--lean4---4.5.0-rc1
+2024-09-17 20:49:54.677 | INFO     | generate_benchmark_lean4:main:384 - Switched to Lean toolchain at: /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.5.0-rc1
+2024-09-17 20:49:54.751 | INFO     | generate_benchmark_lean4:main:386 - lean --version: Lean (version 4.8.0-rc1, x86_64-unknown-linux-gnu, commit dcccfb73cb24, Release)
+
+2024-09-17 20:49:54.752 | INFO     | generate_benchmark_lean4:main:387 - repo: LeanGitRepo(url='https://github.com/jjdishere/neukirch', commit='8fdb75f7ebab8a20eea902058956d7dece648959')
+2024-09-17 20:49:54.752 | INFO     | generate_benchmark_lean4:main:389 - Configuring LeanDojo again...
+2024-09-17 20:49:54.763 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-17 20:49:54.763 | INFO     | generate_benchmark_lean4:main:391 - LeanDojo configured
+2024-09-17 20:49:54.763 | INFO     | generate_benchmark_lean4:main:394 - Tracing the repo...
+2024-09-18 05:22:08.274 | INFO     | lean_dojo.data_extraction.trace:get_traced_repo_path:79 - Tracing LeanGitRepo(url='https://github.com/jjdishere/neukirch', commit='8fdb75f7ebab8a20eea902058956d7dece648959')
+2024-09-18 05:22:08.279 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:81 - Working in the temporary directory /tmp/tmpn4el0vtl
+2024-09-18 05:22:08.840 | DEBUG    | lean_dojo.data_extraction.lean:clone_and_checkout:479 - Cloning LeanGitRepo(url='https://github.com/jjdishere/neukirch', commit='8fdb75f7ebab8a20eea902058956d7dece648959')
+2024-09-18 05:22:09.583 | DEBUG    | lean_dojo.data_extraction.trace:_trace:33 - Tracing LeanGitRepo(url='https://github.com/jjdishere/neukirch', commit='8fdb75f7ebab8a20eea902058956d7dece648959')
+2024-09-18 05:22:09.594 | DEBUG    | lean_dojo.container:run:184 - NUM_PROCS=32 python build_lean4_repo.py neukirch
+2024-09-18 05:22:09.923 | INFO     | __main__:main:165 - Building neukirch
+info: downloading component 'lean'
+info: installing component 'lean'
+Traceback (most recent call last):
+  File "/tmp/tmpn4el0vtl/workspace/build_lean4_repo.py", line 200, in <module>
+    main()
+  File "/tmp/tmpn4el0vtl/workspace/build_lean4_repo.py", line 172, in main
+    run_cmd("lake build")
+  File "/tmp/tmpn4el0vtl/workspace/build_lean4_repo.py", line 29, in run_cmd
+    res = subprocess.run(cmd, shell=True, capture_output=capture_output, check=True)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 505, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1146, in communicate
+    self.wait()
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1209, in wait
+    return self._wait(timeout=timeout)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1959, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1917, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main3_more_sorries.py", line 2512, in <module>
+  File "/data/yingzi_ma/lean_project/ReProver/main3_more_sorries.py", line 1730, in main
+    #     for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
+  File "/data/yingzi_ma/lean_project/ReProver/main3_more_sorries.py", line 1316, in add_repo_to_database
+    traced_repo, _, _, total_theorems = generate_benchmark_lean4.main(repo.url, sha, dst_dir)
+  File "/data/yingzi_ma/lean_project/ReProver/generate_benchmark_lean4.py", line 395, in main
+    traced_repo = trace(repo)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/data_extraction/trace.py", line 115, in trace
+    cached_path = get_traced_repo_path(repo, build_deps)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/data_extraction/trace.py", line 82, in get_traced_repo_path
+    _trace(repo, build_deps)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/data_extraction/trace.py", line 45, in _trace
+    container.run(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/container.py", line 194, in run
+    execute(cmd, capture_output=capture_output)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lean_dojo/utils.py", line 85, in execute
+    res = subprocess.run(cmd, shell=True, capture_output=capture_output, check=True)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 505, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1146, in communicate
+    self.wait()
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1209, in wait
+    return self._wait(timeout=timeout)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1959, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/subprocess.py", line 1917, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt

@@ -1,0 +1,1915 @@
+info: std: cloning https://github.com/leanprover/std4.git to './.lake/packages/std'
+info: i18n: cloning https://github.com/hhu-adam/lean-i18n.git to './.lake/packages/i18n'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph to './.lake/packages/importGraph'
+info: Cli: cloning https://github.com/mhuisi/lean4-cli to './.lake/packages/Cli'
+info: Qq: cloning https://github.com/leanprover-community/quote4 to './.lake/packages/Qq'
+info: aesop: cloning https://github.com/leanprover-community/aesop to './.lake/packages/aesop'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4 to './.lake/packages/proofwidgets'
+[0/6] Building Std.Tactic.OpenPrivate
+[0/9] Compiling time.cpp
+[0/35] Building GameServer.Utils
+[0/35] Building GameServer.Options
+[0/35] Building GameServer.Graph
+[0/43] Building GameServer.Structures
+[0/43] Building GameServer.Tactic.LetIntros
+[0/43] Downloading proofwidgets cloud release
+[0/58] Building Std.CodeAction.Attr
+[0/75] Building Std.Lean.Expr
+[0/81] Building Std.Tactic.Relation.Rfl
+[0/81] Building Std.Lean.Position
+[0/81] Building Std.Data.Nat.Basic
+[0/81] Building Std.Lean.Meta.Basic
+[0/81] Building Std.Data.List.Basic
+[0/91] Building Std.Classes.BEq
+[0/91] Building Std.Lean.Name
+[0/91] Building Std.Util.LibraryNote
+[0/91] Building Std.Control.ForInStep.Basic
+[0/228] Building Std.Classes.Order
+[0/228] Building Std.Classes.SatisfiesM
+[0/228] Building Std.Tactic.Lint.Basic
+[0/230] Building Std.Control.Lemmas
+[0/230] Building Std.Data.MLList.Basic
+[0/230] Building Std.Data.Fin.Basic
+[0/230] Building Std.Tactic.SeqFocus
+[0/230] Building Std.Util.ProofWanted
+[0/230] Building Std.Data.DList
+[0/230] Building Std.Data.Sum.Basic
+[0/230] Building Std.Data.UInt
+[0/230] Building Std.Lean.Delaborator
+[0/230] Building Std.Lean.Except
+[0/230] Building Std.Data.LazyList
+[0/230] Building Std.Data.Char
+[0/230] Building Std.Lean.TagAttribute
+[0/230] Building Std.Data.List.Init.Attach
+[0/233] Building Std.Lean.HashSet
+[0/233] Building Std.Lean.HashMap
+[0/233] Building Std.Lean.IO.Process
+[0/233] Building Std.Lean.Float
+[0/274] Building Std.Lean.Meta.Expr
+[0/279] Building Std.Lean.PersistentHashMap
+[0/279] Building Std.Lean.Meta.Inaccessible
+[0/279] Building Std.Lean.MonadBacktrack
+[0/279] Building Std.Lean.NameMapAttribute
+[0/279] Building Std.Lean.SMap
+[0/279] Building Std.Tactic.Congr
+[0/279] Building Std.Test.Internal.DummyLabelAttr
+[0/279] Building Std.Tactic.Unreachable
+[0/279] Building Std.Lean.Syntax
+[0/279] Building Std.Tactic.Instances
+[0/279] Building Std.Tactic.Exact
+[0/279] Building Std.Tactic.Classical
+[0/279] Building Std.Lean.Util.Path
+[0/279] Building Std.Lean.PersistentHashSet
+[0/279] Building Std.Tactic.SqueezeScope
+[0/279] Building Std.Util.Pickle
+[0/279] Building Qq.Typ
+[0/279] Building Std.Tactic.NoMatch
+[0/279] Building Qq.ForLean.Do
+[0/279] Building Std.Util.ExtendedBinder
+[0/279] Building Std.WF
+[0/279] Building Std.Util.CheckTactic
+[0/279] Building Qq.ForLean.ToExpr
+[0/279] Building Qq.ForLean.ReduceEval
+[0/279] Building Std.Lean.NameMap
+[0/279] Building Qq.SortLocalDecls
+[0/279] Building Std.Tactic.Where
+[0/279] Building Std.Tactic.Case
+[3/279] Unpacking proofwidgets cloud release
+[6/279] Building Std.Lean.AttributeExtra
+[7/279] Building Std.Classes.Cast
+[7/279] Building Std.Control.ForInStep.Lemmas
+[7/279] Creating libleanTime.a
+[12/279] Building Std.Tactic.PrintDependents
+[17/357] Building Aesop.Check
+[17/368] Building Aesop.Nanos
+[18/370] Building Aesop.Util.UnionFind
+[18/523] Building Std.Data.Array.Basic
+[18/567] Building Aesop.Frontend.Basic
+[18/567] Building Aesop.Percent
+[18/567] Building Aesop.RuleSet.Name
+[18/567] Building Aesop.ElabM
+[18/567] Building Aesop.Exception
+[18/567] Building ImportGraph.RequiredModules
+[18/567] Building Aesop.Options.Public
+[18/567] Linking libleanTime.so
+[19/2043] Building Cli.Basic
+[19/2085] Building ImportGraph.CurrentModule
+[24/2085] Building Std.Tactic.FalseOrByContra
+[24/2085] Building Std.Lean.Meta.Clear
+[24/2085] Building Std.Lean.Meta.InstantiateMVars
+[24/2085] Building Std.Lean.Meta.AssertHypotheses
+[24/2085] Building Std.Tactic.Init
+[29/2085] Building ProofWidgets.Compat
+[29/2085] Building Mathlib.Tactic.FunProp.Decl
+[29/2085] Building Mathlib.Tactic.SuppressCompilation
+[29/2085] Building Mathlib.Util.Delaborators
+[29/2085] Building Mathlib.Tactic.Clean
+[29/2085] Building Mathlib.Util.AtomM
+[29/2085] Building Mathlib.Util.CountHeartbeats
+[29/2085] Building Mathlib.Tactic.Trace
+[29/2085] Building Mathlib.Tactic.Variable
+[29/2085] Building Mathlib.Tactic.SudoSetOption
+[29/2085] Building Mathlib.Tactic.TypeCheck
+[29/2085] Building Mathlib.Tactic.Have
+[29/2085] Building Mathlib.Tactic.HelpCmd
+[29/2085] Building Mathlib.Tactic.GuardHypNums
+[29/2085] Building Mathlib.Tactic.InferParam
+[29/2085] Building Mathlib.Tactic.FailIfNoProgress
+[29/2085] Building Mathlib.Tactic.Set
+[29/2085] Building Mathlib.Tactic.Existsi
+[29/2085] Building Mathlib.Tactic.Observe
+[29/2085] Building Mathlib.Tactic.Clear_
+[29/2085] Building Mathlib.Tactic.ClearExcept
+[29/2085] Building Mathlib.Tactic.ApplyWith
+[29/2085] Building Mathlib.Tactic.Check
+[29/2085] Building Mathlib.Util.Tactic
+[29/2085] Building Mathlib.Util.WithWeakNamespace
+[29/2085] Building Mathlib.Tactic.SimpRw
+[29/2085] Building Mathlib.Lean.PrettyPrinter.Delaborator
+[29/2085] Building Mathlib.Tactic.ExtractGoal
+[29/2085] Building Mathlib.Util.CompileInductive
+[29/2085] Building Mathlib.Util.AssertExists
+[29/2085] Building Mathlib.Tactic.Recover
+[29/2085] Building Mathlib.Tactic.Substs
+[29/2085] Building Mathlib.Tactic.HaveI
+[29/2085] Building Mathlib.Util.MemoFix
+[29/2085] Building Mathlib.Tactic.Attr.Register
+[29/2085] Building Mathlib.Util.DischargerAsTactic
+[29/2085] Building Mathlib.Init.Data.Nat.Notation
+[29/2085] Building Mathlib.Tactic.UnsetOption
+[29/2085] Building Mathlib.Tactic.ExtendDoc
+[29/2085] Building Mathlib.Tactic.PPWithUniv
+[29/2085] Building Mathlib.Lean.EnvExtension
+[29/2085] Building Mathlib.Mathport.Attributes
+[29/2085] Building Mathlib.Lean.Elab.Term
+[29/2085] Building Mathlib.Tactic.NthRewrite
+[29/2085] Building Mathlib.Tactic.Generalize
+[29/2085] Building Mathlib.Tactic.Coe
+[29/2085] Building Mathlib.Tactic.Explode.Datatypes
+[29/2085] Building Mathlib.Tactic.Lemma
+[29/2085] Building Mathlib.Tactic.Clear!
+[29/2085] Building Game.Tactic.Xyzzy
+[29/2085] Building Game.Tactic.Ne
+[29/2085] Building Mathlib.Data.Array.Defs
+[29/2085] Building Mathlib.Tactic.Rename
+[29/2085] Building Mathlib.Tactic.ReduceModChar.Ext
+[29/2085] Building Mathlib.Tactic.Widget.SelectInsertParamsClass
+[29/2085] Building Mathlib.Tactic.SimpIntro
+[29/2085] Building Mathlib.Lean.Meta.Basic
+[29/2085] Building Mathlib.Tactic.SuccessIfFailWithMsg
+[29/2085] Building Mathlib.Tactic.GuardGoalNums
+[29/2085] Building Mathlib.Tactic.Constructor
+[29/2085] Building Mathlib.Tactic.CasesM
+[29/2085] Building Game.Tactic.Rfl
+[29/2085] Building Mathlib.Init.Data.Sigma.Basic
+[29/2085] Building Mathlib.Tactic.Monotonicity.Attr
+[29/2085] Building Mathlib.Tactic.Spread
+[29/2085] Building Mathlib.Tactic.Conv
+[29/2085] Building Mathlib.Tactic.ProjectionNotation
+[29/2085] Building Mathlib.Tactic.FunProp.ToStd
+[29/2085] Building Mathlib.Mathport.Rename
+[29/2085] Building Mathlib.Util.AddRelatedDecl
+[29/2085] Building Mathlib.Tactic.FunProp.StateList
+[29/2085] Building Mathlib.Lean.Expr.Traverse
+[31/2085] Building Std.Lean.Meta.SavedState
+[32/2085] Building Mathlib.Tactic.Relation.Rfl
+[33/2085] Building Std.Data.Sum.Lemmas
+[38/2085] Building I18n.Language
+[38/2085] Building I18n.Utils
+[38/2085] Building Time.Basic
+[40/2085] Building Std.Linter.UnreachableTactic
+[40/2085] Building Std.Tactic.Lint.TypeClass
+[40/2085] Building Std.Tactic.Lint.Misc
+[43/2085] Building Std.Lean.Json
+[44/2085] Building Std.Control.ForInStep
+[48/2085] Building Mathlib.Tactic.Monotonicity.Basic
+[53/2085] Building ProofWidgets.Cancellable
+[53/2085] Building ProofWidgets.Component.Basic
+[57/2085] Building Std.Linter.UnnecessarySeqFocus
+[59/2085] Building Mathlib.Init.Data.Fin.Basic
+[63/2085] Building Mathlib.Tactic.SwapVar
+[72/2085] Building Std.Data.PairingHeap
+[74/2085] Building ImportGraph.Imports
+[79/2085] Building Std.Data.Array.Monadic
+[86/2085] Building Mathlib.Tactic.Explode.Pretty
+[87/2085] Building Aesop.Constants
+[95/2085] Building Mathlib.Tactic.ScopedNS
+[110/2085] Building Std.CodeAction.Basic
+[110/2085] Building Mathlib.Tactic.Eqns
+[110/2085] Building Std.CodeAction.Misc
+[112/2085] Building ProofWidgets.Component.MakeEditLink
+[112/2085] Building ProofWidgets.Data.Html
+[115/2085] Building Aesop.Options.Internal
+[123/2085] Building Mathlib.Tactic.Replace
+[129/2085] Compiling Time.Basic
+[130/2085] Building I18n.PO.Definition
+[130/2085] Building I18n.InterpolatedStr
+[135/2085] Linking Time.Basic
+[136/2085] Building Mathlib.Tactic.ApplyAt
+[137/2085] Building Std.Linter
+[138/2085] Building Mathlib.Lean.Meta.DiscrTree
+[138/2085] Building Mathlib.Lean.Expr.ReplaceRec
+[139/2085] Building Qq.Macro
+[143/2085] Building Mathlib.Tactic.Explode
+[144/2085] Building Mathlib.Tactic.HigherOrder
+[147/2085] Building Aesop.Options
+[152/2085] Building Std.Data.MLList.Heartbeats
+[153/2085] Building Std.Tactic.Lint.Simp
+[153/2085] Building Mathlib.Lean.Meta.Simp
+[153/2085] Building Std.Tactic.Lint.Frontend
+[153/2085] Building Mathlib.Util.WhatsNew
+[153/2085] Building Mathlib.Tactic.Recall
+[153/2085] Building Mathlib.Tactic.ApplyCongr
+[153/2085] Building GameServer.Helpers.PrettyPrinter
+[155/2085] Building Std.Lean.Meta.Simp
+[156/2085] Building Aesop.RuleTac.ElabRuleTerm
+[158/2085] Building Time
+[161/2085] Building Std.Tactic.Basic
+[167/2085] Building Aesop.Util.EqualUpToIds
+[169/2085] Building GameServer.AbstractCtx
+[170/2085] Building I18n.PO.Write
+[170/2085] Building I18n.PO.Read
+[170/2085] Building I18n.EnvExtension
+[174/2085] Building Mathlib.Init.Data.Prod
+[176/2085] Building Mathlib.Tactic.GCongr.ForwardAttr
+[189/2085] Building Std.Data.Sum
+[191/2085] Building GameServer.Hints
+[193/2085] Building Mathlib.Init.Control.Combinators
+[193/2085] Building Mathlib.Tactic.ToLevel
+[193/2085] Building Mathlib.Init.Quot
+[193/2085] Building Mathlib.Init.Data.Ordering.Basic
+[193/2085] Building Mathlib.Init.Set
+[193/2085] Building Mathlib.Init.Propext
+[193/2085] Building Mathlib.Control.ULift
+[193/2085] Building Mathlib.Lean.Thunk
+[193/2085] Building Mathlib.Init.Data.Sigma.Lex
+[197/2085] Building I18n.Json.Read
+[197/2085] Building I18n.Json.Write
+[199/2085] Building GameServer.InteractiveGoal
+[200/2085] Building Std.Control.Nondet.Basic
+[200/2085] Building Std.Data.RBMap.Basic
+[200/2085] Building Mathlib.CategoryTheory.ConcreteCategory.Bundled
+[200/2085] Building Std.Lean.Util.EnvSearch
+[207/2085] Building Std.CodeAction.Deprecated
+[208/2085] Building Game.Tactic.LabelAttr
+[211/2085] Building Mathlib.Mathport.Notation
+stdout:
+./.lake/packages/i18n/././I18n/PO/Write.lean:67:21: warning: unused variable `header` [linter.unusedVariables]
+[216/2085] Building I18n.PO
+[218/2085] Building Std.Tactic.PrintPrefix
+[219/2085] Compiling Time
+[221/2085] Building GameServer.EnvExtensions
+[223/2085] Building Game.MyNat.Definition
+[224/2085] Linking Time
+[232/2085] Building Mathlib.Tactic.Hint
+[233/2085] Building Std.Tactic.Alias
+[235/2085] Building Mathlib.Tactic.DeriveToExpr
+[236/2085] Building Game.MyNat.Addition
+[236/2085] Building Game.Tactic.Decide
+[238/2085] Building I18n.Json
+[238/2085] Building Std.CodeAction
+[238/2085] Building I18n.Translate
+[240/2085] Building Std.Tactic.Lint
+[243/2085] Building Mathlib.Tactic.Lint
+[244/2085] Building Mathlib.Tactic.Simps.NotationClass
+[244/2085] Building Game.Tactic.SimpAdd
+[244/2085] Building Game.MyNat.TutorialLemmas
+[244/2085] Building Game.MyNat.Multiplication
+[245/2085] Building GameServer.Helpers
+[252/2085] Building Game.MyNat.Power
+[252/2085] Building Game.MyNat.LE
+[253/2085] Building ProofWidgets.Component.PenroseDiagram
+[253/2085] Building ProofWidgets.Presentation.Expr
+[253/2085] Building ProofWidgets.Component.OfRpcMethod
+[257/2085] Building I18n.Template
+[260/2085] Building Std.Data.Option.Lemmas
+[260/2085] Building Std.Data.Bool
+[260/2085] Building Std.Logic
+[260/2085] Building Std.Data.Nat.Lemmas
+[262/2085] Building Mathlib.Tactic.Widget.SelectPanelUtils
+[264/2085] Building Std.Data.Option
+[265/2085] Building Std.Data.RBMap.WF
+[266/2085] Building Mathlib.Tactic.Attr.Core
+[266/2085] Building Mathlib.Tactic.Use
+[266/2085] Building Mathlib.Init.Data.Quot
+[266/2085] Building Mathlib.Init.Data.Subtype.Basic
+[267/2085] Building I18n
+[273/2085] Building Mathlib.Tactic.ToExpr
+[275/2085] Building GameServer.Inventory
+[275/2085] Building GameServer.RpcHandlers
+[275/2085] Building GameServer.SaveData
+[276/2085] Building Std.Data.Array.Match
+[276/2085] Building Std.Data.Int.Order
+[276/2085] Building Std.Data.Nat.Gcd
+[276/2085] Building Std.Data.Array.Merge
+[277/2085] Building Std.Data.BinomialHeap.Basic
+[279/2085] Building Std.Data.String.Basic
+[280/2085] Building Mathlib.Tactic.FBinop
+[282/2085] Building Std.Data.Nat
+[283/2085] Building Game.Tactic.Use
+[284/2085] Building Std.Data.Int.DivMod
+[284/2085] Building Mathlib.Init.Data.Int.Basic
+[288/2085] Building GameServer.Commands
+[289/2085] Building Std.Lean.Meta.UnusedNames
+[291/2085] Building Std.Tactic.PermuteGoals
+[291/2085] Building Std.Data.AssocList
+[291/2085] Building Mathlib.Init.Data.List.Basic
+[291/2085] Building Mathlib.Lean.Meta
+[291/2085] Building Mathlib.Data.String.Defs
+[291/2085] Building Std.Data.List.Lemmas
+[292/2085] Building Aesop.Util.UnorderedArraySet
+[292/2085] Building Std.Lean.Meta.DiscrTree
+[295/2085] Building Mathlib.Tactic.Widget.Calc
+[295/2085] Building Mathlib.Tactic.Widget.Conv
+[297/2085] Building Mathlib.Data.SProd
+[299/2085] Building Std.Util.Cache
+[300/2085] Building Mathlib.Lean.Meta.CongrTheorems
+[300/2085] Building Mathlib.Lean.Elab.Tactic.Basic
+[301/2085] Building Qq.Delab
+[301/2085] Building Mathlib.Tactic.Eval
+[303/2085] Building Mathlib.Tactic.Find
+[307/2085] Building Std.Data.HashMap.Basic
+[308/2085] Building Mathlib.Tactic.Relation.Trans
+[309/2085] Building Std.Data.Rat.Basic
+[309/2085] Building Std.Data.Int.Gcd
+[311/2085] Building Std.Data.Int.Lemmas
+[313/2085] Building Std.Data.Int
+[314/2085] Building Qq.MetaM
+[315/2085] Building Mathlib.Data.Rat.Init
+[315/2085] Building Std.Data.Rat.Lemmas
+[315/2085] Building Std.Classes.RatCast
+[315/2085] Building Mathlib.Lean.Expr.Basic
+[316/2085] Building Mathlib.Data.HashMap
+[316/2085] Building Mathlib.Data.MLList.Dedup
+[316/2085] Building Mathlib.Lean.Name
+[316/2085] Building ImportGraph.Lean.Name
+[321/2085] Building ImportGraph.Cli
+[324/2085] Building Qq.AssertInstancesCommute
+[324/2085] Building Qq.Match
+[326/2085] Building ImportGraph
+[327/2085] Building Std.Data.BinomialHeap.Lemmas
+[328/2085] Building Mathlib.Init.Core
+[328/2085] Building Mathlib.Init.Logic
+[329/2085] Building Game.Tactic.Rw
+[329/2085] Building Mathlib.Tactic.RenameBVar
+[329/2085] Building Mathlib.Tactic.Cases
+[329/2085] Building Mathlib.Tactic.Core
+[329/2085] Building Mathlib.Tactic.GeneralizeProofs
+[329/2085] Building Mathlib.Tactic.Simps.Basic
+[332/2085] Building Std.Data.Rat
+[334/2085] Building Std.Data.BinomialHeap
+[340/2085] Building Game.Tactic.Cases
+[340/2085] Building Game.Tactic.Induction
+[341/2085] Building Mathlib.Init.Algebra.Classes
+[341/2085] Building Mathlib.Init.Align
+[341/2085] Building Mathlib.Init.Data.Bool.Lemmas
+[342/2085] Building Mathlib.Tactic.Propose
+[342/2085] Building Mathlib.Tactic.WLOG
+[342/2085] Building Mathlib.Tactic.SplitIfs
+[350/2085] Building Std.Data.RBMap.Alter
+[351/2085] Building Game.Doc.Tactics
+[351/2085] Building Game.Doc.Definitions
+[354/2085] Building Mathlib.Tactic.Says
+[354/2085] Building Qq
+[355/2085] Building Mathlib.Tactic.ToAdditive
+[357/2085] Building Mathlib.Util.Qq
+[357/2085] Building Mathlib.Util.SynthesizeUsing
+[361/2085] Building Std.Lean.System.IO
+[361/2085] Building Mathlib.Init.Data.List.Lemmas
+[361/2085] Building Std.Data.Array.Lemmas
+[361/2085] Building Std.Data.Range.Lemmas
+[361/2085] Building Mathlib.Init.Data.List.Instances
+[361/2085] Building Std.Data.List.Count
+[361/2085] Building Std.Data.String.Lemmas
+[362/2085] Building Std.Data.MLList.IO
+[365/2085] Building Std.Data.MLList
+[366/2085] Building Std.Data.Range
+[370/2085] Building Std.Data.RBMap.Lemmas
+[371/2085] Building Mathlib.Init.ZeroOne
+[372/2085] Building Mathlib.Init.Data.Nat.Basic
+[374/2085] Building Std.Data.RBMap
+[376/2085] Building Std.Data.String
+[377/2085] Building Aesop.Util.Basic
+[378/2085] Building Std.Data.HashMap.WF
+[378/2085] Building Std.Data.ByteArray
+[378/2085] Building Std.Data.Fin.Lemmas
+[378/2085] Building Std.Data.UnionFind.Basic
+[378/2085] Building Std.Data.Array
+[378/2085] Building Std.Data.HashMap.Lemmas
+[381/2085] Building Aesop.Rule.Name
+[381/2085] Building Aesop.Tracing
+[381/2085] Building Aesop.Util.Tactic
+[382/2085] Building Std.Data.Fin
+[382/2085] Building Std.Data.BitVec.Lemmas
+[382/2085] Building Std.Data.List.Pairwise
+[384/2085] Building Std.Data.BitVec
+[388/2085] Building Aesop.RulePattern
+[388/2085] Building Aesop.Stats.Basic
+[389/2085] Building Std.Data.List.Perm
+[390/2085] Building Aesop.Script
+[391/2085] Building Aesop.Stats.Extension
+[392/2085] Building Aesop.Index.Basic
+[393/2085] Building Aesop.Stats.Report
+[395/2085] Building Aesop.RuleTac.Basic
+[397/2085] Building Std.Data.HashMap
+[398/2085] Building Aesop.Rule.Basic
+[398/2085] Building Aesop.RuleTac.Cases
+[398/2085] Building Aesop.RuleTac.Preprocess
+[398/2085] Building Aesop.RuleTac.Forward
+[398/2085] Building Aesop.RuleTac.Tactic
+[398/2085] Building Aesop.RuleTac.Apply
+[400/2085] Building Std.Data.UnionFind.Lemmas
+[402/2085] Building Aesop.Search.Expansion.Basic
+[402/2085] Building Aesop.Index
+[404/2085] Building Std.Data.List
+[409/2085] Building Aesop.RuleTac
+[410/2085] Building Aesop.Rule
+[412/2085] Building Std.Data.UnionFind
+[413/2085] Building Aesop.RuleSet.Member
+[413/2085] Building Aesop.Tree.UnsafeQueue
+[414/2085] Building Std
+[415/2085] Building Aesop.RuleSet.Filter
+[415/2085] Building Aesop.Builder.Basic
+[416/2085] Building Aesop.Tree.Data
+[417/2085] Building Mathlib.Tactic.TypeStar
+[418/2085] Building Mathlib.Tactic.Basic
+[418/2085] Building Mathlib.Tactic.Inhabit
+[418/2085] Building Mathlib.Init.Order.Defs
+[418/2085] Building Mathlib.Data.Bracket
+[418/2085] Building Mathlib.Tactic.MkIffOfInductiveProp
+[418/2085] Building Mathlib.Algebra.Group.Defs
+[418/2085] Building Mathlib.Data.Option.Defs
+[418/2085] Building Mathlib.Data.List.TFAE
+[419/2085] Building Aesop.RuleSet
+[420/2085] Building Aesop.Builder.Unfold
+[420/2085] Building Aesop.Builder.Cases
+[420/2085] Building Aesop.Builder.Tactic
+[420/2085] Building Aesop.Builder.Forward
+[420/2085] Building Aesop.Builder.Apply
+[420/2085] Building Aesop.Builder.NormSimp
+[422/2085] Building Aesop.Tree.RunMetaM
+[422/2085] Building Aesop.Tree.Traversal
+[425/2085] Building Aesop.Builder.Constructors
+[429/2085] Building Mathlib.Tactic.TFAE
+[430/2085] Building Mathlib.Init.Data.Nat.Lemmas
+[431/2085] Building Mathlib.Tactic.GCongr.Core
+[431/2085] Building Mathlib.Init.Order.LinearOrder
+[431/2085] Building Mathlib.Init.Data.Int.Order
+[431/2085] Building Mathlib.Tactic.ExtractLets
+[431/2085] Building Mathlib.Init.Control.Lawful
+[431/2085] Building Mathlib.Tactic.LiftLets
+[431/2085] Building Mathlib.Tactic.Change
+[431/2085] Building Mathlib.Tactic.RSuffices
+[431/2085] Building Mathlib.Tactic.DefEqTransformations
+[431/2085] Building Mathlib.Tactic.Lift
+[431/2085] Building Mathlib.Order.Notation
+[431/2085] Building Mathlib.Init.Function
+[434/2085] Building Aesop.Builder.Default
+[435/2085] Building Aesop.Tree.State
+[436/2085] Building Aesop.Tree.TreeM
+[436/2085] Building Aesop.Tree.Tracing
+[440/2085] Building Aesop.Builder
+[442/2085] Building Mathlib.Data.Prod.PProd
+[442/2085] Building Mathlib.Logic.Nonempty
+[442/2085] Building Mathlib.Logic.Basic
+[442/2085] Building Mathlib.Control.Basic
+[442/2085] Building Mathlib.Logic.Nontrivial.Defs
+[442/2085] Building Mathlib.Logic.Relator
+[442/2085] Building Mathlib.Data.Option.NAry
+[447/2085] Building Aesop.Tree.AddRapp
+[447/2085] Building Aesop.Tree.ExtractScript
+[447/2085] Building Aesop.Tree.Free
+[450/2085] Building Aesop.Frontend.Extension.Init
+[450/2085] Building Aesop.Search.Expansion.Simp
+[450/2085] Building Aesop.Frontend.RuleExpr
+[453/2085] Building Aesop.Tree.Check
+[457/2085] Building Aesop.Tree.ExtractProof
+[459/2085] Building Mathlib.Data.Bool.Basic
+[460/2085] Building Aesop.Frontend.Extension
+[461/2085] Building Mathlib.Tactic.Rewrites
+[461/2085] Building Mathlib.Control.Functor
+[463/2085] Building Mathlib.Algebra.Invertible.Defs
+[463/2085] Building Mathlib.Algebra.Group.Semiconj.Defs
+[463/2085] Building Mathlib.Data.Nat.Cast.Defs
+[463/2085] Building Mathlib.Algebra.Group.Commutator
+[463/2085] Building Mathlib.Algebra.BigOperators.List.Defs
+[472/2085] Building Mathlib.Control.Applicative
+[472/2085] Building Mathlib.Control.Traversable.Basic
+[472/2085] Building Mathlib.Data.List.Defs
+[475/2085] Building Mathlib.Init.Data.Nat.Bitwise
+[477/2085] Building Mathlib.Logic.Function.Basic
+[477/2085] Building Mathlib.Algebra.NeZero
+[477/2085] Building Mathlib.Tactic.Tauto
+[477/2085] Building Mathlib.Tactic.PushNeg
+[477/2085] Building Mathlib.Tactic.Congr!
+[478/2085] Building Aesop.Tree
+[480/2085] Building Mathlib.Data.Int.Cast.Defs
+[481/2085] Building Mathlib.Data.Nat.Cast.NeZero
+[482/2085] Building Aesop.Search.Queue.Class
+[484/2085] Building Aesop.Search.Queue
+[484/2085] Building Aesop.Search.SearchM
+[485/2085] Building Aesop.Frontend.Attribute
+[487/2085] Building Mathlib.Control.Traversable.Lemmas
+[488/2085] Building Mathlib.Init.Data.Int.Bitwise
+[488/2085] Building Mathlib.Data.Num.Basic
+[493/2085] Building Mathlib.Tactic.DeriveTraversable
+[495/2085] Building Game.Tactic.FromMathlib
+[496/2085] Building Aesop.BuiltinRules.Ext
+[496/2085] Building Aesop.BuiltinRules.ApplyHyps
+[496/2085] Building Aesop.Frontend.Command
+[496/2085] Building Aesop.BuiltinRules.DestructProducts
+[496/2085] Building Aesop.BuiltinRules.Intros
+[496/2085] Building Aesop.BuiltinRules.Assumption
+[496/2085] Building Aesop.BuiltinRules.Subst
+[496/2085] Building Aesop.Frontend.Tactic
+[496/2085] Building Aesop.BuiltinRules.Split
+[497/2085] Building Aesop.Search.RuleSelection
+[498/2085] Building Mathlib.Data.Prod.Basic
+[498/2085] Building Mathlib.Data.Sum.Basic
+[498/2085] Building Mathlib.Data.Sigma.Basic
+[498/2085] Building Mathlib.Logic.IsEmpty
+[498/2085] Building Mathlib.Data.Subtype
+[498/2085] Building Mathlib.Data.FunLike.Basic
+[498/2085] Building Mathlib.Logic.Function.Conjugate
+[498/2085] Building Mathlib.Algebra.CharZero.Defs
+[498/2085] Building Mathlib.Logic.Relation
+[498/2085] Building Mathlib.Tactic.Choose
+[498/2085] Building Mathlib.Algebra.GroupWithZero.Defs
+[499/2085] Building Game.Metadata
+[503/2085] Building Mathlib.Data.Tree
+[506/2085] Building Mathlib.Tactic.Convert
+[506/2085] Building Mathlib.Tactic.TermCongr
+[507/2085] Building Mathlib.Logic.Unique
+[508/2085] Building Aesop.Search.Expansion.Norm
+[509/2085] Building Game.Levels.Tutorial.L03two_eq_ss0
+[509/2085] Building Game.Levels.Tutorial.L01rfl
+[509/2085] Building Game.Levels.Tutorial.L05add_zero
+[509/2085] Building Game.Levels.Tutorial.L04rw_backwards
+[509/2085] Building Game.Levels.Tutorial.L02rw
+[509/2085] Building Game.Levels.Tutorial.L06add_zero2
+[510/2085] Building Mathlib.Algebra.GroupWithZero.NeZero
+[510/2085] Building Mathlib.Algebra.Ring.Defs
+[512/2085] Building Mathlib.Tactic.IrreducibleDef
+[512/2085] Building Mathlib.Data.Set.Defs
+[514/2085] Building Mathlib.Tactic.ByContra
+[514/2085] Building Mathlib.Tactic.Contrapose
+[514/2085] Building Mathlib.Data.Nat.Defs
+[515/2085] Building Mathlib.Logic.Function.Iterate
+[520/2085] Building Mathlib.Algebra.Invertible.GroupWithZero
+[521/2085] Building Mathlib.Tactic.FunProp.Mor
+[521/2085] Building Mathlib.Data.FunLike.Embedding
+[522/2085] Building Aesop.Frontend
+[525/2085] Building Game.Levels.Tutorial.L07add_succ
+[531/2085] Building Mathlib.Logic.Nontrivial.Basic
+[531/2085] Building Mathlib.Algebra.Group.Pi.Basic
+[531/2085] Building Mathlib.Data.Quot
+[533/2085] Building Aesop.BuiltinRules
+[534/2085] Building Mathlib.Data.FunLike.Equiv
+[536/2085] Building Mathlib.Lean.Expr.ExtraRecognizers
+[536/2085] Building Mathlib.Order.SetNotation
+[539/2085] Building Mathlib.Data.Int.Defs
+[539/2085] Building Mathlib.Order.Basic
+[539/2085] Building Mathlib.Logic.Lemmas
+[540/2085] Building Game.Levels.Tutorial.L08twoaddtwo
+[542/2085] Building Mathlib.Tactic.FunProp.FunctionData
+[545/2085] Building Mathlib.Init.Classical
+[546/2085] Building Game.Levels.Tutorial
+[547/2085] Building Mathlib.Tactic.Nontriviality.Core
+[550/2085] Building Mathlib.Algebra.Ring.Semiconj
+[550/2085] Building Mathlib.Algebra.Field.Defs
+[554/2085] Building Game.Levels.Addition.L01zero_add
+[555/2085] Building Aesop.Search.Expansion
+[556/2085] Building Mathlib.Logic.Equiv.Defs
+[558/2085] Building Mathlib.Tactic.FunProp.Types
+[560/2085] Building Mathlib.Tactic.Nontriviality
+[562/2085] Building Game.Levels.Addition.L02succ_add
+[564/2085] Building Mathlib.Algebra.Group.Hom.Defs
+[564/2085] Building Mathlib.Tactic.FunProp.RefinedDiscrTree
+[566/2085] Building Mathlib.Tactic.Congrm
+[567/2085] Building Game.Levels.Addition.L03add_comm
+[568/2085] Building Aesop.Search.ExpandSafePrefix
+[569/2085] Building Game.Levels.Addition.L04add_assoc
+[570/2085] Building Mathlib.Algebra.Order.ZeroLEOne
+[570/2085] Building Mathlib.Data.PNat.Defs
+[570/2085] Building Mathlib.Order.RelClasses
+[570/2085] Building Mathlib.Order.ULift
+[571/2085] Building Mathlib.Tactic.Widget.Congrm
+[572/2085] Building Mathlib.Control.Monad.Writer
+[572/2085] Building Mathlib.Tactic.ProxyType
+[572/2085] Building Mathlib.Control.Monad.Basic
+[572/2085] Building Mathlib.Data.Finite.Defs
+[572/2085] Building Mathlib.Data.Opposite
+[572/2085] Building Mathlib.Order.Synonym
+[572/2085] Building Mathlib.Algebra.Opposites
+[572/2085] Building Mathlib.Logic.Equiv.Basic
+[572/2085] Building Mathlib.Tactic.ProdAssoc
+[572/2085] Building Mathlib.Logic.Small.Defs
+[572/2085] Building Mathlib.Control.EquivFunctor
+[573/2085] Building Game.Levels.Addition.L05add_right_comm
+[576/2085] Building Mathlib.Data.Countable.Defs
+[577/2085] Building Aesop.Search.Main
+[578/2085] Building Game.Levels.Addition
+[580/2085] Building Mathlib.Logic.UnivLE
+[582/2085] Building Mathlib.Algebra.Group.OrderSynonym
+[582/2085] Building Mathlib.Order.Compare
+[582/2085] Building Mathlib.Order.Max
+[585/2085] Building Mathlib.Combinatorics.Quiver.Basic
+[586/2085] Building Mathlib.Control.Monad.Cont
+[588/2085] Building Game.Levels.Algorithm.L01add_left_comm
+[589/2085] Building Game.Levels.Multiplication.L01mul_one
+[593/2085] Building Mathlib.Algebra.Group.Commute.Defs
+[594/2085] Building Mathlib.Data.Sigma.Lex
+[595/2085] Building Game.Levels.Algorithm.L02add_algo1
+[596/2085] Building Game.Levels.Multiplication.L02zero_mul
+[597/2085] Building Mathlib.Combinatorics.Quiver.Push
+[597/2085] Building Mathlib.Combinatorics.Quiver.Path
+[599/2085] Building Mathlib.Order.Monotone.Basic
+[600/2085] Building Mathlib.Algebra.Ring.OrderSynonym
+[602/2085] Building Game.Levels.Algorithm.L03add_algo2
+[603/2085] Building Game.Levels.Multiplication.L03succ_mul
+[609/2085] Building Mathlib.Combinatorics.Quiver.Symmetric
+[610/2085] Building Game.Levels.Multiplication.L04mul_comm
+[611/2085] Building Mathlib.Algebra.Group.Commute.Hom
+[611/2085] Building Mathlib.Data.Matrix.DMatrix
+[611/2085] Building Mathlib.Algebra.Group.TypeTags
+[612/2085] Building Game.Levels.Algorithm.L04add_algo3
+[614/2085] Building Game.Levels.Multiplication.L05one_mul
+[618/2085] Building Game.Levels.Multiplication.L06two_mul
+[619/2085] Building Mathlib.Order.Iterate
+[619/2085] Building Mathlib.Order.Lattice
+[620/2085] Building Game.Levels.Multiplication.L07mul_add
+[621/2085] Building Mathlib.Data.Nat.Basic
+[622/2085] Building Mathlib.Data.ULift
+[623/2085] Building Game.Levels.Multiplication.L08add_mul
+[625/2085] Building Mathlib.Tactic.Sat.FromLRAT
+[625/2085] Building Mathlib.Data.List.EditDistance.Defs
+[627/2085] Building Game.Levels.Multiplication.L09mul_assoc
+[628/2085] Building Game.Levels.Multiplication
+[630/2085] Building Mathlib.Tactic.FunProp.Theorems
+[632/2085] Building Game.Levels.Power.L01zero_pow_zero
+[633/2085] Building Game.Levels.Power.L02zero_pow_succ
+[634/2085] Building Aesop.Main
+[635/2085] Building Mathlib.Order.MinMax
+[635/2085] Building Mathlib.Order.BoundedOrder
+[636/2085] Building Game.Levels.Power.L03pow_one
+[637/2085] Building Aesop
+[638/2085] Building Mathlib.Tactic.FunProp.Core
+[638/2085] Building Mathlib.Tactic.FunProp.Attr
+[639/2085] Building Mathlib.Data.Finset.Attr
+[639/2085] Building Mathlib.Data.Option.Basic
+[639/2085] Building Mathlib.Tactic.ArithMult.Init
+[639/2085] Building Mathlib.Tactic.SetLike
+[639/2085] Building Mathlib.CategoryTheory.Category.Init
+[639/2085] Building Mathlib.Tactic.Continuity.Init
+[639/2085] Building Mathlib.Tactic.Measurability.Init
+[639/2085] Building Mathlib.Algebra.Group.Basic
+[639/2085] Building Mathlib.Tactic.Common
+[640/2085] Building Game.Levels.Power.L04one_pow
+[644/2085] Building Mathlib.Tactic.Measurability
+[645/2085] Building Mathlib.Tactic.ArithMult
+[648/2085] Building Mathlib.Tactic.Continuity
+[649/2085] Building Game.Levels.Power.L05pow_two
+[650/2085] Building Mathlib.CategoryTheory.Category.Basic
+[650/2085] Building Mathlib.Control.Bifunctor
+[650/2085] Building Mathlib.Algebra.Quotient
+[650/2085] Building Mathlib.Logic.Pairwise
+[650/2085] Building Mathlib.Data.Nat.Factorial.Basic
+[650/2085] Building Mathlib.Algebra.Group.WithOne.Defs
+[650/2085] Building Mathlib.Algebra.Field.IsField
+[651/2085] Building Mathlib.Data.Prod.Lex
+[651/2085] Building Mathlib.Order.Disjoint
+[652/2085] Building Game.Levels.Power.L06pow_add
+[657/2085] Building Mathlib.Logic.Equiv.Functor
+[659/2085] Building Mathlib.Data.List.GetD
+[659/2085] Building Mathlib.Logic.Equiv.Option
+[659/2085] Building Mathlib.Logic.Embedding.Basic
+[659/2085] Building Mathlib.Order.WithBot
+[659/2085] Building Mathlib.Data.List.Basic
+[660/2085] Building Game.Levels.Power.L07mul_pow
+[663/2085] Building Mathlib.Control.ULiftable
+[664/2085] Building Mathlib.Data.Nat.Choose.Basic
+[667/2085] Building Game.Levels.Power.L08pow_pow
+[668/2085] Building Mathlib.Tactic.Widget.CommDiag
+[668/2085] Building Mathlib.Tactic.CategoryTheory.Slice
+[668/2085] Building Mathlib.CategoryTheory.Functor.Basic
+[669/2085] Building Game.Levels.Power.L09add_sq
+[671/2085] Building Mathlib.GroupTheory.GroupAction.Defs
+[671/2085] Building Mathlib.Order.RelIso.Basic
+[672/2085] Building Mathlib.Order.PropInstances
+[673/2085] Building Game.Levels.Power.L10FLT
+[675/2085] Building Mathlib.Order.Heyting.Basic
+[678/2085] Building Game.Levels.Power
+[680/2085] Building Mathlib.Tactic.CategoryTheory.Reassoc
+[681/2085] Building Mathlib.Data.Int.Cast.Basic
+[681/2085] Building Mathlib.Algebra.Group.Semiconj.Basic
+[681/2085] Building Mathlib.Tactic.MoveAdd
+[681/2085] Building Mathlib.Algebra.Group.Embedding
+[681/2085] Building Mathlib.Algebra.Group.Hom.Basic
+[681/2085] Building Mathlib.Algebra.CovariantAndContravariant
+[681/2085] Building Mathlib.Algebra.GroupWithZero.Basic
+[681/2085] Building Mathlib.Data.Nat.Bits
+[681/2085] Building Mathlib.Algebra.Ring.Basic
+[683/2085] Building Mathlib.CategoryTheory.NatTrans
+[683/2085] Building Mathlib.CategoryTheory.Iso
+[685/2085] Building Mathlib.Tactic.Zify
+[685/2085] Building Mathlib.Data.Int.Basic
+[685/2085] Building Mathlib.Tactic.NormNum.Result
+[685/2085] Building Mathlib.Algebra.Group.InjSurj
+[686/2085] Building Mathlib.Algebra.Group.Commute.Basic
+[687/2085] Building Mathlib.Algebra.Order.Monoid.Lemmas
+[687/2085] Building Mathlib.Algebra.Order.Ring.Lemmas
+[689/2085] Building Mathlib.Data.Nat.Bitwise
+[689/2085] Building Mathlib.Data.Nat.Size
+[690/2085] Building Mathlib.Algebra.Group.Equiv.Basic
+[691/2085] Building Mathlib.Tactic.FunProp.Elab
+[695/2085] Building Mathlib.Order.Hom.Basic
+[698/2085] Building Mathlib.Algebra.GroupPower.Basic
+[701/2085] Building Mathlib.Tactic.FunProp
+[702/2085] Building Mathlib.Topology.Defs.Basic
+[703/2085] Building Mathlib.GroupTheory.GroupAction.Ring
+[704/2085] Building Mathlib.CategoryTheory.Functor.Category
+[705/2085] Building Mathlib.Tactic.NormNum.Core
+[708/2085] Building Mathlib.Algebra.Divisibility.Basic
+[708/2085] Building Mathlib.Algebra.Group.Units
+[708/2085] Building Mathlib.Algebra.Group.Hom.Instances
+[708/2085] Building Mathlib.Algebra.GroupPower.Hom
+[708/2085] Building Mathlib.Algebra.Ring.Idempotents
+[709/2085] Building Mathlib.Algebra.GroupWithZero.InjSurj
+[711/2085] Building Mathlib.Data.Int.Bitwise
+[712/2085] Building Mathlib.Algebra.Group.Equiv.TypeTags
+[712/2085] Building Mathlib.Algebra.GroupWithZero.Hom
+[715/2085] Building Mathlib.Order.BooleanAlgebra
+[716/2085] Building Mathlib.Algebra.EuclideanDomain.Defs
+[716/2085] Building Mathlib.Algebra.Ring.Divisibility.Basic
+[717/2085] Building Mathlib.Algebra.Ring.InjSurj
+[717/2085] Building Mathlib.Algebra.Group.ULift
+[719/2085] Building Mathlib.Order.Hom.Bounded
+[719/2085] Building Mathlib.Order.Estimator
+[719/2085] Building Mathlib.Order.Antisymmetrization
+[719/2085] Building Mathlib.Data.Sum.Order
+[719/2085] Building Mathlib.Tactic.ApplyFun
+[720/2085] Building Mathlib.Algebra.Order.Sub.Defs
+[720/2085] Building Mathlib.Algebra.Order.Monoid.MinMax
+[720/2085] Building Mathlib.Algebra.Order.Monoid.NatCast
+[720/2085] Building Mathlib.Algebra.Order.Monoid.Defs
+[722/2085] Building Mathlib.CategoryTheory.Thin
+[722/2085] Building Mathlib.CategoryTheory.NatIso
+[723/2085] Building Mathlib.Algebra.Ring.Hom.Defs
+[730/2085] Building Mathlib.Algebra.Order.Monoid.OrderDual
+[730/2085] Building Mathlib.Algebra.Order.Monoid.Canonical.Defs
+[730/2085] Building Mathlib.Algebra.Order.Monoid.Basic
+[733/2085] Building Mathlib.Algebra.Order.Group.Defs
+[738/2085] Building Mathlib.Algebra.GroupPower.CovariantClass
+[739/2085] Building Mathlib.CategoryTheory.Bicategory.Basic
+[739/2085] Building Mathlib.CategoryTheory.Functor.FullyFaithful
+[741/2085] Building Mathlib.Data.List.Count
+[741/2085] Building Mathlib.Data.List.Pairwise
+[741/2085] Building Mathlib.Data.List.Infix
+[741/2085] Building Mathlib.Data.List.ProdSigma
+[741/2085] Building Mathlib.Data.List.Palindrome
+[741/2085] Building Mathlib.Data.List.InsertNth
+[741/2085] Building Mathlib.Data.List.MinMax
+[741/2085] Building Mathlib.Data.List.Lex
+[741/2085] Building Mathlib.Data.List.Lattice
+[742/2085] Building Mathlib.Algebra.Order.Monoid.TypeTags
+[742/2085] Building Mathlib.Algebra.Order.Sub.Canonical
+[742/2085] Building Mathlib.Algebra.Order.Monoid.WithTop
+[743/2085] Building Mathlib.Data.Nat.Cast.Basic
+[749/2085] Building Mathlib.Algebra.Group.Semiconj.Units
+[749/2085] Building Mathlib.Data.Nat.Units
+[749/2085] Building Mathlib.Algebra.Order.Monoid.Units
+[749/2085] Building Mathlib.Algebra.GroupWithZero.Units.Basic
+[750/2085] Building Mathlib.Algebra.Divisibility.Units
+[749/2085] Building Mathlib.Algebra.Group.Units.Hom
+[750/2085] Building Mathlib.GroupTheory.GroupAction.Units
+[750/2085] Building Mathlib.Algebra.Regular.Basic
+[750/2085] Building Mathlib.Algebra.Group.Opposite
+[755/2085] Building Mathlib.Data.List.Forall2
+[756/2085] Building Mathlib.Algebra.Group.Commute.Units
+[759/2085] Building Mathlib.Order.SymmDiff
+[761/2085] Building Mathlib.CategoryTheory.Whiskering
+[761/2085] Building Mathlib.CategoryTheory.FullSubcategory
+[764/2085] Building Mathlib.Algebra.Ring.Regular
+[768/2085] Building Mathlib.Algebra.Ring.Units
+[768/2085] Building Mathlib.Algebra.Group.Units.Equiv
+[769/2085] Building Mathlib.Algebra.Order.Sub.WithTop
+[769/2085] Building Mathlib.Data.Nat.Cast.WithTop
+[770/2085] Building Mathlib.Algebra.GroupWithZero.Divisibility
+[770/2085] Building Mathlib.Algebra.GroupWithZero.Semiconj
+[770/2085] Building Mathlib.Algebra.Invertible.Basic
+[770/2085] Building Mathlib.Data.Int.Cast.Field
+[772/2085] Building Mathlib.CategoryTheory.EssentialImage
+[773/2085] Building Mathlib.Algebra.GroupWithZero.Units.Equiv
+[774/2085] Building Mathlib.Data.List.EditDistance.Bounds
+[776/2085] Building Mathlib.Algebra.Ring.Commute
+[776/2085] Building Mathlib.Data.Int.Units
+[779/2085] Building Mathlib.Algebra.Order.Group.Units
+[779/2085] Building Mathlib.Algebra.Order.Group.WithTop
+[779/2085] Building Mathlib.Algebra.Order.Group.Instances
+[779/2085] Building Mathlib.Algebra.Order.Group.OrderIso
+[779/2085] Building Mathlib.Algebra.Order.Group.InjSurj
+[779/2085] Building Mathlib.Algebra.Order.Ring.Defs
+[779/2085] Building Mathlib.Algebra.Order.Group.TypeTags
+[780/2085] Building Mathlib.Data.List.Zip
+[782/2085] Building Mathlib.Algebra.GroupWithZero.Commute
+[784/2085] Building Mathlib.Algebra.EuclideanDomain.Basic
+[789/2085] Building Mathlib.Algebra.Order.Monoid.WithZero
+[790/2085] Building Mathlib.GroupTheory.GroupAction.Opposite
+[790/2085] Building Mathlib.Algebra.Ring.Opposite
+[790/2085] Building Mathlib.Algebra.Group.Prod
+[791/2085] Building Mathlib.Algebra.GroupPower.Ring
+[792/2085] Building Mathlib.Algebra.GroupWithZero.Units.Lemmas
+[792/2085] Building Mathlib.Data.Nat.Cast.Commute
+[793/2085] Building Mathlib.Data.List.EditDistance.Estimator
+[795/2085] Building Mathlib.Algebra.Order.Group.Lattice
+[796/2085] Building Mathlib.Order.Hom.Lattice
+[796/2085] Building Mathlib.Data.Set.Basic
+[797/2085] Building Mathlib.CategoryTheory.Bicategory.Functor
+[799/2085] Building Mathlib.Algebra.Field.Basic
+[800/2085] Building Mathlib.Tactic.NormNum.Basic
+[804/2085] Building Mathlib.Algebra.Order.Group.Abs
+[805/2085] Building Mathlib.Algebra.GroupPower.IterateHom
+[808/2085] Building Mathlib.Algebra.Order.Hom.Monoid
+[810/2085] Building Mathlib.Algebra.Order.Monoid.Prod
+[810/2085] Building Mathlib.GroupTheory.GroupAction.Prod
+[810/2085] Building Mathlib.Data.Nat.Cast.Prod
+[812/2085] Building Mathlib.Data.Int.Cast.Prod
+[813/2085] Building Mathlib.CategoryTheory.Equivalence
+[814/2085] Building Mathlib.Algebra.Order.Group.MinMax
+[815/2085] Building Mathlib.Algebra.Order.Group.Prod
+[818/2085] Building Mathlib.Algebra.SMulWithZero
+[822/2085] Building Mathlib.Algebra.Regular.SMul
+[823/2085] Building Mathlib.Algebra.Order.Ring.CharZero
+[823/2085] Building Mathlib.Algebra.Order.Ring.InjSurj
+[823/2085] Building Mathlib.Algebra.Order.Field.Defs
+[823/2085] Building Mathlib.Algebra.Order.Positive.Ring
+[823/2085] Building Mathlib.Algebra.Order.Ring.Canonical
+[825/2085] Building Mathlib.Algebra.Ring.Hom.Basic
+[825/2085] Building Mathlib.Data.PEquiv
+[825/2085] Building Mathlib.Order.Circular
+[825/2085] Building Mathlib.Data.Set.BoolIndicator
+[825/2085] Building Mathlib.Order.WellFounded
+[825/2085] Building Mathlib.Data.Set.Image
+[825/2085] Building Mathlib.Data.Set.Intervals.Basic
+[825/2085] Building Mathlib.Data.Part
+[825/2085] Building Mathlib.Data.SetLike.Basic
+[829/2085] Building Mathlib.Data.Pi.Lex
+[830/2085] Building Mathlib.Algebra.GroupPower.Order
+[830/2085] Building Mathlib.Data.Nat.Order.Basic
+[830/2085] Building Mathlib.Algebra.Order.Ring.WithTop
+[836/2085] Building Mathlib.Data.Vector
+[836/2085] Building Mathlib.Data.List.Chain
+[836/2085] Building Mathlib.Data.Nat.Order.Lemmas
+[836/2085] Building Mathlib.Data.Nat.ForSqrt
+[836/2085] Building Mathlib.Data.Nat.MaxPowDiv
+[836/2085] Building Mathlib.Data.PNat.Basic
+[836/2085] Building Mathlib.Data.Nat.Cast.Order
+[836/2085] Building Mathlib.Data.Int.Order.Basic
+[836/2085] Building Mathlib.Data.Nat.WithBot
+[838/2085] Building Mathlib.Algebra.Order.Field.InjSurj
+[838/2085] Building Mathlib.Algebra.Order.Field.Canonical.Defs
+[838/2085] Building Mathlib.Tactic.CancelDenoms.Core
+[839/2085] Building Mathlib.Algebra.Order.Field.Canonical.Basic
+[846/2085] Building Mathlib.Data.Nat.GCD.Basic
+[850/2085] Building Mathlib.Data.Int.LeastGreatest
+[850/2085] Building Mathlib.Data.Rat.Defs
+[850/2085] Building Mathlib.Algebra.EuclideanDomain.Instances
+[850/2085] Building Mathlib.Data.Int.Range
+[850/2085] Building Mathlib.Algebra.GroupWithZero.Power
+[851/2085] Building Mathlib.Data.Bool.Set
+[851/2085] Building Mathlib.Logic.Embedding.Set
+[851/2085] Building Mathlib.Data.Nat.Set
+[851/2085] Building Mathlib.Data.Set.List
+[851/2085] Building Mathlib.Order.Directed
+[851/2085] Building Mathlib.Data.Set.Prod
+[853/2085] Building Mathlib.Data.Int.Cast.Lemmas
+[853/2085] Building Mathlib.Algebra.Order.Ring.Pow
+[853/2085] Building Mathlib.Data.Int.Dvd.Basic
+[853/2085] Building Mathlib.Algebra.Order.Invertible
+[853/2085] Building Mathlib.Tactic.Linarith.Lemmas
+[857/2085] Building Mathlib.Algebra.Order.Ring.Abs
+[859/2085] Building Mathlib.Order.RelIso.Set
+^Z
+[7]+  Stopped                 bash run_code.sh
+(ReProver) yingzi_ma@compute-permanent-node-845:~/lean_project/ReProver$ bash run_code.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+[2024-09-07 02:05:52,057] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-07 02:05:56.430 | INFO     | __main__:main:1290 - Configuring LeanDojo...
+2024-09-07 02:05:56.433 | INFO     | generate_benchmark_lean4:configure_leandojo:317 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-07 02:05:56.433 | INFO     | __main__:main:1292 - LeanDojo configured
+2024-09-07 02:05:56.433 | INFO     | __main__:main:1305 - Initializing DistributedProver
+2024-09-07 02:05:56.433 | INFO     | prover.proof_search:__init__:414 - Inside __init__
+2024-09-07 02:05:56.434 | INFO     | prover.proof_search:__init__:419 - ckpt_path is not None
+2024-09-07 02:05:56.434 | INFO     | prover.proof_search:__init__:434 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more
+details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be load
+ed via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of
+the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../kaiyuy_leandojo-lean4-ret
+riever-tacgen-byt5-small/model_lightning.ckpt`
+2024-09-07 02:05:57.014 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckp
+t
+2024-09-07 02:05:57.014 | INFO     | generator.model:__init__:123 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckp
+t
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_full_merge
+_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-09-07 02:05:58.726 | INFO     | generator.model:__init__:136 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'r
+etriever.encoder.encoder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0
+.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retriever.encoder.encode
+r.block.0.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.0.
+layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAtte
+ntion.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', '
+retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'ret
+riever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.enc
+oder.block.2.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer
+.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.2.layer.1.
+layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.v.we
+ight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retrie
+ver.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.
+encoder.block.4.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block
+.4.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.Den
+seReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q
+.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 're
+triever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.en
+coder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.bl
+ock.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.6.layer.0
+.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseRelu
+Dense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.k.weight',
+'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder
+.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.en
+coder.block.7.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.laye
+r.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense
+.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight
+', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever
+.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encod
+er.block.9.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.
+layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.0.Se
+lfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDens
+e.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.q.weight
+', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'retriever.enc
+oder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_
+step', 'epoch', 'state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-07 02:05:59.387 | INFO     | prover.proof_search:__init__:458 - Loaded model from /data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt
+2024-09-07 02:05:59.388 | INFO     | prover.proof_search:__init__:459 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-07 02:05:59.388 | INFO     | prover.proof_search:__init__:462 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e5
+0c6aee013a2687/corpus.jsonl
+2024-09-07 02:05:59.388 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/c
+orpus.jsonl
+2024-09-07 02:06:06.004 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-07 02:06:06.004 | INFO     | prover.proof_search:__init__:464 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50
+c6aee013a2687/corpus.jsonl
+2024-09-07 02:06:06.004 | INFO     | prover.proof_search:__init__:478 - Launching 4 workers with 4 GPUs.
+2024-09-07 02:06:09,956 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=1771020) [2024-09-07 02:06:49,102] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1771020) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1771020)   return torch.load(io.BytesIO(b))
+(pid=1771187) [2024-09-07 02:07:03,085] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1771187) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1771187)   return torch.load(io.BytesIO(b))
+(pid=1771456) [2024-09-07 02:07:16,439] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1771456) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1771456)   return torch.load(io.BytesIO(b))
+2024-09-07 02:07:21.342 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+(pid=1771940) [2024-09-07 02:07:28,539] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1771940) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1771940)   return torch.load(io.BytesIO(b))
+2024-09-07 02:07:36.304 | INFO     | __main__:main:1329 - Proving test theorem
+2024-09-07 02:07:36.304 | INFO     | prover.proof_search:search_unordered:521 - Distributed
+(ProverActor pid=1771940) 2024-09-07 02:07:42.221 | INFO     | prover.proof_search:search:80 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'),
+file_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_indep')
+(ProverActor pid=1771940) 2024-09-07 02:09:00.127 | INFO     | prover.proof_search:_best_first_search:148 - 2336910.548453208
+(ProverActor pid=1771940) 2024-09-07 02:09:00.128 | INFO     | prover.proof_search:_best_first_search:149 - 2336900.573182848
+(ProverActor pid=1771940) 2024-09-07 02:09:00.128 | INFO     | prover.proof_search:_best_first_search:150 - 9.97573880199343
+(ProverActor pid=1771940) 2024-09-07 02:09:00.128 | INFO     | prover.proof_search:_best_first_search:151 - 10
+(ProverActor pid=1771940) 2024-09-07 02:09:00.128 | INFO     | prover.proof_search:_best_first_search:162 - Hit the resource limit (timeout or max_expansions).
+(ProverActor pid=1771940) 2024-09-07 02:09:15.904 | INFO     | prover.proof_search:search:127 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6a
+ee013a2687'), file_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_indep'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=2.9265573723241687, environment_time=0.5276605482213199, total_time=10.97
+5951767992228, num_total_nodes=6, num_searched_nodes=0)
+(ReProver) yingzi_ma@compute-permanent-node-845:~/lean_project/ReProver$ bash run_code.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+[2024-09-07 04:20:54,452] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-07 04:21:00.146 | INFO     | __main__:main:1290 - Configuring LeanDojo...
+2024-09-07 04:21:00.149 | INFO     | generate_benchmark_lean4:configure_leandojo:317 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-07 04:21:00.149 | INFO     | __main__:main:1292 - LeanDojo configured
+2024-09-07 04:21:00.149 | INFO     | __main__:main:1305 - Initializing DistributedProver
+2024-09-07 04:21:00.150 | INFO     | prover.proof_search:__init__:414 - Inside __init__
+2024-09-07 04:21:00.150 | INFO     | prover.proof_search:__init__:419 - ckpt_path is not None
+2024-09-07 04:21:00.150 | INFO     | prover.proof_search:__init__:434 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more
+details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be load
+ed via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of
+the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../kaiyuy_leandojo-lean4-ret
+riever-tacgen-byt5-small/model_lightning.ckpt`
+2024-09-07 04:21:01.194 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckp
+t
+2024-09-07 04:21:01.194 | INFO     | generator.model:__init__:123 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckp
+t
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_full_merge
+_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-09-07 04:21:04.681 | INFO     | generator.model:__init__:136 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'r
+etriever.encoder.encoder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0
+.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retriever.encoder.encode
+r.block.0.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.0.
+layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAtte
+ntion.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', '
+retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'ret
+riever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.enc
+oder.block.2.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer
+.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.2.layer.1.
+layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.v.we
+ight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retrie
+ver.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.
+encoder.block.4.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block
+.4.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.Den
+seReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q
+.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 're
+triever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.en
+coder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.bl
+ock.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.6.layer.0
+.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseRelu
+Dense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.k.weight',
+'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder
+.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.en
+coder.block.7.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.laye
+r.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense
+.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight
+', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever
+.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encod
+er.block.9.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.
+layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.0.Se
+lfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDens
+e.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.q.weight
+', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'retriever.enc
+oder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_
+step', 'epoch', 'state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-07 04:21:05.362 | INFO     | prover.proof_search:__init__:458 - Loaded model from /data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt
+2024-09-07 04:21:05.363 | INFO     | prover.proof_search:__init__:459 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-07 04:21:05.363 | INFO     | prover.proof_search:__init__:462 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e5
+0c6aee013a2687/corpus.jsonl
+2024-09-07 04:21:05.364 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/c
+orpus.jsonl
+2024-09-07 04:21:12.051 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-07 04:21:12.051 | INFO     | prover.proof_search:__init__:464 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50
+c6aee013a2687/corpus.jsonl
+2024-09-07 04:21:12.051 | INFO     | prover.proof_search:__init__:478 - Launching 4 workers with 4 GPUs.
+2024-09-07 04:21:16,314 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=1878715) [2024-09-07 04:21:55,950] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1878715) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1878715)   return torch.load(io.BytesIO(b))
+(pid=1878881) [2024-09-07 04:22:07,651] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1878881) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1878881)   return torch.load(io.BytesIO(b))
+(pid=1879389) [2024-09-07 04:22:20,029] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-07 04:22:23.823 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+(ProverActor pid=1879389) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1879389)   return torch.load(io.BytesIO(b))
+(pid=1879656) [2024-09-07 04:22:30,772] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1879656) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1879656)   return torch.load(io.BytesIO(b))
+2024-09-07 04:22:38.830 | INFO     | __main__:main:1348 - Proving test theorem
+2024-09-07 04:22:38.831 | INFO     | prover.proof_search:search_unordered:521 - Distributed
+(ProverActor pid=1878715) 2024-09-07 04:22:38.845 | INFO     | prover.proof_search:search:80 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'),
+file_path=PosixPath('PFR/RhoFunctional.lean'), full_name='phi_min_exists')
+(ProverActor pid=1878881) 2024-09-07 04:22:38.842 | INFO     | prover.proof_search:search:80 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'),
+file_path=PosixPath('PFR/RhoFunctional.lean'), full_name='condRho_minus_le')
+(ProverActor pid=1879389) 2024-09-07 04:22:38.840 | INFO     | prover.proof_search:search:80 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'),
+file_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='iter_multiDist_chainRule')
+(ProverActor pid=1879656) 2024-09-07 04:22:44.629 | INFO     | prover.proof_search:search:80 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'),
+file_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_indep')
+(ProverActor pid=1878881) 2024-09-07 04:24:17.047 | INFO     | prover.proof_search:_best_first_search:148 - 2345027.468337677
+(ProverActor pid=1878881) 2024-09-07 04:24:17.048 | INFO     | prover.proof_search:_best_first_search:149 - 2345017.47271926
+(ProverActor pid=1878881) 2024-09-07 04:24:17.048 | INFO     | prover.proof_search:_best_first_search:150 - 9.996304803993553
+(ProverActor pid=1878881) 2024-09-07 04:24:17.048 | INFO     | prover.proof_search:_best_first_search:151 - 10
+(ProverActor pid=1878881) 2024-09-07 04:24:17.048 | INFO     | prover.proof_search:_best_first_search:162 - Hit the resource limit (timeout or max_expansions).
+(ProverActor pid=1878715) 2024-09-07 04:24:30.117 | INFO     | prover.proof_search:_best_first_search:151 - 10 [repeated 4x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log dedupl
+ication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)
+(ProverActor pid=1878715) 2024-09-07 04:24:30.117 | INFO     | prover.proof_search:_best_first_search:162 - Hit the resource limit (timeout or max_expansions).
+(ProverActor pid=1878881) 2024-09-07 04:24:55.061 | INFO     | prover.proof_search:search:127 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6a
+ee013a2687'), file_path=PosixPath('PFR/RhoFunctional.lean'), full_name='condRho_minus_le'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=7.950307784602046, environment_time=2.0328479264862835, total_time=10.99
+6641182806343, num_total_nodes=115, num_searched_nodes=2)
+(ProverActor pid=1878715) 2024-09-07 04:25:03.039 | INFO     | prover.proof_search:search:127 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6a
+ee013a2687'), file_path=PosixPath('PFR/RhoFunctional.lean'), full_name='phi_min_exists'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=6.916025642305613, environment_time=3.0659122210927308, total_time=10.9962
+50423137099, num_total_nodes=143, num_searched_nodes=2)
+(ProverActor pid=1879389) 2024-09-07 04:25:18.308 | INFO     | prover.proof_search:_best_first_search:162 - Hit the resource limit (timeout or max_expansions).
+(ProverActor pid=1879656) 2024-09-07 04:25:26.886 | INFO     | prover.proof_search:_best_first_search:148 - 2345097.30667797
+(ProverActor pid=1879656) 2024-09-07 04:25:26.886 | INFO     | prover.proof_search:_best_first_search:149 - 2345087.333161075
+(ProverActor pid=1879656) 2024-09-07 04:25:26.886 | INFO     | prover.proof_search:_best_first_search:150 - 9.974267554003745
+(ProverActor pid=1879656) 2024-09-07 04:25:26.886 | INFO     | prover.proof_search:_best_first_search:151 - 10
+(ProverActor pid=1879656) 2024-09-07 04:25:26.887 | INFO     | prover.proof_search:_best_first_search:162 - Hit the resource limit (timeout or max_expansions).
+(ProverActor pid=1879389) 2024-09-07 04:25:32.986 | INFO     | prover.proof_search:search:127 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6a
+ee013a2687'), file_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='iter_multiDist_chainRule'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=3.609603312332183, environment_time=5.695016822312027, total_tim
+e=10.306912356987596, num_total_nodes=48, num_searched_nodes=1)
+(ProverActor pid=1879656) 2024-09-07 04:26:01.075 | INFO     | prover.proof_search:search:127 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6a
+ee013a2687'), file_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_indep'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=2.984812621958554, environment_time=0.6561654061079025, total_time=10.974
+572171922773, num_total_nodes=6, num_searched_nodes=0)
+(ReProver) yingzi_ma@compute-permanent-node-845:~/lean_project/ReProver$ bash run_code.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+[2024-09-07 04:27:09,825] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-07 04:27:13.927 | INFO     | __main__:main:1290 - Configuring LeanDojo...
+2024-09-07 04:27:13.930 | INFO     | generate_benchmark_lean4:configure_leandojo:317 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-07 04:27:13.930 | INFO     | __main__:main:1292 - LeanDojo configured
+2024-09-07 04:27:13.931 | INFO     | __main__:main:1305 - Initializing DistributedProver
+2024-09-07 04:27:13.931 | INFO     | prover.proof_search:__init__:414 - Inside __init__
+2024-09-07 04:27:13.931 | INFO     | prover.proof_search:__init__:419 - ckpt_path is not None
+2024-09-07 04:27:13.931 | INFO     | prover.proof_search:__init__:434 - Using RAG
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default
+ pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more
+details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be load
+ed via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of
+the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../kaiyuy_leandojo-lean4-ret
+riever-tacgen-byt5-small/model_lightning.ckpt`
+2024-09-07 04:27:14.571 | INFO     | generator.model:__init__:109 - Retriever checkpoint path: /data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckp
+t
+2024-09-07 04:27:14.571 | INFO     | generator.model:__init__:123 - Loading the retriever from /data/yingzi_ma/lean_project/checkpoints_PT_full_merge_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckp
+t
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_full_merge
+_each_time_ewc/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+2024-09-07 04:27:17.361 | INFO     | generator.model:__init__:136 - RetrievalAugmentedGenerator initialized
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:184: Found keys that are in the model state dict but not in the checkpoint: ['retriever.encoder.shared.weight', 'r
+etriever.encoder.encoder.embed_tokens.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.0
+.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'retriever.encoder.encode
+r.block.0.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.0.
+layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.0.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAtte
+ntion.k.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.1.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.1.layer.0.layer_norm.weight', '
+retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight', 'ret
+riever.encoder.encoder.block.1.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.k.weight', 'retriever.encoder.enc
+oder.block.2.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.2.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.2.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.2.layer
+.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.2.layer.1.
+layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.v.we
+ight', 'retriever.encoder.encoder.block.3.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.3.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight', 'retrie
+ver.encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.3.layer.1.layer_norm.weight', 'retriever.encoder.
+encoder.block.4.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.4.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block
+.4.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.4.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.4.layer.1.Den
+seReluDense.wi_1.weight', 'retriever.encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.4.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.q
+.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.5.layer.0.SelfAttention.o.weight', 're
+triever.encoder.encoder.block.5.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight', 'retriever.en
+coder.encoder.block.5.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.5.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.bl
+ock.6.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.6.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.6.layer.0
+.layer_norm.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.6.layer.1.DenseRelu
+Dense.wo.weight', 'retriever.encoder.encoder.block.6.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.k.weight',
+'retriever.encoder.encoder.block.7.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.7.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.7.layer.0.layer_norm.weight', 'retriever.encoder
+.encoder.block.7.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.en
+coder.block.7.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.8.laye
+r.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.8.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.8.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense
+.wi_0.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.8.layer.1.layer_norm.weight
+', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.9.layer.0.SelfAttention.v.weight', 'retriever
+.encoder.encoder.block.9.layer.0.SelfAttention.o.weight', 'retriever.encoder.encoder.block.9.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encod
+er.block.9.layer.1.DenseReluDense.wi_1.weight', 'retriever.encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.9.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.10.
+layer.0.SelfAttention.q.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.10.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.10.layer.0.Se
+lfAttention.o.weight', 'retriever.encoder.encoder.block.10.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDens
+e.wi_1.weight', 'retriever.encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.10.layer.1.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.q.weight
+', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.k.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.v.weight', 'retriever.encoder.encoder.block.11.layer.0.SelfAttention.o.weight', 'retrie
+ver.encoder.encoder.block.11.layer.0.layer_norm.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight', 'retriever.encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight', 'retriever.enc
+oder.encoder.block.11.layer.1.DenseReluDense.wo.weight', 'retriever.encoder.encoder.block.11.layer.1.layer_norm.weight', 'retriever.encoder.encoder.final_layer_norm.weight']
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:188: Found keys that are not in the model state dict but in the checkpoint: ['pytorch-lightning_version', 'global_
+step', 'epoch', 'state_dict', 'callbacks', 'loops', 'legacy_pytorch-lightning_version', 'hyper_parameters']
+2024-09-07 04:27:20.156 | INFO     | prover.proof_search:__init__:458 - Loaded model from /data/yingzi_ma/lean_project/kaiyuy_leandojo-lean4-retriever-tacgen-byt5-small/model_lightning.ckpt
+2024-09-07 04:27:20.157 | INFO     | prover.proof_search:__init__:459 - Using retriever: PremiseRetriever(
+  (encoder): T5EncoderModel(
+    (shared): Embedding(384, 1472)
+    (encoder): T5Stack(
+      (embed_tokens): Embedding(384, 1472)
+      (block): ModuleList(
+        (0): T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+                (relative_attention_bias): Embedding(32, 6)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (1-11): 11 x T5Block(
+          (layer): ModuleList(
+            (0): T5LayerSelfAttention(
+              (SelfAttention): T5Attention(
+                (q): Linear(in_features=1472, out_features=384, bias=False)
+                (k): Linear(in_features=1472, out_features=384, bias=False)
+                (v): Linear(in_features=1472, out_features=384, bias=False)
+                (o): Linear(in_features=384, out_features=1472, bias=False)
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (1): T5LayerFF(
+              (DenseReluDense): T5DenseGatedActDense(
+                (wi_0): Linear(in_features=1472, out_features=3584, bias=False)
+                (wi_1): Linear(in_features=1472, out_features=3584, bias=False)
+                (wo): Linear(in_features=3584, out_features=1472, bias=False)
+                (dropout): Dropout(p=0.1, inplace=False)
+                (act): NewGELUActivation()
+              )
+              (layer_norm): T5LayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (final_layer_norm): T5LayerNorm()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+2024-09-07 04:27:20.158 | INFO     | prover.proof_search:__init__:462 - Loading indexed corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e5
+0c6aee013a2687/corpus.jsonl
+2024-09-07 04:27:20.158 | INFO     | common:__init__:208 - Building the corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50c6aee013a2687/c
+orpus.jsonl
+2024-09-07 04:27:27.198 | INFO     | retrieval.model:load_corpus:159 - Embeddings staled load corpus jsonl: True
+2024-09-07 04:27:27.198 | INFO     | prover.proof_search:__init__:464 - Loaded indexed corpus from /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/merged_with_new_pfr_fa398a5b853c7e94e3294c45e50
+c6aee013a2687/corpus.jsonl
+2024-09-07 04:27:27.198 | INFO     | prover.proof_search:__init__:478 - Launching 4 workers with 4 GPUs.
+2024-09-07 04:27:31,338 INFO worker.py:1774 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
+(pid=1914857) [2024-09-07 04:28:11,778] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1914857) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1914857)   return torch.load(io.BytesIO(b))
+(pid=1915455) [2024-09-07 04:28:26,186] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1915455) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1915455)   return torch.load(io.BytesIO(b))
+(pid=1915645) [2024-09-07 04:28:37,367] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1915645) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1915645)   return torch.load(io.BytesIO(b))
+2024-09-07 04:28:44.371 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-rc1
+(pid=1915884) [2024-09-07 04:28:51,527] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+(ProverActor pid=1915884) /data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), wh
+ich uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrus
+ted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer b
+e allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't h
+ave full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+(ProverActor pid=1915884)   return torch.load(io.BytesIO(b))
+2024-09-07 04:28:59.503 | INFO     | __main__:main:1348 - Proving test theorem
+2024-09-07 04:28:59.504 | INFO     | prover.proof_search:search_unordered:521 - Distributed
+(ProverActor pid=1914857) 2024-09-07 04:28:59.514 | INFO     | prover.proof_search:search:80 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'),
+file_path=PosixPath('PFR/RhoFunctional.lean'), full_name='phi_min_exists')
+(ProverActor pid=1915455) 2024-09-07 04:28:59.512 | INFO     | prover.proof_search:search:80 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'),
+file_path=PosixPath('PFR/RhoFunctional.lean'), full_name='condRho_minus_le')
+(ProverActor pid=1915645) 2024-09-07 04:28:59.511 | INFO     | prover.proof_search:search:80 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'),
+file_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='iter_multiDist_chainRule')
+(ProverActor pid=1915884) 2024-09-07 04:29:07.403 | INFO     | prover.proof_search:search:80 - Proving Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6aee013a2687'),
+file_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_indep')
+(ProverActor pid=1915455) 2024-09-07 04:30:08.059 | INFO     | prover.proof_search:_best_first_search:162 - Hit the resource limit (timeout or max_expansions).
+(ProverActor pid=1915455) 2024-09-07 04:30:22.776 | INFO     | prover.proof_search:search:127 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6a
+ee013a2687'), file_path=PosixPath('PFR/RhoFunctional.lean'), full_name='condRho_minus_le'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=6.66140196332708, environment_time=3.08477990468964, total_time=10.75183
+9319709688, num_total_nodes=137, num_searched_nodes=3)
+(ProverActor pid=1914857) 2024-09-07 04:30:12.534 | INFO     | prover.proof_search:_best_first_search:162 - Hit the resource limit (timeout or max_expansions).
+(ProverActor pid=1914857) 2024-09-07 04:30:29.036 | INFO     | prover.proof_search:search:127 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6a
+ee013a2687'), file_path=PosixPath('PFR/RhoFunctional.lean'), full_name='phi_min_exists'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=6.871416601818055, environment_time=2.8030240666121244, total_time=10.6795
+86741141975, num_total_nodes=148, num_searched_nodes=3)
+(ProverActor pid=1915884) 2024-09-07 04:31:11.439 | INFO     | prover.proof_search:_best_first_search:148 - 2345441.859983299
+(ProverActor pid=1915884) 2024-09-07 04:31:11.439 | INFO     | prover.proof_search:_best_first_search:149 - 2345431.884677463
+(ProverActor pid=1915884) 2024-09-07 04:31:11.439 | INFO     | prover.proof_search:_best_first_search:150 - 9.975950891617686
+(ProverActor pid=1915884) 2024-09-07 04:31:11.440 | INFO     | prover.proof_search:_best_first_search:151 - 10
+(ProverActor pid=1915884) 2024-09-07 04:31:11.440 | INFO     | prover.proof_search:_best_first_search:162 - Hit the resource limit (timeout or max_expansions).
+(ProverActor pid=1915645) 2024-09-07 04:31:19.266 | INFO     | prover.proof_search:_best_first_search:151 - 10 [repeated 4x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log dedupl
+ication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)
+(ProverActor pid=1915645) 2024-09-07 04:31:19.266 | INFO     | prover.proof_search:_best_first_search:162 - Hit the resource limit (timeout or max_expansions).
+(ProverActor pid=1915645) 2024-09-07 04:31:31.565 | INFO     | prover.proof_search:search:127 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6a
+ee013a2687'), file_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='iter_multiDist_chainRule'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=3.4201124096289277, environment_time=6.482644573319703, total_ti
+me=10.977475509047508, num_total_nodes=46, num_searched_nodes=0)
+(ProverActor pid=1915884) 2024-09-07 04:31:44.562 | INFO     | prover.proof_search:search:127 - SearchResult(theorem=Theorem(repo=LeanGitRepo(url='https://github.com/teorth/pfr', commit='fa398a5b853c7e94e3294c45e50c6a
+ee013a2687'), file_path=PosixPath('PFR/MoreRuzsaDist.lean'), full_name='multiDist_indep'), status=<Status.OPEN: 'Open'>, proof=None, actor_time=3.396314824000001, environment_time=0.5500208279117942, total_time=10.976
+273879874498, num_total_nodes=6, num_searched_nodes=0)
+(ReProver) yingzi_ma@compute-permanent-node-845:~/lean_project/ReProver$ bash run_code.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+[2024-09-07 15:02:12,217] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-07 15:02:21.252 | INFO     | __main__:main:1372 - Running progressive training
+2024-09-07 15:02:21.252 | INFO     | __main__:main:1378 - Configuring LeanDojo...
+2024-09-07 15:02:21.255 | INFO     | generate_benchmark_lean4:configure_leandojo:317 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-07 15:02:21.255 | INFO     | __main__:main:1380 - LeanDojo configured
+2024-09-07 15:02:54.688 | INFO     | dynamic_database:add_repository:586 - Attempting to add repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-07 15:02:54.688 | INFO     | dynamic_database:add_repository:589 - Added new repository: https://github.com/teorth/pfr (commit: fa398a5b853c7e94e3294c45e50c6aee013a2687)
+2024-09-07 15:03:05.952 | INFO     | dynamic_database:add_repository:586 - Attempting to add repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-07 15:03:05.952 | INFO     | dynamic_database:add_repository:589 - Added new repository: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd (commit: 29baddd685660b5fedd7bd67f9916ae24253d566)
+2024-09-07 15:03:14.407 | INFO     | dynamic_database:add_repository:586 - Attempting to add repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-07 15:03:14.407 | INFO     | dynamic_database:add_repository:589 - Added new repository: https://github.com/avigad/mathematics_in_lean_source (commit: 5297e0fb051367c48c0a084411853a576389ecf5)
+2024-09-07 15:03:14.557 | INFO     | dynamic_database:add_repository:586 - Attempting to add repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-07 15:03:14.558 | INFO     | dynamic_database:add_repository:589 - Added new repository: https://github.com/digama0/lean4lean (commit: 05b1f4a68c5facea96a5ee51c6a56fef21276e0f)
+2024-09-07 15:03:23.872 | INFO     | dynamic_database:add_repository:586 - Attempting to add repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-07 15:03:23.873 | INFO     | dynamic_database:add_repository:589 - Added new repository: https://github.com/yuma-mizuno/lean-math-workshop (commit: 5acd4b933d47fd6c1032798a6046c1baf261445d)
+2024-09-07 15:03:24.254 | INFO     | dynamic_database:add_repository:586 - Attempting to add repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+2024-09-07 15:03:24.254 | INFO     | dynamic_database:add_repository:589 - Added new repository: https://github.com/loganrjmurphy/LeanEuclid (commit: f1912c3090eb82820575758efc31e40b9db86bb8)
+Found 15 repositories
+2024-09-07 15:03:26.651 | INFO     | __main__:search_github_repositories:404 - Processing leanprover/lean4
+2024-09-07 15:03:26.651 | INFO     | __main__:search_github_repositories:422 - Skipping leanprover/lean4 since it is a known repository
+2024-09-07 15:03:26.651 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/mathlib3
+Cloning https://github.com/leanprover-community/mathlib3.git
+Repo name: leanprover-community/mathlib3
+2024-09-07 15:03:27.523 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/mathlib3/65a1391a0106c9204fe45bc73a039f056558cb83/lean-toolchain failed. Retrying..
+.
+2024-09-07 15:03:28.556 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/mathlib3/65a1391a0106c9204fe45bc73a039f056558cb83/lean-toolchain failed. Retrying..
+.
+2024-09-07 15:03:30.589 | INFO     | __main__:search_github_repositories:420 - Failed to clone leanprover-community/mathlib3 because of HTTP Error 404: Not Found
+2024-09-07 15:03:30.590 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/mathlib4
+2024-09-07 15:03:30.591 | INFO     | __main__:search_github_repositories:422 - Skipping leanprover-community/mathlib4 since it is a known repository
+2024-09-07 15:03:30.591 | INFO     | __main__:search_github_repositories:404 - Processing uwdb/Cosette
+Cloning https://github.com/uwdb/Cosette.git
+Repo name: uwdb/Cosette
+2024-09-07 15:03:31.330 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/uwdb/Cosette/c16b48ec7d278c717a9f1da3684f69621b3863f2/lean-toolchain failed. Retrying...
+2024-09-07 15:03:32.361 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/uwdb/Cosette/c16b48ec7d278c717a9f1da3684f69621b3863f2/lean-toolchain failed. Retrying...
+2024-09-07 15:03:34.394 | INFO     | __main__:search_github_repositories:420 - Failed to clone uwdb/Cosette because of HTTP Error 404: Not Found
+2024-09-07 15:03:34.395 | INFO     | __main__:search_github_repositories:404 - Processing AndrasKovacs/smalltt
+Cloning https://github.com/AndrasKovacs/smalltt.git
+Repo name: AndrasKovacs/smalltt
+2024-09-07 15:03:35.117 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/AndrasKovacs/smalltt/b5fc9b3747dcbf8c71ca9f976afb7b574b630996/lean-toolchain failed. Retrying...
+2024-09-07 15:03:36.172 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/AndrasKovacs/smalltt/b5fc9b3747dcbf8c71ca9f976afb7b574b630996/lean-toolchain failed. Retrying...
+2024-09-07 15:03:38.224 | INFO     | __main__:search_github_repositories:420 - Failed to clone AndrasKovacs/smalltt because of HTTP Error 404: Not Found
+2024-09-07 15:03:38.225 | INFO     | __main__:search_github_repositories:404 - Processing dselsam/certigrad
+Cloning https://github.com/dselsam/certigrad.git
+Repo name: dselsam/certigrad
+2024-09-07 15:03:38.865 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/dselsam/certigrad/c9a06e93f1ec58196d6d3b8563b29868d916727f/lean-toolchain failed. Retrying...
+2024-09-07 15:03:39.898 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/dselsam/certigrad/c9a06e93f1ec58196d6d3b8563b29868d916727f/lean-toolchain failed. Retrying...
+2024-09-07 15:03:41.931 | INFO     | __main__:search_github_repositories:420 - Failed to clone dselsam/certigrad because of HTTP Error 404: Not Found
+2024-09-07 15:03:41.932 | INFO     | __main__:search_github_repositories:404 - Processing Kha/electrolysis
+Cloning https://github.com/Kha/electrolysis.git
+Repo name: Kha/electrolysis
+2024-09-07 15:03:42.613 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Kha/electrolysis/bd4655d91ca65856fb8373637ce3e7b17ee3a190/lean-toolchain failed. Retrying...
+2024-09-07 15:03:43.645 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/Kha/electrolysis/bd4655d91ca65856fb8373637ce3e7b17ee3a190/lean-toolchain failed. Retrying...
+2024-09-07 15:03:45.677 | INFO     | __main__:search_github_repositories:420 - Failed to clone Kha/electrolysis because of HTTP Error 404: Not Found
+2024-09-07 15:03:45.678 | INFO     | __main__:search_github_repositories:404 - Processing ImperialCollegeLondon/formalising-mathematics
+Cloning https://github.com/ImperialCollegeLondon/formalising-mathematics.git
+Repo name: ImperialCollegeLondon/formalising-mathematics
+2024-09-07 15:03:46.395 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/formalising-mathematics/d81ad67e36774eb68f242bcc1b88d33dacfd87bf/lean-toolchain fa
+iled. Retrying...
+2024-09-07 15:03:47.428 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/formalising-mathematics/d81ad67e36774eb68f242bcc1b88d33dacfd87bf/lean-toolchain fa
+iled. Retrying...
+2024-09-07 15:03:49.460 | INFO     | __main__:search_github_repositories:420 - Failed to clone ImperialCollegeLondon/formalising-mathematics because of HTTP Error 404: Not Found
+2024-09-07 15:03:49.462 | INFO     | __main__:search_github_repositories:404 - Processing lecopivo/SciLean
+2024-09-07 15:03:49.462 | INFO     | __main__:search_github_repositories:422 - Skipping lecopivo/SciLean since it is a known repository
+2024-09-07 15:03:49.462 | INFO     | __main__:search_github_repositories:404 - Processing ImperialCollegeLondon/natural_number_game
+Cloning https://github.com/ImperialCollegeLondon/natural_number_game.git
+Repo name: ImperialCollegeLondon/natural_number_game
+2024-09-07 15:03:50.169 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/natural_number_game/6b30156c5025760d1ed8753de3b44a075e2f8a51/lean-toolchain failed
+. Retrying...
+2024-09-07 15:03:51.202 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/natural_number_game/6b30156c5025760d1ed8753de3b44a075e2f8a51/lean-toolchain failed
+. Retrying...
+2024-09-07 15:03:53.234 | INFO     | __main__:search_github_repositories:420 - Failed to clone ImperialCollegeLondon/natural_number_game because of HTTP Error 404: Not Found
+2024-09-07 15:03:53.235 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/batteries
+2024-09-07 15:03:53.236 | INFO     | __main__:search_github_repositories:422 - Skipping leanprover-community/batteries since it is a known repository
+2024-09-07 15:03:53.236 | INFO     | __main__:search_github_repositories:404 - Processing kbuzzard/xena
+Cloning https://github.com/kbuzzard/xena.git
+Repo name: kbuzzard/xena
+2024-09-07 15:03:53.980 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kbuzzard/xena/936b113e4741ab2a3d9d9883d31cbe5ac5669bbb/lean-toolchain failed. Retrying...
+2024-09-07 15:03:55.013 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/kbuzzard/xena/936b113e4741ab2a3d9d9883d31cbe5ac5669bbb/lean-toolchain failed. Retrying...
+2024-09-07 15:03:57.045 | INFO     | __main__:search_github_repositories:420 - Failed to clone kbuzzard/xena because of HTTP Error 404: Not Found
+2024-09-07 15:03:57.046 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/lean4-metaprogramming-book
+2024-09-07 15:03:57.047 | INFO     | __main__:search_github_repositories:422 - Skipping leanprover-community/lean4-metaprogramming-book since it is a known repository
+2024-09-07 15:03:57.047 | INFO     | __main__:search_github_repositories:404 - Processing ImperialCollegeLondon/FLT
+2024-09-07 15:03:57.047 | INFO     | __main__:search_github_repositories:422 - Skipping ImperialCollegeLondon/FLT since it is a known repository
+2024-09-07 15:03:57.048 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/tutorials
+Cloning https://github.com/leanprover-community/tutorials.git
+Repo name: leanprover-community/tutorials
+2024-09-07 15:03:57.750 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/tutorials/cf6d067632cedda813d880eaf730324d021c653e/lean-toolchain failed. Retrying.
+..
+2024-09-07 15:03:58.782 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/tutorials/cf6d067632cedda813d880eaf730324d021c653e/lean-toolchain failed. Retrying.
+..
+2024-09-07 15:04:00.814 | INFO     | __main__:search_github_repositories:420 - Failed to clone leanprover-community/tutorials because of HTTP Error 404: Not Found
+2024-09-07 15:04:00.816 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/aesop
+2024-09-07 15:04:00.816 | INFO     | __main__:search_github_repositories:422 - Skipping leanprover-community/aesop since it is a known repository
+2024-09-07 15:04:00.817 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/lean-liquid
+Cloning https://github.com/leanprover-community/lean-liquid.git
+Repo name: leanprover-community/lean-liquid
+2024-09-07 15:04:01.610 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/lean-liquid/087fffad55dc1dd8d54ab35c9816926a45b8c0fd/lean-toolchain failed. Retryin
+g...
+2024-09-07 15:04:02.641 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/lean-liquid/087fffad55dc1dd8d54ab35c9816926a45b8c0fd/lean-toolchain failed. Retryin
+g...
+2024-09-07 15:04:04.674 | INFO     | __main__:search_github_repositories:420 - Failed to clone leanprover-community/lean-liquid because of HTTP Error 404: Not Found
+2024-09-07 15:04:04.675 | INFO     | __main__:search_github_repositories:404 - Processing openai/lean-gym
+Cloning https://github.com/openai/lean-gym.git
+Repo name: openai/lean-gym
+2024-09-07 15:04:05.434 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/openai/lean-gym/1585ac4d2e56a1ceb72243ce859645b9d0069d34/lean-toolchain failed. Retrying...
+2024-09-07 15:04:06.468 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/openai/lean-gym/1585ac4d2e56a1ceb72243ce859645b9d0069d34/lean-toolchain failed. Retrying...
+2024-09-07 15:04:08.502 | INFO     | __main__:search_github_repositories:420 - Failed to clone openai/lean-gym because of HTTP Error 404: Not Found
+2024-09-07 15:04:08.504 | INFO     | __main__:search_github_repositories:404 - Processing formalabstracts/formalabstracts
+Cloning https://github.com/formalabstracts/formalabstracts.git
+Repo name: formalabstracts/formalabstracts
+2024-09-07 15:04:09.257 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/formalabstracts/formalabstracts/b0173da1af45421239d44492eeecd54bf65ee0f6/lean-toolchain failed. Retrying
+...
+2024-09-07 15:04:10.294 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/formalabstracts/formalabstracts/b0173da1af45421239d44492eeecd54bf65ee0f6/lean-toolchain failed. Retrying
+...
+2024-09-07 15:04:12.329 | INFO     | __main__:search_github_repositories:420 - Failed to clone formalabstracts/formalabstracts because of HTTP Error 404: Not Found
+2024-09-07 15:04:12.330 | INFO     | __main__:search_github_repositories:404 - Processing ImperialCollegeLondon/M40001_lean
+Cloning https://github.com/ImperialCollegeLondon/M40001_lean.git
+Repo name: ImperialCollegeLondon/M40001_lean
+2024-09-07 15:04:13.071 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/M40001_lean/8cc4a60897dabdd5bc0d116144776f3286fde70c/lean-toolchain failed. Retryi
+ng...
+2024-09-07 15:04:14.101 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/M40001_lean/8cc4a60897dabdd5bc0d116144776f3286fde70c/lean-toolchain failed. Retryi
+ng...
+2024-09-07 15:04:16.133 | INFO     | __main__:search_github_repositories:420 - Failed to clone ImperialCollegeLondon/M40001_lean because of HTTP Error 404: Not Found
+2024-09-07 15:04:16.134 | INFO     | __main__:search_github_repositories:404 - Processing teorth/pfr
+2024-09-07 15:04:16.135 | INFO     | __main__:search_github_repositories:422 - Skipping teorth/pfr since it is a known repository
+2024-09-07 15:04:16.135 | INFO     | __main__:search_github_repositories:404 - Processing kmill/lean4-raytracer
+2024-09-07 15:04:16.135 | INFO     | __main__:search_github_repositories:422 - Skipping kmill/lean4-raytracer since it is a known repository
+2024-09-07 15:04:16.136 | INFO     | __main__:search_github_repositories:404 - Processing AlexKontorovich/PrimeNumberTheoremAnd
+2024-09-07 15:04:16.136 | INFO     | __main__:search_github_repositories:422 - Skipping AlexKontorovich/PrimeNumberTheoremAnd since it is a known repository
+2024-09-07 15:04:16.136 | INFO     | __main__:search_github_repositories:404 - Processing ImperialCollegeLondon/formalising-mathematics-2022
+Cloning https://github.com/ImperialCollegeLondon/formalising-mathematics-2022.git
+Repo name: ImperialCollegeLondon/formalising-mathematics-2022
+2024-09-07 15:04:16.836 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/formalising-mathematics-2022/a1686aaa72a3c387d3a9bb68e5d15764246cb58b/lean-toolcha
+in failed. Retrying...
+2024-09-07 15:04:17.867 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/formalising-mathematics-2022/a1686aaa72a3c387d3a9bb68e5d15764246cb58b/lean-toolcha
+in failed. Retrying...
+2024-09-07 15:04:19.898 | INFO     | __main__:search_github_repositories:420 - Failed to clone ImperialCollegeLondon/formalising-mathematics-2022 because of HTTP Error 404: Not Found
+2024-09-07 15:04:19.899 | INFO     | __main__:search_github_repositories:404 - Processing flypitch/flypitch
+Cloning https://github.com/flypitch/flypitch.git
+Repo name: flypitch/flypitch
+2024-09-07 15:04:20.571 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/flypitch/flypitch/d72904c17fbb874f01ffe168667ba12663a7b853/lean-toolchain failed. Retrying...
+2024-09-07 15:04:21.602 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/flypitch/flypitch/d72904c17fbb874f01ffe168667ba12663a7b853/lean-toolchain failed. Retrying...
+2024-09-07 15:04:23.637 | INFO     | __main__:search_github_repositories:420 - Failed to clone flypitch/flypitch because of HTTP Error 404: Not Found
+2024-09-07 15:04:23.638 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/lean-perfectoid-spaces
+Cloning https://github.com/leanprover-community/lean-perfectoid-spaces.git
+Repo name: leanprover-community/lean-perfectoid-spaces
+2024-09-07 15:04:24.445 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/lean-perfectoid-spaces/95a6520ce578b30a80b4c36e36ab2d559a842690/lean-toolchain fail
+ed. Retrying...
+2024-09-07 15:04:25.476 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/lean-perfectoid-spaces/95a6520ce578b30a80b4c36e36ab2d559a842690/lean-toolchain fail
+ed. Retrying...
+2024-09-07 15:04:27.509 | INFO     | __main__:search_github_repositories:420 - Failed to clone leanprover-community/lean-perfectoid-spaces because of HTTP Error 404: Not Found
+2024-09-07 15:04:27.510 | INFO     | __main__:search_github_repositories:404 - Processing argumentcomputer/yatima
+2024-09-07 15:04:27.511 | INFO     | __main__:search_github_repositories:422 - Skipping argumentcomputer/yatima since it is a known repository
+2024-09-07 15:04:27.512 | INFO     | __main__:search_github_repositories:404 - Processing jesse-michael-han/lean-gptf
+Cloning https://github.com/jesse-michael-han/lean-gptf.git
+Repo name: jesse-michael-han/lean-gptf
+2024-09-07 15:04:28.344 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/jesse-michael-han/lean-gptf/e2adeef81f6cf089cde493fa1b7f4af5d53c747a/lean-toolchain failed. Retrying...
+2024-09-07 15:04:29.378 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/jesse-michael-han/lean-gptf/e2adeef81f6cf089cde493fa1b7f4af5d53c747a/lean-toolchain failed. Retrying...
+2024-09-07 15:04:31.410 | INFO     | __main__:search_github_repositories:420 - Failed to clone jesse-michael-han/lean-gptf because of HTTP Error 404: Not Found
+2024-09-07 15:04:31.412 | INFO     | __main__:search_github_repositories:404 - Processing TwoFX/sudoku
+Cloning https://github.com/TwoFX/sudoku.git
+Repo name: TwoFX/sudoku
+2024-09-07 15:04:32.177 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/TwoFX/sudoku/1c02dbefebb4ed670ff3786ae1dcabab5470d806/lean-toolchain failed. Retrying...
+2024-09-07 15:04:33.210 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/TwoFX/sudoku/1c02dbefebb4ed670ff3786ae1dcabab5470d806/lean-toolchain failed. Retrying...
+2024-09-07 15:04:35.243 | INFO     | __main__:search_github_repositories:420 - Failed to clone TwoFX/sudoku because of HTTP Error 404: Not Found
+2024-09-07 15:04:35.245 | INFO     | __main__:search_github_repositories:404 - Processing leanprover/verso
+Cloning https://github.com/leanprover/verso.git
+Repo name: leanprover/verso
+2024-09-07 15:04:35.949 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-09-03
+2024-09-07 15:04:36.606 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='099f82f9faa3f550f242df55dbacba160bf86fa4') relies on an unsupporte
+d Lean version: 66688e10ceef553f48b935a74d9bbd096edf96f5
+2024-09-07 15:04:36.606 | INFO     | __main__:search_github_repositories:404 - Processing ImperialCollegeLondon/formalising-mathematics-2024
+2024-09-07 15:04:36.606 | INFO     | __main__:search_github_repositories:422 - Skipping ImperialCollegeLondon/formalising-mathematics-2024 since it is a known repository
+2024-09-07 15:04:36.606 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/ProofWidgets4
+2024-09-07 15:04:36.607 | INFO     | __main__:search_github_repositories:422 - Skipping leanprover-community/ProofWidgets4 since it is a known repository
+2024-09-07 15:04:36.607 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/NNG4
+2024-09-07 15:04:36.607 | INFO     | __main__:search_github_repositories:422 - Skipping leanprover-community/NNG4 since it is a known repository
+2024-09-07 15:04:36.607 | INFO     | __main__:search_github_repositories:404 - Processing cmu-l3/llmlean
+2024-09-07 15:04:36.607 | INFO     | __main__:search_github_repositories:422 - Skipping cmu-l3/llmlean since it is a known repository
+2024-09-07 15:04:36.607 | INFO     | __main__:search_github_repositories:404 - Processing leanprover/lake
+2024-09-07 15:04:36.607 | INFO     | __main__:search_github_repositories:422 - Skipping leanprover/lake since it is a known repository
+2024-09-07 15:04:36.607 | INFO     | __main__:search_github_repositories:404 - Processing blanchette/logical_verification_2020
+Cloning https://github.com/blanchette/logical_verification_2020.git
+Repo name: blanchette/logical_verification_2020
+2024-09-07 15:04:37.272 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/blanchette/logical_verification_2020/7a9f4bd73498189d9beb5d4591e0f2b3ca316111/lean-toolchain failed. Ret
+rying...
+2024-09-07 15:04:38.307 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/blanchette/logical_verification_2020/7a9f4bd73498189d9beb5d4591e0f2b3ca316111/lean-toolchain failed. Ret
+rying...
+2024-09-07 15:04:40.340 | INFO     | __main__:search_github_repositories:420 - Failed to clone blanchette/logical_verification_2020 because of HTTP Error 404: Not Found
+2024-09-07 15:04:40.342 | INFO     | __main__:search_github_repositories:404 - Processing dwrensha/compfiles
+2024-09-07 15:04:40.342 | INFO     | __main__:search_github_repositories:422 - Skipping dwrensha/compfiles since it is a known repository
+2024-09-07 15:04:40.342 | INFO     | __main__:search_github_repositories:404 - Processing ufmg-smite/lean-smt
+2024-09-07 15:04:40.343 | INFO     | __main__:search_github_repositories:422 - Skipping ufmg-smite/lean-smt since it is a known repository
+2024-09-07 15:04:40.343 | INFO     | __main__:search_github_repositories:404 - Processing PatrickMassot/GlimpseOfLean
+2024-09-07 15:04:40.343 | INFO     | __main__:search_github_repositories:422 - Skipping PatrickMassot/GlimpseOfLean since it is a known repository
+2024-09-07 15:04:40.343 | INFO     | __main__:search_github_repositories:404 - Processing google-deepmind/debate
+2024-09-07 15:04:40.343 | INFO     | __main__:search_github_repositories:422 - Skipping google-deepmind/debate since it is a known repository
+2024-09-07 15:04:40.343 | INFO     | __main__:search_github_repositories:404 - Processing zhangir-azerbayev/ProofNet
+Cloning https://github.com/zhangir-azerbayev/ProofNet.git
+Repo name: zhangir-azerbayev/ProofNet
+2024-09-07 15:04:41.005 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/zhangir-azerbayev/ProofNet/02b47219879da3a4fcb4d6ad5f2f29f384cf2de0/lean-toolchain failed. Retrying...
+2024-09-07 15:04:42.036 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/zhangir-azerbayev/ProofNet/02b47219879da3a4fcb4d6ad5f2f29f384cf2de0/lean-toolchain failed. Retrying...
+2024-09-07 15:04:44.069 | INFO     | __main__:search_github_repositories:420 - Failed to clone zhangir-azerbayev/ProofNet because of HTTP Error 404: Not Found
+2024-09-07 15:04:44.070 | INFO     | __main__:search_github_repositories:404 - Processing blanchette/logical_verification_2023
+Cloning https://github.com/blanchette/logical_verification_2023.git
+Repo name: blanchette/logical_verification_2023
+2024-09-07 15:04:44.843 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/blanchette/logical_verification_2023/0b9ca22d512230ca1932f08ebb459f676438c64d/lean-toolchain failed. Ret
+rying...
+2024-09-07 15:04:45.874 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/blanchette/logical_verification_2023/0b9ca22d512230ca1932f08ebb459f676438c64d/lean-toolchain failed. Ret
+rying...
+2024-09-07 15:04:47.906 | INFO     | __main__:search_github_repositories:420 - Failed to clone blanchette/logical_verification_2023 because of HTTP Error 404: Not Found
+2024-09-07 15:04:47.908 | INFO     | __main__:search_github_repositories:404 - Processing teorth/symmetric_project
+2024-09-07 15:04:47.909 | INFO     | __main__:search_github_repositories:422 - Skipping teorth/symmetric_project since it is a known repository
+2024-09-07 15:04:47.909 | INFO     | __main__:search_github_repositories:404 - Processing cedar-policy/cedar-spec
+Cloning https://github.com/cedar-policy/cedar-spec.git
+Repo name: cedar-policy/cedar-spec
+2024-09-07 15:04:48.679 | INFO     | __main__:search_github_repositories:420 - Failed to clone cedar-policy/cedar-spec because of Invalid Lean 4 version: cedar-lean/lean-toolchain
+2024-09-07 15:04:48.680 | INFO     | __main__:search_github_repositories:404 - Processing ImperialCollegeLondon/real-number-game
+Cloning https://github.com/ImperialCollegeLondon/real-number-game.git
+Repo name: ImperialCollegeLondon/real-number-game
+2024-09-07 15:04:49.410 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/real-number-game/f9dcb7d9255a79b57e62038228a23346c2dc301b/lean-toolchain failed. R
+etrying...
+2024-09-07 15:04:50.444 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/real-number-game/f9dcb7d9255a79b57e62038228a23346c2dc301b/lean-toolchain failed. R
+etrying...
+2024-09-07 15:04:52.481 | INFO     | __main__:search_github_repositories:420 - Failed to clone ImperialCollegeLondon/real-number-game because of HTTP Error 404: Not Found
+2024-09-07 15:04:52.483 | INFO     | __main__:search_github_repositories:404 - Processing avigad/lamr
+2024-09-07 15:04:52.484 | INFO     | __main__:search_github_repositories:422 - Skipping avigad/lamr since it is a known repository
+2024-09-07 15:04:52.484 | INFO     | __main__:search_github_repositories:404 - Processing gebner/hott3
+Cloning https://github.com/gebner/hott3.git
+Repo name: gebner/hott3
+2024-09-07 15:04:53.193 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/gebner/hott3/7ead7a8a2503049eacd45cbff6587802bae2add2/lean-toolchain failed. Retrying...
+2024-09-07 15:04:54.226 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/gebner/hott3/7ead7a8a2503049eacd45cbff6587802bae2add2/lean-toolchain failed. Retrying...
+2024-09-07 15:04:56.257 | INFO     | __main__:search_github_repositories:420 - Failed to clone gebner/hott3 because of HTTP Error 404: Not Found
+2024-09-07 15:04:56.258 | INFO     | __main__:search_github_repositories:404 - Processing avigad/mathematics_in_lean_source
+2024-09-07 15:04:56.259 | INFO     | __main__:search_github_repositories:422 - Skipping avigad/mathematics_in_lean_source since it is a known repository
+2024-09-07 15:04:56.259 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/quote4
+2024-09-07 15:04:56.259 | INFO     | __main__:search_github_repositories:422 - Skipping leanprover-community/quote4 since it is a known repository
+2024-09-07 15:04:56.259 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/lean4-samples
+Cloning https://github.com/leanprover-community/lean4-samples.git
+Repo name: leanprover-community/lean4-samples
+2024-09-07 15:04:56.969 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/lean4-samples/c3690b7a51667cfe74a64a49b0057dbc42d8716a/lean-toolchain failed. Retry
+ing...
+2024-09-07 15:04:58.000 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/lean4-samples/c3690b7a51667cfe74a64a49b0057dbc42d8716a/lean-toolchain failed. Retry
+ing...
+2024-09-07 15:05:00.032 | INFO     | __main__:search_github_repositories:420 - Failed to clone leanprover-community/lean4-samples because of HTTP Error 404: Not Found
+2024-09-07 15:05:00.033 | INFO     | __main__:search_github_repositories:404 - Processing jldodds/coq-lean-cheatsheet
+Cloning https://github.com/jldodds/coq-lean-cheatsheet.git
+Repo name: jldodds/coq-lean-cheatsheet
+2024-09-07 15:05:00.659 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/jldodds/coq-lean-cheatsheet/69ad5987ec59ee7c9806855b2bb9de73c096c617/lean-toolchain failed. Retrying...
+2024-09-07 15:05:01.689 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/jldodds/coq-lean-cheatsheet/69ad5987ec59ee7c9806855b2bb9de73c096c617/lean-toolchain failed. Retrying...
+2024-09-07 15:05:03.721 | INFO     | __main__:search_github_repositories:420 - Failed to clone jldodds/coq-lean-cheatsheet because of HTTP Error 404: Not Found
+2024-09-07 15:05:03.723 | INFO     | __main__:search_github_repositories:404 - Processing digama0/lean4lean
+2024-09-07 15:05:03.724 | INFO     | __main__:search_github_repositories:422 - Skipping digama0/lean4lean since it is a known repository
+2024-09-07 15:05:03.724 | INFO     | __main__:search_github_repositories:404 - Processing yuma-mizuno/lean-math-workshop
+2024-09-07 15:05:03.724 | INFO     | __main__:search_github_repositories:422 - Skipping yuma-mizuno/lean-math-workshop since it is a known repository
+2024-09-07 15:05:03.724 | INFO     | __main__:search_github_repositories:404 - Processing eric-wieser/lean-matrix-cookbook
+Cloning https://github.com/eric-wieser/lean-matrix-cookbook.git
+Repo name: eric-wieser/lean-matrix-cookbook
+2024-09-07 15:05:04.409 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0-rc1
+2024-09-07 15:05:19.608 | INFO     | __main__:search_github_repositories:404 - Processing loganrjmurphy/LeanEuclid
+2024-09-07 15:05:19.608 | INFO     | __main__:search_github_repositories:422 - Skipping loganrjmurphy/LeanEuclid since it is a known repository
+2024-09-07 15:05:19.608 | INFO     | __main__:search_github_repositories:404 - Processing FormalizedFormalLogic/Foundation
+Cloning https://github.com/FormalizedFormalLogic/Foundation.git
+Repo name: FormalizedFormalLogic/Foundation
+2024-09-07 15:05:20.635 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0-rc2
+2024-09-07 15:05:35.597 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/iris-lean
+Cloning https://github.com/leanprover-community/iris-lean.git
+Repo name: leanprover-community/iris-lean
+2024-09-07 15:05:36.329 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.6.0-rc1
+2024-09-07 15:05:51.485 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/lftcm2020
+Cloning https://github.com/leanprover-community/lftcm2020.git
+Repo name: leanprover-community/lftcm2020
+2024-09-07 15:05:52.240 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/lftcm2020/64d1861d32d4bb38a65994f7c47d96892333130f/lean-toolchain failed. Retrying.
+..
+2024-09-07 15:05:53.275 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/leanprover-community/lftcm2020/64d1861d32d4bb38a65994f7c47d96892333130f/lean-toolchain failed. Retrying.
+..
+2024-09-07 15:05:55.306 | INFO     | __main__:search_github_repositories:420 - Failed to clone leanprover-community/lftcm2020 because of HTTP Error 404: Not Found
+2024-09-07 15:05:55.307 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/repl
+Cloning https://github.com/leanprover-community/repl.git
+Repo name: leanprover-community/repl
+2024-09-07 15:05:56.079 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.11.0
+2024-09-07 15:06:11.035 | INFO     | __main__:search_github_repositories:404 - Processing leanprover/doc-gen4
+Cloning https://github.com/leanprover/doc-gen4.git
+Repo name: leanprover/doc-gen4
+2024-09-07 15:06:11.811 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.12.0-rc1
+2024-09-07 15:06:27.124 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/lean-auto
+Cloning https://github.com/leanprover-community/lean-auto.git
+Repo name: leanprover-community/lean-auto
+2024-09-07 15:06:27.831 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.9.0
+2024-09-07 15:06:43.216 | INFO     | __main__:search_github_repositories:404 - Processing aripiprazole/rinha
+Cloning https://github.com/aripiprazole/rinha.git
+Repo name: aripiprazole/rinha
+2024-09-07 15:06:43.953 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2023-02-22
+2024-09-07 15:06:49.800 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/aripiprazole/rinha', commit='ac25bfdf4f1bfc0840c5d5e10c9129ea4b6bb6e4') relies on an unsuppor
+ted Lean version: 7992ce6b4dd490bcc44b1c34e5d5a26965dfb2c0
+2024-09-07 15:06:49.800 | INFO     | __main__:search_github_repositories:404 - Processing leanprover/lean4-cli
+Cloning https://github.com/leanprover/lean4-cli.git
+Repo name: leanprover/lean4-cli
+2024-09-07 15:06:50.559 | INFO     | __main__:search_github_repositories:404 - Processing leanprover/LeanInk
+Cloning https://github.com/leanprover/LeanInk.git
+Repo name: leanprover/LeanInk
+2024-09-07 15:06:51.348 | INFO     | __main__:search_github_repositories:404 - Processing emilyriehl/yoneda
+Cloning https://github.com/emilyriehl/yoneda.git
+Repo name: emilyriehl/yoneda
+2024-09-07 15:06:52.097 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/emilyriehl/yoneda/2677941b4908168c63ff3ca87fa369690761d98a/lean-toolchain failed. Retrying...
+2024-09-07 15:06:53.129 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/emilyriehl/yoneda/2677941b4908168c63ff3ca87fa369690761d98a/lean-toolchain failed. Retrying...
+2024-09-07 15:06:55.161 | INFO     | __main__:search_github_repositories:420 - Failed to clone emilyriehl/yoneda because of HTTP Error 404: Not Found
+2024-09-07 15:06:55.162 | INFO     | __main__:search_github_repositories:404 - Processing PatrickMassot/lean-verbose
+Cloning https://github.com/PatrickMassot/lean-verbose.git
+Repo name: PatrickMassot/lean-verbose
+2024-09-07 15:06:55.902 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/PatrickMassot/lean-verbose/eefa06d2a5ed81eb73eceaa0f8029c1d6f2d0023/lean-toolchain failed. Retrying...
+2024-09-07 15:06:56.933 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/PatrickMassot/lean-verbose/eefa06d2a5ed81eb73eceaa0f8029c1d6f2d0023/lean-toolchain failed. Retrying...
+2024-09-07 15:06:58.965 | INFO     | __main__:search_github_repositories:420 - Failed to clone PatrickMassot/lean-verbose because of HTTP Error 404: Not Found
+2024-09-07 15:06:58.967 | INFO     | __main__:search_github_repositories:404 - Processing leanprover/SampCert
+Cloning https://github.com/leanprover/SampCert.git
+Repo name: leanprover/SampCert
+2024-09-07 15:06:59.744 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.10.0
+2024-09-07 15:07:14.936 | INFO     | __main__:search_github_repositories:404 - Processing nomeata/loogle
+Cloning https://github.com/nomeata/loogle.git
+Repo name: nomeata/loogle
+2024-09-07 15:07:15.764 | INFO     | __main__:search_github_repositories:404 - Processing ImperialCollegeLondon/group-theory-game
+Cloning https://github.com/ImperialCollegeLondon/group-theory-game.git
+Repo name: ImperialCollegeLondon/group-theory-game
+2024-09-07 15:07:16.538 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/group-theory-game/152ec4a92ad67b6174a3d240c63fa56a6df6017e/lean-toolchain failed.
+Retrying...
+2024-09-07 15:07:17.570 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/group-theory-game/152ec4a92ad67b6174a3d240c63fa56a6df6017e/lean-toolchain failed.
+Retrying...
+2024-09-07 15:07:19.603 | INFO     | __main__:search_github_repositories:420 - Failed to clone ImperialCollegeLondon/group-theory-game because of HTTP Error 404: Not Found
+2024-09-07 15:07:19.604 | INFO     | __main__:search_github_repositories:404 - Processing ImperialCollegeLondon/M4P33
+Cloning https://github.com/ImperialCollegeLondon/M4P33.git
+Repo name: ImperialCollegeLondon/M4P33
+2024-09-07 15:07:20.412 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/M4P33/1a179372db71ad6802d11eacbc1f02f327d55f8f/lean-toolchain failed. Retrying...
+2024-09-07 15:07:21.446 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/ImperialCollegeLondon/M4P33/1a179372db71ad6802d11eacbc1f02f327d55f8f/lean-toolchain failed. Retrying...
+2024-09-07 15:07:23.478 | INFO     | __main__:search_github_repositories:420 - Failed to clone ImperialCollegeLondon/M4P33 because of HTTP Error 404: Not Found
+2024-09-07 15:07:23.479 | INFO     | __main__:search_github_repositories:404 - Processing leanprover-community/con-nf
+Cloning https://github.com/leanprover-community/con-nf.git
+Repo name: leanprover-community/con-nf
+2024-09-07 15:07:24.280 | INFO     | __main__:search_github_repositories:404 - Processing b-mehta/topos
+Cloning https://github.com/b-mehta/topos.git
+Repo name: b-mehta/topos
+2024-09-07 15:07:24.959 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/b-mehta/topos/c9032b11789e36038bc841a1e2b486972421b983/lean-toolchain failed. Retrying...
+2024-09-07 15:07:25.991 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/b-mehta/topos/c9032b11789e36038bc841a1e2b486972421b983/lean-toolchain failed. Retrying...
+2024-09-07 15:07:28.022 | INFO     | __main__:search_github_repositories:420 - Failed to clone b-mehta/topos because of HTTP Error 404: Not Found
+2024-09-07 15:07:28.023 | INFO     | __main__:search_github_repositories:404 - Processing blanchette/interactive_theorem_proving_2024
+Cloning https://github.com/blanchette/interactive_theorem_proving_2024.git
+Repo name: blanchette/interactive_theorem_proving_2024
+2024-09-07 15:07:28.789 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/blanchette/interactive_theorem_proving_2024/0f8dda14487c7b6de420c89ff75f0a69aea45738/lean-toolchain fail
+ed. Retrying...
+2024-09-07 15:07:29.819 | DEBUG    | lean_dojo.utils:read_url:178 - Request to https://raw.githubusercontent.com/blanchette/interactive_theorem_proving_2024/0f8dda14487c7b6de420c89ff75f0a69aea45738/lean-toolchain fail
+ed. Retrying...
+2024-09-07 15:07:31.851 | INFO     | __main__:search_github_repositories:420 - Failed to clone blanchette/interactive_theorem_proving_2024 because of HTTP Error 404: Not Found
+2024-09-07 15:07:31.852 | INFO     | __main__:search_github_repositories:404 - Processing risc0/risc0-lean4
+Cloning https://github.com/risc0/risc0-lean4.git
+Repo name: risc0/risc0-lean4
+2024-09-07 15:07:32.656 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2022-12-23
+2024-09-07 15:07:39.156 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/risc0/risc0-lean4', commit='31c956fc9246bbfc84359021d66ed94972afd86b') relies on an unsupport
+ed Lean version: 0553b5936e4629f10561354dbb158412ce671722
+2024-09-07 15:07:39.156 | INFO     | __main__:search_github_repositories:404 - Processing siddhartha-gadgil/Saturn
+Cloning https://github.com/siddhartha-gadgil/Saturn.git
+Repo name: siddhartha-gadgil/Saturn
+2024-09-07 15:07:39.907 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+Processing /data/yingzi_ma/lean_project/repos_new/leanprover/verso
+2024-09-07 15:07:54.845 | INFO     | __main__:add_repo_to_database:990 - Processing https://github.com/leanprover/verso.git
+2024-09-07 15:07:55.140 | INFO     | __main__:get_compatible_commit:326 - Latest commit: 099f82f9faa3f550f242df55dbacba160bf86fa4
+2024-09-07 15:07:55.140 | INFO     | __main__:get_compatible_commit:329 - Creating LeanGitRepo for https://github.com/leanprover/verso
+2024-09-07 15:07:55.140 | INFO     | __main__:get_compatible_commit:331 - Getting config for https://github.com/leanprover/verso.git
+2024-09-07 15:07:55.140 | INFO     | __main__:get_compatible_commit:338 - Searching for compatible commit for https://github.com/leanprover/verso.git
+2024-09-07 15:07:55.143 | INFO     | __main__:get_compatible_commit:344 - Already in a Git repository
+2024-09-07 15:07:55.145 | INFO     | __main__:get_compatible_commit:354 - Fetching commits for https://github.com/leanprover/verso.git
+2024-09-07 15:07:56.536 | INFO     | __main__:get_compatible_commit:358 - Fetched commits for https://github.com/leanprover/verso.git
+2024-09-07 15:07:56.541 | INFO     | __main__:get_compatible_commit:364 - Getting list of commits for https://github.com/leanprover/verso.git
+2024-09-07 15:07:56.552 | INFO     | __main__:get_compatible_commit:369 - Found 200 commits for https://github.com/leanprover/verso.git
+2024-09-07 15:07:56.872 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='211324b7781e85202bf885f6accac506ca9de5e9') relies on an unsupporte
+d Lean version: 66688e10ceef553f48b935a74d9bbd096edf96f5
+2024-09-07 15:07:57.089 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='23c937d1bd94a2aa498e52ecbe907219a54b943f') relies on an unsupporte
+d Lean version: 66688e10ceef553f48b935a74d9bbd096edf96f5
+2024-09-07 15:07:57.338 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='472b3f054f7a33b78dc663b325617999ca8acba8') relies on an unsupporte
+d Lean version: 66688e10ceef553f48b935a74d9bbd096edf96f5
+2024-09-07 15:07:57.541 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='d5cbc9fb89e4311f09538bdeb341eb074b9135d9') relies on an unsupporte
+d Lean version: 66688e10ceef553f48b935a74d9bbd096edf96f5
+2024-09-07 15:07:57.831 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-08-29
+2024-09-07 15:07:58.434 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='9bc803149aaa6ad41c0b73c8947f208658ca3aee') relies on an unsupporte
+d Lean version: 44985dc9a64bb6f4f898abb7be24e7be47f42bb7
+2024-09-07 15:07:58.735 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4-nightly nightly-2024-08-10
+2024-09-07 15:07:59.332 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='11903e639bac684b76273287c3293fe4d665f53d') relies on an unsupporte
+d Lean version: 95bf6793aab04dce74b8ac7d9bb0d5e1d43b2402
+2024-09-07 15:07:59.552 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='b0abb7965a07d27f8ef291a53f9ef8c4fb6e17b1') relies on an unsupporte
+d Lean version: 95bf6793aab04dce74b8ac7d9bb0d5e1d43b2402
+2024-09-07 15:07:59.744 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='df86641315afcdc09859f6b3280c8062ead4b7df') relies on an unsupporte
+d Lean version: 95bf6793aab04dce74b8ac7d9bb0d5e1d43b2402
+2024-09-07 15:08:00.014 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='abb90a4865eb59fe5868534346924853d6b69537') relies on an unsupporte
+d Lean version: 95bf6793aab04dce74b8ac7d9bb0d5e1d43b2402
+2024-09-07 15:08:00.240 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='875f713f4b9a38c1e146fe9f0ed5eb818dc97f08') relies on an unsupporte
+d Lean version: 95bf6793aab04dce74b8ac7d9bb0d5e1d43b2402
+2024-09-07 15:08:00.522 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='cf37277bfbb40c333987112af17c342503fcfba7') relies on an unsupporte
+d Lean version: 95bf6793aab04dce74b8ac7d9bb0d5e1d43b2402
+2024-09-07 15:08:00.706 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='87772b0f0eae0d2847e57a008a99a3f2df8d9f1f') relies on an unsupporte
+d Lean version: 95bf6793aab04dce74b8ac7d9bb0d5e1d43b2402
+2024-09-07 15:08:00.911 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='fdea7b9a3f525a632a7702edeb1c196f963f22d4') relies on an unsupporte
+d Lean version: 95bf6793aab04dce74b8ac7d9bb0d5e1d43b2402
+2024-09-07 15:08:01.140 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='000647872db8486c7f520f3c411134a8a9c9868e') relies on an unsupporte
+d Lean version: 95bf6793aab04dce74b8ac7d9bb0d5e1d43b2402
+2024-09-07 15:08:01.419 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:446 - LeanGitRepo(url='https://github.com/leanprover/verso', commit='b1c5c9b83b09f2fd011f492282453d4e1efa0466') relies on an unsupporte
+d Lean version: 95bf6793aab04dce74b8ac7d9bb0d5e1d43b2402
+2024-09-07 15:08:01.664 | INFO     | __main__:get_compatible_commit:382 - Error in get_compatible_commit: Invalid Lean 4 version: leanprover/lean4-pr-releases:pr-release-4971
+2024-09-07 15:08:01.665 | INFO     | __main__:add_repo_to_database:1004 - Failed to find a compatible commit for https://github.com/leanprover/verso.git
+Processing /data/yingzi_ma/lean_project/repos_new/eric-wieser/lean-matrix-cookbook
+2024-09-07 15:08:01.665 | INFO     | __main__:add_repo_to_database:990 - Processing https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-07 15:08:01.938 | INFO     | __main__:get_compatible_commit:326 - Latest commit: 4a4aed723b1c725a62031c5389991eeecc9c5301
+2024-09-07 15:08:01.938 | INFO     | __main__:get_compatible_commit:329 - Creating LeanGitRepo for https://github.com/eric-wieser/lean-matrix-cookbook
+2024-09-07 15:08:01.938 | INFO     | __main__:get_compatible_commit:331 - Getting config for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-07 15:08:01.938 | INFO     | __main__:get_compatible_commit:338 - Searching for compatible commit for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-07 15:08:01.941 | INFO     | __main__:get_compatible_commit:344 - Already in a Git repository
+2024-09-07 15:08:01.943 | INFO     | __main__:get_compatible_commit:354 - Fetching commits for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-07 15:08:03.017 | INFO     | __main__:get_compatible_commit:358 - Fetched commits for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-07 15:08:03.022 | INFO     | __main__:get_compatible_commit:364 - Getting list of commits for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-07 15:08:03.032 | INFO     | __main__:get_compatible_commit:369 - Found 125 commits for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-07 15:08:03.571 | INFO     | __main__:get_compatible_commit:376 - Found compatible commit f15a149d321ac99ff9b9c024b58e7882f564669f for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-07 15:08:03.571 | INFO     | __main__:add_repo_to_database:1006 - Found compatible commit f15a149d321ac99ff9b9c024b58e7882f564669f for https://github.com/eric-wieser/lean-matrix-cookbook.git
+2024-09-07 15:08:03.571 | INFO     | __main__:add_repo_to_database:1007 - Lean version: v4.8.0
+2024-09-07 15:08:03.571 | INFO     | __main__:add_repo_to_database:1012 - Generating benchmark at /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/lean-matrix-cookbook_f15a149d321ac99ff9b9c024b58
+e7882f564669f
+2024-09-07 15:08:03.571 | INFO     | generate_benchmark_lean4:main:324 - Generating dataset to go into /data/yingzi_ma/lean_project/datasets_retrieval_single_repo_no_ewc_pfr/lean-matrix-cookbook_f15a149d321ac99ff9b9c0
+24b58e7882f564669f
+2024-09-07 15:08:03.571 | INFO     | generate_benchmark_lean4:main:331 - lean toolchain version: {'content': 'leanprover/lean4:v4.8.0\n'}
+2024-09-07 15:08:03.571 | INFO     | generate_benchmark_lean4:main:333 - lean version v: v4.8.0
+2024-09-07 15:08:03.572 | INFO     | generate_benchmark_lean4:main:334 - is supported: True
+2024-09-07 15:08:03.572 | INFO     | generate_benchmark_lean4:main:344 - lean path1 /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0
+2024-09-07 15:08:03.572 | INFO     | generate_benchmark_lean4:main:345 - lean path2 /.elan/toolchains/leanprover--lean4---4.8.0
+2024-09-07 15:08:03.572 | INFO     | generate_benchmark_lean4:main:346 - lean path3 ~/.elan/toolchains/leanprover--lean4---4.8.0
+2024-09-07 15:08:03.572 | INFO     | generate_benchmark_lean4:main:350 - Lean toolchain path 2 does not exist: /.elan/toolchains/leanprover--lean4---4.8.0
+2024-09-07 15:08:03.572 | INFO     | generate_benchmark_lean4:main:352 - Lean toolchain path 3 does not exist: ~/.elan/toolchains/leanprover--lean4---4.8.0
+2024-09-07 15:08:03.572 | INFO     | generate_benchmark_lean4:main:355 - Switched to Lean toolchain at: /data/yingzi_ma/.elan/toolchains/leanprover--lean4---4.8.0
+2024-09-07 15:08:03.640 | INFO     | generate_benchmark_lean4:main:357 - lean --version: Lean (version 4.8.0, x86_64-unknown-linux-gnu, commit df668f00e6c0, Release)
+
+2024-09-07 15:08:03.640 | INFO     | generate_benchmark_lean4:main:358 - repo: LeanGitRepo(url='https://github.com/eric-wieser/lean-matrix-cookbook', commit='f15a149d321ac99ff9b9c024b58e7882f564669f')
+2024-09-07 15:08:03.640 | INFO     | generate_benchmark_lean4:main:360 - Configuring LeanDojo again...
+2024-09-07 15:08:03.645 | INFO     | generate_benchmark_lean4:configure_leandojo:317 - Current working directory: /data/yingzi_ma/lean_project/ReProver
+2024-09-07 15:08:03.645 | INFO     | generate_benchmark_lean4:main:362 - LeanDojo configured
+2024-09-07 15:08:03.645 | INFO     | generate_benchmark_lean4:main:365 - Tracing the repo...
+2024-09-07 15:08:03.648 | DEBUG    | lean_dojo.data_extraction.trace:get_traced_repo_path:87 - The traced repo is available in the cache.
+2024-09-07 15:08:03.648 | INFO     | lean_dojo.data_extraction.trace:trace:116 - Loading the traced repo from /data/yingzi_ma/lean_project/.cache/lean_dojo/eric-wieser-lean-matrix-cookbook-f15a149d321ac99ff9b9c024b58e
+7882f564669f/lean-matrix-cookbook
+2024-09-07 15:08:03.902 | DEBUG    | lean_dojo.data_extraction.traced_data:load_from_disk:1123 - Loading 292 traced XML files from /data/yingzi_ma/lean_project/.cache/lean_dojo/eric-wieser-lean-matrix-cookbook-f15a149
+d321ac99ff9b9c024b58e7882f564669f/lean-matrix-cookbook with 31 workers
+ 11%|███████████████████                                                                                                                                                                | 31/292 [00:01<00:18, 14.42it/s]
+ 14%|█████████████████████████▏                                                                                                                                                         | 41/292 [00:08<01:23,  3.02it/s]

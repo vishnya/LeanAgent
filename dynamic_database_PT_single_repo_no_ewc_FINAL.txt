@@ -1,0 +1,136 @@
+Repository: lecopivo/SciLean
+  Total sorry theorems: 294
+  Proven sorry theorems: 25
+  Unproven sorry theorems: 269
+  Proven sorry theorem names:
+    - SciLean.scalar_max_zero_one
+    - IsLinearMap.isLinearMap_const_zero
+    - SciLean.scalar_min_zero_one
+    - SciLean.Measure.prod_volume
+    - SciLean.ContCDiffAt.id_rule
+    - SciLean.CDifferentiable.id_rule
+    - SciLean.ite_pull_measureOf
+    - SciLean.Distribution.action_iteD
+    - Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple'
+    - SciLean.ContCDiffMapFD.zero_apply
+    - IsAffineMap.IsAffineMap_apply
+    - SciLean.ContCDiffMap.zero_apply
+    - SciLean.scalar_div_one
+    - SciLean.ContCDiffAt.comp_rule
+    - Function.invFun.id_rule
+    - SciLean.CDifferentiableAt.comp_rule
+    - SciLean.SmoothLinearMap.zero_apply
+    - Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple
+    - SciLean.re_float
+    - Function.Bijective.Equiv.invFun.arg_a0.Bijective_rule
+    - Function.Bijective.Equiv.toFun.arg_a0.Bijective_rule
+    - SciLean.ArrayType.ext
+    - SciLean.CDifferentiableAt.id_rule
+    - IsLinearMap.isLinearMap_apply
+    - SciLean.norm₂_scalar
+
+Repository: ImperialCollegeLondon/FLT
+  Total sorry theorems: 2
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 2
+  Proven sorry theorem names:
+
+Repository: teorth/pfr
+  Total sorry theorems: 37
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 37
+  Proven sorry theorem names:
+
+Repository: AlexKontorovich/PrimeNumberTheoremAnd
+  Total sorry theorems: 27
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 27
+  Proven sorry theorem names:
+
+Repository: dwrensha/compfiles
+  Total sorry theorems: 5
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 5
+  Proven sorry theorem names:
+
+Repository: google-deepmind/debate
+  Total sorry theorems: 0
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 0
+  Proven sorry theorem names:
+
+Repository: avigad/mathematics_in_lean_source
+  Total sorry theorems: 29
+  Proven sorry theorems: 16
+  Unproven sorry theorems: 13
+  Proven sorry theorem names:
+    - MyRing.neg_neg
+    - MyRing.self_sub
+    - MyRing.add_left_cancel
+    - C03S05.MyAbs.neg_le_abs_self
+    - absorb1
+    - MyRing.neg_eq_of_add_eq_zero
+    - C03S05.MyAbs.abs_add
+    - C03S05.MyAbs.le_abs_self
+    - MyGroup.mul_inv_rev
+    - MyGroup.mul_one
+    - MyRing.add_right_cancel
+    - MyRing.zero_mul
+    - C03S01.my_lemma3
+    - MyGroup.mul_right_inv
+    - MyRing.add_neg_cancel_right
+    - C03S04.aux
+
+Repository: digama0/lean4lean
+  Total sorry theorems: 4
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 4
+  Proven sorry theorem names:
+
+Repository: eric-wieser/lean-matrix-cookbook
+  Total sorry theorems: 7
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 7
+  Proven sorry theorem names:
+
+Repository: yuma-mizuno/lean-math-workshop
+  Total sorry theorems: 0
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 0
+  Proven sorry theorem names:
+
+Repository: loganrjmurphy/LeanEuclid
+  Total sorry theorems: 0
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 0
+  Proven sorry theorem names:
+
+Repository: FormalizedFormalLogic/Foundation
+  Total sorry theorems: 0
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 0
+  Proven sorry theorem names:
+
+Repository: leanprover-community/lean-auto
+  Total sorry theorems: 0
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 0
+  Proven sorry theorem names:
+
+Repository: nomeata/loogle
+  Total sorry theorems: 0
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 0
+  Proven sorry theorem names:
+
+Repository: leanprover-community/con-nf
+  Total sorry theorems: 0
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 0
+  Proven sorry theorem names:
+
+Repository: siddhartha-gadgil/Saturn
+  Total sorry theorems: 0
+  Proven sorry theorems: 0
+  Unproven sorry theorems: 0
+  Proven sorry theorem names:

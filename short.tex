@@ -1,0 +1,1243 @@
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2025_conference,times}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+
+% Optional math commands from https://github.com/goodfeli/dlbook_notation.
+\input{math_commands.tex}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\newcommand{\adarsh}[1]{\noindent{\textcolor{blue}{\textbf{ Adarsh:} \textsf{#1} }}}
+
+\newcommand{\peiyang}[1]{\noindent{\textcolor{purple}{\textbf{ Peiyang:} \textsf{#1} }}}
+
+\newcommand{\robert}[1]{\noindent{\textcolor{brown}{\textbf{ Robert:} \textsf{#1} }}}
+
+\title{LeanAgent: Framework for Lifelong Learning in Theorem Proving}
+
+% Authors must not appear in the submitted version. They should be hidden
+% as long as the \iclrfinalcopy macro remains commented out below.
+% Non-anonymous submissions will be rejected without review.
+
+\author{
+  Adarsh Kumarappan \\
+  Computing and Mathematical Sciences\\
+  California Institute of Technology\\
+  \texttt{adarsh@caltech.edu} \\
+}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+%\iclrfinalcopy % Uncomment for camera-ready version, but NOT for submission.
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+\paragraph{Introduction}
+While Large Language Models (LLMs) have advanced formal theorem proving in interactive proof assistants like Lean, current approaches struggle with generalizability to research-level mathematics due to their focus on specific datasets and domains. These methods fail to capture the dynamic nature of mathematical formalization across multiple domains and projects. We introduce LeanAgent, a novel lifelong learning framework for theorem proving that continuously adapts to an expanding mathematical knowledge base while retaining previous knowledge. LeanAgent's key innovations include a curriculum learning strategy optimizing the learning trajectory based on mathematical difficulty, a progressive training paradigm balancing stability and plasticity, and a dynamic database managing evolving mathematical knowledge. LeanAgent significantly improves lifelong learning metrics, achieving 75.34\% lower Windowed Forgetting (WF5), 59.97\% lower Forgetting Measure (FM), and 16.25\% higher Expanded Backward Transfer (BWT) scores compared to the next best framework. It attains a 93.57\% composite lifelong learning score, demonstrating continuous generalizability and improvement. Furthermore, LeanAgent proves 162 previously unproven ``sorry'' theorems across 22 diverse Lean repositories, including research-level mathematics like the Polynomial Freiman-Ruzsa (PFR) conjecture formalization. It successfully tackles challenging theorems in abstract algebra and algebraic topology, showcasing progression from basic to advanced topics. LeanAgent's code and proven theorems are publicly available\footnote{\url{https://github.com/Adarsh321123/CS159FinalProject/tree/refactor}}.
+\end{abstract}
+
+\section{Introduction}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=14cm]{LeanAgentOverview.png}
+    \caption{High-level overview of LeanAgent. LeanAgent automatically searches for and clones Lean repositories from GitHub. Then, it uses LeanDojo's \citep{yangLeanDojoTheoremProving2023} tracing functionality to extract fine-grained information about the theorems and proofs from these repositories. Then, it computes the difficulty of each theorem using the formula $\text{difficulty} = e^{(\text{number of proof steps})}$. Then, we compute the 33rd and 67th percentiles of difficulty across all theorems in all repositories. Using these percentiles, we sorted the repositories based on the number of easy theorems they contain, forming our curriculum. We add these repositories to LeanAgent's dynamic database to track its growing knowledge base. For each repository in the curriculum, LeanAgent uses the dynamic database to generate a dataset. After this, it progressively trains the LeanAgent's retriever on the merged dataset, focusing on limited exposure to account for the stability-plasticity tradeoff. After this, it uses premise retrieval, tactic generation, and best-first tree search to prove previously unproven results, known as \textit{sorry} theorems, and adds generated proofs to the database.}
+    \label{fig:overview}
+\end{figure}
+
+Formal theorem proving is a fundamental task in mathematics and computer science that involves constructing rigorous, machine-checkable proofs \citep{imperialcollegefacultyofnaturalsciencesFutureMathematicsProfessor2019}. This process ensures the correctness of mathematical statements and software systems, providing a high level of confidence in the validity of the results. Interactive theorem provers (ITPs), such as Lean\footnote{In this paper, ``Lean" refers to Lean 4, the latest version.} \citep{demouraLeanTheoremProver2015}, have emerged as powerful tools for this purpose. However, constructing formal proofs using ITPs is highly complex and time-consuming. For example, since Lean proofs consist of proof steps, known as tactics, that take existing definitions or theorems, called premises, as arguments, constructing proofs in Lean requires extensive expertise in mathematics and the specific theorem-proving environment. Researchers have explored ways to use machine learning to automate interactions with ITPs, aiming to streamline the process of formal theorem proving for mathematicians \citep{yangLearningProveTheorems2019}. Specifically, recent research has explored the use of large language models (LLMs) to generate proof steps or an entire proof.
+
+Existing approaches typically involve training or fine-tuning an LLM on a specific dataset to perform well on particular tasks (TODO: cite some like IMO). However, these approaches often lack generalizability to the broader, ever-expanding Lean knowledge base. For example, a key ``narrow" dataset is the LeanDojo4 Benchmark, generated from Lean's math library, \texttt{mathlib4} \citep{communityLeanprovercommunityMathlib42024}. It was made using LeanDojo, a tool to extract theorems, proofs, and premises from Lean source files (TODO: cite). Although \texttt{mathlib4} contains over 100,000 formalized mathematical theorems and definitions from diverse topics like analysis and algebra, its theorems are foundational and only cover up to undergraduate mathematics\footnote{Further details on the statistics of \texttt{mathlib4} are available at TODO}. ReProver, the retrieval-augmented LLM released as part of the LeanDojo family (TODO: cite), uses a retriever fine-tuned on the LeanDojo4 Benchmark (TODO: cite). The full model was created by employing supervised fine-tuning on an encoder-decoder Transformer, ByT5 \citep{xueByT5TokenFreeFuture2022}. ReProver searches for proofs using best-first search while retrieving premises and generating tactics at each proof step. However, ReProver's proving capabilities are limited because its retriever only has knowledge from \texttt{mathlib4} (TODO: cite). As such, although ReProver performs well on benchmarks like ProofNet (TODO: cite), which focuses on exercises in undergraduate math textbooks, it performs poorly on more challenging research-level mathematics, such as Terence Tao's formalization of the Polynomial Freiman-Ruzsa (PFR) Conjecture (details in Sec. 5).
+
+
+Current theorem-proving AI approaches operate under an idealized, static formalization paradigm that fails to capture the dynamic, multifaceted nature of real-world mathematical work. In practice, mathematicians often formalize across multiple domains and projects simultaneously or cyclically. For example, Terence Tao has actively worked on multiple projects in parallel, including formalizations of the PFR conjecture, the symmetric mean of real numbers, the classical Newton inequality, and asymptotic analysis (TODO). Similarly, Patrick Massot has been working on multiple Lean projects simultaneously, including the Liquid Tensor Experiment and the Perfectoid Spaces project (TODO). These examples illustrate the breadth and depth of knowledge that expert mathematicians bring to their formalization efforts, often switching between disparate mathematical domains as they progress. This scenario highlights a critical gap in current theorem-proving AI approaches: the lack of a system that can adapt and improve across multiple, diverse mathematical domains over time. Crucially, how mathematicians formalize in practice is similar to the field of ``lifelong learning" in machine learning, where tasks are learned sequentially but applied as if they were learned simultaneously \citep{wangComprehensiveSurveyContinual2024}. In our setting, these tasks are new Lean repositories representing different areas of formal mathematics. While the learning may occur sequentially, applying this knowledge is inherently parallel and interconnected, making this paradigm particularly applicable to theorem proving due to the cumulative and interconnected nature of mathematical knowledge.
+
+However, a significant challenge of lifelong learning is catastrophic forgetting, which occurs when adaptation to a new distribution leads to a loss of understanding of old ones. This phenomenon highlights the core challenge of balancing plasticity (the ability to learn and adapt) with stability (the ability to retain existing knowledge) (TODO). The plasticity-stability dilemma is at the heart of the catastrophic forgetting problem: Increasing plasticity to learn new tasks efficiently can lead to overwriting of previously learned information, while enhancing stability to preserve old knowledge may impair the model's ability to acquire new skills (https://arxiv.org/html/2403.05175v1). Some recent works describe how fine-tuning tends to add specialized reasoning patterns rather than erasing previous skills, which may manifest as forgetting \citep{jiangInterpretableCatastrophicForgetting2024}. In theorem proving, we find that stability is more important than plasticity as it emphasizes a deeper understanding of foundational mathematics, allowing for continuous generalizability to new repositories. Placing too much emphasis on plasticity can lead to the ability to prove more complex theorems at the expense of simpler ones, resulting in fewer theorems proved overall (details in Sec. 5 TODO). Additionally, Backward Transfer (BWT) is an important concept in continual learning where learning a new task improves performance on previously learned tasks, allowing for continuous improvement in theorem proving. Consequently, mathematicians require a lifelong learning framework for theorem proving that is both \textit{continuously generalizable} and \textit{continuously improving}.
+
+To address these challenges, we present LeanAgent, a novel lifelong learning framework for theorem proving. LeanAgent is a novel lifelong learning framework for theorem proving that addresses the challenges of continuous generalizability and improvement in mathematical formalization. It automatically processes Lean repositories, constructs a curriculum based on theorem difficulty, and progressively trains its retriever on premises from each repository. The framework incorporates several key innovations: a curriculum learning strategy that optimizes the learning trajectory, a progressive training paradigm that balances stability and plasticity, and a custom dynamic database for managing evolving mathematical knowledge. These components allow LeanAgent to adapt to new mathematical domains without forgetting previously learned information and demonstrate improved performance across all tasks as it encounters new challenges.
+
+
+Extensive experiments across 22 diverse Lean repositories demonstrate LeanAgent's significant advancements in lifelong learning for theorem proving. It achieves substantially lower forgetting scores (75.34\% lower WF5, 59.97\% lower FM) and higher backward transfer (16.25\% higher BWT) compared to the next best framework, resulting in a near-perfect composite lifelong learning score of 93.57\%. Moreover, LeanAgent successfully proves 162 \textit{sorry} theorems, many from research-level mathematics, including challenging theorems from the Polynomial Freiman-Ruzsa (PFR) conjecture formalization, abstract algebra, and algebraic topology. Notably, LeanAgent demonstrates a progression from proving basic theorems during initial lifelong learning to tackling more complex theorems at later stages, showcasing its ability to grasp foundational concepts and develop an increased understanding of various mathematical areas.
+
+
+\section{Related Work}
+
+%TODO: for autoformalization 
+% https://arxiv.org/pdf/2406.01940 
+
+\textbf{Autoformalization}: Recent work in autoformalization of mathematics, particularly using Lean, has seen significant progress. Some examples include; DeepMind that developed an AI model that achieved silver-medal standard performance at the International Mathematical Olympiad using Lean. Additionally researchers have proposed a new benchmark called Formalization for Lean 4 (FORML4) to evaluate the autoformalization capabilities of large language models (LLMs).
+\citep{lu2024processdrivenautoformalizationlean4}. While not specific to Lean, there have been broader advancements in autoformalization using LLMs, Researchers demonstrated that LLMs can correctly translate a significant portion (25.3\%) of mathematical competition problems into formal specifications in Isabelle/HOL. This approach has led to improvements in neural theorem proving, achieving a new state-of-the-art result on the MiniF2F theorem proving benchmark \citep{wu2022autoformalizationlargelanguagemodels}.
+
+\textbf{Proof Complexity}: There has been work to measure the complexity or difficulty of mathematical proofs. One such measure is the approach called Length-Based measures. It included looking at the a) Proof length (number of steps or lines) and b) Size of the proof term in a formal system. While these can indicate verificational complexity, they may not fully capture the difficulty of discovering a proof \citep{Arana2023-ARAOTD-3}. While there's no universally accepted measure of proof difficulty in Lean or other formal systems, this remains an active area of research. 
+%TODO: cite curriculum? has someone else used exponential in pure math so we should cite?
+
+%TODO: can mention that there are many interesting formalizatoins like 
+% https://www.arxiv.org/pdf/2408.15180 or xena project stuff https://www.ma.imperial.ac.uk/~buzzard/xena/, https://github.com/leanprover-community/lean-liquid, The Perfectoid Spaces project that are unfortunately in lean3. mention why we focus on lean 4. mention we can only look at lean packages and not source files since that is limitation of lean dojo
+
+% For more details, please refer to \hyperref[sec:additional_related_work]{Appendix A.2}.
+
+\textbf{Neural Theorem Proving} The current state-of-the-art of learning-based provers employs Transformer-based \citep{vaswaniAttentionAllYou2017a} large language models (LLMs) that process expressions as plain text strings \citep{poluGenerativeLanguageModeling2020}. Researchers have explored various complementary aspects, including advanced proof search algorithms \citep{lampleHyperTreeProofSearch, wangDTSolverAutomatedTheorem2023}.
+
+\textbf{Premise Selection} 
+A critical challenge in automated theorem proving is the effective selection of relevant premises \citep{urbanMPTPMotivationImplementation2004, irvingDeepMathDeepSequence2016, szegedyRetrievalAugmentedProofStep, tworkowskiFormalPremiseSelection}. However, many existing approaches treat premise selection as an isolated problem \citep{irvingDeepMathDeepSequence2016, wangLearningProveTheorems2020, piotrowskiMachineLearnedPremiseSelection2023} or use selected premises only as input to symbolic provers \citep{bohmeSledgehammerJudgementDay2010, alamaPremiseSelectionMathematics2014, mikulaMagnushammerTransformerBasedApproach2024}. Instead, ReProver integrates premise selection directly into a learning-based prover, allowing the system to learn the optimal usage of selected premises.
+
+% LeanAgent takes this multiple steps further, updating the retriever used by the LLM-based theorem prover progressively over multiple further epochs of training over new datasets. This way, it can employ its knowledge of new or uncommon premises in a repository for retrieving during proof search.
+
+%\textbf{Tools and Datasets} The development of specialized tools and datasets has been crucial in advancing learning-based theorem proving..
+
+% Our work with LeanAgent contributes to this landscape by providing robust interaction with Lean data through our dynamic database. We provide an extensive and simple user API to interact with this data.
+% including the ability to generate datasets much larger and more diverse than the LeanDojo Benchmark using various strategies.
+
+\textbf{Retrieval-Augmented LLMs} While retrieval-augmented language models have been extensively studied in natural language processing and code generation \citep{hayatiRetrievalBasedNeuralCode2018, parvezRetrievalAugmentedCode2021, luReACCRetrievalAugmentedCode2022, zhouDocPromptingGeneratingCode2023, shrivastavaRepositoryLevelPromptGeneration2023, zhangRepoCoderRepositoryLevelCode2023, dingCoCoMICCodeCompletion2023}, their application to formal theorem proving is relatively new, although relevant architectures have been researched in NLP \citep{khandelwalGeneralizationMemorizationNearest2020, guuRetrievalAugmentedLanguage2020, lewisRetrievalAugmentedGenerationKnowledgeIntensive2021, borgeaudImprovingLanguageModels2022, liDecoupledContextProcessing2022, jiangRetrievalAttentionEndtoend2022, wuMemorizingTransformers2022, izacardAtlasFewshotLearning2022, zhongTrainingLanguageModels2022}.
+
+Unlike many of these code generation approaches that retrieve from general corpora, ReProver's retrieval mechanism focuses on premises directly accessible within the current context, as determined by program analysis from LeanDojo.
+
+% LeanAgent builds upon these works by retrieving from a much larger corpus of premises that it understands through progressive training. This allows our model to generalize better to new theorem-proving tasks.
+
+\textbf{IMO-Focused LLMs} NuminaMath 7B TIR, DeepSeek-Prover-V1.5, AlphaProof and AlphaGeometry 2, and Aristotle focused on proving IMO problems \citep{numina_math_7b, xinDeepSeekProverV1HarnessingProof2024a, alphaprofGeometry2024, harmonicAristotle2024}. However, they are computationally expensive. For example, NuminaMath relies heavily on GPT-4 for generating training data and requires significant computational resources for its two-stage fine-tuning process. 
+
+\textbf{Curriculum Learning}: Curriculum learning as an approach to improve theorem proving, has been explored such as in the paper Formal Mathematics Statement Curriculum Learning \citep{}, the authors introduce a technique involving a curriculum of theorems of increasing difficulty. They use expert iteration, combining proof search with learning and demonstrates that this approach outperforms proof search alone at the same compute budget. This work is prticularly interesting because it allows the system to automatically discover a curriculum, rather than requiring one to be manually designed. Even the DeepSeek-Prover paper \citep{xinDeepSeekProverV1HarnessingProof2024a} uses an iterative framework to improve proof quality. This iterative approach shares some similarities with curriculum learning, as the model gradually improves its capabilities through exposure to increasingly complex problems.
+% In contrast, LeanAgent's dynamic knowledge integration framework uses a tiny and generalizable model. LeanAgent can continually incorporate new mathematical knowledge from diverse sources, enabling adaptation to a much broader range of mathematical tasks beyond competition-style problems.
+
+\section{Background: Lifelong Learning}
+\label{sec:background}
+
+One lifelong learning method involves adding regularization terms concerning the original model. Elastic Weight Consolidation (EWC) uses a quadratic constraint where weights are influenced to move toward their old values by amounts proportional to their importance on old tasks \citep{kirkpatrickOvercomingCatastrophicForgetting2017}. This importance is calculated with the Fisher Information Matrix, and the hyperparameter $\lambda$ adjusts the regularization strength. Another method is the replay-based approach, which recovers old data distributions. This can be achieved by storing old training samples in new datasets.
+
+Gradient-based optimization manipulation is equivalent to these approaches, as they all manipulate the gradients of the model. Knowledge distillation has also been proposed as a solution, but approaches in distillation for retrieval, such as EmbedDistill \citep{kimEmbedDistillGeometricKnowledge2023}, are challenging to implement with reasonable effort. Memory Aware Synapses \citep{aljundiMemoryAwareSynapses2018} has been proposed as an alternative to EWC that computes the importance based on the sensitivity of the learned function output to parameter changes. However, it is only marginally better than EWC. MoFO \citep{chenMoFOMomentumFilteredOptimizer2024} updates only the model parameters with the largest momentum magnitudes. This aims to balance plasticity and stability in continual learning. Lastly a recent work called, Continual backpropagation \citep{dohareLossPlasticityDeep2024} that selectively reinitializes less-used units, effectively maintaining plasticity over long learning periods.
+
+\vspace{-3mm}
+\section{Methodology}
+\label{sec:methodology}
+
+We now introduce the details of LeanAgent. The key insights are that a useful lifelong learning strategy for theorem proving solves two problems: (a) finding the best dataset order and construction strategy and (b) finding the best learning strategy. We solve (a) with a novel curriculum learning strategy that utilizes the structure of Lean proofs, and we solve (b) using a progressive training paradigm that balances stability with plasticity.
+
+LeanAgent consists of five main components: repository scanning and data extraction, curriculum construction, dynamic database management, progressive training of the retriever, and \textit{sorry} theorem proving. Figure \ref{fig:overview} shows an overview of the whole pipeline, with more detailed figures for each part and implementation details available in \hyperref[sec:implementation_details]{Appendix A.1}.
+
+\subsection{Repository Scanning and Data Extraction}
+
+First, we automatically search for and clone Lean repositories from GitHub. We use the LeanDojo tracing functionality for each repository to extract fine-grained information about the theorems, proofs, and dependencies. Following the same procedure used to make the LeanDojo4 Benchmark, we use this traced data to generate a dataset that serves as a set of demonstrations of how to use specific tactics and premises at any given state, where a state consists of a set of hypotheses and the current progress for reaching the goal. Specifically, we use a random split to divide this dataset into training, validation, and testing sets. We refrain from using the novel split from LeanDojo, as we would like LeanAgent to learn as much as possible from a repository to perform well on its hardest theorems. We then generate a premise corpus to server as a knowledge base for LeanAgent.
+
+\subsection{Curriculum Learning}
+
+Crucially, our approach employs a curriculum learning strategy to allow LeanAgent to learn on increasingly complex mathematical repositories. This process is designed to optimize the learning trajectory of the model, allowing it to build upon foundational knowledge before tackling more advanced concepts, thus mimicking the natural progression of mathematical understanding. We perform a comprehensive analysis of all theorems for each repository LeanAgent has analyzed. The difficulty of each theorem is calculated using the formula: $\text{difficulty} = e^{(\text{number of proof steps})}$. We choose an exponential scaling because it emphasizes the increasing complexity of longer proofs due to the combinatorial explosion of possible proof paths. Theorems marked with \textit{sorry} are assigned infinite difficulty, ensuring they are categorized as the most challenging.
+
+After calculating theorem difficulties, we compute the 33rd and 67th percentiles across all repositories and categorize theorems into four groups: Easy (below 33rd percentile), Medium (between 33rd and 67th percentiles), Hard (above 67th percentile), and Unproven (\textit{sorry} statements with infinite difficulty). To account for Lean's support of both tactic-style and term-style proofs, and LeanDojo's limitation to analyzing only tactic-style proofs, theorems without identifiable proof steps (due to term-style proofs) are evenly distributed among the Easy, Medium, and Hard categories. This ensures all theorems are considered in the learning process. Repositories are then sorted based on the number of easy theorems they contain, forming the basis of our curriculum. LeanAgent begins with repositories containing the highest number of easy theorems and progressively moves to more challenging ones, allowing for a structured learning trajectory that builds from foundational concepts to more complex mathematical domains.
+
+\vspace{-3mm}
+\subsection{Dynamic Database Management}
+
+Then, we use a custom Lean dynamic database to efficiently manage and update the growing collection of mathematical knowledge from various repositories. Details of the database's contents and key features can be found in \hyperref[sec:implementation_details]{Appendix A.1}. Crucially, each repository in the database has a category of ``\textit{sorry} theorems that are unproven" and ``\textit{sorry} theorems that are proven."
+
+This highly customizable database plays a vital role in multiple stages of LeanAgent's operation. It stores the current curriculum repository, including extracted data, theorem difficulties, and generated proofs, enabling efficient tracking and interaction with LeanAgent's evolving knowledge. The database also facilitates dataset generation, offering users various options for this process. The default and best-performing approach, termed ``single repo" construction, utilizes theorems, proofs, premise files, and traced files solely from the current curriculum repository in the database. This method has shown superior performance in experimental evaluations (details in Sec. 5). By integrating repository processing, knowledge tracking, and dataset generation, the dynamic database serves as a cornerstone of LeanAgent's ability to adapt and improve across diverse mathematical domains.
+
+\subsection{Progressive Training of the Retriever}
+
+LeanAgent employs a progressive training strategy for the premise retriever's encoder. This strategy is designed to continuously adapt to new mathematical knowledge from the premises in new datasets while preserving previously learned information, a crucial aspect for lifelong learning in theorem proving. The key distinction of our progressive training approach lies in its ability to incrementally incorporate new knowledge from each repository while maintaining performance on previously seen data. This starkly contrasts traditional fine-tuning, which often leads to catastrophic forgetting when applied sequentially to new datasets.
+
+We start with ReProver's retriever encoder, a fine-tuned version of Google's ByT5 encoder, leveraging its general pre-trained knowledge from \texttt{mathlib4}. However, it is important to note that LeanAgent is a framework, not a model; this methodology can be used with any encoder-decoder model implemented within the codebase. While LeanAgent is designed to be flexible, we provide a specific implementation in the Appendix (TODO) to demonstrate its effectiveness.
+
+Some details of the training setup, mentioning in the Appendix are inspired by the LeanDojo paper. Given a new repository, we train the model for an additional epoch. This limited exposure helps prevent overfitting to the new data while allowing the model to learn essential new information. Prior to validation, we precompute embeddings for all premises in the corpus. This crucial step ensures that all premise embeddings are consistent with the model's current state, allowing for efficient retrieval during the theorem-proving process. Then, we save the model iteration with the highest validation recall for the top ten retrieved premises (R@10). This metric evaluates the model's plasticity, or its ability to adapt to and understand new types of mathematics presented in the latest repository. Finally, we compute the average test R@10 over all previous datasets the model has been progressively trained on. This critical step, absent in traditional fine-tuning, allows us to assess the model's stability over time and check for catastrophic forgetting. It ensures that the model maintains its performance on earlier datasets while adapting to new ones.
+
+We repeat this procedure for each dataset we generate from the database, hence the ``progressive" nature of this training. It is important to note that by doing this, not only do we add new premises to the premise embeddings, but we also increase the space of possible proof states. This allows the model to explore more diverse paths to prove theorems, discovering new proofs that it couldn't produce with its original knowledge base.
+
+\subsection{\textit{sorry} Theorem Proving}
+
+LeanAgent is powerful enough to generate proofs of \textit{sorry} theorems. It chooses the traced theorems that contain the \textit{sorry} keyword and occur in the traced repository rather than its dependencies.
+
+% LeanAgent is powerful enough to generate proofs for the theorems within the repositories containing the \textit{sorry} keyword, indicating that the proof is incomplete or missing and requires further attention. We denote these theorems as ``\textit{sorry} theorems." It chooses the traced theorems that contain the \textit{sorry} keyword and occur in the traced repository rather than its dependencies.
+
+For each \textit{sorry} theorem, we generate a proof with best-first tree search where the model generates tactic candidates at each step \citep{hanProofArtifactCotraining2021, jiangThorWieldingHammers2022, poluFormalMathematicsStatement2022, zhengMiniF2FCrosssystemBenchmark2021}. We start by processing the premise corpus to use it more efficiently during premise retrieval. This involves initializing a directed dependency graph to represent each file path in the corpus, adding files as nodes and imports as edges, and creating a transitive closure of this graph. Also, we track all premises encountered during this process, building a comprehensive knowledge base. Then, using the embeddings from the entire corpus of premises we previously collected, retrieve relevant premises from the corpus based on their similarity to the current proof state, represented as a context embedding. Then, we filter the results using the corpus dependency graph to ensure that only accessible premises from the current file are considered. We limit retrieval during this process to a subset of all available premises to aid the effectiveness of the results. Specifically, we choose the top 25\% of accessible and relevant premises, following ReProver's method (TODO: cite). Of these, LeanAgent retrieves the 100 most relevant premises.
+
+We add these retrieved premises to the current state and generate tactic candidates using beam search. Then, we run each tactic candidate through Lean to obtain potential next states. Each successful tactic application adds a new edge to the proof search tree. We choose the most promising tactic for expansion, determined by the maximum cumulative log probability of the tactics leading to it. If the search reaches a dead-end, we backtrack and explore alternative paths. We repeat the above steps until the search finds a proof, exhausts all possibilities, or reaches the time limit of 10 minutes. If LeanAgent finds a proof, then we add this proof to the theorem and move this theorem from the repository's category of ``\textit{sorry} theorems that are unproven" to ``\textit{sorry} theorems that are proven" in the database. This means that the newly added premises from this proof will be included the next time the current repository is used in a dataset for progressive training.
+
+
+\section{Experiments}
+
+\subsection{Experimental Setup}
+
+For our first set of experiments, we evaluate LeanAgent against seven other learning and dataset setups. Each setup consists of some combination of the following:
+\begin{enumerate}
+    \item Learning: With or without EWC
+    \item Dataset:
+        \item Single repo, where each dataset consists of just the newly discovered repo, or merge all, where each dataset consists of all the repos we have discovered in addition to the new one. The merge all strategy is executed using the data in the dynamic database.
+        \item Given the most popular repos on GitHub by star count, order them by decreasing popularity or the computed curriculum.
+\end{enumerate}
+
+To clarify, even when using the merge all strategy, only \textit{sorry} theorems from the new repository are proven during each iteration of lifelong learning. The exception is for LeanAgent, which also proves all of the \textit{sorry} theorems at the end of lifelong learning (explanation below).
+
+Also, it is important to note that the merge all strategy acts as a replay-based approach in lifelong learning. This insight becomes useful during the discussion below. Please see Appendix for implementation details regarding our experiments.
+
+\textbf{Baselines} To our knowledge, no other lifelong learning frameworks for theorem proving exist in the literature. As such, we can only compare the validation R@10 and average test R@10 with the seven other setups detailed previously. However, although not a direct comparison given the nature of the problem setting, we evaluate LeanAgent against the baselines of ReProver with retrieval and ReProver without retrieval to compare the \textit{sorry} theorems these methods can prove for each new repository. We choose ReProver because we use its retriever as the starting one for the LeanAgent experiments, allowing for a more faithful comparison.
+
+\textbf{Repositories} We evaluate our approach on a diverse set of 22 Lean repositories to assess its generalizability across different mathematical domains. Details are in Figure \ref{fig:repos}. Also, although LeanEuclid is a benchmark for autoformalization, we use it strictly to evaluate LeanAgent's validation R@10 and average test R@10.
+
+% \textbf{Repositories} We evaluate our approach on a diverse set of 22 Lean repositories to assess its generalizability across different mathematical domains. These include the SciLean repository for scientific computing, PrimeNumberTheoremAnd for formalizing the proof of the Prime Number Theorem, Mathematics in Lean Source for generating Lean files for the \textit{Mathematics in Lean} textbook, PFR for formalizing the proof of the Polynomial Freiman-Ruzsa (PFR) conjecture, Compfiles for a catalog of Olympiad-style math problems, FLT for formalizing the proof of Fermat's Last Theorem, Debate for formalizing a stochastic doubly-efficient debate protocol, Lean4lean for implementing the Lean4 kernel in Lean4, Lean Matrix Cookbook for formalizing the lemmas in \textit{The Matrix Cookbook}, Lean Math Workshop for formalizing a detailed tutorial of Lean, LeanEuclid for autoformalizing euclidean geometry, Foundation for formalizing basic results about formal logic, Con-nf for formalizing the consistency proof of Quine's set theory called ``New Foundations," Saturn for a SAT solver-prover, MiniF2F-lean4 for problem solving questions such as those in math olympiads, Zeta3Irrational for the proof that $\zeta (3)$ is irrational, Formal Book for formalizing proofs from \textit{THE BOOK}, Formalization of Constructable Numbers for formalizing ancient construction problems, Carleson for formalizing Carleson's theorem, LeanAPAP for formalizing the Kelley-Meka bound on Roth numbers, Hairy Ball Theorem for formalizing the famous result in algebraic topology, Coxeter for formalizing Coxeter groups, and Lean4 PDL for formalizing a Tableaux proof system for Propositional Dynamic Logic.
+
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.7\linewidth]{leanrepo.png}
+        \caption{LeanAgent Repositories}
+        \label{fig:repos}
+    \end{figure}
+
+% We split the presentation of the experiments into two parts, first describing LeanAgent's performance on key metrics in lifelong learning and then discussing the LeanAgent's significant improvement in proving \textit{sorry} theorems.
+
+\subsection{Lifelong Learning Analysis}
+
+We evaluate each experiment using the following metrics:
+\begin{enumerate}
+    \item Validation R@10 (recall for the top 10 retrieved premises). This evaluates the model's performance on the new dataset.
+    \item Average test R@10. This evaluates the model's performance on all datasets over time. 
+    \item \textit{sorry} theorems proved. We only prove the \textit{sorry} theorems from the new repo we encounter.
+\end{enumerate}
+
+\paragraph{Stability Metrics}
+To address limitations in lifelong learning evaluation, several stability metrics have been introduced. Windowed-Forgetting (WF) quantifies model stability by measuring the maximum performance decrease in average test R@10 over a sliding window of evaluations, with lower values indicating better stability. We use a window size of 5 (WF5) for our 14 repositories. Catastrophic Forgetting Resilience (CFR) measures the model's ability to avoid catastrophic forgetting, calculated as the quotient of minimum and maximum average test R@10, with higher values indicating better resilience. The Forgetting Measure (FM) assesses the negative influence of learning new tasks on old ones, with lower values suggesting better stability. Expanded Backward Transfer (BWT) measures the positive influence of new tasks on old ones, considering the average backward transfer after each task, with higher values indicating greater improvement on old tasks.
+
+\paragraph{Plasticity Metrics}
+Complementary to stability metrics, plasticity metrics assess the model's ability to learn and adapt. Windowed-Plasticity (WP) measures the model's capacity to learn new information by quantifying the maximum average test R@10 increase over a sliding window. We use a window size of 5 (WP5), with higher values suggesting greater plasticity and better ability to acquire new knowledge. Incremental Plasticity (IP) tracks changes in validation R@10 for each task over time, normalized by the time step, showing how quickly new knowledge is incorporated and stabilized. A higher IP value indicates more rapid plasticity. These metrics, together with the stability metrics, provide a comprehensive evaluation of a model's performance in lifelong learning scenarios, balancing the ability to retain old knowledge while adapting to new tasks.
+
+To the best of our knowledge, there isn't a widely established composite metric that provides a single trade-off score emphasizing stability over plasticity using the above metrics. As such, given that we emphasize continuous generalizability and continuous improvement in theorem proving, we propose the following composite score:
+
+\begin{align*}
+\text{Composite Score} = & 0.2 \cdot (1 - \text{WF5}_\text{norm}) + 0.2 \cdot (1 - \text{FM}_\text{norm}) \\
+                         & + 0.1 \cdot \text{WP5}_\text{norm} + 0.1 \cdot \text{IP}_\text{norm} \\
+                         & + 0.2 \cdot \text{Expanded\_BWT}_\text{norm} + 0.2 \cdot \text{CFR}_\text{norm}
+\end{align*}
+
+Each metric is normalized before being used in the composite score calculation. The weights emphasize continuous generalizability (WF5, FM, and CFR total 0.6) and continuous improvement (Expanded BWT at 0.2) while also considering plasticity (WP5 and IP total 0.2).
+
+% Note that despite these metrics originating from lifelong learning theory, they are computed from the premise selection metrics of validation R@10 and average test R@10 in this setting.
+
+However, it is important to note that some of the lifelong learning metrics we use have different interpretations in the ``merge all" dataset construction strategy, which differs from the traditional task-incremental setup. To the best of our knowledge, an interpretation of these metrics in this setting has not been thoroughly conducted. As such, we propose that metrics should be interpreted with an understanding that they may reflect the model's adaptation to gradual shifts in data distribution rather than abrupt task changes. Specifically, WF5 may reflect not just forgetting of old tasks, but also the model's ability to balance and retain knowledge across an expanding dataset. WP5 could indicate how well the model adapts to the growing complexity of the combined dataset, rather than purely learning new, isolated tasks. FM in this context may represent the model's ability to maintain performance on earlier data points as the dataset grows. Expanded BWT might reflect the model's capacity to leverage newly added data to improve performance on the entire historical dataset. CFR becomes a measure of the model's stability in the face of an expanding, potentially more complex dataset. IP may represent how quickly the model adapts to the evolving nature of the combined dataset, rather than discrete new tasks. Overall, these metrics in the ``merge all" case measure the model's ability to accumulate and refine knowledge over time, rather than strictly measuring performance on isolated tasks. As such, we will analyze the 4 single repo and 4 merge all cases separately. In the following analysis, we consider an improvement over the next best experiment setup of at least 3\% to be significant.
+
+\begin{table}
+\caption{Comparison of Lifelong Learning Metrics Across Four ``Single Repo" Experiments}
+\label{tab:experiment-metrics}
+\centering
+\begin{tabular}{lrrrr}
+\hline
+Metric & Exp1 & LeanAgent (Exp3) & Exp7 & Exp8 \\
+\hline
+WF5 & 7.6000 & \textbf{0.1800} & 7.1700 & 0.7300 \\
+FM & 6.5344 & \textbf{0.8455} & 4.0435 & 2.1120 \\
+CFR & \textbf{0.8722} & \textbf{0.8767} & \textbf{0.8805} & 0.8458 \\
+Expanded BWT & 0.5124 & \textbf{1.2086} & 1.0397 & 0.7563 \\
+WP5 & 0.8914 & 2.4736 & 1.4729 & \textbf{3.4200} \\
+IP & 0.3585 & 1.0231 & 0.2562 & \textbf{1.0638} \\
+\hline
+Composite Score & 0.1649 & \textbf{0.9357} & 0.4736 & 0.6107 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Comparison of Lifelong Learning Metrics Across Four ``Merge All" Experiments}
+\label{tab:merge-all-experiment-metrics}
+\centering
+\begin{tabular}{lrrrr}
+\hline
+Metric & Exp2 & Exp4 & Exp9 & Exp10 \\
+\hline
+WF5 & 15.8300 & \textbf{2.2300} & 13.3400 & 5.8200 \\
+FM & 10.4955 & 4.0622 & 11.4362 & \textbf{3.8005} \\
+CFR & 0.7618 & \textbf{0.9365} & 0.7545 & 0.9025 \\
+Expanded BWT & -0.1983 & \textbf{0.7270} & -1.3354 & -0.3880 \\
+WP5 & 0.0000 & 0.0886 & 0.0000 & \textbf{0.1114} \\
+IP & -1.4969 & \textbf{-0.6408} & -1.7062 & -0.8869 \\
+\hline
+Composite Score & 0.1626 & \textbf{0.9726} & 0.0366 & 0.7786 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Single Repository Experiments}
+In single repository experiments, LeanAgent (experiment 3) demonstrates superior stability and continuous improvement compared to other setups. It achieves significantly lower Forgetting Measure (FM) and Windowed Forgetting (WF5) scores, with 59.97\% and 75.34\% improvements respectively over the next best setup. LeanAgent also shows a 16.25\% higher Expanded Backward Transfer (BWT), indicating better leveraging of knowledge from new tasks to improve performance on previous ones. In contrast, experiment 8 exhibits higher plasticity but at the cost of stability, showing 38.26\% higher Windowed Plasticity (WP5) but suffering from more severe catastrophic forgetting. The composite scores reflect LeanAgent's superior balance between stability and plasticity, with a score of 0.9357 compared to 0.6107 for the next best setup.
+
+\paragraph{Merge All Experiments}
+In merge all experiments, experiment 4 shows characteristics similar to LeanAgent, with superior stability and expanded BWT. It achieves 61.68\% lower WF5 and 3.77\% higher Catastrophic Forgetting Resilience (CFR) compared to the next best setup, indicating better knowledge retention across an expanding dataset. Experiment 4 also shows a 466.63\% improvement in Expanded BWT compared to other setups. However, all merge all experiments, including experiment 4, show negative Incremental Plasticity (IP) values, suggesting difficulties in adapting to the growing complexity of the combined dataset. This indicates a fundamental issue with the merge all approach, where task interference or data overwhelming leads to degraded performance over time.
+
+\paragraph{Comparative Analysis and Insights}
+Comparing single repo and merge all experiments reveals that LeanAgent is better suited for long-term continuous learning and generalization. It prioritizes long-term stability and knowledge retention, which is crucial in theorem proving where consistent performance across diverse tasks is essential. The curriculum learning strategy employed in experiments 3, 4, 8, and 10 consistently outperforms the order of decreasing popularity on GitHub, promoting better understanding and stability. The effect of Elastic Weight Consolidation (EWC) varies across different task ordering strategies, generally improving plasticity at the cost of stability in curriculum-based ordering, while offering more balanced improvements in GitHub stars-based ordering. Overall, the single repo approach, exemplified by LeanAgent, appears to mitigate issues of task interference and data overwhelming observed in merge all strategies, making it more suitable for continuous learning in theorem proving.
+
+
+\subsection{Additional Curriculum}
+To further validate LeanAgent's performance, an additional experiment was conducted on 8 repositories containing \textit{sorry} theorems, selected from over 300 parsed repositories due to data scarcity in theorem proving. LeanAgent was compared against experiment 8, the second-best performing setup in single repo experiments. During lifelong learning, LeanAgent demonstrated proficiency across diverse mathematical areas, including real analysis, number theory, Fourier analysis, advanced abstract algebra, and order theory. It successfully proved theorems such as \texttt{book.irrational.lem\_aux\_ii} in real analysis, \texttt{book.quadratic\_reciprocity.quadratic\_reciprocity\_2} in number theory, and \texttt{CoxeterSystem.Presentation.invmap.of\_eq} in abstract algebra. These initial proofs showcased LeanAgent's strong foundation in various mathematical domains.
+
+\paragraph{Advanced Theorem Proving Capabilities}
+By the end of lifelong learning, LeanAgent exhibited significant advancements in its theorem-proving capabilities, particularly in advanced abstract algebra and algebraic topology. Notably, it proved complex theorems that other setups, including experiment 8, could not handle. These include \texttt{wedderburn} (Wedderburn's Little Theorem) in abstract algebra and \texttt{HairyBallDiff}, a key step in the Hairy Ball Theorem in algebraic topology. LeanAgent's proofs demonstrated a deep understanding of complex mathematical structures and concepts. For instance, its proof of the \texttt{wedderburn} theorem showed an intuitive grasp of field properties, efficiently applying the \texttt{Field.toIsField} premise. Similarly, its proof of \texttt{CoxeterSystem.Presentation.invmap.of\_eq} revealed proficiency in navigating complex algebraic structures. These results highlight LeanAgent's ability to not only retain foundational knowledge but also to extend its capabilities to more specialized and abstract mathematical domains, showcasing its effectiveness in continuous learning and generalization in theorem proving.
+
+\section{Conclusion}
+In this paper, we introduced LeanAgent, an innovative AI-assisted theorem prover that leverages lifelong learning techniques for dynamic knowledge retrieval. Our approach addresses the critical challenge of keeping pace with the ever-expanding body of mathematical knowledge in Lean's ecosystem, enabling LeanAgent to effectively assist mathematicians in proving new theorems and formalizing cutting-edge mathematical proofs. Extensive experiments on diverse Lean repositories have validated the superior performance of LeanAgent compared to other theorem-proving techniques on datasets with new or uncommon premises. The successful proof of a significant number of previously incomplete theorems, often surpassing the quality of proofs generated by other methods, highlights the potential of our approach in advancing the state of the art in formal mathematics. LeanAgent's ability to prove challenging theorems in various domains without retraining the retrieval mechanism underscores its adaptability and versatility.
+
+\bibliography{LeanBot}
+\bibliographystyle{iclr2025_conference}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\section{Appendix}
+
+\subsection{Implementation Details}
+\label{sec:implementation_details}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=14cm]{LeanBot1.png}
+    \caption{Overview of repository scanning and data extraction as well as dynamic database management in our lifelong learning framework}
+    \label{fig:leanbot1}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=14cm]{LeanBot2.png}
+    \caption{Overview of progressive training of the retriever in our lifelong learning framework}
+    \label{fig:leanbot2}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=14cm]{LeanBot3.png}
+    \caption{Overview of \textit{sorry} theorem proving in our lifelong learning framework}
+    \label{fig:leanbot3}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=14cm]{LeanBot4.png}
+    \caption{Overview of proof integration and pull request generation in our lifelong learning framework}
+    \label{fig:leanbot4}
+\end{figure}
+
+\textbf{Repository Scanning and Data Extraction}
+
+We use the GitHub API to query for Lean repositories based on sorting parameters (e.g., by repository stars). We maintain a list of known repositories to avoid; the list can be updated to allow LeanAgent to re-analyze the same repository on a new commit or Lean version.
+
+We clone each identified repository locally using the Git version control system. To ensure compatibility with our theorem-proving pipeline, we check the Lean version required by each repository and compare it with the supported versions of our system. If the required version is incompatible, we skip the repository and move on to the next one. Otherwise, LeanAgent switches its Lean version to match the repository's version. This version checking is performed by parsing the repository's configuration files and extracting the specified Lean version.
+
+We use a topological sort over the traced files in the repository to generate the premise corpus. This corpus is a JSON Lines file, where each line is a JSON object consisting of a path to a Lean source file, the file's imports, and the file's premise statements and definitions.
+
+\textbf{Dynamic Database Management}
+
+This database contains many key features that are useful in our setting. For example, it can
+\begin{enumerate}
+    \item Add new repositories, update existing ones, and generate merged datasets from multiple repositories with customizable splitting strategies.
+    \item Query specific theorems or premises across repos.
+    \item Track the progress of proof attempts, including the proof status of \textit{sorry} theorems.
+    \item Analyze the structure and content of Lean proofs, including tactic sequences and proof states.
+\end{enumerate}
+
+The database is implemented as a JSON file which keeps track of various details: Repository metadata; theorems categorized as already proven, \textit{sorry} theorems that are proven, or \textit{sorry} theorems that are unproven; premise files with their imports and individual premises; traced files for tracking which files have been processed; detailed theorem information, including file path, start/end positions, and full statements; and traced tactics with annotated versions, including the proof state before and after application.
+
+If we encounter duplicate theorems between repositories while merging repositories, we use the theorem from the repository most recently added to the database. We deduplicate premise files and traced files by choosing the first one encountered while merging the repositories. Also, we generate metadata containing details of all the repositories used to generate the dataset and statistics regarding the theorems, premise files, and traced files in the dataset, such as the total number of theorems.
+
+\textbf{Progressive Training of the Retriever}
+
+Some additional steps for progressive training are as follows:
+\begin{enumerate}
+    \item Add an optimizer and learning rate scheduler to the most recently updated retriever checkpoint. Then, load the retriever's weights and configuration parameters, such as the number of workers, GPUs, and necessary callbacks.
+    \item Initialize the data loaders necessary for training the retriever using the merged dataset of the repositories in the dynamic database
+    \item To precompute the embeddings, use a single forward pass with batch processing to serialize and tokenize premises from the entire corpus. Then, use the retriever's encoder to process the batches and generate embeddings.
+\end{enumerate}
+
+
+TODO: modify this
+
+
+Our implementation builds upon the ReProver model, with several key modifications:
+
+Retrieval-Augmented Tactic Generation: Similar to ReProver, our core component is a retrieval-augmented tactic generator. It retrieves potentially useful premises and generates tactics based on the concatenation of the current state and retrieved premises.
+Premise Retrieval: We use a Dense Passage Retriever (DPR) based approach. Given a state s and a library of premises P = {pi}^N_{i=1}, we retrieve m premises that maximize the cosine similarity between the state and premise embeddings.
+Embedding Function: We use a Transformer encoder followed by average pooling: f(·, θ) = AvgPool(Enc(·, θ)). This allows efficient retrieval as premise embeddings can be pre-computed.
+Training Objective: We train the retriever by minimizing a contrastive loss between positive premises and in-batch negative premises, similar to the original DPR approach.
+Progressive Training Modifications: [Describe specific modifications made for progressive training, such as the merged dataset approach, single-epoch training, etc.]
+
+
+\subsection{Proof Integration and Pull Request Generation}
+
+Finally, we optionally integrate the generated proofs into the original Lean files and create pull requests to propose the changes to the repository owners. This aids the development of these repositories and functions as more training data for future research.
+
+
+\textbf{Proof Integration and Pull Request Generation}
+
+In a temporary Git branch, we iterate over the Lean files and locate the  \textit{sorry} keywords corresponding to the generated proofs. We then replace these  \textit{sorry} keywords with the actual proof text, working from the bottom of each file upward to preserve the position of theorems. After integrating the proofs, we commit our changes, push them, and create a pull request for the repository on GitHub.
+
+\subsection{Experiment Implementation Details}
+
+\textbf{Implementation Details} LeanAgent uses a distributed architecture leveraging PyTorch Lightning and Ray for parallel processing. The system is designed to work with multiple GPUs and CPU workers, allowing for efficient scaling of the proof search process.
+
+As mentioned previously, LeanAgent starts progressive training with ReProver's retriever. However, it can use any encoder-based premise retriever. As mentioned above, the retriever is trained for one additional epoch per dataset. 
+
+The prover uses a best-first search strategy with a timeout of 10 minutes and no limit on the maximum number of expansions of the search tree. It generates 64 tactic candidates for each proof state. LeanAgent uses ReProver's tactic generator \footnote{Specifically, we use the 'kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small' tactic generator.} for these experiments but can use any decoder-based tactic generator. We generate tactics, with a beam search of size 5. We ran the experiments on 4 NVIDIA A100 GPUs, each with 80 GB of memory. We used 4 CPU workers, 1 per GPU. Due to the wide variety of repositories and experimental setups that we tested, each experiment took from 4 to 9 days to complete.
+
+For the experiments that use EWC, we choose a $\lambda$ of 0.1. According to theoretical results (TODO: find these), this value provides the best balance between plasticity and stability. Furthermore, we compute the Fisher Information Matrix (FIM) for the current retriever to use during EWC. 
+
+Hyperparameters:
+
+Learning rate: 1e-3
+Warmup steps: 1000
+Maximum sequence length: 512 for input, 128 for output
+The batch size is set to 4, with gradient accumulation over 4 steps, effectively creating a batch size of 16.
+Evaluation batch size: 64
+
+Learning rate monitoring at every step
+Uses mixed bfloat16 precision for training
+Gradient clipping value: 1.0
+Accumulates gradients over 4 batches
+
+Number of negative samples: 3
+Number of in-file negative samples: 1
+Base model: "google/byt5-small" for LeanAgent experiments, can be changed
+Batch size: 4
+Evaluation batch size: 64
+Maximum sequence length: 1024
+Number of data loading workers: 4
+
+Model: "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small"
+Learning rate: 1e-3
+Warmup steps: 1000
+Number of beams for generation: 5
+Number of premises retrieved for evaluation: 10
+Evaluation settings:
+
+Number of workers: 1
+Number of GPUs: 4
+Number of theorems evaluated: 100
+
+
+Maximum input sequence length: 512
+Maximum output sequence length: 128
+
+
+\subsection{LeanAgent Demo}
+
+We also provide a (outdated) video demo of the whole pipeline, which is accessible here: \href{https://github.com/Adarsh321123/CS159FinalProject/tree/backup_branch}{Github Link.}
+
+\subsection{Additional Experiments}
+
+\begin{enumerate}
+    \item Describe how PT improves performance on miniF2F. We can also try the 6 IMO problems that DeepMind tested on.
+    \item Since we can’t compare wall clock time, we can compare compute usage. Given one compute hour, we can show what our model can accomplish compared to another model.
+    \item We can create our own repo and demonstrate performance increases as we add more premises. We can also reverse the process as an ablation study.
+    \item Run a grid search on the number of premises to retrieve. We currently retrieve the top 10.
+    \item If a repository has lots of \textit{sorry} theorems, like SciLean, we can compare the types of math between the \textit{sorry} theorems that we could and could not prove.
+    \item If related, we can mention the additional data augmentation experiment Adarsh ran on SciLean that was reasonably unsuccessful.
+\end{enumerate}
+
+\subsection{Further \textit{sorry} Theorem Details}
+
+The theorems and proofs mentioned in the main paper are as follows:
+
+\begin{verbatim}
+    a) Group and Ring Theory:
+
+    Theorem: MyGroup.mul_right_inv
+    File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+    Theorem statement: theorem mul_right_inv (a : G) : a * a⁻¹ = 1 :=
+    
+    Proof:
+      simp
+    
+    Theorem: MyRing.add_right_cancel
+    File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+    Theorem statement: theorem add_right_cancel {a b c : R} (h : a + b = c + b) : a = c :=
+    
+    Proof:
+      simpa using h
+
+    b) Elementary Number Theory:
+
+    Theorem: MyRing.zero_mul
+    File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+    Theorem statement: theorem zero_mul (a : R) : 0 * a = 0 :=
+    
+    Proof:
+      rw [MulZeroClass.zero_mul]
+    
+    Theorem: MyRing.neg_neg
+    File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+    Theorem statement: theorem neg_neg (a : R) : - -a = a :=
+    
+    Proof:
+      simp
+
+    c) Order Theory:
+
+    Theorem: absorb1
+    File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+    Theorem statement: theorem absorb1 : x ⊓ (x ⊔ y) = x :=
+    
+    Proof:
+      simp
+    
+    Theorem: absorb2
+    File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+    Theorem statement: theorem absorb2 : x ⊔ x ⊓ y = x :=
+    
+    Proof:
+      simp
+
+    Theorem: C03S05.MyAbs.abs_add
+    File path: MIL/C03_Logic/S05_Disjunction.lean
+    Theorem statement: theorem abs_add (x y : ℝ) : |x + y| ≤ |x| + |y| :=
+    
+    Proof:
+      apply abs_add_le
+
+    a) Quantifier Manipulation:
+    Theorem: C03S01.my_lemma3
+    File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+    Theorem statement: theorem my_lemma3 :
+        ∀ {x y ε : ℝ}, 0 < ε → ε ≤ 1 → |x| < ε → |y| < ε → |x * y| < ε :=
+    Proof:
+      apply C03S01.my_lemma
+    
+    Theorem: C03S05.MyAbs.abs_lt
+    File path: MIL/C03_Logic/S05_Disjunction.lean
+    Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+    Proof:
+      cases x
+      exact abs_lt
+
+    Theorem: C03S01.Subset.trans
+    File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+    Theorem statement: theorem Subset.trans : r ⊆ s → s ⊆ t → r ⊆ t :=
+    Proof:
+      exact Set.Subset.trans
+
+    a) Fundamental Algebraic Structures:
+    Theorem: SciLean.scalar_div_one
+    File path: SciLean/Core/Objects/Scalar.lean
+    Theorem statement: theorem scalar_div_one (x : R) : x / 1 = x :=
+    
+    Proof:
+      simp
+    
+    Theorem: SciLean.scalar_min_zero_one
+    File path: SciLean/Core/Objects/Scalar.lean
+    Theorem statement: theorem scalar_min_zero_one  : min (0 : R) (1 : R) = 0 :=
+    
+    Proof:
+      rw [min_comm]
+      simp
+    
+    Theorem: Function.invFun.id_rule
+    File path: SciLean/Core/FunctionTransformations/InvFun.lean
+    Theorem statement: theorem id_rule
+      : invFun (fun (x : X) => x)
+        =
+        fun x => x :=
+    
+    Proof:
+      apply Function.invFun_comp
+      exact Function.injective_id
+
+    b) Linear and Affine Maps:
+    Theorem: IsLinearMap.isLinearMap_apply
+    File path: SciLean/Core/FunctionPropositions/IsLinearMap.lean
+    Theorem statement: theorem isLinearMap_apply (i : ι) : IsLinearMap R (fun f : (i : ι) → E i ↦ f i) :=
+    
+    Proof:
+      constructor
+      all_goals aesop
+    
+    Theorem: IsAffineMap.IsAffineMap_apply
+    File path: SciLean/Core/FunctionPropositions/IsAffineMap.lean
+    Theorem statement: theorem IsAffineMap_apply (i : ι) : IsAffineMap R (fun f : (i : ι) → E i ↦ f i) :=
+    
+    Proof:
+      constructor
+      constructor
+      simp
+      simp
+
+    c) Continuity and Differentiability:
+    Theorem: SciLean.ContCDiffAt.id_rule
+    File path: SciLean/Core/FunctionPropositions/ContCDiff.lean
+    Theorem statement: theorem ContCDiffAt.id_rule (x : X) :
+        ContCDiffAt K n (fun x : X => x) x :=
+    
+    Proof:
+      unfold SciLean.ContCDiffAt
+      tauto
+    
+    Theorem: SciLean.CDifferentiableAt.comp_rule
+    File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+    Theorem statement: theorem CDifferentiableAt.comp_rule
+      (f : Y → Z) (g : X → Y) (x : X)
+      (hf : CDifferentiableAt K f (g x)) (hg : CDifferentiableAt K g x)
+      : CDifferentiableAt K (fun x => f (g x)) x
+      :=
+    
+    Proof:
+      rw [CDifferentiableAt] at *
+      aesop
+
+    c) Measure Theory Basics:
+    Theorem: SciLean.ite_pull_measureOf
+    File path: SciLean/Core/Integral/Common.lean
+    Theorem statement: theorem ite_pull_measureOf {X} [MeasurableSpace X] (c : Prop) [Decidable c] (μ ν : Measure X) (A : Set X) :
+        (if c then μ else ν) A
+        =
+        (if c then μ A else ν A) :=
+    
+    Proof:
+      split_ifs <;> rfl
+    
+    Theorem: SciLean.Measure.prod_volume
+    File path: SciLean/Core/Integral/Common.lean
+    Theorem statement: theorem Measure.prod_volume {X Y} [MeasureSpace X] [MeasureSpace Y]  :
+        (Measure.prod (volume : Measure X) (volume : Measure Y)) = volume :=
+    
+    Proof:
+      rfl
+    
+    Theorem: SciLean.ite_pull_ennreal_toReal
+    File path: SciLean/Core/Integral/Common.lean
+    Theorem statement: theorem ite_pull_ennreal_toReal (c : Prop) [Decidable c] (x y : ENNReal)  :
+        (if c then x else y).toReal
+        =
+        (if c then x.toReal else y.toReal) :=
+    
+    Proof:
+      split_ifs <;> rfl
+
+    d) Floating-Point Operations:
+    Theorem: SciLean.re_float
+    File path: SciLean/Core/FloatAsReal.lean
+    Theorem statement: theorem re_float  (a : Float)
+      : RCLike.re a = a :=
+    
+    Proof:
+      exact RCLike.re_eq_self_of_le le_rfl
+
+    e) Distribution Theory:
+    Theorem: SciLean.Distribution.action_iteD
+    File path: SciLean/Core/Distribution/Basic.lean
+    Theorem statement: theorem Distribution.action_iteD (A : Set X) (t e : ��'(X,Y)) (φ : �� X) :
+       iteD A t e φ =
+            t.extAction (fun x => if x ∈ A then φ x else 0) (fun y ⊸ fun r ⊸ r • y) +
+            e.extAction (fun x => if x ∉ A then φ x else 0) (fun y ⊸ fun r ⊸ r • y) :=
+    
+    Proof:
+      aesop
+
+    a) Advanced Function Spaces:
+    Theorem: SciLean.ContCDiffMapFD_eta
+    File path: SciLean/Core/FunctionSpaces/ContCDiffMapFD.lean
+    Theorem statement: theorem ContCDiffMapFD_eta (f : X ⟿FD[K,n] Y) : (fun x ⟿FD[K,n] f x) = f :=
+    
+    Proof:
+      simp only [DFunLike.ext_iff]
+      aesop
+
+    b) Sophisticated Bijections:
+    Theorem: Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple'
+    File path: SciLean/Core/FunctionPropositions/Bijective.lean
+    Theorem statement: theorem Prod.mk.arg_fstsnd.Bijective_rule_simple'
+      : Bijective (fun xy : X×Y => (xy.2, xy.1))
+      :=
+    
+    Proof:
+      constructor <;> intro h
+      all_goals aesop
+    
+    Theorem: Function.Bijective.Equiv.invFun.arg_a0.Bijective_rule
+    File path: SciLean/Core/FunctionPropositions/Bijective.lean
+    Theorem statement: theorem Equiv.invFun.arg_a0.Bijective_rule (f : Y ≃ Z) (g : X → Z) (hf : Bijective g)
+      : Bijective (fun x => f.invFun (g x)) :=
+    
+    Proof:
+      convert hf
+      simp [hf]
+      exact f.symm.bijective.comp hf
+
+    c) Abstract Algebraic Structures:
+    Theorem: SciLean.CDifferentiable.id_rule
+    File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+    Theorem statement: theorem CDifferentiable.id_rule
+      : CDifferentiable K (fun x : X => x)
+      :=
+    Proof:
+      intro x
+      unfold SciLean.CDifferentiableAt
+      tauto
+
+    d) Data Structures in Mathematics:
+    Theorem: SciLean.ArrayType.ext
+    File path: SciLean/Data/ArrayType/Basic.lean
+    Theorem statement: theorem ext (x y : Cont) : (∀ i, x[i] = y[i]) → x = y :=
+    Proof:
+      intro h
+      apply SciLean.ArrayType.get_injective
+      simp only [h]
+
+    a) Basic Arithmetic and Number Theory:
+    Theorem: mathd_numbertheory_254
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_numbertheory_254 :
+    (239 + 174 + 83) % 10 = 6 :=
+    
+    Proof:
+        norm_num
+
+    Theorem: mathd_numbertheory_342
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_numbertheory_342 :
+      54 % 6 = 0 :=
+    
+    Proof:
+      norm_num
+
+    Theorem: mathd_algebra_304
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_algebra_304 :
+      91^2 = 8281 :=
+    Proof:
+      norm_num
+
+    b) Elementary Algebra:
+    Theorem: mathd_algebra_141
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_algebra_141
+      (a b : ℝ)
+      (h₁ : (a * b)=180)
+      (h₂ : 2 * (a + b)=54) :
+      (a^2 + b^2) = 369 :=
+    
+    Proof:
+      nlinarith
+
+    Theorem: mathd_algebra_329
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_algebra_329
+    (x y : ℝ)
+    (h₀ : 3 * y = x)
+    (h₁ : 2 * x + 5 * y = 11) :
+    x + y = 4 :=
+    
+    Proof:
+        linarith
+
+    Theorem: mathd_algebra_547
+    File path: MiniF2F/Valid.lean
+    Theorem statement: theorem mathd_algebra_547 (x y : ℝ) (h₀ : x = 5) (h₁ : y = 2) : Real.sqrt (x ^ 3 - 2 ^ y) = 11 :=
+    Proof:
+      simp [h₀, h₁, sq]
+      rw [Real.sqrt_eq_iff_sq_eq] <;> norm_num
+
+    c) Basic Calculus and Analysis:
+    Theorem: mathd_algebra_484
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_algebra_484 :
+    Real.log 27 / Real.log 3 = 3 :=
+    
+    Proof:
+        field_simp
+        rw [← Real.log_rpow]
+        all_goals norm_num
+
+    a) Advanced Number Theory:
+    Theorem: mathd_numbertheory_293
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_numbertheory_293
+    (n : ℕ)
+    (h₀ : n ≤ 9)
+    (h₁ : 11∣20 * 100 + 10 * n + 7) :
+    n = 5 :=
+    Proof:
+    omega
+
+    Theorem: mathd_numbertheory_233
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_numbertheory_233
+      (b :  ZMod (11^2))
+      (h₀ : b = 24⁻¹) :
+      b = 116 :=
+    Proof:
+      exact h₀
+
+    b) Sophisticated Algebra:
+    Theorem: mathd_algebra_148
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_algebra_148
+    (c : ℝ)
+    (f : ℝ → ℝ)
+    (h₀ : ∀ x, f x = c * x^3 - 9 * x + 3)
+    (h₁ : f 2 = 9) :
+    c = 3 :=
+    Proof:
+    linarith [h₀ 2]
+
+    c) Advanced Calculus and Analysis:
+    Theorem: mathd_algebra_270
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_algebra_270
+    (f : ℝ → ℝ)
+    (h₀ : ∀ x, x ≠ -2 -> f x = 1 / (x + 2)) :
+    f (f 1) = 3/7 :=
+    Proof:
+    set_option tactic.skipAssignedInstances false in norm_num [h₀]
+
+    d) Abstract Algebra:
+    Theorem: mathd_algebra_209
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_algebra_209
+    (σ : Equiv ℝ ℝ)
+    (h₀ : σ.2 2 = 10)
+    (h₁ : σ.2 10 = 1)
+    (h₂ : σ.2 1 = 2) :
+    σ.1 (σ.1 10) = 1 :=
+    Proof:
+    rw [Equiv.invFun_as_coe] at h₁
+    rw [← h₀, ← h₂]
+    simp
+
+    
+\end{verbatim}
+
+\subsection{\textit{sorry} Theorem Proving Discussion}
+
+Since we have confirmed the superior performance of LeanAgent in our lifelong learning setup, we would like to compare the \textit{sorry} theorems it can prove, both during and after lifelong learning.
+
+Overall, LeanAgent demonstrates significant improvement in theorem-proving capabilities across multiple repositories: Mathematics in Lean Source, SciLean, PFR, MiniF2F, and several others including Coxeter and Hairy Ball Theorem. By the end of lifelong learning, LeanAgent could prove a superset of \textit{sorry} theorems compared to other experimental setups in most cases.
+
+LeanAgent showed a clear progression from basic concepts (arithmetic, simple algebra) to advanced topics (abstract algebra, topology, complex analysis).
+
+It is important to note that it was very difficult to find Lean4 repositories to test on; data scarcity is a major problem in theorem proving (TODO: cite). Many repositories are incompatible with LeanDojo, use an unsupported Lean version, fail to build, etc., explaining the selection of these repositories. Further details on the repository selection process are in the Appendix (TODO).
+
+
+We focus this section on the detail analysis of \textit{sorry} theorems and refer the reader to Appendix TODO to see the full theorems and proofs mentioned in this section.
+
+In consideration of the \textit{sorry} theorems, we notice an interesting progression in LeanAgent's understanding of the Mathematics in Lean Source repository. During lifelong learning, LeanAgent demonstrates a strong grasp of fundamental algebraic structures and basic mathematical operations:
+
+a) Group and Ring Theory:
+LeanAgent proves theorems about basic algebraic structures. For instance, \texttt{MyGroup.mul\_right\_inv} shows that multiplying an element by its inverse yields the identity and \texttt{MyRing.add\_right\_cancel} demonstrates the cancellation property in ring addition.
+
+b) Elementary Number Theory:
+LeanAgent handles fundamental arithmetic properties, including \texttt{MyRing.zero\_mul}, which proves that zero multiplied by any number is zero, and \texttt{MyRing.neg\_neg}, which shows that the negative of a negative number is the original number.
+
+c) Order Theory:
+LeanAgent grasps order theory, as evidenced by \texttt{absorb1}, which proves that the infimum of x and the supremum of x and y is always equal to x, and \texttt{absorb2}, which demonstrates that the supremum of x and the infimum of x and y is always equal to x.
+
+d) Rudimentary Real Analysis:
+LeanAgent demonstrates an early understanding of properties related to real numbers and absolute values, as shown by \texttt{C03S05.MyAbs.abs\_add}, which proves the triangle inequality for real numbers.
+
+10/14 of these proven \textit{sorry} theorems from Mathematics in Lean Source during the lifelong learning process are from the exercise file for proving identities about algebraic structures. This indicates that LeanAgent starts its understanding of mathematical concepts from the basics, much like how a human mathematician would start learning from earlier chapters in a new textbook. 
+
+Crucially, by the end of the lifelong learning process, LeanAgent exhibits significant growth in its mathematical reasoning abilities:
+
+a) Quantifier Manipulation:
+LeanAgent exhibits advanced logical reasoning by managing multiple quantifiers and implications, as evidenced by \texttt{C03S01.my\_lemma3}, which proves a complex statement involving bounds and absolute values with multiple quantifiers and conditions, and \texttt{C03S05.MyAbs.abs\_lt}, which establishes that the absolute value of x being less than y is equivalent to $-y < x \land x < y$.
+
+b) Set Theory and Relations:
+LeanAgent demonstrates its understanding of abstract set-theoretic concepts, as shown by \texttt{C03S01.Subset.trans}, which proves that subset relations are transitive.
+
+Now, only 2/7 \textit{sorry} theorems from Mathematics in Lean Source are from the exercise file for proving identities about algebraic structures. This suggests that lifelong learning allowed LeanAgent to transition to gaining a stronger understanding of how to use premises for more complicated proofs.
+
+
+Interestingly, the journey from proving simple group and ring properties to handling complex logical statements and set theory concepts mirrors the typical progression in mathematical education. The progression aligns well with the MIL Source's position early in the curriculum, allowing LeanAgent to build a strong foundation in basic mathematics before tackling more advanced topics.
+
+We gain some interesting insights from comparing the performance of LeanAgent over time on Mathematics in Lean Source to other experiments. For example, the fact that setups 5 and 6 (ReProver baselines) can handle harder theorems out of the box, such \texttt{C03S01.my\_lemma3} in setup 5, but fewer theorems overall suggests that these models have a broader knowledge base initially but lose performance from a lack of adaptability.
+
+Interestingly, experiment 4 proves the same \textit{sorry} theorems as LeanAgent does during lifelong learning. This suggests that pure curriculum learning without EWC or the ``merge all" strategy emphasizes understanding easier concepts earlier, showing a learning pattern similar to human progression. This mimics the insights gained from the lifelong learning analysis above. However, experiments 8 and 10 (curriculum with EWC and/or merge all) demonstrate some knowledge plasticity, proving harder theorems during lifelong learning, such as C03S01.Subset.trans in setup 8. However, this comes at the cost of an understanding of basic theorems, showing catastrophic forgetting. For example, setups 8 and 10 could not prove the trivial theorems \texttt{MyGroup.mul\_right\_inv} and \texttt{MyRing.zero\_mul}, respectively, during lifelong learning, whereas LeanAgent could. This again aligns with the insights from the composite score from our previous analysis.
+
+A vital observation is that by the end of lifelong learning, the \textit{sorry} theorems that LeanAgent prove from Mathematics in Lean Source are a superset of those that the other experiments prove. This shows that LeanAgent's lifelong learning setup provides it with continuously improving capabilities to reason about premises and proofs that are more advanced than other setups. For example, LeanAgent is the only system, except for setup 9, which can prove theorem \texttt{C03S05.MyAbs.abs\_lt}:
+
+\begin{verbatim}
+    Theorem: C03S05.MyAbs.abs_lt
+    File path: MIL/C03_Logic/S05_Disjunction.lean
+    Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+    Proof:
+      cases x
+      exact abs_lt
+\end{verbatim}
+
+LeanAgent achieved this through its deep understanding of the available premises, such as \texttt{abs\_lt} with a statement similar to \texttt{C03S05.MyAbs.abs\_lt}.
+
+An interesting case study can be found in the dichotomy between the theorems \texttt{C03S05.MyAbs.neg\_le\_abs\_self} and \texttt{C03S05.MyAbs.le\_abs\_self}. LeanAgent can prove \texttt{C03S05.MyAbs.neg\_le\_abs\_self} by referencing \texttt{C03S05.MyAbs.le\_abs\_self}, which is still unproven at that point:
+
+\begin{verbatim}
+    Theorem: C03S05.MyAbs.neg_le_abs_self
+    File path: MIL/C03_Logic/S05_Disjunction.lean
+    Theorem statement: theorem neg_le_abs_self (x : ℝ) : -x ≤ |x| :=
+    
+    Proof:
+      simpa using C03S05.MyAbs.le_abs_self (-x)
+\end{verbatim}
+
+At the end of lifelong learning, LeanAgent can prove \texttt{C03S05.MyAbs.le\_abs\_self} through its deeper understanding of the \texttt{le\_abs} premise, which states when a value is less than its absolute value:
+
+\begin{verbatim}
+    Theorem: C03S05.MyAbs.le_abs_self
+    File path: MIL/C03_Logic/S05_Disjunction.lean
+    Theorem statement: theorem le_abs_self (x : ℝ) : x ≤ |x| :=
+    
+    Proof:
+      rw [le_abs]
+      simp
+\end{verbatim}
+
+This suggests that LeanAgent begins by using existing knowledge where possible before trying to deeply understanding why existing facts are reasonable. This mimics how some mathematics students learn, starting with existing facts in areas of mathematics like calculus before continuing to understand why those tools work in areas like real analysis (TODO: cite. Also, cite whenever we claim that we do what mathematicians to (leandojo comment too)).
+
+Now, let's examine the \textit{sorry} theorems from SciLean that LeanAgent proved to gain some further key insights about its performance. During the lifelong learning process, LeanAgent demonstrated proficiency in a wide range of mathematical concepts from SciLean, proving 22 theorems. These theorems primarily focus on:
+
+a) Fundamental Algebraic Structures:
+LeanAgent proves basic algebraic operations and properties, such as \texttt{SciLean.scalar\_div\_one}, which proves that dividing any number by one yields the same number, \texttt{SciLean.scalar\_min\_zero\_one}, which demonstrates the minimum value between 0 and 1 is 0, and \texttt{Function.invFun.id\_rule}, which proves that the inverse of the identity function is the identity function itself.
+
+b) Linear and Affine Maps:
+LeanAgent handles basic properties of linear and affine maps effectively, recognizing their structure in \texttt{IsLinearMap.isLinearMap\_apply}, which proves the linearity of function applications, and \texttt{IsAffineMap.IsAffineMap\_apply}, which demonstrates the affine property of function applications.
+
+c) Measure Theory Basics:
+LeanAgent starts grasping measure theory concepts, exemplified by \texttt{SciLean.ite\_pull\_measureOf}, which handles conditional measure selection between two measures based on a proposition, \texttt{SciLean.Measure.prod\_volume}, which proves that the product of two volume measures is the volume measure itself, and \texttt{SciLean.ite\_pull\_ennreal\_toReal}, which proves that conditionally pulling out an extended non-negative real and converting it to a real is equivalent to converting the individual components first.
+
+d) Floating-Point Operations:
+LeanAgent demonstrates an early understanding of floating-point representations and their correspondence to real numbers, shown by \texttt{SciLean.re\_float}, which proves that the real-like part of a floating-point number is itself.
+
+% e) Distribution Theory:
+% LeanAgent shows an advanced understanding of distribution theory, demonstrated by.
+% - SciLean.Distribution.action_iteD: Proves a complex interaction between distributions and set operations with conditional expressions.
+
+% Notably, this theorem is quite complex, involving distributions and set operations. This early mastery of advanced concepts might be attributed to the curriculum order, where exposure to diverse mathematical fields enhances LeanAgent's premise selection capabilities.
+
+The proofs during this phase are characteristically concise, often using basic tactics like simp, rfl, or aesop that do not use premises. This suggests that LeanAgent recognizes these theorems are straightforward enough to prove without the complex retrieval of premises.
+
+Crucially, by the end of the lifelong learning process, LeanAgent exhibits significant growth in its mathematical reasoning abilities on SciLean, just as it did with Mathematics in Lean Source:
+
+a) Advanced Function Spaces: LeanAgent masters concepts in advanced function spaces, such as \texttt{SciLean.ContCDiffMapFD\_eta}, which demonstrates the eta reduction property for continuously differentiable maps over finite dimensions.
+
+b) Sophisticated Bijections:
+LeanAgent grows in its understanding of product spaces and bijections, proving theorems such as \texttt{Function.Bijective.Prod.mk.arg\_fstsnd.Bijective\_rule\_simple'}, which proves the bijectivity of a function that swaps elements in a product space and \texttt{Function.Bijective.Equiv.invFun.arg\_a0.Bijective\_rule}, which proves that the composition of a bijection and its inverse remains bijective.
+
+Crucially, understanding these theorems might seem simple, but it demonstrates LeanAgent's understanding of abstract algebraic thinking.
+
+c) Abstract Algebraic Structures:
+LeanAgent proves further abstract algebraic properties, including \texttt{SciLean.CDifferentiable.id\_rule}, which proves that the identity function is continuously differentiable.
+
+d) Data Structures in Mathematics:
+LeanAgent understands array types in a mathematical context, proving theorems such as \texttt{SciLean.ArrayType.ext}, which proves that two arrays are equal if their elements are equal at all indices.
+
+\begin{verbatim}
+    Theorem: SciLean.ArrayType.ext
+    File path: SciLean/Data/ArrayType/Basic.lean
+    Theorem statement: theorem ext (x y : Cont) : (∀ i, x[i] = y[i]) → x = y :=
+    Proof:
+      intro h
+      apply SciLean.ArrayType.get_injective
+      simp only [h]
+\end{verbatim}
+
+It is impressive that LeanAgent could understand a traditionally computer-science-oriented data structure from a mathematical lens, something that some other setups could not understand.
+
+The proofs at this stage are more sophisticated, involving multiple steps and combining various mathematical concepts. This indicates a deeper understanding and ability to connect different areas of mathematics.
+
+The progression from basic algebraic structures to advanced function spaces and data structures (like array types) shows that LeanAgent is bridging the gap between pure mathematical concepts and their applications in computational mathematics. Furthermore, the progression from basic integral manipulations to advanced function spaces indicates that LeanAgent is improving its premise selection over time. It learns to identify and apply more sophisticated mathematical structures and theorems as premises. This progression in the complexity of mathematical concepts understood again mirrors the typical progression in mathematical education.
+
+A vital observation is that by the end of lifelong learning, the \textit{sorry} theorems that LeanAgent prove from SciLean are almost entirely a superset of those that the other experiments prove. This corroborates our previous assertion from our analysis of the \textit{sorry} theorems from Mathematics in Lean Source that LeanAgent's lifelong learning setup provides it with continuously improving capabilities to reason about premises and proofs which outperform other setups.
+
+Crucially, LeanAgent could prove \texttt{re\_float} during lifelong learning while no other setup could. This indicates that LeanAgent's more measured and stable approach allowed it to understand floating-point representations and their relation to reals, while other setups prioritized this less with their more aggressive plasticity. This may also suggest that continuous improvement allowed LeanAgent to understand new and unique concepts from new repositories.
+
+% It is important to discuss the \textit{sorry} theorems from SciLean which LeanAgent could not prove but other setups could. The contrast between proving re_float (which the retrieval baseline couldn't) and not proving parametric_inverse_bijection (which the retrieval baseline could) suggests that LeanAgent is developing a balance between retrieving known facts and constructing new proofs.
+
+% Interestingly, we notice that LeanAgent is the only one that can prove ContCDiffMapFD_eta. This suggests that LeanAgent has a stronger grasp of proving more complex and abstract theorems than other setups.
+
+We gain some interesting insights from comparing the performance of LeanAgent over time on SciLean to other experiments. For example, the fact that setup 5 could not prove the trivial theorem \texttt{SciLean.ite\_pull\_ennreal\_toReal} and setup 6 could not prove \texttt{SciLean.scalar\_max\_zero\_one}, \texttt{SciLean.norm₂\_scalar}, \texttt{Function.invFun.id\_rule} while LeanAgent could, even during lifelong learning, suggests that these baselines lack an understanding of foundational concepts, which LeanAgent understands better from lifelong learning. This is due to the increased stability of LeanAgent shown in the metric analysis above while it improves from learning a new task. Furthermore, these methods could prove fewer than LeanAgent could, suggesting a knowledge base than cannot continuously improve as LeanAgent does.
+
+% Furthermore, an intriguing observation is that almost all other setups could prove some subset of Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple', SciLean.CDifferentiable.id_rule, and Function.Bijective.Equiv.invFun.arg_a0.Bijective_rule during lifelong learning. However, as mentioned above, LeanAgent could only prove these at the end of lifelong learning. This suggests that, as with Mathematics in Lean Source, other approaches maintain some knowledge retention during lifelong learning, while LeanAgent remains more plastic. However, this again comes at the cost of an understanding of basic theorems. For example, setups 8 and 10 cannot prove the trivial measure theory theorem SciLean.Measure.prod_volume and SciLean.Distribution.action_iteD, whereas LeanAgent could, again suggest that using EWC and/or merge all allows for knowledge retention at the expense of plasticity while learning.
+
+Furthermore, an intriguing observation is that experiment 8 could prove \texttt{Function.Bijective.Prod.mk.arg\_fstsnd.Bijective\_rule\_simple'} during lifelong learning. 
+
+\begin{verbatim}
+    Theorem: Function.Bijective.Prod.mk.arg_fstsnd.Bijective_rule_simple'
+    File path: SciLean/Core/FunctionPropositions/Bijective.lean
+    Theorem statement: theorem Prod.mk.arg_fstsnd.Bijective_rule_simple'
+      : Bijective (fun xy : X×Y => (xy.2, xy.1))
+      :=
+    
+    Proof:
+      constructor <;> intro h
+      all_goals aesop
+\end{verbatim}
+
+% However, as mentioned above, LeanAgent could only prove this theorem at the end of lifelong learning. This suggests that setup 8 is more plastic during lifelong learning, while LeanAgent remains more stable. This corroborates the analysis from the lifelong learning metrics. However, this again comes at the cost of an understanding of basic theorems. For example, setups 8 and 10 cannot prove the trivial measure theory theorem SciLean.Measure.prod_volume and SciLean.Distribution.action_iteD, whereas LeanAgent could, again suggest that using EWC and/or merge all allows for knowledge retention at the expense of plasticity while learning.
+
+However, as mentioned above, LeanAgent could only prove this theorem at the end of lifelong learning. This suggests that setup 8 is more plastic during lifelong learning, while LeanAgent remains more stable. This corroborates the analysis from the lifelong learning metrics. However, this again comes at the cost of understanding basic theorems. For example, setup 8 cannot prove the trivial measure theory theorem \texttt{SciLean.Measure.prod\_volume}, whereas LeanAgent could during lifelong learning, again suggesting that it favors plasticity over stability.
+
+An interesting case is that LeanAgent can prove norm_{2}\_scalar during lifelong learning but not \texttt{norm2\_scalar}.
+
+\begin{verbatim}
+    Theorem: SciLean.norm₂_scalar
+    File path: SciLean/Core/Objects/SemiInnerProductSpace.lean
+    Theorem statement: theorem norm₂_scalar {R} [RealScalar R] (x : R) :
+      ‖x‖₂[R] = Scalar.abs x :=
+    
+    Proof:
+      rw [SciLean.scalar_norm]
+\end{verbatim}
+
+Conversely, setup 7 proved \texttt{norm2\_scalar} but not norm_{2}\_scalar. 
+
+Examining its proof of \texttt{norm2\_\text{scalar}} suggests that it may be more prone to using premises from \texttt{mathlib4}, while LeanAgent prefers to use premises from the new repository. This makes sense given that experiment 7 uses the order of decreasing popularity on GitHub. As mentioned previously, this generally provides poor stability and plasticity, meaning that the model reverts back to the basic knowledge that it knows from \texttt{mathlib4}.
+
+\begin{verbatim}
+    Theorem: SciLean.norm2_scalar
+    File path: SciLean/Core/Objects/SemiInnerProductSpace.lean
+    Theorem statement: theorem norm2_scalar {R} [RealScalar R] (x : R) :
+      ‖x‖₂²[R] = x^2 :=
+    Proof:
+      symm
+      simp [sq]
+      congr
+      simp
+\end{verbatim}
+
+
+% An interesting case is that the non-retrieval baseline could prove CDifferentiable.comp_rule but we can't. However, we can prove this similar theorem
+
+
+% Theorem: SciLean.CDifferentiableAt.comp_rule
+% File path: SciLean/Core/FunctionPropositions/CDifferentiable.lean
+% Theorem statement: theorem CDifferentiableAt.comp_rule
+%   (f : Y → Z) (g : X → Y) (x : X)
+%   (hf : CDifferentiableAt K f (g x)) (hg : CDifferentiableAt K g x)
+%   : CDifferentiableAt K (fun x => f (g x)) x
+%   :=
+
+% Proof:
+%   rw [CDifferentiableAt] at *
+%   aesop
+
+
+Crucially, LeanAgent is the only setup that can prove a \textit{sorry} theorem from PFR. We are able to prove \texttt{condRho\_of\_translate}, which states a form of a translation invariance property of the condRho function.
+
+\begin{verbatim}
+    Theorem: condRho_of_translate
+    File path: PFR/RhoFunctional.lean
+    Theorem statement: lemma condRho_of_translate {Ω S : Type*} [MeasureSpace Ω] (X : Ω → G) (Y : Ω → S) (A : Finset G) (s:G) : condRho (fun ω ↦ X ω + s) Y A = condRho X Y A :=
+    Proof:
+      simp only [condRho, rho_of_translate]
+\end{verbatim}
+
+This suggests that the proof is straightforward once you expand the definitions of condRho and consider how rho behaves under translation (as captured by the \texttt{rho\_of\_translate} lemma). The fact that LeanAgent could trivially identify such a short proof using existing premises while the maintainers of the PFR repo did not suggests the power of our approach. This is especially powerful when considering the cutting-edge nature of the content of the PFR repo. This suggests that by understanding the foundations of the PFR lemmas using its improved stability, LeanAgent was able to grasp an understanding of some basic definitions.
+
+However, LeanAgent, along with other setups, could not prove any PFR theorems after lifelong learning. This suggests that LeanAgent requires more time or data to further strengthen its knowledge in this new area of mathematics.
+
+An interesting question is what exactly is difference in understanding between LeanAgent at the start and end of lifelong learning, regardless of the relation of that repository to the order of the rest of the curriculum. To answer this question, we can fine-tune ReProver on a held-out repository to understand LeanAgent's performance at the beginning, and the continue progressive training of LeanAgent on that repository to understand its performance at the end. To do this, we choose the Lean4 version of the miniF2F repository (TODO: cite). Although this repository traditionally consists of a validation and test split, and previous works typically list performance as an R@k metric on the test split, we want to focus more on the number and type of \textit{sorry} theorems we could prove. This comparison can highlight the difference in knowledge between the start and end of LeanAgent's lifelong learning process. As such, we disregard the splits and process the repository as mentioned in Sec 4. (TODO: link).
+
+As the table shows, LeanAgent can prove 4 more theorems at end than the start of lifelong learning. Although this absolute number may seem low, the types of \textit{sorry} theorems we can prove tell a fascinating story.
+
+LeanAgent initially demonstrated proficiency in a range of foundational mathematical areas on MiniF2F:
+a) Basic Arithmetic and Number Theory:
+LeanAgent could handle simple arithmetic and modular arithmetic problems, such as \texttt{mathd\_numbertheory\_254}, a theorem about modular arithmetic and basic addition, \texttt{mathd\_numbertheory\_342}, a theorem about basic divisibility, and \texttt{mathd\_algebra\_304}, a theorem about simple exponentiation.
+
+These proofs only rely on \texttt{norm\_num}. This suggests a less sophisticated understanding of mathematics at the start of lifelong learning.
+
+b) Elementary Algebra:
+LeanAgent could solve basic algebraic equations and perform straightforward manipulations, such as \texttt{mathd\_algebra\_141}, which roves a statement about quadratic expressions, \texttt{mathd\_algebra\_329}, which shows a grasp of systems of linear equations, and \texttt{mathd\_algebra\_547}, which proves basic algebraic manipulation with roots.
+
+c) Basic Calculus and Analysis:
+LeanAgent showed early capabilities in dealing with logarithms and exponentials, including \texttt{mathd\_algebra\_484}, a theorem involving dividing logarithmic expressions.
+
+Notably, the proofs at this stage were characteristically concise, often using basic tactics like \texttt{norm\_num}, \texttt{linarith}, and \texttt{field\_simp}. This suggests that LeanAgent recognized these theorems as straightforward enough to prove without complex retrieval of premises, similar to its behavior with previous repositories.
+
+However, by the end of the lifelong learning process, LeanAgent exhibited significant growth in its mathematical reasoning abilities on MiniF2F:
+
+a) Advanced Number Theory:
+LeanAgent showed a more advanced understanding of number theory, proving theorems like \texttt{mathd\_numbertheory\_293}, a complex theorem about divisibility involving a complex expression and \texttt{mathd\_numbertheory\_233}, a theorem dealing with modular arithmetic in $\text{ZMod}(11^2)$.
+
+b) Sophisticated Algebra:
+LeanAgent showed proficiency in more complex algebraic manipulations. A theorem includes \texttt{mathd\_algebra\_148}, which involves function definitions and solving for unknown coefficients.
+
+c) Advanced Calculus and Analysis:
+LeanAgent demonstrated improved capabilities in handling more complex analytical problems, including \texttt{mathd\_algebra\_270}, a theorem involving function composition and rational expressions.
+
+d) Abstract Algebra:
+LeanAgent showed growth in understanding more abstract algebraic structures, proving \texttt{mathd\_algebra\_209}, a theorem requiring an understanding of equivalence relations and function inverses.
+
+e) Complex Induction:
+LeanAgent became adept at more advanced induction proofs. An example of this is \texttt{induction\_12dvd4expnp1p20}, a theorem about divisibility and requires an induction proof.
+
+f) Complex Quantifiers and Inequalities:
+LeanAgent increased its understanding of more complex logical statements, such as \texttt{amc12a\_2002\_p6}, an AMC12 theorem involves multiple existential quantifiers and inequalities.
+
+% g) Combinatorics:
+% LeanAgent showed growth in a field notoriously difficult for AI models to understand (TODO: cite), combinatorics:
+% - mathd_numbertheory_12: A theorem about the number of integers between 15 and 85 (inclusive) that are divisible by 20.
+
+The proofs at this later stage are more sophisticated, usually involving multiple steps and combining various mathematical concepts or indicating a deeper understanding and ability to connect different areas of mathematics, mirroring the progression observed in Mathematics in Lean Source and SciLean. For example, LeanAgent provides a one-line proof to the advanced theorem \texttt{mathd\_numbertheory\_233}:
+
+\begin{verbatim}
+    Theorem: mathd_numbertheory_233
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem mathd_numbertheory_233
+      (b :  ZMod (11^2))
+      (h₀ : b = 24⁻¹) :
+      b = 116 :=
+    Proof:
+      exact h₀
+\end{verbatim}
+
+The proof means the hypothesis h₀ directly proves the goal. This suggests that LeanAgent has developed a deep understanding of modular arithmetic and can recognize when a given hypothesis is sufficient to prove the goal without additional steps.
+
+Furthermore, LeanAgent uses four tactics to prove the \texttt{induction\_12dvd4expnp1p20} theorem:
+
+\begin{verbatim}
+    Theorem: induction_12dvd4expnp1p20
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem induction_12dvd4expnp1p20
+      (n : ℕ) :
+      12 ∣ 4^(n+1) + 20 :=
+    Proof:
+      norm_num
+      induction' n with n hn
+      simp
+      omega
+\end{verbatim}
+
+This demonstrates its ability to handle more complex number theory proofs and use advanced tactics. This again shows that LeanAgent can recognize when its understanding its deep enough to not require complex premise retrieval.
+
+LeanAgent demonstrates a similar understanding of the theorem \texttt{amc12a\_2002\_p6}:
+
+\begin{verbatim}
+    Theorem: amc12a_2002_p6
+    File path: MiniF2F/Test.lean
+    Theorem statement: theorem amc12a_2002_p6
+      (n : ℕ)
+      (h₀ : 0 < n) :
+      ∃ m, (m > n ∧ ∃ p, m * p ≤ m + p) :=
+    Proof:
+      lift n to ℕ+ using h₀
+      cases' n with n
+      exact ⟨_, lt_add_of_pos_right _ zero_lt_one, 1, by simp⟩
+\end{verbatim}
+
+Notably, it uses tactics like lift, cases, and exact with complex term construction, showing its ability to handle more abstract mathematical concepts.
+
+Importantly, LeanAgent's performance on MiniF2F showcases its ability to adapt and improve across different mathematical domains. The progression from basic arithmetic and algebra to more advanced number theory, calculus, and abstract algebra demonstrates LeanAgent's growing capability to handle diverse mathematical challenges. This aligns with the observations from Mathematics in Lean Source and SciLean, further supporting the effectiveness of LeanAgent's lifelong learning approach in theorem proving across various mathematical repositories.
+
+Furthermore, early proofs dealt with concrete numbers and simple equations. Later proofs involved more abstract concepts like equivalence relations and function properties. While LeanAgent had a reduced ability to do simple modular arithmetic, it gained the capability to handle more complex number theory problems involving divisibility under constraints. Moreover, LeanAgent shifted from solving basic linear and quadratic equations to analyzing functions and their compositions. Also, early proofs often used \texttt{norm\_num} for straightforward computations. Later proofs employed more varied tactics and premises, suggesting a more sophisticated approach to proof construction. This all crucially suggests that while existing methods may be more tailored to simpler computation problems, LeanAgent is superior on complex and analytical problems, exactly the types of problems present in research-level mathematics. This also corroborates LeanAgent's performance on the repositories mentioned previously.
+
+Another interesting question is whether LeanAgent can generalize to a different commit of a repository in the curriculum. This would further tests how general it is and ensure that it doesn't overfit to a specific commit. So, we tried proving the \textit{sorry} theorems of PFR on an older commit using LeanAgent at the end of lifelong learning \footnote{We chose commit 861715b9bf9482d2442760169cb2a3ff54091f75, as this was a commit that had sorries that were different from those on the original commit we tested. This would ensure less data leakage between commits.}. Impressively, it proved the theorem \texttt{multiDist\_copy}, which is about the equality of distributions when copying random variables across different measure spaces, and \texttt{multiDist\_of\_perm}, which is about how permutations of indices affect joint distributions, with just the `rfl`, indicating the theorem statements are true by reflexivity.
+
+\begin{verbatim}
+    Theorem: multiDist_copy
+    File path: PFR/MoreRuzsaDist.lean
+    Theorem statement: multiDist_copy {m:ℕ} {Ω : Fin m → Type*} {Ω' : Fin m → Type*} (hΩ : (i : Fin m) → MeasureSpace (Ω i))
+        (hΩ': (i : Fin m) → MeasureSpace (Ω' i)) (X : (i : Fin m) → (Ω i) → G) (X' : (i : Fin m) → (Ω' i) → G)
+        (hident: ∀ i, IdentDistrib (X i) (X' i) (hΩ i).volume (hΩ' i).volume) :
+    Proof:
+      rfl
+    
+    Theorem: multiDist_of_perm
+    File path: PFR/MoreRuzsaDist.lean
+    Theorem statement: multiDist_of_perm {m:ℕ} {Ω: Fin m → Type*} (hΩ : (i : Fin m) → MeasureSpace (Ω i))
+        (X : (i : Fin m) → (Ω i) → G) (φ : Equiv.Perm (Fin m)) :
+    Proof:
+      rfl
+\end{verbatim}
+
+This suggests that LeanAgent has a deep enough understanding of PFR, even beyond the commit it learned from, to notice the connection to reflexivity that even humans did not notice at this commit.
+
+This commit also provides an interesting example of the power of LeanAgent. The maintainers used ``0 = 1" as a placeholder for some \textit{sorry} theorems, five of which are \texttt{multiTau\_min\_exists}, \texttt{multiTau\_min\_sum\_le}, \texttt{sub\_multiDistance\_le}, \texttt{sub\_condMultiDistance\_le}, \texttt{sub\_condMultiDistance\_le'}. Interestingly, LeanAgent is powerful enough to find loopholes and prove these theorems with this proof:
+
+\begin{verbatim}
+    nontriviality
+    simp
+    apply @zero_ne_one ℕ _
+    exact multidist_eq_zero
+\end{verbatim}
+
+where \texttt{multidist\_eq\_zero} is about multidimensional distributions and uniform distributions on subgroups.
+
+
+\subsection{Lifelong Learning Metric Reasoning}
+
+Generally, we chose not to include lifelong learning metrics for overall performance, such as Time Weighted Cumulative Performance (TWCP), Area Under the Learning Curve (AULC), and Average Accuracy (AA), as these would lead to redundancy in our analysis. Specifically, the 6 metrics we included in the main paper were all computed using validation R@10 and the average test R@10, both of which are already measures of LeanAgent's performance.
+
+Additionally, Average Accuracy (AA) is a poor metric for theorem proving, as it is more important to consider the change in performance over time across different areas of mathematics rather than just at the end (TODO: mention paper that discusses this). Moreover, we chose not to include the Forward Transfer metric as prior work has shown that FM leads to better forward transfer. As such, we only check FM in the main paper. TODO https://arxiv.org/pdf/2303.08207 
+
+TODO https://arxiv.org/pdf/2201.08278 
+
+TODO: cite, why we mention these and not others (reference other papers for this)
+
+% Average Accuracy (AA) is a poor metric for theorem proving, as it is more important to consider the change in performance over time across different areas of mathematics rather than just at the end (TODO: mention paper that discusses this). Also, the overall change in AA over all tasks is not meaningful as it does not account for intermediate changes during the process which the other metrics do account for.
+
+\subsection{LeanAgent Pseudocode}
+
+\begin{algorithm}
+\caption{LeanAgent: Dynamic Theorem Proving}
+\begin{algorithmic}[1]
+\Procedure{LeanAgent}{$num\_repos, \lambda, epochs\_per\_repo$}
+    \State Initialize DynamicDatabase $DB$
+    \State $repos \gets$ SearchGitHubRepositories($num\_repos$)
+    \For{each $repo \in repos$}
+        \If{IsCompatibleLeanVersion($repo$)}
+            \State $traced\_repo \gets$ TraceRepository($repo$)
+            \State $DB$.AddRepository($traced\_repo$)
+            \State $dataset \gets DB$.GenerateMergedDataset()
+            
+            \If{RunProgressiveTraining}
+                \State $retriever \gets$ LoadLatestCheckpoint()
+                \State $retriever \gets$ ProgressiveTraining($retriever, dataset, \lambda, epochs\_per\_repo$)
+                \State $fisher\_info \gets$ ComputeFisherInformation($retriever, dataset$)
+                \State SaveFisherInformation($fisher\_info$)
+            \EndIf
+            
+            \State $prover \gets$ InitializeDistributedProver($retriever$)
+            \For{each $theorem \in traced\_repo$.SorryTheorems}
+                \State $proof \gets prover$.SearchProof($theorem$)
+                \If{$proof \neq $ null}
+                    \State $DB$.UpdateTheoremProof($theorem, proof$)
+                \EndIf
+            \EndFor
+            
+            \State ReplaceSorryWithProofs($repo, DB$.GetProofs())
+            \State CreatePullRequest($repo$)
+        \EndIf
+    \EndFor
+\EndProcedure
+
+\Procedure{ProgressiveTraining}{$retriever, dataset, \lambda, epochs$}
+    \State $fisher\_info \gets$ LoadLatestFisherInformation()
+    \State $retriever$.SetFisherInfo($fisher\_info$)
+    \State $retriever$.SetLambda($\lambda$)
+    \For{$epoch = 1$ to $epochs$}
+        \State TrainEpoch($retriever, dataset$)
+        \State EvaluateRetriever($retriever, dataset$)
+    \EndFor
+    \State \Return $retriever$
+\EndProcedure
+
+\Procedure{ComputeFisherInformation}{$retriever, dataset$}
+    \State $fisher\_info \gets$ InitializeZeroMatrix()
+    \For{each $batch \in dataset$}
+        \State $loss \gets$ ComputeLoss($retriever, batch$)
+        \State $grads \gets$ ComputeGradients($loss$)
+        \State UpdateFisherInformation($fisher\_info, grads$)
+    \EndFor
+    \State \Return $fisher\_info$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\end{document}

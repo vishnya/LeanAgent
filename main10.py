@@ -146,7 +146,7 @@ ENCOUNTERED_THEOREMS_FILE = "encountered_theorems_PT_merge_all_ewc_curriculum.pk
 # TODO: do we still need this?
 load_dotenv()
 
-repos_for_merged_dataset = [("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"), ("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"), ("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd", "29baddd685660b5fedd7bd67f9916ae24253d566"), ("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d"), ("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"), ("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"), ("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"), ("https://github.com/google-deepmind/debate", "7fb39251b705797ee54e08c96177fabd29a5b5a3"), ("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"), ("https://github.com/leanprover-community/con-nf", "00bdc85ba7d486a9e544a0806a1018dd06fa3856")]
+repos_for_merged_dataset = [("https://github.com/dwrensha/compfiles", "f99bf6f2928d47dd1a445b414b3a723c2665f091"), ("https://github.com/avigad/mathematics_in_lean_source", "5297e0fb051367c48c0a084411853a576389ecf5"), ("https://github.com/AlexKontorovich/PrimeNumberTheoremAnd", "29baddd685660b5fedd7bd67f9916ae24253d566"), ("https://github.com/yuma-mizuno/lean-math-workshop", "5acd4b933d47fd6c1032798a6046c1baf261445d"), ("https://github.com/ImperialCollegeLondon/FLT", "b208a302cdcbfadce33d8165f0b054bfa17e2147"), ("https://github.com/teorth/pfr", "fa398a5b853c7e94e3294c45e50c6aee013a2687"), ("https://github.com/lecopivo/SciLean", "22d53b2f4e3db2a172e71da6eb9c916e62655744"), ("https://github.com/google-deepmind/debate", "7fb39251b705797ee54e08c96177fabd29a5b5a3"), ("https://github.com/eric-wieser/lean-matrix-cookbook", "f15a149d321ac99ff9b9c024b58e7882f564669f"), ("https://github.com/leanprover-community/con-nf", "00bdc85ba7d486a9e544a0806a1018dd06fa3856"), ("https://github.com/FormalizedFormalLogic/Foundation", "d5fe5d057a90a0703a745cdc318a1b6621490c21"), ("https://github.com/siddhartha-gadgil/Saturn", "3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"), ("https://github.com/loganrjmurphy/LeanEuclid", "f1912c3090eb82820575758efc31e40b9db86bb8")]
 repos_for_proving = []
 
 # TODO: automate this
@@ -1184,7 +1184,7 @@ def main():
     global lean_git_repos
     try:
         # Configure these parameters!
-        current_epoch = 10
+        current_epoch = 13
         epochs_per_repo = 1
         run_progressive_training = True
         # run_progressive_training = False

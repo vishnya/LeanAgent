@@ -1,0 +1,430 @@
+
+Proved sorry theorems only in first database: 5
+
+Theorem: C03S05.MyAbs.abs_lt
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+Proof:
+  cases x
+  exact abs_lt
+
+
+Theorem: MyRing.two_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem two_mul (a : R) : 2 * a = a + a :=
+Proof:
+  rw [← one_add_one_eq_two]
+  simp [add_mul]
+
+
+Theorem: C03S01.Subset.trans
+File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+Theorem statement: theorem Subset.trans : r ⊆ s → s ⊆ t → r ⊆ t :=
+Proof:
+  exact Set.Subset.trans
+
+
+Theorem: MyRing.eq_neg_of_add_eq_zero
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem eq_neg_of_add_eq_zero {a b : R} (h : a + b = 0) : a = -b :=
+Proof:
+  rwa [eq_neg_iff_add_eq_zero]
+
+
+Theorem: absorb2
+File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+Theorem statement: theorem absorb2 : x ⊔ x ⊓ y = x :=
+Proof:
+  simp
+
+
+
+Proved sorry theorems only in first database: 5
+
+Theorem: C03S05.MyAbs.le_abs_self
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem le_abs_self (x : ℝ) : x ≤ |x| :=
+Proof:
+  rw [le_abs]
+  simp
+
+
+Theorem: MyRing.eq_neg_of_add_eq_zero
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem eq_neg_of_add_eq_zero {a b : R} (h : a + b = 0) : a = -b :=
+Proof:
+  rwa [eq_neg_iff_add_eq_zero]
+
+
+Theorem: MyRing.two_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem two_mul (a : R) : 2 * a = a + a :=
+Proof:
+  rw [← one_add_one_eq_two]
+  simp [add_mul]
+
+
+Theorem: C03S05.MyAbs.abs_lt
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+Proof:
+  cases x
+  exact abs_lt
+
+
+Theorem: C03S01.Subset.trans
+File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+Theorem statement: theorem Subset.trans : r ⊆ s → s ⊆ t → r ⊆ t :=
+Proof:
+  exact Set.Subset.trans
+
+
+Proved sorry theorems only in first database: 7
+
+Theorem: MyRing.self_sub
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem self_sub (a : R) : a - a = 0 :=
+Proof:
+  simp
+
+
+Theorem: C03S05.MyAbs.abs_lt
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+Proof:
+  cases x
+  exact abs_lt
+
+
+Theorem: C03S04.aux
+File path: MIL/C03_Logic/S04_Conjunction_and_Iff.lean
+Theorem statement: None
+Proof:
+  nlinarith
+
+
+Theorem: C03S05.MyAbs.le_abs_self
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem le_abs_self (x : ℝ) : x ≤ |x| :=
+Proof:
+  rw [le_abs]
+  simp
+
+
+Theorem: C03S01.my_lemma3
+File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+Theorem statement: theorem my_lemma3 :
+    ∀ {x y ε : ℝ}, 0 < ε → ε ≤ 1 → |x| < ε → |y| < ε → |x * y| < ε :=
+Proof:
+  apply C03S01.my_lemma
+
+
+Theorem: C03S01.Subset.trans
+File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+Theorem statement: theorem Subset.trans : r ⊆ s → s ⊆ t → r ⊆ t :=
+Proof:
+  exact Set.Subset.trans
+
+
+Theorem: MyRing.two_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem two_mul (a : R) : 2 * a = a + a :=
+Proof:
+  rw [← one_add_one_eq_two]
+  simp [add_mul]
+
+
+Proved sorry theorems only in first database: 7
+
+Theorem: MyGroup.mul_inv_rev
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem mul_inv_rev (a b : G) : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+Proof:
+  simp
+
+
+Theorem: MyRing.eq_neg_of_add_eq_zero
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem eq_neg_of_add_eq_zero {a b : R} (h : a + b = 0) : a = -b :=
+Proof:
+  rwa [eq_neg_iff_add_eq_zero]
+
+
+Theorem: C03S01.Subset.trans
+File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+Theorem statement: theorem Subset.trans : r ⊆ s → s ⊆ t → r ⊆ t :=
+Proof:
+  exact Set.Subset.trans
+
+
+Theorem: absorb2
+File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+Theorem statement: theorem absorb2 : x ⊔ x ⊓ y = x :=
+Proof:
+  simp
+
+
+Theorem: C03S05.MyAbs.abs_lt
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+Proof:
+  cases x
+  exact abs_lt
+
+
+Theorem: MyRing.zero_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem zero_mul (a : R) : 0 * a = 0 :=
+Proof:
+  rw [MulZeroClass.zero_mul]
+
+
+Theorem: C03S05.MyAbs.neg_le_abs_self
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem neg_le_abs_self (x : ℝ) : -x ≤ |x| :=
+Proof:
+  simpa using C03S05.MyAbs.le_abs_self (-x)
+
+
+Proved sorry theorems only in first database: 9
+
+Theorem: MyRing.zero_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem zero_mul (a : R) : 0 * a = 0 :=
+Proof:
+  rw [MulZeroClass.zero_mul]
+
+
+Theorem: C03S05.MyAbs.le_abs_self
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem le_abs_self (x : ℝ) : x ≤ |x| :=
+Proof:
+  rw [le_abs]
+  simp
+
+
+Theorem: MyRing.add_right_cancel
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem add_right_cancel {a b c : R} (h : a + b = c + b) : a = c :=
+Proof:
+  simpa using h
+
+
+Theorem: MyRing.two_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem two_mul (a : R) : 2 * a = a + a :=
+Proof:
+  rw [← one_add_one_eq_two]
+  simp [add_mul]
+
+
+Theorem: C03S05.MyAbs.abs_add
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_add (x y : ℝ) : |x + y| ≤ |x| + |y| :=
+Proof:
+  apply abs_add_le
+
+
+Theorem: C03S01.my_lemma3
+File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+Theorem statement: theorem my_lemma3 :
+    ∀ {x y ε : ℝ}, 0 < ε → ε ≤ 1 → |x| < ε → |y| < ε → |x * y| < ε :=
+Proof:
+  apply C03S01.my_lemma
+
+
+Theorem: C03S05.MyAbs.abs_lt
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+Proof:
+  cases x
+  exact abs_lt
+
+
+Theorem: C03S01.Subset.trans
+File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+Theorem statement: theorem Subset.trans : r ⊆ s → s ⊆ t → r ⊆ t :=
+Proof:
+  exact Set.Subset.trans
+
+
+Theorem: C03S05.MyAbs.neg_le_abs_self
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem neg_le_abs_self (x : ℝ) : -x ≤ |x| :=
+Proof:
+  simpa using C03S05.MyAbs.le_abs_self (-x)
+
+
+
+Proved sorry theorems only in first database: 6
+
+Theorem: MyRing.add_left_cancel
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem add_left_cancel {a b c : R} (h : a + b = a + c) : b = c :=
+Proof:
+  simpa using h
+
+
+Theorem: C03S05.MyAbs.abs_lt
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+Proof:
+  cases x
+  exact abs_lt
+
+
+Theorem: absorb1
+File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+Theorem statement: theorem absorb1 : x ⊓ (x ⊔ y) = x :=
+Proof:
+  simp
+
+
+Theorem: MyGroup.mul_inv_rev
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem mul_inv_rev (a b : G) : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+Proof:
+  simp
+
+
+Theorem: MyRing.self_sub
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem self_sub (a : R) : a - a = 0 :=
+Proof:
+  simp
+
+
+Theorem: MyRing.add_neg_cancel_right
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem add_neg_cancel_right (a b : R) : a + b + -b = a :=
+Proof:
+  simp
+
+
+Proved sorry theorems only in first database: 5
+
+Theorem: absorb2
+File path: MIL/C02_Basics/S05_Proving_Facts_about_Algebraic_Structures.lean
+Theorem statement: theorem absorb2 : x ⊔ x ⊓ y = x :=
+Proof:
+  simp
+
+
+Theorem: MyGroup.mul_right_inv
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem mul_right_inv (a : G) : a * a⁻¹ = 1 :=
+Proof:
+  simp
+
+
+Theorem: MyRing.neg_eq_of_add_eq_zero
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem neg_eq_of_add_eq_zero {a b : R} (h : a + b = 0) : -a = b :=
+Proof:
+  rw [add_eq_zero_iff_eq_neg] at h
+  simp [h]
+
+
+Theorem: C03S05.MyAbs.abs_lt
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+Proof:
+  cases x
+  exact abs_lt
+
+
+Theorem: C03S04.aux
+File path: MIL/C03_Logic/S04_Conjunction_and_Iff.lean
+Theorem statement: None
+Proof:
+  nlinarith
+
+
+
+Proved sorry theorems only in first database: 4
+
+Theorem: MyRing.two_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem two_mul (a : R) : 2 * a = a + a :=
+Proof:
+  rw [← one_add_one_eq_two]
+  simp [add_mul]
+
+
+Theorem: MyRing.eq_neg_of_add_eq_zero
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem eq_neg_of_add_eq_zero {a b : R} (h : a + b = 0) : a = -b :=
+Proof:
+  rwa [eq_neg_iff_add_eq_zero]
+
+
+Theorem: C03S01.Subset.trans
+File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+Theorem statement: theorem Subset.trans : r ⊆ s → s ⊆ t → r ⊆ t :=
+Proof:
+  exact Set.Subset.trans
+
+
+Theorem: C03S05.MyAbs.abs_add
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_add (x y : ℝ) : |x + y| ≤ |x| + |y| :=
+Proof:
+  apply abs_add_le
+
+
+
+
+Proved sorry theorems only in first database: 7
+
+Theorem: C03S04.aux
+File path: MIL/C03_Logic/S04_Conjunction_and_Iff.lean
+Theorem statement: None
+Proof:
+  nlinarith
+
+
+Theorem: C03S05.MyAbs.abs_lt
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem abs_lt : |x| < y ↔ -y < x ∧ x < y :=
+Proof:
+  cases x
+  exact abs_lt
+
+
+Theorem: MyRing.two_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem two_mul (a : R) : 2 * a = a + a :=
+Proof:
+  rw [← one_add_one_eq_two]
+  simp [add_mul]
+
+
+Theorem: MyRing.self_sub
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem self_sub (a : R) : a - a = 0 :=
+Proof:
+  simp
+
+
+Theorem: C03S05.MyAbs.le_abs_self
+File path: MIL/C03_Logic/S05_Disjunction.lean
+Theorem statement: theorem le_abs_self (x : ℝ) : x ≤ |x| :=
+Proof:
+  rw [le_abs]
+  simp
+
+
+Theorem: MyRing.zero_mul
+File path: MIL/C02_Basics/S02_Proving_Identities_in_Algebraic_Structures.lean
+Theorem statement: theorem zero_mul (a : R) : 0 * a = 0 :=
+Proof:
+  rw [MulZeroClass.zero_mul]
+
+
+Theorem: C03S01.Subset.trans
+File path: MIL/C03_Logic/S01_Implication_and_the_Universal_Quantifier.lean
+Theorem statement: theorem Subset.trans : r ⊆ s → s ⊆ t → r ⊆ t :=
+Proof:
+  exact Set.Subset.trans
+
+

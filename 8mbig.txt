@@ -1,0 +1,1338 @@
+(base) yingzi_ma@cais-login-0:~/lean_project/ReProver$ srun --partition=compute --gpus=4 --nodes=1 --time=0-08:00:00 --pty /bin/bash
+
+srun: job 41072 queued and waiting for resources
+srun: job 41072 has been allocated resources
+(base) yingzi_ma@compute-permanent-node-957:~/lean_project/ReProver$ bash run_code8_more_sorries_big_model.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+Did not find any active Ray processes.
+Running main8_more_sorries_big_model.py
+[2024-09-21 07:35:13,864] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 07:35:19.946 | INFO     | __main__:main:1603 - Running progressive training
+2024-09-21 07:35:19.946 | INFO     | __main__:main:1609 - Configuring LeanDojo...
+2024-09-21 07:35:19.949 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/le
+an_project/ReProver
+2024-09-21 07:35:19.949 | INFO     | __main__:main:1611 - LeanDojo configured
+2024-09-21 07:35:19.949 | INFO     | __main__:main:1616 - Starting the main process
+2024-09-21 07:35:19.949 | INFO     | __main__:main:1624 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_sin
+gle_repo_ewc_curriculum_sorries_big_model.json
+2024-09-21 07:36:31.917 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ahhwuhu/
+zeta_3_irrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-09-21 07:36:31.918 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ahhwuhu/zeta_3_i
+rrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-09-21 07:36:42.376 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/apnelson
+1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-21 07:36:42.376 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/apnelson1/Matroi
+d (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-21 07:36:55.119 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/fo
+rmal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-21 07:36:55.119 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_boo
+k (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-21 07:36:57.056 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoo
+rn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-21 07:36:57.056 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carle
+son (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-21 07:37:11.145 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDill
+ies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-21 07:37:11.145 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/Lean
+APAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-21 07:37:13.050 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math
+-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-21 07:37:13.050 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formali
+zation/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-21 07:37:29.182 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11
+/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-21 07:37:29.182 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F
+-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-21 07:37:29.695 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/m4lvin/l
+ean4-pdl (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-09-21 07:37:29.695 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/m4lvin/lean4-pdl
+ (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-09-21 07:37:31.638 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/Louis-Le
+-Grand/Formalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f515a0e52878)
+2024-09-21 07:37:31.638 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/Louis-Le-Grand/F
+ormalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f515a0e52878)
+2024-09-21 07:37:50.228 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/corent12
+34/hairy-ball-theorem-lean (commit: a778826d19c8a7ddf1d26beeea628c45450612e6)
+2024-09-21 07:37:50.228 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/corent1234/hairy
+-ball-theorem-lean (commit: a778826d19c8a7ddf1d26beeea628c45450612e6)
+2024-09-21 07:37:51.930 | INFO     | __main__:main:1626 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_sing
+le_repo_ewc_curriculum_sorries_big_model.json
+2024-09-21 07:37:51.932 | INFO     | __main__:main:1633 - Found 9 repositories
+2024-09-21 07:37:51.932 | INFO     | __main__:main:1636 - Starting curriculum learning
+2024-09-21 07:38:20.971 | INFO     | __main__:main:2459 - An error occurred: Failed to read repository information after multiple at
+tempts
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main8_more_sorries_big_model.py", line 1760, in main
+    with open(repo_info_file, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc_curriculum_sorries
+_big_model/github_search_results_updated_full.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main8_more_sorries_big_model.py", line 1765, in main
+    raise Exception("Failed to read repository information after multiple attempts")
+Exception: Failed to read repository information after multiple attempts
+(base) yingzi_ma@compute-permanent-node-957:~/lean_project/ReProver$ bash run_code8_more_sorries_big_model.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+^Z
+[1]+  Stopped                 bash run_code8_more_sorries_big_model.sh
+(base) yingzi_ma@compute-permanent-node-957:~/lean_project/ReProver$ nvidia-smi
+Sat Sep 21 07:40:06 2024
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:15:00.0 Off |                    0 |
+| N/A   36C    P0             82W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          On  |   00000000:50:00.0 Off |                    0 |
+| N/A   37C    P0             87W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100-SXM4-80GB          On  |   00000000:53:00.0 Off |                    0 |
+| N/A   38C    P0             83W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100-SXM4-80GB          On  |   00000000:D6:00.0 Off |                    0 |
+| N/A   38C    P0             88W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+(base) yingzi_ma@compute-permanent-node-957:~/lean_project/ReProver$ bash run_code8_more_sorries_big_model.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+Did not find any active Ray processes.
+Running main8_more_sorries_big_model.py
+[2024-09-21 07:40:18,143] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 07:40:22.808 | INFO     | __main__:main:1603 - Running progressive training
+2024-09-21 07:40:22.808 | INFO     | __main__:main:1609 - Configuring LeanDojo...
+2024-09-21 07:40:22.811 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/le
+an_project/ReProver
+2024-09-21 07:40:22.811 | INFO     | __main__:main:1611 - LeanDojo configured
+2024-09-21 07:40:22.811 | INFO     | __main__:main:1616 - Starting the main process
+2024-09-21 07:40:22.811 | INFO     | __main__:main:1624 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_sin
+gle_repo_ewc_curriculum_sorries_big_model.json
+2024-09-21 07:41:34.273 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ahhwuhu/
+zeta_3_irrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-09-21 07:41:34.273 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ahhwuhu/zeta_3_i
+rrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-09-21 07:41:45.003 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/apnelson
+1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-21 07:41:45.003 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/apnelson1/Matroi
+d (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-21 07:41:58.160 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/fo
+rmal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-21 07:41:58.161 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_boo
+k (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-21 07:42:00.075 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoo
+rn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-21 07:42:00.076 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carle
+son (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-21 07:42:14.647 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDill
+ies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-21 07:42:14.647 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/Lean
+APAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-21 07:42:16.522 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math
+-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-21 07:42:16.522 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formali
+zation/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-21 07:42:33.133 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11
+/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-21 07:42:33.133 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F
+-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-21 07:42:33.642 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/m4lvin/l
+ean4-pdl (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-09-21 07:42:33.642 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/m4lvin/lean4-pdl
+ (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-09-21 07:42:35.579 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/Louis-Le
+-Grand/Formalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f515a0e52878)
+2024-09-21 07:42:35.580 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/Louis-Le-Grand/F
+ormalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f515a0e52878)
+2024-09-21 07:42:54.741 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/corent12
+34/hairy-ball-theorem-lean (commit: a778826d19c8a7ddf1d26beeea628c45450612e6)
+2024-09-21 07:42:54.741 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/corent1234/hairy
+-ball-theorem-lean (commit: a778826d19c8a7ddf1d26beeea628c45450612e6)
+2024-09-21 07:42:56.509 | INFO     | __main__:main:1626 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_sing
+le_repo_ewc_curriculum_sorries_big_model.json
+2024-09-21 07:42:56.510 | INFO     | __main__:main:1633 - Found 9 repositories
+2024-09-21 07:42:56.511 | INFO     | __main__:main:1636 - Starting curriculum learning
+2024-09-21 07:42:56.887 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c2
+2024-09-21 07:43:14.022 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c1
+2024-09-21 07:43:32.241 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-21 07:43:50.399 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-09-21 07:44:07.035 | INFO     | __main__:main:1772 - length of lean_git_repos: 8
+2024-09-21 07:44:07.035 | INFO     | __main__:main:1773 - i: 0
+2024-09-21 07:44:07.036 | INFO     | __main__:main:1779 - Main process
+2024-09-21 07:44:07.036 | INFO     | __main__:main:1780 - Using lambda = 0.1
+2024-09-21 07:44:07.036 | INFO     | __main__:main:1781 - Processing https://github.com/ahhwuhu/zeta_3_irrational
+2024-09-21 07:44:07.036 | INFO     | __main__:main:1788 - Adding repo to repos_for_merged_dataset
+2024-09-21 07:44:07.038 | INFO     | dynamic_database:generate_merged_dataset:415 - Merging selected repositories in the database:
+2024-09-21 07:44:07.038 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/ahhwuhu/zeta_3_irrational
+ (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-09-21 07:46:32.686 | WARNING  | dynamic_database:safe_remove_dir_path:377 - /data/yingzi_ma/lean_project/datasets_PT_single_rep
+o_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38 already exists. Removi
+ng it now.
+2024-09-21 07:46:56.903 | INFO     | dynamic_database:generate_merged_dataset:439 - Exported proofs to /data/yingzi_ma/lean_project/
+datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38
+2024-09-21 07:46:57.566 | INFO     | dynamic_database:generate_merged_dataset:442 - Merged and exported corpus to /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518
+dd58806a38
+2024-09-21 07:46:57.588 | INFO     | dynamic_database:generate_merged_dataset:445 - Exported traced files to /data/yingzi_ma/lean_pr
+oject/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd588
+06a38
+2024-09-21 07:46:57.592 | INFO     | dynamic_database:generate_merged_dataset:448 - Exported metadata to /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8
+2024-09-21 07:46:57.622 | INFO     | __main__:main:1800 - All GPUs
+2024-09-21 07:46:57.622 | INFO     | __main__:find_latest_checkpoint:911 - Using the latest checkpoint: /data/yingzi_ma/lean_project
+/checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 07:46:57.622 | INFO     | __main__:main:1807 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_singl
+e_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 07:46:57.622 | INFO     | __main__:main:1813 - Inside train_test_fisher
+2024-09-21 07:46:57.622 | INFO     | __main__:main:1814 - Starting training at epoch 0
+[rank: 0] Seed set to 3407
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torc
+h.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to co
+nstruct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/
+SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`.
+ This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via th
+is mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start settin
+g `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any
+issues related to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `
+python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29d
+cec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt`
+2024-09-21 07:47:01.053 | INFO     | __main__:main:2459 - An error occurred: Error(s) in loading state_dict for PremiseRetriever:
+        size mismatch for encoder.shared.weight: copying a param with shape torch.Size([384, 1536]) from checkpoint, the shape in cu
+rrent model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.embed_tokens.weight: copying a param with shape torch.Size([384, 1536]) from checkpoint, t
+he shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight: copying a param with shape t
+orch.Size([32, 12]) from checkpoint, the shape in current model is torch.Size([32, 6]).
+        size mismatch for encoder.encoder.block.0.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.0.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.1.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.1.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.1.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.1.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.1.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.1.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.2.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.2.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.2.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.2.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.2.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.2.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.3.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.3.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.3.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.3.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.3.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.3.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.4.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.4.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.4.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.4.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.4.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.4.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.5.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.5.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.5.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.5.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.5.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.5.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.6.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.6.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.6.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.6.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.6.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.6.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.7.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.7.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.7.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.7.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.7.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.7.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.8.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.8.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.8.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.8.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.8.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.8.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.9.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.9.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.9.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.9.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.9.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.9.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.10.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.10.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.10.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.10.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768]
+) from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.10.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from che
+ckpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968,
+1536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968,
+1536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 39
+68]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.10.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from che
+ckpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.11.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.11.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.11.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.11.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768]
+) from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.11.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from che
+ckpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968,
+1536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968,
+1536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 39
+68]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.11.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from che
+ckpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.final_layer_norm.weight: copying a param with shape torch.Size([1536]) from checkpoint, th
+e shape in current model is torch.Size([1472]).
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main8_more_sorries_big_model.py", line 1834, in main
+    model = PremiseRetriever.load(
+  File "/data/yingzi_ma/lean_project/ReProver/retrieval/model.py", line 125, in load
+    return load_checkpoint(cls, ckpt_path, device, freeze, config)
+  File "/data/yingzi_ma/lean_project/ReProver/common.py", line 486, in load_checkpoint
+    model = model_cls.load_from_checkpoint(ckpt_path, strict=False, **config).to(device)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/utilities/model_helpers.py", line 12
+5, in wrapper
+    return self.method(cls, *args, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1581, in load_
+from_checkpoint
+    loaded = _load_from_checkpoint(
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py", line 91, in _load_f
+rom_checkpoint
+    model = _load_state(cls, checkpoint, strict=strict, **kwargs)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/pytorch_lightning/core/saving.py", line 180, in _load_
+state
+    keys = obj.load_state_dict(checkpoint["state_dict"], strict=strict)
+  File "/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2215, in load_state_
+dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for PremiseRetriever:
+        size mismatch for encoder.shared.weight: copying a param with shape torch.Size([384, 1536]) from checkpoint, the shape in cu
+rrent model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.embed_tokens.weight: copying a param with shape torch.Size([384, 1536]) from checkpoint, t
+he shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight: copying a param with shape t
+orch.Size([32, 12]) from checkpoint, the shape in current model is torch.Size([32, 6]).
+        size mismatch for encoder.encoder.block.0.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.0.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.0.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.0.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.1.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.1.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.1.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.1.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.1.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.1.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.1.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.1.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.1.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.2.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.2.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.2.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.2.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.2.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.2.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.2.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.2.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.2.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.3.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.3.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.3.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.3.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.3.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.3.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.3.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.3.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.3.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.4.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.4.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.4.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.4.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.4.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.4.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.4.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.4.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.4.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.5.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.5.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.5.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.5.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.5.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.5.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.5.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.5.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.5.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.6.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.6.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.6.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.6.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.6.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.6.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.6.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.6.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.6.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.7.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.7.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.7.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.7.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.7.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.7.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.7.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.7.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.7.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.8.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.8.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.8.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.8.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.8.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.8.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.8.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.8.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.8.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.9.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.9.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.9.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536])
+ from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.9.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768])
+ from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.9.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.9.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.9.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968, 1
+536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.9.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 396
+8]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.9.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from chec
+kpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.10.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.10.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.10.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.10.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768]
+) from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.10.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from che
+ckpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.10.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968,
+1536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.10.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968,
+1536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.10.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 39
+68]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.10.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from che
+ckpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.11.layer.0.SelfAttention.q.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.11.layer.0.SelfAttention.k.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.11.layer.0.SelfAttention.v.weight: copying a param with shape torch.Size([768, 1536]
+) from checkpoint, the shape in current model is torch.Size([384, 1472]).
+        size mismatch for encoder.encoder.block.11.layer.0.SelfAttention.o.weight: copying a param with shape torch.Size([1536, 768]
+) from checkpoint, the shape in current model is torch.Size([1472, 384]).
+        size mismatch for encoder.encoder.block.11.layer.0.layer_norm.weight: copying a param with shape torch.Size([1536]) from che
+ckpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.block.11.layer.1.DenseReluDense.wi_0.weight: copying a param with shape torch.Size([3968,
+1536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.11.layer.1.DenseReluDense.wi_1.weight: copying a param with shape torch.Size([3968,
+1536]) from checkpoint, the shape in current model is torch.Size([3584, 1472]).
+        size mismatch for encoder.encoder.block.11.layer.1.DenseReluDense.wo.weight: copying a param with shape torch.Size([1536, 39
+68]) from checkpoint, the shape in current model is torch.Size([1472, 3584]).
+        size mismatch for encoder.encoder.block.11.layer.1.layer_norm.weight: copying a param with shape torch.Size([1536]) from che
+ckpoint, the shape in current model is torch.Size([1472]).
+        size mismatch for encoder.encoder.final_layer_norm.weight: copying a param with shape torch.Size([1536]) from checkpoint, th
+e shape in current model is torch.Size([1472]).
+(base) yingzi_ma@compute-permanent-node-957:~/lean_project/ReProver$ nvidia-smi
+Sat Sep 21 07:49:51 2024
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:15:00.0 Off |                    0 |
+| N/A   36C    P0             82W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          On  |   00000000:50:00.0 Off |                    0 |
+| N/A   38C    P0             87W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100-SXM4-80GB          On  |   00000000:53:00.0 Off |                    0 |
+| N/A   38C    P0             83W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100-SXM4-80GB          On  |   00000000:D6:00.0 Off |                    0 |
+| N/A   38C    P0             88W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+(base) yingzi_ma@compute-permanent-node-957:~/lean_project/ReProver$ bash run_code8_more_sorries_big_model.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+Did not find any active Ray processes.
+Running main8_more_sorries_big_model.py
+[2024-09-21 07:50:02,694] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 07:50:07.285 | INFO     | __main__:main:1603 - Running progressive training
+2024-09-21 07:50:07.285 | INFO     | __main__:main:1609 - Configuring LeanDojo...
+2024-09-21 07:50:07.288 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/le
+an_project/ReProver
+2024-09-21 07:50:07.288 | INFO     | __main__:main:1611 - LeanDojo configured
+2024-09-21 07:50:07.288 | INFO     | __main__:main:1616 - Starting the main process
+2024-09-21 07:50:07.288 | INFO     | __main__:main:1624 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_sin
+gle_repo_ewc_curriculum_sorries_big_model.json
+2024-09-21 07:51:17.653 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ahhwuhu/
+zeta_3_irrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-09-21 07:51:17.653 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ahhwuhu/zeta_3_i
+rrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-09-21 07:51:28.060 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/apnelson
+1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-21 07:51:28.060 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/apnelson1/Matroi
+d (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-21 07:51:40.718 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/fo
+rmal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-21 07:51:40.718 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_boo
+k (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-21 07:51:42.669 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoo
+rn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-21 07:51:42.669 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carle
+son (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-21 07:51:56.708 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDill
+ies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-21 07:51:56.708 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/Lean
+APAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-21 07:51:58.613 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math
+-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-21 07:51:58.613 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formali
+zation/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-21 07:52:14.638 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11
+/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-21 07:52:14.638 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F
+-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-21 07:52:15.148 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/m4lvin/l
+ean4-pdl (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-09-21 07:52:15.148 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/m4lvin/lean4-pdl
+ (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-09-21 07:52:17.109 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/Louis-Le
+-Grand/Formalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f515a0e52878)
+2024-09-21 07:52:17.109 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/Louis-Le-Grand/F
+ormalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f515a0e52878)
+2024-09-21 07:52:35.605 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/corent12
+34/hairy-ball-theorem-lean (commit: a778826d19c8a7ddf1d26beeea628c45450612e6)
+2024-09-21 07:52:35.606 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/corent1234/hairy
+-ball-theorem-lean (commit: a778826d19c8a7ddf1d26beeea628c45450612e6)
+2024-09-21 07:52:37.290 | INFO     | __main__:main:1626 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_sing
+le_repo_ewc_curriculum_sorries_big_model.json
+2024-09-21 07:52:37.291 | INFO     | __main__:main:1633 - Found 9 repositories
+2024-09-21 07:52:37.292 | INFO     | __main__:main:1636 - Starting curriculum learning
+2024-09-21 07:52:37.574 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c2
+2024-09-21 07:52:54.814 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c1
+2024-09-21 07:53:13.285 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-21 07:53:30.884 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-09-21 07:53:47.428 | INFO     | __main__:main:1772 - length of lean_git_repos: 8
+2024-09-21 07:53:47.428 | INFO     | __main__:main:1773 - i: 0
+2024-09-21 07:53:47.428 | INFO     | __main__:main:1779 - Main process
+2024-09-21 07:53:47.428 | INFO     | __main__:main:1780 - Using lambda = 0.1
+2024-09-21 07:53:47.428 | INFO     | __main__:main:1781 - Processing https://github.com/ahhwuhu/zeta_3_irrational
+2024-09-21 07:53:47.428 | INFO     | __main__:main:1788 - Adding repo to repos_for_merged_dataset
+2024-09-21 07:53:47.429 | INFO     | dynamic_database:generate_merged_dataset:415 - Merging selected repositories in the database:
+2024-09-21 07:53:47.429 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/ahhwuhu/zeta_3_irrational
+ (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-09-21 07:56:09.889 | WARNING  | dynamic_database:safe_remove_dir_path:377 - /data/yingzi_ma/lean_project/datasets_PT_single_rep
+o_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38 already exists. Removi
+ng it now.
+2024-09-21 07:56:33.411 | INFO     | dynamic_database:generate_merged_dataset:439 - Exported proofs to /data/yingzi_ma/lean_project/
+datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38
+2024-09-21 07:56:34.068 | INFO     | dynamic_database:generate_merged_dataset:442 - Merged and exported corpus to /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518
+dd58806a38
+2024-09-21 07:56:34.089 | INFO     | dynamic_database:generate_merged_dataset:445 - Exported traced files to /data/yingzi_ma/lean_pr
+oject/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd588
+06a38
+2024-09-21 07:56:34.093 | INFO     | dynamic_database:generate_merged_dataset:448 - Exported metadata to /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8
+2024-09-21 07:56:34.121 | INFO     | __main__:main:1800 - All GPUs
+2024-09-21 07:56:34.121 | INFO     | __main__:find_latest_checkpoint:911 - Using the latest checkpoint: /data/yingzi_ma/lean_project
+/checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 07:56:34.121 | INFO     | __main__:main:1807 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_singl
+e_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 07:56:34.121 | INFO     | __main__:main:1813 - Inside train_test_fisher
+2024-09-21 07:56:34.121 | INFO     | __main__:main:1814 - Starting training at epoch 0
+[rank: 0] Seed set to 3407
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torc
+h.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to co
+nstruct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/
+SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`.
+ This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via th
+is mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start settin
+g `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any
+issues related to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `
+python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29d
+cec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt`
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `
+clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.4
+5, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues
+/31884
+  warnings.warn(
+2024-09-21 07:56:45.287 | INFO     | __main__:main:1838 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_si
+ngle_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 07:56:45.288 | INFO     | __main__:main:2459 - An error occurred: [Errno 2] No such file or directory: '/data/yingzi_ma/l
+ean_project/fisher_PT_single_repo_ewc_curriculum_sorries_big_model'
+Traceback (most recent call last):
+  File "/data/yingzi_ma/lean_project/ReProver/main8_more_sorries_big_model.py", line 1842, in main
+    latest_fisher = find_latest_fisher()
+  File "/data/yingzi_ma/lean_project/ReProver/main8_more_sorries_big_model.py", line 917, in find_latest_fisher
+    all_fisher = [os.path.join(fisher_dir, f) for f in os.listdir(fisher_dir) if f.endswith(".pkl")]
+FileNotFoundError: [Errno 2] No such file or directory: '/data/yingzi_ma/lean_project/fisher_PT_single_repo_ewc_curriculum_sorries_b
+ig_model'
+(base) yingzi_ma@compute-permanent-node-957:~/lean_project/ReProver$ nvidia-smi
+Sat Sep 21 07:58:41 2024
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:15:00.0 Off |                    0 |
+| N/A   36C    P0             82W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          On  |   00000000:50:00.0 Off |                    0 |
+| N/A   38C    P0             88W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100-SXM4-80GB          On  |   00000000:53:00.0 Off |                    0 |
+| N/A   38C    P0             83W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100-SXM4-80GB          On  |   00000000:D6:00.0 Off |                    0 |
+| N/A   38C    P0             88W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+(base) yingzi_ma@compute-permanent-node-957:~/lean_project/ReProver$ bash run_code8_more_sorries_big_model.sh
+Script executed from: /data/yingzi_ma/lean_project/ReProver
+Removing old cache files
+Stopping ray
+Did not find any active Ray processes.
+Running main8_more_sorries_big_model.py
+[2024-09-21 07:58:52,837] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 07:58:57.492 | INFO     | __main__:main:1603 - Running progressive training
+2024-09-21 07:58:57.492 | INFO     | __main__:main:1609 - Configuring LeanDojo...
+2024-09-21 07:58:57.495 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/le
+an_project/ReProver
+2024-09-21 07:58:57.495 | INFO     | __main__:main:1611 - LeanDojo configured
+2024-09-21 07:58:57.495 | INFO     | __main__:main:1616 - Starting the main process
+2024-09-21 07:58:57.495 | INFO     | __main__:main:1624 - Loading database from /data/yingzi_ma/lean_project/dynamic_database_PT_sin
+gle_repo_ewc_curriculum_sorries_big_model.json
+2024-09-21 08:00:07.882 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/ahhwuhu/
+zeta_3_irrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-09-21 08:00:07.882 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/ahhwuhu/zeta_3_i
+rrational (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-09-21 08:00:18.467 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/apnelson
+1/Matroid (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-21 08:00:18.468 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/apnelson1/Matroi
+d (commit: 244315752bb0a771f20b676b946130b664d60712)
+2024-09-21 08:00:31.533 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/mo271/fo
+rmal_book (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-21 08:00:31.533 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/mo271/formal_boo
+k (commit: 6fbe8c2985008c0bfb30050750a71b90388ad3a3)
+2024-09-21 08:00:33.477 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/fpvandoo
+rn/carleson (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-21 08:00:33.478 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/fpvandoorn/carle
+son (commit: bec7808b907190882fa1fa54ce749af297c6cf37)
+2024-09-21 08:00:48.099 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/YaelDill
+ies/LeanAPAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-21 08:00:48.099 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/YaelDillies/Lean
+APAP (commit: 951c660a8d7ba8e39f906fdf657674a984effa8b)
+2024-09-21 08:00:49.995 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/NUS-Math
+-Formalization/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-21 08:00:49.995 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/NUS-Math-Formali
+zation/coxeter (commit: 96af8aee7943ca8685ed1b00cc83a559ea389a97)
+2024-09-21 08:01:06.475 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/yangky11
+/miniF2F-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-21 08:01:06.475 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/yangky11/miniF2F
+-lean4 (commit: 9e445f5435407f014b88b44a98436d50dd7abd00)
+2024-09-21 08:01:07.017 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/m4lvin/l
+ean4-pdl (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-09-21 08:01:07.017 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/m4lvin/lean4-pdl
+ (commit: c7f649fe3c4891cf1a01c120e82ebc5f6199856e)
+2024-09-21 08:01:08.985 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/Louis-Le
+-Grand/Formalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f515a0e52878)
+2024-09-21 08:01:08.985 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/Louis-Le-Grand/F
+ormalisation-of-constructable-numbers (commit: 01ef1f22a04f2ba8081c5fb29413f515a0e52878)
+2024-09-21 08:01:28.066 | INFO     | dynamic_database:add_repository:600 - Attempting to add repository: https://github.com/corent12
+34/hairy-ball-theorem-lean (commit: a778826d19c8a7ddf1d26beeea628c45450612e6)
+2024-09-21 08:01:28.067 | INFO     | dynamic_database:add_repository:603 - Added new repository: https://github.com/corent1234/hairy
+-ball-theorem-lean (commit: a778826d19c8a7ddf1d26beeea628c45450612e6)
+2024-09-21 08:01:29.790 | INFO     | __main__:main:1626 - Loaded database from /data/yingzi_ma/lean_project/dynamic_database_PT_sing
+le_repo_ewc_curriculum_sorries_big_model.json
+2024-09-21 08:01:29.791 | INFO     | __main__:main:1633 - Found 9 repositories
+2024-09-21 08:01:29.791 | INFO     | __main__:main:1636 - Starting curriculum learning
+2024-09-21 08:01:30.143 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c2
+2024-09-21 08:01:48.338 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c1
+2024-09-21 08:02:07.070 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-21 08:02:24.914 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-09-21 08:02:41.397 | INFO     | __main__:main:1772 - length of lean_git_repos: 8
+2024-09-21 08:02:41.397 | INFO     | __main__:main:1773 - i: 0
+2024-09-21 08:02:41.397 | INFO     | __main__:main:1779 - Main process
+2024-09-21 08:02:41.397 | INFO     | __main__:main:1780 - Using lambda = 0.1
+2024-09-21 08:02:41.397 | INFO     | __main__:main:1781 - Processing https://github.com/ahhwuhu/zeta_3_irrational
+2024-09-21 08:02:41.397 | INFO     | __main__:main:1788 - Adding repo to repos_for_merged_dataset
+2024-09-21 08:02:41.398 | INFO     | dynamic_database:generate_merged_dataset:415 - Merging selected repositories in the database:
+2024-09-21 08:02:41.398 | INFO     | dynamic_database:generate_merged_dataset:417 -   - https://github.com/ahhwuhu/zeta_3_irrational
+ (commit: 914712200e463cfc97fe37e929d518dd58806a38)
+2024-09-21 08:05:06.594 | WARNING  | dynamic_database:safe_remove_dir_path:377 - /data/yingzi_ma/lean_project/datasets_PT_single_rep
+o_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38 already exists. Removi
+ng it now.
+2024-09-21 08:05:30.487 | INFO     | dynamic_database:generate_merged_dataset:439 - Exported proofs to /data/yingzi_ma/lean_project/
+datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38
+2024-09-21 08:05:31.151 | INFO     | dynamic_database:generate_merged_dataset:442 - Merged and exported corpus to /data/yingzi_ma/le
+an_project/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518
+dd58806a38
+2024-09-21 08:05:31.174 | INFO     | dynamic_database:generate_merged_dataset:445 - Exported traced files to /data/yingzi_ma/lean_pr
+oject/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd588
+06a38
+2024-09-21 08:05:31.178 | INFO     | dynamic_database:generate_merged_dataset:448 - Exported metadata to /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8
+2024-09-21 08:05:31.207 | INFO     | __main__:main:1800 - All GPUs
+2024-09-21 08:05:31.208 | INFO     | __main__:find_latest_checkpoint:911 - Using the latest checkpoint: /data/yingzi_ma/lean_project
+/checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:05:31.208 | INFO     | __main__:main:1807 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_singl
+e_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:05:31.208 | INFO     | __main__:main:1813 - Inside train_test_fisher
+2024-09-21 08:05:31.208 | INFO     | __main__:main:1814 - Starting training at epoch 0
+[rank: 0] Seed set to 3407
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torc
+h.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to co
+nstruct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/
+SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`.
+ This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via th
+is mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start settin
+g `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any
+issues related to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `
+python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29d
+cec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt`
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `
+clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.4
+5, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues
+/31884
+  warnings.warn(
+2024-09-21 08:05:34.553 | INFO     | __main__:main:1838 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_si
+ngle_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:05:34.554 | INFO     | __main__:find_latest_fisher:921 - Using the latest Fisher Information Matrix: /data/yingzi_ma/l
+ean_project/fisher_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_fisher_info.pkl
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load
+` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construc
+t malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURI
+TY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This
+limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mod
+e unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `wei
+ghts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues
+ related to this experimental feature.
+  return torch.load(io.BytesIO(b))
+2024-09-21 08:05:36.037 | INFO     | __main__:load_fisher_information:897 - Fisher Information successfully loaded.
+2024-09-21 08:05:36.037 | INFO     | retrieval.model:set_fisher_info:60 - Fisher Information has been updated in the model.
+2024-09-21 08:05:36.037 | INFO     | __main__:main:1845 - Fisher Information Matrix loaded.
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun`
+ command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python comm
+and with `srun` like so: srun python main8_more_sorries_big_model.py ...
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+2024-09-21 08:05:36.173 | INFO     | __main__:main:1896 - right before barrier for data module
+2024-09-21 08:05:36.174 | INFO     | __main__:main:1911 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc_curric
+ulum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38/random
+2024-09-21 08:05:36.279 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_
+repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38/corpus.jsonl
+100%|█████████████████████████████████████████████████████████████████████████████████████| 115368/115368 [00:17<00:00, 6546.68it/s]
+2024-09-21 08:06:30.462 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_pr
+oject/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd588
+06a38/random/cache_train/cached_data.pkl
+Training dataset size: 357252
+100%|█████████████████████████████████████████████████████████████████████████████████████████| 2403/2403 [00:00<00:00, 6980.49it/s]
+2024-09-21 08:06:30.907 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_pr
+oject/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd588
+06a38/random/cache_val/cached_data.pkl
+Validation dataset size: 4833
+100%|█████████████████████████████████████████████████████████████████████████████████████████| 2403/2403 [00:00<00:00, 6837.44it/s]
+2024-09-21 08:06:31.366 | INFO     | retrieval.datamodule:load_or_cache_data:65 - Saved loaded data to cache /data/yingzi_ma/lean_pr
+oject/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd588
+06a38/random/cache_pred/cached_data.pkl
+Testing dataset size: 5139
+2024-09-21 08:06:31.367 | INFO     | __main__:main:1925 - Training dataset size after load: 357252
+2024-09-21 08:06:31.367 | INFO     | __main__:main:1926 - Validation dataset size after load: 4833
+2024-09-21 08:06:31.367 | INFO     | __main__:main:1927 - Testing dataset size after load: 5139
+2024-09-21 08:06:31.367 | INFO     | __main__:main:1929 - Starting progressive training from epoch 0 to 1
+2024-09-21 08:06:31.367 | INFO     | __main__:main:1932 - hit the barrier before training
+[rank: 0] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+[2024-09-21 08:06:38,577] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-09-21 08:06:38,577] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-09-21 08:06:38,582] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-09-21 08:06:43.506 | INFO     | __main__:main:1603 - Running progressive training
+2024-09-21 08:06:43.506 | INFO     | __main__:main:1603 - Running progressive training
+2024-09-21 08:06:43.506 | INFO     | __main__:main:1609 - Configuring LeanDojo...
+2024-09-21 08:06:43.506 | INFO     | __main__:main:1609 - Configuring LeanDojo...
+2024-09-21 08:06:43.509 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/le
+an_project/ReProver
+2024-09-21 08:06:43.509 | INFO     | __main__:main:1611 - LeanDojo configured
+2024-09-21 08:06:43.509 | INFO     | __main__:main:1633 - Found 9 repositories
+2024-09-21 08:06:43.509 | INFO     | __main__:main:1636 - Starting curriculum learning
+2024-09-21 08:06:43.509 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/le
+an_project/ReProver
+2024-09-21 08:06:43.509 | INFO     | __main__:main:1611 - LeanDojo configured
+2024-09-21 08:06:43.509 | INFO     | __main__:main:1633 - Found 9 repositories
+2024-09-21 08:06:43.509 | INFO     | __main__:main:1636 - Starting curriculum learning
+2024-09-21 08:06:43.671 | INFO     | __main__:main:1603 - Running progressive training
+2024-09-21 08:06:43.671 | INFO     | __main__:main:1609 - Configuring LeanDojo...
+2024-09-21 08:06:43.674 | INFO     | generate_benchmark_lean4:configure_leandojo:347 - Current working directory: /data/yingzi_ma/le
+an_project/ReProver
+2024-09-21 08:06:43.674 | INFO     | __main__:main:1611 - LeanDojo configured
+2024-09-21 08:06:43.674 | INFO     | __main__:main:1633 - Found 9 repositories
+2024-09-21 08:06:43.675 | INFO     | __main__:main:1636 - Starting curriculum learning
+2024-09-21 08:06:43.832 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c2
+2024-09-21 08:06:43.833 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c2
+2024-09-21 08:06:43.856 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c2
+2024-09-21 08:07:00.971 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c1
+2024-09-21 08:07:01.150 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c1
+2024-09-21 08:07:01.409 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0-r
+c1
+2024-09-21 08:07:19.554 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-21 08:07:19.555 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-21 08:07:20.069 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.7.0
+2024-09-21 08:07:37.232 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-09-21 08:07:37.312 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-09-21 08:07:37.887 | DEBUG    | lean_dojo.data_extraction.lean:_to_commit_hash:90 - Querying the commit hash for lean4 v4.8.0
+2024-09-21 08:07:54.439 | INFO     | __main__:main:1772 - length of lean_git_repos: 8
+2024-09-21 08:07:54.439 | INFO     | __main__:main:1773 - i: 0
+2024-09-21 08:07:54.440 | INFO     | __main__:main:1800 - All GPUs
+2024-09-21 08:07:54.440 | INFO     | __main__:find_latest_checkpoint:911 - Using the latest checkpoint: /data/yingzi_ma/lean_project
+/checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:07:54.440 | INFO     | __main__:main:1807 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_singl
+e_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:07:54.440 | INFO     | __main__:main:1813 - Inside train_test_fisher
+2024-09-21 08:07:54.441 | INFO     | __main__:main:1814 - Starting training at epoch 0
+[rank: 1] Seed set to 3407
+2024-09-21 08:07:54.611 | INFO     | __main__:main:1772 - length of lean_git_repos: 8
+2024-09-21 08:07:54.611 | INFO     | __main__:main:1773 - i: 0
+2024-09-21 08:07:54.611 | INFO     | __main__:main:1800 - All GPUs
+2024-09-21 08:07:54.612 | INFO     | __main__:find_latest_checkpoint:911 - Using the latest checkpoint: /data/yingzi_ma/lean_project
+/checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:07:54.612 | INFO     | __main__:main:1807 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_singl
+e_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:07:54.612 | INFO     | __main__:main:1813 - Inside train_test_fisher
+2024-09-21 08:07:54.612 | INFO     | __main__:main:1814 - Starting training at epoch 0
+[rank: 3] Seed set to 3407
+2024-09-21 08:07:54.620 | INFO     | __main__:main:1772 - length of lean_git_repos: 8
+2024-09-21 08:07:54.620 | INFO     | __main__:main:1773 - i: 0
+2024-09-21 08:07:54.620 | INFO     | __main__:main:1800 - All GPUs
+2024-09-21 08:07:54.620 | INFO     | __main__:find_latest_checkpoint:911 - Using the latest checkpoint: /data/yingzi_ma/lean_project
+/checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:07:54.620 | INFO     | __main__:main:1807 - Found latest checkpoint: /data/yingzi_ma/lean_project/checkpoints_PT_singl
+e_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:07:54.621 | INFO     | __main__:main:1813 - Inside train_test_fisher
+2024-09-21 08:07:54.621 | INFO     | __main__:main:1814 - Starting training at epoch 0
+[rank: 2] Seed set to 3407
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torc
+h.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to co
+nstruct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/
+SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`.
+ This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via th
+is mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start settin
+g `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any
+issues related to this experimental feature.
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torc
+h.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to co
+nstruct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/
+SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`.
+ This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via th
+is mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start settin
+g `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any
+issues related to this experimental feature.
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py:57: You are using `torc
+h.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to co
+nstruct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/
+SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`.
+ This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via th
+is mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start settin
+g `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any
+issues related to this experimental feature.
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `
+python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29d
+cec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt`
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `
+python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29d
+cec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt`
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `
+clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.4
+5, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues
+/31884
+  warnings.warn(
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `
+clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.4
+5, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues
+/31884
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v0.0.0 to v2.2.4. To apply the upgrade to your files permanently, run `
+python -m pytorch_lightning.utilities.upgrade_checkpoint ../checkpoints_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29d
+cec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt`
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `
+clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.4
+5, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues
+/31884
+  warnings.warn(
+2024-09-21 08:08:01.610 | INFO     | __main__:main:1838 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_si
+ngle_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:08:01.628 | INFO     | __main__:find_latest_fisher:921 - Using the latest Fisher Information Matrix: /data/yingzi_ma/l
+ean_project/fisher_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_fisher_info.pkl
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load
+` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construc
+t malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURI
+TY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This
+limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mod
+e unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `wei
+ghts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues
+ related to this experimental feature.
+  return torch.load(io.BytesIO(b))
+2024-09-21 08:08:02.124 | INFO     | __main__:main:1838 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_si
+ngle_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:08:02.124 | INFO     | __main__:find_latest_fisher:921 - Using the latest Fisher Information Matrix: /data/yingzi_ma/l
+ean_project/fisher_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_fisher_info.pkl
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load
+` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construc
+t malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURI
+TY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This
+limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mod
+e unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `wei
+ghts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues
+ related to this experimental feature.
+  return torch.load(io.BytesIO(b))
+2024-09-21 08:08:02.482 | INFO     | __main__:main:1838 - Loaded premise retriever at /data/yingzi_ma/lean_project/checkpoints_PT_si
+ngle_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_big_model.ckpt
+2024-09-21 08:08:02.482 | INFO     | __main__:find_latest_fisher:921 - Using the latest Fisher Information Matrix: /data/yingzi_ma/l
+ean_project/fisher_PT_single_repo_ewc_curriculum_sorries_big_model/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5_fisher_info.pkl
+/data/yingzi_ma/miniconda3/envs/ReProver/lib/python3.10/site-packages/torch/storage.py:414: FutureWarning: You are using `torch.load
+` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construc
+t malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURI
+TY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This
+limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mod
+e unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `wei
+ghts_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues
+ related to this experimental feature.
+  return torch.load(io.BytesIO(b))
+2024-09-21 08:08:03.088 | INFO     | __main__:load_fisher_information:897 - Fisher Information successfully loaded.
+2024-09-21 08:08:03.088 | INFO     | retrieval.model:set_fisher_info:60 - Fisher Information has been updated in the model.
+2024-09-21 08:08:03.088 | INFO     | __main__:main:1845 - Fisher Information Matrix loaded.
+2024-09-21 08:08:03.225 | INFO     | __main__:main:1896 - right before barrier for data module
+2024-09-21 08:08:03.226 | INFO     | __main__:main:1911 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc_curric
+ulum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38/random
+2024-09-21 08:08:03.450 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_
+repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38/corpus.jsonl
+2024-09-21 08:08:03.769 | INFO     | __main__:load_fisher_information:897 - Fisher Information successfully loaded.
+2024-09-21 08:08:03.769 | INFO     | retrieval.model:set_fisher_info:60 - Fisher Information has been updated in the model.
+2024-09-21 08:08:03.769 | INFO     | __main__:main:1845 - Fisher Information Matrix loaded.
+2024-09-21 08:08:03.826 | INFO     | __main__:load_fisher_information:897 - Fisher Information successfully loaded.
+2024-09-21 08:08:03.827 | INFO     | retrieval.model:set_fisher_info:60 - Fisher Information has been updated in the model.
+2024-09-21 08:08:03.827 | INFO     | __main__:main:1845 - Fisher Information Matrix loaded.
+2024-09-21 08:08:03.837 | INFO     | __main__:main:1896 - right before barrier for data module
+2024-09-21 08:08:03.838 | INFO     | __main__:main:1911 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc_curric
+ulum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38/random
+2024-09-21 08:08:03.898 | INFO     | __main__:main:1896 - right before barrier for data module
+2024-09-21 08:08:03.898 | INFO     | __main__:main:1911 - Data path: /data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc_curric
+ulum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38/random
+2024-09-21 08:08:03.935 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_
+repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38/corpus.jsonl
+2024-09-21 08:08:04.004 | INFO     | common:__init__:212 - Building the corpus from /data/yingzi_ma/lean_project/datasets_PT_single_
+repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a38/corpus.jsonl
+2024-09-21 08:08:35.221 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_train/cached_data.pkl
+Training dataset size: 357252
+2024-09-21 08:08:35.251 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_val/cached_data.pkl
+Validation dataset size: 4833
+2024-09-21 08:08:35.289 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_pred/cached_data.pkl
+Testing dataset size: 5139
+2024-09-21 08:08:35.289 | INFO     | __main__:main:1925 - Training dataset size after load: 357252
+2024-09-21 08:08:35.290 | INFO     | __main__:main:1926 - Validation dataset size after load: 4833
+2024-09-21 08:08:35.290 | INFO     | __main__:main:1927 - Testing dataset size after load: 5139
+2024-09-21 08:08:35.290 | INFO     | __main__:main:1929 - Starting progressive training from epoch 0 to 1
+2024-09-21 08:08:35.290 | INFO     | __main__:main:1932 - hit the barrier before training
+[rank: 1] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+2024-09-21 08:08:36.456 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_train/cached_data.pkl
+Training dataset size: 357252
+2024-09-21 08:08:36.484 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_val/cached_data.pkl
+Validation dataset size: 4833
+2024-09-21 08:08:36.516 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_pred/cached_data.pkl
+Testing dataset size: 5139
+2024-09-21 08:08:36.516 | INFO     | __main__:main:1925 - Training dataset size after load: 357252
+2024-09-21 08:08:36.516 | INFO     | __main__:main:1926 - Validation dataset size after load: 4833
+2024-09-21 08:08:36.517 | INFO     | __main__:main:1927 - Testing dataset size after load: 5139
+2024-09-21 08:08:36.517 | INFO     | __main__:main:1929 - Starting progressive training from epoch 0 to 1
+2024-09-21 08:08:36.517 | INFO     | __main__:main:1932 - hit the barrier before training
+[rank: 2] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/4
+2024-09-21 08:08:37.227 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_train/cached_data.pkl
+Training dataset size: 357252
+2024-09-21 08:08:37.255 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_val/cached_data.pkl
+Validation dataset size: 4833
+2024-09-21 08:08:37.288 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_pred/cached_data.pkl
+Testing dataset size: 5139
+2024-09-21 08:08:37.288 | INFO     | __main__:main:1925 - Training dataset size after load: 357252
+2024-09-21 08:08:37.288 | INFO     | __main__:main:1926 - Validation dataset size after load: 4833
+2024-09-21 08:08:37.288 | INFO     | __main__:main:1927 - Testing dataset size after load: 5139
+2024-09-21 08:08:37.288 | INFO     | __main__:main:1929 - Starting progressive training from epoch 0 to 1
+2024-09-21 08:08:37.288 | INFO     | __main__:main:1932 - hit the barrier before training
+[rank: 3] Seed set to 3407
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+
+NCCL version 2.20.5+cuda12.4
+2024-09-21 08:08:43.237 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_train/cached_data.pkl
+Training dataset size: 357252
+2024-09-21 08:08:43.712 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_val/cached_data.pkl
+Validation dataset size: 4833
+2024-09-21 08:08:52.104 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_train/cached_data.pkl
+2024-09-21 08:08:52.134 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_train/cached_data.pkl
+Training dataset size: 357252
+2024-09-21 08:08:52.367 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_val/cached_data.pkl
+Training dataset size: 357252
+Validation dataset size: 4833
+2024-09-21 08:08:52.415 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_pred/cached_data.pkl
+2024-09-21 08:08:52.415 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_val/cached_data.pkl
+Validation dataset size: 4833
+Testing dataset size: 5139
+2024-09-21 08:08:52.461 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_pred/cached_data.pkl
+Testing dataset size: 5139
+∫2024-09-21 08:08:53.916 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_proje
+ct/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a
+38/random/cache_train/cached_data.pkl
+:Training dataset size: 357252
+2024-09-21 08:08:54.283 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_val/cached_data.pkl
+Validation dataset size: 4833
+2024-09-21 08:08:54.362 | INFO     | retrieval.datamodule:load_or_cache_data:52 - Loaded data from cache /data/yingzi_ma/lean_projec
+t/datasets_PT_single_repo_ewc_curriculum_sorries_big_model/merged_with_new_zeta_3_irrational_914712200e463cfc97fe37e929d518dd58806a3
+8/random/cache_pred/cached_data.pkl
+Testing dataset size: 5139
+
