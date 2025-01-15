@@ -1,5 +1,5 @@
 """
-This is the driver for LeanBot. It will do the following things:
+This is the driver for LeanAgent. It will do the following things:
 1. Search for repositories with Lean files in them.
 2. Clone these repositories.
 3. Find theorems with `sorry` in them and replace them with a proof.
@@ -68,6 +68,7 @@ import torch
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping, LearningRateMonitor, Callback
 from pytorch_lightning import seed_everything
 
+# Constants for repository management
 # TODO: standardize with all Path or just string
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 # TODO: constant?
@@ -77,6 +78,7 @@ RAID_DIR = os.environ.get('RAID_DIR')
 os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
 repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
 
+# Dataset and checkpoint configurations
 # DATA_DIR = "datasets_PT_merge_all_no_ewc"
 # CHECKPOINT_DIR = "checkpoints_PT_merge_all_no_ewc"
 # EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/ReProver/total_evaluation_results_PT_merge_all_no_ewc.txt"
@@ -148,6 +150,7 @@ load_dotenv()
 repos_for_merged_dataset = []
 
 # TODO: automate this
+# List of known repositories to process or skip
 # Feel free to remove any repos from this list if you would like to test on them
 known_repositories = [
     "leanprover-community/mathlib4",  # ReProver is trained on this
@@ -386,6 +389,7 @@ known_repositories = [
     "pa-ba/guarded-lean",
 ]
 
+# Global state variables
 repos = []  # stores the names of all the repos
 lean_git_repos = []  # stores the LeanGitRepo objects
 attempted_repos = set()
@@ -491,6 +495,7 @@ def create_pull_request(repo_full_name, title, body, head_branch):
         return ""
 
 def get_compatible_commit(url):
+    """Find the most recent commit with a Lean version that LeanAgent supports."""
     try:
         process = subprocess.Popen(["git", "ls-remote", url], stdout=subprocess.PIPE)
         stdout, stderr = process.communicate()
@@ -555,6 +560,7 @@ def get_compatible_commit(url):
         return None, None
 
 def find_and_save_compatible_commits(repo_info_file, lean_git_repos):
+    """Finds compatible commits for various repositories"""
     updated_repos = []
     for repo in lean_git_repos:
         url = repo.url
@@ -586,8 +592,8 @@ def find_and_save_compatible_commits(repo_info_file, lean_git_repos):
     return updated_repos
 
 def search_github_repositories(language="Lean", num_repos=10):
-    global attempted_repos
     """Search for the given number of repositories on GitHub that have the given language."""
+    global attempted_repos
     headers = {'Authorization': personal_access_token}
     query_params = {
         'q': f'language:{language}',
@@ -642,6 +648,7 @@ def search_github_repositories(language="Lean", num_repos=10):
 
 
 def _eval(data, preds_map) -> Tuple[float, float, float]:
+    """Evaluates the retrieval model."""
     R1 = []
     R10 = []
     MRR = []
@@ -685,6 +692,7 @@ def _eval(data, preds_map) -> Tuple[float, float, float]:
 
 
 def load_fisher_information(file_path):
+    """Loads the Fisher Information Matrix."""
     try:
         with open(file_path, 'rb') as f:
             fisher_info = pickle.load(f)
@@ -925,9 +933,11 @@ def find_latest_fisher():
 #     return model
 
 def theorem_identifier(theorem: Theorem) -> Tuple[str, str, Tuple[int, int], Tuple[int, int]]:
+    """Returns a unique identifier for a theorem."""
     return (theorem.full_name, str(theorem.file_path), tuple(theorem.start), tuple(theorem.end))
 
 def process_theorem_batch(theorem_batch, positions_batch, repo, db, prover, dynamic_database_json_path):
+    """Processes a batch of theorems."""
     lean_dojo_theorems = [t[1] for t in theorem_batch]
     results = prover.search_unordered(LeanGitRepo(repo.url, repo.commit), lean_dojo_theorems, positions_batch)
     
@@ -962,11 +972,13 @@ def process_theorem_batch(theorem_batch, positions_batch, repo, db, prover, dyna
     db.to_json(dynamic_database_json_path)
 
 def save_progress(all_encountered_theorems):
+    """Saves the set of encountered theorems."""
     logger.info("Saving encountered theorems...")
     with open(ENCOUNTERED_THEOREMS_FILE, 'wb') as f:
         pickle.dump(all_encountered_theorems, f)
 
 def load_encountered_theorems(file_path):
+    """Loads the theorems that have been encountered."""
     all_encountered_theorems = set()
     if os.path.exists(file_path):
         try:
@@ -986,6 +998,7 @@ def load_encountered_theorems(file_path):
     return all_encountered_theorems
 
 def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic_database_json_path, repos_to_include: Optional[List[Tuple[str, str]]] = None, batch_size: int = 12):
+    """Proves sorry theorems."""
     repos_to_process = db.repositories if repos_to_include is None else [
         repo for repo in db.repositories if (repo.url, repo.commit) in repos_to_include
     ]
@@ -1077,6 +1090,7 @@ def prove_sorry_theorems(db: DynamicDatabase, prover: DistributedProver, dynamic
 #             logger.info(f"Mid-epoch checkpoint saved at {checkpoint_path}")
 
 def add_repo_to_database(dynamic_database_json_path, repo, db):
+    """Adds a repository to the dynamic database."""
     # Prepare the data necessary to add this repo to the dynamic database
     url = repo.url
     if not url.endswith('.git'):
@@ -1267,6 +1281,7 @@ def replace_sorry_with_proof(proofs):
     logger.info("Finished replacing sorries with proofs!")
 
 def calculate_difficulty(theorem: Theorem) -> Union[float, None]:
+    """Calculates the difficulty of a theorem."""
     proof_steps = theorem.traced_tactics
     if any('sorry' in step.tactic for step in proof_steps):
         return float('inf')  # Hard (no proof)
@@ -1275,6 +1290,7 @@ def calculate_difficulty(theorem: Theorem) -> Union[float, None]:
     return math.exp(len(proof_steps))
 
 def categorize_difficulty(difficulty: Union[float, None], percentiles: List[float]) -> str:
+    """Categorizes the difficulty of a theorem."""
     if difficulty is None:
         return "To_Distribute"
     if difficulty == float('inf'):
@@ -1287,6 +1303,7 @@ def categorize_difficulty(difficulty: Union[float, None], percentiles: List[floa
         return "Hard"
 
 def sort_repositories_by_difficulty(db: DynamicDatabase) -> List[Repository]:
+    """Sorts repositories by the difficulty of their theorems."""
     difficulties_by_repo = defaultdict(list)
     all_difficulties = []
 
@@ -1345,6 +1362,7 @@ def sort_repositories_by_difficulty(db: DynamicDatabase) -> List[Repository]:
     return sorted_repos, categorized_theorems, percentiles
 
 def save_sorted_repos(sorted_repos: List[Repository], file_path: str):
+    """Saves the sorted repositories to a file."""
     sorted_repo_data = [
         {
             "url": repo.url,
@@ -1356,16 +1374,19 @@ def save_sorted_repos(sorted_repos: List[Repository], file_path: str):
         json.dump(sorted_repo_data, f, indent=2)
 
 def load_sorted_repos(file_path: str) -> List[Tuple[str, str, str]]:
+    """Loads the sorted repositories from a file."""
     with open(file_path, 'r') as f:
         sorted_repo_data = json.load(f)
     return [(repo["url"], repo["commit"], repo["name"]) for repo in sorted_repo_data]
 
 def write_skip_file(repo_url):
+    """Writes a repository URL to a file to skip it."""
     skip_file_path = os.path.join(RAID_DIR, DATA_DIR, "skip_repo.txt")
     with open(skip_file_path, 'w') as f:
         f.write(repo_url)
 
 def should_skip_repo():
+    """Checks if a repository should be skipped."""
     skip_file_path = os.path.join(RAID_DIR, DATA_DIR, "skip_repo.txt")
     if os.path.exists(skip_file_path):
         with open(skip_file_path, 'r') as f:
@@ -1375,7 +1396,16 @@ def should_skip_repo():
 
 # TODO: incorporate latest changes from ReProver repo
 def main():
-    """The main function that drives the bot."""
+    """Main driver function that orchestrates the entire process:
+    1. Configures training parameters
+    2. Initializes database and repositories
+    3. For each repository:
+        - Processes theorems and generates datasets
+        - Trains the model (if progressive training enabled)
+        - Calculates Fisher information (if EWC enabled)
+        - Proves theorems with 'sorry'
+        - Optionally creates pull requests with proofs
+    """
     global repos_for_merged_dataset
     global lean_git_repos
     try:
@@ -1395,6 +1425,7 @@ def main():
         num_repos = 14
         dynamic_database_json_path = RAID_DIR + "/" + DB_FILE_NAME
         
+        # TODO: remove this
         lambdas = None
         if run_progressive_training:
             logger.info("Running progressive training")
@@ -1403,12 +1434,15 @@ def main():
             logger.info("Running retrieval baseline")
             lambdas = [0.0]
 
+        # Add debug information
         logger.info("Configuring LeanDojo...")
         generate_benchmark_lean4.configure_leandojo()
         logger.info("LeanDojo configured")
 
+        # Check if the current process is the main one
         is_main_process = int(os.environ.get('LOCAL_RANK', '0')) == 0
 
+        # Initialize the database if it doesn't exist or is empty
         if is_main_process:
             logger.info("Starting the main process")
             if not os.path.exists(dynamic_database_json_path) or os.path.getsize(dynamic_database_json_path) == 0:
@@ -1429,9 +1463,11 @@ def main():
 
         logger.info(f"Found {num_repos} repositories")
 
+        # If curriculum learning is enabled, initialize repositories and sort them by difficulty
         if curriculum_learning:
             logger.info("Starting curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
+            # Uncomment as needed
             # if is_main_process:
             #     clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd"
             #     commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
@@ -1509,8 +1545,10 @@ def main():
                         raise Exception("Failed to read repository information after multiple attempts")
                     time.sleep(1)
                 
+            # Load compatible repositories
             lean_git_repos = [LeanGitRepo(info['url'].replace('.git', ''), info['commit']) for info in repo_info]
 
+            # Iterate over each repository and lambda value
             for i in range(num_repos):
                 for lambda_value in lambdas:
                     logger.info(f"length of lean_git_repos: {len(lean_git_repos)}")
@@ -1527,6 +1565,7 @@ def main():
                         if single_repo:
                             repos_for_merged_dataset = []
 
+                        # Create a directory for the merged dataset if it doesn't exist
                         dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_with_new_{dir_name}"
                         if (repo.url, repo.commit) not in repos_for_merged_dataset:
                             logger.info("Adding repo to repos_for_merged_dataset")
@@ -1581,13 +1620,14 @@ def main():
                         model.train()
                         logger.info(f"Loaded premise retriever at {model_checkpoint_path}")
 
-                        # load previous Fisher Information Matrix for current EWC
+                        # Load previous Fisher Information Matrix for current EWC
                         if use_fisher:
                             latest_fisher = find_latest_fisher()
                             fisher_info = load_fisher_information(latest_fisher)
                             model.set_fisher_info(fisher_info)
                             logger.info("Fisher Information Matrix loaded.")
 
+                        # Initialize ModelCheckpoint and EarlyStopping
                         # TODO: use the yaml file instead of repeating here, same throughout
                         dir_name = new_data_path.split("/")[-1]
                         filename_suffix = f"_lambda_{lambda_value}"
@@ -1614,13 +1654,16 @@ def main():
                         # os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
                         # timed_checkpoint_callback = TimedCheckpoint(checkpoint_dir=mid_epoch_checkpoint_dir)
 
+                        # Set up environment variables for NCCL
                         VERY_LONG_TIMEOUT = 7 * 24 * 60 * 60 * 52  # 1 year
                         os.environ['TORCH_NCCL_ASYNC_ERROR_HANDLING'] = '1'
                         os.environ['NCCL_TIMEOUT'] = str(VERY_LONG_TIMEOUT * 1000)
 
+                        # Create a custom log directory for Lightning
                         custom_log_dir = os.path.join(RAID_DIR, "lightning_logs", f"{dir_name}_{use_fisher}_lambda_{lambda_value}")
                         os.makedirs(custom_log_dir, exist_ok=True)
 
+                        # Initialize DDP strategy
                         ddp_strategy = DDPStrategy(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
                         trainer = pl.Trainer(
                             accelerator="gpu",
@@ -1629,7 +1672,6 @@ def main():
                             strategy=ddp_strategy,
                             devices=4, # TODO: change for GPU
                             accumulate_grad_batches=4,
-                            # callbacks=[lr_monitor, checkpoint_callback, early_stop_callback, timed_checkpoint_callback],
                             callbacks=[lr_monitor, checkpoint_callback, early_stop_callback],
                             max_epochs=current_epoch + epochs_per_repo,
                             log_every_n_steps=1,
@@ -1637,6 +1679,7 @@ def main():
                             default_root_dir=custom_log_dir,
                         )
 
+                        # Barrier before data module
                         logger.info("right before barrier for data module")
                         trainer.strategy.barrier()
                         should_skip, skip_repo_url = should_skip_repo()
@@ -1649,6 +1692,7 @@ def main():
                                 os.remove(skip_file_path)
                             continue
 
+                        # Set lambda value for the model
                         model.set_lambda(lambda_value)
                         corpus_path = new_data_path + "/corpus.jsonl"
                         data_path = new_data_path + "/random"
@@ -1672,6 +1716,7 @@ def main():
 
                         logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
 
+                        # Train the model
                         try:
                             logger.info("hit the barrier before training")
                             trainer.strategy.barrier()
