@@ -1,12 +1,3 @@
-"""
-This is the driver for LeanAgent. It will do the following things:
-1. Search for repositories with Lean files in them.
-2. Clone these repositories.
-3. Find theorems with `sorry` in them and replace them with a proof.
-4. Commit and push the changes.
-5. Open a pull request.
-"""
-
 import math
 import ray
 from collections import defaultdict
@@ -52,14 +43,12 @@ from packaging import version
 import psutil
 import atexit
 from pytorch_lightning.strategies import DDPStrategy
-
 from common import set_logger
 from prover.proof_search import Status, DistributedProver, SearchResult
 import re
 import lean_dojo
 from lean_dojo import *
 from lean_dojo.constants import LEAN4_PACKAGES_DIR
-
 import pytorch_lightning as pl
 from retrieval.model import PremiseRetriever
 from retrieval.datamodule import RetrievalDataModule
@@ -68,11 +57,7 @@ import torch
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping, LearningRateMonitor, Callback
 from pytorch_lightning import seed_everything
 
-# Constants for repository management
-# TODO: standardize with all Path or just string
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
-# TODO: constant?
-# TODO: do we still need repo_dir
 BATCH_SIZE=4
 RAID_DIR = os.environ.get('RAID_DIR')
 os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
