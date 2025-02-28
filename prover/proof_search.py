@@ -1,4 +1,3 @@
-
 """Proof search using best-first search.
 """
 
