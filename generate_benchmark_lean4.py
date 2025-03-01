@@ -8,7 +8,7 @@ from loguru import logger
 from datetime import datetime
 from collections import defaultdict
 from typing import Dict, List, Union
-
+import time
 import lean_dojo
 from lean_dojo import *
 from lean_dojo.constants import LEAN4_PACKAGES_DIR
@@ -245,25 +245,6 @@ def export_premises(traced_repo: TracedRepo, dst_path: Path) -> None:
     return num_premises, len(traced_repo.traced_files)
 
 
-# def export_licenses(traced_repo: TracedRepo, dst_path: Path) -> None:
-#     """Export the licenses of a traced repo and all its dependencies to ``dst_path``."""
-#     license_dir = dst_path / "licenses"
-#     license_dir.mkdir()
-#     all_repos = [traced_repo.repo] + list(traced_repo.dependencies.values())
-
-#     for repo in all_repos:
-#         lic = repo.get_license()
-#         if lic is None:
-#             continue
-#         with (license_dir / repo.name).open("wt") as oup:
-#             oup.write(lic)
-
-#     with (license_dir / "README.md").open("wt") as oup:
-#         oup.write(
-#             "This directory contains licenses of Lean repos used to generate this dataset. The dataset itself is released under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)."
-#         )
-
-
 def export_metadata(traced_repo: TracedRepo, dst_path: Path, **kwargs) -> None:
     """Export the metadata of a traced repo to ``dst_path''."""
     metadata = dict(kwargs)
@@ -366,22 +347,18 @@ def main(url, commit, dst_dir):
         logger.info("Unsupported version")
     v = v[1:] # ignore "v" at beginning
     
-    # TODO: set this in main.py so we don't need to do so here
-    lean_dir1 = f"/data/yingzi_ma/.elan/toolchains/leanprover--lean4---{v}"
+    # TODO: fix how we do this
     lean_dir2 = f"/.elan/toolchains/leanprover--lean4---{v}"
     lean_dir3 = f"~/.elan/toolchains/leanprover--lean4---{v}"
-    logger.info(f"lean path1 {lean_dir1}")
     logger.info(f"lean path2 {lean_dir2}")
     logger.info(f"lean path3 {lean_dir3}")
-    if not os.path.exists(lean_dir1):
-        logger.info(f"Lean toolchain path 1 does not exist: {lean_dir1}")
     if not os.path.exists(lean_dir2):
         logger.info(f"Lean toolchain path 2 does not exist: {lean_dir2}")
     if not os.path.exists(lean_dir3):
         logger.info(f"Lean toolchain path 3 does not exist: {lean_dir3}")
-    os.environ['LEAN4_PATH'] = lean_dir1
-    os.environ['PATH'] = f"{lean_dir1}/bin:{os.environ.get('PATH', '')}"
-    logger.info(f"Switched to Lean toolchain at: {lean_dir1}")
+    os.environ['LEAN4_PATH'] = lean_dir2
+    os.environ['PATH'] = f"{lean_dir2}/bin:{os.environ.get('PATH', '')}"
+    logger.info(f"Switched to Lean toolchain at: {lean_dir2}")
 
     logger.info(f"lean --version: {subprocess.run(['lean', '--version'], capture_output=True).stdout.decode('utf-8')}")
     logger.info(f"repo: {repo}")

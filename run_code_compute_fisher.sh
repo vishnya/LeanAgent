@@ -14,6 +14,7 @@ rm -rf ${RAY_TMPDIR}
 mkdir "${RAY_TMPDIR}"
 echo "Stopping ray"
 ray stop --force
+echo "Killing all python processes to free up memory"
 ps aux | grep "python" | awk '{print $2}' | xargs -r kill -9
 sleep 5
 nvidia-smi

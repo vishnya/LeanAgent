@@ -22,23 +22,15 @@ class FisherComputationModule(pl.LightningModule):
             batch["neg_premises_mask"],
             batch["label"],
         )
-        # logger.info(f"Loss: {loss.item()}")
+
         self.manual_backward(loss)
 
         for name, param in self.model.named_parameters():
             if param.grad is not None:
                 if name not in self.fisher_info:
-                    # logger.info(f"Saving Fisher Information for {name}")
-                    # logger.info(f"Gradient: {param.grad}")
-                    # logger.info(f"Gradient squared: {param.grad ** 2}")
                     self.fisher_info[name] = param.grad.detach().clone() ** 2
-                    # logger.info(f"Fisher Information: {self.fisher_info[name]}")
                 else:
-                    # logger.info(f"Updating Fisher Information for {name}")
-                    # logger.info(f"Gradient: {param.grad}")
-                    # logger.info(f"Gradient squared: {param.grad ** 2}")
                     self.fisher_info[name] += param.grad.detach().clone() ** 2
-                    # logger.info(f"Fisher Information: {self.fisher_info[name]}")
 
         return loss
 
@@ -47,14 +39,8 @@ class FisherComputationModule(pl.LightningModule):
         
         # Synchronize Fisher Information across GPUs
         # Each GPU now has the sum of the Fisher Information from all GPUs for each parameter
-        # for name, param in self.model.named_parameters():
-        #     logger.info(f"before self.fisher_info[name]: {self.fisher_info[name]}")
-        #     break
         for name in self.fisher_info:
             dist.all_reduce(self.fisher_info[name], op=dist.ReduceOp.SUM)
-        # for name, param in self.model.named_parameters():
-        #     logger.info(f"after self.fisher_info[name]: {self.fisher_info[name]}")
-        #     break
 
         logger.info("Normalizing Fisher Information")
         logger.info(f"length of dataset: {len(self.trainer.train_dataloader.dataset)}")

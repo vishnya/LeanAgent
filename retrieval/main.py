@@ -33,29 +33,6 @@ class CLI(LightningCLI):
         logger.info(f"Data path: {vars(vars(vars(self.config)['predict'])['data'])['data_path']}")
         logger.info(f"Corpus path: {vars(vars(vars(self.config)['predict'])['data'])['corpus_path']}")
 
-# def load_eval_results():
-#     R1 = []
-#     R10 = []
-#     MRR = []
-#     file_path = "retrieval/evaluation_results.txt"
-#     if os.path.exists(file_path):
-#         with open(file_path, "r") as f:
-#             lines = f.readlines()
-#             for line in lines:
-#                 if line.startswith("R1:"):
-#                     r1 = float(line.split(": ")[1])
-#                     R1.append(r1)
-#                 elif line.startswith("R10:"):
-#                     r10 = float(line.split(": ")[1])
-#                     R10.append(r10)
-#                 elif line.startswith("MRR:"):
-#                     mrr = float(line.split(": ")[1])
-#                     MRR.append(mrr)
-#         logger.info(f"R1: {r1}, R10: {r10}, MRR: {mrr}")
-#     else:
-#         logger.info("No evaluation results found.")
-#     return R1, R10, MRR
-
 def run_cli(model_path, data_path):
     logger.info(f"PID: {os.getpid()}")
     # Mimic command line argument passing
@@ -63,23 +40,6 @@ def run_cli(model_path, data_path):
     cli = CLI(PremiseRetriever, RetrievalDataModule)
 
 def main() -> None:
-    # parser = argparse.ArgumentParser(
-    #     description="Script for evaluating the premise retriever."
-    # )
-
-    # parser.add_argument(
-    #     "--data-path",
-    #     type=str,
-    #     required=False,
-    #     help="Path to the dataset.",
-    # )
-
-    # known_args, remaining_argv = parser.parse_known_args()
-    # sys.argv[1:] = remaining_argv
-    # global cur_data_path
-    # cur_data_path = known_args.data_path
-    # logger.info(f"Data path: {known_args.data_path}")
-
     logger.info(f"PID: {os.getpid()}")
     cli = CLI(PremiseRetriever, RetrievalDataModule)
     logger.info("Configuration: \n", cli.config)

@@ -1323,6 +1323,7 @@ def main():
                             f.write("\n\n\n")
                             f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                 else:
+                    # TODO: don't hardcode this
                     model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
                     if result is None:
                         logger.info(f"Skipping repository {repo.url} due to preprocessing issues")

@@ -2,12 +2,12 @@ from leanagent import *
 from retrieval.fisher_computation_module import FisherComputationModule
 
 FISHER_DIR = "<FISHER_DIR>"
+# TODO: don't hardcode the prefix to the path, make capitalized
+new_data_path = "/data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc_full/merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"
 
 # TODO: incorporate latest changes from ReProver repo
 def main():
     """The main function that drives the bot."""
-    # TODO: don't hardcode the prefix to the path
-    new_data_path = "/data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc_full/merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"
     try:
         logger.info("Calculating Fisher Information Matrix for EWC")
         ### FISHER INFORMATION MATRIX FOR NEXT EWC

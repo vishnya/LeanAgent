@@ -17,7 +17,6 @@ from transformers import get_cosine_schedule_with_warmup
 from deepspeed.ops.adam import FusedAdam, DeepSpeedCPUAdam
 from typing import Optional, List, Dict, Any, Tuple, Generator
 from pytorch_lightning.strategies.deepspeed import DeepSpeedStrategy
-# from galore_torch import GaLoreAdamW
 
 
 Example = Dict[str, Any]
@@ -441,10 +440,6 @@ def get_optimizers(
             logger.info("Optimizing with FusedAdam")
             optimizer = FusedAdam(parameters, lr=lr, adam_w_mode=True)
     else:
-        # logger.info("Optimizing with GaLoreAdamW")
-        # # TODO: change back for main?
-        # param_group = {'params': parameters, 'lr': lr, 'betas': (0.9, 0.999), 'eps': 1e-6, 'rank': 128, 'update_proj_gap': 200, 'scale': 0.25, 'proj_type': 'std', 'correct_bias': True, 'adam_w_mode': True, 'weight_decay': 0.01}
-        # optimizer = GaLoreAdamW([param_group])
         logger.info("Optimizing with AdamW")
         optimizer = torch.optim.AdamW(parameters, lr=lr)
 
