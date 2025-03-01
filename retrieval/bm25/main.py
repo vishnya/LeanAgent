@@ -29,6 +29,27 @@ def _process_theorem(
     num_retrieved: int,
     use_all_premises: bool,
 ) -> List[Dict[str, Any]]:
+    """
+    Process a theorem and retrieve relevant premises using BM25 scoring.
+
+    This function processes a theorem by retrieving relevant premises for each tactic state
+    in the theorem's proof. It uses BM25 to score and rank premises based on their relevance
+    to the current proof state.
+
+    Args:
+        thm (Dict[str, Any]): The theorem to process, containing metadata and traced tactics
+        corpus (Corpus): The corpus of premises to search from
+        tokenizer: The tokenizer to use for encoding the context
+        bm25: The BM25 retrieval model
+        num_retrieved (int): Number of top premises to retrieve
+        use_all_premises (bool): If True, search the entire corpus; if False,
+                               only search premises that are accessible at the theorem's location
+
+    Returns:
+        List[Dict[str, Any]]: A list of prediction dictionaries, one for each tactic in the theorem.
+                             Each dictionary contains the retrieved premises, their scores, and
+                             other metadata about the theorem and tactic.
+    """
     logger.info(f"Processing {thm['full_name']} at {thm['file_path']}")
     preds = []
     file_path = thm["file_path"]
@@ -72,6 +93,29 @@ def _process_theorem(
 
 
 @ray.remote(num_cpus=1)
+"""
+A Ray remote class for processing theorems with BM25 retrieval.
+
+This class handles the initialization of necessary components for theorem processing,
+including loading the tokenizer, corpus, and setting up the BM25 retrieval model.
+It provides a method to process individual theorems by retrieving relevant premises.
+
+Parameters
+----------
+tokenizer_path : str
+    Path to the tokenizer file
+data_path : str
+    Path to the data directory containing corpus files
+num_retrieved : int
+    Number of premises to retrieve for each theorem
+use_all_premises : bool
+    Whether to use all available premises or just retrieved ones
+
+Methods
+-------
+process_theorem(thm: Dict[str, Any])
+    Process a single theorem, retrieving relevant premises using BM25
+"""
 class TheoremProcessor:
     def __init__(
         self,
@@ -105,6 +149,23 @@ class TheoremProcessor:
             logger.error(f"Error processing theorem {thm['full_name']}: {str(e)}")
 
 def main() -> None:
+    """
+    Main function for training and evaluating a BM25 premise retriever.
+
+    This script trains a BM25 retriever that can retrieve relevant premises for mathematical theorems.
+    It supports both single-process and multi-process processing using Ray ActorPool.
+
+    Command line arguments:
+        --tokenizer-path: Path to the tokenizer file
+        --data-path: Path to the directory containing test.json and corpus data
+        --output-path: Path where the retrieval predictions will be saved
+        --num-retrieved: Number of premises to retrieve for each theorem (default: 100)
+        --use-all-premises: Flag to use all premises in the corpus instead of just those in the theorem's environment
+        --num-cpus: Number of CPUs to use for parallel processing (default: 32)
+
+    The function processes each theorem in the test set, retrieves relevant premises using BM25,
+    and saves the predictions to the specified output path as a pickle file.
+    """
     parser = argparse.ArgumentParser(
         description="Script for training the BM25 premise retriever."
     )

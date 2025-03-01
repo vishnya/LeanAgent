@@ -8,6 +8,32 @@ from typing import List, Tuple
 from loguru import logger
 
 def _eval(data, preds_map) -> Tuple[float, float, float]:
+    """
+    Evaluates the performance of premise retrieval against ground truth.
+    
+    Parameters:
+    -----------
+    data : list
+        List of theorem data dictionaries, where each dictionary contains information about
+        theorems including file_path, full_name, start position, and traced_tactics.
+    preds_map : dict
+        Dictionary mapping theorem identifiers to prediction results. Each prediction contains
+        'all_pos_premises' (ground truth) and 'retrieved_premises' (model predictions).
+        
+    Returns:
+    --------
+    Tuple[float, float, float]
+        A tuple containing three evaluation metrics:
+        - R1: Top-1 Recall (percentage of times the top retrieved premise is a correct premise)
+        - R10: Recall@10 (percentage of correct premises found in the top 10 retrievals)
+        - MRR: Mean Reciprocal Rank (average of 1/rank where rank is the position of the first correct premise)
+        
+    Notes:
+    ------
+    - For each tactic in each theorem, the function evaluates if the retrieved premises match the ground truth.
+    - If a theorem/tactic is not in preds_map or has no positive premises, it is skipped.
+    - All metrics are normalized: R1 and R10 are percentages (0-100), MRR is between 0 and 1.
+    """
     R1, R10, MRR = [], [], []
     for thm in tqdm(data):
         for i, _ in enumerate(thm["traced_tactics"]):
@@ -37,6 +63,20 @@ def _eval(data, preds_map) -> Tuple[float, float, float]:
     return R1, R10, MRR
 
 def main():
+    """
+    Main function for evaluating the premise retriever on multiple data splits.
+
+    The function loads the predictions from a file, evaluates them against each provided data split,
+    and calculates average metrics across all splits. Metrics include Recall@1, Recall@10, and Mean 
+    Reciprocal Rank (MRR).
+
+    Command Line Arguments:
+        --preds-file (str): Path to the pickle file containing retriever's predictions.
+        --data-paths (list of str): Paths to JSON files containing data splits for evaluation.
+
+    Returns:
+        None: Results are logged to the console.
+    """
     parser = argparse.ArgumentParser(description="Script for evaluating the premise retriever.")
     parser.add_argument("--preds-file", type=str, required=True, help="Path to the retriever's predictions file.")
     parser.add_argument("--data-paths", type=str, nargs='+', required=True, help="Paths to the directories containing the data splits.")

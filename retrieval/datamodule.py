@@ -21,6 +21,38 @@ from common import Context, Corpus, Batch, Example, format_state, get_all_pos_pr
 
 
 class RetrievalDataset(Dataset):
+    """
+    A PyTorch Dataset for retrieval-based theorem proving tasks.
+    This dataset handles training and evaluation data for retrieving relevant mathematical premises
+    based on given contexts. It supports loading data from files, caching for performance,
+    and generating positive and negative examples for training.
+    Args:
+        data_paths (List[str]): Paths to JSON files containing theorem proving data.
+        corpus (Corpus): A corpus object providing access to all available premises.
+        num_negatives (int): Number of negative examples to sample for each positive example.
+        num_in_file_negatives (int): Maximum number of negative examples to sample from the same file.
+        max_seq_len (int): Maximum sequence length for tokenization.
+        tokenizer: Tokenizer to convert text into model inputs.
+        is_train (bool): Whether this dataset is used for training or evaluation.
+        cache_path (str): Directory to cache processed data.
+    Returns:
+        For training:
+            A dictionary containing context, positive premise, negative premises, and labels.
+        For evaluation:
+            A dictionary containing context and positive premises (all_pos_premises).
+    Example batch structure (training):
+            'context': List[Context],
+            'context_ids': tensor,
+            'context_mask': tensor,
+            'pos_premise': List[Premise],
+            'pos_premise_ids': tensor,
+            'pos_premise_mask': tensor,
+            'neg_premises': List[List[Premise]],
+            'neg_premises_ids': List[tensor],
+            'neg_premises_mask': List[tensor],
+            'label': tensor,
+            # Additional metadata fields
+    """
     def __init__(
         self,
         data_paths: List[str],
@@ -223,6 +255,46 @@ class RetrievalDataset(Dataset):
 
 
 class RetrievalDataModule(pl.LightningDataModule):
+    """
+    A PyTorch Lightning DataModule for retrieval tasks that handles training, validation, and testing data.
+
+    This DataModule loads and prepares datasets for training retrieval models. It supports negative sampling
+    from a corpus of documents, with options for in-file and corpus-based negative examples.
+
+    Parameters
+    ----------
+    data_path : str
+        Path to the directory containing train.json, val.json, and test.json files
+    corpus_path : str
+        Path to the corpus of documents used for retrieval
+    num_negatives : int
+        Total number of negative examples per query
+    num_in_file_negatives : int
+        Number of negative examples to take from the data file (must be <= num_negatives)
+    model_name : str
+        Name of the pre-trained model to use for tokenization
+    batch_size : int
+        Batch size for training
+    eval_batch_size : int
+        Batch size for validation and prediction
+    max_seq_len : int
+        Maximum sequence length for tokenization
+    num_workers : int
+        Number of workers for data loading
+
+    Attributes
+    ----------
+    tokenizer : AutoTokenizer
+        Tokenizer loaded from the specified model_name
+    corpus : Corpus
+        Loaded corpus of documents for retrieval
+    ds_train : RetrievalDataset
+        Training dataset
+    ds_val : RetrievalDataset
+        Validation dataset
+    ds_pred : RetrievalDataset
+        Test dataset for prediction
+    """
     def __init__(
         self,
         data_path: str,

@@ -12,6 +12,40 @@ class FisherComputationModule(pl.LightningModule):
         self.automatic_optimization = False
 
     def training_step(self, batch, batch_idx):
+        """
+        Performs a single training step within a PyTorch Lightning module.
+
+        This method:
+        1. Resets gradients of the model
+        2. Computes the loss using the model on the given batch
+        3. Performs manual backward pass for the loss
+        4. Updates Fisher information matrix for each parameter that has gradients
+
+        Parameters:
+        ----------
+        batch : dict
+            Dictionary containing batch data with keys:
+            - context_ids: Tensor of context token IDs
+            - context_mask: Attention mask for context
+            - pos_premise_ids: Tensor of positive premise token IDs
+            - pos_premise_mask: Attention mask for positive premises
+            - neg_premises_ids: Tensor of negative premises token IDs
+            - neg_premises_mask: Attention mask for negative premises
+            - label: Tensor of labels for the batch
+
+        batch_idx : int
+            Index of the batch in the current epoch
+
+        Returns:
+        -------
+        torch.Tensor
+            The computed loss for this batch
+
+        Notes:
+        -----
+        This method accumulates the squared gradients in the Fisher information dictionary,
+        which can be used for techniques like Elastic Weight Consolidation (EWC).
+        """
         self.model.zero_grad()
         loss = self.model(
             batch["context_ids"],
@@ -35,6 +69,15 @@ class FisherComputationModule(pl.LightningModule):
         return loss
 
     def on_train_epoch_end(self):
+        """
+        Synchronizes and normalizes Fisher Information across all GPUs at the end of each training epoch.
+        This method performs two main operations:
+        1. Synchronizes Fisher Information by summing values from all GPUs using all_reduce operation
+        2. Normalizes the Fisher Information by dividing by the total number of samples processed
+           (dataset size * number of GPUs)
+        The resulting Fisher Information values represent the average importance of each parameter
+        across the entire distributed training process.
+        """
         logger.info("Synchronizing and normalizing Fisher Information")
         
         # Synchronize Fisher Information across GPUs

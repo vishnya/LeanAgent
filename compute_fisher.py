@@ -4,11 +4,26 @@ from retrieval.fisher_computation_module import FisherComputationModule
 new_data_path = "<NEW_DATA_PATH>/<NEW_DATASET_NAME>"
 
 def main():
-    """The main function that drives the bot."""
+    """
+    The main function that drives the bot.
+    This function performs the following steps:
+    1. Logs the start of Fisher Information Matrix calculation for EWC.
+    2. Checks if CUDA is available and sets the device accordingly.
+    3. Defines the configuration for the model.
+    4. Attempts to find and load the latest model checkpoint; if not found, uses the current model state.
+    5. Creates a Fisher computation module.
+    6. Sets environment variables for NCCL timeout and error handling.
+    7. Configures the DDP strategy and sets up the trainer for Fisher computation.
+    8. Prepares the data module for retrieval tasks.
+    9. Runs the Fisher computation using the trainer and data module.
+    10. Saves the Fisher Information Matrix if the process is successful and the current process is the global zero.
+    Exceptions:
+    - Logs and handles various exceptions that may occur during the process.
+    """
     try:
         logger.info("Calculating Fisher Information Matrix for EWC")
         ### FISHER INFORMATION MATRIX FOR NEXT EWC
-
+        
         if not torch.cuda.is_available():
             logger.warning("Indexing the corpus using CPU can be very slow.")
             device = torch.device("cpu")
@@ -41,6 +56,7 @@ def main():
 
         ddp_strategy = DDPStrategy(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
         # Setup trainer for Fisher computation
+        # Use 4 GPUs for Fisher computation
         fisher_trainer = pl.Trainer(
             accelerator="gpu",
             precision="bf16-mixed",

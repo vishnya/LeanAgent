@@ -30,6 +30,34 @@ from common import (
 torch.set_float32_matmul_precision("medium")
 
 class PremiseRetriever(pl.LightningModule):
+    """
+    A PyTorch Lightning module implementing a premise retriever for theorem proving.
+    This class implements the premise retrieval component in a theorem proving system,
+    using a T5 encoder model to generate embeddings for premises and contexts.
+    It includes functionality for:
+    - Training with contrastive learning
+    - Elastic Weight Consolidation (EWC) to prevent catastrophic forgetting
+    - Corpus indexing and retrieval
+    - Evaluation using metrics like Recall@K and MRR
+    The model encodes both contexts (theorem proving states) and premises into a
+    shared embedding space, and retrieves relevant premises based on cosine similarity.
+    Attributes:
+        tokenizer: Tokenizer for encoding inputs
+        encoder: T5 encoder model for generating embeddings
+        corpus: Collection of premises for retrieval
+        corpus_embeddings: Cached embeddings of all premises in the corpus
+        embeddings_staled: Flag indicating if corpus embeddings need recomputation
+        train_loss: List tracking training losses
+        previous_params: Dictionary of model parameters before training (for EWC)
+        fisher_info: Fisher information matrix for EWC
+        lamda: Weight for EWC loss term
+    Args:
+        model_name (str): Name/path of the pretrained T5 model to use
+        lr (float): Learning rate for optimization
+        warmup_steps (int): Number of warmup steps for the learning rate scheduler
+        max_seq_len (int): Maximum sequence length for tokenization
+        num_retrieved (int, optional): Number of premises to retrieve. Defaults to 100.
+    """
     def __init__(
         self,
         model_name: str,
@@ -66,6 +94,16 @@ class PremiseRetriever(pl.LightningModule):
         self.previous_params = {name: param.clone().detach() for name, param in self.named_parameters()}
 
     def ewc_loss(self):
+        """
+        Calculate the Elastic Weight Consolidation (EWC) loss.
+        EWC loss is used to prevent catastrophic forgetting in neural networks by 
+        penalizing changes to important parameters. The penalty is based on the 
+        Fisher Information matrix and the difference between current and previous 
+        parameter values.
+        Returns:
+            float: The calculated EWC loss. If Fisher information is not available 
+                   or lambda is zero, returns 0.0.
+        """
         if not self.fisher_info or self.lamda == 0:
             return 0.0
     
@@ -224,7 +262,19 @@ class PremiseRetriever(pl.LightningModule):
 
     @torch.no_grad()
     def reindex_corpus(self, batch_size: int) -> None:
-        """Re-index the retrieval corpus using the up-to-date encoder."""
+        """
+        Re-index the retrieval corpus using the up-to-date encoder.
+
+        This method updates the embeddings of the retrieval corpus if they are marked as stale.
+        It processes the corpus in batches, tokenizes the premises, and encodes them to update
+        the corpus embeddings.
+
+        Args:
+            batch_size (int): The size of the batches to process the corpus.
+
+        Returns:
+            None
+        """        
         if not self.embeddings_staled:
             return
         logger.info("Re-indexing the retrieval corpus")
@@ -254,7 +304,22 @@ class PremiseRetriever(pl.LightningModule):
         self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
 
     def validation_step(self, batch: Dict[str, Any], batch_idx: int) -> None:
-        """Retrieve premises and calculate metrics such as Recall@K and MRR."""
+        """
+        Perform a validation step by retrieving premises and calculating metrics such as Recall@K and MRR.
+
+        Args:
+            batch (Dict[str, Any]): A dictionary containing the batch data, including context IDs, context mask, and all positive premises.
+            batch_idx (int): The index of the current batch.
+
+        Returns:
+            None
+
+        The method performs the following steps:
+        1. Encodes the context using the provided context IDs and mask.
+        2. Retrieves the nearest premises from the corpus based on the encoded context.
+        3. Evaluates the retrieval by calculating Recall@K and Mean Reciprocal Rank (MRR) metrics.
+        4. Logs the metrics and the first example's ground truth and retrieved premises to TensorBoard.
+        """
         # Retrieval.
         context_emb = self._encode(batch["context_ids"], batch["context_mask"])
         assert not self.embeddings_staled

@@ -1,3 +1,4 @@
+# import all the necessary libraries
 import math
 import ray
 from collections import defaultdict
@@ -44,6 +45,7 @@ import torch
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping, LearningRateMonitor, Callback
 from pytorch_lightning import seed_everything
 
+# Set the seed for reproducibility
 random.seed(3407)  # https://arxiv.org/abs/2109.08203
 BATCH_SIZE = 4
 RAID_DIR = os.environ.get('RAID_DIR')
@@ -940,11 +942,17 @@ def should_skip_repo():
     return False, None
 
 def main():
+    """
+    Main function to run the LeanAgent.
+    
+
+    Raises:
+        Exception: _description_
+    """
     global repos_for_merged_dataset
     global repos_for_proving
     global lean_git_repos
     try:
-        current_epoch = 0
         epochs_per_repo = 1
         run_progressive_training = True
         use_fisher = False

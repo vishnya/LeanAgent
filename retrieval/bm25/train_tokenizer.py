@@ -11,6 +11,24 @@ from retrieval.datamodule import RetrievalDataset
 
 
 def main() -> None:
+    """
+    Train a BPE tokenizer using premises from a corpus and states from a retrieval dataset.
+    
+    This function:
+    1. Parses command line arguments for vocabulary size, data path, and output path
+    2. Initializes a BPE tokenizer with special tokens and whitespace pre-tokenizer
+    3. Loads premises from a corpus and states from a retrieval dataset
+    4. Trains the tokenizer on both premises and states
+    5. Saves the trained tokenizer to the specified output path
+    
+    Command Line Arguments:
+        --vocab-size: Size of the vocabulary (default: 30000)
+        --data-path: Path to the input data directory (required)
+        --output-path: Path to save the trained tokenizer (required)
+    
+    Returns:
+        None
+    """
     parser = argparse.ArgumentParser(description="Train a BPE tokenizer")
     parser.add_argument("--vocab-size", type=int, default=30000)
     parser.add_argument("--data-path", type=str, required=True)

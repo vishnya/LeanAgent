@@ -11,6 +11,28 @@ from loguru import logger
 
 
 def _eval(data, preds_map) -> Tuple[float, float, float]:
+    """
+    Evaluates the performance of a retrieval system for theorem premises.
+
+    This function computes three evaluation metrics:
+    - R1: Recall at 1, measuring the percentage of positive premises correctly retrieved as the top result
+    - R10: Recall at 10, measuring the percentage of positive premises correctly retrieved within the top 10 results
+    - MRR: Mean Reciprocal Rank, measuring the average of reciprocal ranks of the first relevant premise
+
+    Parameters
+    ----------
+    data : list
+        List of theorem dictionaries, each containing 'file_path', 'full_name', 'start', and 'traced_tactics'
+    preds_map : dict
+        Dictionary mapping theorem identifiers (file_path, full_name, start, index) to prediction results,
+        where each prediction result has 'all_pos_premises' and 'retrieved_premises' fields
+
+    Returns
+    -------
+    Tuple[float, float, float]
+        A tuple containing (R1, R10, MRR) scores, where R1 and R10 are percentages (0-100)
+        and MRR is a value between 0 and 1
+    """
     R1 = []
     R10 = []
     MRR = []
@@ -44,6 +66,19 @@ def _eval(data, preds_map) -> Tuple[float, float, float]:
 
 
 def main() -> None:
+    """
+    Main function for evaluating premise retriever performance.
+
+    This script loads predictions from a file and test data, then calculates and logs
+    evaluation metrics (R@1, R@10, MRR). Results are both logged and saved to a text file.
+
+    Command-line arguments:
+        --preds-file: Path to the retriever's predictions file (pickle format)
+        --data-path: Path to the directory containing the train/val/test splits
+
+    Example usage:
+        python evaluate.py --preds-file predictions.pkl --data-path data/
+    """
     parser = argparse.ArgumentParser(
         description="Script for evaluating the premise retriever."
     )

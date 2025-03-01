@@ -1,3 +1,4 @@
+# import all the necessary modules
 import math
 from typing import Union
 import unittest
@@ -25,6 +26,22 @@ MERGED_DATA_DIR = "datasets_merged_unittest"
 PROOF_LOG_FILE_NAME = "proof_logs_unittest/proof_log_unittest.log"
 
 class TestDynamicDatabaseCore(unittest.TestCase):
+    """
+    Unit tests for the DynamicDatabase class and related functionality.
+    This test suite covers the following aspects of the DynamicDatabase:
+    - Repository operations (add, update, get)
+    - Theorem operations (adding, retrieving, updating)
+    - Premise file operations
+    - JSON serialization and deserialization
+    - Repository properties (total_theorems, etc.)
+    - Special case handling (empty strings, None values)
+    - Theorem difficulty rating calculation and updating
+    - Converting sorry theorems to proven theorems
+    - Handling of duplicate repositories
+    - Repository equality
+    The tests use a combination of simple and complex test cases to verify that
+    all aspects of the database function correctly, including edge cases.
+    """
     def setUp(self):
         self.db = DynamicDatabase()
         self.repo = Repository(
@@ -941,6 +958,21 @@ class TestDynamicDatabaseSimpleLean(unittest.TestCase):
                 self.assertEqual(len(data), 0)
 
 class TestDynamicDatabaseUnicode(unittest.TestCase):
+    """"
+    Unit test class for testing Unicode handling in the DynamicDatabase class.
+    This test suite focuses on verifying that the DynamicDatabase correctly handles
+    Unicode characters during serialization and deserialization operations, and
+    that Unicode content can be properly manipulated within the database.
+    The tests include:
+    1. Serializing and deserializing a database with Unicode content
+    2. Modifying a theorem with Unicode content and verifying the changes persist
+    The test database includes:
+    - A repository with a Unicode name
+    - Theorems with Unicode mathematical symbols (∀, ℕ, ℝ, etc.)
+    - Complex mathematical expressions using Unicode symbols
+    This ensures the database can correctly handle international character sets
+    and mathematical notation when saving to and loading from JSON files.
+    """
     def setUp(self):
         self.db = DynamicDatabase()
         self.unicode_repo = self.create_unicode_sample_repo()
@@ -1096,6 +1128,24 @@ class TestDynamicDatabaseUnicode(unittest.TestCase):
         assert "↔" in updated_theorem.traced_tactics[1].state_before
 
 class TestDynamicDatabase(unittest.TestCase):
+    """
+    Test suite for the DynamicDatabase class.
+
+    This class contains unit tests that verify the functionality of the DynamicDatabase class,
+    which is responsible for managing repository data. The tests cover basic CRUD operations
+    (Create, Read, Update, Delete) for repositories as well as serialization and
+    deserialization of the database to and from JSON.
+
+    Tests:
+        - test_add_repository: Verifies that repositories can be added to the database
+        - test_get_repository: Ensures repositories can be retrieved by URL and commit
+        - test_update_repository: Tests the ability to update existing repositories
+        - test_delete_repository: Confirms repositories can be removed from the database
+        - test_to_json_and_from_json: Validates JSON serialization and deserialization
+
+    Each test method uses a fresh DynamicDatabase instance and a test Repository object
+    created in the setUp method.
+    """
     def setUp(self):
         self.db = DynamicDatabase()
         self.repo = Repository(
@@ -1529,6 +1579,25 @@ class TestDynamicDatabasePFR(unittest.TestCase):
         self.assertIn(Path(".lake/packages/batteries/Batteries/Data/List/Lemmas.lean"), self.sample_repo.files_traced)
 
 class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
+    """
+    Test suite for the DynamicDatabase class when working with multiple repositories.
+    This test class validates the functionality of the DynamicDatabase class
+    for managing multiple Lean repositories simultaneously, specifically the PFR
+    repository and a new-version-test repository. It tests repository creation,
+    theorem loading, tactic tracing, premise loading, serialization/deserialization,
+    dataset generation, and comparison between manual and dynamic dataset generation.
+    The test suite verifies:
+    1. Repository creation and loading from different sources
+    2. Correct loading of theorems, tactics, and premises
+    3. JSON serialization and deserialization of the database
+    4. Generation of merged datasets from multiple repositories
+    5. Consistency and correctness of generated datasets
+    6. Proper handling of unicode characters
+    7. File tracing functionality
+    8. Dataset splitting into train/val/test sets
+    It also compares dynamically generated datasets with manually created ones
+    to ensure compatibility and correctness.
+    """
     def setUp(self):
         self.db = DynamicDatabase()
         self.sample_repo_PFR = self.create_sample_repo("https://github.com/teorth/pfr", "6a5082ee465f9e44cea479c7b741b3163162bb7e")
@@ -2193,6 +2262,25 @@ class TestDynamicDatabasePFRNewVersion(unittest.TestCase):
         self.assertIn(Path(".lake/packages/batteries/Batteries/Data/List/Lemmas.lean"), self.sample_repo_new_version.files_traced)
 
 class TestDynamicDatabaseProver(unittest.TestCase):
+    """
+    Unit tests for DynamicDatabase class focusing on proof persistence.
+    This test suite validates the DynamicDatabase class's capabilities to:
+    1. Create and manage repositories of Lean theorems
+    2. Track the state of theorems (unproved/proved)
+    3. Update theorems with proofs
+    4. Serialize to and deserialize from JSON
+    5. Handle theorem proving workflows
+    The tests verify:
+    - Basic creation and manipulation of database objects
+    - Annotated tactic creation and storage
+    - Repository updates with proved theorems
+    - JSON serialization and deserialization
+    - Handling of duplicate theorems across repositories
+    - Persistence during incremental proving
+    Each test method uses a standard setup with a test repository containing
+    a single unproved theorem, which can then be manipulated to test different
+    aspects of the system's functionality.
+    """
     def setUp(self):
         self.db = DynamicDatabase()
         self.repo = Repository(

@@ -77,6 +77,27 @@ class BestFirstSearchProver:
     def search(
         self, repo: LeanGitRepo, thm: Theorem, pos: Pos
     ) -> Optional[SearchResult]:
+        """
+        Performs a best-first search to find a proof for the given theorem.
+        
+        The search uses a tactic generator to propose tactics and expands
+        the search tree until either a proof is found, the timeout is reached,
+        or the search space is exhausted.
+        
+        Args:
+            repo (LeanGitRepo): The Lean Git repository containing the theorem.
+            thm (Theorem): The theorem to be proved.
+            pos (Pos): The position information for the theorem in the source code.
+            
+        Returns:
+            Optional[SearchResult]: A SearchResult object containing information about the
+            proof search, including the proof if one was found, or None if there was
+            an initialization error.
+            
+        Raises:
+            No explicit exceptions are raised from this method, though internal
+            exceptions are caught and handled.
+        """
         logger.info(f"Proving {thm}")
 
         self.repo = repo

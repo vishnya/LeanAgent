@@ -27,6 +27,25 @@ from retrieval.model import PremiseRetriever
 torch.set_float32_matmul_precision("medium")
 
 def safe_remove_dir(dir_path):
+    """
+    Safely removes a directory path if it exists, with retries.
+
+    This function attempts to delete a directory and retries multiple times if permission errors occur,
+    which can happen if files are temporarily locked by another process or if the directory
+    contains read-only files.
+
+    Args:
+        dir_path (str): Path to the directory to be removed.
+
+    Raises:
+        PermissionError: If the directory cannot be removed after multiple retries
+                         due to permission issues.
+
+    Example:
+        ```
+        safe_remove_dir('/path/to/directory')
+        ```
+    """
     if os.path.exists(dir_path):
         logger.warning(f"{dir_path} already exists. Removing it now.")
         max_retries = 5
@@ -43,6 +62,24 @@ def safe_remove_dir(dir_path):
 
 
 class TopkAccuracy(Metric):
+    """
+    A metric class for calculating top-k accuracy for text predictions.
+
+    This metric evaluates whether the ground truth string is present within the top k predicted strings.
+    The strings are processed by removing marks before comparison.
+
+    Attributes:
+        is_differentiable (Optional[bool]): Indicates if the metric is differentiable. Default is False.
+        higher_is_better (Optional[bool]): Indicates if higher values are better. Default is True.
+        full_state_update (bool): Whether to update the state completely. Default is True.
+        k (int): The number of top predictions to consider.
+        correct (torch.Tensor): Running count of correct predictions.
+        total (torch.Tensor): Running count of total predictions.
+
+    Methods:
+        update(batch_preds, batch_gt): Updates the state with batch statistics.
+        compute(): Computes the accuracy based on collected state.
+    """
     is_differentiable: Optional[bool] = False
     higher_is_better: Optional[bool] = True
     full_state_update: bool = True
@@ -108,6 +145,39 @@ class RetrievalAugmentedGenerator(TacticGenerator, pl.LightningModule):
         length_penalty: float = 0.0,
         ret_ckpt_path: Optional[str] = None,
     ) -> None:
+        """
+        Initialize the RetrievalAugmentedGenerator.
+
+        The generator can optionally use a retriever to augment the generation process.
+
+        Parameters
+        ----------
+        model_name : str
+            Name of the pre-trained model to use for generation
+        lr : float
+            Learning rate for the optimizer
+        warmup_steps : int
+            Number of warmup steps for learning rate scheduler
+        num_beams : int
+            Number of beams to use for beam search during generation
+        eval_num_retrieved : int
+            Number of premises to retrieve during evaluation
+        eval_num_workers : int
+            Number of worker processes for evaluation
+        eval_num_gpus : int
+            Number of GPUs to use for evaluation
+        eval_num_theorems : int
+            Number of theorems to evaluate on
+        max_inp_seq_len : int
+            Maximum input sequence length
+        max_oup_seq_len : int
+            Maximum output sequence length
+        length_penalty : float, optional
+            Length penalty for beam search, by default 0.0
+        ret_ckpt_path : Optional[str], optional
+            Path to the retriever checkpoint, by default None.
+            If None, the generator will not use retrieval augmentation.
+        """
         super().__init__()
         self.save_hyperparameters()
         self.lr = lr
@@ -223,6 +293,30 @@ class RetrievalAugmentedGenerator(TacticGenerator, pl.LightningModule):
     ##############
 
     def validation_step(self, batch: Dict[str, Any], _) -> None:
+        """
+        Performs a validation step on a batch of data.
+        
+        The method computes the loss on the validation data, logs the loss, and generates 
+        tactic candidates using Beam Search. It also logs example inputs/outputs and 
+        calculates top-k accuracy metrics for the generated tactics.
+        
+        Args:
+            batch: A dictionary containing batch data with the following keys:
+                - state_ids: Tensor of input state token IDs
+                - state_mask: Attention mask for state input
+                - tactic_ids: Tensor of target tactic token IDs
+                - tactic: List of reference tactic strings
+            _: Batch index (unused)
+        
+        Returns:
+            None
+        
+        Side effects:
+            - Logs validation loss
+            - Logs example inputs/outputs as text
+            - Generates tactic predictions using beam search
+            - Computes and logs top-k accuracy metrics
+        """
         state_ids = batch["state_ids"]
         state_mask = batch["state_mask"]
         tactic_ids = batch["tactic_ids"]
@@ -332,6 +426,27 @@ class RetrievalAugmentedGenerator(TacticGenerator, pl.LightningModule):
         theorem_pos: List[Pos],
         num_samples: int,
     ) -> List[List[Tuple[str, float]]]:
+        """
+        Generate multiple tactic candidates for a batch of Lean states using a generator model.
+
+        This method processes a batch of Lean theorem states, optionally enhances them with retrieved premises,
+        and generates multiple tactic candidates for each state using beam search.
+
+        Args:
+            state (List[str]): List of Lean states as strings.
+            file_path (List[str]): List of file paths corresponding to each state.
+            theorem_full_name (List[str]): List of fully qualified theorem names.
+            theorem_pos (List[Pos]): List of position objects indicating locations in source files.
+            num_samples (int): Number of tactic candidates to generate per state.
+
+        Returns:
+            List[List[Tuple[str, float]]]: A list of lists where each inner list contains tuples of
+            (tactic_text, score) for each state. Duplicate tactics are removed.
+            
+        Note:
+            If a retriever is configured, it will be used to augment states with relevant premises
+            before generation.
+        """
         logger.debug(state)
         if self.retriever is not None:
             retrieved_premises, _ = self.retriever.retrieve(

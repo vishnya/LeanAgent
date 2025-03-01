@@ -11,6 +11,20 @@ from retrieval.model import PremiseRetriever
 
 
 def main() -> None:
+    """
+    Main function for training and saving a BM25 premise retriever.
+
+    This function parses command line arguments, initializes a PremiseRetriever model,
+    loads a corpus, reindexes it, and saves the indexed corpus to a specified output path.
+
+    Command line arguments:
+        --ckpt_path: Path to the checkpoint for loading the PremiseRetriever model.
+        --corpus-path: Path to the corpus file to be indexed.
+        --output-path: Path where the indexed corpus will be saved.
+        --batch-size: Batch size for corpus indexing (default: 64).
+
+    The function will use CUDA if available, with a warning that CPU indexing can be slow.
+    """
     parser = argparse.ArgumentParser(
         description="Script for training the BM25 premise retriever."
     )

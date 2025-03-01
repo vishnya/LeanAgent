@@ -126,6 +126,30 @@ def split_by_premise(
     }
 
 def split_data(traced_repo: TracedRepo, num_val_pct: float = 0.02, num_test_pct: float = 0.02) -> Dict[SPLIT_STRATEGY, SPLIT]:
+    """
+    Split the traced theorems into training, validation, and test sets.
+
+    This function extracts theorems from the provided TracedRepo object, excluding
+    theorems from the Lean 4 repository itself. The theorems are then split using 
+    multiple strategies, including random splitting and splitting by novel premises.
+
+    Args:
+        traced_repo (TracedRepo): A TracedRepo object containing the theorems to split.
+        num_val_pct (float, optional): The percentage of theorems to use for validation.
+            Defaults to 0.02 (2%).
+        num_test_pct (float, optional): The percentage of theorems to use for testing.
+            Defaults to 0.02 (2%).
+
+    Returns:
+        Dict[SPLIT_STRATEGY, SPLIT]: A dictionary where keys are split strategy names
+            ("random", "novel_premises") and values are split dictionaries containing
+            "train", "val", and "test" theorem lists.
+
+    Example:
+        >>> repo = TracedRepo(...)
+        >>> splits = split_data(repo)
+        >>> len(splits["random"]["train"])  # Number of training theorems in random split
+    """
     # Skip theorems in the Lean 4 repo itself.
     traced_theorems = [
         thm for thm in traced_repo.get_traced_theorems() if not thm.repo.is_lean4
@@ -143,6 +167,24 @@ def split_data(traced_repo: TracedRepo, num_val_pct: float = 0.02, num_test_pct:
     }
 
 def _get_file_path(traced_repo: TracedRepo, thm: TracedTheorem) -> str:
+    """
+    Get the file path for a given theorem in a traced repository.
+
+    This function computes the appropriate file path for a theorem, handling two cases:
+    1. When the theorem belongs to the traced repository itself
+    2. When the theorem belongs to one of the dependencies of the repository
+
+    Args:
+        traced_repo (TracedRepo): The traced repository context
+        thm (TracedTheorem): The theorem whose file path is requested
+
+    Returns:
+        str: The file path to the theorem
+
+    Raises:
+        ValueError: If the theorem belongs to a repository that is not the traced repository
+                    or one of its dependencies
+    """
     if thm.repo == traced_repo.repo:
         # The theorem belongs to the traced repo itself.
         return str(thm.theorem.file_path)
@@ -157,7 +199,27 @@ def _get_file_path(traced_repo: TracedRepo, thm: TracedTheorem) -> str:
 def export_proofs(
     splits: Dict[SPLIT_STRATEGY, SPLIT], dst_path: Path, traced_repo: TracedRepo
 ) -> None:
-    """Export all proofs in a traced repo to ``dst_path''."""
+    """
+    Export proofs from a traced repository to the specified destination path.
+    This function processes the given splits (organized by strategy) and writes the theorem proofs 
+    to JSON files in the destination directory. Each theorem is exported with its metadata, 
+    including URL, commit, file path, theorem statement, and traced tactics.
+    Args:
+        splits: Dictionary mapping split strategies to actual splits. Each split maps dataset
+               names (like 'train', 'val', 'test') to lists of theorems.
+        dst_path: Destination path where proof files will be written.
+        traced_repo: The traced repository containing the theorem proofs.
+    Returns:
+        int: The total number of theorems exported.
+    Each theorem is exported with the following information:
+    - URL and commit of the source repository
+    - File path within the repository
+    - Full theorem name
+    - Theorem statement (if available)
+    - Start and end positions
+    - Traced tactics with their states before and after application
+    Tactics with "no goals" state or containing "·" are excluded.
+    """
     total_theorems = 0
     for strategy, split in splits.items():
         split_dir = dst_path / strategy
@@ -208,7 +270,19 @@ def export_proofs(
 
 
 def export_premises(traced_repo: TracedRepo, dst_path: Path) -> None:
-    """Export all premise definitions in a traced repo to ``dst_path``."""
+    """
+    Export all premise definitions in a traced repository to the destination path.
+    This function performs two main operations:
+    1. Exports all premises (theorems/definitions) to a corpus.jsonl file, maintaining topological order
+    2. Exports information about all traced files to traced_files.jsonl
+    Args:
+        traced_repo: A TracedRepo object containing the traced files and their dependencies
+        dst_path: Path to the directory where the output files will be saved
+    Returns:
+        A tuple containing:
+        - The number of premises exported
+        - The number of traced files processed
+    """
     oup_path = dst_path / "corpus.jsonl"
     num_premises = 0
 
@@ -246,7 +320,31 @@ def export_premises(traced_repo: TracedRepo, dst_path: Path) -> None:
 
 
 def export_metadata(traced_repo: TracedRepo, dst_path: Path, **kwargs) -> None:
-    """Export the metadata of a traced repo to ``dst_path''."""
+    """
+    Export the metadata of a traced repository to a specified destination path.
+
+    This function creates a JSON file containing metadata information about the repository,
+    including user-provided keyword arguments, creation timestamp, repository URL and commit,
+    and LeanDojo version.
+
+    Parameters
+    ----------
+    traced_repo : TracedRepo
+        The traced repository object containing repository information.
+    dst_path : Path
+        Destination directory path where the metadata file will be saved.
+    **kwargs : dict
+        Additional metadata key-value pairs to include in the output.
+
+    Returns
+    -------
+    None
+        The function writes metadata to a JSON file but doesn't return any value.
+
+    Notes
+    -----
+    The metadata is saved as 'metadata.json' in the specified destination directory.
+    """
     metadata = dict(kwargs)
     metadata["creation_time"] = str(datetime.now())
     metadata["from_repo"] = {
@@ -258,6 +356,23 @@ def export_metadata(traced_repo: TracedRepo, dst_path: Path, **kwargs) -> None:
 
 
 def safe_remove_dir(dir_path):
+    """
+    Safely removes a directory if it exists.
+    
+    This function attempts to remove the specified directory, with multiple retries
+    in case of permission errors. A warning is logged if the directory already exists.
+    
+    Args:
+        dir_path (str): Path to the directory to be removed.
+        
+    Raises:
+        PermissionError: If the directory cannot be removed after multiple attempts
+                         due to permission issues.
+    
+    Note:
+        The function will retry up to 5 times with a 0.1 second delay between attempts
+        if a PermissionError occurs.
+    """
     if os.path.exists(dir_path):
         logger.warning(f"{dir_path} already exists. Removing it now.")
         max_retries = 5
@@ -274,6 +389,21 @@ def safe_remove_dir(dir_path):
 
 
 def safe_remove_dir_path(dir_path):
+    """
+    Safely removes a directory and all its contents if it exists.
+    
+    Uses multiple attempts with a small delay between them to handle potential
+    permission errors that might occur on some systems when removing directories.
+    
+    Args:
+        dir_path (Path): Path object representing the directory to remove
+        
+    Raises:
+        PermissionError: If the directory cannot be removed after multiple attempts
+        
+    Returns:
+        None
+    """
     if dir_path.exists():
         logger.warning(f"{dir_path} already exists. Removing it now.")
         max_retries = 5
@@ -294,7 +424,24 @@ def export_data(
     dst_path: Union[str, Path],
     **kwargs,
 ) -> None:
-    """Export a traced repo whose theorems have been splitted to ``dst_path``."""
+    """Export a traced repository's content to a specified destination path.
+    
+    This function exports proofs, premises, licenses, and metadata from a traced 
+    repository to a specified destination path. The repository's theorems should have 
+    been split using a strategy defined in `splits`.
+    
+    Args:
+        traced_repo: The traced repository containing the data to export.
+        splits: Dictionary mapping split strategies to their corresponding splits.
+        dst_path: Destination path where the data will be exported. Can be a string or Path object.
+        **kwargs: Additional keyword arguments to pass to export_metadata.
+    
+    Returns:
+        tuple: A tuple containing (number of premises, number of files traced, total theorems exported).
+        
+    Note:
+        Any existing content at the destination path will be removed.
+    """
     if isinstance(dst_path, str):
         dst_path = Path(dst_path)
     safe_remove_dir_path(dst_path)
@@ -308,8 +455,8 @@ def export_data(
     logger.info("Successfully exported the premises")
 
     # Export the licenses.
-    # export_licenses(traced_repo, dst_path)
-    # logger.info("Successfully exported the licenses")
+    export_licenses(traced_repo, dst_path)
+    logger.info("Successfully exported the licenses")
 
     # Export metadata.
     export_metadata(traced_repo, dst_path, **kwargs)
@@ -318,6 +465,18 @@ def export_data(
     return num_premises, num_files_traced, total_theorems
 
 def configure_leandojo():
+    """
+    Configure the LeanDojo environment for benchmarking.
+    
+    This function sets up the logger configuration for LeanDojo and displays
+    important environment variables including the current working directory
+    and various constants related to process management.
+    
+    It removes any existing logger handlers and adds a new handler for stderr
+    with DEBUG level logging.
+    
+    No parameters are required, and the function does not return any values.
+    """
     constants.logger.remove()
     constants.logger.add(sys.stderr, level="DEBUG")
 
@@ -326,12 +485,30 @@ def configure_leandojo():
     # constants.NUM_PROCS = 2
 
     logger.info(f"Current working directory: {os.getcwd()}")
-    # logger.info(f"CACHE_DIR: {constants.CACHE_DIR}")
-    # logger.info(f"NUM_WORKERS: {constants.NUM_WORKERS}")
-    # logger.info(f"MAX_NUM_PROCS: {constants.MAX_NUM_PROCS}")
-    # logger.info(f"NUM_PROCS: {constants.NUM_PROCS}")
+    logger.info(f"CACHE_DIR: {constants.CACHE_DIR}")
+    logger.info(f"NUM_WORKERS: {constants.NUM_WORKERS}")
+    logger.info(f"MAX_NUM_PROCS: {constants.MAX_NUM_PROCS}")
+    logger.info(f"NUM_PROCS: {constants.NUM_PROCS}")
 
 def main(url, commit, dst_dir):
+    """
+    Generates a benchmark dataset for Lean 4 proofs from a specified repository.
+    This function clones a Lean 4 repository, configures the appropriate Lean toolchain
+    version, traces the repository using LeanDojo, and exports the trace data to a 
+    designated directory.
+    Args:
+        url (str): The URL of the Lean 4 Git repository to clone
+        commit (str): The specific commit hash to check out
+        dst_dir (str): The destination directory where the benchmark dataset will be saved
+    Returns:
+        tuple: A tuple containing:
+            - traced_repo: The traced repository object or None if tracing failed
+            - num_premises (int): Number of premises found
+            - num_files_traced (int): Number of files successfully traced
+            - total_theorems (int): Total number of theorems, or 10 if tracing failed
+    Raises:
+        Various exceptions may be caught and logged during repository tracing
+    """
     logger.info(f"Generating dataset to go into {dst_dir}")
     repo = LeanGitRepo(url, commit)
 

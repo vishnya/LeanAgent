@@ -24,6 +24,29 @@ def _get_theorems(
     name_filter: str,
     num_theorems: int,
 ) -> Tuple[LeanGitRepo, List[Theorem], List[Pos]]:
+    """
+    Retrieves a list of Lean theorems from specified files based on given filters.
+
+    This function fetches theorems from Lean files using internal helper functions and 
+    validates that all repositories containing the theorems have been traced with LeanDojo.
+
+    Parameters:
+        data_path (str): Path to the data directory containing Lean files.
+        split (str): Dataset split identifier (e.g., 'train', 'valid', 'test').
+        file_path (str): Path to specific file or directory of files to search.
+        full_name (str): Full name pattern to filter theorems.
+        name_filter (str): Name pattern to filter theorems.
+        num_theorems (int): Maximum number of theorems to retrieve.
+
+    Returns:
+        Tuple[LeanGitRepo, List[Theorem], List[Pos]]: A tuple containing:
+            - LeanGitRepo: The repository object
+            - List[Theorem]: List of theorem objects
+            - List[Pos]: List of theorem positions
+
+    Raises:
+        AssertionError: If any repository containing the theorems has not been traced with LeanDojo.
+    """
     repo, theorems, positions = _get_theorems_from_files(
         data_path,
         split,
@@ -50,6 +73,29 @@ def _get_theorems_from_files(
     name_filter: Optional[str],
     num_theorems: Optional[int],
 ) -> Tuple[LeanGitRepo, List[Theorem], List[Pos]]:
+    """
+    Retrieves theorems from JSON files based on specified filters.
+
+    This function loads theorem data from a JSON file and filters it based on optional parameters.
+    It returns the repository information, a list of theorems, and their positions in the files.
+
+    Args:
+        data_path (str): Path to the directory containing the split JSON files.
+        split (str): Name of the split file (without .json extension).
+        file_path (Optional[str]): Filter theorems by specific file path.
+        full_name (Optional[str]): Filter theorems by specific full name.
+        name_filter (Optional[str]): Filter theorems by MD5 hash prefix of the full name.
+        num_theorems (Optional[int]): Limit the number of theorems returned.
+
+    Returns:
+        Tuple[LeanGitRepo, List[Theorem], List[Pos]]: A tuple containing:
+            - The Lean Git repository information
+            - A list of Theorem objects
+            - A list of Pos objects representing the positions of the theorems
+
+    Note:
+        Theorems are sorted by the MD5 hash of their file path and full name.
+    """
     data = json.load(open(os.path.join(data_path, f"{split}.json")))
     theorems = []
     positions = []
@@ -106,6 +152,30 @@ def evaluate(
     num_gpus: int = 0,
     verbose: bool = False,
 ) -> float:
+    """
+    Evaluates theorems using the distributed prover and returns pass rate.
+    This function loads theorems from the specified data path, runs the distributed prover on them,
+    and calculates statistics on how many theorems were successfully proved.
+    Args:
+        data_path (str): Path to the data repository containing theorems.
+        exp_id (Optional[str]): Experiment ID to use for saving results. Defaults to a UUID if not provided.
+        split (str): Dataset split to use ('val', 'test', etc.). Defaults to 'val'.
+        file_path (Optional[str]): Path to a specific file to evaluate theorems from.
+        full_name (Optional[str]): Full name of a specific theorem to evaluate.
+        name_filter (Optional[str]): Filter theorems by name substring.
+        num_theorems (Optional[int]): Maximum number of theorems to evaluate.
+        ckpt_path (Optional[str]): Path to the checkpoint file for the prover model.
+        indexed_corpus_path (Optional[str]): Path to the indexed corpus for the prover.
+        tactic (Optional[str]): Specific tactic to use for proving.
+        module (Optional[str]): Specific module to load for proving.
+        num_sampled_tactics (int): Number of tactics to sample. Defaults to 64.
+        timeout (int): Maximum time (in seconds) allowed for each theorem. Defaults to 600.
+        num_workers (int): Number of worker processes to spawn. Defaults to 1.
+        num_gpus (int): Number of GPUs to use. Defaults to 0.
+        verbose (bool): Whether to output detailed logs. Defaults to False.
+    Returns:
+        float: The pass rate (num_proved / (num_proved + num_failed)) or NaN if no theorems were evaluated.
+    """
     set_logger(verbose)
 
     repo, theorems, positions = _get_theorems(
@@ -157,6 +227,33 @@ def evaluate(
 
 
 def main() -> None:
+    """
+    Main function for evaluating a theorem prover on theorems extracted by LeanDojo.
+
+    The function parses command-line arguments and evaluates the prover using the specified configuration.
+    It supports various filtering options for theorems, different tactic generators, and parallel proof search.
+
+    Command-line arguments:
+        --data-path: Path to the data extracted by LeanDojo
+        --exp-id: Experiment ID used for logging
+        --split: Dataset split to use (train, val, or test)
+        --file-path: Filter theorems by file path
+        --full-name: Filter theorems by full name
+        --name-filter: Filter theorems by name pattern
+        --num-theorems: Limit the number of theorems to evaluate
+        --ckpt-path: Checkpoint path for the tactic generator model
+        --indexed-corpus-path: Path to pickled indexed corpus for retrieval-based models
+        --tactic: The tactic to evaluate (alternative to using a model)
+        --module: The module to import the tactic from
+        --num-sampled-tactics: Number of tactics to sample at each proof search node
+        --timeout: Maximum seconds allowed for each proof search
+        --num-workers: Number of concurrent provers for parallel evaluation
+        --num-gpus: Number of GPUs to use for proof search
+        --verbose: Enable detailed debugging output
+
+    Returns:
+        None: Results are logged with the final Pass@1 score
+    """
     parser = argparse.ArgumentParser(
         description="Script for evaluating the prover on theorems extracted by LeanDojo."
     )

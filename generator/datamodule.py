@@ -22,6 +22,23 @@ from common import (
 
 
 class GeneratorDataset(Dataset):
+    """
+    A PyTorch Dataset for loading and processing data for a generator model that produces tactics given proof states.
+
+    This dataset handles loading examples from a JSON file, formatting states and tactics, 
+    and optionally augmenting states with retrieved premises.
+
+    Attributes:
+        corpus (Corpus): The corpus containing the proof data.
+        keep_marks (bool): Whether to keep markup in the tactics and states.
+        preds (List[Dict[str, Any]]): Predictions for augmenting states with retrieved premises.
+        max_inp_seq_len (int): Maximum input sequence length for states.
+        max_oup_seq_len (int): Maximum output sequence length for tactics.
+        p_drop (float): Probability to drop retrieved premises during training.
+        tokenizer (ByT5Tokenizer): Tokenizer for encoding states and tactics.
+        is_train (bool): Whether this dataset is used for training.
+        data (List[Example]): The loaded and processed examples.
+    """
     def __init__(
         self,
         data_path: str,
