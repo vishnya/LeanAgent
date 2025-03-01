@@ -425,10 +425,12 @@ class DistributedProver:
         else:
             logger.info("Using RAG")
             device = torch.device("cuda") if num_gpus > 0 else torch.device("cpu")
+            # TODO: if no retrieval we should comment this if else out
             model_checkpoint_path = None
             if run_progressive_training:
                 model_checkpoint_path = find_latest_checkpoint(raid_dir, checkpoint_dir)
             else:
+                # TODO: we should be able to change this to another checkpoint for doing all sorires
                 model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
             
             config = {
@@ -442,7 +444,7 @@ class DistributedProver:
                 "eval_num_theorems": 100,
                 "max_inp_seq_len": 512,
                 "max_oup_seq_len": 128,
-                "ret_ckpt_path": model_checkpoint_path,
+                "ret_ckpt_path": model_checkpoint_path, # TODO: if no retrieval this is NOne
             }
             tac_gen = RetrievalAugmentedGenerator.load(
                 ckpt_path, device=device, freeze=True, config=config

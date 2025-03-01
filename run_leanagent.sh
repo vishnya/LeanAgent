@@ -17,5 +17,5 @@ ray stop --force
 ps aux | grep "python" | awk '{print $2}' | xargs -r kill -9
 sleep 5
 nvidia-smi
-echo "Running main3.py"
-python main3.py
+echo "Running leanagent.py"
+python leanagent.py
