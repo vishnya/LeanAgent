@@ -22,7 +22,7 @@
 # - PATH_TO_CONDA_ENV: Replace with path to conda installation
 # - GITHUB_ACCESS_TOKEN: Replace <GITHUB_ACCESS_TOKEN> with valid token
 #
-# Usage: ./run_leanagent.sh
+# Usage: bash run_leanagent.sh
 #!/bin/bash
 export RAID_DIR="<RAID_DIR>"
 cd ${RAID_DIR}/LeanAgent
