@@ -29,6 +29,7 @@ def _process_theorem(
     num_retrieved: int,
     use_all_premises: bool,
 ) -> List[Dict[str, Any]]:
+    logger.info(f"Processing {thm['full_name']} at {thm['file_path']}")
     preds = []
     file_path = thm["file_path"]
 
@@ -66,6 +67,7 @@ def _process_theorem(
             }
         )
 
+    logger.info(f"Processed {thm['full_name']} at {thm['file_path']}")
     return preds
 
 
@@ -78,6 +80,7 @@ class TheoremProcessor:
         num_retrieved: int,
         use_all_premises: bool,
     ) -> None:
+        logger.info("Initializing theorem processor")
         self.num_retrieved = num_retrieved
         self.use_all_premises = use_all_premises
 
@@ -86,17 +89,20 @@ class TheoremProcessor:
         premises = [premise.serialize() for premise in self.corpus.all_premises]
         tokenized_premises = [self.tokenizer.encode(p).tokens for p in premises]
         self.bm25 = BM25Okapi(tokenized_premises)
+        logger.info("Finished initializing theorem processor")
 
     def process_theorem(self, thm: Dict[str, Any]):
-        return _process_theorem(
-            thm,
-            self.corpus,
-            self.tokenizer,
-            self.bm25,
-            self.num_retrieved,
-            self.use_all_premises,
-        )
-
+        try:
+            return _process_theorem(
+                thm,
+                self.corpus,
+                self.tokenizer,
+                self.bm25,
+                self.num_retrieved,
+                self.use_all_premises,
+            )
+        except Exception as e:
+            logger.error(f"Error processing theorem {thm['full_name']}: {str(e)}")
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -120,14 +126,13 @@ def main() -> None:
             f"Number of cpus requested ({args.num_cpus}) is greater than the number of cpus available ({multiprocessing.cpu_count()})"
         )
 
-    theorems = list(
-        itertools.chain.from_iterable(
-            json.load(open(os.path.join(args.data_path, f"{split}.json")))
-            for split in ("train", "val", "test")
-        )
-    )
+    logger.info("About to load theorems")
+    with open(os.path.join(args.data_path, "test.json"), 'r') as file:
+        theorems = json.load(file)
+    logger.info("Finished loading theorems")
 
     if args.num_cpus > 1:
+        logger.info("About to create a pool")
         pool = ActorPool(
             [
                 TheoremProcessor.remote(
@@ -139,23 +144,28 @@ def main() -> None:
                 for _ in range(args.num_cpus)
             ]
         )
-        preds = list(
-            itertools.chain.from_iterable(
-                tqdm(
-                    pool.map_unordered(
-                        lambda a, thm: a.process_theorem.remote(thm), theorems
-                    ),
-                    total=len(theorems),
-                )
-            )
-        )
+        logger.info("Finished making a pool")
+        logger.info("About to process theorems")
+        futures = pool.map_unordered(lambda actor, thm: actor.process_theorem.remote(thm), theorems)
+        preds = [ray.get(f) for f in tqdm(futures, total=len(theorems))]
+        logger.info("Finished processing theorems")
     else:
+        logger.info("Initializing tokenizer")
         tokenizer = Tokenizer.from_file(args.tokenizer_path)
+        logger.info("Finished initializing tokenizer")
+        logger.info("Initializing corpus")
         corpus = Corpus(os.path.join(args.data_path, "../corpus.jsonl"))
+        logger.info("Finished initializing corpus")
+        logger.info("Initializing premises")
         premises = [premise.serialize() for premise in corpus.all_premises]
+        logger.info("Finished initializing premises")
+        logger.info("Initializing tokenized premises")
         tokenized_premises = [tokenizer.encode(p).tokens for p in premises]
+        logger.info("Finished initializing tokenized premises")
+        logger.info("Initializing BM25")
         bm25 = BM25Okapi(tokenized_premises)
-
+        logger.info("Finished initializing BM25")
+        logger.info("About to process theorems")
         preds = list(
             itertools.chain.from_iterable(
                 [
@@ -172,6 +182,9 @@ def main() -> None:
             )
         )
 
+        logger.info("Finished processing theorems")
+
+    logger.info("About to save predictions")
     with open(args.output_path, "wb") as oup:
         pickle.dump(preds, oup)
     logger.info(f"Saved predictions to {args.output_path}")

@@ -5,7 +5,9 @@ import os
 import sys
 import ray
 import time
+import uuid
 import heapq
+import asyncio
 import torch
 from lean_dojo import (
     Pos,
@@ -25,11 +27,14 @@ from loguru import logger
 from dataclasses import dataclass
 from typing import List, Optional, Tuple
 from ray.util.actor_pool import ActorPool
+from vllm import AsyncLLMEngine, AsyncEngineArgs, SamplingParams, RequestOutput
 
 from common import zip_strict
 from prover.search_tree import *
 from generator.model import RetrievalAugmentedGenerator, FixedTacticGenerator
 
+tolerance = 1 # second
+RAID_DIR = os.environ.get('RAID_DIR')
 
 @dataclass(frozen=True)
 class SearchResult:
@@ -54,11 +59,13 @@ class BestFirstSearchProver:
         self,
         tac_gen,  # A given tactic generator.
         timeout: int,
+        max_expansions: Optional[int],
         num_sampled_tactics: int,
         debug: bool,
     ) -> None:
         self.tac_gen = tac_gen
         self.timeout = timeout
+        self.max_expansions = max_expansions
         self.num_sampled_tactics = num_sampled_tactics
         self.debug = debug
 
@@ -85,7 +92,7 @@ class BestFirstSearchProver:
             imps = []
 
         try:
-            with Dojo(thm, hard_timeout=60 + self.timeout, additional_imports=imps) as (
+            with Dojo(thm, self.timeout, additional_imports=imps) as (
                 dojo,
                 init_state,
             ):
@@ -95,14 +102,12 @@ class BestFirstSearchProver:
                     cumulative_logprob=0.0,
                 )
                 self.nodes = {init_state: self.root}
-                self.priority_queue = [self.root]
 
-                with torch.no_grad():
-                    try:
-                        self._best_first_search()
-                    except DojoCrashError as ex:
-                        logger.warning(f"Dojo crashed with {ex} when proving {thm}")
-                        pass
+                try:
+                    asyncio.run(self._best_first_search())
+                except DojoCrashError as ex:
+                    logger.warning(f"Dojo crashed with {ex} when proving {thm}")
+                    pass
 
             if self.root.status == Status.PROVED:
                 proof = [e.tactic for e in self.root.extract_proof()]
@@ -126,25 +131,35 @@ class BestFirstSearchProver:
             logger.warning(ex)
             return None
 
-    def _best_first_search(self) -> None:
+    async def _best_first_search(self) -> None:
         time_start = time.monotonic()
 
+        priority_queue = asyncio.PriorityQueue()
+        priority_queue.put_nowait((-self.root.priority, self.root))
+
         while True:
-            if len(self.priority_queue) == 0:
+            if priority_queue.empty():
                 logger.info("Ran out of nodes to search.")
                 break
 
             try:
-                self._step()
+                await self._step(priority_queue)
             except DojoHardTimeoutError:
-                assert time.monotonic() - time_start >= self.timeout
+                logger.info(time.monotonic())
+                logger.info(time_start)
+                logger.info(time.monotonic() - time_start)
+                logger.info(self.timeout)
+                assert time.monotonic() - time_start + tolerance >= self.timeout
 
-            self.total_time = time.monotonic() - time_start
-            if self.total_time > self.timeout:
+            self.total_time = time.monotonic() - time_start + tolerance
+            if self.total_time > self.timeout or (
+                self.max_expansions is not None
+                and self.num_expansions > self.max_expansions
+            ):
                 if self.root.status == Status.PROVED:
-                    logger.info("Found a proof but timed out.")
+                    logger.info("Found a proof!")
                 self.root.status = Status.OPEN
-                logger.info("Search timed out.")
+                logger.info("Hit the resource limit (timeout or max_expansions).")
                 break
 
             if self.root.status == Status.FAILED:
@@ -155,7 +170,7 @@ class BestFirstSearchProver:
                 logger.info("Found a proof!")
                 break
 
-    def _step(self):
+    async def _step(self, priority_queue):
         """
         Perform a single step of search.
 
@@ -164,25 +179,25 @@ class BestFirstSearchProver:
         a new node for each valid result.
         """
         # Search the node with highest priority.
-        search_node = heapq.heappop(self.priority_queue)
+        try:
+            _, search_node = priority_queue.get_nowait()
+        except asyncio.QueueEmpty:
+            return
         logger.debug(f"Expanding node: {search_node}")
-
-        if self.debug:
-            assert all(
-                search_node.priority >= node.priority for node in self.priority_queue
-            )
 
         if isinstance(search_node.state, TacticState):
             ts = search_node.state.pp
         else:
             ts = search_node.state.unsolved_tactic_state
-        suggestions = self._generate_tactics(ts)
+        suggestions = await self._generate_tactics(ts)
 
         # Try all tactics in order of descending logprob, and collect the results. Any
         # new nodes are added to `self.nodes`, and edges are added to the result node.
         results = []
         for tactic, logprob in suggestions:
-            edge, finished = self._run_tactic(search_node, tactic, logprob)
+            edge, finished = self._run_tactic(
+                search_node, tactic, logprob, priority_queue
+            )
             results.append(edge)
             if finished:
                 break
@@ -191,6 +206,7 @@ class BestFirstSearchProver:
         # This will trigger recursively recomputing tree statistics.
         search_node.out_edges = results
         self.num_expansions += 1
+        priority_queue.task_done()
 
         # If we're running in debug mode, run a full test suite each step
         if self.debug:
@@ -201,7 +217,8 @@ class BestFirstSearchProver:
             )
             self.check_invariants()
 
-    def _generate_tactics(self, ts: str) -> List[Tuple[str, float]]:
+    @torch.no_grad()
+    async def _generate_tactics(self, ts: str) -> List[Tuple[str, float]]:
         t0 = time.monotonic()
 
         path = str(self.theorem.file_path)
@@ -223,7 +240,7 @@ class BestFirstSearchProver:
         return suggestions
 
     def _run_tactic(
-        self, node: InternalNode, tactic: str, logprob: float
+        self, node: InternalNode, tactic: str, logprob: float, priority_queue
     ) -> Tuple[Edge, bool]:
         t0 = time.monotonic()
         response = self.dojo.run_tac(node.state, tactic)
@@ -252,7 +269,7 @@ class BestFirstSearchProver:
                 )
 
             if result_node.status == Status.OPEN:  # Don't search proved/failed nodes
-                heapq.heappush(self.priority_queue, result_node)  # type: ignore
+                priority_queue.put_nowait((-result_node.priority, result_node))
 
         # Record the new node and add it to the search queue.
         self.nodes[response] = result_node
@@ -272,15 +289,10 @@ class BestFirstSearchProver:
 
     def check_invariants(self):
         """Perform some sanity checks."""
-        for node in self.priority_queue:
-            assert node in self.nodes.values()
-            assert isinstance(node, InternalNode)
-            assert not node.is_explored
 
         for response, node in self.nodes.items():
             if isinstance(response, ProofFinished):
                 assert isinstance(node, ProofFinishedNode)
-                assert node not in self.priority_queue
                 assert self.root.status == Status.PROVED
             elif type(response) in (
                 LeanError,
@@ -288,91 +300,92 @@ class BestFirstSearchProver:
                 ProofGivenUp,
             ):
                 assert isinstance(node, ErrorNode)
-                assert node not in self.priority_queue
             else:
                 assert isinstance(node, InternalNode)
-
-                if node.is_explored:
-                    assert node not in self.priority_queue
-                else:
-                    assert node in self.priority_queue
-
                 node.check_invariants()
 
 
 @ray.remote
-class CpuProver(BestFirstSearchProver):
-    """Ray actor for running an instance of `BestFirstSearchProver` on a CPU."""
+class ProverActor:
+    """Ray actor for running an instance of `BestFirstSearchProver`."""
 
     def __init__(
         self,
-        ckpt_path: Optional[str],
-        indexed_corpus_path: Optional[str],
-        tactic: Optional[str],
-        module: Optional[str],
+        tac_gen: FixedTacticGenerator,
         timeout: int,
+        max_expansions: Optional[int],
         num_sampled_tactics: int,
         debug: bool,
     ) -> None:
-        if ckpt_path is None:
-            tac_gen = FixedTacticGenerator(tactic, module)
-        else:
-            tac_gen = RetrievalAugmentedGenerator.load(
-                ckpt_path, device=torch.device("cpu"), freeze=True
-            )
-            if tac_gen.retriever is not None:
-                if indexed_corpus_path is not None:
-                    tac_gen.retriever.load_corpus(indexed_corpus_path)
-                tac_gen.retriever.reindex_corpus(batch_size=32)
-        super().__init__(
+        self.prover = BestFirstSearchProver(
             tac_gen,
             timeout,
+            max_expansions,
             num_sampled_tactics,
             debug,
         )
 
+    def search(
+        self, repo: LeanGitRepo, thm: Theorem, pos: Pos
+    ) -> Optional[SearchResult]:
+        return self.prover.search(repo, thm, pos)
 
-@ray.remote(num_gpus=1)
-class GpuProver(BestFirstSearchProver):
-    """Ray actor for running an instance of `BestFirstSearchProver` on a GPU."""
 
-    def __init__(
-        self,
-        ckpt_path: Optional[str],
-        indexed_corpus_path: Optional[str],
-        tactic: Optional[str],
-        module: Optional[str],
-        timeout: int,
-        num_sampled_tactics: int,
-        debug: bool,
-    ) -> None:
-        if ckpt_path is None:
-            tac_gen = FixedTacticGenerator(tactic, module)
-        else:
-            tac_gen = RetrievalAugmentedGenerator.load(
-                ckpt_path, device=torch.device("cuda"), freeze=True
-            )
-            if tac_gen.retriever is not None:
-                if indexed_corpus_path is not None:
-                    tac_gen.retriever.load_corpus(indexed_corpus_path)
-                tac_gen.retriever.reindex_corpus(batch_size=32)
-        super().__init__(
-            tac_gen,
-            timeout,
-            num_sampled_tactics,
-            debug,
+@ray.remote
+class VllmActor:
+    """Ray actor for running an instance of `vllm.AsyncLLMEngine`, which is shared by all `ProverActor` instances."""
+
+    def __init__(self, model_path: str) -> None:
+        self.num_gpus = len(ray.get_gpu_ids())
+        self.model_path = model_path
+
+    def initialize(self) -> None:
+        logger.info("Initializing vLLM")
+        engine_args = AsyncEngineArgs(
+            model=self.model_path,
+            tensor_parallel_size=self.num_gpus,
+            max_num_batched_tokens=8192,
+            # max_num_batched_tokens=2048,
+            # enable_chunked_prefill=True,
+        )
+        self.engine = AsyncLLMEngine.from_engine_args(engine_args)
+
+    async def generate(self, prompt: str, num_samples: int) -> RequestOutput:
+        sampling_params = SamplingParams(
+            n=num_samples,
+            temperature=0,
+            length_penalty=0,
+            use_beam_search=True,
+            early_stopping=False,
+            logprobs=0,
         )
 
+        async for oup in self.engine.generate(
+            prompt, sampling_params, request_id=str(uuid.uuid4().hex)
+        ):
+            final_output = oup
+        return final_output
+
+def find_latest_checkpoint(raid_dir, checkpoint_dir):
+    """Finds the most recent checkpoint."""
+    checkpoint_dir = raid_dir + "/" + checkpoint_dir
+    all_checkpoints = [os.path.join(checkpoint_dir, f) for f in os.listdir(checkpoint_dir) if f.endswith(".ckpt")]
+    if not all_checkpoints:
+        raise FileNotFoundError("No checkpoints found.")
+    latest_checkpoint = max(all_checkpoints, key=os.path.getmtime)
+    logger.info(f"Using the latest checkpoint: {latest_checkpoint}")
+    return latest_checkpoint
 
 class DistributedProver:
     """A distributed prover that uses Ray to parallelize the proof search.
 
-    It is a wrapper around `CpuProver` and `GpuProver` that handles the different
+    It is a wrapper around `ProverActor` that handles the different
     devices and different number of concurrent provers.
     """
 
     def __init__(
         self,
+        use_vllm: bool,
         ckpt_path: Optional[str],
         indexed_corpus_path: Optional[str],
         tactic: Optional[str],
@@ -380,41 +393,86 @@ class DistributedProver:
         num_workers: int,
         num_gpus: int,
         timeout: int,
+        max_expansions: Optional[int],
         num_sampled_tactics: int,
+        raid_dir: str,
+        checkpoint_dir: str,
         debug: Optional[bool] = False,
+        run_progressive_training: bool = True,
     ) -> None:
+        logger.info("Inside __init__")
         if ckpt_path is None:
+            logger.info("ckpt_path is None")
             assert tactic and not indexed_corpus_path
         else:
+            logger.info("ckpt_path is not None")
             assert not tactic and not module
-        self.distributed = num_workers > 1
 
-        if not self.distributed:
-            if ckpt_path is None:
-                tac_gen = FixedTacticGenerator(tactic, module)
+        tac_gen = None
+        if ckpt_path is None:
+            logger.info("Using FixedTacticGenerator")
+            tac_gen = FixedTacticGenerator(tactic, module)
+        elif use_vllm:
+            logger.info("Using vLLM")
+            assert indexed_corpus_path is None
+            vllm_actor = VllmActor.options(num_gpus=num_gpus).remote(ckpt_path)
+            ray.get(vllm_actor.initialize.remote())
+            # tac_gen = VllmGenerator(vllm_actor)
+        else:
+            logger.info("Using RAG")
+            device = torch.device("cuda") if num_gpus > 0 else torch.device("cpu")
+            model_checkpoint_path = None
+            if run_progressive_training:
+                model_checkpoint_path = find_latest_checkpoint(raid_dir, checkpoint_dir)
             else:
-                device = torch.device("cuda") if num_gpus > 0 else torch.device("cpu")
-                tac_gen = RetrievalAugmentedGenerator.load(
-                    ckpt_path, device=device, freeze=True
-                )
-                if tac_gen.retriever is not None:
-                    assert indexed_corpus_path is not None
+                model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
+            
+            config = {
+                "model_name": "kaiyuy/leandojo-lean4-retriever-tacgen-byt5-small",
+                "lr": 1e-3,
+                "warmup_steps": 1000,
+                "num_beams": 5,
+                "eval_num_retrieved": 10,
+                "eval_num_workers": 1,
+                "eval_num_gpus": 4,
+                "eval_num_theorems": 100,
+                "max_inp_seq_len": 512,
+                "max_oup_seq_len": 128,
+                "ret_ckpt_path": model_checkpoint_path,
+            }
+            tac_gen = RetrievalAugmentedGenerator.load(
+                ckpt_path, device=device, freeze=True, config=config
+            )
+            logger.info(f"Loaded model from {ckpt_path}")
+            logger.info(f"Using retriever: {tac_gen.retriever}")
+            if tac_gen.retriever is not None:
+                if indexed_corpus_path is not None:
+                    logger.info(f"Loading indexed corpus from {indexed_corpus_path}")
                     tac_gen.retriever.load_corpus(indexed_corpus_path)
+                    logger.info(f"Loaded indexed corpus from {indexed_corpus_path}")
+                tac_gen.retriever.reindex_corpus(batch_size=32)
+                logger.info("Finished reindexing!")
+    
+        self.distributed = num_workers > 1
+        if not self.distributed:
+            assert num_gpus <= 1
             self.prover = BestFirstSearchProver(
-                tac_gen, timeout, num_sampled_tactics, debug
+                tac_gen, timeout, max_expansions, num_sampled_tactics, debug
             )
             return
 
         if num_gpus >= 1:
             logger.info(f"Launching {num_workers} workers with {num_gpus} GPUs.")
-            num_gpus_per_worker = num_gpus / num_workers
+            if use_vllm:
+                # GPUs are managed by `VllmActor`.
+                num_gpus_per_worker = 0
+            else:
+                num_gpus_per_worker = num_gpus / num_workers
             provers = [
-                GpuProver.options(num_gpus=num_gpus_per_worker).remote(
-                    ckpt_path,
-                    indexed_corpus_path,
-                    tactic,
-                    module,
+                ProverActor.options(num_gpus=num_gpus_per_worker).remote(
+                    tac_gen,
                     timeout=timeout,
+                    max_expansions=max_expansions,
                     num_sampled_tactics=num_sampled_tactics,
                     debug=debug,
                 )
@@ -423,12 +481,10 @@ class DistributedProver:
         else:
             logger.info(f"Launching {num_workers} CPU workers.")
             provers = [
-                CpuProver.remote(
-                    ckpt_path,
-                    indexed_corpus_path,
-                    tactic,
-                    module,
+                ProverActor.remote(
+                    tac_gen,
                     timeout=timeout,
+                    max_expansions=max_expansions,
                     num_sampled_tactics=num_sampled_tactics,
                     debug=debug,
                 )
@@ -442,12 +498,14 @@ class DistributedProver:
     ) -> List[Optional[SearchResult]]:
         """Parallel proof search for `theorems`. The order of the results is not guaranteed to match the order of the input."""
         if not self.distributed:
+            logger.info("Not distributed")
             return [
                 self.prover.search(repo, thm, pos)
                 for thm, pos in zip_strict(theorems, positions)
             ]
 
         try:
+            logger.info("Distributed")
             results = list(
                 self.prover_pool.map_unordered(
                     lambda p, x: p.search.remote(repo, x[0], x[1]),

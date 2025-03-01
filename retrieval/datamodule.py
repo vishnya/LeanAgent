@@ -14,6 +14,7 @@ from lean_dojo import LeanGitRepo
 from typing import Optional, List
 from transformers import AutoTokenizer
 from torch.utils.data import Dataset, DataLoader
+import pickle
 
 
 from common import Context, Corpus, Batch, Example, format_state, get_all_pos_premises
@@ -29,6 +30,7 @@ class RetrievalDataset(Dataset):
         max_seq_len: int,
         tokenizer,
         is_train: bool,
+        cache_path: str,
     ) -> None:
         super().__init__()
         self.corpus = corpus
@@ -37,21 +39,43 @@ class RetrievalDataset(Dataset):
         self.max_seq_len = max_seq_len
         self.tokenizer = tokenizer
         self.is_train = is_train
-        self.data = list(
-            itertools.chain.from_iterable(self._load_data(path) for path in data_paths)
-        )
+        self.cache_path = cache_path
+        self.data = self.load_or_cache_data(data_paths)
+
+    def load_or_cache_data(self, data_paths: List[str]) -> List[Example]:
+        cache_file = os.path.join(self.cache_path, "cached_data.pkl")
+        
+        # Check if cached data exists
+        if os.path.exists(cache_file):
+            with open(cache_file, 'rb') as file:
+                data = pickle.load(file)
+            logger.info(f"Loaded data from cache {cache_file}")
+        else:
+            data = list(itertools.chain.from_iterable(self._load_data(path) for path in data_paths))
+            # Cache the data
+            # create file if it does not already exist
+            try:
+                os.makedirs(os.path.dirname(cache_file), exist_ok=True)
+            except OSError as exc:
+                if exc.errno != errno.EEXIST:
+                    raise
+                pass
+            with open(cache_file, 'wb') as file:
+                pickle.dump(data, file)
+            logger.info(f"Saved loaded data to cache {cache_file}")
+        return data
 
     def _load_data(self, data_path: str) -> List[Example]:
         data = []
-        logger.info(f"Loading data from {data_path}")
 
         for thm in tqdm(json.load(open(data_path))):
             file_path = thm["file_path"]
 
             for i, tac in enumerate(thm["traced_tactics"]):
                 state = format_state(tac["state_before"])
+                # Some states are empty because they are from sorry theorems that have been proven.
                 context = Context(
-                    file_path, thm["full_name"], Pos(*thm["start"]), state
+                    file_path, thm["full_name"], Pos(*thm["start"]), state if state else None
                 )
                 all_pos_premises = get_all_pos_premises(
                     tac["annotated_tactic"], self.corpus
@@ -87,7 +111,6 @@ class RetrievalDataset(Dataset):
                         }
                     )
 
-        logger.info(f"Loaded {len(data)} examples.")
         return data
 
     def __len__(self) -> int:
@@ -225,9 +248,6 @@ class RetrievalDataModule(pl.LightningDataModule):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.corpus = Corpus(corpus_path)
 
-        metadata = json.load(open(os.path.join(data_path, "../metadata.json")))
-        repo = LeanGitRepo(**metadata["from_repo"])
-
     def prepare_data(self) -> None:
         pass
 
@@ -240,7 +260,9 @@ class RetrievalDataModule(pl.LightningDataModule):
             self.max_seq_len,
             self.tokenizer,
             is_train=True,
+            cache_path=os.path.join(self.data_path, "cache_train")
         )
+        print(f"Training dataset size: {len(self.ds_train)}")
 
         if stage in (None, "fit", "validate"):
             self.ds_val = RetrievalDataset(
@@ -251,21 +273,22 @@ class RetrievalDataModule(pl.LightningDataModule):
                 self.max_seq_len,
                 self.tokenizer,
                 is_train=False,
+                cache_path=os.path.join(self.data_path, "cache_val")
             )
+            print(f"Validation dataset size: {len(self.ds_val)}")
 
         if stage in (None, "fit", "predict"):
             self.ds_pred = RetrievalDataset(
-                [
-                    os.path.join(self.data_path, f"{split}.json")
-                    for split in ("train", "val", "test")
-                ],
+                [os.path.join(self.data_path, "test.json")],
                 self.corpus,
                 self.num_negatives,
                 self.num_in_file_negatives,
                 self.max_seq_len,
                 self.tokenizer,
                 is_train=False,
+                cache_path=os.path.join(self.data_path, "cache_pred")
             )
+            print(f"Testing dataset size: {len(self.ds_pred)}")
 
     def train_dataloader(self) -> DataLoader:
         return DataLoader(

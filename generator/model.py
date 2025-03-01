@@ -26,6 +26,21 @@ from retrieval.model import PremiseRetriever
 
 torch.set_float32_matmul_precision("medium")
 
+def safe_remove_dir(dir_path):
+    if os.path.exists(dir_path):
+        logger.warning(f"{dir_path} already exists. Removing it now.")
+        max_retries = 5
+        for attempt in range(max_retries):
+            try:
+                shutil.rmtree(dir_path)
+                break
+            except PermissionError as e:
+                if attempt < max_retries - 1:
+                    time.sleep(0.1)  # Wait a bit before retrying
+                else:
+                    logger.error(f"Failed to remove {dir_path} after {max_retries} attempts: {e}")
+                    raise
+
 
 class TopkAccuracy(Metric):
     is_differentiable: Optional[bool] = False
@@ -106,13 +121,23 @@ class RetrievalAugmentedGenerator(TacticGenerator, pl.LightningModule):
         self.max_inp_seq_len = max_inp_seq_len
         self.max_oup_seq_len = max_oup_seq_len
 
+        logger.info(f"Retriever checkpoint path: {ret_ckpt_path}")
+
+        config = {
+            "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
+            "lr": 1e-3,
+            "warmup_steps": 1000,
+            "max_seq_len": 512,
+            "num_retrieved": 100,
+        }
+
         if ret_ckpt_path is None:
             logger.info("Without retrieval")
             self.retriever = None
         else:
             logger.info(f"Loading the retriever from {ret_ckpt_path}")
             self.retriever = PremiseRetriever.load(
-                ret_ckpt_path, self.device, freeze=True
+                ret_ckpt_path, self.device, freeze=True, config=config
             )
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -123,12 +148,13 @@ class RetrievalAugmentedGenerator(TacticGenerator, pl.LightningModule):
             acc = TopkAccuracy(k)
             self.topk_accuracies[k] = acc
             self.add_module(f"top{k}_acc_val", acc)
+        logger.info("RetrievalAugmentedGenerator initialized")
 
     @classmethod
     def load(
-        cls, ckpt_path: str, device, freeze: bool
+        cls, ckpt_path: str, device, freeze: bool, config: dict
     ) -> "RetrievalAugmentedGenerator":
-        return load_checkpoint(cls, ckpt_path, device, freeze)
+        return load_checkpoint(cls, ckpt_path, device, freeze, config)
 
     def forward(
         self,
@@ -280,8 +306,7 @@ class RetrievalAugmentedGenerator(TacticGenerator, pl.LightningModule):
         self.log("Pass@1_val", acc, on_step=False, on_epoch=True, sync_dist=True)
         logger.info(f"Pass@1: {acc}")
 
-        if os.path.exists(ckpt_path):
-            shutil.rmtree(ckpt_path)
+        safe_remove_dir(ckpt_path)
 
     ##############
     # Prediction #

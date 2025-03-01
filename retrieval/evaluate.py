@@ -70,12 +70,15 @@ def main() -> None:
     }
     assert len(preds) == len(preds_map), "Duplicate predictions found!"
 
-    for split in ("train", "val", "test"):
-        data_path = os.path.join(args.data_path, f"{split}.json")
-        data = json.load(open(data_path))
-        logger.info(f"Evaluating on {data_path}")
-        R1, R10, MRR = _eval(data, preds_map)
-        logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+    data_path = os.path.join(args.data_path, "test.json")
+    data = json.load(open(data_path))
+    logger.info(f"Evaluating on {data_path}")
+    R1, R10, MRR = _eval(data, preds_map)
+    logger.info(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
+
+    file_path = "BM25_downloaded_evaluation_results.txt"
+    with open(file_path, "w") as f:
+        f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
 
 
 if __name__ == "__main__":

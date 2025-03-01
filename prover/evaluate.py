@@ -124,6 +124,7 @@ def evaluate(
         num_sampled_tactics=num_sampled_tactics,
         debug=verbose,
     )
+    
     results = prover.search_unordered(repo, theorems, positions)
 
     # Calculate the result statistics.

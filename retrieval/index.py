@@ -21,7 +21,7 @@ def main() -> None:
         type=str,
         required=True,
     )
-    parser.add_argument("--batch-size", type=int, default=128)
+    parser.add_argument("--batch-size", type=int, default=64)
     args = parser.parse_args()
     logger.info(args)
 
@@ -30,12 +30,13 @@ def main() -> None:
         device = torch.device("cpu")
     else:
         device = torch.device("cuda")
-    model = PremiseRetriever.load(args.ckpt_path, device, freeze=True)
+
+    model = PremiseRetriever.load_hf(args.ckpt_path, 2048, device)
     model.load_corpus(args.corpus_path)
     model.reindex_corpus(batch_size=args.batch_size)
 
     pickle.dump(
-        IndexedCorpus(model.corpus, model.corpus_embeddings.cpu()),
+        IndexedCorpus(model.corpus, model.corpus_embeddings.to(torch.float32).cpu()),
         open(args.output_path, "wb"),
     )
     logger.info(f"Indexed corpus saved to {args.output_path}")
@@ -43,3 +44,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+# python retrieval/index.py --ckpt_path leandojo-lean4-retriever-byt5-small --corpus-path /data/yingzi_ma/lean_project/datasets/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5/corpus.jsonl --output-path indexed_corpus.pkl
+# python retrieval/index.py --ckpt_path leandojo-lean4-retriever-byt5-small --corpus-path mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5/corpus.jsonl --output-path indexed_corpus.pkl

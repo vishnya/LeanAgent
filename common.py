@@ -25,7 +25,6 @@ Batch = Dict[str, Any]
 MARK_START_SYMBOL = "<a>"
 MARK_END_SYMBOL = "</a>"
 
-
 def remove_marks(s: str) -> str:
     """Remove all :code:`<a>` and :code:`</a>` from ``s``."""
     return s.replace(MARK_START_SYMBOL, "").replace(MARK_END_SYMBOL, "")
@@ -38,23 +37,33 @@ class Context:
     path: str
     theorem_full_name: str
     theorem_pos: Pos = field(compare=False)
-    state: str
+    state: Optional[str] = None
 
     def __post_init__(self) -> None:
         assert isinstance(self.path, str)
         assert isinstance(self.theorem_full_name, str)
         assert isinstance(self.theorem_pos, Pos)
-        assert (
-            isinstance(self.state, str)
-            and "⊢" in self.state
-            and MARK_START_SYMBOL not in self.state
-            and MARK_END_SYMBOL not in self.state
-        )
+        if self.state is not None:
+            if not (isinstance(self.state, str)
+                and "⊢" in self.state
+                and MARK_START_SYMBOL not in self.state
+                and MARK_END_SYMBOL not in self.state):
+                logger.warning(f"Invalid state: {self.state}")
+            assert (
+                isinstance(self.state, str)
+                and "⊢" in self.state
+                and MARK_START_SYMBOL not in self.state
+                and MARK_END_SYMBOL not in self.state
+            )
 
     def serialize(self) -> str:
         """Serialize the context into a string for Transformers."""
+        if self.state is None:
+            return ""
         return self.state
 
+def escape_regex_special_chars(text):
+    return re.escape(text)
 
 @dataclass(unsafe_hash=True)
 class Premise:
@@ -98,7 +107,9 @@ class Premise:
 
         for i in range(len(fields)):
             prefix = ".".join(fields[i:])
-            new_code = re.sub(f"(?<=\s)«?{prefix}»?", annot_full_name, code)
+            escaped_prefix = escape_regex_special_chars(prefix)
+            pattern = f"(?<=\\s)«?{escaped_prefix}»?"
+            new_code = re.sub(pattern, annot_full_name, code)
             if new_code != code:
                 code = new_code
                 break
@@ -197,7 +208,6 @@ class Corpus:
         dep_graph = nx.DiGraph()
         self.all_premises = []
 
-        logger.info(f"Building the corpus from {jsonl_path}")
 
         for line in open(jsonl_path):
             file_data = json.loads(line)
@@ -218,7 +228,12 @@ class Corpus:
         self.imported_premises_cache = {}
         self.fill_cache()
 
-    def _get_file(self, path: str) -> File:
+    def _get_file(self, path: str) -> File:        
+        # for some reason, the `path` in the parameter starts with ./
+        # but the paths in the corpus don't
+        # so we need to remove the ./
+        if path.startswith("./"):
+            path = path[2:]
         return self.transitive_dep_graph.nodes[path]["file"]
 
     def __len__(self) -> int:
@@ -256,7 +271,8 @@ class Corpus:
         Return None if no such premise can be found.
         """
         for p in self.get_premises(path):
-            assert p.path == path
+            # accounting for . vs ./ starting in the path
+            assert (p.path == path) or (p.path == path[2:])
             if p.start <= pos <= p.end:
                 return p
         return None
@@ -348,8 +364,6 @@ def get_all_pos_premises(annot_tac, corpus: Corpus) -> List[Premise]:
         p = corpus.locate_premise(def_path, Pos(*prov["def_pos"]))
         if p is not None:
             all_pos_premises.add(p)
-        else:
-            logger.warning(f"Cannot locate premise: {prov}")
 
     return list(all_pos_premises)
 
@@ -460,10 +474,10 @@ def _is_deepspeed_checkpoint(path: str):
     return os.path.isdir(path) and os.path.exists(os.path.join(path, "zero_to_fp32.py"))
 
 
-def load_checkpoint(model_cls, ckpt_path: str, device, freeze: bool):
+def load_checkpoint(model_cls, ckpt_path: str, device, freeze: bool, config: dict):
     """Handle DeepSpeed checkpoints in model loading."""
     if not _is_deepspeed_checkpoint(ckpt_path):
-        model = model_cls.load_from_checkpoint(ckpt_path, strict=False).to(device)
+        model = model_cls.load_from_checkpoint(ckpt_path, strict=False, **config).to(device)
     else:
         with tempfile.TemporaryDirectory() as dirname:
             path = os.path.join(dirname, "lightning.cpkt")

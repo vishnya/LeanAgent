@@ -30,13 +30,13 @@ def main() -> None:
 
     ds_train = RetrievalDataset(
         [os.path.join(args.data_path, "train.json")],
-        False,
         corpus,
         num_negatives=0,
         num_in_file_negatives=0,
         max_seq_len=1024,
         tokenizer=None,
         is_train=False,
+        cache_path=os.path.join(args.data_path, "cache_train")
     )
     states = [
         ds_train.data[i]["context"].serialize() for i in range(len(ds_train.data))

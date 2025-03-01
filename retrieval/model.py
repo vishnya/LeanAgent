@@ -1,6 +1,7 @@
 """Ligihtning module for the premise retriever."""
 
 import os
+import json
 import math
 import torch
 import pickle
@@ -12,6 +13,8 @@ import pytorch_lightning as pl
 import torch.nn.functional as F
 from typing import List, Dict, Any, Tuple, Union
 from transformers import T5EncoderModel, AutoTokenizer
+from torch.distributed import barrier
+from datetime import datetime, timedelta
 
 from common import (
     Premise,
@@ -25,7 +28,6 @@ from common import (
 
 
 torch.set_float32_matmul_precision("medium")
-
 
 class PremiseRetriever(pl.LightningModule):
     def __init__(
@@ -45,10 +47,60 @@ class PremiseRetriever(pl.LightningModule):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.encoder = T5EncoderModel.from_pretrained(model_name)
         self.embeddings_staled = True
+        self.train_loss = []
+        self.previous_params = {}
+        self.fisher_info = {}
+        self.lamda = 0  # No EWC by default
+
+    def set_fisher_info(self, fisher_info):
+        if fisher_info is not None:
+            self.fisher_info = fisher_info
+            logger.info("Fisher Information has been updated in the model.")
+        else:
+            logger.warning("No Fisher Information provided to update.")
+
+    def set_lambda(self, lambda_value):
+        self.lamda = lambda_value
+
+    def set_previous_params(self):
+        self.previous_params = {name: param.clone().detach() for name, param in self.named_parameters()}
+
+    def ewc_loss(self):
+        if not self.fisher_info or self.lamda == 0:
+            return 0.0
+    
+        ewc_loss = 0
+        for name, param in self.named_parameters():
+            if name in self.fisher_info and name in self.previous_params:
+                # EWC Penalty is the sum of the squares of differences times the Fisher Information
+                fisher = self.fisher_info[name].to(param.device)
+                prev_param = self.previous_params[name].to(param.device)
+                ewc_loss += (fisher * (param - prev_param) ** 2).sum()
+            else:
+                logger.warning(f"Parameter {name} not found in previous params.")
+        total_loss = self.lamda * ewc_loss
+        logger.info(f"Total EWC loss: {total_loss.item()}, lambda: {self.lamda}")
+        return total_loss
 
     @classmethod
-    def load(cls, ckpt_path: str, device, freeze: bool) -> "PremiseRetriever":
-        return load_checkpoint(cls, ckpt_path, device, freeze)
+    def load(cls, ckpt_path: str, device, freeze: bool, config: dict) -> "PremiseRetriever":
+        return load_checkpoint(cls, ckpt_path, device, freeze, config)
+
+    @classmethod
+    def load_hf(
+        cls, ckpt_path: str, max_seq_len: int, device: int, dtype=None
+    ) -> "PremiseRetriever":
+        model = PremiseRetriever(ckpt_path, 0.0, 0, max_seq_len, 100).to(device).eval()
+        if dtype is not None:
+            return model.to(dtype)
+        elif (
+            model.dtype == torch.float32
+            and torch.cuda.is_available()
+            and torch.cuda.get_device_capability()[0] >= 8
+        ):
+            return model.to(torch.bfloat16)
+        else:
+            return model
 
     def load_corpus(self, path_or_corpus: Union[str, Corpus]) -> None:
         """Associate the retriever with a corpus."""
@@ -68,6 +120,7 @@ class PremiseRetriever(pl.LightningModule):
             self.corpus = indexed_corpus.corpus
             self.corpus_embeddings = indexed_corpus.embeddings
             self.embeddings_staled = False
+            logger.info(f"Embeddings staled load corpus pickle: {self.embeddings_staled}")
 
     @property
     def embedding_size(self) -> int:
@@ -131,11 +184,12 @@ class PremiseRetriever(pl.LightningModule):
     def on_fit_start(self) -> None:
         if self.logger is not None:
             self.logger.log_hyperparams(self.hparams)
-            logger.info(f"Logging to {self.trainer.log_dir}")
 
         self.corpus = self.trainer.datamodule.corpus
         self.corpus_embeddings = None
         self.embeddings_staled = True
+
+        self.set_previous_params()
 
     def training_step(self, batch: Dict[str, Any], _) -> torch.Tensor:
         loss = self(
@@ -147,6 +201,8 @@ class PremiseRetriever(pl.LightningModule):
             batch["neg_premises_mask"],
             batch["label"],
         )
+        loss += self.ewc_loss()
+        self.train_loss.append(loss.item())
         self.log(
             "loss_train", loss, on_epoch=True, sync_dist=True, batch_size=len(batch)
         )
@@ -155,6 +211,7 @@ class PremiseRetriever(pl.LightningModule):
     def on_train_batch_end(self, outputs, batch, _) -> None:
         """Mark the embeddings as staled after a training batch."""
         self.embeddings_staled = True
+
 
     def configure_optimizers(self) -> Dict[str, Any]:
         return get_optimizers(
@@ -191,7 +248,6 @@ class PremiseRetriever(pl.LightningModule):
             self.corpus_embeddings[i : i + batch_size] = self._encode(
                 tokenized_premises.input_ids, tokenized_premises.attention_mask
             )
-
         self.embeddings_staled = False
 
     def on_validation_start(self) -> None:
@@ -251,6 +307,7 @@ class PremiseRetriever(pl.LightningModule):
         recall = [100 * np.mean(_) for _ in recall]
 
         for j in range(self.num_retrieved):
+            logger.info(f"Recall@{j+1}_val: {recall[j]}")
             self.log(
                 f"Recall@{j+1}_val",
                 recall[j],
@@ -259,6 +316,7 @@ class PremiseRetriever(pl.LightningModule):
                 batch_size=num_with_premises,
             )
 
+        logger.info(f"MRR: {np.mean(MRR)}")
         self.log(
             "MRR",
             np.mean(MRR),
@@ -266,6 +324,7 @@ class PremiseRetriever(pl.LightningModule):
             sync_dist=True,
             batch_size=num_with_premises,
         )
+        logger.info("End of validation_step")
 
     ##############
     # Prediction #
@@ -275,6 +334,7 @@ class PremiseRetriever(pl.LightningModule):
         self.corpus = self.trainer.datamodule.corpus
         self.corpus_embeddings = None
         self.embeddings_staled = True
+        logger.info(f"Embeddings staled on predict start: {self.embeddings_staled}")
         self.reindex_corpus(self.trainer.datamodule.eval_batch_size)
         self.predict_step_outputs = []
 
@@ -325,15 +385,28 @@ class PremiseRetriever(pl.LightningModule):
                     "scores": s,
                 }
             )
-
+    
     def on_predict_epoch_end(self) -> None:
         if self.trainer.log_dir is not None:
-            path = os.path.join(self.trainer.log_dir, "predictions.pickle")
+            logger.info("About to construct predictions map")
+            gpu_id = self.trainer.local_rank
+            
+            preds_map = {
+                (p["file_path"], p["full_name"], tuple(p["start"]), p["tactic_idx"]): p
+                for p in self.predict_step_outputs
+            }
+
+            path = f"test_pickle_{gpu_id}.pkl"
             with open(path, "wb") as oup:
-                pickle.dump(self.predict_step_outputs, oup)
+                pickle.dump(preds_map, oup)
             logger.info(f"Retrieval predictions saved to {path}")
 
         self.predict_step_outputs.clear()
+        logger.info("About to call barrier")
+        barrier()
+
+        if self.trainer.is_global_zero:
+            logger.info("All GPUs have completed their predictions and saved the data.")
 
     def retrieve(
         self,
