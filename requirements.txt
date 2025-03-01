@@ -1,0 +1,16 @@
+pytorch-lightning[extra]
+numpy
+deepspeed
+lean_dojo==1.9.0
+loguru
+networkx
+ray
+vllm
+requests
+torch
+tqdm
+transformers
+openai
+python-dotenv
+rank_bm25
+torchmetrics
