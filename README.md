@@ -41,6 +41,7 @@ bash replace_files.sh
     - `DB_FILE_NAME`: Database filename
     - `PROOF_LOG_FILE_NAME`: Proof logging filename
     - `ENCOUNTERED_THEOREMS_FILE`: Path for tracking encountered theorems
+    - (Optional) `FISHER_DIR`: Directory for Fisher Information Matrices (FIMs)
 2. Adjust the options at the beginning of the `main()` function according to your requirements. The default options correspond to the LeanAgent configuration, and alternate options can be used to replicate ablation studies from the paper.
 3. Adjust the Lean toolchain paths in `generate_benchmark_lean4.py` if needed:
 ```
@@ -79,10 +80,7 @@ If you want to use Elastic Weight Consolidation (EWC) for lifelong learning, as 
 
 ### Step 6: Configure `compute_fisher.py`
 
-1. Create and set the variables:
-
-    - `FISHER_DIR`: Directory for Fisher Information Matrices (FIMs)
-    - `new_data_path`: Path to new training data
+1. Create and set the `new_data_path`: Path to new training data
 
 2. Download the starting FIM for mathlib:
 ```

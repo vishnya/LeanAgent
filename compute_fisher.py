@@ -1,9 +1,7 @@
 from leanagent import *
 from retrieval.fisher_computation_module import FisherComputationModule
 
-FISHER_DIR = "<FISHER_DIR>"
-# TODO: don't hardcode the prefix to the path, make capitalized
-new_data_path = "/data/yingzi_ma/lean_project/datasets_PT_single_repo_ewc_full/merged_with_new_Saturn_3811a9dd46cdfd5fa0c0c1896720c28d2ec4a42a"
+new_data_path = "<NEW_DATA_PATH>/<NEW_DATASET_NAME>"
 
 def main():
     """The main function that drives the bot."""
@@ -17,7 +15,6 @@ def main():
         else:
             device = torch.device("cuda")
 
-        # TODO: reduce repetition in code like this
         config = {
             "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
             "lr": 1e-3,
@@ -33,7 +30,6 @@ def main():
         except FileNotFoundError as e:
             logger.error(f"No checkpoint found: {str(e)}")
             logger.warning("Using the current model state.")
-            # TODO: fix
             best_model = model
 
         # Create Fisher computation module
@@ -49,8 +45,8 @@ def main():
             accelerator="gpu",
             precision="bf16-mixed",
             strategy=ddp_strategy,
-            devices=4, # TODO: change for GPU
-            max_epochs = 1, # TODO: will this work?
+            devices=4,
+            max_epochs=1,
             log_every_n_steps=1,
             num_sanity_val_steps=0,
         )

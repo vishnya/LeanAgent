@@ -333,7 +333,6 @@ def configure_leandojo():
 
 def main(url, commit, dst_dir):
     logger.info(f"Generating dataset to go into {dst_dir}")
-    # TODO: just pass existing one instead of making again
     repo = LeanGitRepo(url, commit)
 
     # we need to change the toolchain version that the bot uses
@@ -347,7 +346,6 @@ def main(url, commit, dst_dir):
         logger.info("Unsupported version")
     v = v[1:] # ignore "v" at beginning
     
-    # TODO: move string prefix as something to change in leanagent.py
     lean_dir2 = f"/.elan/toolchains/leanprover--lean4---{v}"
     lean_dir3 = f"~/.elan/toolchains/leanprover--lean4---{v}"
     logger.info(f"lean path2 {lean_dir2}")

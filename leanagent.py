@@ -48,8 +48,7 @@ random.seed(3407)  # https://arxiv.org/abs/2109.08203
 BATCH_SIZE = 4
 RAID_DIR = os.environ.get('RAID_DIR')
 os.environ['RAY_TMPDIR'] = f"{RAID_DIR}/tmp"
-# TODO: capitalize?
-repo_dir = f"{RAID_DIR}/repos_new" # TODO: for release change these back to <DIR>
+repo_dir = f"{RAID_DIR}/repos_new"
 
 DATA_DIR = "<DATA_DIR>"
 CHECKPOINT_DIR = "<CHECKPOINT_DIR>"
@@ -57,6 +56,7 @@ EVAL_RESULTS_FILE_PATH = f"{RAID_DIR}/LeanAgent/<EVAL_RESULTS_FILE_PATH>"
 DB_FILE_NAME = "<DB_FILE_NAME>"
 PROOF_LOG_FILE_NAME = "<PROOF_LOG_FILE_NAME>"
 ENCOUNTERED_THEOREMS_FILE = "<ENCOUNTERED_THEOREMS_FILE>"
+FISHER_DIR = "<FISHER_DIR>"  # Optional
 
 repos_for_merged_dataset = []
 repos_for_proving = []
@@ -306,7 +306,6 @@ def clone_repo(repo_url):
         print(f"Deleting existing repository directory: {repo_name}")
         shutil.rmtree(repo_name)
     subprocess.run(["git", "clone", repo_url, repo_name])
-    # TODO: no need for this if we check for latest compatible commit later
     process = subprocess.Popen(["git", "ls-remote", repo_url], stdout=subprocess.PIPE)
     stdout, stderr = process.communicate()
     sha = re.split(r'\t+', stdout.decode('utf-8'))[0]
@@ -509,7 +508,7 @@ def search_github_repositories(language="Lean", num_repos=10):
                         lean_git_repo = LeanGitRepo(url, sha)
                         lean_git_repos.append(lean_git_repo)
                         repos.append(repo_full_name)
-                        cloned_count += 1 # TODO: only increase if compatible commit found
+                        cloned_count += 1
                         logger.info(f"Cloned {repo_full_name}")
                     except Exception as e:
                         shutil.rmtree(name)
@@ -574,7 +573,6 @@ def load_fisher_information(file_path):
         return fisher_info
     except FileNotFoundError:
         logger.error(f"No Fisher Information file found at {file_path}.")
-        # TODO: return mathlib fisher
         return None
 
 def find_latest_checkpoint():
@@ -589,7 +587,6 @@ def find_latest_checkpoint():
 
 def find_latest_fisher():
     """Finds the most recent Fisher Information Matrix."""
-    # TODO: FISHER_DIR is not defined
     fisher_dir = RAID_DIR + "/" + FISHER_DIR
     all_fisher = [os.path.join(fisher_dir, f) for f in os.listdir(fisher_dir) if f.endswith(".pkl")]
     if not all_fisher:
@@ -747,7 +744,6 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
         url = url + '.git'
     logger.info(f"Processing {url}")
     
-    # TODO: repetition
     if "mathlib4" in url:
         sha = "2b29e73438e240a427bcecc7c0fe19306beb1310"
         v = "v4.8.0"
@@ -757,9 +753,6 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     elif "pfr" in url:
         sha = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
         v = "v4.8.0-rc1"
-    elif "PrimeNumberTheoremAnd" in url:
-        sha = "29baddd685660b5fedd7bd67f9916ae24253d566"
-        v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
         
@@ -814,7 +807,6 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     db.to_json(dynamic_database_json_path)
     return "Done"
 
-# TODO: test
 def replace_sorry_with_proof(proofs):
     """Replace the `sorry` with the proof text in the Lean files."""
     logger.info(f"Replacing sorries with {len(proofs)} proofs!")
@@ -959,10 +951,8 @@ def main():
         single_repo = True
         curriculum_learning = True
         num_repos = 15
-        # TODO: this should be at the top of the file
         dynamic_database_json_path = RAID_DIR + "/" + DB_FILE_NAME
         
-        # TODO: fix this
         lambdas = None
         if run_progressive_training:
             logger.info("Running progressive training")
@@ -1003,7 +993,7 @@ def main():
         # If curriculum learning is enabled, initialize repositories and sort them by difficulty
         if curriculum_learning:
             logger.info("Starting curriculum learning")
-            repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
+            repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"
             if is_main_process:
                 search_github_repositories("Lean", num_repos)
                 for i in range(len(lean_git_repos)):
@@ -1045,7 +1035,7 @@ def main():
                 logger.info("Finished finding compatible repositories")
         else:
             logger.info("Starting without curriculum learning")
-            repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
+            repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"
             if is_main_process:
                 search_github_repositories("Lean", num_repos)
 
@@ -1095,7 +1085,6 @@ def main():
                         repos_for_merged_dataset = []
                     repos_for_proving = []
 
-                    # TODO: don't always do merged_, if we change this then change the if condition in average test accordingly
                     # Create a directory for the merged dataset if it doesn't exist
                     dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_with_new_{dir_name}"
                     if (repo.url, repo.commit) not in repos_for_merged_dataset:
@@ -1108,7 +1097,6 @@ def main():
 
                     db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
                 
-                # TODO: reduce repition later with all path
                 dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
                 new_data_path = dst_dir
 
@@ -1137,7 +1125,6 @@ def main():
                     else:
                         device = torch.device("cuda")
 
-                    # TODO: reduce repetition in code like this
                     config = {
                         "model_name": "kaiyuy/leandojo-lean4-retriever-byt5-small",
                         "lr": 1e-3,
@@ -1160,7 +1147,6 @@ def main():
                         logger.info("Fisher Information Matrix loaded.")
 
                     # Initialize ModelCheckpoint and EarlyStopping
-                    # TODO: use the yaml file instead of repeating here, same throughout
                     dir_name = new_data_path.split("/")[-1]
                     filename_suffix = f"_lambda_{lambda_value}"
                     checkpoint_callback = ModelCheckpoint(
@@ -1198,7 +1184,7 @@ def main():
                         gradient_clip_val=1.0,
                         precision="bf16-mixed",
                         strategy=ddp_strategy,
-                        devices=4, # TODO: change for GPU
+                        devices=4,
                         accumulate_grad_batches=4,
                         callbacks=[lr_monitor, checkpoint_callback, early_stop_callback],
                         max_epochs=current_epoch + epochs_per_repo,
@@ -1279,13 +1265,12 @@ def main():
                             f.write("\n\n\n")
                             f.write(f"Results for {dir_name} with lambda = {lambda_value}")
                     for data_path in testing_paths:
-                        # TODO: remove this for tests that do not use merged dataset
                         if "merged" not in data_path:
                             continue
                         
                         run_cli(best_model_path, data_path)
                         if is_main_process:
-                            num_gpus = 4 # TODO: change for GPU
+                            num_gpus = 4
                             preds_map = {}
                             for gpu_id in range(num_gpus):
                                 with open(f"test_pickle_{gpu_id}.pkl", "rb") as f:
@@ -1321,7 +1306,6 @@ def main():
                             f.write("\n\n\n")
                             f.write(f"Average R@1 = {avg_R1} %, R@10 = {avg_R10} %, MRR = {avg_MRR}")
                 else:
-                    # TODO: don't hardcode this
                     model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
                     if result is None:
                         logger.info(f"Skipping repository {repo.url} due to preprocessing issues")
@@ -1340,7 +1324,7 @@ def main():
                     tactic = None  # `None` since we are not using a fixed tactic generator
                     module = None  # `None` since we are not using a fixed tactic generator
                     num_workers = 4
-                    num_gpus = 4 # TODO: change for GPU
+                    num_gpus = 4
                     timeout = 600
                     max_expansions = None
                     num_sampled_tactics = 64
@@ -1376,7 +1360,6 @@ def main():
                         logger.info("Shutting down Ray after proving")
                         ray.shutdown()
 
-                    # TODO: need to return proofs
                     # proofs = []
                     # Uncomment if you would like to contribute back to the repos!
                     # else:
@@ -1390,7 +1373,6 @@ def main():
                     #     if committed:
                     #         push_changes(repo, TMP_BRANCH)
                     #         url = str(create_pull_request(repo_no_dir, PR_TITLE, PR_BODY, TMP_BRANCH))
-                    #         # TODO: add the PR URL to the database
                     #     shutil.rmtree(repo)
                 
                 logger.info("Finished processing the repository")

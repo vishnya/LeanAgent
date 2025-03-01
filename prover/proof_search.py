@@ -341,7 +341,6 @@ class VllmActor:
 
     def initialize(self) -> None:
         logger.info("Initializing vLLM")
-        # TODO: Try other options in https://docs.vllm.ai/en/stable/models/engine_args.html#engine-args.
         engine_args = AsyncEngineArgs(
             model=self.model_path,
             tensor_parallel_size=self.num_gpus,
@@ -366,8 +365,6 @@ class VllmActor:
         ):
             final_output = oup
         return final_output
-
-# TODO: reduce repetition with main
 
 def find_latest_checkpoint(raid_dir, checkpoint_dir):
     """Finds the most recent checkpoint."""
@@ -420,17 +417,14 @@ class DistributedProver:
             assert indexed_corpus_path is None
             vllm_actor = VllmActor.options(num_gpus=num_gpus).remote(ckpt_path)
             ray.get(vllm_actor.initialize.remote())
-            # TODO: rebase
             # tac_gen = VllmGenerator(vllm_actor)
         else:
             logger.info("Using RAG")
             device = torch.device("cuda") if num_gpus > 0 else torch.device("cpu")
-            # TODO: if no retrieval we should comment this if else out
             model_checkpoint_path = None
             if run_progressive_training:
                 model_checkpoint_path = find_latest_checkpoint(raid_dir, checkpoint_dir)
             else:
-                # TODO: we should be able to change this to another checkpoint for doing all sorires
                 model_checkpoint_path = f"{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt"
             
             config = {
@@ -440,11 +434,11 @@ class DistributedProver:
                 "num_beams": 5,
                 "eval_num_retrieved": 10,
                 "eval_num_workers": 1,
-                "eval_num_gpus": 4,  # TODO: change for GPU
+                "eval_num_gpus": 4,
                 "eval_num_theorems": 100,
                 "max_inp_seq_len": 512,
                 "max_oup_seq_len": 128,
-                "ret_ckpt_path": model_checkpoint_path, # TODO: if no retrieval this is NOne
+                "ret_ckpt_path": model_checkpoint_path,
             }
             tac_gen = RetrievalAugmentedGenerator.load(
                 ckpt_path, device=device, freeze=True, config=config

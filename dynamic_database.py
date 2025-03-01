@@ -371,7 +371,6 @@ class Repository:
         else:
             raise ValueError("The theorem is not in the list of unproved sorry theorems.")
 
-# TODO: we do need these safe removes anymore if we don't have any race conditions?
 def safe_remove_dir_path(dir_path):
     if dir_path.exists():
         logger.warning(f"{dir_path} already exists. Removing it now.")
@@ -659,7 +658,6 @@ class DynamicDatabase:
             data = json.load(f)
         return cls.from_dict(data)
 
-    # TODO: do we need this?
     def update_json(self, file_path: str) -> None:
         """Update an existing JSON file with the current database state."""
         try:
