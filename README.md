@@ -70,6 +70,13 @@ Move the downloaded file to:
 
 - `{RAID_DIR}/{CHECKPOINT_DIR}/`
 
+3. For the latest LeanAgent checkpoint from the paper:
+```
+gdown https://drive.google.com/uc?id=1plkC7Y5n0OVCJ0Ad6pH8_mwbALKYY_FY
+```
+
+Move the downloaded file to `{RAID_DIR}/checkpoints/`
+
 ### Step 5: Run LeanAgent
 1. After completing all configuration steps, execute:
 ```
