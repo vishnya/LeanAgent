@@ -257,6 +257,8 @@ The Fisher Information Matrix (FIM) is a key component of Elastic Weight Consoli
 3. In the ablation studies, the FIM is used during progressive training by loading the matrix and setting the lambda parameter to control the strength of EWC regularization. During training, the model uses the FIM to compute the EWC regularization term, which is added to the standard loss function.
 4. After training on a new repository, a new FIM is computed to incorporate the importance of parameters for the newly learned tasks.
 
+Note: Due to the inherent stochasticity of LLMs and the best-first tree search algorithm used in LeanAgent, your results may vary from those reported in the paper. Differences in hardware, random seeds, and minor implementation details can all affect theorem proving performance.
+
 ## Citation
 
 If you find our work useful, please consider citing [our paper](https://arxiv.org/abs/2410.06209):
