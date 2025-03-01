@@ -5,7 +5,7 @@ new_data_path = "<NEW_DATA_PATH>/<NEW_DATASET_NAME>"
 
 def main():
     """
-    The main function that drives the bot.
+    The main function that drives LeanAgent.
     This function performs the following steps:
     1. Logs the start of Fisher Information Matrix calculation for EWC.
     2. Checks if CUDA is available and sets the device accordingly.

@@ -454,10 +454,6 @@ def export_data(
     num_premises, num_files_traced = export_premises(traced_repo, dst_path)
     logger.info("Successfully exported the premises")
 
-    # Export the licenses.
-    export_licenses(traced_repo, dst_path)
-    logger.info("Successfully exported the licenses")
-
     # Export metadata.
     export_metadata(traced_repo, dst_path, **kwargs)
     logger.info("Successfully exported the metadata")
@@ -485,10 +481,6 @@ def configure_leandojo():
     # constants.NUM_PROCS = 2
 
     logger.info(f"Current working directory: {os.getcwd()}")
-    logger.info(f"CACHE_DIR: {constants.CACHE_DIR}")
-    logger.info(f"NUM_WORKERS: {constants.NUM_WORKERS}")
-    logger.info(f"MAX_NUM_PROCS: {constants.MAX_NUM_PROCS}")
-    logger.info(f"NUM_PROCS: {constants.NUM_PROCS}")
 
 def main(url, commit, dst_dir):
     """
@@ -512,7 +504,7 @@ def main(url, commit, dst_dir):
     logger.info(f"Generating dataset to go into {dst_dir}")
     repo = LeanGitRepo(url, commit)
 
-    # we need to change the toolchain version that the bot uses
+    # we need to change the toolchain version that LeanAgent uses
     # to match the repo we are currently tracing
     config = repo.get_config("lean-toolchain")
     logger.info(f"lean toolchain version: {config}")

@@ -943,16 +943,13 @@ def should_skip_repo():
 
 def main():
     """
-    Main function to run the LeanAgent.
-    
-
-    Raises:
-        Exception: _description_
+    Main function to run LeanAgent.
     """
     global repos_for_merged_dataset
     global repos_for_proving
     global lean_git_repos
     try:
+        current_epoch = 0
         epochs_per_repo = 1
         run_progressive_training = True
         use_fisher = False
