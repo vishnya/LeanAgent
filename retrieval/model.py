@@ -64,12 +64,14 @@ class PremiseRetriever(pl.LightningModule):
 
     def set_previous_params(self):
         self.previous_params = {name: param.clone().detach() for name, param in self.named_parameters()}
-        logger.info(f"Previous parameters set for EWC: {self.previous_params}")
 
     def ewc_loss(self):
+        if not self.fisher_info or self.lamda == 0:
+            return 0.0
+    
         ewc_loss = 0
         for name, param in self.named_parameters():
-            if name in self.previous_params:
+            if name in self.fisher_info and name in self.previous_params:
                 # EWC Penalty is the sum of the squares of differences times the Fisher Information
                 fisher = self.fisher_info[name].to(param.device)
                 prev_param = self.previous_params[name].to(param.device)

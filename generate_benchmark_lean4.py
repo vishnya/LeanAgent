@@ -347,7 +347,7 @@ def main(url, commit, dst_dir):
         logger.info("Unsupported version")
     v = v[1:] # ignore "v" at beginning
     
-    # TODO: fix how we do this
+    # TODO: move string prefix as something to change in leanagent.py
     lean_dir2 = f"/.elan/toolchains/leanprover--lean4---{v}"
     lean_dir3 = f"~/.elan/toolchains/leanprover--lean4---{v}"
     logger.info(f"lean path2 {lean_dir2}")

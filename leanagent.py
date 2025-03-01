@@ -748,9 +748,7 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
     if not url.endswith('.git'):
         url = url + '.git'
     logger.info(f"Processing {url}")
-    # TODO: remove later
-    # TODO: duplicate work of the main function
-    sha, v = get_compatible_commit(url)
+    
     # TODO: repetition
     if "mathlib4" in url:
         sha = "2b29e73438e240a427bcecc7c0fe19306beb1310"
@@ -766,9 +764,11 @@ def add_repo_to_database(dynamic_database_json_path, repo, db):
         v = "v4.8.0-rc2"
     else:
         sha, v = get_compatible_commit(url)
+        
     if not sha:
         logger.info(f"Failed to find a compatible commit for {url}")
         return None
+    
     logger.info(f"Found compatible commit {sha} for {url}")
     logger.info(f"Lean version: {v}")
     url = url.replace('.git', '')
