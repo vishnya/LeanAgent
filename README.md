@@ -22,3 +22,8 @@ Note: this is a fork of the [ReProver](https://github.com/lean-dojo/ReProver) re
 - `run_code.sh`: Convenience script to set up the environment before calling `main.py`. Make sure to change the necessary details, such as your GitHub access token and directory to cache the Lean repos, before running it.
 
 There are many variants of these files in the repository, such as modifications of `main3.py` for different experimental setups, but the core idea is the same.
+
+Use `bash run_leanagent.sh`. First, 
+1. Change RAID_DIR
+2. Install conda and change path in source command
+3. 
