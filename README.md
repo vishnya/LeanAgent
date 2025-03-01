@@ -2,8 +2,6 @@
 
 [LeanAgent](https://arxiv.org/abs/2410.06209) is a novel lifelong learning framework for formal theorem proving that continuously generalizes to and improves on ever-expanding mathematical knowledge without forgetting previously learned knowledge.
 
-**Note for Robert: For now, ensure you are on the `refactor` branch. I will merge into `main` shortly.**
-
 ## Requirements
 
 - Supported platforms: Linux and macOS
@@ -12,6 +10,8 @@
 - wget
 - [elan](https://github.com/leanprover/elan)
 - Sufficient disk space for model checkpoints and data
+
+## Setup
 
 ### Step 1: Configure `run_leanagent.sh`
 1. Set the `RAID_DIR` variable to your desired directory path
@@ -23,7 +23,7 @@ conda create -n "LeanAgent" python=3.10
 conda activate LeanAgent
 pip install -r requirements.txt
 ```
-5. Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic) and set the environment variable GITHUB_ACCESS_TOKEN in the script to it
+5. Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic) and set the environment variable `GITHUB_ACCESS_TOKEN` in the script to it
 
 ### Step 2: Update File Paths
 1. Modify the `RAID_DIR` variable in `replace_files.sh`
@@ -55,21 +55,33 @@ These should match your system's Lean installation paths.
 pip install gdown
 gdown https://drive.google.com/uc?id=11DXxixg6S4-hUA-u-78geOxEB7J7rCoX
 ```
-Move the downloaded file to `{RAID_DIR}/model_lightning.ckpt`
+Move the downloaded file to `{RAID_DIR}/`
 
 2. For ReProver's Starting Retriever:
-`gdown https://drive.google.com/uc?id=1aRd1jQPu_TX15Ib5htzn3wZqHYowl3ax`
+
+```
+gdown https://drive.google.com/uc?id=1aRd1jQPu_TX15Ib5htzn3wZqHYowl3ax
+```
+
 Move the downloaded file to:
 
-- `{RAID_DIR}/checkpoints/mathlib4_29dcec074de168ac2bf835a77ef68bbe069194c5.ckpt`
+- `{RAID_DIR}/checkpoints/`
 
-- `{RAID_DIR}/{CHECKPOINT_DIR}`
+- `{RAID_DIR}/{CHECKPOINT_DIR}/`
 
-### Step 5 (Optional): Configure compute_fisher.py
+### Step 5: Run LeanAgent
+1. After completing all configuration steps, execute:
+```
+bash run_leanagent.sh
+```
+
+If you want to use Elastic Weight Consolidation (EWC) for lifelong learning, as shown in our ablation studies, follow these additional steps:
+
+### Step 6: Configure `compute_fisher.py`
 
 1. Create and set the variables:
 
-    - `FISHER_DIR`: Directory for Fisher information matrices
+    - `FISHER_DIR`: Directory for Fisher Information Matrices (FIMs)
     - `new_data_path`: Path to new training data
 
 2. Download the starting FIM for mathlib:
@@ -78,11 +90,16 @@ gdown https://drive.google.com/uc?id=1Q8yHq7XTAaHXGCiCGmhwZhTfkhHhN1cP
 ```
 Move the downloaded file to your `FISHER_DIR`.
 
-### Step 6: Run LeanAgent
-1. After completing all configuration steps, execute:
-```
-bash run_leanagent.sh
-```
+### Step 7: Configure `run_compute_fisher.sh`
+1. Set the `RAID_DIR` variable to your desired directory path
+2. Update the Conda path in the `source` command to match your installation
+3. Add your GitHub personal access token as the environment variable `GITHUB_ACCESS_TOKEN`
+
+To use EWC in the training process, alternate between running `run_leanagent.sh` and `run_compute_fisher.sh`:
+1. Run `bash run_leanagent.sh` for one epoch. Setting `use_fisher = True` in `leanagent.py` does this automatically.
+2. Run `bash run_compute_fisher.sh` to compute the FIM
+3. Run `bash run_leanagent.sh` again for the next epoch
+4. Repeat steps 2-3 as needed
 
 ## Architecture Overview
 

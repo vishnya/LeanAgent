@@ -1,28 +1,5 @@
-data/
-lightning_logs/
-leandojo-pl-ckpts
-run_code.sh
-run_leancopilot.sh
-baseline*
-ct2-leandojo-lean4-retriever-byt5-small/
-leandojo-lean4-retriever-byt5-small/
-leandojo_benchmark_4_again/
-leandojo_benchmark_4_downloaded/
-leandojo_benchmark_4_new_commit/
-lightning_logs_failing_benchmark2/
-lightning_logs_one_epoch_yay/
-lightning_logs_two_epoch_yay_plus_others/
-ends.pkl
-fisher_info.pkl
-new_version_test2_benchmark/
-new_version_test3_benchmark/
-pfr_benchmark/
-pfr_benchmark_2/
-positions.pkl
+*.pkl
 retrieval/bm25
-sorries.pkl
-test_pickle*
-results_new_lambda_0.1_scilean_augmented_before.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
