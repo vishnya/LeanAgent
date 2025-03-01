@@ -3,20 +3,15 @@ import math
 import ray
 from collections import defaultdict
 import os
-import urllib
 import requests
 import subprocess
 import re
 import shutil
-from prover import evaluate
 from lean_dojo import *
 import os
-import uuid
 import json
 import pickle
 import numpy as np
-import hashlib
-import argparse
 from tqdm import tqdm
 from loguru import logger
 from lean_dojo import Theorem
@@ -26,7 +21,6 @@ from lean_dojo import Theorem as LeanDojoTheorem
 import json
 import shutil
 import random
-import networkx as nx
 from copy import copy
 from pathlib import Path
 from loguru import logger
@@ -39,16 +33,10 @@ import sys
 from tqdm import tqdm
 from dynamic_database import *
 import time
-from packaging import version
-import psutil
-import atexit
 from pytorch_lightning.strategies import DDPStrategy
-from common import set_logger
 from prover.proof_search import Status, DistributedProver, SearchResult
 import re
 import lean_dojo
-from lean_dojo import *
-from lean_dojo.constants import LEAN4_PACKAGES_DIR
 import pytorch_lightning as pl
 from retrieval.model import PremiseRetriever
 from retrieval.datamodule import RetrievalDataModule
@@ -88,16 +76,7 @@ known_repositories = [
     "leanprover-community/duper",  # functional programming instead of math
     "leanprover/lake",
     "openai/lean-gym",
-    # already tested:
-    "lecopivo/SciLean",
-    "avigad/mathematics_in_lean_source",
-    "teorth/pfr",
-    "dwrensha/compfiles",
-    "digama0/lean4lean",
-    "AlexKontorovich/PrimeNumberTheoremAnd",
-    # newly tested:
     "leanprover-community/lean4-metaprogramming-book",
-    "ImperialCollegeLondon/FLT",
     "kmill/lean4-raytracer",  # no theorems
     "argumentcomputer/yatima",  # trace problems
     "ImperialCollegeLondon/formalising-mathematics-2024",  # trace problems
@@ -105,28 +84,21 @@ known_repositories = [
     "leanprover/verso",  # trace problems
     "leanprover-community/NNG4",  # trace problems
     "ufmg-smite/lean-smt",  # fails to trace due to windows-style line endings
-    "google-deepmind/debate",
     "teorth/symmetric_project",  # no compatible commit
     "cmu-l3/llmlean",  # irrelevant + only 4 theorems
     "PatrickMassot/GlimpseOfLean",   # strange trace problems with _parse_deps
     "avigad/lamr",  # trace problems
     "leanprover-community/quote4",  # no theorems
-    "yuma-mizuno/lean-math-workshop",
     "leanprover-community/iris-lean",  # trace problems
     "aripiprazole/rinha",  # incompatible commit
-    "loganrjmurphy/LeanEuclid",
     "leanprover/lean4-cli",  # no theorems
     "leanprover/LeanInk",  # no theorems
     "leanprover-community/lean-auto",
     "leanprover-community/repl",  # no theorems
     "leanprover/doc-gen4",  # no theorems
-    "leanprover-community/con-nf",
-    "FormalizedFormalLogic/Foundation",
     "leanprover/SampCert",  # trace problems
     "nomeata/loogle",
     "risc0/risc0-lean4",
-    "siddhartha-gadgil/Saturn",
-    "eric-wieser/lean-matrix-cookbook",
     "PatrickMassot/verbose-lean4",  # no theorems
     "tydeu/lean4-alloy",  # no theorems
     "leanprover/leansat", # deprecated
@@ -148,23 +120,21 @@ known_repositories = [
     "rwbarton/advent-of-lean-4", # irrelevant
     "leanprover-community/tutorials4", # irrelevant
     "haruhisa-enomoto/mathlib4-all-tactics", # irrelevant
-    # looking for sorries:
     "leanprover/LNSym",
     "leanprover-community/flt-regular",
-    # "opencompl/lean-mlir-old",
+    "opencompl/lean-mlir-old",
     "rami3l/plfl",
     "HEPLean/HepLean",
     "forked-from-1kasper/ground_zero",
-    # "mo271/formal_book",
     "verified-optimization/CvxLean",
     "leanprover-community/sphere-eversion",
     "optsuite/optlib",
-    # "YaelDillies/LeanCamCombi",
+    "YaelDillies/LeanCamCombi",
     "JamesGallicchio/LeanColls",
     "T-Brick/c0deine",
-    # "jjdishere/EG",
+    "jjdishere/EG",
     "alexkeizer/QpfTypes",
-    # "fpvandoorn/LeanCourse23",
+    "fpvandoorn/LeanCourse23",
     "marcusrossel/lean-egg",
     "reilabs/proven-zk",
     "algebraic-dev/soda",
@@ -173,16 +143,14 @@ known_repositories = [
     "argumentcomputer/Megaparsec.lean",
     "emilyriehl/infinity-cosmos",
     "BartoszPiotrowski/lean-premise-selection",
-    # "yangky11/miniF2F-lean4",
     "djvelleman/HTPILeanPackage",
     "girving/ray",
-    # "fpvandoorn/carleson",
     "Anderssorby/SDL.lean",
     "pandaman64/lean-regex",
-    # "brown-cs22/CS22-Lean-2023",
-    # "hhu-adam/GameSkeleton",
-    # "FR-vdash-bot/Algorithm",
-    # "PeterKementzey/graph-library-for-lean4",
+    "brown-cs22/CS22-Lean-2023",
+    "hhu-adam/GameSkeleton",
+    "FR-vdash-bot/Algorithm",
+    "PeterKementzey/graph-library-for-lean4",
     "arthurpaulino/LeanMySQL",
     "arthurpaulino/NumLean",
     "FormalSAT/trestle",
@@ -218,11 +186,9 @@ known_repositories = [
     "BrownCS1951x/fpv2023", # same as other tutorials but has lots of sorries
     "paulch42/lean-spec",
     "siddhartha-gadgil/MetaExamples",
-    # "YaelDillies/LeanAPAP",
     "dannypsnl/violet",
     "arthurpaulino/LeanREPL",
     "Kha/do-supplement",
-    # "NUS-Math-Formalization/coxeter",
     "joehendrix/lean-sat-checker",
     "ammkrn/timelib",
     "kmill/LeanTeX",
@@ -237,7 +203,7 @@ known_repositories = [
     "arthurpaulino/FxyLang",
     "SchrodingerZhu/LeanGccBackend",
     "lecopivo/lean4-karray",
-    # "ImperialCollegeLondon/M1F-explained",
+    "ImperialCollegeLondon/M1F-explained",
     "proost-assistant/ProostLean",
     "DavePearce/LeanEVM",
     "algebraic-dev/ash",
@@ -252,7 +218,7 @@ known_repositories = [
     "argumentcomputer/Http.lean",
     "madvorak/vcsp",
     "teorth/newton",
-    # "apnelson1/Matroid",
+    "apnelson1/Matroid",
     "smorel394/TS1",
     "ianjauslin-rutgers/pythagoras4",
     "mortarsanjaya/IMOSLLean4",
@@ -267,7 +233,7 @@ known_repositories = [
     "fgdorais/lean4-unicode-basic",
     "mhuisi/Uniq",
     "Kha/macro-supplement",
-    # "chenjulang/rubikcubegroup",
+    "chenjulang/rubikcubegroup",
     "arthurpaulino/LeanMusic",
     "argumentcomputer/Ipld.lean",
     "Odomontois/advent2022-lean",
@@ -290,7 +256,7 @@ known_repositories = [
     "Human-Oriented-ATP/lean-tactics", # more about tactics than premises
     "paulcadman/lean4-leetcode",
     "argumentcomputer/Lurk.lean",
-    # "AlexDuchnowski/rubiks-cube",
+    "AlexDuchnowski/rubiks-cube",
     "SchrodingerZhu/lean-gccjit",
     "JamesGallicchio/http",
     "jtristan/UnicodeSkipListTableExample",
@@ -302,14 +268,14 @@ known_repositories = [
     "AviCraimer/relational-calculus-library-lean4",
     "JLimperg/regensburg-itp-school-2023",
     "jaalonso/Calculemus2",
-    # "mseri/BET",
+    "mseri/BET",
     "xubaiw/Reservoir.lean",
     "hargoniX/nest-core",
     "siddhartha-gadgil/Polylean",
     "MichaelStollBayreuth/Weights",
     "sanchace/FRACTRAN",
     "argumentcomputer/Poseidon.lean",
-    # "madvorak/chomsky",
+    "madvorak/chomsky",
     "T-Brick/ControlFlow",
     "pa-ba/guarded-lean",
 ]
@@ -994,7 +960,7 @@ def main():
         use_fisher = False
         single_repo = True
         curriculum_learning = True
-        num_repos = 14
+        num_repos = 15
         # TODO: this should be at the top of the file
         dynamic_database_json_path = RAID_DIR + "/" + DB_FILE_NAME
         
