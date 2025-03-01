@@ -316,7 +316,6 @@ known_repositories = [
 
 repos = []
 lean_git_repos = []
-attempted_repos = set()
 personal_access_token = os.environ.get("GITHUB_ACCESS_TOKEN")
 
 PR_TITLE = "[LeanAgent] Proofs"
@@ -514,7 +513,6 @@ def find_and_save_compatible_commits(repo_info_file, lean_git_repos):
 
 def search_github_repositories(language="Lean", num_repos=10):
     """Search for the given number of repositories on GitHub that have the given language."""
-    global attempted_repos
     headers = {'Authorization': personal_access_token}
     query_params = {
         'q': f'language:{language}',
@@ -537,7 +535,7 @@ def search_github_repositories(language="Lean", num_repos=10):
                     break
                 repo_full_name = repo['full_name']
                 logger.info(f"Processing {repo_full_name}")
-                if repo_full_name not in known_repositories and repo_full_name not in attempted_repos:
+                if repo_full_name not in known_repositories:
                     name = None
                     try:
                         clone_url = repo['clone_url']
