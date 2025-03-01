@@ -1,4 +1,3 @@
-# TODO: read this whole file
 import math
 import ray
 from collections import defaultdict
@@ -62,7 +61,6 @@ ENCOUNTERED_THEOREMS_FILE = "<ENCOUNTERED_THEOREMS_FILE>"
 repos_for_merged_dataset = []
 repos_for_proving = []
 
-# TODO: pick the best list
 # List of known repositories to process or skip
 # Feel free to remove any repos from this list if you would like to test on them
 known_repositories = [
@@ -193,7 +191,7 @@ known_repositories = [
     "ammkrn/timelib",
     "kmill/LeanTeX",
     "leanprover/lean4export",
-    "leanprover-community/mathlib3port", # too different
+    "leanprover-community/mathlib3port",
     "brown-cs22/CS22-Lean-2024", # same as other tutorials but has lots of sorries
     "T-Brick/lean-wasm",
     "crabbo-rave/Soup",
@@ -228,7 +226,7 @@ known_repositories = [
     "javra/iit",
     "arthurpaulino/viper",
     "lindy-labs/aegis",
-    "PatrickMassot/NNG4",  # too similar to other one
+    "PatrickMassot/NNG4",
     "argumentcomputer/YatimaStdLib.lean",
     "fgdorais/lean4-unicode-basic",
     "mhuisi/Uniq",
@@ -239,7 +237,7 @@ known_repositories = [
     "Odomontois/advent2022-lean",
     "kbuzzard/IISc-experiments", # same as other tutorials but has lots of sorries
     "ykonstant1/InfinitePrimes",
-    "alexkassil/natural_number_game_lean4",  # too similar to other one
+    "alexkassil/natural_number_game_lean4",
     "seewoo5/lean-poly-abc",
     "rah4927/lean-dojo-mew",
     "siddhartha-gadgil/proofs-and-programs-2023",
