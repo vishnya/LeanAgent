@@ -2,6 +2,7 @@
 export RAID_DIR="<RAID_DIR>"
 cd ${RAID_DIR}/LeanAgent
 echo "Script executed from: ${PWD}"
+source ${RAID_DIR}/<PATH_TO_CONDA_ENV>/etc/profile.d/conda.sh
 conda activate LeanAgent
 export PYTHONPATH="${PYTHONPATH}:${RAID_DIR}/LeanAgent"
 export GITHUB_ACCESS_TOKEN="<GITHUB_ACCESS_TOKEN>"
