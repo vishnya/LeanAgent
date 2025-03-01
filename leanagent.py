@@ -1,3 +1,4 @@
+# TODO: read this whole file
 import math
 import ray
 from collections import defaultdict
@@ -1363,27 +1364,6 @@ def main():
                         logger.info(f"Skipping repository {repo.url} due to preprocessing issues")
                         continue
 
-                if is_main_process and run_progressive_training and use_fisher:
-                    logger.info("Calculating Fisher Information Matrix for EWC")
-                    # Fisher Information Matrix for Next EWC
-
-                    # Switch to one GPU for calculating the Fisher Information Matrix
-                    # TODO: barrier here
-                    try:
-                        # TODO: have separate intermediate checkpoints and save the epoch and data point, same for fisher
-                        device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-                        best_model.to(device)
-                        train_dataloader = data_module.train_dataloader()
-                        fisher_info = best_model.compute_fisher_information(train_dataloader, RAID_DIR + "/" + FISHER_DIR)
-                        dir_path = RAID_DIR + "/" + FISHER_DIR
-                        fisher_name = dir_path + "/" + dir_name + "_fisher_info.pkl"
-                        with open(fisher_name, "wb") as f:
-                            pickle.dump(fisher_info, f)
-                        logger.info(f"Fisher info saved to {fisher_name}")
-                    except Exception as e:
-                        print(f"An error occurred during fisher: {str(e)}")
-                        print(traceback.format_exc())
-
                 if is_main_process:
                     logger.info("Starting the prover")
 
@@ -1453,6 +1433,9 @@ def main():
                 logger.info("Finished processing the repository")
                 current_epoch += epochs_per_repo
                 logger.info(f"current epoch: {current_epoch}")
+                if use_fisher:
+                    # Need to return to compute the FIM
+                    return
 
     except Exception as e:
         logger.info(f"An error occurred: {e}", file=sys.stderr)

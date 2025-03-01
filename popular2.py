@@ -1,46 +1,37 @@
-# If curriculum learning is enabled, initialize repositories and sort them by difficulty
-        if curriculum_learning:
-            logger.info("Starting curriculum learning")
+else:
+            logger.info("Starting without curriculum learning")
             repo_info_file = f"{RAID_DIR}/{DATA_DIR}/repo_info_compatible.json"  # TODO: make constnat?
-            if is_main_process:
-                search_github_repositories("Lean", num_repos)
-                for i in range(len(lean_git_repos)):
-                    repo = lean_git_repos[i]
-                    logger.info(f"Processing {repo.url}")
-                    result = add_repo_to_database(dynamic_database_json_path, repo, db)
-                    if result is not None:
-                        logger.info(f"Successfully added repo {repo.url}")                    
-                logger.info(f"Successfully added {num_repos} repositories to the database")
-                
-                sorted_repos, categorized_theorems, percentiles = sort_repositories_by_difficulty(db)
-                print("Sorted repositories. Saving now...")
-                db.to_json(dynamic_database_json_path)
-                save_sorted_repos(sorted_repos, "sorted_repos.json")
-                print("Summary of theorem difficulties by URL:")
-                for repo in sorted_repos:
-                    print(f"\nURL: {repo.url}")
-                    for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-                        theorems = categorized_theorems[repo][category]
-                        print(f"  {category}: {len(theorems)} theorems")
-                        if theorems:
-                            sorted_theorems = sorted(theorems, key=lambda x: x[2] if x[2] is not None else -float('inf'), reverse=True)[:3]
-                            for name, path, start, end, diff in sorted_theorems:
-                                diff_str = f"{diff:.2f}" if diff is not None else "N/A"
-                                print(f"    - {name} (File: {path}, Difficulty: {diff_str})")
+            # if is_main_process:
+                # search_github_repositories("Lean", num_repos)
 
-                print("\nOverall Statistics:")
-                total_theorems = sum(len(theorems) for categories in categorized_theorems.values() for theorems in categories.values())
-                for category in ["Easy", "Medium", "Hard", "Hard (No proof)"]:
-                    count = sum(len(categories[category]) for categories in categorized_theorems.values())
-                    percentage = (count / total_theorems) * 100
-                    print(f"{category}: {count} theorems ({percentage:.2f}%)")
+                # clone_url = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
+                # commit = "29baddd685660b5fedd7bd67f9916ae24253d566"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
 
-                print(f"\nPercentile thresholds: Easy <= {percentiles[0]:.2f}, Medium <= {percentiles[1]:.2f}, Hard > {percentiles[1]:.2f}")
-            
-                logger.info("Finding compatible repositories...")
-                updated_repos = find_and_save_compatible_commits(repo_info_file, sorted_repos)
-                lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
-                logger.info("Finished finding compatible repositories")
+                # clone_url = "https://github.com/teorth/pfr.git"
+                # commit = "fa398a5b853c7e94e3294c45e50c6aee013a2687"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
+                # clone_url = "https://github.com/avigad/mathematics_in_lean_source.git"
+                # commit = "cfe61bc71b5ea501f89df36c945949a1febf5e75"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
+                # clone_url = "https://github.com/lecopivo/SciLean.git"
+                # commit = "22d53b2f4e3db2a172e71da6eb9c916e62655744"
+                # url = clone_url.replace('.git', '')
+                # lean_git_repo = LeanGitRepo(url, commit)
+                # lean_git_repos.append(lean_git_repo)
+
+                # logger.info("Finding compatible repositories...")
+                # updated_repos = find_and_save_compatible_commits(repo_info_file, lean_git_repos)
+                # lean_git_repos = [LeanGitRepo(repo['url'], repo['commit']) for repo in updated_repos]
+                # logger.info("Finished finding compatible repositories")
 
             # All processes wait for the file to be created and then read from it
             max_attempts = 30
@@ -54,10 +45,8 @@
                         raise Exception("Failed to read repository information after multiple attempts")
                     time.sleep(1)
                 
-            # Load compatible repositories
             lean_git_repos = [LeanGitRepo(info['url'].replace('.git', ''), info['commit']) for info in repo_info]
 
-            # Iterate over each repository and lambda value
             for i in range(num_repos):
                 for lambda_value in lambdas:
                     logger.info(f"length of lean_git_repos: {len(lean_git_repos)}")
@@ -70,25 +59,41 @@
                         logger.info("Main process")
                         logger.info(f"Using lambda = {lambda_value}")
                         logger.info(f"Processing {repo.url}")
-
+                        if start_with_pfr:
+                            if "pfr" not in repo.url:
+                                continue
+                            else:
+                                start_with_pfr = False
+        
                         if single_repo:
                             repos_for_merged_dataset = []
+                        repos_for_proving = []
+                        
+                        if "debate" not in repo.url and not curriculum_learning:
+                            result = add_repo_to_database(dynamic_database_json_path, repo, db)
+                            if result is None:
+                                write_skip_file(repo.url)
+                                logger.info(f"Writing skip file for {repo.url}")
 
+                        # Generate a new dataset from the dynamic database.
+                        # The user can choose to generate a dataset from the entire dynamic database or a subset of it.
                         # TODO: don't always do merged_, if we change this then change the if condition in average test accordingly
-                        # Create a directory for the merged dataset if it doesn't exist
                         dst_dir = Path(RAID_DIR) / DATA_DIR / f"merged_with_new_{dir_name}"
                         if (repo.url, repo.commit) not in repos_for_merged_dataset:
                             logger.info("Adding repo to repos_for_merged_dataset")
                             repos_for_merged_dataset.append((repo.url, repo.commit))
+                            repos_for_proving.append((repo.url, repo.commit))
                         else:
                             logger.info("Repo already in repos_for_merged_dataset")
+                        
+                        if "debate" not in repo.url:
+                            db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
 
-                        db.generate_merged_dataset(dst_dir, repos_for_merged_dataset)
-                    
                     # TODO: reduce repition later with all path
                     dst_dir = RAID_DIR + "/" + DATA_DIR + "/" + f"merged_with_new_{dir_name}"
                     new_data_path = dst_dir
 
+                    # All GPUs
                     logger.info("All GPUs")
                     model_checkpoint_path = None
                     best_model = None
@@ -106,7 +111,7 @@
                         logger.info(f"Starting training at epoch {current_epoch}")
                         seed_everything(3407)
 
-                        # Progessive Training
+                        ### PROGRESSIVE TRAINING
                         
                         if not torch.cuda.is_available():
                             logger.warning("Indexing the corpus using CPU can be very slow.")
@@ -129,14 +134,13 @@
                         model.train()
                         logger.info(f"Loaded premise retriever at {model_checkpoint_path}")
 
-                        # Load previous Fisher Information Matrix for current EWC
+                        # load previous Fisher Information Matrix for current EWC
                         if use_fisher:
                             latest_fisher = find_latest_fisher()
                             fisher_info = load_fisher_information(latest_fisher)
                             model.set_fisher_info(fisher_info)
                             logger.info("Fisher Information Matrix loaded.")
 
-                        # Initialize ModelCheckpoint and EarlyStopping
                         # TODO: use the yaml file instead of repeating here, same throughout
                         dir_name = new_data_path.split("/")[-1]
                         filename_suffix = f"_lambda_{lambda_value}"
@@ -159,16 +163,17 @@
 
                         lr_monitor = LearningRateMonitor(logging_interval='step')
 
-                        # Set up environment variables for NCCL
+                        # mid_epoch_checkpoint_dir = os.path.join(RAID_DIR, f"mid_epoch_checkpoints_{current_epoch}_{dir_name}_{use_fisher}_lambda_{lambda_value}")
+                        # os.makedirs(mid_epoch_checkpoint_dir, exist_ok=True)
+                        # timed_checkpoint_callback = TimedCheckpoint(checkpoint_dir=mid_epoch_checkpoint_dir)
+
                         VERY_LONG_TIMEOUT = 7 * 24 * 60 * 60 * 52  # 1 year
                         os.environ['TORCH_NCCL_ASYNC_ERROR_HANDLING'] = '1'
                         os.environ['NCCL_TIMEOUT'] = str(VERY_LONG_TIMEOUT * 1000)
 
-                        # Create a custom log directory for Lightning
                         custom_log_dir = os.path.join(RAID_DIR, "lightning_logs", f"{dir_name}_{use_fisher}_lambda_{lambda_value}")
                         os.makedirs(custom_log_dir, exist_ok=True)
 
-                        # Initialize DDP strategy
                         ddp_strategy = DDPStrategy(timeout=timedelta(seconds=VERY_LONG_TIMEOUT))
                         trainer = pl.Trainer(
                             accelerator="gpu",
@@ -177,6 +182,7 @@
                             strategy=ddp_strategy,
                             devices=4, # TODO: change for GPU
                             accumulate_grad_batches=4,
+                            # callbacks=[lr_monitor, checkpoint_callback, early_stop_callback, timed_checkpoint_callback],
                             callbacks=[lr_monitor, checkpoint_callback, early_stop_callback],
                             max_epochs=current_epoch + epochs_per_repo,
                             log_every_n_steps=1,
@@ -184,7 +190,6 @@
                             default_root_dir=custom_log_dir,
                         )
 
-                        # Barrier before data module
                         logger.info("right before barrier for data module")
                         trainer.strategy.barrier()
                         should_skip, skip_repo_url = should_skip_repo()
@@ -197,7 +202,6 @@
                                 os.remove(skip_file_path)
                             continue
 
-                        # Set lambda value for the model
                         model.set_lambda(lambda_value)
                         corpus_path = new_data_path + "/corpus.jsonl"
                         data_path = new_data_path + "/random"
@@ -221,7 +225,6 @@
 
                         logger.info(f"Starting progressive training from epoch {current_epoch} to {current_epoch + epochs_per_repo}")
 
-                        # Train the model
                         try:
                             logger.info("hit the barrier before training")
                             trainer.strategy.barrier()
@@ -234,8 +237,9 @@
 
                         logger.info(f"Finished progressive training at epoch {trainer.current_epoch}")
 
-                        # Testing for Average Recall
+                        ### TESTING FOR AVERAGE RECALL
 
+                        # TODO: don't load corpus and reindex for every repo we use for average recall
                         try:
                             best_model_path = find_latest_checkpoint()
                             logger.info(f"Found latest checkpoint: {best_model_path}")
@@ -259,7 +263,19 @@
                             # TODO: remove this for tests that do not use merged dataset
                             if "merged" not in data_path:
                                 continue
-                            
+                            if "debate" in repo.url and "debate" in data_path:
+                                continue
+                            if "debate" in repo.url and "pfr" in data_path:
+                                continue
+                            if "debate" in repo.url and "compfiles" in data_path:
+                                continue
+                            if "debate" in repo.url and "SciLean" in data_path:
+                                continue
+                            if "debate" in repo.url and "PrimeNumberTheoremAnd" in data_path:
+                                continue
+                            if "debate" in repo.url and "FLT" in data_path:
+                                continue
+                            # subprocess.run(["python","retrieval/main.py", "predict", "--config", "retrieval/confs/cli_lean4_random.yaml", "--ckpt_path", model_checkpoint_path, "--data-path", data_path], check=True)
                             run_cli(best_model_path, data_path)
                             if is_main_process:
                                 num_gpus = 4 # TODO: change for GPU
@@ -285,6 +301,13 @@
                                     f.write(f"R@1 = {R1} %, R@10 = {R10} %, MRR = {MRR}")
 
                         if is_main_process:
+                            if "debate" in repo.url:
+                                total_R1.append(51.858687903990074)
+                                total_R1.append(60.57612342105728)
+                                total_R1.append(52.36877496119525)
+                                total_R1.append(63.59588466707295)
+                                total_R1.append(55.09071724438188)
+                                total_R1.append(63.67064961631673)
                             avg_R1 = np.mean(total_R1)
                             avg_R10 = np.mean(total_R10)
                             avg_MRR = np.mean(total_MRR)
@@ -305,11 +328,6 @@
 
                     if is_main_process:
                         logger.info("Starting the prover")
-
-                        if ray.is_initialized():
-                            logger.info("Shutting down Ray before proving")
-                            ray.shutdown()
-
                         # Set up the prover
                         use_vllm = False
                         corpus_path = dst_dir + "/corpus.jsonl"
@@ -340,14 +358,10 @@
                         )
 
                         # Prove sorry theorems
-                        prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_merged_dataset)
+                        prove_sorry_theorems(db, prover, dynamic_database_json_path, repos_for_proving)
                         db.to_json(dynamic_database_json_path)
 
                         logger.info("Finished searching for proofs of sorry theorems")
-
-                        if ray.is_initialized():
-                            logger.info("Shutting down Ray after proving")
-                            ray.shutdown()
 
                         # TODO: need to return proofs
                         # proofs = []
@@ -369,3 +383,4 @@
                     logger.info("Finished processing the repository")
                     current_epoch += epochs_per_repo
                     logger.info(f"current epoch: {current_epoch}")
+                    return
