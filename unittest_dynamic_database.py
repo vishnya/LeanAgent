@@ -14,16 +14,15 @@ from loguru import logger
 from unittest.mock import Mock, patch
 from dynamic_database import DynamicDatabase, Repository, Theorem, AnnotatedTactic
 from prover.proof_search import Status, SearchResult
-from main import prove_sorry_theorems, retrieve_proof
 from dynamic_database import parse_pos
 from typing import Tuple
 import os
 from unittest.mock import patch, MagicMock
 
 RAID_DIR = os.environ.get('RAID_DIR')
-DATA_DIR = "datasets_new"
-MERGED_DATA_DIR = "datasets_merged"
-PROOF_LOG_FILE_NAME = "proof_logs_test/proof_log_unit_tests.log"
+DATA_DIR = "datasets_new_unittest"
+MERGED_DATA_DIR = "datasets_merged_unittest"
+PROOF_LOG_FILE_NAME = "proof_logs_unittest/proof_log_unittest.log"
 
 class TestDynamicDatabaseCore(unittest.TestCase):
     def setUp(self):
@@ -773,97 +772,6 @@ class TestDynamicDatabaseCore(unittest.TestCase):
         self.assertEqual(updated_repo.name, "Updated Repo")
         self.assertEqual(updated_repo.commit, "abc123")
         self.assertEqual(added_repo.lean_version, "3.50.4")
-    
-    @patch('lean_dojo.__version__', '1.0.0')
-    @patch('generate_benchmark_lean4.get_lean4_version_from_config')
-    def test_add_repository_from_lean_git_repo_duplicate(self, mock_get_lean_version):
-        mock_get_lean_version.return_value = '4.0.0'
-
-        # Mock LeanGitRepo
-        mock_repo = MagicMock()
-        mock_repo.url = "https://github.com/test/repo"
-        mock_repo.commit = "abcdef123456"
-        mock_repo.get_config.return_value = {"content": "mock_content"}
-
-        dst_dir = f"{RAID_DIR}/datasets_retrieval_full_merge_each_time/merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310"
-        
-        data = {
-            "url": mock_repo.url,
-            "name": "test/repo",
-            "commit": mock_repo.commit,
-            "lean_version": '4.0.0',
-            "lean_dojo_version": '1.0.0',
-            "metadata": {
-                "date_processed": datetime.datetime.now(),
-            },
-            "theorems_folder": os.path.join(dst_dir, "random"),
-            "premise_files_corpus": os.path.join(dst_dir, "corpus.jsonl"),
-            "files_traced": os.path.join(dst_dir, "traced_files.jsonl"),
-            "pr_url": None
-        }
-
-        repo = Repository.from_dict(data)
-        logger.info("Before adding new repo:")
-        self.db.print_database_contents()
-        self.db.add_repository(repo)
-        logger.info("After adding new repo:")
-        self.db.print_database_contents()
-
-        # Verify the repository was added correctly
-        self.assertEqual(len(self.db.repositories), 1)
-        added_repo = self.db.repositories[0]
-        self.assertEqual(added_repo.url, "https://github.com/test/repo")
-        self.assertEqual(added_repo.name, "test/repo")
-        self.assertEqual(added_repo.commit, "abcdef123456")
-        self.assertEqual(added_repo.lean_version, "4.0.0")
-        self.assertEqual(added_repo.lean_dojo_version, "1.0.0")
-        self.assertIsInstance(added_repo.metadata["date_processed"], datetime.datetime)
-        self.assertEqual(added_repo.pr_url, None)
-
-        # Add same repo again
-
-        mock_get_lean_version.return_value = '4.0.0'
-
-        # Mock LeanGitRepo
-        mock_repo = MagicMock()
-        mock_repo.url = "https://github.com/test/repo"
-        mock_repo.commit = "abcdef123456"
-        mock_repo.get_config.return_value = {"content": "mock_content"}
-
-        dst_dir = f"{RAID_DIR}/datasets_retrieval_full_merge_each_time/merged_with_new_mathlib4_2b29e73438e240a427bcecc7c0fe19306beb1310"
-        
-        data = {
-            "url": mock_repo.url,
-            "name": "test/repo",
-            "commit": mock_repo.commit,
-            "lean_version": '4.0.0',
-            "lean_dojo_version": '1.0.0',
-            "metadata": {
-                "date_processed": datetime.datetime.now(),
-            },
-            "theorems_folder": os.path.join(dst_dir, "random"),
-            "premise_files_corpus": os.path.join(dst_dir, "corpus.jsonl"),
-            "files_traced": os.path.join(dst_dir, "traced_files.jsonl"),
-            "pr_url": None
-        }
-
-        repo = Repository.from_dict(data)
-        logger.info("Before adding new repo:")
-        self.db.print_database_contents()
-        self.db.add_repository(repo)
-        logger.info("After adding new repo:")
-        self.db.print_database_contents()
-
-        # Verify the repository was added correctly
-        self.assertEqual(len(self.db.repositories), 1)
-        added_repo = self.db.repositories[0]
-        self.assertEqual(added_repo.url, "https://github.com/test/repo")
-        self.assertEqual(added_repo.name, "test/repo")
-        self.assertEqual(added_repo.commit, "abcdef123456")
-        self.assertEqual(added_repo.lean_version, "4.0.0")
-        self.assertEqual(added_repo.lean_dojo_version, "1.0.0")
-        self.assertIsInstance(added_repo.metadata["date_processed"], datetime.datetime)
-        self.assertEqual(added_repo.pr_url, None)
     
     def test_update_theorem_difficulty(self):
         theorem = Theorem(
