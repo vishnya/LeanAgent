@@ -2,6 +2,9 @@
 
 [LeanAgent](https://arxiv.org/abs/2410.06209) is a novel lifelong learning framework for formal theorem proving that continuously generalizes to and improves on ever-expanding mathematical knowledge without forgetting previously learned knowledge.
 
+## Documentation
+Generated docs by Devin are here: [https://deepwiki.com/lean-dojo/LeanAgent]. It includes a detailed explanation + diagrams.
+
 ## Requirements
 
 - Supported platforms: Linux and macOS
