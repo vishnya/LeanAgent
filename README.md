@@ -290,14 +290,3 @@ If you find our work useful, please consider citing [our paper](https://arxiv.or
 ```
 
 Adarsh Kumarappan and Mo Tiwari contributed equally to this work.
-
-## Running Tests
-
-To run the unit test suite, first activate the conda environment and then use `pytest`:
-
-```bash
-conda activate LeanAgent
-python -m pytest tests/
-```
-
-### Downloading Pre-trained Models
