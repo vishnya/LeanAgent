@@ -23,10 +23,6 @@ from pytorch_lightning.strategies.deepspeed import DeepSpeedStrategy
 Example = Dict[str, Any]
 Batch = Dict[str, Any]
 
-def remove_marks(s: str) -> str:
-    """Remove all :code:`<a>` and :code:`</a>` from ``s``."""
-    return s.replace(MARK_START_SYMBOL, "").replace(MARK_END_SYMBOL, "")
-
 
 @dataclass(unsafe_hash=True)
 class Context:
