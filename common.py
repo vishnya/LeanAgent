@@ -10,6 +10,7 @@ from loguru import logger
 from lean_dojo import Pos
 import pytorch_lightning as pl
 from dataclasses import dataclass, field
+from leanagent_utils import remove_marks, MARK_START_SYMBOL, MARK_END_SYMBOL
 from pytorch_lightning.utilities.deepspeed import (
     convert_zero_checkpoint_to_fp32_state_dict,
 )
@@ -21,13 +22,6 @@ from pytorch_lightning.strategies.deepspeed import DeepSpeedStrategy
 
 Example = Dict[str, Any]
 Batch = Dict[str, Any]
-
-MARK_START_SYMBOL = "<a>"
-MARK_END_SYMBOL = "</a>"
-
-def remove_marks(s: str) -> str:
-    """Remove all :code:`<a>` and :code:`</a>` from ``s``."""
-    return s.replace(MARK_START_SYMBOL, "").replace(MARK_END_SYMBOL, "")
 
 
 @dataclass(unsafe_hash=True)
