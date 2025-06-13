@@ -109,6 +109,15 @@ To use EWC in the training process, alternate between running `run_leanagent.sh`
 3. Run `bash run_leanagent.sh` again for the next epoch
 4. Repeat steps 2-3 as needed
 
+## Running Tests
+
+To run the unit test suite, first activate the conda environment and then use `pytest`:
+
+```bash
+conda activate LeanAgent
+python -m pytest tests/
+```
+
 ## Architecture Overview
 
 LeanAgent is a lifelong learning framework for formal theorem proving that continuously generalizes to and improves on expanding mathematical knowledge without forgetting previously learned information. The codebase consists of several key components:
@@ -281,3 +290,14 @@ If you find our work useful, please consider citing [our paper](https://arxiv.or
 ```
 
 Adarsh Kumarappan and Mo Tiwari contributed equally to this work.
+
+## Running Tests
+
+To run the unit test suite, first activate the conda environment and then use `pytest`:
+
+```bash
+conda activate LeanAgent
+python -m pytest tests/
+```
+
+### Downloading Pre-trained Models
