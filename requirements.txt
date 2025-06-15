@@ -14,5 +14,6 @@ openai
 python-dotenv
 rank_bm25
 torchmetrics
+PyYAML==6.0.1
 pytest==8.4.0
 pytest-cov==6.2.1
