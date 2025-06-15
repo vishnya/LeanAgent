@@ -1,0 +1,216 @@
+version: '3' # Taskfile build version
+
+vars:
+  # Variables
+  env_name: "LeanAgent"
+  python_version: "3.10"
+  raid_dir: "data/raid"
+  # Repository root (current project directory)
+  repo_dir: "{{.raid_dir}}/repos_new"
+  tactic_generator_id: "11DXxixg6S4-hUA-u-78geOxEB7J7rCoX"
+  starting_retriever_id: "1aRd1jQPu_TX15Ib5htzn3wZqHYowl3ax"
+  leanagent_ckpt_id: "1plkC7Y5n0OVCJ0Ad6pH8_mwbALKYY_FY"
+  fisher_start_id: "1Q8yHq7XTAaHXGCiCGmhwZhTfkhHhN1cP"
+  cache_dir: "{{.raid_dir}}/.cache/lean_dojo"
+  ray_tmpdir: "{{.raid_dir}}/tmp"
+
+  # Paths
+  data_dir: "datasets"
+  checkpoint_dir: "checkpoints"
+  eval_results_file: "eval_results.json"
+  db_file: "leanagent_db.json"
+  proof_log_file: "proof_log.json"
+  encountered_theorems_file: "encountered_theorems.txt"
+  fisher_dir: "fisher"
+
+
+# Load project-local secrets (i.e. GitHub token)
+dotenv: ['.env']
+
+# Ensure Conda is discoverable for all tasks
+env:
+  PATH: "$HOME/miniconda/condabin:$HOME/miniconda/bin:$CONDA_HOME/bin:$PATH"
+
+tasks:
+  # ---------------------------------------------------------------------------
+  # Run pytest test-suite
+  # ---------------------------------------------------------------------------
+  test:
+    desc: "Run the pytest test suite."
+    cmds:
+      - "python -m pytest"
+
+  # ---------------------------------------------------------------------------
+  # Ensure GitHub token is available in .env
+  # ---------------------------------------------------------------------------
+  check_github_token:
+    desc: "Fail if .env is missing or lacks a non-empty GITHUB_ACCESS_TOKEN entry."
+    cmds:
+      - |
+        bash -c '
+        if [ ! -f ".env" ]; then
+          echo "ERROR: .env file missing — create it and add GITHUB_ACCESS_TOKEN=<token>" >&2
+          exit 1
+        fi
+        TOKEN=$(grep -E "^GITHUB_ACCESS_TOKEN=" .env | cut -d"=" -f2-)
+        if [ -z "$TOKEN" ]; then
+          echo "ERROR: GITHUB_ACCESS_TOKEN not set in .env" >&2
+          exit 1
+        fi
+        '
+  create_conda_env:
+    desc: "Create conda env {{.env_name}} if missing"
+    cmds:
+      - cmd: |
+          bash -c '
+          # Ensure conda executable is reachable
+          for d in "$HOME/miniconda/condabin" "$HOME/miniconda/bin" "$HOME/miniconda3/bin" "$HOME/anaconda3/bin" "$HOME/miniforge3/bin" "/opt/conda/bin"; do
+            if [ -d "$d" ] && [[ ":$PATH:" != *":$d:"* ]]; then
+              export PATH="$d:$PATH"
+            fi
+          done
+
+          # If conda still missing, install Miniconda silently
+          if ! command -v conda >/dev/null 2>&1; then
+            echo "Conda not found – installing Miniconda..." >&2
+            curl -sSLo "$HOME/miniconda.sh" https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+            bash "$HOME/miniconda.sh" -b -p "$HOME/miniconda3"
+            export PATH="$HOME/miniconda3/bin:$PATH"
+            rm "$HOME/miniconda.sh"
+          fi
+
+          if ! command -v conda >/dev/null 2>&1; then
+            echo "Conda executable not found in PATH" >&2
+            exit 127
+          fi
+          if ! conda env list | grep -q "^{{.env_name}} "; then
+            conda create -n {{.env_name}} python={{.python_version}} -y
+          fi
+          '
+        
+  install_elan:
+    desc: "Ensure elan is installed"
+    cmds:
+      - cmd: |
+          bash -c '
+          if [ ! -f "$HOME/.elan/bin/elan" ]; then
+            echo "elan not found. Installing..."
+            curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- --default-toolchain none -y
+          else
+            echo "elan is already installed."
+          fi
+          '
+        
+  install_requirements:
+    desc: "Install Python requirements"
+    
+    cmds:
+      - "conda run -n {{.env_name}} pip install -r requirements.txt"
+
+  download_checkpoint_data:
+    desc: "Download pretrained checkpoints via gdown"
+    cmds:
+      - cmd: |
+          bash -c '
+          conda run -n {{.env_name}} pip install --quiet gdown
+          conda run -n {{.env_name}} gdown https://drive.google.com/uc?id={{.tactic_generator_id}} -O /tmp/tactic_gen.ckpt
+          conda run -n {{.env_name}} gdown https://drive.google.com/uc?id={{.starting_retriever_id}} -O /tmp/start_retriever.ckpt
+          conda run -n {{.env_name}} gdown https://drive.google.com/uc?id={{.leanagent_ckpt_id}} -O /tmp/leanagent.ckpt
+
+          mkdir -p {{.raid_dir}}/{{.checkpoint_dir}}
+          mv /tmp/tactic_gen.ckpt {{.raid_dir}}/ # TODO: This is not used, investigate.
+          mv /tmp/start_retriever.ckpt {{.raid_dir}}/{{.checkpoint_dir}}/
+          mv /tmp/leanagent.ckpt {{.raid_dir}}/{{.checkpoint_dir}}/
+          '
+  replace_files:
+    desc: "Patch LeanAgent files with custom versions"
+    env:
+      RAID_DIR: "{{.raid_dir}}"
+    cmds:
+      - "bash replace_files.sh"
+        
+  # ---------------------------------------------------------------------------
+  # Composite setup task
+  # ---------------------------------------------------------------------------
+  setup:
+    desc: "Initial setup: conda env, elan, requirements, checkpoints, file patches"
+    deps:
+      - check_github_token
+      - install_elan
+      - create_conda_env
+      - install_requirements
+      - download_checkpoint_data
+      - replace_files
+    cmds: []
+
+  # ---------------------------------------------------------------------------
+  # Launch LeanAgent main training/proving process
+  # ---------------------------------------------------------------------------
+  run:
+    desc: "Launch LeanAgent main training/proving process."
+    deps:
+      - check_github_token
+    env:
+      PYTHONPATH: "$PYTHONPATH:{{.raid_dir}}/LeanAgent"
+      CACHE_DIR: "{{.cache_dir}}"
+      RAY_TMPDIR: "{{.ray_tmpdir}}"
+      RAID_DIR: "{{.raid_dir}}"
+      REPO_DIR: "{{.repo_dir}}"
+      DATA_DIR: "{{.data_dir}}"
+      CHECKPOINT_DIR: "{{.checkpoint_dir}}"
+      EVAL_RESULTS_FILE_PATH: "{{.eval_results_file}}"
+      DB_FILE_NAME: "{{.db_file}}"
+      PROOF_LOG_FILE_NAME: "{{.proof_log_file}}"
+      ENCOUNTERED_THEOREMS_FILE: "{{.encountered_theorems_file}}"
+      FISHER_DIR: "{{.fisher_dir}}"
+    cmds:
+      - |
+          bash -c '
+          source $(conda info --base)/etc/profile.d/conda.sh
+          conda activate {{.env_name}}
+          rm -rf $RAY_TMPDIR || true
+          mkdir -p "$RAY_TMPDIR"
+          ray stop --force || true
+          nvidia-smi || true
+          python leanagent.py
+          '
+
+  # ---------------------------------------------------------------------------
+  # Compute Fisher information matrix
+  # ---------------------------------------------------------------------------
+  run_fisher:
+    desc: "Elastic Weight Consolidation for lifelong learning."
+    env:
+      PYTHONPATH: "$PYTHONPATH:{{.raid_dir}}/LeanAgent"
+      NEW_DATA_PATH: "{{.raid_dir}}/datasets/new_data"
+      RAID_DIR: "{{.raid_dir}}"
+    cmds:
+      - |
+        bash -c '
+        source $(conda info --base)/etc/profile.d/conda.sh
+        conda activate {{.env_name}}
+        # Install gdown and download initial fisher matrix if missing
+        python -m pip install --quiet gdown
+        if [ ! -f "{{.raid_dir}}/fisher_start.pkl" ]; then
+          gdown https://drive.google.com/uc?id={{.fisher_start_id}} -O {{.raid_dir}}/fisher_start.pkl
+        fi
+        python compute_fisher.py
+        ' 
+
+  # ---------------------------------------------------------------------------
+  # Lifelong learning: alternate training (run) and Fisher computation
+  # ---------------------------------------------------------------------------
+  run_lifelong_learning:
+    desc: "Alternate run and run_fisher tasks N times (default 1). Usage: task run_lifelong_learning -- 5"
+    cmds:
+      - |
+        bash -c '
+        COUNT={{default "1" (first .CLI_ARGS)}}
+        echo "Running lifelong learning for $COUNT iteration(s)"
+        for i in $(seq 1 $COUNT); do
+          echo "--- Iteration $i: Training ---"
+          task run
+          echo "--- Iteration $i: Computing Fisher ---"
+          task run_fisher
+        done
+        ' 
